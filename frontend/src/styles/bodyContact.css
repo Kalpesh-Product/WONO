@@ -1,0 +1,32 @@
+@font-face {
+    font-family: Popins-Regular;
+    src: url('../assets/WONO_images/img/fonts/Poppins-Regular.ttf');
+  }
+.map-container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 2rem;
+    padding: 2rem;
+   
+}
+.map-grid{
+    height: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.address{
+    padding: 1rem 2rem 1rem 2rem; 
+}
+.contact-address{
+    font-size: 14px;
+    font-family: Popins-Regular;
+}
+
+@media (max-width: 768px) {
+    .map-container{
+        grid-template-columns: 1fr;
+    }
+    .address{
+        padding: 1rem 1rem 1rem 1rem; 
+    }
+
+}

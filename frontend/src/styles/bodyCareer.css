@@ -1,0 +1,25 @@
+@font-face {
+    font-family: Popins-SemiBold;
+    src: url('../assets/WONO_images/img/fonts/Poppins-SemiBold.ttf');
+}
+
+.career-container{
+    padding: 1rem;
+    font-family: Popins-SemiBold;
+}
+.career-section{
+    padding: 2rem 6rem 6rem 6rem ;
+}
+.career-section > h3{
+    font-size: 60px;
+    font-family: Popins-SemiBold;
+}
+button.accordion-button {
+font-size: 32px;
+}
+
+@media (max-width: 768px) {
+    .career-section{
+        padding: 1rem 1rem 1rem 1rem ;
+    }
+}

@@ -1,0 +1,27 @@
+section{
+    overflow: hidden;
+  }
+  .features .nav-tabs{
+    border: 0;
+  }
+  .features .nav-link.active{
+    background-color: transparent;
+    color: #000;
+    border-color: #000;
+  }
+  .features .nav-link{
+    padding: 15px 0;
+    transition: 0.3s;
+    border-radius: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    height: 100%;
+    border: 0;
+    border-bottom: 4px solid #e2e4e6;
+  }
+  
+  .features .tab-content{
+    margin-top: 30px;
+  }

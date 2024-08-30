@@ -1,0 +1,75 @@
+@font-face {
+  font-family: Popins-Regular;
+  src: url('../assets/WONO_images/img/fonts/Poppins-Regular.ttf');
+}
+
+footer{
+  width:100%
+}
+.footer-container a{
+  text-decoration: none;
+  font-size: 14px;
+  color: rgb(175, 175, 175);
+}
+.footer-container a:hover{
+  color: white;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 2rem;
+    font-family: Popins-Regular;
+  }
+  
+  .footer-section-1, .footer-section-2, .footer-section-3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2rem;
+    text-transform: uppercase;
+  }
+  .footer-section-1{
+    align-items: start;
+  }
+  .footer-section-1 > *{
+    margin-bottom: 1rem;
+  }
+
+  .footer-section-2 > *{
+    padding: 1rem;
+    font-size: 14px;
+  }
+  .footer-section-3 > *{
+    padding: 1rem;
+    font-size: 14px;
+  }
+
+  @media (max-width: 768px) {
+    .footer-container{
+      grid-template-columns: 1fr;
+      gap: 0rem;
+    }
+    .footer-section-1 {
+      align-items: center;
+      padding: 1rem;
+    }
+    .footer-section-2{
+      padding-bottom: 0;
+    }
+    .footer-section-3{
+      padding-top: 0;
+    }
+    .footer-section-1> *{
+      padding: 0.5rem;
+      font-size: 14px;
+    }
+    .footer-section-2 > *{
+      padding: 0.5rem;
+      font-size: 14px;
+    }
+  }
+  
+  
+ 
