@@ -9,8 +9,6 @@ import axios from 'axios';
 import Carousels from '../components/Carousels'
 import Batman from '../assets/batman.png'
 import Spiderman from '../assets/spiderman.png'
-// import "../styles/slick-style/slick.css";
-// import "../styles/slick-style/slick-theme.css";
 import Slider from "react-slick";
 import BookingEngine from '../assets/WONO_images/img/booking_engine_login.png'
 

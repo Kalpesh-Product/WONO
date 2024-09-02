@@ -1,5 +1,25 @@
-.border{
-    
+@font-face {
+    font-family: Popins-SemiBold;
+    src: url('../assets/WONO_images/img/fonts/Poppins-SemiBold.ttf');
+}
+
+.border {
     width: 5%;
     border-bottom: 3px solid orange;
+}
+
+i.fa.fa-cheveron-right {
+    color: black;
+    font-family: Popins-Semibold;
+    font-size: 16px;
+    margin: 0 0 0 20px;
+    font-weight: "600";
+    border: 2px solid #52565e;
+    padding: 0.5rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease
+}
+i.fa.fa-cheveron-right:hover {
+background-color: black;
+color: white;
 }

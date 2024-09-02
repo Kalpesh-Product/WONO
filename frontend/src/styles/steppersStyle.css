@@ -1,58 +1,19 @@
-/* Grid container styling */
-.grid-container {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    width: 100%;
-    height: 100vh; /* Cover full height */
-    position: relative; /* Ensure the image is positioned relative to the grid container */
-  }
-  
-  /* Image covering both grid items */
-  .cover-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1; /* Place the image behind the grid content */
-  }
-  
-  /* First grid column styling */
-  .test-grid-1 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    z-index: 1; /* Ensure content appears above the image */
-  }
-  
-  /* Second grid column styling */
-  .test-grid-2 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    z-index: 1; /* Ensure content appears above the image */
-    position: relative;
-    border: 1px solid black ;
-  }
-  .test-form{
-    position: absolute;
-    width: 200px;
-    height: 200px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    border: 1px solid black;
-  }
-  @media (max-width: 768px) {
-    .grid-container {
-      grid-template-columns: 1fr; /* Stack columns vertically */
-      height: 100vh; /* Adjust height for content */
-    }
-  
-    .cover-image {
-      
-    }
-  }
+/* steppersStyle.css */
+
+.slider-container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.slider-item {
+  background: #ddd;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid black
+}
+.slider-item .slick-slide.slick-center {
+  background: red;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid black
+}

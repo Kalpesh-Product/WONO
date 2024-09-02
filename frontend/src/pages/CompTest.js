@@ -22,6 +22,9 @@ import TextBoxes from '../components/TextBoxes';
 import VerifyOTP from '../components/VerifyOTP';
 import Steppers from '../components/Steppers';
 import { Dropdown } from 'primereact/dropdown'
+import RotatingGlobe from '../components/RotatingGlobe';
+import { Canvas, useFrame } from '@react-three/fiber';
+import { OrbitControls, useTexture } from '@react-three/drei';
 
 
 
@@ -79,6 +82,12 @@ function Example() {
   return (
     <>
       {/* <h1 style={{ textAlign: 'center' }}>Component's page</h1> */}
+      <Canvas style={{ height: '100%', width: '100%' }}>
+      <ambientLight intensity={0.5} />
+      <pointLight position={[10, 10, 10]} />
+      <RotatingGlobe/>
+      <OrbitControls enableZoom={false} />
+    </Canvas>
       <div className='component-grid common-children'> {/* parent component */}
         {/* <div className='modals'>
           <Button variant="primary" onClick={handleModal}>

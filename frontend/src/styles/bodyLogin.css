@@ -138,10 +138,9 @@ h2 {
 }
 
 .forgot-password-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 70vh;
+    display: grid;
+    grid-template-columns: 50% 49%;
+    height: 100vh;
     font-family: Popins-Semibold;
 }
 
@@ -150,6 +149,14 @@ h2 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    border-right: 1px solid rgb(187, 171, 171);
+}
+.forgot-password-right-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 }
 
 .forgot-password-left-container h2 {
@@ -171,6 +178,7 @@ h2 {
     .forgot-password-container {
         display: flex;
         flex-direction: column;
+        height: 100%;
     }
     .forgot-password-left-container {
         padding: 0;

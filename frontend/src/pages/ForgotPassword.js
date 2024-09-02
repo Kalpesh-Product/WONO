@@ -3,6 +3,10 @@ import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { Toast, ToastContainer } from 'react-bootstrap';
 import '../styles/bodyLogin.css'; // Ensure this file is correctly imported
+import Batman from '../assets/batman.png'
+import Spiderman from '../assets/spiderman.png'
+import Slider from "react-slick";
+import BookingEngine from '../assets/WONO_images/img/booking_engine_login.png'
 
 const ForgotPassword = () => {
     const navigate = useNavigate();
@@ -19,9 +23,46 @@ const ForgotPassword = () => {
     const [toastType, setToastType] = useState('info'); // 'info', 'success', or 'danger'
     const [overlayVisible, setOverlayVisible] = useState(false);
 
+    const settings = {
+        dots: true,
+        infinite: true,
+        dotsClass: 'login-slick-dots',
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: true
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    initialSlide: 1
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ],
+    };
+
     const handleSubmit = async (event) => {
         event.preventDefault();
-    
+
         // Basic email validation
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailRegex.test(emailFormData.email)) {
@@ -34,7 +75,7 @@ const ForgotPassword = () => {
         setToastType('info');
         setShowToast(true);
         setOverlayVisible(true);
-    
+
         try {
             // Send the POST request with the email to the backend
             const response = await axios.post('http://localhost:5000/forgot-password', {
@@ -43,7 +84,7 @@ const ForgotPassword = () => {
 
             // Log the response from the backend
             console.log('Backend Response:', response.data);
-    
+
             if (response.status === 200) {
                 setPasswordReset(true);
                 setToastMessage('A password reset link has been sent to your email.');
@@ -87,7 +128,7 @@ const ForgotPassword = () => {
 
     const handlePasswordSubmit = async (event) => {
         event.preventDefault();
-    
+
         // Basic password validation
         if (newPassword.length < 6) {
             setError('Password must be at least 6 characters long');
@@ -104,7 +145,7 @@ const ForgotPassword = () => {
         setToastType('info');
         setShowToast(true);
         setOverlayVisible(true);
-    
+
         try {
             const response = await axios.post('http://localhost:5000/reset-password', {
                 email: emailFormData.email, // Ensure the email is included
@@ -157,9 +198,9 @@ const ForgotPassword = () => {
         <div className="forgot-password-container">
             <div className="forgot-password-left-container">
                 <h2 className="text-center mb-4">Password Reset</h2>
-                
+
                 {/* Email form */}
-                {!passwordReset &&  (
+                {!passwordReset && (
                     <form className='forgot-password-form' onSubmit={handleSubmit}>
                         <div className="mb-3">
                             <input
@@ -173,7 +214,7 @@ const ForgotPassword = () => {
                             />
                             {error && <div className="text-danger">{error}</div>}
                         </div>
-                      
+
                         <div className="mb-3">
                             <button type="submit" className="forgot-password-button w-100">
                                 Send OTP
@@ -181,7 +222,7 @@ const ForgotPassword = () => {
                         </div>
                     </form>
                 )}
-                
+
                 {/* OTP form */}
                 {passwordReset && !otpVerification && (
                     <form className='forgot-password-form' onSubmit={handleOTPsumbit}>
@@ -194,7 +235,7 @@ const ForgotPassword = () => {
                                 onChange={handleOtpChange}
                                 required
                             />
-                            <button type='submit' style={{margin:'1rem 0 1rem 0'}} className="forgot-password-button w-100 p-20">Verify OTP</button>
+                            <button type='submit' style={{ margin: '1rem 0 1rem 0' }} className="forgot-password-button w-100 p-20">Verify OTP</button>
                         </div>
                     </form>
                 )}
@@ -234,6 +275,26 @@ const ForgotPassword = () => {
 
                 <div className="text-center mt-3">
                     <span>Remembered your password? <Link to="/login" className="text-primary">Login</Link></span>
+                </div>
+            </div>
+            <div className="forgot-password-right-container">
+                <div className="container" style={{backgroundColor:'white', borderRadius:'20px'}}>
+                    <div className="login-carousel-container">
+                        <Slider {...settings}>
+                            <div className='login-carousel-item'>
+
+                                <img src={Batman} alt="Slide 1" />
+                            </div>
+                            <div className='login-carousel-item'>
+                                <img src={Spiderman} alt="Slide 2" />
+                            </div>
+                            <div className='login-carousel-item'>
+                                <h1>Booking Engine</h1>
+                                <img src={BookingEngine} alt="Slide 3" />
+                            </div>
+                        </Slider>
+                    </div>
+
                 </div>
             </div>
 

@@ -135,7 +135,7 @@ const Jobapply = ({jobTitle}) => {
 
           <div className="col-md-6">
             <div className="date-picker" tabindex="0">
-              <input type="date" name="date" id="datePicker" required="" max="2024-08-15" value={formvalues.date} onChange={handleInputChange}></input>
+              <input className='form-control' type="date" name="date" id="datePicker" required="" max="2024-08-15" value={formvalues.date} onChange={handleInputChange}></input>
               <div className="placeholder"></div>
             </div>
           </div>
@@ -253,7 +253,7 @@ Anything additional that you want us to know besides all above shared informatio
       
       <div className='RealToast'>
       {/* <Toasts toastMessage={'Form submitted'} position={'top-end'} show={show} onClose={() => { setShow(false) }} /> */}
-      <button name="submit" type="submit" style={{cursor:"pointer"}}>SUBMIT</button>
+      <button name="submit" type="submit" className='submit-button'>SUBMIT</button>
       </div>
     </div>
 

@@ -51,7 +51,7 @@ const Contact = () => {
                             <input type="hidden" name="pagename" value="Contact"></input>
                             
           
-                            <button name="submit" type="submit" className="btn-lg btn-block"  style={{borderRadius: "50px",backgroundColor:"black",color:"white", transition:"0.4s",border:0 }}>CONNECT</button>
+                            <button name="submit" type="submit" className="btn-lg btn-block submit-button">CONNECT</button>
                           </div>
                         </div>
                     </form>

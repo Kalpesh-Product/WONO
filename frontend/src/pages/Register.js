@@ -338,11 +338,7 @@ const Register = () => {
                               onClick={handleNext}
                               style={{width:'100%'}}
                             >
-                              <span> </span>
-                              <span>Next</span>
-                              <div style={{display:'flex', alignItems:'center', justifyContent:'center'}}>
-                              <span style={{backgroundColor:'white', color:'black', borderRadius:'50%'}}>▶</span>
-                              </div>
+                            Next
                             </button>
                             <span>Already have an account <Link to={'/login'}>Log-in</Link></span>
                           </div>
@@ -507,14 +503,9 @@ const Register = () => {
                               className="register-page-button"
                               onClick={handleNext}
                             >
-                              <span> </span>
-                              <span>Next</span>
-                              <span>▶️</span>
+                              Next
                             </button>
                             <span>Already have an account <Link to={'/login'}>Log-in</Link></span>
-                            <button type="button" onClick={handleBack}>
-                              Back
-                            </button>
                           </div>
                         </div>
                       </div>

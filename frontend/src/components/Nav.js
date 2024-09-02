@@ -7,12 +7,18 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import '../styles/componentStyle.css';
 import WonoLogo from '../assets/WONO_images/img/WONO_LOGO_white _TP.png';
+import { Tab } from 'react-bootstrap';
 
 const NavBar = () => {
   const navigate = useNavigate();
   const { user, setUser } = useContext(UserContext);
   const [show, setShow] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [activeTab,setActiveTab] = useState('Home');
+
+  const changeActiveTab = (activeTab)=>{
+    setActiveTab(activeTab);
+  }
 
   const handleLogout = async () => {
     try {
@@ -38,11 +44,11 @@ const NavBar = () => {
         <div className="custom-navbar-logo">
           <img style={{ cursor: 'pointer' }} onClick={() => { navigate('/') }} src={WonoLogo} alt='logo' />
         </div>
-        <div className="custom-navbar-menu">
-          <Link to='/' className='active'>Home</Link>
-          <Link to='/services'>Services</Link>
-          <Link to='/contact'>Contact</Link>
-          <Link to='/career'>Career</Link>
+        <div className="custom-navbar-menu nav-tabss">
+          <Link to='/' className={activeTab === 'Home'? 'active':''} onClick={()=>changeActiveTab('Home')}>Home</Link>
+          <Link to='/services' className={activeTab === 'Services'? 'active':''} onClick={()=>changeActiveTab('Services')}>Services</Link>
+          <Link to='/contact' className={activeTab === 'Contact'? 'active':''} onClick={()=>changeActiveTab('Contact')}>Contact</Link>
+          <Link to='/career'  className={activeTab === 'Career'? 'active':''} onClick={()=>changeActiveTab('Career')}>Career</Link>
          
           {user ? (
             <Link to={'/dashboard' } className='active'>Dashboard</Link>
@@ -60,10 +66,10 @@ const NavBar = () => {
               </div>
             </div>
           ) : (
-            <>
+            <div style={{display:'flex', gap:'20px'}}>
               <Link to='/login' className='login-button'>LOGIN</Link>
-              <button className='register-button' onClick={handleRegister}>REGISTER</button>
-            </>
+              <Link style={{color:'black'}} className='register-button' to='/register'>REGISTER</Link>
+            </div>
           )}
         </div>
         <div className="custom-navbar-menu-toggle" onClick={handleShow}>

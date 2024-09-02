@@ -13,7 +13,7 @@ const Carousels = ({image1, image2, image3}) => {
                 </div>
                 <div className="carousel-inner" style={{ backgroundColor: 'black', borderRadius: '1rem' }}>
                     <div className="carousel-item active" >
-                        <Image src={image1} alt='carousel-image' style={{height:'99%'}} fluid />
+                        <Image src={image1} alt='carousel-image'  fluid />
                     </div>
                     <div className="carousel-item">
                         <Image src={image2} alt='carousel-image' fluid />
