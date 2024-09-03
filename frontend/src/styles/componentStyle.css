@@ -34,7 +34,7 @@
   z-index: 50; */
 }
 .custom-navbar-logo{
-  padding: 0.5rem 0.5rem 0.5rem 2rem;
+  padding: 0.5rem 0.5rem 0.5rem 6rem;
 }
 
 .custom-navbar-logo a {
@@ -182,6 +182,9 @@
     width: 250px;
     /* Adjust width as needed */
   }
+  .custom-navbar-logo{
+    padding: 0.5rem ;
+  }
   .custom-navbar-logo img {
     width: 50%; /* Smaller width for screens less than 768px */
   }
@@ -328,6 +331,9 @@
   font-family: Popins-Regular;
   cursor: pointer;
   text-decoration: none;
+}
+.login-button:hover{
+  font-family: Popins-Black;
 }
 .register-button {
   background-color: yellow;
