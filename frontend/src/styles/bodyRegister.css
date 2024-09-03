@@ -5,8 +5,11 @@
   section{
     padding: 0;
   }
+  .register-master{
+    height: 100vh;
+  }
 .register-container{
-    padding: 2rem;
+    /* padding: 2rem; */
     font-family: Popins-Semibold;
 }
 .register-page-button-space{
@@ -52,6 +55,10 @@ padding: 1rem;
 }
 
 @media (max-width: 768px) {
+
+  .register-master{
+    height: 100%;
+  }
     .register-container{
         padding: 2rem;
     }

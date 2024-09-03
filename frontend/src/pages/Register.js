@@ -208,7 +208,7 @@ const Register = () => {
 
   const isChecked = (service) => formData.selectedServices[service];
   return (
-    <>
+    <div className='register-master'>
       <section id='contact' className='register'>
         <div className="card flex justify-content-center" style={{ backgroundColor: 'white' }}>
           <Stepper activeStep={currentStep}>
@@ -650,7 +650,7 @@ const Register = () => {
           </form>
         </div>
       </section>
-    </>
+    </div>
   );
 };
 
