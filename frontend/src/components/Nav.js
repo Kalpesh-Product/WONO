@@ -65,9 +65,9 @@ const NavBar = () => {
               </div>
             </div>
           ) : (
-            <div style={{display:'flex', gap:'20px', paddingRight:'2rem'}}>
-              <Link to='/login' className='login-button'>Sign-in</Link>
-              <Link style={{color:'black'}} className='register-button' to='/register'>Sign-Up</Link>
+            <div style={{display:'flex', gap:'20px', paddingRight:'6rem'}}>
+              <Link to='/login' className='login-button'>SIGN-IN</Link>
+              <Link style={{color:'black'}} className='register-button' to='/register'>SIGN-UP</Link>
             </div>
           )}
         </div>

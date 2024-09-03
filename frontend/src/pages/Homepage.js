@@ -15,6 +15,7 @@ import '../styles/componentStyle.css'
 import { Modal, Button, Container, Row, Col, Nav } from 'react-bootstrap';
 import WonoLogo from '../assets//WONO_images/img/WONO_LOGO_white _TP.png';
 import WonoLogoBlack from '../assets//WONO_images/img/WONO_LOGO_Black_TP.png';
+import BiznestLogo from '../assets/BIZNest/biznest_logo.jpg'
 import Template1 from '../assets/WONO_images/img/website-builder/template-1.jpeg'
 import Template1_2 from '../assets/WONO_images/img/website-builder/template-1-2.jpeg'
 import Template1_3 from '../assets/WONO_images/img/website-builder/template-1-3.jpeg'
@@ -88,6 +89,7 @@ const Homepage = () => {
     const [selectedItem, setSelectedItem] = useState('dashboard-booking');
     const [selectedWeb, setSelectedWeb] = useState('website-cafe');
     const [selectedTemplate, setSelectedTemplate] = useState(null);
+    const [selectedMenu, setSelectedMenu] = useState(null);
 
 
     //Template objects
@@ -268,8 +270,9 @@ const Homepage = () => {
     const handleMenuSelect = (menu) => {
         setSelectedItem(menu);
     };
-    const handleWebMenuSelect = (menu) => {
-        setSelectedWeb(menu);
+    const handleWebMenuSelect = (key) => {
+        setSelectedWeb(key);  // Set the key as the selected web content
+        setSelectedMenu(key); // Highlight the selected menu item
     };
 
 
@@ -297,13 +300,16 @@ const Homepage = () => {
                             for Living & Working from Aspiring Destinations across the world.
                         </span>
                         <div className='home-section-buttons'>
-
+                        <div> 
+                        <button className='register-button' onClick={handleRegister}>REGISTER</button>
+                       </div>
 
                         </div>
                     </div>
                     <div className="first-section-grid-item-2">
-                        <h2>Register now</h2>
-                        <button className='register-button' onClick={handleRegister}>REGISTER</button>
+                       <div style={{ borderRadius:'20px', marginTop:'20rem',width:'100%',textAlign:'center',paddingRight:'3rem'}}> 
+                        <button style={{width:'80%', margin:'0', borderRadius:'20px'}} className='register-button' onClick={handleRegister}>REGISTER</button>
+                       </div>
                     </div>
                 </div>
 
@@ -337,7 +343,7 @@ const Homepage = () => {
                         <div className="backend-panel-sidebar">
                             <div className="backend-sidebar-header">
                                 <div className="backend-sidebar-logo">
-                                    <img src={WonoLogoBlack} alt='' />
+                                    <img src={BiznestLogo} alt='' />
                                 </div>
                             </div>
                             {!collapsed && (
@@ -375,20 +381,24 @@ const Homepage = () => {
                 </div>
             </div>
 
-            <div className="website-container-master" style={{ backgroundColor: 'white' }}>
+            <div className="website-container-master" style={{ backgroundColor: 'black' }}>
                 <div className="website-panel-container">
-                    <h2>SaaS platforms</h2>
+                    <h2>Personalized template solutions</h2>
                     <div className="website-panel">
                         <div className="website-panel-sidebar">
                             <div className="website-sidebar-header">
                                 <div className="website-sidebar-logo">
-                                    <img src={WonoLogoBlack} alt='' />
+                                    <img src={BiznestLogo} alt='' />
                                 </div>
                             </div>
                             {!collapsed && (
                                 <Nav id="website-sidebar" className="flex-column p-0 website-sidebar">
                                     {Object.keys(website_menus).map((key) => (
-                                        <Nav.Link key={key} onClick={() => handleWebMenuSelect(key)}>
+                                        <Nav.Link 
+                                        key={key} 
+                                        onClick={() => handleWebMenuSelect(key)}
+                                        className={selectedMenu === key ? 'active' : ''}
+                                        >
                                             {website_menus[key]}
                                         </Nav.Link>
                                     ))}
@@ -397,7 +407,7 @@ const Homepage = () => {
                         </div>
                         <div className="website-panel-right">
                             <div className="website-panel-header">
-                                <h3>{website_menus[selectedWeb]}</h3>
+                            <h3>{website_menus[selectedWeb]}</h3>
                             </div>
                             <div className="website-panel-content">
 
@@ -409,7 +419,7 @@ const Homepage = () => {
                                         exit={{ opacity: 0 }}
                                         transition={{ duration: 0.2 }}
                                     >
-                                        {renderWebContent()}
+                                        {renderWebContent(selectedWeb)}
                                     </motion.div>
                                 </AnimatePresence>
                             </div>
