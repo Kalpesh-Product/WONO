@@ -2,7 +2,6 @@ import React, { useState, useEffect, useRef } from 'react'
 import axios from 'axios'
 import '../styles/bodyHome.css'
 import RotatingGlobe from '../components/RotatingGlobe'
-import World_map from '../assets/World_map.svg'
 import { Link, useNavigate } from 'react-router-dom'
 import Carousels from '../components/Carousels'
 import Toasts from '../components/Toasts'
@@ -39,6 +38,8 @@ import { Canvas, useFrame } from '@react-three/fiber';
 import { OrbitControls, useTexture } from '@react-three/drei';
 import Slider from 'react-slick';
 import { CustomNextArrow, CustomPrevArrow } from '../components/WebsiteBuilderArrows/CustomArrows'
+import WebsiteCafe from './WebsiteBuilder/WebsiteCafe'
+import WebsiteWorkation from './WebsiteBuilder/WebsiteWorkation'
 
 
 
@@ -58,13 +59,8 @@ const Homepage = () => {
 
     //First section carousel
 
-    const images = [Carousel1, Carousel2, Carousel3];
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setCurrentSlide((prevSlide) => (prevSlide + 1) % images.length);
-        }, 8000); // 
-        return () => clearInterval(interval); // Cleanup interval on component unmount
-    }, []);
+    const images = [Carousel1];
+
 
     const fadeVariants = {
         hidden: { opacity: 0.2 },
@@ -89,6 +85,7 @@ const Homepage = () => {
     const [showWebsiteModal, setShowWebsiteModal] = useState(false);
     const [collapsed, setCollapsed] = useState(false);
     const [selectedItem, setSelectedItem] = useState('dashboard-booking');
+    const [selectedWeb, setSelectedWeb] = useState('website-cafe');
     const [selectedTemplate, setSelectedTemplate] = useState(null);
 
 
@@ -233,6 +230,10 @@ const Homepage = () => {
         'dashboard-visitor': 'Visitor Management',
         'dashboard-asset': 'Asset Management',
     };
+    const website_menus = {
+        'website-cafe': 'Cafe',
+        'website-workation': 'Workation',
+    };
 
 
     const renderContent = () => {
@@ -253,8 +254,21 @@ const Homepage = () => {
                 return <DashboardBooking />;
         }
     };
+    const renderWebContent = () => {
+        switch (selectedWeb) {
+            case 'website-cafe':
+                return <WebsiteCafe />;
+            case 'website-workation':
+                return <WebsiteWorkation />;
+            default:
+                return <WebsiteCafe />;
+        }
+    };
     const handleMenuSelect = (menu) => {
         setSelectedItem(menu);
+    };
+    const handleWebMenuSelect = (menu) => {
+        setSelectedWeb(menu);
     };
 
 
@@ -263,135 +277,32 @@ const Homepage = () => {
             <div className='home-section'>
                 <div className="home-page-container">
                     <div className="background-div">
-                        <motion.div
-                            key={currentSlide}
-                            variants={fadeVariants}
-                            initial="hidden"
-                            animate="visible"
-                            exit="exit"
-                            transition={{ duration: 2 }} // Control transition speed
-                            className="background-image-container"
-                        >
+                        <div>
                             <img
-                                src={images[currentSlide]}
-                                alt={`Slide ${currentSlide + 1}`}
+                                src={images[0]}
+                                alt={`Slide`}
                                 className="background-image"
                             />
-                        </motion.div>
+                        </div>
                         <div className="black-overlay"></div>
                     </div>
                     <div className="first-section-grid-item-1">
                         <h2 className='home-main-title'>
                             <span className='w'> W</span><span className='O'>O</span>RLDS<br />
                             <span className='n'>N</span><span className='O'>O</span>MAD<br />
-                            <span className='c'>C</span><span className='O'>O</span>MMUNITY<br />
                         </h2>
                         <span className='home-desc'>
                             The World’s only Nomad Community which is a curation of the best of platforms
                             for Living & Working from Aspiring Destinations across the world.
                         </span>
                         <div className='home-section-buttons'>
-                            <div style={{ borderRight: '1px solid white' }}>
-                                <button onClick={handleLogin} className='login-button'>LOGIN</button>
-                            </div>
-                            <button className='register-button' onClick={handleRegister}>REGISTER</button>
+
+
                         </div>
                     </div>
                     <div className="first-section-grid-item-2">
-                        <h2>Connect with us!</h2>
-                        <div className="container form-card">
-                            <form onSubmit={handleSubmit} className='needs-validation' noValidate>
-
-                                {/* First Row */}
-                                <div className="col-md-12">
-                                    <div className="col-md-12 mb-3">
-
-                                        <input
-                                            type="text"
-                                            className={`form-control ${isNameInvalid ? 'is-invalid' : ''}`}
-                                            placeholder="Name"
-                                            aria-label="name"
-                                            id="validationCustom05"
-                                            value={name}
-                                            required
-                                            onChange={(e) => setname(e.target.value)}
-
-                                        />
-                                        <div className="invalid-feedback">
-                                            Please provide a name
-                                        </div>
-
-                                    </div>
-                                    <div className="col-md-12 mb-3">
-                                        <input
-                                            type="text"
-                                            className={`form-control ${isEmailInvalid ? 'is-invalid' : ''}`}
-                                            placeholder="Email"
-                                            aria-label="email"
-                                            id="validationCustom01"
-                                            value={email}
-                                            required
-                                            onChange={(e) => setEmail(
-                                                e.target.value
-                                            )}
-                                        />
-                                        <div className="invalid-feedback">
-                                            Please provide an email
-                                        </div>
-
-                                    </div>
-                                    <div className="col-md-12 mb-3">
-                                        <input
-                                            type="text"
-                                            className={`form-control ${isMobileInvalid ? 'is-invalid' : ''}`}
-                                            placeholder="Mobile-number"
-                                            aria-label="mobile-number"
-                                            value={number}
-                                            required
-                                            onChange={(e) => setNumber(e.target.value)}
-                                        />
-                                        <div className="invalid-feedback">
-                                            Please provide a mobile number
-                                        </div>
-
-                                    </div>
-                                    <div className="col-md-12 mb-3">
-                                        <div className="dropdown">
-                                            <button
-                                                className="btn  dropdown-toggle w-100"
-                                                type="button"
-                                                id="dropdownMenuButton"
-                                                data-bs-toggle="dropdown"
-                                                aria-expanded="false"
-                                                style={{ border: "1px solid #e0e0e0", margin: "0", textAlign: "left" }}
-
-                                                required
-
-                                            >
-                                                {selectedOption}
-                                            </button>
-                                            <div className="invalid-feedback">
-                                                Please select one option
-                                            </div>
-                                            <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton" style={{ backgroundColor: 'white' }}>
-                                                <li><Link className="dropdown-item custom-dropdown-item" to="/" onClick={() => handleSelect('B2B Saas Technology Licensing')}>B2B Saas Technology Licensing</Link></li>
-                                                <li><Link className="dropdown-item custom-dropdown-item" to="/" onClick={() => handleSelect('B2C Workation/Co-Working Booking')}>B2C Workation/Co-Working Booking</Link></li>
-                                                <li><Link className="dropdown-item custom-dropdown-item" to="/" onClick={() => handleSelect('Landlord Partnership')}>Landlord Partnership</Link></li>
-                                                <li><Link className="dropdown-item custom-dropdown-item" to="/" onClick={() => handleSelect('Investment Related')}>Investment Related</Link></li>
-                                                <li><Link className="dropdown-item custom-dropdown-item" to="/" onClick={() => handleSelect('Coffee Meeting to know us better')}>Coffee Meeting to know us better</Link></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                {/* Submit Button */}
-                                <div className="button_space">
-                                    <button type="submit" className="submit-button">
-                                        Connect
-                                    </button>
-                                </div>
-                            </form>
-                        </div>
+                        <h2>Register now</h2>
+                        <button className='register-button' onClick={handleRegister}>REGISTER</button>
                     </div>
                 </div>
 
@@ -417,7 +328,7 @@ const Homepage = () => {
 
             <div className="backend-container-master" style={{ backgroundColor: 'white' }}>
                 <div className="backend-panel-container">
-                    <h2>Admin Dashboard</h2>
+                    <h2>SaaS platforms</h2>
                     <div className="backend-panel">
                         <div className="backend-panel-sidebar">
                             <div className="backend-sidebar-header">
@@ -460,42 +371,47 @@ const Homepage = () => {
                 </div>
             </div>
 
-            <div className="website-builder">
-
-                <div className="website-builder-grid-1">
-                    <div className="website-builder-title">
-                        <h2>Website Templates</h2>
-                        <span>Check-out our templates</span>
-                    </div>
-                    <Container className='template-container'>
-                        <Slider {...templateSliderSettings}>
-                            {templates.map((template, index) => (
-                                <div className="template-slide" key={index} onClick={() => handleTemplateClick(template)}>
-                                    <div
-                                        className={`template-card`}
-                                    >
-                                        <img src={template.images[0]} alt={template.name} />
-                                    </div>
+            <div className="website-container-master" style={{ backgroundColor: 'white' }}>
+                <div className="website-panel-container">
+                    <h2>SaaS platforms</h2>
+                    <div className="website-panel">
+                        <div className="website-panel-sidebar">
+                            <div className="website-sidebar-header">
+                                <div className="website-sidebar-logo">
+                                    <img src={WonoLogoBlack} alt='' />
                                 </div>
-                            ))}
-                        </Slider>
-                    </Container>
+                            </div>
+                            {!collapsed && (
+                                <Nav id="website-sidebar" className="flex-column p-0 website-sidebar">
+                                    {Object.keys(website_menus).map((key) => (
+                                        <Nav.Link key={key} onClick={() => handleWebMenuSelect(key)}>
+                                            {website_menus[key]}
+                                        </Nav.Link>
+                                    ))}
+                                </Nav>
+                            )}
+                        </div>
+                        <div className="website-panel-right">
+                            <div className="website-panel-header">
+                                <h3>{website_menus[selectedWeb]}</h3>
+                            </div>
+                            <div className="website-panel-content">
+
+                                <AnimatePresence>
+                                    <motion.div
+                                        key={selectedWeb}
+                                        initial={{ opacity: 0 }}
+                                        animate={{ opacity: 1 }}
+                                        exit={{ opacity: 0 }}
+                                        transition={{ duration: 0.2 }}
+                                    >
+                                        {renderWebContent()}
+                                    </motion.div>
+                                </AnimatePresence>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                {/* React-Bootstrap Modal */}
-                <Modal show={showWebsiteModal} onHide={handleClose} centered>
-                    <Modal.Header closeButton>
-                        <Modal.Title>{selectedTemplate?.name}</Modal.Title>
-                    </Modal.Header>
-                    <Modal.Body>
-                        {selectedTemplate && (
-                            <img
-                                src={selectedTemplate.images[0]}
-                                alt={selectedTemplate.name}
-                                className="img-fluid"
-                            />
-                        )}
-                    </Modal.Body>
-                </Modal>
             </div>
 
 
