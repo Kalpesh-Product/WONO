@@ -42,7 +42,7 @@ const NavBar = () => {
     <>
       <nav className="custom-navbar">
         <div className="custom-navbar-logo">
-          <img style={{ cursor: 'pointer' }} onClick={() => { navigate('/') }} src={WonoLogo} alt='logo' />
+          <img style={{ cursor: 'pointer' }} onClick={() => { navigate('/'); changeActiveTab('Home') }} src={WonoLogo} alt='logo' />
         </div>
         <div className="custom-navbar-menu nav-tabss">
           <Link to='/' className={activeTab === 'Home'? 'active':''} onClick={()=>changeActiveTab('Home')}>Home</Link>

@@ -62,7 +62,7 @@ const Jobrole = () => {
           <div className='col-lg-6' style={{textAlign:"right"}}>
             <p style={{fontWeight:"600",margin:"10px 0"}}>
               <span className='link-btn'>Full-Time | On-Site| Goa </span>
-              <i className='fa fa-cheveron-right' >Apply</i>
+              <Link to={`/jobdetails/2/${encodeURIComponent('Jr. UI/UX Developer')}`}><i className='fa fa-cheveron-right' >Apply</i></Link>
             </p>
           </div>
           </div>  
@@ -75,7 +75,7 @@ const Jobrole = () => {
           <div className='col-lg-6' style={{textAlign:"right"}}>
             <p style={{fontWeight:"600",margin:"10px 0"}}>
               <span className='link-btn'>Full-Time | On-Site| Goa </span>
-              <i className='fa fa-cheveron-right' >Apply</i>
+              <Link to={`/jobdetails/2/${encodeURIComponent('PHP Developer')}`}><i className='fa fa-cheveron-right' >Apply</i></Link>
             </p>
           </div>
           </div>  
@@ -88,7 +88,7 @@ const Jobrole = () => {
           <div className='col-lg-6' style={{textAlign:"right"}}>
             <p style={{fontWeight:"600",margin:"10px 0"}}>
               <span className='link-btn'>Full-Time | On-Site| Goa </span>
-              <i className='fa fa-cheveron-right' >Apply</i>
+              <Link to={`/jobdetails/2/${encodeURIComponent('Web Developer Intern')}`}><i className='fa fa-cheveron-right' >Apply</i></Link>
             </p>
           </div>
           </div>  
@@ -104,7 +104,7 @@ const Jobrole = () => {
           <div className='col-lg-6' style={{textAlign:"right"}}>
             <p style={{fontWeight:"600",margin:"10px 0"}}>
               <span className='link-btn'>Full-Time | On-Site| Goa </span>
-              <i className='fa fa-cheveron-right' >Apply</i>
+              <Link to={`/jobdetails/2/${encodeURIComponent('Finance Intern')}`}><i className='fa fa-cheveron-right' >Apply</i></Link>
             </p>
           </div>
           </div>  
@@ -121,7 +121,7 @@ const Jobrole = () => {
           <div className='col-lg-6' style={{textAlign:"right"}}>
             <p style={{fontWeight:"600",margin:"10px 0"}}>
               <span className='link-btn'>Full-Time | On-Site| Goa </span>
-              <i className='fa fa-cheveron-right' >Apply</i>
+              <Link to={`/jobdetails/2/${encodeURIComponent('HR Generalist')}`}><i className='fa fa-cheveron-right' >Apply</i></Link>
             </p>
           </div>
           </div>  
@@ -134,16 +134,14 @@ const Jobrole = () => {
           <div className='col-lg-6' style={{textAlign:"right"}}>
             <p style={{fontWeight:"600",margin:"10px 0"}}>
               <span className='link-btn'>Full-Time | On-Site| Goa </span>
-              <i className='fa fa-cheveron-right'>Apply</i>
+              <Link to={`/jobdetails/2/${encodeURIComponent('Executive Assistant to CEO')}`}><i className='fa fa-cheveron-right'>Apply</i></Link>
             </p>
           </div>
-          </div>  
+          </div> 
         </Accordion.Body>
-        
       </Accordion.Item>
       <Accordion.Item eventKey="4">
         <Accordion.Header>V. Sales & Bussiness Development</Accordion.Header>
-        
         <Accordion.Body>
         <div className='mob-down' style={{display:"flex"}}>
           <div className='col-lg-6'>
@@ -152,7 +150,7 @@ const Jobrole = () => {
           <div className='col-lg-6' style={{textAlign:"right"}}>
             <p style={{fontWeight:"600",margin:"10px 0"}}>
               <span className='link-btn'>Full-Time | On-Site| Goa </span>
-              <i className='fa fa-cheveron-right'>Apply</i>
+              <Link to={`/jobdetails/2/${encodeURIComponent('Sr.Manager Sales & Bussiness Development')}`}><i className='fa fa-cheveron-right'>Apply</i></Link>
             </p>
           </div>
           </div>  
@@ -168,14 +166,12 @@ const Jobrole = () => {
           <div className='col-lg-6' style={{textAlign:"right"}}>
             <p style={{fontWeight:"600",margin:"10px 0"}}>
               <span className='link-btn'>Full-Time | On-Site| Goa </span>
-              <i className='fa fa-cheveron-right' >Apply</i>
+              <Link to={`/jobdetails/2/${encodeURIComponent('Social Media Executive')}`}><i className='fa fa-cheveron-right' >Apply</i></Link>
             </p>
           </div>
-          </div>  
-          
+          </div>      
         </Accordion.Body>
       </Accordion.Item>
-
     </Accordion>
     </div>
     </>

@@ -2,6 +2,12 @@ import React, { useEffect } from 'react'
 import "../layout/jobdetails.css"
 import { useParams } from 'react-router-dom'
 import Jobapply from '../components/jobroles/Jobapply.js'
+import ExecutiveAssistanceToCEO from "../components/jobroles/Human_Resource&EA/ExecutiveAssistanceToCEO.js";
+import HrGeneralist from "../components/jobroles/Human_Resource&EA/HrGeneralist.js";
+import FinanceIntern from "../components/jobroles/Finance/FinanceIntern.js";
+import PHPdeveloper from "../components/jobroles/TechDevelopment/PHPdeveloper.js";
+import WebdeveloperIntern from "../components/jobroles/TechDevelopment/WebdeveloperIntern.js";
+import MarketingAnalytics from "../components/jobroles/ProductManagement/MarketingAnalytics.js"
 import Aos from 'aos'
 import 'aos/dist/aos.css';
 import { Link } from 'react-router-dom'
@@ -44,7 +50,10 @@ const JobDetails = () => {
             <div className="tab-content">
               <div className="tab-pane fade show active" id="tab-1" role="tabpanel">
                 <div className="row">
-                  <div className="col-lg-12 order-2 order-lg-1 mt-3 mt-lg-0 d-flex flex-column justify-content-center"
+                  
+                  {/* NEED TO Enter below function */}
+                  {decodedTitle === 'Marketing Analytics' ? (<MarketingAnalytics/>) : decodedTitle === 'PHP Developer' ? (<PHPdeveloper/>):""} 
+                  {/* <div className="col-lg-12 order-2 order-lg-1 mt-3 mt-lg-0 d-flex flex-column justify-content-center"
                     data-aos="fade-up" data-aos-delay="100">
                     <h3 className="m-b-2">About the Job</h3>
                     <p>We are searching for a talented social media Assistant to represent our company by building a social media presence for our brands. The social media Assistant will be required to run advertising campaigns and drive engagement by creating high-quality original content. You should also engage influencers, manage our community by responding to comments, and oversee our customer service across all platforms</p>
@@ -132,7 +141,8 @@ const JobDetails = () => {
                     <hr style={{ marginTop: "20px" }}></hr>
                     <p style={{ marginBottom: "50px" }}>Please send in your Resume to <strong>Email:<Link to="mailto:response@wono.co">response@wono.co</Link></strong>
                       if unable to apply now</p>
-                </div>
+                </div> */}
+
               </div>
             </div>
             {/* Apply Form */}

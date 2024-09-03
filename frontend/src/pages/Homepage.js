@@ -39,6 +39,7 @@ import { Canvas, useFrame } from '@react-three/fiber';
 import { OrbitControls, useTexture } from '@react-three/drei';
 import Slider from 'react-slick';
 import { CustomNextArrow, CustomPrevArrow } from '../components/WebsiteBuilderArrows/CustomArrows'
+import Four_cardsComponents from '../components/Four_cardsComponents'
 
 
 
@@ -399,7 +400,7 @@ const Homepage = () => {
 
             <div className='Globe-N-Commerce' >
                 <div className='Globe' style={{ textAlign: 'left' }}>
-                    <Canvas camera={{ position: [0, 0, 20], fov: 40 }} className='globe3d'>
+                    <Canvas camera={{ position: [0, 0, 25], fov: 40 }} className='globe3d'>
                         <ambientLight intensity={0.5} />
                         <pointLight position={[10, 10, 10]} />
                         <RotatingGlobe />
@@ -413,6 +414,9 @@ const Homepage = () => {
                         <a data-aos-delay="200" href="contact.html">PARTNER NOW</a>
                     </div>
                 </div>
+            </div>
+            <div className='four-cards-section' style={{padding: "0",marginBottom:"-60px",marginTop: "20px"}}>
+                <Four_cardsComponents/>
             </div>
 
             <div className="backend-container-master" style={{ backgroundColor: 'white' }}>

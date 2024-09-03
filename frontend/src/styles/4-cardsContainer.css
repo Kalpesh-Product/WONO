@@ -1,0 +1,30 @@
+.six-cards{
+    
+    background-color: white;
+}
+.card{
+    height: 300px;
+    padding: 20px;
+    width: 180px;
+    gap: 10px;
+}
+.card-title{
+    font-size: 15px;
+   
+    padding-bottom: 10px;
+}
+.card-text{
+    text-align: start;
+    font-size: 12px;
+    font-weight: 500;
+}
+.four-cardsHeaderText{
+    padding-left: 9%;
+    padding-top: 5%;
+    font-size: 25px;
+    color: #08445E;
+    
+}
+.card-body{
+   
+}
