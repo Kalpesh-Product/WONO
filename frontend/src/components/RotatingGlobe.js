@@ -64,7 +64,7 @@ const RotatingGlobe = () => {
     const getLabelRotationmalaysia = (lat,lon) =>{
       const phi = (90 - lat) * (Math.PI / 180);
       const theta = (lon - 90) * (Math.PI / 180);
-      return [0, 66,0];
+      return [0, 62,0];
 
     }
 
