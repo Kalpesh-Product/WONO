@@ -63,6 +63,7 @@ const WebsiteWorkation = () => {
           width: 100%;
           height: 100%;
           object-fit: cover;
+          object-position : top;
         }
         .modal-image {
           width: 100%;

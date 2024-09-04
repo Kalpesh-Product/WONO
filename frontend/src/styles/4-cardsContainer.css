@@ -6,6 +6,7 @@
     justify-content: center;
     flex-direction: column;
 }
+
 .card-wrapper{
     
     background-color: white;
@@ -13,6 +14,7 @@
 .card_1{
    padding: 5px;
    height: 230px;
+
 }
 .card-title{
     font-size: 15px;
@@ -51,10 +53,16 @@
     height: 100%;
 
  }
- .card_1{
+ .four-cardsHeaderText{
+    padding: 1rem 2rem 0 2rem;
+    text-align: center;
+}
+ .card_1 > *{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    height: inherit;
  }
   
     
