@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Modal } from 'react-bootstrap';
 import Template3 from '../../assets/WONO_images/img/website-builder/template-3.jpeg';
-import Template2 from '../../assets/WONO_images/img/website-builder/template-2.jpeg';
 
 const WebsiteWorkation = () => {
 

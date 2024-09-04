@@ -33,7 +33,7 @@ import DashboardProducts from './Dashboard-pages/DashboardProducts'
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
 // import { CustomNextArrow, CustomPrevArrow } from '../components/WebsiteBuilderArrows/CustomArrows'
-import Four_cardsComponents from '../components/Four_cardsComponents'
+import FourCardsComponents from '../components/Four_cardsComponents'
 import WebsiteCafe from './WebsiteBuilder/WebsiteCafe'
 import WebsiteWorkation from './WebsiteBuilder/WebsiteWorkation'
 
@@ -174,7 +174,7 @@ const Homepage = () => {
                 </div>
             </div>
             <div className='four-cards-section' style={{padding: "0",marginBottom:"-60px",marginTop: "20px"}}>
-                <Four_cardsComponents/>
+                <FourCardsComponents/>
             </div>
 
             <div className="backend-container-master" style={{ backgroundColor: 'white' }}>

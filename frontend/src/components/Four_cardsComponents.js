@@ -3,7 +3,7 @@ import "../styles/4-cardsContainer.css"
 import TickmarkImg from "../assets/check.png"
 
 
-const Four_cardsComponents = () => {
+const FourCardsComponents = () => {
   return (
     <div className='four-cardsContainer' style={{backgroundColor:"white"}}>
         <div className='four-cardsHeaderText'>
@@ -170,4 +170,4 @@ const Four_cardsComponents = () => {
   )
 }
 
-export default Four_cardsComponents
+export default FourCardsComponents
