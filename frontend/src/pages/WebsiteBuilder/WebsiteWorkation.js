@@ -48,12 +48,17 @@ const WebsiteWorkation = () => {
           gap: 16px;
         }
         .template-container {
-          width: 200px;
+          width: 100%;
           height: 350px;
           overflow: hidden;
           cursor: pointer;
           border: 1px solid #ddd;
         }
+                   @media (max-width: 768px) {
+            .template-grid {
+                flex-wrap : wrap;
+              }
+          }
         .template-image {
           width: 100%;
           height: 100%;
