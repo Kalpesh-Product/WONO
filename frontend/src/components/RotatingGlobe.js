@@ -1,7 +1,7 @@
 import React,{useRef} from 'react';
-import { Canvas, useFrame } from '@react-three/fiber';
-import { OrbitControls, useTexture,Text,Plane} from '@react-three/drei';
-import * as THREE from 'three'
+import { useFrame } from '@react-three/fiber';
+import {  useTexture,Text,Plane} from '@react-three/drei';
+
 import WorldMap from "../assets/greenLandscapeWhiteBackground.png"
 
 const RotatingGlobe = () => {
@@ -30,41 +30,35 @@ const RotatingGlobe = () => {
 
    // Rotation to keep the text upright
    const getLabelRotation = (lat, lon) => {
-    const phi = (90 - lat) * (Math.PI / 180);
-        const theta = (lon - 90) * (Math.PI / 180);
+   
         return [0,-500,0];
 };
 
     const getLabelRotationUsa = (lat, lon)=> {
-      const phi = (90 - lat) * (Math.PI / 180);
-      const theta = (lon - 90) * (Math.PI / 180);
+     
       return [0.2, -45,-63];
     }
 
     const getLabelRotationbrazil = (lat,lon) => {
-      const phi = (90 - lat) * (Math.PI / 180);
-      const theta = (lon - 90) * (Math.PI / 180);
+    
       return [1, -50,0];
     }
 
     const getLabelRotationjapan = (lat,lon) =>{
-      const phi = (90 - lat) * (Math.PI / 180);
-      const theta = (lon - 90) * (Math.PI / 180);
+      
       return [0, 60,0];
 
     }
 
     const getLabelRotationGermany = (lat,lon) =>{
-      const phi = (90 - lat) * (Math.PI / 180);
-      const theta = (lon - 90) * (Math.PI / 180);
+     
       return [0, -61,0];
 
     }
 
     const getLabelRotationmalaysia = (lat,lon) =>{
-      const phi = (90 - lat) * (Math.PI / 180);
-      const theta = (lon - 90) * (Math.PI / 180);
-      return [0, 66,0];
+     
+      return [0, 60,0];
 
     }
 
@@ -262,9 +256,7 @@ const RotatingGlobe = () => {
                 fontWeight='600'
             >
                Malaysia
-            </Text>
-
-            
+            </Text>    
   </mesh>
   
    </>

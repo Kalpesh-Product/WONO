@@ -8,6 +8,8 @@ import FinanceIntern from "../components/jobroles/Finance/FinanceIntern.js";
 import PHPdeveloper from "../components/jobroles/TechDevelopment/PHPdeveloper.js";
 import WebdeveloperIntern from "../components/jobroles/TechDevelopment/WebdeveloperIntern.js";
 import MarketingAnalytics from "../components/jobroles/ProductManagement/MarketingAnalytics.js"
+import UiDesignerComp from '../components/jobroles/ProductManagement/UiDesignerComp.js';
+import developer from '../components/jobroles/TechDevelopment/Uiux developer.js';
 import Aos from 'aos'
 import 'aos/dist/aos.css';
 import { Link } from 'react-router-dom'
@@ -52,7 +54,10 @@ const JobDetails = () => {
                 <div className="row">
                   
                   {/* NEED TO Enter below function */}
-                  {decodedTitle === 'Marketing Analytics' ? (<MarketingAnalytics/>) : decodedTitle === 'PHP Developer' ? (<PHPdeveloper/>):""} 
+                  {decodedTitle === 'Marketing Analytics' ? (<MarketingAnalytics/>) : decodedTitle === 'PHP Developer' ? (<PHPdeveloper/>):
+                  decodedTitle === 'Web Developer Intern' ? (<WebdeveloperIntern/>) : decodedTitle === 'Finance Intern' ? (<FinanceIntern/>):
+                  decodedTitle === 'HR Generalist' ? (<HrGeneralist/>): decodedTitle === 'Executive Assistant to CEO'? (<ExecutiveAssistanceToCEO/>):
+                  decodedTitle === 'UI Designer' ? (<UiDesignerComp/>): decodedTitle === 'Jr. UI/UX Developer' ? (<developer/>):(<MarketingAnalytics/>)} 
                   {/* <div className="col-lg-12 order-2 order-lg-1 mt-3 mt-lg-0 d-flex flex-column justify-content-center"
                     data-aos="fade-up" data-aos-delay="100">
                     <h3 className="m-b-2">About the Job</h3>
