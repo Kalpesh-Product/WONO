@@ -7,7 +7,6 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import '../styles/componentStyle.css';
 import WonoLogo from '../assets/WONO_images/img/WONO_LOGO_white _TP.png';
-import { Tab } from 'react-bootstrap';
 
 const NavBar = () => {
   const navigate = useNavigate();
@@ -42,7 +41,11 @@ const NavBar = () => {
     <>
       <nav className="custom-navbar">
         <div className="custom-navbar-logo">
-          <img style={{ cursor: 'pointer' }} onClick={() => { navigate('/'); changeActiveTab('Home') }} src={WonoLogo} alt='logo' />
+          <img style={{ cursor: 'pointer' }} onClick={() => { 
+            navigate('/'); 
+            changeActiveTab('Home') 
+            window.scrollTo({ top: 0, behavior: 'smooth' })
+            }} src={WonoLogo} alt='logo' />
         </div>
         <div className="custom-navbar-menu nav-tabss">
           <Link to='/services' className={activeTab === 'Services'? 'active':''} onClick={()=>changeActiveTab('Services')}>Services</Link>
@@ -66,8 +69,8 @@ const NavBar = () => {
             </div>
           ) : (
             <div style={{display:'flex', gap:'20px', paddingRight:'6rem'}}>
-              <Link to='/login' className='login-button'>SIGN-IN</Link>
-              <Link style={{color:'black'}} className='register-button' to='/register'>SIGN-UP</Link>
+              <Link  onClick={()=>window.scrollTo({ top: 0, behavior: 'smooth' })} to='/login' className='login-button'>SIGN-IN</Link>
+              <Link style={{color:'black'}} onClick={()=>window.scrollTo({ top: 0, behavior: 'smooth' })} className='register-button' to='/register'>SIGN-UP</Link>
             </div>
           )}
         </div>

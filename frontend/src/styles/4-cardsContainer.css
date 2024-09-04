@@ -1,30 +1,69 @@
-.six-cards{
+.four-cardsContainer{
+    /* height: 100%; */
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.card-wrapper{
     
     background-color: white;
 }
-.card{
-    height: 300px;
-    padding: 20px;
-    width: 180px;
-    gap: 10px;
+.card_1{
+   padding: 5px;
+   height: 230px;
+
 }
 .card-title{
     font-size: 15px;
-   
-    padding-bottom: 10px;
+    margin-top: 2px;
+    padding: 10px;
 }
 .card-text{
-    text-align: start;
     font-size: 12px;
     font-weight: 500;
+    padding: 4px;
+    gap: 10px;
 }
 .four-cardsHeaderText{
-    padding-left: 9%;
+    
     padding-top: 5%;
-    font-size: 25px;
+    font-size: 30px;
     color: #08445E;
     
 }
 .card-body{
+    padding: 0;
    
+}
+.Tickmark-text{
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+}
+
+.Tickmark-text img{
+    padding-right: 4px;
+    height: 15px;
+}
+@media (max-width:768px) {
+ .four-cardsContainer{
+    height: 100%;
+
+ }
+ .four-cardsHeaderText{
+    padding: 1rem 2rem 0 2rem;
+    text-align: center;
+}
+ .card_1 > *{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: inherit;
+ }
+  
+    
 }

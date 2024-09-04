@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Modal } from 'react-bootstrap';
 import Template3 from '../../assets/WONO_images/img/website-builder/template-3.jpeg';
-import Template2 from '../../assets/WONO_images/img/website-builder/template-2.jpeg';
 
 const WebsiteWorkation = () => {
 
@@ -48,16 +47,22 @@ const WebsiteWorkation = () => {
           gap: 16px;
         }
         .template-container {
-          width: 200px;
+          width: 100%;
           height: 350px;
           overflow: hidden;
           cursor: pointer;
           border: 1px solid #ddd;
         }
+                   @media (max-width: 768px) {
+            .template-grid {
+                flex-wrap : wrap;
+              }
+          }
         .template-image {
           width: 100%;
           height: 100%;
           object-fit: cover;
+          object-position : top;
         }
         .modal-image {
           width: 100%;

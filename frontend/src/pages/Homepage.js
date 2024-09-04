@@ -1,241 +1,73 @@
-import React, { useState, useEffect, useRef } from 'react'
-import axios from 'axios'
+import React, { useState, useRef } from 'react'
 import '../styles/bodyHome.css'
 import RotatingGlobe from '../components/RotatingGlobe'
-import { Link, useNavigate } from 'react-router-dom'
-import Carousels from '../components/Carousels'
-import Toasts from '../components/Toasts'
+import {  useNavigate } from 'react-router-dom'
 import Carousel1 from '../assets/WONO_images/img/hero-carousel/hero-carousel-1.webp'
-import Carousel2 from '../assets/WONO_images/img/hero-carousel/hero-carousel-2.png'
-import Carousel3 from '../assets/WONO_images/img/hero-carousel/hero-carousel-3.png'
-import GlobalNomad from '../assets/WONO_images/img/icon_service/Birthday.webp'
-import Homefeatures from '../components/Homefeatures'
+// import Carousel2 from '../assets/WONO_images/img/hero-carousel/hero-carousel-2.png'
+// import Carousel3 from '../assets/WONO_images/img/hero-carousel/hero-carousel-3.png'
+// import GlobalNomad from '../assets/WONO_images/img/icon_service/Birthday.webp'
 import { motion, AnimatePresence } from 'framer-motion';
 import '../styles/componentStyle.css'
-import { Modal, Button, Container, Row, Col, Nav } from 'react-bootstrap';
-import WonoLogo from '../assets//WONO_images/img/WONO_LOGO_white _TP.png';
-import WonoLogoBlack from '../assets//WONO_images/img/WONO_LOGO_Black_TP.png';
+import { Nav } from 'react-bootstrap';
+// import WonoLogo from '../assets//WONO_images/img/WONO_LOGO_white _TP.png';
+// import WonoLogoBlack from '../assets//WONO_images/img/WONO_LOGO_Black_TP.png';
 import BiznestLogo from '../assets/BIZNest/biznest_logo.jpg'
-import Template1 from '../assets/WONO_images/img/website-builder/template-1.jpeg'
-import Template1_2 from '../assets/WONO_images/img/website-builder/template-1-2.jpeg'
-import Template1_3 from '../assets/WONO_images/img/website-builder/template-1-3.jpeg'
-import Template1_4 from '../assets/WONO_images/img/website-builder/template-1-4.jpeg'
-import Template2 from '../assets/WONO_images/img/website-builder/template-2.jpeg'
-import Template2_2 from '../assets/WONO_images/img/website-builder/template-2-2.jpeg'
-import Template2_3 from '../assets/WONO_images/img/website-builder/template-2-3.jpeg'
-import Template2_4 from '../assets/WONO_images/img/website-builder/template-2-4.jpeg'
-import Template3 from '../assets/WONO_images/img/website-builder/template-3.jpeg'
-import Template3_2 from '../assets/WONO_images/img/website-builder/template-3-2.jpeg'
-import Template3_3 from '../assets/WONO_images/img/website-builder/template-3-3.jpeg'
-import Template3_4 from '../assets/WONO_images/img/website-builder/template-3-4.jpeg'
+// import Template1 from '../assets/WONO_images/img/website-builder/template-1.jpeg'
+// import Template1_2 from '../assets/WONO_images/img/website-builder/template-1-2.jpeg'
+// import Template1_3 from '../assets/WONO_images/img/website-builder/template-1-3.jpeg'
+// import Template1_4 from '../assets/WONO_images/img/website-builder/template-1-4.jpeg'
+// import Template2 from '../assets/WONO_images/img/website-builder/template-2.jpeg'
+// import Template2_2 from '../assets/WONO_images/img/website-builder/template-2-2.jpeg'
+// import Template2_3 from '../assets/WONO_images/img/website-builder/template-2-3.jpeg'
+// import Template2_4 from '../assets/WONO_images/img/website-builder/template-2-4.jpeg'
+// import Template3 from '../assets/WONO_images/img/website-builder/template-3.jpeg'
+// import Template3_2 from '../assets/WONO_images/img/website-builder/template-3-2.jpeg'
+// import Template3_3 from '../assets/WONO_images/img/website-builder/template-3-3.jpeg'
+// import Template3_4 from '../assets/WONO_images/img/website-builder/template-3-4.jpeg'
 import DashboardBooking from './Dashboard-pages/DashboardBooking'
 import DashboardAsset from './Dashboard-pages/DashboardAsset'
 import DashboardHR from './Dashboard-pages/DashboardHR'
 import DashboardTickets from './Dashboard-pages/DashboardTickets'
 import DashboardVisitor from './Dashboard-pages/DashboardVisitor'
 import DashboardProducts from './Dashboard-pages/DashboardProducts'
-import GlobeWithMarkers from '../components/GlobeWithMarkers'
-import { Canvas, useFrame } from '@react-three/fiber';
-import { OrbitControls, useTexture } from '@react-three/drei';
-import Slider from 'react-slick';
-import { CustomNextArrow, CustomPrevArrow } from '../components/WebsiteBuilderArrows/CustomArrows'
-import Four_cardsComponents from '../components/Four_cardsComponents'
+import { Canvas } from '@react-three/fiber';
+import { OrbitControls } from '@react-three/drei';
+// import { CustomNextArrow, CustomPrevArrow } from '../components/WebsiteBuilderArrows/CustomArrows'
+import FourCardsComponents from '../components/Four_cardsComponents'
 import WebsiteCafe from './WebsiteBuilder/WebsiteCafe'
 import WebsiteWorkation from './WebsiteBuilder/WebsiteWorkation'
 
 
 
 const Homepage = () => {
+
+
+    const menuTitles = {
+        'dashboard-booking': 'Booking engine',
+        'dashboard-tickets': 'Ticket Management',
+        'dashboard-hr': 'HR Management',
+    };
+    const website_menus = {
+        'website-cafe': 'Cafe',
+        'website-workation': 'Workation',
+    };
+    const containerRef = useRef(null);
     const navigate = useNavigate();
-    const [showToast, setShowToast] = useState(false);
-    const [toastMessage, setToastMessage] = useState('');
-    //form fields on banner
-    const [name, setname] = useState('');
-    const [email, setEmail] = useState('');
-    const [number, setNumber] = useState('');
-    const [isNameInvalid, setIsNameInvalid] = useState(false);
-    const [isEmailInvalid, setIsEmailInvalid] = useState(false);
-    const [isMobileInvalid, setIsMobileInvalid] = useState(false);
-    const [selectedOption, setSelectedOption] = useState('Type of partner');
-    const [currentSlide, setCurrentSlide] = useState(0);
+    // const [collapsed, setCollapsed] = useState(false);
+    const firstBackendKey = Object.keys(menuTitles)[0];
+    const [selectedItem, setSelectedItem] = useState('dashboard-booking');
+    const firstWebKey = Object.keys(website_menus)[0];
+    const [selectedWeb, setSelectedWeb] = useState('website-cafe');   
+    const [selectedMenuItem, setSelectedMenuItem] = useState(firstBackendKey);
+    const [selectedMenu, setSelectedMenu] = useState(firstWebKey);
 
     //First section carousel
 
     const images = [Carousel1];
 
 
-    const fadeVariants = {
-        hidden: { opacity: 0.2 },
-        visible: { opacity: 1 },
-        exit: { opacity: 0.5 }
-    };
-
-
-
-    const handleSelect = (option) => {
-        setSelectedOption(option);
-    };
-
-
     const handleRegister = () => {
         navigate('/register');
-    };
-    const handleLogin = () => {
-        navigate('/login');
-    };
-
-    const [showWebsiteModal, setShowWebsiteModal] = useState(false);
-    const [collapsed, setCollapsed] = useState(false);
-    const [selectedItem, setSelectedItem] = useState('dashboard-booking');
-    const [selectedWeb, setSelectedWeb] = useState('website-cafe');
-    const [selectedTemplate, setSelectedTemplate] = useState(null);
-    const [selectedMenu, setSelectedMenu] = useState(null);
-
-
-    //Template objects
-
-    const templates = [
-        { id: 1, name: "Template 1", images: [Template1] },
-        { id: 2, name: "Template 2", images: [Template2] },
-        { id: 3, name: "Template 3", images: [Template3] },
-        { id: 4, name: "Template 4", images: [Template1_2] },
-    ];
-
-
-    const templateSliderSettings = {
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 3,
-        autoplay: true,
-        dotsClass: 'home-website-slick-dots',
-        prevArrow: <CustomPrevArrow />,
-        nextArrow: <CustomNextArrow />,
-        // afterChange: handleAfterChange,
-        slidesToScroll: 1,
-        centerMode: true,
-        centerPadding: "20px",
-        className: "center",
-        responsive: [
-            {
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    infinite: true,
-                    dots: true
-                }
-            },
-            {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    initialSlide: 1,
-                    autoplay: true,
-                }
-            },
-            {
-                breakpoint: 480,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
-            }
-        ]
-    };
-
-
-    const handleTemplateClick = (template) => {
-        setSelectedTemplate(template);
-        setShowWebsiteModal(true);
-    };
-
-    const handleClose = () => {
-        setShowWebsiteModal(false);
-        setSelectedTemplate(null);
-    };
-
-    const handleSubmit = async (event) => {
-        event.preventDefault();
-
-        let valid = true;
-        // Your form submission logic here
-        // Set the message and show the Toast
-
-        if (name.trim() === '') {
-            setIsNameInvalid(true);
-            valid = false
-
-        } else {
-            setIsNameInvalid(false);
-
-        }
-
-        if (email === '') {
-            setIsEmailInvalid(true);
-            valid = false
-
-        } else {
-            setIsEmailInvalid(false);
-
-        }
-
-        if (number.trim() === '') {
-            setIsMobileInvalid(true);
-            valid = false
-
-        } else {
-            setIsMobileInvalid(false);
-        }
-        if (valid) {
-            setToastMessage('Form submitted successfully!');
-            setShowToast(true);
-
-            if (name && email && number) {
-                try {
-                    const response = await axios.post('http://localhost:5000/banner-email', {
-                        name,
-                        email,
-                        number,
-                        selectedOption
-                    });
-                    if (response.data.success) {
-                        alert('Email sent successfully');
-                    } else {
-                        alert('Error sending email');
-                    }
-
-                    // Reset form
-                    setname('');
-                    setEmail('');
-                    setNumber('');
-                    setSelectedOption('Select an option');
-
-                }
-                catch (error) {
-                    console.error('There was an error sending the email!', error);
-
-                }
-            }
-        }
-    };
-
-    const handleToggle = () => {
-        setCollapsed(!collapsed);
-    };
-
-    const menuTitles = {
-        'dashboard-booking': 'Booking engine',
-        'dashboard-products': 'Products',
-        'dashboard-tickets': 'Ticket Management',
-        'dashboard-hr': 'HR Management',
-        'dashboard-visitor': 'Visitor Management',
-        'dashboard-asset': 'Asset Management',
-    };
-    const website_menus = {
-        'website-cafe': 'Cafe',
-        'website-workation': 'Workation',
     };
 
 
@@ -267,8 +99,12 @@ const Homepage = () => {
                 return <WebsiteCafe />;
         }
     };
-    const handleMenuSelect = (menu) => {
-        setSelectedItem(menu);
+    const handleMenuSelect = (key) => {
+        setSelectedItem(key);
+        setSelectedMenuItem(key)
+        if (containerRef.current) {
+            containerRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }    
     };
     const handleWebMenuSelect = (key) => {
         setSelectedWeb(key);  // Set the key as the selected web content
@@ -317,27 +153,32 @@ const Homepage = () => {
 
             <div className='Globe-N-Commerce' >
                 <div className='Globe' style={{ textAlign: 'left' }}>
-                    <Canvas camera={{ position: [0, 0, 25], fov: 40 }} className='globe3d'>
+                    <Canvas camera={{ position: [0, 0, 25], fov: 40 }} className='globe3d' >
                         <ambientLight intensity={0.5} />
                         <pointLight position={[10, 10, 10]} />
                         <RotatingGlobe />
-                        <OrbitControls enableZoom={false} />
+                        <OrbitControls enableZoom={false}
+                        minPolarAngle={Math.PI/3}
+                        maxPolarAngle={2 * Math.PI / 3}/>
                     </Canvas>
                 </div>
                 <div className='N-Commerce'>
                     <h3><strong>INTRODUCING N-COMMERCE</strong></h3>
                     <p > ( “NOMAD COMMERCE” ) </p>
                     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                        <a data-aos-delay="200" href="contact.html">PARTNER NOW</a>
+                        <button className='hero-button' data-aos-delay="200" onClick={()=>{
+                            navigate('/register')
+                            window.scrollTo({ top: 0, behavior: 'smooth' })
+                            }}>PARTNER NOW</button>
                     </div>
                 </div>
             </div>
             <div className='four-cards-section' style={{padding: "0",marginBottom:"-60px",marginTop: "20px"}}>
-                <Four_cardsComponents/>
+                <FourCardsComponents/>
             </div>
 
             <div className="backend-container-master" style={{ backgroundColor: 'white' }}>
-                <div className="backend-panel-container">
+                <div ref={containerRef} className="backend-panel-container">
                     <h2>SaaS platforms</h2>
                     <div className="backend-panel">
                         <div className="backend-panel-sidebar">
@@ -346,15 +187,20 @@ const Homepage = () => {
                                     <img src={BiznestLogo} alt='' />
                                 </div>
                             </div>
-                            {!collapsed && (
+                            
                                 <Nav id="backend-sidebar" className="flex-column p-0 backend-sidebar">
                                     {Object.keys(menuTitles).map((key) => (
-                                        <Nav.Link key={key} onClick={() => handleMenuSelect(key)}>
+                                        <Nav.Link 
+                                        key={key} 
+                                        onClick={() => handleMenuSelect(key)}
+                                        className={selectedMenuItem === key ? 'active' : ''}
+                                        >
+                                            
                                             {menuTitles[key]}
                                         </Nav.Link>
                                     ))}
                                 </Nav>
-                            )}
+                            
                         </div>
                         <div className="backend-panel-right">
                             <div className="backend-panel-header">
@@ -371,7 +217,7 @@ const Homepage = () => {
                                         transition={{ duration: 0.2 }}
                                     >
 
-                                        {renderContent()}
+                                        {renderContent(selectedMenuItem)}
                                     </motion.div>
                                 </AnimatePresence>
                             </div>
@@ -391,7 +237,7 @@ const Homepage = () => {
                                     <img src={BiznestLogo} alt='' />
                                 </div>
                             </div>
-                            {!collapsed && (
+                            
                                 <Nav id="website-sidebar" className="flex-column p-0 website-sidebar">
                                     {Object.keys(website_menus).map((key) => (
                                         <Nav.Link 
@@ -403,7 +249,7 @@ const Homepage = () => {
                                         </Nav.Link>
                                     ))}
                                 </Nav>
-                            )}
+                          
                         </div>
                         <div className="website-panel-right">
                             <div className="website-panel-header">
