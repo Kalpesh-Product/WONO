@@ -153,11 +153,13 @@ const Homepage = () => {
 
             <div className='Globe-N-Commerce' >
                 <div className='Globe' style={{ textAlign: 'left' }}>
-                    <Canvas camera={{ position: [0, 0, 25], fov: 40 }} className='globe3d'>
+                    <Canvas camera={{ position: [0, 0, 25], fov: 40 }} className='globe3d' >
                         <ambientLight intensity={0.5} />
                         <pointLight position={[10, 10, 10]} />
                         <RotatingGlobe />
-                        <OrbitControls enableZoom={false} />
+                        <OrbitControls enableZoom={false}
+                        minPolarAngle={Math.PI/3}
+                        maxPolarAngle={2 * Math.PI / 3}/>
                     </Canvas>
                 </div>
                 <div className='N-Commerce'>

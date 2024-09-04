@@ -128,8 +128,8 @@ const FinanceIntern = () => {
       
                       </p><br></br>
       
-                      <hr style="margin-top:20px ;"></hr>
-                      <p style="margin-bottom: 50px;">
+                      <hr style={{marginTop:"20px"}}></hr>
+                      <p style={{marginBottom:"50px"}}>
                         
                     
                         Please send in your resume to
