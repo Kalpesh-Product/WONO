@@ -144,7 +144,7 @@ const Homepage = () => {
                     </div>
                     <div className="first-section-grid-item-2">
                        <div style={{ borderRadius:'20px', marginTop:'20rem',width:'100%',textAlign:'center',paddingRight:'3rem'}}> 
-                        <button style={{width:'80%', margin:'0', borderRadius:'20px'}} className='register-button' onClick={handleRegister}>REGISTER</button>
+                        <button style={{width:'80%', margin:'0', borderRadius:'20px'}} className='register-button' onClick={handleRegister}>SIGN-UP</button>
                        </div>
                     </div>
                 </div>
@@ -217,7 +217,7 @@ const Homepage = () => {
                                         transition={{ duration: 0.2 }}
                                     >
 
-                                        {renderContent(selectedMenuItem)}
+                                        {/* {renderContent(selectedMenuItem)} */}
                                     </motion.div>
                                 </AnimatePresence>
                             </div>
@@ -265,7 +265,7 @@ const Homepage = () => {
                                         exit={{ opacity: 0 }}
                                         transition={{ duration: 0.2 }}
                                     >
-                                        {renderWebContent(selectedWeb)}
+                                        {/* {renderWebContent(selectedWeb)} */}
                                     </motion.div>
                                 </AnimatePresence>
                             </div>

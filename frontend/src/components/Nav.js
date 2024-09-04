@@ -69,7 +69,7 @@ const NavBar = () => {
             </div>
           ) : (
             <div style={{display:'flex', gap:'20px', paddingRight:'6rem'}}>
-              <Link  onClick={()=>window.scrollTo({ top: 0, behavior: 'smooth' })} to='/login' className='login-button'>SIGN-IN</Link>
+              <Link  onClick={()=>window.scrollTo({ top: 0, behavior: 'smooth' })} to='/login' className='login-button'>SIGN IN</Link>
               <Link style={{color:'black'}} onClick={()=>window.scrollTo({ top: 0, behavior: 'smooth' })} className='register-button' to='/register'>SIGN-UP</Link>
             </div>
           )}
@@ -86,9 +86,8 @@ const NavBar = () => {
         <Offcanvas.Body>
           <Link className="custom-offcanvas-link" to='/' onClick={handleClose}>Home</Link>
           <Link className="custom-offcanvas-link" to='/services' onClick={handleClose}>Services</Link>
-          <Link className="custom-offcanvas-link" to='/test' onClick={handleClose}>Testing</Link>
-          <Link className="custom-offcanvas-link" to='/contact' onClick={handleClose}>Contact</Link>
           <Link className="custom-offcanvas-link" to='/career' onClick={handleClose}>Career</Link>
+          <Link className="custom-offcanvas-link" to='/contact' onClick={handleClose}>Contact</Link>
           {user ? (
             <Link className="custom-offcanvas-link" to={'/dashboard'}>Dashboard</Link>
           ) : (null)}
@@ -104,8 +103,8 @@ const NavBar = () => {
             </div>
           ) : (
             <>
-              <Link to='/login' onClick={handleClose} className='login-button'>Sign-in</Link>
-              <button className='register-button' onClick={handleRegister}>Sign-Up</button>
+              <Link to='/login' onClick={handleClose} className='login-button'>SIGN IN</Link>
+              <button className='register-button' onClick={handleRegister}>SIGN UP</button>
             </>
           )}
         </Offcanvas.Body>
