@@ -1,3 +1,11 @@
+.four-cardsContainer{
+    /* height: 100%; */
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
 .card-wrapper{
     
     background-color: white;
@@ -12,18 +20,42 @@
     padding: 10px;
 }
 .card-text{
-    text-align: start;
     font-size: 12px;
     font-weight: 500;
+    padding: 4px;
+    gap: 10px;
 }
 .four-cardsHeaderText{
-    padding-left: 9%;
+    
     padding-top: 5%;
-    font-size: 25px;
+    font-size: 30px;
     color: #08445E;
     
 }
 .card-body{
     padding: 0;
    
+}
+.Tickmark-text{
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+}
+
+.Tickmark-text img{
+    padding-right: 4px;
+    height: 15px;
+}
+@media (max-width:768px) {
+ .four-cardsContainer{
+    height: 100%;
+
+ }
+ .card_1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+  
+    
 }

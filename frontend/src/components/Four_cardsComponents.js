@@ -1,9 +1,11 @@
 import React from 'react'
 import "../styles/4-cardsContainer.css"
+import TickmarkImg from "../assets/check.png"
+
 
 const Four_cardsComponents = () => {
   return (
-    <div className='4-cardsContainer ' style={{backgroundColor:"white"}}>
+    <div className='four-cardsContainer' style={{backgroundColor:"white"}}>
         <div className='four-cardsHeaderText'>
             <p>Explore the Worlds largest Commerce Community</p>
         </div>
@@ -14,12 +16,24 @@ const Four_cardsComponents = () => {
                     <div className='card_1 shadow'>
                         <div className='card-body'>
                             <h5 className='card-title'>FRONTEND</h5>
-                            <p className='card-text'><ol>
-                                <li>Website with Booking Engine</li>
-                                <li>Payment Gateway</li>
-                                <li>Meeting Rooms</li>
-                                <li>Customer Profile and More</li>
-                                </ol>
+                            <p className='card-text'>
+                                <div className='Tickmark-text'>
+                                <img src={TickmarkImg} alt='tick-mark'></img>
+                                Website with Booking Engine
+                                </div>
+                                <div className='Tickmark-text'>
+                                <img src={TickmarkImg} alt='tick-mark'></img>  
+                                Payment Gateway
+                                </div>
+                                <div className='Tickmark-text'>
+                                <img src={TickmarkImg} alt='tick-mark'></img>
+                                Meeting Rooms
+                                </div>
+                                <div className='Tickmark-text'>
+                                <img src={TickmarkImg} alt='tick-mark'></img>
+                               Customer Profile and More
+                               </div>
+                                
                             </p>
                         </div>
                     </div>
@@ -29,12 +43,23 @@ const Four_cardsComponents = () => {
                     <div className='card_1 shadow'  style={{backgroundColor:"white"}} > 
                         <div className='card-body'>
                             <h5 className='card-title'>FINANCE & ACCOUNTING</h5>
-                            <p className='card-text'><ol>
-                                <li>Automated Invoicing</li>
-                                <li>Cashflow and Projection</li>
-                                <li>Budget Management</li>
-                                <li>Working Capital & more</li>
-                                </ol>
+                            <p className='card-text'>
+                            <div className='Tickmark-text'>
+                            <img src={TickmarkImg} alt='tick-mark'></img>
+                                Automated Invoicing
+                            </div>
+                            <div className='Tickmark-text'>
+                                <img src={TickmarkImg} alt='tick-mark'></img>
+                                Cashflow and Projection
+                            </div>
+                            <div className='Tickmark-text'>
+                                <img src={TickmarkImg} alt='tick-mark'></img>
+                                Budget Management
+                            </div>
+                            <div className='Tickmark-text'>
+                                <img src={TickmarkImg} alt='tick-mark'></img>
+                                Working Capital & more
+                            </div>    
                             </p>
 
                         </div>
@@ -44,10 +69,20 @@ const Four_cardsComponents = () => {
                     <div className='card_1 shadow'  style={{backgroundColor:"white"}}>
                         <div className='card-body'>
                             <h5 className='card-title'>CUSTOMER MANAGEMENT SERVICES (CMS)</h5>
-                            <p className='card-text'><ol>
-                                <li>Ticket Raising</li>
-                                <li>Internal Booking Engine</li>
-                                <li>Internal Communication & Logs</li></ol></p>
+                            <p className='card-text'>
+                            <div className='Tickmark-text'>
+                            <img src={TickmarkImg} alt='tick-mark'></img>
+                                Ticket Raising
+                            </div>
+                            <div className='Tickmark-text'>
+                                <img src={TickmarkImg} alt='tick-mark'></img>
+                                Internal Booking Engine
+                            </div>
+                            <div className='Tickmark-text'>
+                                <img src={TickmarkImg} alt='tick-mark'></img>
+                                Internal Communication & Logs
+                            </div>
+                                </p>
                         </div>
                     </div>
                 </div>
@@ -55,12 +90,24 @@ const Four_cardsComponents = () => {
                     <div className='card_1 shadow'  style={{backgroundColor:"white"}}>
                         <div className='card-body'>
                             <h5 className='card-title'>ANALYTICS</h5>
-                            <p className='card-text'><ol>
-                                <li>Key Bussiness Trends
-                                    </li>
-                                    <li>Full Data analysis</li>
-                                    <li>Customer Reports</li>
-                                    <li>Employee Reports & more</li></ol></p>
+                            <p className='card-text'>
+                            <div className='Tickmark-text'>
+                            <img src={TickmarkImg} alt='tick-mark'></img>
+                                Key Bussiness Trends 
+                            </div>
+                            <div className='Tickmark-text'>
+                                <img src={TickmarkImg} alt='tick-mark'></img> 
+                                    Full Data analysis
+                            </div>
+                            <div className='Tickmark-text'>
+                                <img src={TickmarkImg} alt='tick-mark'></img>
+                                    Customer Reports
+                            </div>
+                            <div className='Tickmark-text'>
+                                <img src={TickmarkImg} alt='tick-mark'></img>
+                                    Employee Reports & more
+                            </div>
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -68,11 +115,24 @@ const Four_cardsComponents = () => {
                     <div className='card_1 shadow'  style={{backgroundColor:"white"}}>
                         <div className='card-body'>
                             <h5 className='card-title'>HR SUPPORT</h5>
-                            <p className='card-text'><ol>
-                                <li>Attendance & Engagements</li>
-                                <li>Task Allotment & Management</li>
-                                <li>Performance Analysis</li>
-                                <li>Employee Appraisals & more</li></ol></p>
+                            <p className='card-text'>
+                            <div className='Tickmark-text'>
+                            <img src={TickmarkImg} alt='tick-mark'></img>
+                                Attendance & Engagements
+                            </div>
+                            <div className='Tickmark-text'>
+                                <img src={TickmarkImg} alt='tick-mark'></img>
+                                Task Allotment & Management
+                            </div>
+                            <div className='Tickmark-text'>
+                                <img src={TickmarkImg} alt='tick-mark'></img>
+                                Performance Analysis
+                            </div>
+                            <div className='Tickmark-text'>
+                                <img src={TickmarkImg} alt='tick-mark'></img>
+                                Employee Appraisals & more
+                            </div>
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -80,11 +140,24 @@ const Four_cardsComponents = () => {
                     <div className='card_1 shadow'  style={{backgroundColor:"white"}}>
                         <div className='card-body'>
                             <h5 className='card-title'>MARKETING</h5>
-                            <p className='card-text'><ol>
-                                <li>Search Engine Optimisation</li>
-                                <li>Search Engine Marketing</li>
-                                <li>Ad Network</li>
-                                <li>Lead Generation & more</li></ol></p>
+                            <p className='card-text'>
+                            <div className='Tickmark-text'>
+                            <img src={TickmarkImg} alt='tick-mark'></img>
+                                Search Engine Optimisation
+                            </div>
+                            <div className='Tickmark-text'>
+                                <img src={TickmarkImg} alt='tick-mark'></img>
+                               Search Engine Marketing
+                            </div>
+                            <div className='Tickmark-text'>
+                                <img src={TickmarkImg} alt='tick-mark'></img>
+                                Ad Network
+                            </div>
+                            <div className='Tickmark-text'>
+                                <img src={TickmarkImg} alt='tick-mark'></img>
+                                Lead Generation & more
+                            </div>
+                            </p>
                         </div>
                     </div>
                 </div>

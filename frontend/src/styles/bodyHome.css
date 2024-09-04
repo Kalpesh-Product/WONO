@@ -236,9 +236,9 @@
     /* flex: 0 0 40%; */
     min-width: 100%;
 }
-.Globe > {
+/* .Globe > {
     max-width: 100%;
-}
+} */
 
 
 
@@ -344,6 +344,7 @@
         text-align: center;
         letter-spacing: -2px;
     }
+    
 }
 
 
