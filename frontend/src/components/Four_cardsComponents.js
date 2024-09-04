@@ -10,7 +10,8 @@ const Four_cardsComponents = () => {
         <div className='container my-5'>
             <div className='row '>
                 <div className='col-lg-2 col-md-4 col-sm-6'>
-                    <div className='card six-cards shadow' style={{backgroundColor:"white"}}>
+                    <div className='card-wrapper'>
+                    <div className='card_1 shadow'>
                         <div className='card-body'>
                             <h5 className='card-title'>FRONTEND</h5>
                             <p className='card-text'><ol>
@@ -22,9 +23,10 @@ const Four_cardsComponents = () => {
                             </p>
                         </div>
                     </div>
+                    </div>
                 </div>
                 <div className='col-lg-2 col-md-4 col-sm-6'>
-                    <div className='card shadow'  style={{backgroundColor:"white"}} > 
+                    <div className='card_1 shadow'  style={{backgroundColor:"white"}} > 
                         <div className='card-body'>
                             <h5 className='card-title'>FINANCE & ACCOUNTING</h5>
                             <p className='card-text'><ol>
@@ -39,7 +41,7 @@ const Four_cardsComponents = () => {
                     </div>
                 </div>
                 <div className='col-lg-2 col-md-4 col-sm-6'>
-                    <div className='card shadow'  style={{backgroundColor:"white"}}>
+                    <div className='card_1 shadow'  style={{backgroundColor:"white"}}>
                         <div className='card-body'>
                             <h5 className='card-title'>CUSTOMER MANAGEMENT SERVICES (CMS)</h5>
                             <p className='card-text'><ol>
@@ -50,7 +52,7 @@ const Four_cardsComponents = () => {
                     </div>
                 </div>
                 <div className='col-lg-2 col-md-4 col-sm-6'>
-                    <div className='card shadow'  style={{backgroundColor:"white"}}>
+                    <div className='card_1 shadow'  style={{backgroundColor:"white"}}>
                         <div className='card-body'>
                             <h5 className='card-title'>ANALYTICS</h5>
                             <p className='card-text'><ol>
@@ -63,7 +65,7 @@ const Four_cardsComponents = () => {
                     </div>
                 </div>
                 <div className='col-lg-2 col-md-4 col-sm-6'>
-                    <div className='card shadow'  style={{backgroundColor:"white"}}>
+                    <div className='card_1 shadow'  style={{backgroundColor:"white"}}>
                         <div className='card-body'>
                             <h5 className='card-title'>HR SUPPORT</h5>
                             <p className='card-text'><ol>
@@ -75,7 +77,7 @@ const Four_cardsComponents = () => {
                     </div>
                 </div>
                 <div className='col-lg-2 col-md-4 col-sm-6'>
-                    <div className='card shadow'  style={{backgroundColor:"white"}}>
+                    <div className='card_1 shadow'  style={{backgroundColor:"white"}}>
                         <div className='card-body'>
                             <h5 className='card-title'>MARKETING</h5>
                             <p className='card-text'><ol>
