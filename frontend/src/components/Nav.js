@@ -70,7 +70,7 @@ const NavBar = () => {
           ) : (
             <div style={{display:'flex', gap:'20px', paddingRight:'6rem'}}>
               <Link  onClick={()=>window.scrollTo({ top: 0, behavior: 'smooth' })} to='/login' className='login-button'>SIGN IN</Link>
-              <Link style={{color:'black'}} onClick={()=>window.scrollTo({ top: 0, behavior: 'smooth' })} className='register-button' to='/register'>SIGN-UP</Link>
+              <Link style={{color:'black'}} onClick={()=>window.scrollTo({ top: 0, behavior: 'smooth' })} className='register-button' to='/register'>SIGN UP</Link>
             </div>
           )}
         </div>

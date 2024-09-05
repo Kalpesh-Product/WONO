@@ -96,7 +96,7 @@ const Homepage = () => {
             case 'website-workation':
                 return <WebsiteWorkation />;
             default:
-                return <WebsiteCafe />;
+                return <WebsiteWorkation />;
         }
     };
     const handleMenuSelect = (key) => {
@@ -142,14 +142,14 @@ const Homepage = () => {
                         </span>
                         <div className='home-section-buttons'>
                         <div> 
-                        <button className='register-button' onClick={handleRegister}>REGISTER</button>
+                        <button className='register-button' onClick={handleRegister}>SIGN UP</button>
                        </div>
 
                         </div>
                     </div>
                     <div className="first-section-grid-item-2">
                        <div style={{ borderRadius:'20px', marginTop:'20rem',width:'100%',textAlign:'center',paddingRight:'3rem'}}> 
-                        <button style={{width:'80%', margin:'0', borderRadius:'20px'}} className='register-button' onClick={handleRegister}>SIGN-UP</button>
+                        <button style={{width:'80%', margin:'0', borderRadius:'20px'}} className='register-button' onClick={handleRegister}>SIGN UP</button>
                        </div>
                     </div>
                 </div>
