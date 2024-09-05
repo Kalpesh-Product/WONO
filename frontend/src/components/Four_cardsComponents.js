@@ -4,92 +4,89 @@ import TickmarkImg from "../assets/check.png"
 
 
 const FourCardsComponents = () => {
-  return (
-    <div className='four-cardsContainer' style={{backgroundColor:"white"}}>
-        <div className='four-cardsHeaderText'>
-            <p>Explore the Worlds largest Commerce Community</p>
-        </div>
-        <div className='container my-5'>
-            <div className='row '>
-                <div className='col-lg-2 col-md-4 col-sm-6'>
-                    <div className='card-wrapper'>
+    return (
+        <div className='key-features-master'>
+            <div className='four-cardsHeaderText'>
+                <p>Explore the Worlds largest Commerce Community</p>
+            </div>
+            <div className='four-cardsContainer' style={{ backgroundColor: "white" }}>
+                <div className="key-features-container">
+
+
                     <div className='card_1 shadow'>
                         <div className='card-body'>
                             <h5 className='card-title'>FRONTEND</h5>
                             <p className='card-text'>
                                 <div className='Tickmark-text'>
-                                <img src={TickmarkImg} alt='tick-mark'></img>
-                                Website with Booking Engine
+                                    <img src={TickmarkImg} alt='tick-mark'></img>
+                                    Website with Booking Engine
                                 </div>
                                 <div className='Tickmark-text'>
-                                <img src={TickmarkImg} alt='tick-mark'></img>  
-                                Payment Gateway
+                                    <img src={TickmarkImg} alt='tick-mark'></img>
+                                    Payment Gateway
                                 </div>
                                 <div className='Tickmark-text'>
-                                <img src={TickmarkImg} alt='tick-mark'></img>
-                                Meeting Rooms
+                                    <img src={TickmarkImg} alt='tick-mark'></img>
+                                    Meeting Rooms
                                 </div>
                                 <div className='Tickmark-text'>
-                                <img src={TickmarkImg} alt='tick-mark'></img>
-                               Customer Profile and More
-                               </div>
-                                
+                                    <img src={TickmarkImg} alt='tick-mark'></img>
+                                    Customer Profile and More
+                                </div>
+
                             </p>
                         </div>
                     </div>
-                    </div>
-                </div>
-                <div className='col-lg-2 col-md-4 col-sm-6'>
-                    <div className='card_1 shadow'  style={{backgroundColor:"white"}} > 
+
+
+                    <div className='card_1 shadow' >
                         <div className='card-body'>
                             <h5 className='card-title'>FINANCE & ACCOUNTING</h5>
                             <p className='card-text'>
-                            <div className='Tickmark-text'>
-                            <img src={TickmarkImg} alt='tick-mark'></img>
-                                Automated Invoicing
-                            </div>
-                            <div className='Tickmark-text'>
-                                <img src={TickmarkImg} alt='tick-mark'></img>
-                                Cashflow and Projection
-                            </div>
-                            <div className='Tickmark-text'>
-                                <img src={TickmarkImg} alt='tick-mark'></img>
-                                Budget Management
-                            </div>
-                            <div className='Tickmark-text'>
-                                <img src={TickmarkImg} alt='tick-mark'></img>
-                                Working Capital & more
-                            </div>    
+                                <div className='Tickmark-text'>
+                                    <img src={TickmarkImg} alt='tick-mark'></img>
+                                    Automated Invoicing
+                                </div>
+                                <div className='Tickmark-text'>
+                                    <img src={TickmarkImg} alt='tick-mark'></img>
+                                    Cashflow and Projection
+                                </div>
+                                <div className='Tickmark-text'>
+                                    <img src={TickmarkImg} alt='tick-mark'></img>
+                                    Budget Management
+                                </div>
+                                <div className='Tickmark-text'>
+                                    <img src={TickmarkImg} alt='tick-mark'></img>
+                                    Working Capital & more
+                                </div>
                             </p>
-
                         </div>
+
                     </div>
-                </div>
-                <div className='col-lg-2 col-md-4 col-sm-6'>
-                    <div className='card_1 shadow'  style={{backgroundColor:"white"}}>
+
+                    <div className='card_1 shadow'>
                         <div className='card-body'>
                             <h5 className='card-title'>CUSTOMER MANAGEMENT SERVICES (CMS)</h5>
                             <p className='card-text'>
-                            <div className='Tickmark-text'>
-                            <img src={TickmarkImg} alt='tick-mark'></img>
-                                Ticket Raising
-                            </div>
-                            <div className='Tickmark-text'>
-                                <img src={TickmarkImg} alt='tick-mark'></img>
-                                Internal Booking Engine
-                            </div>
-                            <div className='Tickmark-text'>
-                                <img src={TickmarkImg} alt='tick-mark'></img>
-                                Internal Communication & Logs
-                            </div>
-                                </p>
+                                <div className='Tickmark-text'>
+                                    <img src={TickmarkImg} alt='tick-mark'></img>
+                                    Ticket Raising
+                                </div>
+                                <div className='Tickmark-text'>
+                                    <img src={TickmarkImg} alt='tick-mark'></img>
+                                    Internal Booking Engine
+                                </div>
+                                <div className='Tickmark-text'>
+                                    <img src={TickmarkImg} alt='tick-mark'></img>
+                                    Internal Communication & Logs
+                                </div>
+
+                            </p>
                         </div>
                     </div>
-                </div>
-                <div className='col-lg-2 col-md-4 col-sm-6'>
-                    <div className='card_1 shadow'  style={{backgroundColor:"white"}}>
+                    <div className='card_1 shadow'>
                         <div className='card-body'>
-                            <h5 className='card-title'>ANALYTICS</h5>
+                        <h5 className='card-title'>ANALYTICS</h5>
                             <p className='card-text'>
                             <div className='Tickmark-text'>
                             <img src={TickmarkImg} alt='tick-mark'></img>
@@ -110,11 +107,9 @@ const FourCardsComponents = () => {
                             </p>
                         </div>
                     </div>
-                </div>
-                <div className='col-lg-2 col-md-4 col-sm-6'>
-                    <div className='card_1 shadow'  style={{backgroundColor:"white"}}>
+                    <div className='card_1 shadow'>
                         <div className='card-body'>
-                            <h5 className='card-title'>HR SUPPORT</h5>
+                        <h5 className='card-title'>HR SUPPORT</h5>
                             <p className='card-text'>
                             <div className='Tickmark-text'>
                             <img src={TickmarkImg} alt='tick-mark'></img>
@@ -135,11 +130,9 @@ const FourCardsComponents = () => {
                             </p>
                         </div>
                     </div>
-                </div>
-                <div className='col-lg-2 col-md-4 col-sm-6'>
-                    <div className='card_1 shadow'  style={{backgroundColor:"white"}}>
+                    <div className='card_1 shadow'>
                         <div className='card-body'>
-                            <h5 className='card-title'>MARKETING</h5>
+                        <h5 className='card-title'>MARKETING</h5>
                             <p className='card-text'>
                             <div className='Tickmark-text'>
                             <img src={TickmarkImg} alt='tick-mark'></img>
@@ -160,14 +153,11 @@ const FourCardsComponents = () => {
                             </p>
                         </div>
                     </div>
+
                 </div>
-                
             </div>
-
         </div>
-
-    </div>
-  )
+    )
 }
 
 export default FourCardsComponents

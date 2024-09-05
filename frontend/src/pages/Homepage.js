@@ -109,8 +109,13 @@ const Homepage = () => {
     const handleWebMenuSelect = (key) => {
         setSelectedWeb(key);  // Set the key as the selected web content
         setSelectedMenu(key); // Highlight the selected menu item
+
     };
 
+    
+
+// mobile screen for globe responsiveness
+    const ismobile = window.innerWidth<769;
 
     return (
         <div className='master-container'>
@@ -153,7 +158,7 @@ const Homepage = () => {
 
             <div className='Globe-N-Commerce' >
                 <div className='Globe' style={{ textAlign: 'left' }}>
-                    <Canvas camera={{ position: [0, 0, 25], fov: 40 }} className='globe3d' >
+                    <Canvas camera={{ position:[0,0,ismobile? 15:25],fov:ismobile? 90:40}}  >
                         <ambientLight intensity={0.5} />
                         <pointLight position={[10, 10, 10]} />
                         <RotatingGlobe />
@@ -217,7 +222,7 @@ const Homepage = () => {
                                         transition={{ duration: 0.2 }}
                                     >
 
-                                        {/* {renderContent(selectedMenuItem)} */}
+                                        {renderContent(selectedMenuItem)}
                                     </motion.div>
                                 </AnimatePresence>
                             </div>
@@ -265,7 +270,7 @@ const Homepage = () => {
                                         exit={{ opacity: 0 }}
                                         transition={{ duration: 0.2 }}
                                     >
-                                        {/* {renderWebContent(selectedWeb)} */}
+                                        {renderWebContent(selectedWeb)}
                                     </motion.div>
                                 </AnimatePresence>
                             </div>
