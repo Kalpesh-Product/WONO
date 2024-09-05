@@ -48,6 +48,7 @@
     font-size: 15px;
     margin-top: 2px;
     padding: 10px;
+    margin-bottom: 10px;
 }
 .card-text{
     font-size: 12px;
@@ -110,6 +111,5 @@
     flex-direction: column;
     height: inherit;
  }
-  
-    
+
 }
