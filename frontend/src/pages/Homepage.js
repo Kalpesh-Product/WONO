@@ -217,7 +217,7 @@ const Homepage = () => {
                                         transition={{ duration: 0.2 }}
                                     >
 
-                                        {/* {renderContent(selectedMenuItem)} */}
+                                        {renderContent(selectedMenuItem)}
                                     </motion.div>
                                 </AnimatePresence>
                             </div>
@@ -265,7 +265,7 @@ const Homepage = () => {
                                         exit={{ opacity: 0 }}
                                         transition={{ duration: 0.2 }}
                                     >
-                                        {/* {renderWebContent(selectedWeb)} */}
+                                        {renderWebContent(selectedWeb)}
                                     </motion.div>
                                 </AnimatePresence>
                             </div>

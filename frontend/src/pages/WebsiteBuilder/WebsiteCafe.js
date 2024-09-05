@@ -48,7 +48,7 @@ const WebsiteCafe = () => {
           gap: 16px;
         }
         .template-container {
-          width: 100%;
+          width: 250px;
           height: 350px;
           overflow: hidden;
           cursor: pointer;

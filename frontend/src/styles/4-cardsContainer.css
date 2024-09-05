@@ -1,11 +1,37 @@
+
+.key-features-master{
+    background-color: white;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    padding-left: 7rem;
+    padding-right: 7rem;
+}
+.four-cardsHeaderText{
+    text-align: center;
+    padding-top: 5%;
+    font-size: 30px;
+    color: #08445E;
+    
+}
 .four-cardsContainer{
     /* height: 100%; */
-    height: 80vh;
+
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     background-color: rgb(249,250,251);
+    overflow: hidden;
+}
+.key-features-container{
+    display: flex;
+    gap: 20px;
+    overflow: hidden;
+    padding: 1rem;  
 }
 
 .card-wrapper{
@@ -15,6 +41,7 @@
 .card_1{
    padding: 5px;
    height: 230px;
+   width: 100%;
 
 }
 .card-title{
@@ -28,13 +55,7 @@
     padding: 4px;
     gap: 10px;
 }
-.four-cardsHeaderText{
-    
-    padding-top: 5%;
-    font-size: 30px;
-    color: #08445E;
-    
-}
+
 .card-body{
     padding: 0;
    
@@ -50,14 +71,38 @@
     height: 15px;
 }
 @media (max-width:768px) {
+    .key-features-master{
+        display: block;
+        background-color: white;
+        height: 100%;
+        padding: 5rem 0 5rem 0 ;
+        overflow: visible;
+    }
  .four-cardsContainer{
     height: 100%;
+    position: relative;
+    align-items: start;
+    justify-content: start;
+    overflow-x:scroll;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+}
 
- }
+.four-cardsContainer::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
+}
  .four-cardsHeaderText{
     padding: 1rem 2rem 0 2rem;
     text-align: center;
+    position: sticky;
+    z-index: 4;
 }
+.card_1{
+    padding: 0;
+    height: 230px;
+    width: 230px;
+ 
+ }
  .card_1 > *{
     display: flex;
     justify-content: center;
