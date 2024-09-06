@@ -1,6 +1,10 @@
+@font-face {
+    font-family: Popins-Regular;
+    src: url('../assets/WONO_images/img/fonts/Poppins-Regular.ttf');
+}
 
-.key-features-master{
-    background-color: white;
+.key-features-master {
+    background-color: #f9fafb;
     height: 80vh;
     display: flex;
     align-items: center;
@@ -10,106 +14,141 @@
     padding-left: 7rem;
     padding-right: 7rem;
 }
-.four-cardsHeaderText{
+
+.four-cardsHeaderText {
     text-align: center;
     padding-top: 5%;
     font-size: 30px;
     color: #08445E;
-    
+    font-family: Popins-Regular;
+
 }
-.four-cardsContainer{
+
+.four-cardsContainer {
     /* height: 100%; */
 
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-color: rgb(249,250,251);
+    background-color: white;
     overflow: hidden;
 }
-.key-features-container{
+
+.key-features-container {
     display: flex;
     gap: 20px;
     overflow: hidden;
-    padding: 1rem;  
+    padding: 1rem;
+    background-color: #f9fafb;
 }
 
-.card-wrapper{
-    
-    background-color: white;
+.card-wrapper {
+
+    background-color: white
 }
 .card_1{
-   padding: 5px;
-   height: 230px;
+   padding: 1rem;
+   height: 100%;
    width: 100%;
+   background-color: white;
+   border-radius: 10px;
+   font-family: Popins-Regular;
 
+}
+.card-icon{
+    width: 35px;
+    margin: 10px;
+}
+.card-icon img{
+    width: 100%;
 }
 .card-title{
     font-size: 15px;
     margin-top: 2px;
     padding: 10px;
     margin-bottom: 10px;
+    
 }
-.card-text{
+
+.card-text {
     font-size: 12px;
     font-weight: 500;
     padding: 4px;
     gap: 10px;
+    color: #52525b;
 }
 
-.card-body{
+.card-body {
     padding: 0;
-   
+
 }
-.Tickmark-text{
+
+.Tickmark-text {
     text-align: left;
     display: flex;
     flex-direction: row;
 }
 
-.Tickmark-text img{
+.Tickmark-text img {
     padding-right: 4px;
     height: 15px;
 }
+.key-features-link-space{
+    width: 100%;
+    text-align: right;
+    padding-right: 1rem;
+    background-color: #f9fafb;
+}
+/* .key-features-link-space > *{
+    background-color: white;
+} */
 @media (max-width:768px) {
-    .key-features-master{
+    .key-features-master {
         display: block;
         background-color: white;
         height: 100%;
-        padding: 5rem 0 5rem 0 ;
+        padding: 5rem 0 5rem 0;
         overflow: visible;
     }
- .four-cardsContainer{
-    height: 100%;
-    position: relative;
-    align-items: start;
-    justify-content: start;
-    overflow-x:scroll;
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none;  /* Internet Explorer 10+ */
-}
 
-.four-cardsContainer::-webkit-scrollbar {
-    display: none; /* Safari and Chrome */
-}
- .four-cardsHeaderText{
-    padding: 1rem 2rem 0 2rem;
-    text-align: center;
-    position: sticky;
-    z-index: 4;
-}
-.card_1{
-    padding: 0;
-    height: 230px;
-    width: 230px;
- 
- }
- .card_1 > *{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: inherit;
- }
+    .four-cardsContainer {
+        height: 100%;
+        position: relative;
+        align-items: start;
+        justify-content: start;
+        overflow-x: scroll;
+        scrollbar-width: none;
+        /* Firefox */
+        -ms-overflow-style: none;
+        /* Internet Explorer 10+ */
+    }
+
+    .four-cardsContainer::-webkit-scrollbar {
+        display: none;
+        /* Safari and Chrome */
+    }
+
+    .four-cardsHeaderText {
+        padding: 1rem 2rem 0 2rem;
+        text-align: center;
+        position: sticky;
+        z-index: 4;
+    }
+
+    .card_1 {
+        padding: 0;
+        height: 230px;
+        width: 230px;
+
+    }
+
+    .card_1>* {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: inherit;
+    }
 
 }

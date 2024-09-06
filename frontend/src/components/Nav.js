@@ -48,9 +48,11 @@ const NavBar = () => {
             }} src={WonoLogo} alt='logo' />
         </div>
         <div className="custom-navbar-menu nav-tabss">
-          <Link to='/services' className={activeTab === 'Services'? 'active':''} onClick={()=>changeActiveTab('Services')}>Services</Link>
+          <Link to='/services' className={activeTab === 'Services'? 'active':''} onClick={()=>changeActiveTab('Services')}>SaaS</Link>
+          <Link to='#' className={activeTab === 'Contact'? 'active':''}>Capital</Link>
+          <Link to='#' className={activeTab === 'Contact'? 'active':''}>Theme</Link>
+          <Link to='#' className={activeTab === 'Contact'? 'active':''}>Leads</Link>
           <Link to='/career'  className={activeTab === 'Career'? 'active':''} onClick={()=>changeActiveTab('Career')}>Career</Link>
-          <Link to='/contact' className={activeTab === 'Contact'? 'active':''} onClick={()=>changeActiveTab('Contact')}>Contact</Link>
          
           {user ? (
             <Link to={'/dashboard' } className='active'>Dashboard</Link>
@@ -70,7 +72,7 @@ const NavBar = () => {
           ) : (
             <div style={{display:'flex', gap:'20px', paddingRight:'6rem'}}>
               <Link  onClick={()=>window.scrollTo({ top: 0, behavior: 'smooth' })} to='/login' className='login-button'>SIGN IN</Link>
-              <Link style={{color:'black'}} onClick={()=>window.scrollTo({ top: 0, behavior: 'smooth' })} className='register-button' to='/register'>SIGN-UP</Link>
+              <Link style={{color:'black'}} onClick={()=>window.scrollTo({ top: 0, behavior: 'smooth' })} className='register-button' to='/register'>SIGN UP</Link>
             </div>
           )}
         </div>
@@ -85,7 +87,7 @@ const NavBar = () => {
         </Offcanvas.Header>
         <Offcanvas.Body>
           <Link className="custom-offcanvas-link" to='/' onClick={handleClose}>Home</Link>
-          <Link className="custom-offcanvas-link" to='/services' onClick={handleClose}>Services</Link>
+          <Link className="custom-offcanvas-link" to='/services' onClick={handleClose}>SaaS</Link>
           <Link className="custom-offcanvas-link" to='/career' onClick={handleClose}>Career</Link>
           <Link className="custom-offcanvas-link" to='/contact' onClick={handleClose}>Contact</Link>
           {user ? (

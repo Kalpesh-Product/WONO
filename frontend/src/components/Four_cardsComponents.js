@@ -1,9 +1,19 @@
 import React from 'react'
 import "../styles/4-cardsContainer.css"
 import TickmarkImg from "../assets/check.png"
+import Frontend from '../assets/WONO_images/img/key-features/frontend.jpg'
+import Finance from '../assets/WONO_images/img/key-features/finance.jpg'
+import Customer from '../assets/WONO_images/img/key-features/customer-support.png'
+import Analytics from '../assets/WONO_images/img/key-features/analytics.png'
+import HR from '../assets/WONO_images/img/key-features/hr.png'
+import Marketing from '../assets/WONO_images/img/key-features/marketing.png'
+import { useNavigate } from 'react-router-dom'
 
 
 const FourCardsComponents = () => {
+
+    const navigate = useNavigate()
+
     return (
         <div className='key-features-master'>
             <div className='four-cardsHeaderText'>
@@ -15,6 +25,9 @@ const FourCardsComponents = () => {
 
                     <div className='card_1 shadow'>
                         <div className='card-body'>
+                            <div className='card-icon'>
+                                <img src={Frontend} alt="frontend" />
+                            </div>
                             <h5 className='card-title'>FRONTEND</h5>
                             <p className='card-text'>
                                 <div className='Tickmark-text'>
@@ -41,6 +54,9 @@ const FourCardsComponents = () => {
 
                     <div className='card_1 shadow' >
                         <div className='card-body'>
+                        <div className='card-icon' style={{width:'55px', marginBottom:'0', marginTop:'0'}}>
+                                <img src={Finance} alt="frontend" />
+                            </div>
                             <h5 className='card-title'>FINANCE & ACCOUNTING</h5>
                             <p className='card-text'>
                                 <div className='Tickmark-text'>
@@ -66,7 +82,10 @@ const FourCardsComponents = () => {
 
                     <div className='card_1 shadow'>
                         <div className='card-body'>
-                            <h5 className='card-title'>CUSTOMER MANAGEMENT SERVICES (CMS)</h5>
+                        <div className='card-icon' style={{width:'55px'}}>
+                                <img src={Customer} alt="customer" />
+                            </div>
+                            <h5 className='card-title' style={{fontSize:'13px'}} >CUSTOMER MANAGEMENT SERVICES (CMS)</h5>
                             <p className='card-text'>
                                 <div className='Tickmark-text'>
                                     <img src={TickmarkImg} alt='tick-mark'></img>
@@ -86,6 +105,9 @@ const FourCardsComponents = () => {
                     </div>
                     <div className='card_1 shadow'>
                         <div className='card-body'>
+                        <div className='card-icon' style={{width:'55px'}}>
+                                <img src={Analytics} alt="analytics" />
+                            </div>
                         <h5 className='card-title'>ANALYTICS</h5>
                             <p className='card-text'>
                             <div className='Tickmark-text'>
@@ -109,7 +131,10 @@ const FourCardsComponents = () => {
                     </div>
                     <div className='card_1 shadow'>
                         <div className='card-body'>
-                        <h5 className='card-title'>HR SUPPORT</h5>
+                        <div className='card-icon' style={{width:'45px',marginBottom:'0'}}>
+                                <img src={HR} alt="hr" />
+                            </div>
+                        <h5 className='card-title' style={{paddingTop:'5px'}}>HR SUPPORT</h5>
                             <p className='card-text'>
                             <div className='Tickmark-text'>
                             <img src={TickmarkImg} alt='tick-mark'></img>
@@ -132,6 +157,9 @@ const FourCardsComponents = () => {
                     </div>
                     <div className='card_1 shadow'>
                         <div className='card-body'>
+                        <div className='card-icon' style={{width:'45px',marginBottom:'0'}}>
+                                <img src={Marketing} alt="marketing" />
+                            </div>
                         <h5 className='card-title'>MARKETING</h5>
                             <p className='card-text'>
                             <div className='Tickmark-text'>
@@ -155,9 +183,12 @@ const FourCardsComponents = () => {
                     </div>
 
                 </div>
+            <div className="key-features-link-space">
+                <span style={{cursor:'pointer'}} onClick={()=> navigate('/services')} className="key-features-link">View All</span>
+            </div>
             </div>
         </div>
     )
 }
 
-export default FourCardsComponents
+export default FourCardsComponents;

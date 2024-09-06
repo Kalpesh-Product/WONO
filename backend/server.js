@@ -10,6 +10,7 @@ const { error } = require("console");
 const session = require('express-session')
 const cookieParser = require('cookie-parser')
 const crypto = require('crypto');
+const mongoose = require('mongoose');
 
 
 const app = express();
@@ -253,6 +254,37 @@ app.post('/submit-form',(req,res)=>{
     
   });
 
+
+//regdetails schema
+
+const userSchema = new mongoose.Schema({
+  name: String,
+  mobile: String,
+  email: String,
+  country: String,
+  city: String,
+  state: String,
+  companyName: String,
+  industry: String,
+  companySize: String,
+  companyType: String,
+  companyCity: String,
+  companyState: String,
+  websiteURL: String,
+  linkedinURL: String,
+  username: String,
+  password: String
+},{ collection: 'registrationDetails' });
+
+// Define UserService schema
+const userServiceSchema = new mongoose.Schema({
+  user_id: mongoose.Schema.Types.ObjectId,
+  service_name: String
+}, { collection: 'userServices' });
+
+// Create models
+const User = mongoose.model('User', userSchema);
+const UserService = mongoose.model('UserService', userServiceSchema);
   
   
 // Route to handle form submission
@@ -281,48 +313,43 @@ app.post("/register", async (req, res) => {
     const uniqueNumber = crypto.randomInt(1000, 9999);
     const password = `${username}@Wono${uniqueNumber}`;
 
-    // Insert user data into user_data table
-    const [result] = await promisePool.query(
-      `INSERT INTO user_data 
-        (name, mobile, email, country, city, state, companyName, industry, companySize, companyType, companyCity, companyState, websiteURL, linkedinURL, username, password)
-        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
-      [
-        name,
-        mobile,
-        email,
-        country,
-        city,
-        state,
-        companyName,
-        industry,
-        companySize,
-        companyType,
-        companyCity,
-        companyState,
-        websiteURL,
-        linkedinURL,
-        username,
-        password,
-      ]
-    );
+    // Insert user data into User collection
+    const user = new User({
+      name,
+      mobile,
+      email,
+      country,
+      city,
+      state,
+      companyName,
+      industry,
+      companySize,
+      companyType,
+      companyCity,
+      companyState,
+      websiteURL,
+      linkedinURL,
+      username,
+      password
+    });
 
-    const userId = result.insertId;
-
-    // Insert selected services into user_services table
+    const savedUser = await user.save();
+    
+    // Insert selected services into UserService collection
     const serviceEntries = Object.keys(selectedServices)
       .filter(service => selectedServices[service])
-      .map(service => [userId, service]);
+      .map(service => ({
+        user_id: savedUser._id,
+        service_name: service
+      }));
 
     if (serviceEntries.length > 0) {
-      await promisePool.query(
-        'INSERT INTO user_services (user_id, service_name) VALUES ?',
-        [serviceEntries]
-      );
+      await UserService.insertMany(serviceEntries);
     }
 
     // Prepare email templates
     const userMailOptions = {
-      from: "aiwinraj1810@gmail.com",
+      from: "your_email@gmail.com",
       to: email,
       subject: "Welcome to Our Service!",
       html: `
@@ -335,8 +362,8 @@ app.post("/register", async (req, res) => {
     };
 
     const companyMailOptions = {
-      from: "aiwinraj1810@gmail.com",
-      to: "aiwinraj1018@gmail.com",
+      from: "your_email@gmail.com",
+      to: "company_email@gmail.com",
       subject: "New User Registration",
       html: `
         <h1>New User Registration Details</h1>
@@ -372,6 +399,7 @@ app.post("/register", async (req, res) => {
     res.status(500).send("Failed to register user: " + error.message);
   }
 });
+
 
 
 app.post('/reset-password', async (req, res) => {
