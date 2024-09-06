@@ -148,8 +148,8 @@ const Homepage = () => {
                     </div>
                     <div className="first-section-grid-item-1">
                         <h2 className='home-main-title'>
-                            <span className='w'> W</span><span className='O'>O</span>RLDS
-                            <span className='n'>N</span><span className='O'>O</span>MAD<br />
+                            <span className='w'> W</span><span className='O'>O</span>RLD
+                            <span className='n'>N</span><span className='O'>O</span>MADS<br />
                         </h2>
 
                     </div>
@@ -208,18 +208,17 @@ const Homepage = () => {
         </div>
       </div>
       <div
-        className="four-cards-section"
-        style={{ padding: "0", marginBottom: "-60px", marginTop: "20px" }}>
+        className="four-cards-section">
         <FourCardsComponents />
       </div>
 
-      <div className="partners-section body-partners-master ">
+      <div className="partners-section body-partners-master">
         <div className="mt-5">
           {/* First div (1/2) */}
           <div className="">
-            <div className="customMargin">
-              <div className="border-top border-dark border-3 ">
-                <br />
+            <div className="customMargin_top">
+              <div>
+                
                 <h2>One Partner Platform,</h2>
                 <h2>Infinite possibilities and opportunities!</h2>
               </div>
@@ -267,9 +266,9 @@ const Homepage = () => {
                 </div>
               </div>
             </div>
-            <div className='four-cards-section' style={{ padding: "0", marginBottom: "-60px", marginTop: "20px" }}>
+            {/* <div className='four-cards-section' style={{ padding: "0", marginBottom: "-60px", marginTop: "20px" }}>
                 <FourCardsComponents />
-            </div>
+            </div> */}
           </div>
           {/* </div> */}
           <div className="">
@@ -281,7 +280,7 @@ const Homepage = () => {
                 <div className="col-lg-4  d-flex justify-content-center align-items-center">
                   <div className="">
                     <button
-                      className="partner-submit-button "
+                      className="get-started-submit-button "
                       onClick={handleRegister}>
                       Get Started
                     </button>
@@ -490,29 +489,28 @@ const Homepage = () => {
               your business to grow and become successful shall all be delivered
               by WoNo.
             </p>
-          </div>
-          <div className="">
-            <div className="container my-3">
-              <div className="row">
-                {/* <div className="col-lg-4 bg-danger"> */}
-                <div className="col-lg-4  d-flex custom-justify align-items-center">
-                  <div className="">
+            <div className="partner-button-space">
                     <button
                       className="partner-submit-button "
                       onClick={handleRegister}>
                       Get Started
                     </button>
+                    
+          </div>
+          <div className="">
+            <div className="container my-3">
+              <div className="row">
+                {/* <div className="col-lg-4 bg-danger"> */}
+                <div className="col-lg-12  d-flex custom-justify align-items-center">
+                  
                   </div>
                 </div>
-                <div className="col-lg-4"></div>
-                <div className="col-lg-4"></div>
               </div>
-              <br />
-              <br />
             </div>
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 };
