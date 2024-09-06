@@ -1,0 +1,90 @@
+@font-face {
+    font-family: BAUHS93;
+    src: url('../assets/WONO_images/img/fonts/BAUHS93.ttf');
+}
+
+@font-face {
+    font-family: Bebas-Regular;
+    src: url('../assets/WONO_images/img/fonts/BebasNeue-Regular.ttf');
+}
+
+@font-face {
+    font-family: Popins-Medium;
+    src: url('../assets/WONO_images/img/fonts/Poppins-Medium.ttf');
+}
+
+@font-face {
+    font-family: Popins-Regular;
+    src: url('../assets/WONO_images/img/fonts/Poppins-Regular.ttf');
+}
+
+@font-face {
+    font-family: Popins-Black;
+    src: url('../assets/WONO_images/img/fonts/Poppins-Black.ttf');
+}
+
+
+.body-partners-master {
+    background-color: white;
+    /* height: 80vh; */
+    /* display: flex; */
+    /* align-items: center; */
+    /* justify-content: center; */
+    /* flex-direction: column; */
+    /* overflow: hidden; */
+    /* padding-left: 7rem; */
+    /* padding-right: 7rem; */
+}
+
+
+/* Default for desktop screens */
+/* .element {
+    
+} */
+
+/* For mobile screens (e.g., max-width 767px) */
+@media (max-width: 768px) {
+    .customMargin {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .custom-justify {
+        justify-content: center;
+    }
+}
+
+@media (min-width: 768px) {
+    .customMargin {
+        padding-left: 7rem;
+        padding-right: 7rem;
+    }
+
+    .custom-justify {
+        justify-content: flex-start;
+    }
+}
+
+.partner-submit-button {
+    /* width: 100%; */
+    border-radius: 4rem;
+    background-color: black;
+    color: white;
+    /* padding: 0.5rem; */
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    /* margin: auto */
+}
+
+.custom-image-biznest {
+    width: 100%;
+    /* Image will take up the full width of its container */
+    height: auto;
+    /* Maintains the image's aspect ratio */
+}
+
+.grow-your-business-color {
+    background-color: lightblue;
+}
