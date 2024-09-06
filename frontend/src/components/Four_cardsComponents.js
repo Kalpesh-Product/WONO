@@ -191,4 +191,4 @@ const FourCardsComponents = () => {
     )
 }
 
-export default FourCardsComponents
+export default FourCardsComponents;
