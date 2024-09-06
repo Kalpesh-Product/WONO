@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react'
 import '../styles/bodyHome.css'
 import RotatingGlobe from '../components/RotatingGlobe'
-import {  useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import Carousel1 from '../assets/WONO_images/img/hero-carousel/hero-carousel-1.webp'
 // import Carousel2 from '../assets/WONO_images/img/hero-carousel/hero-carousel-2.png'
 // import Carousel3 from '../assets/WONO_images/img/hero-carousel/hero-carousel-3.png'
@@ -12,18 +12,15 @@ import { Nav } from 'react-bootstrap';
 // import WonoLogo from '../assets//WONO_images/img/WONO_LOGO_white _TP.png';
 // import WonoLogoBlack from '../assets//WONO_images/img/WONO_LOGO_Black_TP.png';
 import BiznestLogo from '../assets/BIZNest/biznest_logo.jpg'
-// import Template1 from '../assets/WONO_images/img/website-builder/template-1.jpeg'
-// import Template1_2 from '../assets/WONO_images/img/website-builder/template-1-2.jpeg'
-// import Template1_3 from '../assets/WONO_images/img/website-builder/template-1-3.jpeg'
-// import Template1_4 from '../assets/WONO_images/img/website-builder/template-1-4.jpeg'
-// import Template2 from '../assets/WONO_images/img/website-builder/template-2.jpeg'
-// import Template2_2 from '../assets/WONO_images/img/website-builder/template-2-2.jpeg'
-// import Template2_3 from '../assets/WONO_images/img/website-builder/template-2-3.jpeg'
-// import Template2_4 from '../assets/WONO_images/img/website-builder/template-2-4.jpeg'
-// import Template3 from '../assets/WONO_images/img/website-builder/template-3.jpeg'
-// import Template3_2 from '../assets/WONO_images/img/website-builder/template-3-2.jpeg'
-// import Template3_3 from '../assets/WONO_images/img/website-builder/template-3-3.jpeg'
-// import Template3_4 from '../assets/WONO_images/img/website-builder/template-3-4.jpeg'
+import CafeImage from '../assets/WONO_images/img/website-builder/new-layout/cafe.png'
+import CoWorkingImage from '../assets/WONO_images/img/website-builder/new-layout/co-working.png'
+import Hostels from '../assets/WONO_images/img/website-builder/new-layout/hostels.png'
+import CoLivingImage from '../assets/WONO_images/img/website-builder/new-layout/co-living.png'
+import CafeImageLong from '../assets/WONO_images/img/website-builder/new-layout/long/cafe-long.jpeg'
+import CoWorkingImageLong from '../assets/WONO_images/img/website-builder/new-layout/long/co-working-long.jpeg'
+import BoutiqueLong from '../assets/WONO_images/img/website-builder/new-layout/long/boutique-long.jpeg'
+import CoLivingImageLong from '../assets/WONO_images/img/website-builder/new-layout/long/co-living-long.jpeg'
+import Boutique from '../assets/WONO_images/img/website-builder/new-layout/boutique.png'
 import DashboardBooking from './Dashboard-pages/DashboardBooking'
 import DashboardAsset from './Dashboard-pages/DashboardAsset'
 import DashboardHR from './Dashboard-pages/DashboardHR'
@@ -57,13 +54,32 @@ const Homepage = () => {
     const firstBackendKey = Object.keys(menuTitles)[0];
     const [selectedItem, setSelectedItem] = useState('dashboard-booking');
     const firstWebKey = Object.keys(website_menus)[0];
-    const [selectedWeb, setSelectedWeb] = useState('website-cafe');   
+    const [selectedWeb, setSelectedWeb] = useState('website-cafe');
     const [selectedMenuItem, setSelectedMenuItem] = useState(firstBackendKey);
     const [selectedMenu, setSelectedMenu] = useState(firstWebKey);
+    const [selectedId, setSelectedId] = useState(null);
 
     //First section carousel
 
     const images = [Carousel1];
+    const webimages = [
+        { id: 'cafe', src: CafeImage, alt: 'Cafe Image' },
+        { id: 'coworking', src: CoWorkingImage, alt: 'CoWorking Image' },
+        { id: 'coliving', src: CoLivingImage, alt: 'CoLiving Image' },
+        { id: 'boutique', src: Boutique, alt: 'Boutique Image' },
+    ];
+
+    const webimagesClicked = [
+        { id: 'cafe', src: CafeImageLong, alt: 'Cafe Image' },
+        { id: 'coworking', src: CoWorkingImageLong, alt: 'CoWorking Image' },
+        { id: 'coliving', src: CoLivingImageLong, alt: 'CoLiving Image' },
+        { id: 'boutique', src: BoutiqueLong, alt: 'Boutique Image' },
+    ];
+
+    //for website section
+    const handleImageClick = (id) => {
+        setSelectedId(id);
+    };
 
 
     const handleRegister = () => {
@@ -104,7 +120,7 @@ const Homepage = () => {
         setSelectedMenuItem(key)
         if (containerRef.current) {
             containerRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          }    
+        }
     };
     const handleWebMenuSelect = (key) => {
         setSelectedWeb(key);  // Set the key as the selected web content
@@ -112,10 +128,10 @@ const Homepage = () => {
 
     };
 
-    
 
-// mobile screen for globe responsiveness
-    const ismobile = window.innerWidth<769;
+
+    // mobile screen for globe responsiveness
+    const ismobile = window.innerWidth < 769;
 
     return (
         <div className='master-container'>
@@ -133,24 +149,22 @@ const Homepage = () => {
                     </div>
                     <div className="first-section-grid-item-1">
                         <h2 className='home-main-title'>
-                            <span className='w'> W</span><span className='O'>O</span>RLDS<br />
+                            <span className='w'> W</span><span className='O'>O</span>RLDS
                             <span className='n'>N</span><span className='O'>O</span>MAD<br />
                         </h2>
+
+                    </div>
+                    <div className="first-section-grid-item-2">
                         <span className='home-desc'>
                             The World’s only Nomad Community which is a curation of the best of platforms
                             for Living & Working from Aspiring Destinations across the world.
                         </span>
                         <div className='home-section-buttons'>
-                        <div> 
-                        <button className='register-button' onClick={handleRegister}>SIGN UP</button>
-                       </div>
+                            <div>
+                                <button className='home-section-register-button' onClick={handleRegister}>BUSINESS SIGN UP</button>
+                            </div>
 
                         </div>
-                    </div>
-                    <div className="first-section-grid-item-2">
-                       <div style={{ borderRadius:'20px', marginTop:'20rem',width:'100%',textAlign:'center',paddingRight:'3rem'}}> 
-                        <button style={{width:'80%', margin:'0', borderRadius:'20px'}} className='register-button' onClick={handleRegister}>SIGN UP</button>
-                       </div>
                     </div>
                 </div>
 
@@ -158,28 +172,28 @@ const Homepage = () => {
 
             <div className='Globe-N-Commerce' >
                 <div className='Globe' style={{ textAlign: 'left' }}>
-                    <Canvas camera={{ position:[0,0,ismobile? 15:25],fov:ismobile? 90:40}}  >
+                    <Canvas camera={{ position: [0, 0, ismobile ? 15 : 25], fov: ismobile ? 90 : 40 }}  >
                         <ambientLight intensity={0.5} />
                         <pointLight position={[10, 10, 10]} />
                         <RotatingGlobe />
                         <OrbitControls enableZoom={false}
-                        minPolarAngle={Math.PI/3}
-                        maxPolarAngle={2 * Math.PI / 3}/>
+                            minPolarAngle={Math.PI / 3}
+                            maxPolarAngle={2 * Math.PI / 3} />
                     </Canvas>
                 </div>
                 <div className='N-Commerce'>
                     <h3><strong>INTRODUCING N-COMMERCE</strong></h3>
                     <p > ( “NOMAD COMMERCE” ) </p>
                     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                        <button className='hero-button' data-aos-delay="200" onClick={()=>{
+                        <button className='hero-button' data-aos-delay="200" onClick={() => {
                             navigate('/register')
                             window.scrollTo({ top: 0, behavior: 'smooth' })
-                            }}>PARTNER NOW</button>
+                        }}>PARTNER NOW</button>
                     </div>
                 </div>
             </div>
-            <div className='four-cards-section' style={{padding: "0",marginBottom:"-60px",marginTop: "20px"}}>
-                <FourCardsComponents/>
+            <div className='four-cards-section' style={{ padding: "0", marginBottom: "-60px", marginTop: "20px" }}>
+                <FourCardsComponents />
             </div>
 
             <div className="backend-container-master" style={{ backgroundColor: 'white' }}>
@@ -192,20 +206,20 @@ const Homepage = () => {
                                     <img src={BiznestLogo} alt='' />
                                 </div>
                             </div>
-                            
-                                <Nav id="backend-sidebar" className="flex-column p-0 backend-sidebar">
-                                    {Object.keys(menuTitles).map((key) => (
-                                        <Nav.Link 
-                                        key={key} 
+
+                            <Nav id="backend-sidebar" className="flex-column p-0 backend-sidebar">
+                                {Object.keys(menuTitles).map((key) => (
+                                    <Nav.Link
+                                        key={key}
                                         onClick={() => handleMenuSelect(key)}
                                         className={selectedMenuItem === key ? 'active' : ''}
-                                        >
-                                            
-                                            {menuTitles[key]}
-                                        </Nav.Link>
-                                    ))}
-                                </Nav>
-                            
+                                    >
+
+                                        {menuTitles[key]}
+                                    </Nav.Link>
+                                ))}
+                            </Nav>
+
                         </div>
                         <div className="backend-panel-right">
                             <div className="backend-panel-header">
@@ -234,46 +248,90 @@ const Homepage = () => {
 
             <div className="website-container-master" style={{ backgroundColor: 'black' }}>
                 <div className="website-panel-container">
-                    <h2>Personalized template solutions</h2>
+                    <div className="website-panel-header">
+
+                        <h2>SELF-SERVE TRANSACTIONAL WEBSITE: FULL STACK!</h2>
+                        <h3>Tech that completes your business and has ZERO dependency with NO COST!</h3>
+                        <p>Free customizable website templates which are strategically tailored for managing Lifestyle Businesses like Co-Working, Co-Living, Hostels, Boutique Properties, Cafes
+                            etc</p>
+                    </div>
                     <div className="website-panel">
-                        <div className="website-panel-sidebar">
+                        {/* <div className="website-panel-sidebar">
                             <div className="website-sidebar-header">
                                 <div className="website-sidebar-logo">
                                     <img src={BiznestLogo} alt='' />
                                 </div>
                             </div>
-                            
-                                <Nav id="website-sidebar" className="flex-column p-0 website-sidebar">
-                                    {Object.keys(website_menus).map((key) => (
-                                        <Nav.Link 
-                                        key={key} 
+
+                            <Nav id="website-sidebar" className="flex-column p-0 website-sidebar">
+                                {Object.keys(website_menus).map((key) => (
+                                    <Nav.Link
+                                        key={key}
                                         onClick={() => handleWebMenuSelect(key)}
                                         className={selectedMenu === key ? 'active' : ''}
-                                        >
-                                            {website_menus[key]}
-                                        </Nav.Link>
-                                    ))}
-                                </Nav>
-                          
-                        </div>
-                        <div className="website-panel-right">
-                            <div className="website-panel-header">
-                            <h3>{website_menus[selectedWeb]}</h3>
-                            </div>
-                            <div className="website-panel-content">
-
-                                <AnimatePresence>
-                                    <motion.div
-                                        key={selectedWeb}
-                                        initial={{ opacity: 0 }}
-                                        animate={{ opacity: 1 }}
-                                        exit={{ opacity: 0 }}
-                                        transition={{ duration: 0.2 }}
                                     >
-                                        {renderWebContent(selectedWeb)}
+                                        {website_menus[key]}
+                                    </Nav.Link>
+                                ))}
+                            </Nav>
+
+                        </div> */}
+                        <div className={`website-panel-right ${selectedId ? 'modal-open' : ''}`}>
+                            <div className="website-panel-content">
+                                {webimages.map((image) => (
+                                    <motion.div
+                                        className="template-preview-container"
+                                        key={image.id}
+                                        layoutId={image.id}
+                                        onClick={() => handleImageClick(image.id)}
+                                        whileHover={{ scale: 1.05 }}
+                                    >
+                                        <motion.img src={image.src} alt={image.alt} />
                                     </motion.div>
-                                </AnimatePresence>
+                                ))}
                             </div>
+
+                            <AnimatePresence>
+                                {selectedId && (
+                                    <>
+                                        {/* Backdrop Layer */}
+                                        <motion.div
+                                            className="modal-backdrop"
+                                            initial={{ opacity: 0 }}
+                                            animate={{ opacity: 0.5 }}
+                                            exit={{ opacity: 0 }}
+                                        />
+                                        <motion.div
+                                            layoutId={selectedId}
+                                            className="selected-image-modal"
+                                            initial={{ opacity: 0, scale: 0.8 }} // Start smaller with opacity 0
+                                            animate={{ opacity: 1, scale: 1 }}  // Animate to full size and full opacity
+                                            exit={{ opacity: 0, scale: 0.8 }}    // Shrink and fade out on exit
+                                            transition={{ duration: 0.3 }}       // Adjust timing for smoother transition
+                                        >
+                                            <div
+                                                style={{
+                                                    display: 'flex',
+                                                    alignItems: 'center',
+                                                    justifyContent: 'end',
+                                                    width: '100%',
+                                                }}
+                                            >
+                                                <motion.button
+                                                    className="close-button"
+                                                    onClick={() => setSelectedId(null)}
+                                                >
+                                                    Close
+                                                </motion.button>
+                                            </div>
+                                            <motion.img
+                                                src={webimagesClicked.find((img) => img.id === selectedId).src}
+                                                alt={webimagesClicked.find((img) => img.id === selectedId).alt}
+                                            />
+                                        </motion.div>
+                                    </>
+                                )}
+                            </AnimatePresence>
                         </div>
                     </div>
                 </div>

@@ -4,7 +4,7 @@
 }
 
 .master-container {
-    background-color: black;
+    background-color: white;
     height: 100%
 }
 
@@ -38,8 +38,9 @@
 
 
 .home-page-container {
-    display: grid;
-    grid-template-columns: 55% 1fr;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: 100%;
     height: 100vh;
     position: relative;
@@ -59,6 +60,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: top;
     position: absolute;
     top: 0;
     left: 0;
@@ -78,18 +80,41 @@
 
 .first-section-grid-item-1{
     display: flex;
-    align-items: start;
+    align-items: center;
     justify-content: center;
     position: relative;
     z-index: 1;
 }
 
 .first-section-grid-item-2 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 70% 30%;
     position: relative;
     z-index: 1;
+    width: 100%;
+    font-family: Popins-Regular;
+    color: white;
+    margin-bottom: 2.5rem;
+}
+.home-section-buttons{
+    display:block;
+    align-items:start;
+     justify-content:start;
+}
+.home-section-register-button{
+    width: 75%;
+    margin: 0;
+    background-color: yellow;
+    padding: 0.5rem 2rem 0.5rem 2rem;
+    color: black;
+    border-radius: 5px;
+    border: none;
+    font-family: Popins-Regular;
+    cursor: pointer;
+}
+
+.first-section-grid-item-2 * {
+    font-family: Popins-Regular;
 }
 
 .first-section-grid-item-1 {
@@ -105,7 +130,8 @@
     color: white;
     font-size: 6rem;
     font-family: Popins-Medium;
-    padding: 6rem 6rem 1rem 6rem;
+    margin-top: 3rem;
+    /* padding: 6rem 6rem 1rem 6rem; */
 }
 
 
@@ -122,28 +148,13 @@
 }
 
 .home-desc {
-    padding: 0rem 8rem 2rem 6rem;
+    padding: 0rem 0rem 2rem 6rem;
     color: white;
     text-align: left;
     font-family: Popins-Medium;
 }
-.home-section-buttons{
-    display:none;
-    align-items:start;
-     justify-content:'start';
-      padding-left:5rem;
-}
 
-.first-section-grid-item-2 {
-    flex-direction: column;
-    width: 100%;
-    font-family: Popins-Regular;
-    color: white;
-}
 
-.first-section-grid-item-2 * {
-    font-family: Popins-Regular;
-}
 
 .form-card {
     background-color: rgba(255, 255, 255, 255);
@@ -161,22 +172,33 @@
     .home-page-container {
         grid-template-columns: 1fr;
         /* Stack columns vertically */
-        height: 100%;
+        height:100vh;
         /* Adjust height to fit content */
         padding: 0;
     }
 
     .home-main-title {
-        padding: 0rem 2rem 2rem 2rem;
+        /* padding: 0rem 2rem 2rem 2rem; */
         color: white;
-        font-size: 3rem;
+        font-size: 2rem;
         font-family: Popins-Medium;
     }
     .home-section-buttons{
         display: flex;
         align-items:center;
          justify-content:center;
-         padding-left: 1rem;
+         /* padding-left: 1rem; */
+    }
+    .home-section-register-button{
+        width: 100%;
+        margin: 0;
+        background-color: yellow;
+        padding: 0.5rem 2rem 0.5rem 2rem;
+        color: black;
+        border-radius: 5px;
+        border: none;
+        font-family: Popins-Regular;
+        cursor: pointer;
     }
 
     .background-div {
@@ -185,24 +207,24 @@
     }
 
     .first-section-grid-item-1 {
-        height: 100vh;
-        margin-bottom: 4rem;
+        /* display: block; */
+        /* height: 100vh; */
+        /* margin-bottom: 4rem; */
+        margin-top: 4rem;
     }
 
     .first-section-grid-item-2 {
-        display: none;
-        height: 100vh;
-        /* Adjust height for stacked layout */
+        
+        grid-template-columns: 1fr;
         border: none;
         /* Optional: remove border if needed */
-        margin-bottom: 2rem;
+        margin-bottom: 5rem;
     }
 
     .home-desc {
-        text-align: left;
+        text-align: center;
         padding: 1rem;
         font-family: Popins-Medium;
-        margin-left: 1rem;
     }
 
     .form-card {
@@ -231,6 +253,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     height: 100vh;
+    background-color: black;
 }
 .Globe {
     /* flex: 0 0 40%; */
@@ -710,29 +733,27 @@
 }
 .website-panel-container {
     padding: 4rem 7.5rem 4rem 7.5rem;
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: black;
     margin: 2rem 0rem 0 0;
 
 }
 
 .website-panel-container h2 {
-    color: white;
-    padding: 2rem;
-    text-align: center;
+    color: black;
+    /* padding: 2rem; */
+    text-align: left;
 }
 
 .website-panel {
-    display: grid;
-    grid-template-columns: 15% 85%;
-    /* Sidebar takes 15%, content takes 85% */
     min-height: 100%;
-    /* Full viewport height */
     padding: 2rem 2rem 2rem 1rem;
-    background-color: black;
     border: 1px solid white;
     gap: 1rem;
     border-radius: 20px;
+}
+.website-panel-header {
+    padding-left: 1rem;
 }
 
 .website-panel-sidebar {
@@ -793,39 +814,91 @@
 }
 
 .website-panel-content {
+    display: grid;
+    grid-template-columns: 50% 1fr;
     padding: 1rem;
-    background-color: #ecf0f1;
+    gap: 10px;
+    background-color: white;
     /* Example background color for the content area */
-    overflow: hidden;
-    border-radius: 20px;
+    /* overflow: hidden; */
+    /* border-radius: 20px; */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-    /* Drop shadow */
+}
+.template-preview-container{
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.template-preview-container img{
+    width: 100%;
+    object-fit: fill;
+    transition: all ease 0.3s;
+    vertical-align: middle;
+}
+.template-preview-container img:hover{
+    width: 102%;
 }
 
-.website-panel-header {
-    padding: 1rem;
-    text-align: center;
-    font-family: popins-regular;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-    border: 1px solid rgb(182, 182, 182);
-    border-radius: 20px;
-    margin: 0.3rem 0.3rem 1rem 0.3rem;
-    position: sticky;
-    /* Make the header sticky */
-    top: 12.5%;
-    /* Stick to the top of the viewport */
-    background-color: white;
-    /* Ensure the background is consistent */
-    z-index: 2;
-    /* Ensure it stays above content */
-}
 
 .website-panel-content::-webkit-scrollbar {
     display: none;
     /* Chrome, Safari, and Opera */
 }
+
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    z-index: 999; /* Ensures it covers the background content */
+    pointer-events: none; /* Makes sure only the modal is interactive */
+  }
+.selected-image-modal {
+    position: fixed;
+    top: 5%;
+    left: 5%;
+    /* transform: translate(-50%, -50%); */
+    max-width: 90vw; 
+    max-height: 90%; 
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.9); /* Optional: a subtle background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow-y: scroll;
+    pointer-events: auto; /* Modal should be interactive */
+  }
+  
+  .selected-image-modal img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: top;
+  }
+  .modal-open {
+    pointer-events: none; /* Disable pointer events on the rest of the page */
+  }
+  
+  .modal-open .selected-image-modal {
+    pointer-events: auto; /* Enable pointer events on the modal */
+  }
+  
+  .close-button {
+    /* margin: 2rem 0 0 0 ; */
+    padding: 5px 5px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
 
 @media (max-width:768px) {
     .website-container-master{
@@ -833,8 +906,8 @@
     }
     .website-panel {
         height: fit-content;
-        grid-template-columns: 1fr;
-        padding: 1rem;
+        /* grid-template-columns: 1fr;
+        padding: 1rem; */
     }
 
     .website-panel-container {
@@ -857,6 +930,9 @@
 
     .website-panel-sidebar::-webkit-scrollbar {
         display: none;
+    }
+    .website-panel-content {
+        grid-template-columns:1fr;
     }
 
 
