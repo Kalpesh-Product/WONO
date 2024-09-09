@@ -8,6 +8,8 @@ import emailSend from '../assets/WONO_images/img/emailSend.gif'
 import { Link } from 'react-router-dom';
 import { Stepper, Step } from "react-form-stepper";
 import { TransactionalWebsite, BookingEngine, MeetingRoomEngine, PaymentGateway } from '../assets/WONO_images/img/icon_service';
+import gmailLogo from '../assets/WONO_images/img/services/gmailLogo.jpg'
+import outlookLogo from '../assets/WONO_images/img/services/outlookLogo.png'
 
 const Register = () => {
   const [currentStep, setCurrentStep] = useState(0);
@@ -55,25 +57,25 @@ const Register = () => {
 
   const handleNext = async (e) => {
     e.preventDefault();
-    const validationErrors = validateCurrentStep();
+    // const validationErrors = validateCurrentStep();
 
-    if (Object.keys(validationErrors).length === 0) {
+    // if (Object.keys(validationErrors).length === 0) {
 
-      if (currentStep === 0 && formData.email) {
-        const isDuplicate = await checkEmailDuplicate(formData.email);
-        if (isDuplicate) {
-          setErrors((prevErrors) => ({
-            ...prevErrors,
-            email: 'This email is already in use.',
-          }));
-          return;
-        }
-      }
+    //   if (currentStep === 0 && formData.email) {
+    //     const isDuplicate = await checkEmailDuplicate(formData.email);
+    //     if (isDuplicate) {
+    //       setErrors((prevErrors) => ({
+    //         ...prevErrors,
+    //         email: 'This email is already in use.',
+    //       }));
+    //       return;
+    //     }
+    //   }
 
 
-      setCurrentStep((prev) => prev + 1); 
-      console.log(formData);
-    }
+    //   console.log(formData);
+    // }
+    setCurrentStep((prev) => prev + 1); 
   };
 
 
@@ -619,11 +621,11 @@ const Register = () => {
                   </span>
                 <div className="mail-client-container">
                   <div className="mail-client">
-                    <img src={TransactionalWebsite} alt='Website' />
+                    <img src={gmailLogo} alt='Website' />
                     <span>Open G-mail</span>
                   </div>
                   <div className="mail-client">
-                    <img src={BookingEngine} alt='Outlook' />
+                    <img src={outlookLogo} alt='Outlook' />
                     <span>Open Outlook</span>
                   </div>
                 </div>

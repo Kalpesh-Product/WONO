@@ -323,9 +323,9 @@
 }
 
 .login-button {
-  background-color: rgb(13, 110, 253);
+  background-color: white;
   padding: 0.5rem 2rem 0.5rem 2rem;
-  color: white;
+  color: black !important;
   border-radius: 5px;
   border: none;
   font-family: Popins-Regular;
@@ -336,7 +336,7 @@
   font-family: Popins-Black;
 }
 .register-button {
-  background-color: yellow;
+  background-color: rgb(13, 110, 253);
   padding: 0.5rem 2rem 0.5rem 2rem;
   color: black;
   border-radius: 5px;

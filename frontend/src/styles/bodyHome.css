@@ -35,6 +35,10 @@
     font-family: Popins-Black;
     src: url('../assets/WONO_images/img/fonts/Poppins-Black.ttf');
 }
+@font-face {
+    font-family: Mistral;
+    src: url('../assets/WONO_images/img/fonts/MISTRAL.TTF');
+}
 
 
 .home-page-container {
@@ -105,9 +109,9 @@
 .home-section-register-button{
     width: 75%;
     margin: 0;
-    background-color: yellow;
+    background-color: rgb(13, 110, 253);
     padding: 0.5rem 2rem 0.5rem 2rem;
-    color: black;
+    color: white;
     border-radius: 20px;
     border: none;
     font-family: Popins-Regular;
@@ -130,7 +134,7 @@
 .home-main-title {
     color: black;
     font-size: 6rem;
-    font-family: Popins-Medium;
+    font-family: Mistral;
     margin-top: 3rem;
     /* padding: 6rem 6rem 1rem 6rem; */
 }

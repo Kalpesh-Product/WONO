@@ -5,14 +5,20 @@
 
 .key-features-master {
     background-color: #f9fafb;
-    height: 80vh;
+    height: 100%;
     display: flex;
-    align-items: center;
+    align-items: start;
     justify-content: center;
     flex-direction: column;
-    overflow: hidden;
+    overflow:scroll;
     padding-left: 7rem;
     padding-right: 7rem;
+    width: 100%;
+    -ms-overflow-style: none;
+}
+.key-features-master::-webkit-scrollbar {
+    display: none;
+    /* Safari and Chrome */
 }
 
 .four-cardsHeaderText {
@@ -21,24 +27,23 @@
     font-size: 30px;
     color: #08445E;
     font-family: Popins-Regular;
-
+    
 }
 
 .four-cardsContainer {
     /* height: 100%; */
 
     display: flex;
-    align-items: center;
+    align-items: start;
     justify-content: center;
     flex-direction: column;
     background-color: white;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .key-features-container {
     display: flex;
     gap: 20px;
-    overflow: hidden;
     padding: 1rem;
     background-color: #f9fafb;
 }
@@ -50,11 +55,10 @@
 .card_1{
    padding: 1rem;
    height: 100%;
-   width: 100%;
+   width: 300px;
    background-color: white;
    border-radius: 10px;
    font-family: Popins-Regular;
-
 }
 .card-icon{
     width: 35px;
@@ -108,8 +112,11 @@
         display: block;
         background-color: white;
         height: 100%;
-        padding: 5rem 0 5rem 0;
+        padding: 2rem 0 2rem 0;
         overflow: visible;
+    }
+    .key-features-container{
+        padding: 1rem 2rem;
     }
 
     .four-cardsContainer {
@@ -130,7 +137,7 @@
     }
 
     .four-cardsHeaderText {
-        padding: 1rem 2rem 0 2rem;
+        padding: 5rem 2rem 0 2rem;
         text-align: center;
         position: sticky;
         z-index: 4;
