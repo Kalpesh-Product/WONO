@@ -26,14 +26,15 @@
   right: 0;
   z-index: 6;
   width: 100%;
-  
+
   /* position: relative;
   width: 100%;
   top: 0;
   left: 0;
   z-index: 50; */
 }
-.custom-navbar-logo{
+
+.custom-navbar-logo {
   padding: 0.5rem 0.5rem 0.5rem 6rem;
 }
 
@@ -59,6 +60,7 @@
   gap: 20px;
   /* Smooth transition for color and text-decoration */
 }
+
 /* Changes */
 
 .nav-tabss a::before {
@@ -68,18 +70,22 @@
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color:#007bff ; /* Color of the underline */
+  background-color: #007bff;
+  /* Color of the underline */
   visibility: hidden;
   transition: all 0.3s ease-in-out;
 }
+
 .nav-tabss a:hover {
   font-family: Popins-Black;
 }
+
 /* Changes */
 .nav-tabss a:hover::before {
   visibility: visible;
   width: 100%;
 }
+
 /* Changes */
 .nav-tabss a.active::after {
   content: '';
@@ -88,7 +94,8 @@
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: #007bff; /* Color of the underline */
+  background-color: #007bff;
+  /* Color of the underline */
 }
 
 .custom-navbar-menu-toggle {
@@ -129,8 +136,9 @@
   font-size: 1.5rem;
   font-family: Popins-Regular;
 }
-.offcanvas-body > *{
-  margin-top:1rem ;
+
+.offcanvas-body>* {
+  margin-top: 1rem;
 }
 
 .custom-offcanvas-link {
@@ -182,13 +190,17 @@
     width: 250px;
     /* Adjust width as needed */
   }
-  .custom-navbar-logo{
-    padding: 0.5rem ;
+
+  .custom-navbar-logo {
+    padding: 0.5rem;
   }
+
   .custom-navbar-logo img {
-    width: 50%; /* Smaller width for screens less than 768px */
+    width: 50%;
+    /* Smaller width for screens less than 768px */
   }
 }
+
 .profile-container {
   display: flex;
   align-items: center;
@@ -198,8 +210,10 @@
 
 .profile-image {
   border-radius: 50%;
-  width: 40px; /* Adjust size as needed */
-  height: 40px; /* Adjust size as needed */
+  width: 40px;
+  /* Adjust size as needed */
+  height: 40px;
+  /* Adjust size as needed */
   cursor: pointer;
   margin-right: 8px;
 }
@@ -211,7 +225,7 @@
   right: 0;
   border: 1px solid #ccc;
   border-radius: 4px;
-  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
   z-index: 1000;
 }
 
@@ -316,8 +330,9 @@
 .new-form>div {
   padding: 0.5rem;
 }
+
 @media (max-width:768px) {
-  .avatar{
+  .avatar {
     width: 70px;
   }
 }
@@ -332,9 +347,11 @@
   cursor: pointer;
   text-decoration: none;
 }
-.login-button:hover{
+
+.login-button:hover {
   font-family: Popins-Black;
 }
+
 .register-button {
   background-color: rgb(13, 110, 253);
   padding: 0.5rem 2rem 0.5rem 2rem;
@@ -344,70 +361,84 @@
   font-family: Popins-Regular;
   cursor: pointer;
 }
-.register-button:hover{
+
+.register-button:hover {
   font-family: Popins-Black;
 }
-.input-groups{
+
+.input-groups {
   width: 100%;
 }
-.p-inputgroup{
+
+.p-inputgroup {
   justify-content: center;
   width: 100%;
 }
 
-div.w-full.p-dropdown.p-component.p-inputwrapper{
+div.w-full.p-dropdown.p-component.p-inputwrapper {
   background-color: white;
   padding: 10px;
   border: none;
 }
-.firstDrop{
+
+.firstDrop {
   border-radius: 0;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
   border-color: black;
 }
-.middleDrop{
+
+.middleDrop {
   border-color: black;
   border-radius: 0;
 }
-.lastDrop{
+
+.lastDrop {
   border-radius: 0;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
   border-color: black;
 }
+
 .responsive-placeholder {
-  width: 100%; /* Reduce width on smaller screens */
+  width: 100%;
+  /* Reduce width on smaller screens */
 
 }
-div.p-dropdown-items-wrapper{
+
+div.p-dropdown-items-wrapper {
   background-color: white;
   border-radius: 10px;
 }
-ul.p-dropdown-items{
+
+ul.p-dropdown-items {
   color: white;
   padding: 10px;
   text-align: center;
-  margin: 0 ;
+  margin: 0;
 }
-li.p-dropdown-item{
- justify-content: center;
+
+li.p-dropdown-item {
+  justify-content: center;
 }
 
 /* To change the border color of the dropdown */
 .firstDrop .p-dropdown.p-focus {
-  box-shadow: 0 0 0 1px rgb(0, 145, 255); 
+  box-shadow: 0 0 0 1px rgb(0, 145, 255);
 }
+
 .middleDrop .p-dropdown.p-focus {
-  box-shadow: 0 0 0 1px rgb(0, 145, 255); 
+  box-shadow: 0 0 0 1px rgb(0, 145, 255);
 }
+
 .lastDrop .p-dropdown.p-focus {
-  box-shadow: 0 0 0 1px rgb(0, 145, 255); 
+  box-shadow: 0 0 0 1px rgb(0, 145, 255);
 }
 
 .middleDrop .p-dropdown-panel .p-dropdown-item {
-  color: black; 
+  color: black;
 }
+
 /* Hide mobile layout by default */
 .mobile-screen {
   display: none;
@@ -421,14 +452,15 @@ li.p-dropdown-item{
 /* Display PC layout on larger screens (e.g., desktop) */
 @media (min-width: 768px) {
   .pc-screen {
-    display: flex; /* or block, depending on your layout needs */
+    display: flex;
+    /* or block, depending on your layout needs */
   }
 }
 
 /* Display mobile layout on smaller screens */
 @media (max-width: 767px) {
   .mobile-screen {
-    display: block; /* or flex, if you want them in a row */
+    display: block;
+    /* or flex, if you want them in a row */
   }
 }
-

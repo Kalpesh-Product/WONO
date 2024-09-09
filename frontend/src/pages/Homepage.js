@@ -1,8 +1,9 @@
-import React, { useState, useRef } from 'react'
-import '../styles/bodyHome.css'
-import RotatingGlobe from '../components/RotatingGlobe'
-import { useNavigate } from 'react-router-dom'
-import Carousel1 from '../assets/WONO_images/img/hero-carousel/hero-carousel-1.webp'
+import React, { useState, useRef } from "react";
+import "../styles/bodyHome.css";
+
+import RotatingGlobe from "../components/RotatingGlobe";
+import { useNavigate } from "react-router-dom";
+import Carousel1 from "../assets/WONO_images/img/hero-carousel/hero-carousel-1.webp";
 // import Carousel2 from '../assets/WONO_images/img/hero-carousel/hero-carousel-2.png'
 // import Carousel3 from '../assets/WONO_images/img/hero-carousel/hero-carousel-3.png'
 // import GlobalNomad from '../assets/WONO_images/img/icon_service/Birthday.webp'
@@ -11,30 +12,31 @@ import "../styles/componentStyle.css";
 import { Nav } from "react-bootstrap";
 // import WonoLogo from '../assets//WONO_images/img/WONO_LOGO_white _TP.png';
 // import WonoLogoBlack from '../assets//WONO_images/img/WONO_LOGO_Black_TP.png';
-import BiznestLogo from '../assets/BIZNest/biznest_logo.jpg'
-import CafeImage from '../assets/WONO_images/img/website-builder/new-layout/cafe.png'
-import CoWorkingImage from '../assets/WONO_images/img/website-builder/new-layout/co-working.png'
-import Hostels from '../assets/WONO_images/img/website-builder/new-layout/hostels.png'
-import CoLivingImage from '../assets/WONO_images/img/website-builder/new-layout/co-living.png'
-import CafeImageLong from '../assets/WONO_images/img/website-builder/new-layout/long/cafe-long.jpeg'
-import CoWorkingImageLong from '../assets/WONO_images/img/website-builder/new-layout/long/co-working-long.jpeg'
-import BoutiqueLong from '../assets/WONO_images/img/website-builder/new-layout/long/boutique-long.jpeg'
-import CoLivingImageLong from '../assets/WONO_images/img/website-builder/new-layout/long/co-living-long.jpeg'
-import Boutique from '../assets/WONO_images/img/website-builder/new-layout/boutique.png'
-import DashboardBooking from './Dashboard-pages/DashboardBooking'
-import DashboardAsset from './Dashboard-pages/DashboardAsset'
-import DashboardHR from './Dashboard-pages/DashboardHR'
-import DashboardTickets from './Dashboard-pages/DashboardTickets'
-import DashboardVisitor from './Dashboard-pages/DashboardVisitor'
-import DashboardProducts from './Dashboard-pages/DashboardProducts'
-import { Canvas } from '@react-three/fiber';
-import { OrbitControls } from '@react-three/drei';
+import BiznestLogo from "../assets/BIZNest/biznest_logo.jpg";
+import CafeImage from "../assets/WONO_images/img/website-builder/new-layout/cafe.png";
+import CoWorkingImage from "../assets/WONO_images/img/website-builder/new-layout/co-working.png";
+import Hostels from "../assets/WONO_images/img/website-builder/new-layout/hostels.png";
+import CoLivingImage from "../assets/WONO_images/img/website-builder/new-layout/co-living.png";
+import CafeImageLong from "../assets/WONO_images/img/website-builder/new-layout/long/cafe-long.jpeg";
+import CoWorkingImageLong from "../assets/WONO_images/img/website-builder/new-layout/long/co-working-long.jpeg";
+import BoutiqueLong from "../assets/WONO_images/img/website-builder/new-layout/long/boutique-long.jpeg";
+import CoLivingImageLong from "../assets/WONO_images/img/website-builder/new-layout/long/co-living-long.jpeg";
+import Boutique from "../assets/WONO_images/img/website-builder/new-layout/boutique.png";
+import DashboardBooking from "./Dashboard-pages/DashboardBooking";
+import DashboardAsset from "./Dashboard-pages/DashboardAsset";
+import DashboardHR from "./Dashboard-pages/DashboardHR";
+import DashboardTickets from "./Dashboard-pages/DashboardTickets";
+import DashboardVisitor from "./Dashboard-pages/DashboardVisitor";
+import DashboardProducts from "./Dashboard-pages/DashboardProducts";
+import { Canvas } from "@react-three/fiber";
+import { OrbitControls } from "@react-three/drei";
 // import { CustomNextArrow, CustomPrevArrow } from '../components/WebsiteBuilderArrows/CustomArrows'
 import FourCardsComponents from "../components/Four_cardsComponents";
 import WebsiteCafe from "./WebsiteBuilder/WebsiteCafe";
 import WebsiteWorkation from "./WebsiteBuilder/WebsiteWorkation";
 import "../styles/bodyPartners.css";
 import BiznestTestimonial from "../assets/testimonials/BIZ Nest Testimonial.png";
+// import "../styles/bodyLastBanner.css";
 
 const Homepage = () => {
 
@@ -80,7 +82,6 @@ const Homepage = () => {
   const handleImageClick = (id) => {
     setSelectedId(id);
   };
-
 
   const handleRegister = () => {
     navigate("/register");
@@ -218,7 +219,6 @@ const Homepage = () => {
             <div className="">
               <div className="customMargin_top">
                 <div>
-
                   <h2>One Partner Platform,</h2>
                   <h2>Infinite possibilities and opportunities!</h2>
                 </div>
@@ -447,9 +447,9 @@ const Homepage = () => {
                     <h3>
                       “We went from managing 3,000 sq ft to 50,000+ sq ft in the
                       most efficient and seamless manner with tech, processes,
-                      data analytics, customer & employee management and due to an
-                      extraordinary extended team like WoNo which integrated with
-                      us and had no demands!”
+                      data analytics, customer & employee management and due to
+                      an extraordinary extended team like WoNo which integrated
+                      with us and had no demands!”
                     </h3>
                     <br />
                     <br />
@@ -476,18 +476,18 @@ const Homepage = () => {
         </div>
 
         <div className="last-section body-partners-master w-100 ">
-          <div className="pt-5 customMargin">
+          <div className="pt-5 customMargin pb-5">
             <div className="grow-your-business-color p-3">
               <h2>GROW YOUR BUSINESS WITH US</h2>
               <br />
 
               <p>
-                We have you covered across … build website, manage bookings, sets
-                processes, HR support, task management, ticket management,
+                We have you covered across … build website, manage bookings,
+                sets processes, HR support, task management, ticket management,
                 marketing, generating leads, accounting, finance, customer
-                support, fundraising, and any customized requirements for managing
-                your business to grow and become successful shall all be delivered
-                by WoNo.
+                support, fundraising, and any customized requirements for
+                managing your business to grow and become successful shall all
+                be delivered by WoNo.
               </p>
               <div className="partner-button-space">
                 <button
@@ -495,15 +495,11 @@ const Homepage = () => {
                   onClick={handleRegister}>
                   Get Started
                 </button>
-
               </div>
               <div className="">
-                <div className="container my-3">
+                <div className="container ">
                   <div className="row">
-                    {/* <div className="col-lg-4 bg-danger"> */}
-                    <div className="col-lg-12  d-flex custom-justify align-items-center">
-
-                    </div>
+                    <div className="col-lg-12  d-flex custom-justify align-items-center"></div>
                   </div>
                 </div>
               </div>
