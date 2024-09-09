@@ -15,14 +15,13 @@ const FourCardsComponents = () => {
     const navigate = useNavigate()
 
     return (
-        <div className='key-features-master'>
+        <>
             <div className='four-cardsHeaderText'>
                 <p>Explore the Worlds largest Commerce Community</p>
             </div>
+        <div className='key-features-master'>
             <div className='four-cardsContainer' style={{ backgroundColor: "white" }}>
                 <div className="key-features-container">
-
-
                     <div className='card_1 shadow'>
                         <div className='card-body'>
                             <div className='card-icon'>
@@ -32,7 +31,7 @@ const FourCardsComponents = () => {
                             <p className='card-text'>
                                 <div className='Tickmark-text'>
                                     <img src={TickmarkImg} alt='tick-mark'></img>
-                                    Website with Booking Engine
+                                    Website/Booking Engine  
                                 </div>
                                 <div className='Tickmark-text'>
                                     <img src={TickmarkImg} alt='tick-mark'></img>
@@ -44,7 +43,7 @@ const FourCardsComponents = () => {
                                 </div>
                                 <div className='Tickmark-text'>
                                     <img src={TickmarkImg} alt='tick-mark'></img>
-                                    Customer Profile and More
+                                    Customer Profile & more  
                                 </div>
 
                             </p>
@@ -65,7 +64,7 @@ const FourCardsComponents = () => {
                                 </div>
                                 <div className='Tickmark-text'>
                                     <img src={TickmarkImg} alt='tick-mark'></img>
-                                    Cashflow and Projection
+                                    Cashflow & Projections  
                                 </div>
                                 <div className='Tickmark-text'>
                                     <img src={TickmarkImg} alt='tick-mark'></img>
@@ -85,11 +84,11 @@ const FourCardsComponents = () => {
                         <div className='card-icon' style={{width:'55px'}}>
                                 <img src={Customer} alt="customer" />
                             </div>
-                            <h5 className='card-title' style={{fontSize:'13px'}} >CUSTOMER MANAGEMENT SERVICES (CMS)</h5>
+                            <h5 className='card-title' style={{fontSize:'13px'}} >CUSTOMER MANAGEMENT SERVICES</h5>
                             <p className='card-text'>
                                 <div className='Tickmark-text'>
                                     <img src={TickmarkImg} alt='tick-mark'></img>
-                                    Ticket Raising
+                                    Ticket Raising & Logs
                                 </div>
                                 <div className='Tickmark-text'>
                                     <img src={TickmarkImg} alt='tick-mark'></img>
@@ -98,6 +97,10 @@ const FourCardsComponents = () => {
                                 <div className='Tickmark-text'>
                                     <img src={TickmarkImg} alt='tick-mark'></img>
                                     Internal Communication & Logs
+                                </div>
+                                <div className='Tickmark-text'>
+                                    <img src={TickmarkImg} alt='tick-mark'></img>
+                                    Customer Management & more 
                                 </div>
 
                             </p>
@@ -116,7 +119,7 @@ const FourCardsComponents = () => {
                             </div>
                             <div className='Tickmark-text'>
                                 <img src={TickmarkImg} alt='tick-mark'></img> 
-                                    Full Data analysis
+                                Full Data Analysis  
                             </div>
                             <div className='Tickmark-text'>
                                 <img src={TickmarkImg} alt='tick-mark'></img>
@@ -183,11 +186,15 @@ const FourCardsComponents = () => {
                     </div>
 
                 </div>
-            <div className="key-features-link-space">
-                <span style={{cursor:'pointer'}} onClick={()=> navigate('/services')} className="key-features-link">View All</span>
-            </div>
             </div>
         </div>
+            <div className="key-features-link-space">
+                <span style={{cursor:'pointer'}} onClick={()=> {
+                    navigate('/services')
+                    window.scrollTo({ top: 0, behavior: 'smooth' })
+                    }} className="key-features-link">View All</span>
+            </div>
+        </>
     )
 }
 

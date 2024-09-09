@@ -35,6 +35,10 @@
     font-family: Popins-Black;
     src: url('../assets/WONO_images/img/fonts/Poppins-Black.ttf');
 }
+@font-face {
+    font-family: Mistral;
+    src: url('../assets/WONO_images/img/fonts/MISTRAL.TTF');
+}
 
 
 .home-page-container {
@@ -96,6 +100,7 @@
     font-family: Popins-Regular;
     color: white;
     margin-bottom: 2.5rem;
+    padding: 0.5rem;
 }
 .home-section-buttons{
     display:block;
@@ -105,9 +110,9 @@
 .home-section-register-button{
     width: 75%;
     margin: 0;
-    background-color: yellow;
+    background-color: rgb(13, 110, 253);
     padding: 0.5rem 2rem 0.5rem 2rem;
-    color: black;
+    color: white;
     border-radius: 20px;
     border: none;
     font-family: Popins-Regular;
@@ -130,7 +135,7 @@
 .home-main-title {
     color: black;
     font-size: 6rem;
-    font-family: Popins-Medium;
+    font-family: Mistral;
     margin-top: 3rem;
     /* padding: 6rem 6rem 1rem 6rem; */
 }
@@ -139,7 +144,7 @@
 .O {
     color: rgb(10, 169, 239);
     display: contents;
-    font-family: BAUHS93;
+    font-family: Mistral;
 }
 
 .n {
@@ -184,7 +189,8 @@
         /* padding: 0rem 2rem 2rem 2rem; */
         color: black;
         font-size: 2rem;
-        font-family: Popins-Medium;
+        font-family: Mistral;
+        margin-top: 1rem;
     }
 
     .home-section-buttons {
@@ -196,7 +202,7 @@
     .home-section-register-button{
         width: 100%;
         margin: 0;
-        background-color: yellow;
+        background-color: rgb(10, 169, 239);
         padding: 0.5rem 2rem 0.5rem 2rem;
         color: black;
         border-radius: 5px;
@@ -741,6 +747,7 @@
 
 .website-container-master {
     height: 100%;
+   
 }
 .website-container-master > *{
     font-family: Popins-Regular;
@@ -748,7 +755,7 @@
 
 .website-panel-container {
     padding: 4rem 7.5rem 4rem 7.5rem;
-    background-color: white;
+    background-color: #deeeff !important;
     color: black;
     margin: 2rem 0rem 0 0;
 
@@ -977,6 +984,10 @@
 
 /* testimonials */
 
+.testimonial-section {
+    background-color: #cae4ff !important;
+    margin-top:  0 !important;
+}
 .testimonial-section >*{
     font-family: Popins-Medium;
 }
