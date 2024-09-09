@@ -955,9 +955,18 @@
 .testimonial-section {
     background-color: #cae4ff !important;
     margin-top:  0 !important;
+    padding: 1rem 7rem;
 }
 .testimonial-section >*{
     font-family: Popins-Medium;
+}
+
+@media (max-width:768px) {
+    .testimonial-section {
+        background-color: #cae4ff !important;
+        margin-top:  0 !important;
+        padding: 1rem;
+    } 
 }
 
 
