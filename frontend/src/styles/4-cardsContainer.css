@@ -12,7 +12,7 @@
     flex-direction: column;
     overflow:scroll;
     padding-left: 7rem;
-    padding-right: 7rem;
+    /* padding-right: 7rem; */
     width: 100%;
     -ms-overflow-style: none;
 }

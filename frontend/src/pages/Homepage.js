@@ -376,59 +376,14 @@ const Homepage = () => {
               <div className={`website-panel-right ${selectedId ? 'modal-open' : ''}`}>
                 <div className="website-panel-content">
                   {webimages.map((image) => (
-                    <motion.div
+                    <div
                       className="template-preview-container"
                       key={image.id}
-                      layoutId={image.id}
-                      onClick={() => handleImageClick(image.id)}
-                      whileHover={{ scale: 1.05 }}
                     >
-                      <motion.img src={image.src} alt={image.alt} />
-                    </motion.div>
+                      <img src={image.src} alt={image.alt} />
+                    </div>
                   ))}
                 </div>
-
-                <AnimatePresence>
-                  {selectedId && (
-                    <>
-                      {/* Backdrop Layer */}
-                      <motion.div
-                        className="modal-backdrop"
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 0.5 }}
-                        exit={{ opacity: 0 }}
-                      />
-                      <motion.div
-                        layoutId={selectedId}
-                        className="selected-image-modal"
-                        initial={{ opacity: 0, scale: 0.8 }} // Start smaller with opacity 0
-                        animate={{ opacity: 1, scale: 1 }}  // Animate to full size and full opacity
-                        exit={{ opacity: 0, scale: 0.8 }}    // Shrink and fade out on exit
-                        transition={{ duration: 0.3 }}       // Adjust timing for smoother transition
-                      >
-                        <div
-                          style={{
-                            display: 'flex',
-                            alignItems: 'center',
-                            justifyContent: 'end',
-                            width: '100%',
-                          }}
-                        >
-                          <motion.button
-                            className="close-button"
-                            onClick={() => setSelectedId(null)}
-                          >
-                            Close
-                          </motion.button>
-                        </div>
-                        <motion.img
-                          src={webimagesClicked.find((img) => img.id === selectedId).src}
-                          alt={webimagesClicked.find((img) => img.id === selectedId).alt}
-                        />
-                      </motion.div>
-                    </>
-                  )}
-                </AnimatePresence>
               </div>
             </div>
           </div>

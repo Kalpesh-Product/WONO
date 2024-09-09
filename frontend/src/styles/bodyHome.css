@@ -210,6 +210,27 @@
         font-family: Popins-Regular;
         cursor: pointer;
     }
+    .home-section-register-button{
+
+        width: 100%;
+
+        margin: 0;
+
+        background-color: yellow;
+
+        padding: 0.5rem 2rem 0.5rem 2rem;
+
+        color: black;
+
+        border-radius: 5px;
+
+        border: none;
+
+        font-family: Popins-Regular;
+
+        cursor: pointer;
+
+    }
 
     .background-div {
         height: 100%;
@@ -869,59 +890,6 @@
     /* Chrome, Safari, and Opera */
 }
 
-.modal-backdrop {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: black;
-    z-index: 999; /* Ensures it covers the background content */
-    pointer-events: none; /* Makes sure only the modal is interactive */
-  }
-.selected-image-modal {
-    position: fixed;
-    top: 5%;
-    left: 5%;
-    /* transform: translate(-50%, -50%); */
-    max-width: 90vw; 
-    max-height: 90%; 
-    z-index: 1000;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: rgba(255, 255, 255, 0.9); /* Optional: a subtle background */
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    overflow-y: scroll;
-    pointer-events: auto; /* Modal should be interactive */
-  }
-  
-  .selected-image-modal img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    object-position: top;
-  }
-  .modal-open {
-    pointer-events: none; /* Disable pointer events on the rest of the page */
-  }
-  
-  .modal-open .selected-image-modal {
-    pointer-events: auto; /* Enable pointer events on the modal */
-  }
-  
-  .close-button {
-    /* margin: 2rem 0 0 0 ; */
-    padding: 5px 5px;
-    background-color: #333;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
 
 @media (max-width:768px) {
     .website-container-master {

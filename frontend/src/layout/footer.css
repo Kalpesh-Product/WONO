@@ -9,6 +9,7 @@ footer {
 .footer-master{
   display: flex;
   justify-content: space-between;
+  padding: 0 7rem;
 }
 
 .footer-container a {
@@ -64,6 +65,7 @@ footer {
   }
   .footer-master{
     flex-wrap: wrap;
+    padding: 0 1rem;
   }
 
   .footer-section-1 {
