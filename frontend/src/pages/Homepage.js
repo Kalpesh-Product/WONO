@@ -39,24 +39,22 @@ import BiznestTestimonial from "../assets/testimonials/BIZ Nest Testimonial.png"
 // import "../styles/bodyLastBanner.css";
 
 const Homepage = () => {
-
-
   const menuTitles = {
-    'dashboard-booking': 'Booking engine',
-    'dashboard-tickets': 'Ticket Management',
-    'dashboard-hr': 'HR Management',
+    "dashboard-booking": "Booking engine",
+    "dashboard-tickets": "Ticket Management",
+    "dashboard-hr": "HR Management",
   };
   const website_menus = {
-    'website-cafe': 'Cafe',
-    'website-workation': 'Workation',
+    "website-cafe": "Cafe",
+    "website-workation": "Workation",
   };
   const containerRef = useRef(null);
   const navigate = useNavigate();
   // const [collapsed, setCollapsed] = useState(false);
   const firstBackendKey = Object.keys(menuTitles)[0];
-  const [selectedItem, setSelectedItem] = useState('dashboard-booking');
+  const [selectedItem, setSelectedItem] = useState("dashboard-booking");
   const firstWebKey = Object.keys(website_menus)[0];
-  const [selectedWeb, setSelectedWeb] = useState('website-cafe');
+  const [selectedWeb, setSelectedWeb] = useState("website-cafe");
   const [selectedMenuItem, setSelectedMenuItem] = useState(firstBackendKey);
   const [selectedMenu, setSelectedMenu] = useState(firstWebKey);
   const [selectedId, setSelectedId] = useState(null);
@@ -65,17 +63,17 @@ const Homepage = () => {
 
   const images = [Carousel1];
   const webimages = [
-    { id: 'cafe', src: CafeImage, alt: 'Cafe Image' },
-    { id: 'coworking', src: CoWorkingImage, alt: 'CoWorking Image' },
-    { id: 'coliving', src: CoLivingImage, alt: 'CoLiving Image' },
-    { id: 'boutique', src: Boutique, alt: 'Boutique Image' },
+    { id: "cafe", src: CafeImage, alt: "Cafe Image" },
+    { id: "coworking", src: CoWorkingImage, alt: "CoWorking Image" },
+    { id: "coliving", src: CoLivingImage, alt: "CoLiving Image" },
+    { id: "boutique", src: Boutique, alt: "Boutique Image" },
   ];
 
   const webimagesClicked = [
-    { id: 'cafe', src: CafeImageLong, alt: 'Cafe Image' },
-    { id: 'coworking', src: CoWorkingImageLong, alt: 'CoWorking Image' },
-    { id: 'coliving', src: CoLivingImageLong, alt: 'CoLiving Image' },
-    { id: 'boutique', src: BoutiqueLong, alt: 'Boutique Image' },
+    { id: "cafe", src: CafeImageLong, alt: "Cafe Image" },
+    { id: "coworking", src: CoWorkingImageLong, alt: "CoWorking Image" },
+    { id: "coliving", src: CoLivingImageLong, alt: "CoLiving Image" },
+    { id: "boutique", src: BoutiqueLong, alt: "Boutique Image" },
   ];
 
   //for website section
@@ -89,17 +87,17 @@ const Homepage = () => {
 
   const renderContent = () => {
     switch (selectedItem) {
-      case 'dashboard-booking':
+      case "dashboard-booking":
         return <DashboardBooking />;
-      case 'dashboard-products':
+      case "dashboard-products":
         return <DashboardProducts />;
-      case 'dashboard-tickets':
+      case "dashboard-tickets":
         return <DashboardTickets />;
-      case 'dashboard-hr':
+      case "dashboard-hr":
         return <DashboardHR />;
-      case 'dashboard-visitor':
+      case "dashboard-visitor":
         return <DashboardVisitor />;
-      case 'dashboard-asset':
+      case "dashboard-asset":
         return <DashboardAsset />;
       default:
         return <DashboardBooking />;
@@ -107,9 +105,9 @@ const Homepage = () => {
   };
   const renderWebContent = () => {
     switch (selectedWeb) {
-      case 'website-cafe':
+      case "website-cafe":
         return <WebsiteCafe />;
-      case 'website-workation':
+      case "website-workation":
         return <WebsiteWorkation />;
       default:
         return <WebsiteWorkation />;
@@ -117,53 +115,54 @@ const Homepage = () => {
   };
   const handleMenuSelect = (key) => {
     setSelectedItem(key);
-    setSelectedMenuItem(key)
+    setSelectedMenuItem(key);
     if (containerRef.current) {
-      containerRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      containerRef.current.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
     }
   };
   const handleWebMenuSelect = (key) => {
-    setSelectedWeb(key);  // Set the key as the selected web content
+    setSelectedWeb(key); // Set the key as the selected web content
     setSelectedMenu(key); // Highlight the selected menu item
-
   };
-
-
 
   // mobile screen for globe responsiveness
   const ismobile = window.innerWidth < 769;
 
   return (
-    <div className='master-container'>
-      <div className='home-section'>
+    <div className="master-container">
+      <div className="home-section">
         <div className="home-page-container">
           <div className="background-div">
             <div>
-              <img
-                src={images[0]}
-                alt={`Slide`}
-                className="background-image"
-              />
+              <img src={images[0]} alt={`Slide`} className="background-image" />
             </div>
             <div className="black-overlay"></div>
           </div>
           <div className="first-section-grid-item-1">
-            <h2 className='home-main-title'>
-              <span className='w'> W</span><span className='O'>o</span>rld
-              <span className='n'>N</span><span className='O'>o</span>mads<br />
+            <h2 className="home-main-title">
+              <span className="w"> W</span>
+              <span className="O">o</span>rld
+              <span className="n">N</span>
+              <span className="O">o</span>mads
+              <br />
             </h2>
-
           </div>
           <div className="first-section-grid-item-2">
-            <span className='home-desc'>
-              We support Nomad Businesses for FREE!
-              World’s Largest b2b SaaS platform which supports Nomad Lifestyle across 25+ countries !
+            <span className="home-desc">
+              We support Nomad Businesses for FREE! World’s Largest b2b SaaS
+              platform which supports Nomad Lifestyle across 25+ countries !
             </span>
-            <div className='home-section-buttons'>
+            <div className="home-section-buttons">
               <div>
-                <button className='home-section-register-button' onClick={handleRegister}>BUSINESS SIGN UP</button>
+                <button
+                  className="home-section-register-button"
+                  onClick={handleRegister}>
+                  BUSINESS SIGN UP
+                </button>
               </div>
-
             </div>
           </div>
         </div>
@@ -208,13 +207,13 @@ const Homepage = () => {
             </div>
           </div>
         </div>
-        <div
-          className="four-cards-section">
+        <div className="four-cards-section">
           <FourCardsComponents />
         </div>
 
-        <div className="partners-section body-partners-master">
-          <div className="mt-5">
+        <div className="partners-section body-partners-master ">
+          {/* <div className="mt-5 container"> */}
+          <div className="m-0 container  w-100">
             {/* First div (1/2) */}
             <div className="">
               <div className="customMargin_top">
@@ -226,8 +225,9 @@ const Homepage = () => {
             </div>
             <br />
             {/* <div className="bg-info pt-3 m-5"> */}
-            <div className="container  text-left">
-              <div className="row">
+            {/* <div className="container  text-left customMargin_top"> */}
+            <div className="  text-left customMargin_top ">
+              <div className="row  border-bottom border-dark border-3 pb-5">
                 <div className="col-lg-4 col-sm-12 col-xs-12 col-md-6 text-left">
                   <div className="m-1 border-top border-dark border-3">
                     <br />
@@ -265,32 +265,34 @@ const Homepage = () => {
                     </div>
                   </div>
                 </div>
+
+                <div className="">
+                  <div className="container my-3 ">
+                    {/* <div className="row  border-bottom border-dark border-3 pb-5 bg-primary"> */}
+                    <div className="row   ">
+                      <div className="col-lg-4"></div>
+                      <div className="col-lg-4"></div>
+                      {/* <div className="col-lg-4 bg-danger"> */}
+                      <div className="col-lg-4  d-flex justify-content-center align-items-center">
+                        <div className="">
+                          <button
+                            className="get-started-submit-button "
+                            onClick={handleRegister}>
+                            Get Started
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <br />
+                    <br />
+                  </div>
+                </div>
               </div>
               {/* <div className='four-cards-section' style={{ padding: "0", marginBottom: "-60px", marginTop: "20px" }}>
                 <FourCardsComponents />
             </div> */}
             </div>
             {/* </div> */}
-            <div className="">
-              <div className="container my-3">
-                <div className="row  border-bottom border-dark border-3 pb-5">
-                  <div className="col-lg-4"></div>
-                  <div className="col-lg-4"></div>
-                  {/* <div className="col-lg-4 bg-danger"> */}
-                  <div className="col-lg-4  d-flex justify-content-center align-items-center">
-                    <div className="">
-                      <button
-                        className="get-started-submit-button "
-                        onClick={handleRegister}>
-                        Get Started
-                      </button>
-                    </div>
-                  </div>
-                </div>
-                <br />
-                <br />
-              </div>
-            </div>
           </div>
           <br />
           <br />
@@ -343,14 +345,21 @@ const Homepage = () => {
         </div>
       </div> */}
 
-        <div className="website-container-master" style={{ backgroundColor: 'black' }}>
+        <div
+          className="website-container-master"
+          style={{ backgroundColor: "black" }}>
           <div className="website-panel-container">
             <div className="website-panel-header">
-
               <h2>SELF-SERVE TRANSACTIONAL WEBSITE: FULL STACK!</h2>
-              <h3>Tech that completes your business and has ZERO dependency with NO COST!</h3>
-              <p>Free customizable website templates which are strategically tailored for managing Lifestyle Businesses like Co-Working, Co-Living, Hostels, Boutique Properties, Cafes
-                etc</p>
+              <h3>
+                Tech that completes your business and has ZERO dependency with
+                NO COST!
+              </h3>
+              <p>
+                Free customizable website templates which are strategically
+                tailored for managing Lifestyle Businesses like Co-Working,
+                Co-Living, Hostels, Boutique Properties, Cafes etc
+              </p>
             </div>
             <div className="website-panel">
               {/* <div className="website-panel-sidebar">
@@ -373,7 +382,10 @@ const Homepage = () => {
                             </Nav>
 
                         </div> */}
-              <div className={`website-panel-right ${selectedId ? 'modal-open' : ''}`}>
+              <div
+                className={`website-panel-right ${
+                  selectedId ? "modal-open" : ""
+                }`}>
                 <div className="website-panel-content">
                   {webimages.map((image) => (
                     <div
