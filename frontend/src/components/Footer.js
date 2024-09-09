@@ -15,7 +15,7 @@ const Footer = () => {
   return (
     <>
       <footer className="black-background text-light py-4">
-        <div className="footer-container">
+        <div className="footer-master">
           <div className="footer-section-1">
             <img src={WonoLogo} alt="logo" />
             <span>
@@ -50,30 +50,50 @@ const Footer = () => {
               />
             </div>
           </div>
+        <div className="footer-container">
 
-          <div className="footer-section-2">
-            <h5>Home</h5>
-            <h5>Services</h5>
-            <h5>Careers</h5>
+          <div className="footer-section-3">
+            <h5>SaaS</h5>
+            <h5>Leads</h5>
+            <h5>Themes</h5>
           </div>
 
           <div className="footer-section-3">
-            <h5>Contact</h5>
+            <h5>Accounting</h5>
+            <h5>Projections</h5>
+            <h5>Capital</h5>
+          </div>
+          <div className="footer-section-3">
+            <h5>About</h5>
+            <Link
+              to={"/career"}
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+              Careers
+            </Link>
+            <Link
+              to={"/contact"}
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+              Contact
+            </Link>
+          </div>
+          <div className="footer-section-3">
+            <h5>FAQs</h5>
             <Link
               to={"/privacy"}
               onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
-              Privacy policy
+              Privacy
             </Link>
             <Link
               to={"/termsandconditions"}
               onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
-              Terms and Condtions
+              T&C
             </Link>
           </div>
         </div>
+        </div>
 
         <div className="mt-3 py-5">
-          <div className="text-center">
+          <div className="text-center px-1">
             <p>
               &copy; Copyright 2024-25 by WONOCO PRIVATE LIMITED - SINGAPORE.
               All rights reserved.

@@ -149,8 +149,8 @@ const Homepage = () => {
           </div>
           <div className="first-section-grid-item-1">
             <h2 className='home-main-title'>
-              <span className='w'> W</span><span className='O'>O</span>RLD
-              <span className='n'>N</span><span className='O'>O</span>MADS<br />
+              <span className='w'> W</span><span className='O'>o</span>rld
+              <span className='n'>N</span><span className='O'>o</span>mads<br />
             </h2>
 
           </div>
@@ -435,7 +435,7 @@ const Homepage = () => {
         </div>
 
         <div className="testimonial-section  body-partners-master">
-          <div className=" mt-3">
+          <div className=" pt-3">
             <br />
             <br />
             <br />
