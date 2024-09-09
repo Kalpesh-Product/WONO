@@ -103,6 +103,7 @@
     .custom-justify {
         justify-content: flex-start;
     }
+
 }
 
 .get-started-submit-button {
@@ -142,3 +143,8 @@
     background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
     width: 100%;
 } */
+
+.container,
+.row {
+    max-width: 100%;
+}
