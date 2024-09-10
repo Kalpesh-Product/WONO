@@ -186,19 +186,19 @@ const RotatingGlobe = () => {
     args={[2, 1]}
      // Adjust dimensions to match the text size
 >
-    <meshBasicMaterial color="white" opacity={0.8} transparent/>
+    <meshBasicMaterial color="white" />
 </Plane>
 <Text
                 position={srilankaPosition.map((coord, index) => coord * 1.1)}
-                fontSize={0.5}
+                fontSize={0.2}
                 color="black"
                 anchorX="center"
                 anchorY="middle"
                 rotation={srilankaLabelPosition}
-                fontStyle='bold'
-                fontWeight='600'
+                 fontWeight='bold'
+                 
             >
-               Sri Lanka
+               SRI LANKA
             </Text>
 
             <mesh position={goaPosition}>
@@ -211,19 +211,18 @@ const RotatingGlobe = () => {
     args={[2, 1]}
      // Adjust dimensions to match the text size
 >
-    <meshBasicMaterial color="white" opacity={0.8} transparent/>
+    <meshBasicMaterial color="white" />
 </Plane>
 <Text
                 position={goaPosition.map((coord, index) => coord * 1.1)}
-                fontSize={0.5}
+                fontSize={0.2}
                 color="black"
                 anchorX="center"
                 anchorY="middle"
                 rotation={goaLabelPosition}
-                fontStyle='bold'
-                fontWeight='600'
+                 fontWeight='bold'
             >
-               Goa
+               GOA
             </Text>
 
             {/* Nepal */}
@@ -237,19 +236,20 @@ const RotatingGlobe = () => {
     args={[2, 1]}
      // Adjust dimensions to match the text size
 >
-    <meshBasicMaterial color="white" opacity={0.8} transparent/>
+    <meshBasicMaterial color="white" />
 </Plane>
 <Text
                 position={nepalPosition.map((coord, index) => coord * 1.1)}
-                fontSize={0.5}
+                fontSize={0.2}
                 color="black"
                 anchorX="center"
                 anchorY="middle"
                 rotation={nepalLabelPosition}
-                fontStyle='bold'
-                fontWeight='600'
+                fontWeight='bold'
+                
+                
             >
-               Nepal
+               NEPAL
   </Text>
   {/* Vietnam */}
   <mesh position={costaRicaPosition}>
@@ -259,22 +259,21 @@ const RotatingGlobe = () => {
     <Plane
     position={[...costaRicaPosition.map((coord) => coord * 1.1), -0.01]} // Slightly behind the text
     rotation={costaRicaLabelPosition}
-    args={[3, 1]}
+    args={[2, 1]}
      // Adjust dimensions to match the text size
 >
-    <meshBasicMaterial color="white" opacity={0.8} transparent/>
+    <meshBasicMaterial color="white" />
 </Plane>
 <Text
                 position={costaRicaPosition.map((coord, index) => coord * 1.1)}
-                fontSize={0.5}
+                fontSize={0.2}
                 color="black"
                 anchorX="center"
                 anchorY="middle"
                 rotation={costaRicaLabelPosition}
-                fontStyle='bold'
-                fontWeight='600'
+                 fontWeight='bold'
             >
-               Costa Rica
+               COSTA RICA
   </Text>
 
   <mesh position={dubaiPosition}>
@@ -287,19 +286,19 @@ const RotatingGlobe = () => {
     args={[2, 1]}
      // Adjust dimensions to match the text size
 >
-    <meshBasicMaterial color="white" opacity={0.8} transparent/>
+    <meshBasicMaterial color="white" />
 </Plane>
 <Text
                 position={dubaiPosition.map((coord, index) => coord * 1.1)}
-                fontSize={0.5}
+                fontSize={0.2}
                 color="black"
                 anchorX="center"
                 anchorY="middle"
                 rotation={dubaiLabelPosition}
-                fontStyle='bold'
-                fontWeight='600'
+                 fontWeight='bold'
+                 
             >
-               dubai
+               DUBAI
   </Text>
 
   <mesh position={goaPosition}>
@@ -312,19 +311,18 @@ const RotatingGlobe = () => {
     args={[2, 1]}
      // Adjust dimensions to match the text size
 >
-    <meshBasicMaterial color="white" opacity={0.8} transparent/>
+    <meshBasicMaterial color="white"/>
 </Plane>
 <Text
                 position={goaPosition.map((coord, index) => coord * 1.1)}
-                fontSize={0.5}
+                fontSize={0.2}
                 color="black"
                 anchorX="center"
                 anchorY="middle"
                 rotation={goaLabelPosition}
-                fontStyle='bold'
-                fontWeight='600'
+                 fontWeight='bold'
             >
-               Goa
+               GOA
             </Text>
 
             {/* Nepal */}
@@ -338,19 +336,18 @@ const RotatingGlobe = () => {
     args={[2, 1]}
      // Adjust dimensions to match the text size
 >
-    <meshBasicMaterial color="white" opacity={0.8} transparent/>
+    <meshBasicMaterial color="white"/>
 </Plane>
 <Text
                 position={nepalPosition.map((coord, index) => coord * 1.1)}
-                fontSize={0.5}
+                fontSize={0.2}
                 color="black"
                 anchorX="center"
                 anchorY="middle"
                 rotation={nepalLabelPosition}
-                fontStyle='bold'
-                fontWeight='600'
+                 fontWeight='bold'
             >
-               Nepal
+               NEPAL
   </Text>
   <mesh position={portugalPosition}>
                 <sphereGeometry args={[0.1, 32, 32]} />
@@ -362,19 +359,18 @@ const RotatingGlobe = () => {
     args={[2, 1]}
      // Adjust dimensions to match the text size
 >
-    <meshBasicMaterial color="white" opacity={0.8} transparent/>
+    <meshBasicMaterial color="white" />
 </Plane>
 <Text
                 position={portugalPosition.map((coord, index) => coord * 1.1)}
-                fontSize={0.5}
+                fontSize={0.2}
                 color="black"
                 anchorX="center"
                 anchorY="middle"
                 rotation={portugalLabelPosition}
-                fontStyle='bold'
-                fontWeight='600'
+                 fontWeight='bold'
             >
-              Portugal
+              PORTUGAL
             </Text>
             <mesh position={hungaryPosition}>
                 <sphereGeometry args={[0.1, 32, 32]} />
@@ -386,19 +382,18 @@ const RotatingGlobe = () => {
     args={[2, 1]}
      // Adjust dimensions to match the text size
 >
-    <meshBasicMaterial color="white" opacity={0.8} transparent/>
+    <meshBasicMaterial color="white" />
 </Plane>
 <Text
                 position={hungaryPosition.map((coord, index) => coord * 1.1)}
-                fontSize={0.5}
+                fontSize={0.2}
                 color="black"
                 anchorX="center"
                 anchorY="middle"
                 rotation={hungaryLabelPosition}
-                fontStyle='bold'
-                fontWeight='600'
+                 fontWeight='bold'
             >
-              Hungary
+              HUNGARY
             </Text>
             <mesh position={parisPosition}>
                 <sphereGeometry args={[0.1, 32, 32]} />
@@ -410,19 +405,18 @@ const RotatingGlobe = () => {
     args={[2, 1]}
      // Adjust dimensions to match the text size
 >
-    <meshBasicMaterial color="white" opacity={0.8} transparent/>
+    <meshBasicMaterial color="white" />
 </Plane>
 <Text
                 position={parisPosition.map((coord, index) => coord * 1.1)}
-                fontSize={0.5}
+                fontSize={0.2}
                 color="black"
                 anchorX="center"
                 anchorY="middle"
                 rotation={parisLabelPosition}
-                fontStyle='bold'
-                fontWeight='600'
+                 fontWeight='bold'
             >
-              Paris
+              PARIS
             </Text>
             <mesh position={greecePosition}>
                 <sphereGeometry args={[0.1, 32, 32]} />
@@ -434,19 +428,18 @@ const RotatingGlobe = () => {
     args={[2, 1]}
      // Adjust dimensions to match the text size
 >
-    <meshBasicMaterial color="white" opacity={0.8} transparent/>
+    <meshBasicMaterial color="white" />
 </Plane>
 <Text
                 position={greecePosition.map((coord, index) => coord * 1.1)}
-                fontSize={0.5}
+                fontSize={0.2}
                 color="black"
                 anchorX="center"
                 anchorY="middle"
                 rotation={greeceLabelPosition}
-                fontStyle='bold'
-                fontWeight='600'
+                 fontWeight='bold'
             >
-              Greece
+              GREECE
             </Text>
             <mesh position={africaPosition}>
                 <sphereGeometry args={[0.1, 32, 32]} />
@@ -455,22 +448,21 @@ const RotatingGlobe = () => {
     <Plane
     position={[...africaPosition.map((coord) => coord * 1.1), -0.01]} // Slightly behind the text
     rotation={africaLabelPosition}
-    args={[3, 1]}
+    args={[2, 1]}
      // Adjust dimensions to match the text size
 >
-    <meshBasicMaterial color="white" opacity={0.8} transparent/>
+    <meshBasicMaterial color="white" />
 </Plane>
 <Text
                 position={africaPosition.map((coord, index) => coord * 1.1)}
-                fontSize={0.5}
+                fontSize={0.2}
                 color="black"
                 anchorX="center"
                 anchorY="middle"
                 rotation={africaLabelPosition}
-                fontStyle='bold'
-                fontWeight='600'
+                 fontWeight='bold'
             >
-              South Africa
+              SOUTH AFRICA
             </Text>
             <mesh position={norwayPosition}>
                 <sphereGeometry args={[0.1, 32, 32]} />
@@ -479,22 +471,21 @@ const RotatingGlobe = () => {
     <Plane
     position={[...norwayPosition.map((coord) => coord * 1.1), -0.01]} // Slightly behind the text
     rotation={norwayLabelPosition}
-    args={[3, 1]}
+    args={[2, 1]}
      // Adjust dimensions to match the text size
 >
-    <meshBasicMaterial color="white" opacity={0.8} transparent/>
+    <meshBasicMaterial color="white" />
 </Plane>
 <Text
                 position={norwayPosition.map((coord, index) => coord * 1.1)}
-                fontSize={0.5}
+                fontSize={0.2}
                 color="black"
                 anchorX="center"
                 anchorY="middle"
                 rotation={norwayLabelPosition}
-                fontStyle='bold'
-                fontWeight='600'
+                 fontWeight='bold'
             >
-              Norway
+              NORWAY
             </Text>
             <mesh position={estoniaPosition}>
                 <sphereGeometry args={[0.1, 32, 32]} />
@@ -503,22 +494,21 @@ const RotatingGlobe = () => {
     <Plane
     position={[...estoniaPosition.map((coord) => coord * 1.1), -0.01]} // Slightly behind the text
     rotation={estoniaLabelPosition}
-    args={[3, 1]}
+    args={[2, 1]}
      // Adjust dimensions to match the text size
 >
-    <meshBasicMaterial color="white" opacity={0.8} transparent/>
+    <meshBasicMaterial color="white" />
 </Plane>
 <Text
                 position={estoniaPosition.map((coord, index) => coord * 1.1)}
-                fontSize={0.5}
+                fontSize={0.2}
                 color="black"
                 anchorX="center"
                 anchorY="middle"
                 rotation={estoniaLabelPosition}
-                fontStyle='bold'
-                fontWeight='600'
+                 fontWeight='bold'
             >
-              Estonia
+              ESTONIA
             </Text>
             <mesh position={baliPosition}>
                 <sphereGeometry args={[0.1, 32, 32]} />
@@ -527,22 +517,21 @@ const RotatingGlobe = () => {
     <Plane
     position={[...baliPosition.map((coord) => coord * 1.1), -0.01]} // Slightly behind the text
     rotation={baliLabelPosition}
-    args={[3, 1]}
+    args={[2, 1]}
      // Adjust dimensions to match the text size
 >
-    <meshBasicMaterial color="white" opacity={0.8} transparent/>
+    <meshBasicMaterial color="white" />
 </Plane>
 <Text
                 position={baliPosition.map((coord, index) => coord * 1.1)}
-                fontSize={0.5}
+                fontSize={0.2}
                 color="black"
                 anchorX="center"
                 anchorY="middle"
                 rotation={baliLabelPosition}
-                fontStyle='bold'
-                fontWeight='600'
+                 fontWeight='bold'
             >
-              Bali
+              BALI
             </Text>
             <mesh position={vietnamPosition}>
                 <sphereGeometry args={[0.1, 32, 32]} />
@@ -551,22 +540,21 @@ const RotatingGlobe = () => {
     <Plane
     position={[...vietnamPosition.map((coord) => coord * 1.1), -0.01]} // Slightly behind the text
     rotation={vietnamLabelPosition}
-    args={[3, 1]}
+    args={[2, 1]}
      // Adjust dimensions to match the text size
 >
-    <meshBasicMaterial color="white" opacity={0.8} transparent/>
+    <meshBasicMaterial color="white" />
 </Plane>
 <Text
                 position={vietnamPosition.map((coord, index) => coord * 1.1)}
-                fontSize={0.5}
+                fontSize={0.2}
                 color="black"
                 anchorX="center"
                 anchorY="middle"
                 rotation={vietnamLabelPosition}
-                fontStyle='bold'
-                fontWeight='600'
+                fontWeight='bold'
             >
-              Vietnam
+              VIETNAM
             </Text>
             <mesh position={bankokPosition}>
                 <sphereGeometry args={[0.1, 32, 32]} />
@@ -575,25 +563,22 @@ const RotatingGlobe = () => {
     <Plane
     position={[...bankokPosition.map((coord) => coord * 1.1), -0.01]} // Slightly behind the text
     rotation={bankokLabelPosition}
-    args={[3, 1]}
+    args={[2, 1]}
      // Adjust dimensions to match the text size
 >
-    <meshBasicMaterial color="white" opacity={0.8} transparent/>
+    <meshBasicMaterial color="white" />
 </Plane>
 <Text
                 position={bankokPosition.map((coord, index) => coord * 1.1)}
-                fontSize={0.5}
+                fontSize={0.2}
                 color="black"
                 anchorX="center"
                 anchorY="middle"
                 rotation={bankokLabelPosition}
-                fontStyle='bold'
-                fontWeight='600'
+                fontWeight='bold'
             >
-              Bangkok
+              BANKOK
             </Text>
-
-
   </mesh>
   
 

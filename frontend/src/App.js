@@ -48,7 +48,7 @@ function App() {
       <Route path='/privacy' element={<PrivacyAndPolicy/>}/>
       <Route path='/testing' element={<TestingPage/>}/>
       <Route path='/themes' element={<Themes/>}/>
-      
+      <Route path='/capital' element={<Capital/>}/>
      </Routes>
     <AppFooter />
     </UserProvider>

@@ -1,0 +1,74 @@
+@font-face {
+    font-family: Popins-Medium;
+    src: url('../assets/WONO_images/img/fonts/Poppins-Medium.ttf');
+}
+
+@font-face {
+    font-family: Popins-Regular;
+    src: url('../assets/WONO_images/img/fonts/Poppins-Regular.ttf');
+}
+
+@font-face {
+    font-family: Popins-Black;
+    src: url('../assets/WONO_images/img/fonts/Poppins-Black.ttf');
+}
+
+.headingContainer{
+    
+    height: 350px;
+    position: relative;
+    margin-top: 30px;
+    margin-left: 80px;
+    margin-right: 80px;
+}
+.capital-heading{
+    width: 100%;
+    text-align: center;
+    padding-top: 5%;
+    padding-left: 30%;
+    padding-right: 30%;
+    position: absolute;
+    font-family:Popins;
+}
+.connect-with-us-btn{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 200px;
+    height: 50px;
+    background-color: black;
+    color: white;
+
+}
+.capital-cards-section{
+    background-color: black;
+    padding-left: 10%;
+    padding-right: 20%;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+.cards-with-text h3{
+    color: white;
+    font-size: 20px;
+    font-family: Popins;
+}
+.cards-with-text p{
+    color: white;
+    font-family: Popins;
+}
+.cards-with-text p span{
+    color: antiquewhite;
+}
+
+.capital-img img{
+    width: 300px;
+    border-radius: 5px;
+}
+.plus-icon{
+    color: white;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    
+}
