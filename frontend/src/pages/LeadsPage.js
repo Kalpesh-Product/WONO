@@ -45,8 +45,20 @@ import TickmarkImg from "../assets/check.png";
 import GoogleMyBusinessImage from "../assets/leads_images/google-my-business-image.webp";
 import GoogleMapsImage from "../assets/leads_images/google-maps-logo.png";
 import GoogleReviewsImage from "../assets/leads_images/google-reviews-logo.png";
+
 import GoogleSeoImage from "../assets/leads_images/google-seo-logo.png";
 import WebsiteImage from "../assets/leads_images/website-logo.png";
+import LinkedinImage from "../assets/leads_images/linkedin-logo.png";
+
+import FacebookImage from "../assets/leads_images/facebook-logo.png";
+import InstagramImage from "../assets/leads_images/facebook-logo.png";
+import FreeIntegrationsImage from "../assets/leads_images/free-integrations-icon.png";
+
+import CrossPromotionsImage from "../assets/leads_images/cross-promotions-logo.png";
+import DatabaseImage from "../assets/leads_images/database-icon.png";
+import WhatsappImage from "../assets/leads_images/whatsapp-icon.png";
+
+import RoiImage from "../assets/leads_images/roi.jpg";
 
 const LeadsPage = () => {
   const menuTitles = {
@@ -264,7 +276,8 @@ const LeadsPage = () => {
           <img src={LeadsImage} alt="" className="full-width-image" />
         </div>
 
-        <div className="organic-leads-section  bg-warning container wono-text-spacing pb-4">
+        {/* <div className="organic-leads-section  bg-warning container wono-text-spacing pb-4"> */}
+        <div className="organic-leads-section   container wono-text-spacing pb-4">
           <br />
           <br />
           <h2>Our core focus is to generate ORGANIC LEADS!</h2>
@@ -272,21 +285,6 @@ const LeadsPage = () => {
           <br />
           <div className="bottom-container row">
             <div className="checklist col-lg-4">
-              {/* <ul>
-                <li>Google My Business</li>
-                <li>Google Maps</li>
-                <li>Google Reviews</li>
-                <li>Google SEO</li>
-                <li>Website</li>
-                <li>LinkedIn</li>
-                <li>Facebook</li>
-                <li>Instagram</li>
-                <li>Free Integrations</li>
-                <li>Cross Promotions</li>
-                <li>Database</li>
-                <li>What's App</li>
-              </ul> */}
-
               <p className="card-text">
                 <div className="Tickmark-text">
                   <img src={TickmarkImg} alt="tick-mark"></img>
@@ -338,19 +336,24 @@ const LeadsPage = () => {
                 </div>
               </p>
             </div>
-            <div className="organic-leads-images-section bg-danger col-lg-8 ">
-              <div className="image-grid d-flex flex-column justify-content-center align-items-center bg-secondary">
-                <div className="img-row-1 bg-info d-flex flex-row justify-content-center align-items-center">
+            {/* <div className="organic-leads-images-section bg-danger col-lg-8 "> */}
+            <div className="organic-leads-images-section  col-lg-8 ">
+              {/* <div className="image-grid d-flex flex-column justify-content-center align-items-center bg-secondary"> */}
+              <div className="image-grid d-flex flex-column justify-content-center align-items-center ">
+                {/* <div className="img-row-1 bg-info d-flex flex-row justify-content-center align-items-center"> */}
+                <div className="img-row-1  d-flex flex-row justify-content-center align-items-center">
                   <div className="top-first">logo 1</div>
                   <div className="top-second">logo 2</div>
                   <div className="top-third">logo 3</div>
                 </div>
-                <div className="img-row-2 bg-success d-flex flex-row justify-content-center align-items-center">
+                {/* <div className="img-row-2 bg-success d-flex flex-row justify-content-center align-items-center"> */}
+                <div className="img-row-2  d-flex flex-row justify-content-center align-items-center">
                   <div className="top-first">logo 4</div>
                   <div className="top-second">logo 5</div>
                   <div className="top-third">logo 6</div>
                 </div>
-                <div className="img-row-3 bg-primary d-flex flex-row justify-content-center align-items-center">
+                {/* <div className="img-row-3 bg-primary d-flex flex-row justify-content-center align-items-center"> */}
+                <div className="img-row-3  d-flex flex-row justify-content-center align-items-center">
                   <div className="top-first">logo 7</div>
                   <div className="top-second">logo 8</div>
                   <div className="top-third">logo 9</div>
@@ -379,11 +382,86 @@ const LeadsPage = () => {
 
         <div className="marketing h-5">Marketing</div>
 
-        <div className="better-roi h-5">Better ROI</div>
+        {/* <div className="better-roi h-5 bg-warning wono-text-spacing "> */}
+        <div className="better-roi h-5  wono-text-spacing ">
+          <div className="container">
+            <div className="row ">
+              <div className="col-lg-6 ">
+                <img src={RoiImage} alt="" className="w-100" />
+              </div>
+              {/* <div className="col-lg-6 text-end bg-danger d-flex flex-column justify-content-center"> */}
+              <div className="col-lg-6 text-end  d-flex flex-column justify-content-center">
+                {/* <div className="bg-success"> */}
+                <div className="">
+                  <h2>Get better ROI from your marketing.</h2>
+                </div>
+                {/* <div className="bg-info"> */}
+                <div className="">
+                  <p>
+                    Discover all the ways that Analytics surfaces helpful
+                    insights for a complete understanding of your customers —
+                    from built-in automation and customized reporting, to
+                    cross-platform attribution and more.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-        <div className="complete-view h-5">Complete View</div>
+        <div className="complete-view h-5 wono-text-spacing">
+          {" "}
+          <div className="container">
+            <div className="row ">
+              {/* <div className="col-lg-6 text-end bg-danger d-flex flex-column justify-content-center"> */}
+              <div className="col-lg-6 text-end  d-flex flex-column justify-content-center">
+                {/* <div className="bg-success"> */}
+                <div className="">
+                  <h2>Get better ROI from your marketing.</h2>
+                </div>
+                {/* <div className="bg-info"> */}
+                <div className="">
+                  <p>
+                    Discover all the ways that Analytics surfaces helpful
+                    insights for a complete understanding of your customers —
+                    from built-in automation and customized reporting, to
+                    cross-platform attribution and more.
+                  </p>
+                </div>
+              </div>
+              <div className="col-lg-6 ">
+                <img src={RoiImage} alt="" className="w-100" />
+              </div>
+            </div>
+          </div>
+        </div>
 
-        <div className="finer-points h-5">Finer Pionts</div>
+        <div className="finer-points h-5 wono-text-spacing">
+          {" "}
+          <div className="container">
+            <div className="row ">
+              <div className="col-lg-6 ">
+                <img src={RoiImage} alt="" className="w-100" />
+              </div>
+              {/* <div className="col-lg-6 text-end bg-danger d-flex flex-column justify-content-center"> */}
+              <div className="col-lg-6 text-end  d-flex flex-column justify-content-center">
+                {/* <div className="bg-success"> */}
+                <div className="">
+                  <h2>Get better ROI from your marketing.</h2>
+                </div>
+                {/* <div className="bg-info"> */}
+                <div className="">
+                  <p>
+                    Discover all the ways that Analytics surfaces helpful
+                    insights for a complete understanding of your customers —
+                    from built-in automation and customized reporting, to
+                    cross-platform attribution and more.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
         <div className="leads-call-to-action h-5">Leads Call To Action</div>
 
