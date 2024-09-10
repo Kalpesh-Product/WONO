@@ -164,3 +164,7 @@
 .last-spacing {
     margin-bottom: 30px;
 }
+
+.smaller-font-for-para {
+    font-size: medium !important;
+}

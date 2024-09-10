@@ -450,11 +450,11 @@ const Homepage = () => {
 
         <div className="last-section body-partners-master w-100 ">
           <div className="pt-5 customMargin pb-5">
-            <div className="grow-your-business-color p-3">
+            <div className="grow-your-business-color ">
               <h2>GROW YOUR BUSINESS WITH US</h2>
               <br />
 
-              <p className="last-spacing">
+              <p className="last-spacing smaller-font-for-para">
                 We have you covered across … build website, manage bookings,
                 sets processes, HR support, task management, ticket management,
                 marketing, generating leads, accounting, finance, customer
