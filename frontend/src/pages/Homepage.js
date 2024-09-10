@@ -393,7 +393,7 @@ const Homepage = () => {
                     </div>
                   ))}
                 </div>
-                  <Link to='/themes'>View all</Link>
+                <Link to="/themes">View all</Link>
               </div>
             </div>
           </div>
@@ -411,13 +411,13 @@ const Homepage = () => {
                   <div className=" ">
                     <br />
                     {/* <h4 className="bg-danger testimonial-right-spacing"> */}
-                    <h4 className=" testimonial-right-spacing">
+                    <h3 className=" testimonial-right-spacing">
                       “We went from managing 3,000 sq ft to 50,000+ sq ft in the
                       most efficient and seamless manner with tech, processes,
                       data analytics, customer & employee management and due to
                       an extraordinary extended team like WoNo which integrated
                       with us and had no demands!”
-                    </h4>
+                    </h3>
                     {/* <br /> */}
                     {/* <br /> */}
                   </div>
@@ -454,7 +454,7 @@ const Homepage = () => {
               <h2>GROW YOUR BUSINESS WITH US</h2>
               <br />
 
-              <p className="">
+              <p className="last-spacing">
                 We have you covered across … build website, manage bookings,
                 sets processes, HR support, task management, ticket management,
                 marketing, generating leads, accounting, finance, customer
