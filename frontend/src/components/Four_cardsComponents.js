@@ -23,7 +23,7 @@ const FourCardsComponents = () => {
     return (
         <div className="four-cards-parent">
         <div className="four-cards-header">
-          <h2>KEY MODULES FOR YOUR BUSINESS</h2>
+          <h2><b>KEY MODULES FOR YOUR BUSINESS</b></h2>
         </div>
         
         {/* New Wrapper Container */}

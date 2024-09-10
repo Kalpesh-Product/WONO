@@ -66,7 +66,7 @@
     align-items: start;
     justify-content: flex-start;
     flex-direction: column;
-    padding: 6rem 6rem 0rem 8rem;
+    padding: 6rem 6rem 0rem 7rem;
     width: 100%;
 }
 
@@ -166,7 +166,7 @@
 }
 
 .smaller-font-for-para {
-    font-size: medium !important;
+    font-size: 14px !important;
 }
 
 .full-width-image {

@@ -405,9 +405,9 @@ const Homepage = () => {
             <br />
             <br />
             {/* <div className="container border-top border-dark border-2"> */}
-            <div className="container ">
+            <div className="container p-0 ">
               <div className="row ">
-                <div className="col-lg-7 d-flex flex-column justify-content-between ">
+                <div className="col-lg-7 d-flex flex-column justify-content-between p-0 ms-0">
                   <div className=" ">
                     <br />
                     {/* <h4 className="bg-danger testimonial-right-spacing"> */}
@@ -433,11 +433,11 @@ const Homepage = () => {
                   </div>
                 </div>
                 {/* <div className="col-lg-5 mt-3 bg-warning d-flex flex-row justify-content-end"> */}
-                <div className="col-lg-5 mt-3  d-flex flex-row justify-content-end">
+                <div className="col-lg-5 mt-3  d-flex flex-row justify-content-end ps-5 pe-0">
                   <img
                     src={BiznestTestimonial}
                     alt=""
-                    className="custom-image-biznest"
+                    className="custom-image-biznest ms-5"
                   />
                 </div>
               </div>
