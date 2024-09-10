@@ -42,6 +42,12 @@ import GoogleSheetsImage from "../assets/leads_images/google-sheets-image.webp";
 
 import TickmarkImg from "../assets/check.png";
 
+import GoogleMyBusinessImage from "../assets/leads_images/google-my-business-image.webp";
+import GoogleMapsImage from "../assets/leads_images/google-maps-logo.png";
+import GoogleReviewsImage from "../assets/leads_images/google-reviews-logo.png";
+import GoogleSeoImage from "../assets/leads_images/google-seo-logo.png";
+import WebsiteImage from "../assets/leads_images/website-logo.png";
+
 const LeadsPage = () => {
   const menuTitles = {
     "dashboard-booking": "Booking engine",
@@ -255,7 +261,7 @@ const LeadsPage = () => {
         </div>
 
         <div className="leads-image-section  ">
-          <img src={LeadsImage} alt="" className="custom-image-biznest" />
+          <img src={LeadsImage} alt="" className="full-width-image" />
         </div>
 
         <div className="organic-leads-section  bg-warning container wono-text-spacing pb-4">
@@ -357,7 +363,7 @@ const LeadsPage = () => {
 
         <div className="google-sheets-section ">
           <div>
-            <div className="py-4 mt-2">
+            <div className="py-4 mt-2 wono-text-spacing">
               <h2>Automated Google LEAD SHEET!</h2>
               <h2>Never miss any leads generated from our platform.</h2>
             </div>
@@ -365,7 +371,7 @@ const LeadsPage = () => {
               <img
                 src={GoogleSheetsImage}
                 alt=""
-                className="custom-image-biznest"
+                className="full-width-image"
               />
             </div>
           </div>

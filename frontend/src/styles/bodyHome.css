@@ -35,6 +35,7 @@
     font-family: Popins-Black;
     src: url('../assets/WONO_images/img/fonts/Poppins-Black.ttf');
 }
+
 @font-face {
     font-family: Mistral;
     src: url('../assets/WONO_images/img/fonts/MISTRAL.TTF');
@@ -102,12 +103,14 @@
     margin-bottom: 2.5rem;
     padding: 0.5rem;
 }
-.home-section-buttons{
-    display:block;
-    align-items:start;
-     justify-content:start;
+
+.home-section-buttons {
+    display: block;
+    align-items: start;
+    justify-content: start;
 }
-.home-section-register-button{
+
+.home-section-register-button {
     width: 75%;
     margin: 0;
     background-color: rgb(13, 110, 253);
@@ -180,7 +183,7 @@
     .home-page-container {
         grid-template-columns: 1fr;
         /* Stack columns vertically */
-        height:100vh;
+        height: 100vh;
         /* Adjust height to fit content */
         padding: 0;
     }
@@ -195,11 +198,12 @@
 
     .home-section-buttons {
         display: flex;
-        align-items:center;
-         justify-content:center;
-         /* padding-left: 1rem; */
+        align-items: center;
+        justify-content: center;
+        /* padding-left: 1rem; */
     }
-    .home-section-register-button{
+
+    .home-section-register-button {
         width: 100%;
         margin: 0;
         background-color: rgb(10, 169, 239);
@@ -210,7 +214,8 @@
         font-family: Popins-Regular;
         cursor: pointer;
     }
-    .home-section-register-button{
+
+    .home-section-register-button {
 
         width: 100%;
 
@@ -245,7 +250,7 @@
     }
 
     .first-section-grid-item-2 {
-        
+
         grid-template-columns: 1fr;
         border: none;
         /* Optional: remove border if needed */
@@ -321,7 +326,8 @@
     width: 100%;
     margin-top: 0;
     text-align: center;
-    line-height: 90%;     /* to add gap between the lines */
+    line-height: 90%;
+    /* to add gap between the lines */
 }
 
 .N-Commerce p {
@@ -769,9 +775,10 @@
 
 .website-container-master {
     height: 100%;
-   
+
 }
-.website-container-master > *{
+
+.website-container-master>* {
     font-family: Popins-Regular;
 }
 
@@ -787,13 +794,14 @@
     color: black;
     /* padding: 2rem; */
     text-align: left;
-    margin-bottom:20px ;
+    margin-bottom: 20px;
 }
+
 .website-panel-container h3 {
     color: black;
     /* padding: 2rem; */
     text-align: left;
-    margin-bottom:20px ;
+    margin-bottom: 20px;
 }
 
 .website-panel {
@@ -802,6 +810,7 @@
     gap: 1rem;
     border-radius: 20px;
 }
+
 /* .website-panel-header {
 
 } */
@@ -863,6 +872,7 @@
 .website-panel-right {
     height: auto;
 }
+
 .website-panel-right a {
     display: block;
     text-align: center;
@@ -870,6 +880,7 @@
     text-decoration: none;
     font-size: 1.3rem;
 }
+
 .website-panel-right a:hover {
     text-decoration: underline;
 }
@@ -886,13 +897,15 @@
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     margin-bottom: 20px;
 }
-.template-preview-container{
+
+.template-preview-container {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
 }
-.template-preview-container img{
+
+.template-preview-container img {
     width: 100%;
     object-fit: fill;
     transition: all ease 0.3s;
@@ -938,8 +951,9 @@
     .website-panel-sidebar::-webkit-scrollbar {
         display: none;
     }
+
     .website-panel-content {
-        grid-template-columns:1fr;
+        grid-template-columns: 1fr;
     }
 
 
@@ -968,20 +982,21 @@
 /* testimonials */
 
 .testimonial-section {
-    background-color: #cae4ff !important;
-    margin-top:  0 !important;
+    /* background-color: #cae4ff !important; */
+    margin-top: 0 !important;
     padding: 1rem 7rem;
 }
-.testimonial-section >*{
+
+.testimonial-section>* {
     font-family: Popins-Medium;
 }
 
 @media (max-width:768px) {
     .testimonial-section {
-        background-color: #cae4ff !important;
-        margin-top:  0 !important;
+        /* background-color: #cae4ff !important; */
+        margin-top: 0 !important;
         padding: 1rem;
-    } 
+    }
 }
 
 
