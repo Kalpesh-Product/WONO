@@ -20,6 +20,7 @@ import TestingPage from './pages/TestingPage';
 import ForgotPassword from './pages/ForgotPassword';
 import NewPassword from './pages/NewPassword';
 import Themes from './pages/Themes';
+import Capital from './pages/Capital';
 
 
 
@@ -47,6 +48,7 @@ function App() {
       <Route path='/privacy' element={<PrivacyAndPolicy/>}/>
       <Route path='/testing' element={<TestingPage/>}/>
       <Route path='/themes' element={<Themes/>}/>
+      
      </Routes>
     <AppFooter />
     </UserProvider>
