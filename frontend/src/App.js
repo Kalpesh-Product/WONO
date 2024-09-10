@@ -46,7 +46,8 @@ function App() {
           <Route path="/privacy" element={<PrivacyAndPolicy />} />
           <Route path="/testing" element={<TestingPage />} />
           <Route path="/leads" element={<LeadsPage />} />
-          {/* <Route path='/themes' element={<Themes/>}/> */}
+          <Route path='/themes' element={<Themes/>}/>
+      
         </Routes>
         <AppFooter />
       </UserProvider>
