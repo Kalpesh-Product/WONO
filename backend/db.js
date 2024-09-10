@@ -1,17 +1,25 @@
-const mysql = require('mysql2');
+const mongoose = require('mongoose');
 
-// Create a connection pool
-const pool = mysql.createPool({
-    host: '127.0.0.1', // Host from your MySQL server details
-    user: 'root', // User from your MySQL server details
-    password: 'Aiwin1234', // Replace with your MySQL password
-    database: 'WonoUserData', // Your database name
-    connectionLimit: 10
+// MongoDB connection URI
+const uri = 'mongodb://localhost:27017/WonoUserData'; // Replace with your MongoDB URI and database name
+
+// Create a connection to MongoDB
+mongoose.connect(uri, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
 });
 
-// Promisify for Node.js async/await.
-const promisePool = pool.promise();
+// Get a reference to the connection
+const db = mongoose.connection;
 
-console.log('Connected to MySQL database!');
+// Event listeners for connection
+db.on('error', (err) => {
+    console.error('MongoDB connection error:', err);
+});
 
-module.exports = promisePool;
+db.once('open', () => {
+    console.log('Connected to MongoDB database!');
+});
+
+// Export the connection
+module.exports = mongoose;

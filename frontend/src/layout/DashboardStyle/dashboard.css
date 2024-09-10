@@ -8,15 +8,11 @@
   'sidebar main main main';
   height: 100vh; */
 }
-h3{
-color: black;
-}
 .icon{
   vertical-align: middle;
   line-height: 1px;
   font-size: 20px;
 }
-
 /* Start Header */
 .header{
   grid-area: header;
@@ -31,7 +27,6 @@ color: black;
   display: none;
 }
 /* End Header */
-
 /* Start Sidebar */
 #sidebar{
   grid-area: sidebar;
@@ -56,22 +51,18 @@ margin-bottom: 30px;
   font-size: 20px;
   font-weight: 700;
 }
-
 .sidebar-list {
   padding: 0;
   list-style-type: none;
 }
-
 .sidebar-list-item {
   padding: 20px 20px 20px 20px;
   font-size: 18px;
 }
-
 .sidebar-list-item:hover {
   background-color: rgba(255, 255, 255, 0.2);
   cursor: pointer;
 }
-
 .sidebar-list-item > a {
   text-decoration: none;
   color: #9e9ea4;
@@ -86,10 +77,7 @@ margin-bottom: 30px;
   */
   z-index: 12 !important;
 }
-
 /* Man content */
-
-
 .dashboard-container {
   grid-area: main;
   width: 100%;
@@ -97,20 +85,17 @@ margin-bottom: 30px;
   /* padding: 20px 20px; */
   color: rgba(255, 255, 255, 0.95);
 }
-
 .main-title {
   display: flex;
   justify-content: space-between;
   color: black;
 }
-
 .main-cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 20px;
   margin: 15px 0;
 }
-
 .card {
   display: flex;
   flex-direction: column;
@@ -118,33 +103,26 @@ margin-bottom: 30px;
   padding: 8px 15px;
   border-radius: 5px;
 }
-
 .card:first-child {
   background-color: #2962ff;
 }
-
 .card:nth-child(2) {
   background-color: #ff6d00;
 }
-
 .card:nth-child(3) {
   background-color: #2e7d32;
 }
-
 .card:nth-child(4) {
   background-color: #d50000;
 }
-
 .card-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-
 .card-inner > .card_icon {
   font-size: 25px;
 }
-
 .charts {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -153,9 +131,7 @@ margin-bottom: 30px;
   height: 300px;
 }
 /* END MAIN */
-
 /* Medium <= 992px */
-
 @media screen and (max-width: 992px) {
   .dashboard-container {
     display: grid;
@@ -166,15 +142,12 @@ margin-bottom: 30px;
       'main'
       'sidebar';
   }
-
   #sidebar {
     display: none;
   }
-
   .menu-icon {
     display: inline;
   }
-
   .sidebar-title > span {
     display: inline;
   }
@@ -187,15 +160,12 @@ margin-bottom: 30px;
     gap: 10px;
     margin-bottom: 0;
   }
-
   .charts {
     grid-template-columns: 1fr;
     margin-top: 30px;
   }
 }
-
 /* Extra Small <= 576px */
-
 @media screen and (max-width: 576px) {
   .header-left {
     display: none;

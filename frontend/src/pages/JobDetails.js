@@ -9,7 +9,6 @@ import PHPdeveloper from "../components/jobroles/TechDevelopment/PHPdeveloper.js
 import WebdeveloperIntern from "../components/jobroles/TechDevelopment/WebdeveloperIntern.js";
 import MarketingAnalytics from "../components/jobroles/ProductManagement/MarketingAnalytics.js"
 import UiDesignerComp from '../components/jobroles/ProductManagement/UiDesignerComp.js';
-import developer from '../components/jobroles/TechDevelopment/Uiux developer.js';
 import Aos from 'aos'
 import 'aos/dist/aos.css';
 import { Link } from 'react-router-dom'

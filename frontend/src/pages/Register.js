@@ -8,6 +8,8 @@ import emailSend from '../assets/WONO_images/img/emailSend.gif'
 import { Link } from 'react-router-dom';
 import { Stepper, Step } from "react-form-stepper";
 import { TransactionalWebsite, BookingEngine, MeetingRoomEngine, PaymentGateway } from '../assets/WONO_images/img/icon_service';
+import gmailLogo from '../assets/WONO_images/img/services/gmailLogo.jpg'
+import outlookLogo from '../assets/WONO_images/img/services/outlookLogo.png'
 
 const Register = () => {
   const [currentStep, setCurrentStep] = useState(0);
@@ -619,11 +621,11 @@ const Register = () => {
                   </span>
                 <div className="mail-client-container">
                   <div className="mail-client">
-                    <img src={TransactionalWebsite} alt='Website' />
+                    <img src={gmailLogo} alt='Website' />
                     <span>Open G-mail</span>
                   </div>
                   <div className="mail-client">
-                    <img src={BookingEngine} alt='Outlook' />
+                    <img src={outlookLogo} alt='Outlook' />
                     <span>Open Outlook</span>
                   </div>
                 </div>

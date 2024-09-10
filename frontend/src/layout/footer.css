@@ -3,73 +3,99 @@
   src: url('../assets/WONO_images/img/fonts/Poppins-Regular.ttf');
 }
 
-footer{
-  width:100%
+footer {
+  width: 100%
 }
-.footer-container a{
+.footer-master{
+  display: flex;
+  justify-content: space-between;
+  padding: 0 7rem;
+}
+
+.footer-container a {
   text-decoration: none;
   font-size: 14px;
-  color: rgb(175, 175, 175);
-}
-.footer-container a:hover{
   color: white;
 }
 
+.footer-container a:hover {
+  color: rgb(175, 175, 175);
+}
+
 .footer-container {
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 2rem;
-    font-family: Popins-Regular;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  font-family: Popins-Regular;
+}
+
+.footer-section-1,
+.footer-section-2,
+.footer-section-3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 2rem;
+  text-transform: uppercase;
+}
+
+.footer-section-1 {
+  align-items: start;
+}
+
+.footer-section-1>* {
+  margin-bottom: 1rem;
+}
+
+.footer-section-2>* {
+  padding: 1rem;
+  font-size: 14px;
+}
+
+.footer-section-3>* {
+  padding: 1rem;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 0rem;
   }
-  
-  .footer-section-1, .footer-section-2, .footer-section-3 {
-    display: flex;
+  .footer-master{
+    flex-wrap: wrap;
+    padding: 0 1rem;
+  }
+
+  .footer-section-1 {
     align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 2rem;
-    text-transform: uppercase;
-  }
-  .footer-section-1{
-    align-items: start;
-  }
-  .footer-section-1 > *{
-    margin-bottom: 1rem;
+    padding: 1rem;
   }
 
-  .footer-section-2 > *{
-    padding: 1rem;
-    font-size: 14px;
+  .footer-section-2 {
+    padding-top: 0;
   }
-  .footer-section-3 > *{
-    padding: 1rem;
+
+  .footer-section-3 {
+    padding-top: 0;
+  }
+
+  .footer-section-1>* {
+    padding: 0.5rem;
     font-size: 14px;
   }
 
-  @media (max-width: 768px) {
-    .footer-container{
-      grid-template-columns: 1fr;
-      gap: 0rem;
-    }
-    .footer-section-1 {
-      align-items: center;
-      padding: 1rem;
-    }
-    .footer-section-2{
-      padding-bottom: 0;
-    }
-    .footer-section-3{
-      padding-top: 0;
-    }
-    .footer-section-1> *{
-      padding: 0.5rem;
-      font-size: 14px;
-    }
-    .footer-section-2 > *{
-      padding: 0.5rem;
-      font-size: 14px;
-    }
+  .footer-section-2>* {
+    padding: 0.5rem;
+    font-size: 14px;
   }
-  
-  
- 
+}
+
+.color-of-o {
+  color: rgb(13, 110, 253);
+}
+
+.black-background {
+  background-color: black;
+}

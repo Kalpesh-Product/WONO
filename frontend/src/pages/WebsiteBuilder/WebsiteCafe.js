@@ -45,20 +45,25 @@ const WebsiteCafe = () => {
       <style jsx>{`
         .template-grid {
           display: flex;
-          flex-wrap : wrap;
           gap: 16px;
         }
         .template-container {
-          width: 200px;
+          width: 250px;
           height: 350px;
           overflow: hidden;
           cursor: pointer;
           border: 1px solid #ddd;
         }
+          @media (max-width: 768px) {
+            .template-grid {
+                flex-wrap : wrap;
+              }
+          }
         .template-image {
           width: 100%;
           height: 100%;
           object-fit: cover;
+          object-position : top;
         }
         .modal-image {
           width: 100%;
