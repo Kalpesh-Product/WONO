@@ -42,6 +42,8 @@ import GoogleSheetsImage from "../assets/leads_images/google-sheets-image.webp";
 
 import TickmarkImg from "../assets/check.png";
 
+// import GoogleMyBusinessImage from "../assets/leads_images/google-my-business-image.webp";
+
 const LeadsPage = () => {
   const menuTitles = {
     "dashboard-booking": "Booking engine",

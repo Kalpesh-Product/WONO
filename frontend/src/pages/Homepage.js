@@ -409,7 +409,8 @@ const Homepage = () => {
                 <div className="col-lg-7 d-flex flex-column justify-content-between ">
                   <div className=" ">
                     <br />
-                    <h4>
+                    {/* <h4 className="bg-danger testimonial-right-spacing"> */}
+                    <h4 className=" testimonial-right-spacing">
                       “We went from managing 3,000 sq ft to 50,000+ sq ft in the
                       most efficient and seamless manner with tech, processes,
                       data analytics, customer & employee management and due to
@@ -430,7 +431,8 @@ const Homepage = () => {
                     <p>BIZ Nest, Goa India </p>
                   </div>
                 </div>
-                <div className="col-lg-5 mt-3 ">
+                {/* <div className="col-lg-5 mt-3 bg-warning d-flex flex-row justify-content-end"> */}
+                <div className="col-lg-5 mt-3  d-flex flex-row justify-content-end">
                   <img
                     src={BiznestTestimonial}
                     alt=""

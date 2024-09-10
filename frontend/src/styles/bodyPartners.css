@@ -95,6 +95,8 @@
         padding: 1rem 1rem 0rem 1rem;
         width: 100%;
     }
+
+
 }
 
 @media (min-width: 768px) {
@@ -102,6 +104,10 @@
 
     .custom-justify {
         justify-content: flex-start;
+    }
+
+    .testimonial-right-spacing {
+        padding-right: 100px;
     }
 
 }
@@ -132,9 +138,10 @@
 }
 
 .custom-image-biznest {
-    width: 100%;
+    /* width: 100%; */
     /* Image will take up the full width of its container */
-    height: auto;
+    /* height: auto; */
+    min-height: 400px;
     /* Maintains the image's aspect ratio */
 }
 
