@@ -160,3 +160,15 @@
     width: 60%;
     margin: auto;
 }
+
+.last-spacing {
+    margin-bottom: 30px;
+}
+
+.smaller-font-for-para {
+    font-size: medium !important;
+}
+
+.full-width-image {
+    width: 100%;
+}
