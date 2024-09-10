@@ -3,6 +3,7 @@ import '../styles/bodyThemes.css'
 import CafeImage from "../assets/WONO_images/img/website-builder/new-layout/cafe.png";
 import CoWorkingImage from "../assets/WONO_images/img/website-builder/new-layout/co-working.png";
 import CoLivingImage from "../assets/WONO_images/img/website-builder/new-layout/co-living.png";
+import CoWorkingImage_2 from "../assets/WONO_images/img/website-builder/new-layout/co-working-2.png";
 import Boutique from "../assets/WONO_images/img/website-builder/new-layout/boutique.png";
 
 const Themes = () => {
@@ -11,6 +12,10 @@ const Themes = () => {
         { src: CafeImage, alt: "Cafe Image" },
         { src: CoWorkingImage, alt: "Co-Working Image" },
         { src: CoLivingImage, alt: "Co-Living Image" },
+        { src: Boutique, alt: "Boutique Image" },
+        { src: CoWorkingImage_2, alt: "CoLivingImage_2" },
+        { src: Boutique, alt: "Boutique Image" },
+        { src: Boutique, alt: "Boutique Image" },
         { src: Boutique, alt: "Boutique Image" },
     ];
     return (
