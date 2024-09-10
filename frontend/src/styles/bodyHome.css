@@ -865,7 +865,7 @@
 }
 .website-panel-right a {
     display: block;
-    text-align: right;
+    text-align: center;
     color: black;
     text-decoration: none;
     font-size: 1.3rem;
@@ -1120,6 +1120,9 @@
     /* Adjust height to fit within the card */
     object-fit: cover;
     object-position: top;
+}
+.last-section *{
+    font-family: Popins-Regular;
 }
 
 @media (max-width:768px) {

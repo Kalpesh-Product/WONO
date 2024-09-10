@@ -446,7 +446,7 @@ const Homepage = () => {
         <div className="last-section body-partners-master w-100 ">
           <div className="pt-5 customMargin pb-5">
             <div className="grow-your-business-color p-3">
-              <h2>GROW YOUR BUSINESS WITH US</h2>
+              <h2><b>GROW YOUR BUSINESS WITH US</b></h2>
               <br />
 
               <p>
