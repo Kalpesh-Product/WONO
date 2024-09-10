@@ -46,7 +46,7 @@ function App() {
       <Route path='/termsandconditions' element={<TermsAndCondtions/>}/>
       <Route path='/privacy' element={<PrivacyAndPolicy/>}/>
       <Route path='/testing' element={<TestingPage/>}/>
-      {/* <Route path='/themes' element={<Themes/>}/> */}
+      <Route path='/themes' element={<Themes/>}/>
      </Routes>
     <AppFooter />
     </UserProvider>

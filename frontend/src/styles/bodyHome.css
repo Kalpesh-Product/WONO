@@ -321,6 +321,7 @@
     width: 100%;
     margin-top: 0;
     text-align: center;
+    line-height: 90%;     /* to add gap between the lines */
 }
 
 .N-Commerce p {
@@ -786,18 +787,24 @@
     color: black;
     /* padding: 2rem; */
     text-align: left;
+    margin-bottom:20px ;
+}
+.website-panel-container h3 {
+    color: black;
+    /* padding: 2rem; */
+    text-align: left;
+    margin-bottom:20px ;
 }
 
 .website-panel {
     min-height: 100%;
-    padding: 2rem 2rem 2rem 1rem;
-    border: 1px solid white;
+    padding: 2rem 0rem 2rem 0rem;
     gap: 1rem;
     border-radius: 20px;
 }
-.website-panel-header {
-    padding-left: 1rem;
-}
+/* .website-panel-header {
+
+} */
 
 .website-panel-sidebar {
     background-color: white;
@@ -856,6 +863,16 @@
 .website-panel-right {
     height: auto;
 }
+.website-panel-right a {
+    display: block;
+    text-align: right;
+    color: black;
+    text-decoration: none;
+    font-size: 1.3rem;
+}
+.website-panel-right a:hover {
+    text-decoration: underline;
+}
 
 .website-panel-content {
     display: grid;
@@ -867,6 +884,7 @@
     /* overflow: hidden; */
     /* border-radius: 20px; */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
 }
 .template-preview-container{
     display: flex;
@@ -879,9 +897,6 @@
     object-fit: fill;
     transition: all ease 0.3s;
     vertical-align: middle;
-}
-.template-preview-container img:hover{
-    width: 102%;
 }
 
 

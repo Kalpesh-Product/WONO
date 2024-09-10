@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
 import "../styles/bodyHome.css";
-
+import { Link } from "react-router-dom";
 import RotatingGlobe from "../components/RotatingGlobe";
 import { useNavigate } from "react-router-dom";
 import Carousel1 from "../assets/WONO_images/img/hero-carousel/hero-carousel-1.webp";
@@ -396,6 +396,7 @@ const Homepage = () => {
                     </div>
                   ))}
                 </div>
+                  <Link to='/themes'>View all</Link>
               </div>
             </div>
           </div>
