@@ -344,7 +344,10 @@
         text-align: center;
         letter-spacing: -2px;
     }
-    
+    .globe3d{
+        width: 70%;
+        height: 200px;
+    }
     
 }
 

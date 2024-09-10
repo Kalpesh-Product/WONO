@@ -280,7 +280,7 @@ const Homepage = () => {
     
 
 // mobile screen for globe responsiveness
-    const ismobile = window.innerWidth<769;
+    const ismobile = window.innerWidth < 769;
 
     return (
         <div className='master-container'>
@@ -323,13 +323,13 @@ const Homepage = () => {
 
             <div className='Globe-N-Commerce' >
                 <div className='Globe' style={{ textAlign: 'left' }}>
-                    <Canvas camera={{ position:[0,0,ismobile? 15:25],fov:ismobile? 90:40}}  >
+                    <Canvas camera={{ position:[0, 0, ismobile ? 15 : 25], fov : ismobile ? 80 : 40}}  >
                         <ambientLight intensity={0.5} />
                         <pointLight position={[10, 10, 10]} />
                         <RotatingGlobe />
                         <OrbitControls enableZoom={false}
                         minPolarAngle={Math.PI/3}
-                        maxPolarAngle={2 * Math.PI / 3}/>
+                        maxPolarAngle={2 * Math.PI / 3}/> 
                     </Canvas>
                 </div>
                 <div className='N-Commerce'>
