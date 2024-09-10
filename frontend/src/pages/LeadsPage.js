@@ -47,6 +47,9 @@ import GoogleMapsImage from "../assets/leads_images/google-maps-logo.png";
 import GoogleReviewsImage from "../assets/leads_images/google-reviews-logo.png";
 import GoogleSeoImage from "../assets/leads_images/google-seo-logo.png";
 import WebsiteImage from "../assets/leads_images/website-logo.png";
+import LinkedinImage from "../assets/leads_images/linkedin-logo.png";
+import FacebookImage from "../assets/leads_images/facebook-logo.png";
+import InstagramImage from "../assets/leads_images/facebook-logo.png";
 
 const LeadsPage = () => {
   const menuTitles = {
