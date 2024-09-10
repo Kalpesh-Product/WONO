@@ -4,9 +4,15 @@
 
 .themePage-content-grid{
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 1fr 1fr;
     gap: 15px;
+}
+.theme-grid{
+    width: 100%;
+    height: 350px;
+    border: 1px solid black;
 }
 .theme-grid img{
     width: 100%;
+    object-fit: cover;
 }
