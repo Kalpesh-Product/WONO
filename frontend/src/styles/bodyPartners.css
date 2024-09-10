@@ -148,3 +148,8 @@
 .row {
     max-width: 100%;
 }
+
+.customWidth {
+    width: 60%;
+    margin: auto;
+}
