@@ -36,9 +36,13 @@ import WebsiteCafe from "./WebsiteBuilder/WebsiteCafe";
 import WebsiteWorkation from "./WebsiteBuilder/WebsiteWorkation";
 import "../styles/bodyPartners.css";
 import BiznestTestimonial from "../assets/testimonials/BIZ Nest Testimonial.png";
+import LeadsImage from "../assets/leads_images/leads-section-image.webp";
+import GoogleSheetsImage from "../assets/leads_images/google-sheets-image.webp";
 // import "../styles/bodyLastBanner.css";
 
-const Homepage = () => {
+import TickmarkImg from "../assets/check.png";
+
+const LeadsPage = () => {
   const menuTitles = {
     "dashboard-booking": "Booking engine",
     "dashboard-tickets": "Ticket Management",
@@ -134,7 +138,7 @@ const Homepage = () => {
   return (
     <div className="master-container">
       <div className="home-section">
-        <div className="home-page-container">
+        {/* <div className="home-page-container">
           <div className="background-div">
             <div>
               <img src={images[0]} alt={`Slide`} className="background-image" />
@@ -165,9 +169,9 @@ const Homepage = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
 
-        <div className="Globe-N-Commerce">
+        {/* <div className="Globe-N-Commerce">
           <div className="Globe" style={{ textAlign: "left" }}>
             <Canvas
               camera={{
@@ -206,14 +210,180 @@ const Homepage = () => {
               </button>
             </div>
           </div>
-        </div>
-        <div className="four-cards-section">
+        </div> */}
+
+        {/* <div className="four-cards-section">
           <FourCardsComponents />
+        </div> */}
+
+        <div className="leads-heading-section   wono-text-spacing">
+          <br />
+          <br />
+          <h2>
+            Generate continues structured leads for your business with the
+            support of our automated pla orm and trained and experienced
+            resources.
+          </h2>
+          <br />
+          <p>
+            Automated pla orm and our resources are FREE .. you pay only if you
+            start paid ads!
+          </p>
+          <div>
+            <div className="">
+              <div className="container my-3 ">
+                {/* <div className="row  border-bottom border-dark border-3 pb-5 bg-primary"> */}
+                <div className="row   ">
+                  <div className="col-lg-4"></div>
+                  <div className="col-lg-4"></div>
+                  {/* <div className="col-lg-4 bg-danger"> */}
+                  <div className="col-lg-4  d-flex justify-content-center align-items-center">
+                    <div className="">
+                      <button
+                        className="get-started-submit-button "
+                        onClick={handleRegister}>
+                        Get Started
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <br />
+                <br />
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div className="partners-section body-partners-master  ">
+        <div className="leads-image-section  ">
+          <img src={LeadsImage} alt="" className="custom-image-biznest" />
+        </div>
+
+        <div className="organic-leads-section  bg-warning container wono-text-spacing pb-4">
+          <br />
+          <br />
+          <h2>Our core focus is to generate ORGANIC LEADS!</h2>
+          <h2>With NO INVESTMENTS!</h2>
+          <br />
+          <div className="bottom-container row">
+            <div className="checklist col-lg-4">
+              {/* <ul>
+                <li>Google My Business</li>
+                <li>Google Maps</li>
+                <li>Google Reviews</li>
+                <li>Google SEO</li>
+                <li>Website</li>
+                <li>LinkedIn</li>
+                <li>Facebook</li>
+                <li>Instagram</li>
+                <li>Free Integrations</li>
+                <li>Cross Promotions</li>
+                <li>Database</li>
+                <li>What's App</li>
+              </ul> */}
+
+              <p className="card-text">
+                <div className="Tickmark-text">
+                  <img src={TickmarkImg} alt="tick-mark"></img>
+                  Google My Business
+                </div>
+                <div className="Tickmark-text">
+                  <img src={TickmarkImg} alt="tick-mark"></img>
+                  Google Maps
+                </div>
+                <div className="Tickmark-text">
+                  <img src={TickmarkImg} alt="tick-mark"></img>
+                  Google Reviews
+                </div>
+                <div className="Tickmark-text">
+                  <img src={TickmarkImg} alt="tick-mark"></img>
+                  Google SEO
+                </div>
+                <div className="Tickmark-text">
+                  <img src={TickmarkImg} alt="tick-mark"></img>
+                  Website
+                </div>
+                <div className="Tickmark-text">
+                  <img src={TickmarkImg} alt="tick-mark"></img>
+                  LinkedIn
+                </div>
+                <div className="Tickmark-text">
+                  <img src={TickmarkImg} alt="tick-mark"></img>
+                  Facebook
+                </div>
+                <div className="Tickmark-text">
+                  <img src={TickmarkImg} alt="tick-mark"></img>
+                  Instagram
+                </div>
+                <div className="Tickmark-text">
+                  <img src={TickmarkImg} alt="tick-mark"></img>
+                  Free Integrations
+                </div>
+                <div className="Tickmark-text">
+                  <img src={TickmarkImg} alt="tick-mark"></img>
+                  Cross Promotions
+                </div>
+                <div className="Tickmark-text">
+                  <img src={TickmarkImg} alt="tick-mark"></img>
+                  Database
+                </div>
+                <div className="Tickmark-text">
+                  <img src={TickmarkImg} alt="tick-mark"></img>
+                  What's App
+                </div>
+              </p>
+            </div>
+            <div className="organic-leads-images-section bg-danger col-lg-8 ">
+              <div className="image-grid d-flex flex-column justify-content-center align-items-center bg-secondary">
+                <div className="img-row-1 bg-info d-flex flex-row justify-content-center align-items-center">
+                  <div className="top-first">logo 1</div>
+                  <div className="top-second">logo 2</div>
+                  <div className="top-third">logo 3</div>
+                </div>
+                <div className="img-row-2 bg-success d-flex flex-row justify-content-center align-items-center">
+                  <div className="top-first">logo 4</div>
+                  <div className="top-second">logo 5</div>
+                  <div className="top-third">logo 6</div>
+                </div>
+                <div className="img-row-3 bg-primary d-flex flex-row justify-content-center align-items-center">
+                  <div className="top-first">logo 7</div>
+                  <div className="top-second">logo 8</div>
+                  <div className="top-third">logo 9</div>
+                </div>
+              </div>
+            </div>
+            <div className="organic-leads-image"></div>
+          </div>
+        </div>
+
+        <div className="google-sheets-section ">
+          <div>
+            <div className="py-4 mt-2">
+              <h2>Automated Google LEAD SHEET!</h2>
+              <h2>Never miss any leads generated from our platform.</h2>
+            </div>
+            <div className="organic-leads-images-section">
+              <img
+                src={GoogleSheetsImage}
+                alt=""
+                className="custom-image-biznest"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div className="marketing h-5">Marketing</div>
+
+        <div className="better-roi h-5">Better ROI</div>
+
+        <div className="complete-view h-5">Complete View</div>
+
+        <div className="finer-points h-5">Finer Pionts</div>
+
+        <div className="leads-call-to-action h-5">Leads Call To Action</div>
+
+        <div className="partners-section body-partners-master ">
           {/* <div className="mt-5 container"> */}
-          <div className="m-0 container  w-100 ">
+          <div className="m-0 container  w-100">
             {/* First div (1/2) */}
             <div className="">
               <div className="customMargin_top">
@@ -226,10 +396,10 @@ const Homepage = () => {
             <br />
             {/* <div className="bg-info pt-3 m-5"> */}
             {/* <div className="container  text-left customMargin_top"> */}
-            <div className="  text-left customMargin_top  pt-0">
-              <div className="row  ">
+            <div className="  text-left customMargin_top ">
+              <div className="row  border-bottom border-dark border-3 pb-5">
                 <div className="col-lg-4 col-sm-12 col-xs-12 col-md-6 text-left">
-                  <div className="m-1 border-top border-dark border-2">
+                  <div className="m-1 border-top border-dark border-3">
                     <br />
                     <h3>Global Bookings</h3>
                     <br />
@@ -241,9 +411,9 @@ const Homepage = () => {
                 </div>
 
                 <div className="col-lg-4 col-sm-12 col-xs-12 col-md-6 text-left">
-                  <div className="m-1 border-top border-dark border-2">
+                  <div className="m-1 border-top border-dark border-3">
                     <br />
-                    <h3>Systems & Processes</h3>
+                    <h3>Internal Systems & Processes</h3>
                     <br />
                     <p>
                       Our SaaS platform has everything covered for your business
@@ -252,7 +422,7 @@ const Homepage = () => {
                   </div>
                 </div>
                 <div className="col-lg-4 col-sm-12 col-xs-12 col-md-6 text-left">
-                  <div className="m-1 border-top border-dark border-2">
+                  <div className="m-1 border-top border-dark border-3">
                     <div>
                       <br />
                       <h3>Growth & Revenues</h3>
@@ -267,7 +437,7 @@ const Homepage = () => {
                 </div>
 
                 <div className="">
-                  <div className="container mt-3 mb-0  ">
+                  <div className="container my-3 ">
                     {/* <div className="row  border-bottom border-dark border-3 pb-5 bg-primary"> */}
                     <div className="row   ">
                       <div className="col-lg-4"></div>
@@ -399,38 +569,32 @@ const Homepage = () => {
         </div>
 
         <div className="testimonial-section  body-partners-master">
-          <div className=" pt-1">
+          <div className=" pt-3">
             <br />
             <br />
             <br />
-            {/* <div className="container border-top border-dark border-2"> */}
-            <div className="container ">
-              <div className="row ">
-                <div className="col-lg-7 d-flex flex-column justify-content-between ">
-                  <div className=" ">
+            <div className="container border-top border-dark border-3">
+              <div className="row">
+                <div className="col-lg-7 d-flex flex-column justify-content-between">
+                  <div className=" border-bottom border-dark border-3">
                     <br />
-                    <h4>
+                    <h3>
                       “We went from managing 3,000 sq ft to 50,000+ sq ft in the
                       most efficient and seamless manner with tech, processes,
                       data analytics, customer & employee management and due to
                       an extraordinary extended team like WoNo which integrated
                       with us and had no demands!”
-                    </h4>
-                    {/* <br /> */}
-                    {/* <br /> */}
+                    </h3>
+                    <br />
+                    <br />
                   </div>
-                  {/* <div>
-                    <div className=" border-top border-dark border-2 customWidth bg-danger">
-                      a div
-                    </div>
-                  </div> */}
-                  <div className="">
+                  <div>
                     <h4 className="my-2">Kashif Shaikh</h4>
                     <p className="m-0">Co-founder & COO</p>
                     <p>BIZ Nest, Goa India </p>
                   </div>
                 </div>
-                <div className="col-lg-5 mt-3 ">
+                <div className="col-lg-5 mt-3">
                   <img
                     src={BiznestTestimonial}
                     alt=""
@@ -451,7 +615,7 @@ const Homepage = () => {
               <h2>GROW YOUR BUSINESS WITH US</h2>
               <br />
 
-              <p className="">
+              <p>
                 We have you covered across … build website, manage bookings,
                 sets processes, HR support, task management, ticket management,
                 marketing, generating leads, accounting, finance, customer
@@ -481,4 +645,4 @@ const Homepage = () => {
   );
 };
 
-export default Homepage;
+export default LeadsPage;

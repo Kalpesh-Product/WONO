@@ -455,6 +455,11 @@ li.p-dropdown-item {
     display: flex;
     /* or block, depending on your layout needs */
   }
+
+  .wono-text-spacing {
+    padding-left: 7rem;
+    padding-right: 7rem;
+  }
 }
 
 /* Display mobile layout on smaller screens */
@@ -462,5 +467,10 @@ li.p-dropdown-item {
   .mobile-screen {
     display: block;
     /* or flex, if you want them in a row */
+  }
+
+  .wono-text-spacing {
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 }
