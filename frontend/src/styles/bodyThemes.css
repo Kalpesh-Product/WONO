@@ -61,6 +61,7 @@
     grid-template-columns: 40% 1fr;
     background-color: rgb(86, 204, 255);
     padding: 2rem;
+    gap: 1rem;
 }
 
 .themePage-featured-grid-1 {

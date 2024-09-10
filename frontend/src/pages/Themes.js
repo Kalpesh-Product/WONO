@@ -118,7 +118,7 @@ const Themes = () => {
                                 ))}
                             </div>
                             <div className="themePage-website-butt">
-                                <button>Get started</button>
+                                <button className='get-started-submit-button'>Get started</button>
                             </div>
                         </div>
                     </div>
