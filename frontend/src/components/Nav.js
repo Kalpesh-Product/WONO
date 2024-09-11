@@ -149,7 +149,7 @@ const NavBar = () => {
           <Link className="custom-offcanvas-link" to="#" onClick={handleClose}>
             Capital
           </Link>
-          <Link className="custom-offcanvas-link" to="#" onClick={handleClose}>
+          <Link className="custom-offcanvas-link" to="/themes" onClick={handleClose}>
             Themes
           </Link>
           <Link
