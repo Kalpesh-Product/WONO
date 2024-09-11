@@ -315,7 +315,7 @@ const LeadsPage = () => {
         </div>
 
         <div className="organic-leads-section   container wono-text-spacing spaceBetweenSections fontPoppinsRegular">
-          <br />
+          {/* <br /> */}
           <br />
           <h2 className="googleSheetsHeading">
             Our core focus is to generate ORGANIC LEADS!
@@ -484,9 +484,10 @@ const LeadsPage = () => {
           </div>
         </div>
 
-        <div className="google-sheets-section fontPoppinsRegular spaceBetweenSections">
+        {/* <div className="google-sheets-section fontPoppinsRegular spaceBetweenSections"> */}
+        <div className="google-sheets-section fontPoppinsRegular ">
           <div>
-            <div className="py-4 mt-2 wono-text-spacing ">
+            <div className="py-4  wono-text-spacing ">
               <h2 className="googleSheetsHeading">
                 Automated Google LEAD SHEET!
               </h2>
@@ -494,7 +495,7 @@ const LeadsPage = () => {
                 Never miss any leads generated from our platform.
               </h2>
             </div>
-            <div className="organic-leads-images-section wono-text-spacing topSpaceBetweenSections">
+            <div className="organic-leads-images-section wono-text-spacing spaceBetweenSections">
               <img
                 src={GoogleSheetsImage}
                 alt=""
