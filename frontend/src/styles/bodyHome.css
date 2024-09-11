@@ -230,33 +230,12 @@
         background-color: rgb(10, 169, 239);
         padding: 0.5rem 2rem 0.5rem 2rem;
         color: black;
-        border-radius: 5px;
+        border-radius: 30px;
         border: none;
         font-family: Popins-Regular;
         cursor: pointer;
     }
 
-    .home-section-register-button {
-
-        width: 100%;
-
-        margin: 0;
-
-        background-color: yellow;
-
-        padding: 0.5rem 2rem 0.5rem 2rem;
-
-        color: black;
-
-        border-radius: 5px;
-
-        border: none;
-
-        font-family: Popins-Regular;
-
-        cursor: pointer;
-
-    }
 
     .background-div {
         height: 100%;
@@ -282,6 +261,10 @@
         text-align: center;
         padding: 1rem;
         font-family: Popins-Medium;
+        
+    }
+    .home-desc span {
+     font-size: 1rem;     
     }
 
     .form-card {
@@ -959,7 +942,7 @@
     }
 
     .website-panel-container {
-        padding: 0.5rem;
+        padding: 2rem;
     }
 
     .website-sidebar {
@@ -994,7 +977,19 @@
     }
 
     .website-panel-header {
-        position: sticky;
+        text-align: left;
+    }
+    .website-panel-header h2{
+        font-size: 2rem;
+        text-align: left;
+    }
+    .website-panel-header h3{
+        font-size: 1.5rem;
+        text-align: left;
+    }
+    .website-panel-header p{
+        font-size: 1.2rem;
+        text-align: left;
     }
 
     .website-sidebar-header {

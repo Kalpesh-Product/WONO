@@ -72,3 +72,10 @@
 .wono-gray-background{
     background-color: #f4f4f4;
 }
+.get-started-main-button{
+    background-color: black;
+    color: white;
+    padding: 0.5rem 2rem;
+    border-radius: 30px;
+    margin: 0;
+}

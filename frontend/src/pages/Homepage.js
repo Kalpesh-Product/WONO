@@ -394,7 +394,7 @@ const Homepage = () => {
                     </div>
                   ))}
                 </div>
-                <Link to="/themes">View more</Link>
+                <Link onClick={()=>window.scrollTo({ top: 0, behavior: "smooth" })} to="/themes">View more</Link>
               </div>
             </div>
           </div>
