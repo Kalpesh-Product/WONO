@@ -132,7 +132,7 @@
     margin-bottom: 4rem;
 }
 .themePage-website-header{
-    padding-right: 50%;
+    padding-right: 30%;
     width: 100%;
     text-align: left;
 }
@@ -199,8 +199,8 @@
     justify-content: center;
     height: 70vh;
     padding: 0 7rem;
+    background-color: rgb(153, 221, 255);
 }
-
 .themePage-website-success{
     display: flex;
     width: 100%;

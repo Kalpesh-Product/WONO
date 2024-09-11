@@ -69,7 +69,7 @@ const NavBar = () => {
             onClick={() => changeActiveTab("capital")}>
             Capital
           </Link>
-          <Link to="#" className={activeTab === "Contact" ? "active" : ""}>
+          <Link to="/themes" className={activeTab === "Theme" ? "active" : ""}>
             Theme
           </Link>
           <Link to="/leads" className={activeTab === "Leads" ? "active" : ""}>

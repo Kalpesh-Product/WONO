@@ -10,8 +10,11 @@ import CoWorkingImage_2 from "../assets/WONO_images/img/website-builder/new-layo
 import CoWorkingImage_3 from "../assets/WONO_images/img/website-builder/new-layout/co-working-3.png";
 import Featured from "../assets/WONO_images/img/website-builder/new-layout/featured/featured-1.png";
 import Boutique from "../assets/WONO_images/img/website-builder/new-layout/boutique.png";
+import { useNavigate } from 'react-router-dom';
 
 const Themes = () => {
+
+    const navigate = useNavigate();
 
     const themeImages = [
         { src: CafeImage, alt: "Cafe Image" },
@@ -66,7 +69,7 @@ const Themes = () => {
                     <div className="themePage-content-grid mt-3">
                         {themeImages.map((image, index) => (
                             <div className="theme-grid" key={index}>
-                                <img src={image.src} alt={image.alt} />
+                                <img onClick={()=>navigate('/themes/products')} src={image.src} alt={image.alt} />
                             </div>
                         ))}
                     </div>
@@ -149,7 +152,7 @@ const Themes = () => {
                         </div>
                     </div>
 
-                    <div className="themePage-website-success-section wono-gray-background ">
+                    <div className="themePage-website-success-section">
                         <div className="themePage-website-success ">
                             <h1>Tomorrow's success starts today</h1>
                             <div>
