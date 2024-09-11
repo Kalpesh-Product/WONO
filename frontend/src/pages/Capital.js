@@ -25,6 +25,7 @@ const Capital = () => {
             <img src='https://cdn.sanity.io/images/q8bht0jl/production/231a71aafbef445f1f288a4af09ab3478ce36adf-864x1151.jpg?auto=format&fit=max&q=100&w=432' alt='capital-img-2'>
             </img>
         </div>
+        <div className='plus-icon'>+</div>
         <p><b>Consolidate Your Capital Management</b><span>with seamless, flexible and secure banking solutions</span></p>
        </div>
        <div className='cards-with-text'>
@@ -33,6 +34,7 @@ const Capital = () => {
             <img src='https://cdn.sanity.io/images/q8bht0jl/production/a3a1a5ef1c4d2a1d5b61cb69788ad0e44d60c21f-696x928.jpg?auto=format&fit=max&q=100&w=348' alt='capital-img-2'>
             </img>
         </div>
+        <div className='plus-icon'>+</div>
         <p><b>Access 50+ Services</b><span>that removes friction from fund management for venture funds, rolling funds and syndicates.</span></p>
        </div>
        <div className='cards-with-text'>
@@ -41,11 +43,25 @@ const Capital = () => {
             <img src='https://cdn.sanity.io/images/q8bht0jl/production/c7fea715cb9887d72855b536004d6a464f2a5b2c-864x1151.jpg?auto=format&fit=max&q=100&w=432' alt='capital-img-2'>
             </img>
         </div>
+        <div className='plus-icon'>+</div>
         <p><b>Modern cab tables for high-growth companies</b><span>Unmatched automations turn equity into an advantage.</span></p>
        </div>
-
-
     </div>
+    <div className='capital-big-text'>
+        <h1>Our software suite amplifies opportunity for
+venture, private equity firms and debt firms,
+regardless of stage or provider and helps you
+secure the accurate INVESTOR!</h1>
+    </div>
+    <div className='three-card-images'>
+        <img className='card-img-1' src='https://media.istockphoto.com/id/660743390/photo/angel-investor.jpg?s=612x612&w=0&k=20&c=bMCsPyNz0LLMVYmFh0Kn2f0prRikRbjyNzc9dfvjGcY=' alt='card-img-1'></img>
+        <img className='card-img-1' src='https://assets.smfgindiacredit.com/sites/default/files/Venture-Capital.jpg?VersionId=YDGq4VyQQAdW2x57A5ucusQkZbmffKwh' alt='card-img-2'></img>
+        <img className='card-img-1' src='https://www.techfunnel.com/wp-content/uploads/2021/07/debt-financing.png' alt='card-img-3'></img>
+    </div>
+    <div className='big-end-image'>
+        <img src='https://assets.startbootstrap.com/img/screenshots/templates/sb-admin.png' alt='end-image'></img>
+    </div>
+
     </>
 
   )
