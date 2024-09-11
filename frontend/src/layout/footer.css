@@ -11,14 +11,12 @@ footer {
   justify-content: space-between;
   padding: 0 7rem;
 }
-.footer-master *{
-  font-family: Popins-Regular;
-}
 
 .footer-container a {
   text-decoration: none;
   font-size: 14px;
   color: white;
+  font-family: Popins-Regular;
 }
 
 .footer-container a:hover {
@@ -41,6 +39,7 @@ footer {
   flex-direction: column;
   padding: 2rem 0;
   text-transform: uppercase;
+  font-family: Popins-Regular;
 }
 
 .footer-section-1 {
