@@ -402,7 +402,6 @@ const Homepage = () => {
         </div>
 
         <div className="testimonial-section  body-partners-master">
-        <hr />
           <div className=" pt-1">
             <br />
             <br />

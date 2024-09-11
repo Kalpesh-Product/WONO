@@ -49,9 +49,7 @@
     width: 100%;
     height: 100vh;
     position: relative;
-    padding: 0.7rem;
-    padding-left: 7rem;
-    padding-right: 7rem;
+    padding: 0.3rem 7.3rem;
 }
 
 .background-div {
@@ -103,7 +101,7 @@
     font-family: Popins-Regular;
     color: white;
     margin-bottom: 2.5rem;
-    padding: 0.5rem;
+    padding: 1rem 0.5rem 2.5rem 0.5rem;
     align-items: center;
 }
 
@@ -121,7 +119,7 @@
     margin: 0;
     background-color: rgb(13, 110, 253);
     /* padding: 0.5rem 2rem 0.5rem 2rem; */
-    padding: 1.5rem;
+    padding: 1rem 1.5rem;
     color: white;
     border-radius: 4rem;
     border: none;
@@ -796,7 +794,7 @@
 
 .website-panel-container {
     padding: 4rem 7.5rem 4rem 7.5rem;
-    background-color: rgb(255, 255, 255) !important;
+    background-color: #e9f9ff;
     color: black;
     margin: 2rem 0rem 0 0;
 
@@ -909,7 +907,7 @@
     grid-template-columns: 50% 1fr;
     padding: 2rem 0;
     gap: 2rem;
-    /* background-color: white; */
+
     margin-bottom: 20px;
 }
 
