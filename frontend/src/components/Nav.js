@@ -1,36 +1,40 @@
 // NavBar.js
-import React, { useContext, useState } from 'react';
-import { UserContext } from './UserContext';
-import { useNavigate } from 'react-router-dom';
-import Offcanvas from 'react-bootstrap/Offcanvas';
-import { Link } from 'react-router-dom';
-import axios from 'axios';
-import '../styles/componentStyle.css';
-import WonoLogo from '../assets/WONO_images/img/WONO_LOGO_white _TP.png';
+import React, { useContext, useState } from "react";
+import { UserContext } from "./UserContext";
+import { useNavigate } from "react-router-dom";
+import Offcanvas from "react-bootstrap/Offcanvas";
+import { Link } from "react-router-dom";
+import axios from "axios";
+import "../styles/componentStyle.css";
+import WonoLogo from "../assets/WONO_images/img/WONO_LOGO_white _TP.png";
 
 const NavBar = () => {
   const navigate = useNavigate();
   const { user, setUser } = useContext(UserContext);
   const [show, setShow] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
-  const [activeTab,setActiveTab] = useState('Home');
+  const [activeTab, setActiveTab] = useState("Home");
 
-  const changeActiveTab = (activeTab)=>{
+  const changeActiveTab = (activeTab) => {
     setActiveTab(activeTab);
-  }
+  };
 
   const handleLogout = async () => {
     try {
-      await axios.post('http://localhost:5000/logout', {}, { withCredentials: true });
+      await axios.post(
+        "http://localhost:5000/logout",
+        {},
+        { withCredentials: true }
+      );
       setUser(null); // Clear the user state
-      navigate('/home');
+      navigate("/home");
     } catch (error) {
-      console.error('Error logging out:', error);
+      console.error("Error logging out:", error);
     }
   };
 
   const handleRegister = () => {
-    navigate('/register');
+    navigate("/register");
     setShow(false);
   };
 
@@ -41,11 +45,16 @@ const NavBar = () => {
     <>
       <nav className="custom-navbar">
         <div className="custom-navbar-logo">
-          <img style={{ cursor: 'pointer' }} onClick={() => { 
-            navigate('/'); 
-            changeActiveTab('Home') 
-            window.scrollTo({ top: 0, behavior: 'smooth' })
-            }} src={WonoLogo} alt='logo' />
+          <img
+            style={{ cursor: "pointer" }}
+            onClick={() => {
+              navigate("/");
+              changeActiveTab("Home");
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }}
+            src={WonoLogo}
+            alt="logo"
+          />
         </div>
         <div className="custom-navbar-menu nav-tabss">
           <Link to='/services' className={activeTab === 'Services'? 'active':''} onClick={()=>changeActiveTab('Services')}>SaaS</Link>
@@ -55,24 +64,42 @@ const NavBar = () => {
           <Link to='/career'  className={activeTab === 'Career'? 'active':''} onClick={()=>changeActiveTab('Career')}>Career</Link>
          
           {user ? (
-            <Link to={'/dashboard' } className='active'>Dashboard</Link>
-          ) : (null)}
+            <Link to={"/dashboard"} className="active">
+              Dashboard
+            </Link>
+          ) : null}
         </div>
         <div className="custom-navbar-menu">
           {user ? (
             <div className="user-profile">
-              <div className="profile-container" onClick={() => setDropdownOpen(!dropdownOpen)}>
-                <img src={user.picture} alt={user.name} className="profile-image" />
+              <div
+                className="profile-container"
+                onClick={() => setDropdownOpen(!dropdownOpen)}>
+                <img
+                  src={user.picture}
+                  alt={user.name}
+                  className="profile-image"
+                />
                 <span>{user.name ? user.name : user.email}</span>
-                <div className={`dropdown-menu ${dropdownOpen ? 'show' : ''}`}>
+                <div className={`dropdown-menu ${dropdownOpen ? "show" : ""}`}>
                   <button onClick={handleLogout}>Logout</button>
                 </div>
               </div>
             </div>
           ) : (
-            <div style={{display:'flex', gap:'20px', paddingRight:'6rem'}}>
-              <Link  onClick={()=>window.scrollTo({ top: 0, behavior: 'smooth' })} to='/login' className='login-button'>SIGN IN</Link>
-              <Link  onClick={()=>window.scrollTo({ top: 0, behavior: 'smooth' })} className='register-button' to='/register'>SIGN UP</Link>
+            <div style={{ display: "flex", gap: "20px", paddingRight: "6rem" }}>
+              <Link
+                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+                to="/login"
+                className="login-button">
+                SIGN IN
+              </Link>
+              <Link
+                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+                className="register-button"
+                to="/register">
+                SIGN UP
+              </Link>
             </div>
           )}
         </div>
@@ -81,32 +108,78 @@ const NavBar = () => {
         </div>
       </nav>
 
-      <Offcanvas show={show} onHide={handleClose} placement="start" backdrop="true" className="custom-offcanvas">
+      <Offcanvas
+        show={show}
+        onHide={handleClose}
+        placement="start"
+        backdrop="true"
+        className="custom-offcanvas">
         <Offcanvas.Header closeButton>
           <Offcanvas.Title>Menu</Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
-          <Link className="custom-offcanvas-link" to='/' onClick={handleClose}>Home</Link>
-          <Link className="custom-offcanvas-link" to='/services' onClick={handleClose}>SaaS</Link>
-          <Link className="custom-offcanvas-link" to='/career' onClick={handleClose}>Career</Link>
-          <Link className="custom-offcanvas-link" to='/contact' onClick={handleClose}>Contact</Link>
+          {/* <Link className="custom-offcanvas-link" to="/" onClick={handleClose}>
+            Home
+          </Link> */}
+          <Link
+            className="custom-offcanvas-link"
+            to="/services"
+            onClick={handleClose}>
+            SaaS
+          </Link>
+          <Link className="custom-offcanvas-link" to="#" onClick={handleClose}>
+            Capital
+          </Link>
+          <Link className="custom-offcanvas-link" to="#" onClick={handleClose}>
+            Themes
+          </Link>
+          <Link
+            className="custom-offcanvas-link"
+            to="/leads"
+            onClick={handleClose}>
+            Leads
+          </Link>
+          <Link
+            className="custom-offcanvas-link"
+            to="/career"
+            onClick={handleClose}>
+            Career
+          </Link>
+          {/* <Link
+            className="custom-offcanvas-link"
+            to="/contact"
+            onClick={handleClose}>
+            Contact
+          </Link> */}
           {user ? (
-            <Link className="custom-offcanvas-link" to={'/dashboard'}>Dashboard</Link>
-          ) : (null)}
+            <Link className="custom-offcanvas-link" to={"/dashboard"}>
+              Dashboard
+            </Link>
+          ) : null}
           {user ? (
             <div className="user-profile">
-              <div className="profile-container" onClick={() => setDropdownOpen(!dropdownOpen)}>
-                <img src={user.picture} alt={user.name} className="profile-image" />
+              <div
+                className="profile-container"
+                onClick={() => setDropdownOpen(!dropdownOpen)}>
+                <img
+                  src={user.picture}
+                  alt={user.name}
+                  className="profile-image"
+                />
                 <span>{user.name}</span>
-                <div className={`dropdown-menu ${dropdownOpen ? 'show' : ''}`}>
+                <div className={`dropdown-menu ${dropdownOpen ? "show" : ""}`}>
                   <button onClick={handleLogout}>Logout</button>
                 </div>
               </div>
             </div>
           ) : (
             <>
-              <Link to='/login' onClick={handleClose} className='login-button'>SIGN IN</Link>
-              <button className='register-button' onClick={handleRegister}>SIGN UP</button>
+              <Link to="/login" onClick={handleClose} className="login-button">
+                SIGN IN
+              </Link>
+              <button className="register-button" onClick={handleRegister}>
+                SIGN UP
+              </button>
             </>
           )}
         </Offcanvas.Body>

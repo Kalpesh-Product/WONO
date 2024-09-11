@@ -42,12 +42,12 @@
 }
 .capital-cards-section{
     background-color: black;
-    padding-left: 10%;
+    padding-left: 8%;
     padding-right: 20%;
     padding-top: 10px;
     display: flex;
     flex-direction: row;
-    gap: 5px;
+    gap: 10px;
 }
 .cards-with-text h3{
     color: white;
@@ -66,6 +66,7 @@
 .capital-img img{
     width: 300px;
     border-radius: 5px;
+    height: 100%;
 }
 .plus-icon{
     color: white;

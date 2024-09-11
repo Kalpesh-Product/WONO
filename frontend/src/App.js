@@ -1,28 +1,27 @@
-import { Routes, Route } from 'react-router-dom';
-import AppStruct from './structure/AppStruct';
-import CompTest from './pages/CompTest';
-import Users from './pages/Users';
-import AppHeader from './layout/AppHeader';
-import AppFooter from './layout/AppFooter';
-import Services from './pages/Services';
-import LoginPage from './pages/LoginPage';
-import Homepage from './pages/Homepage';
-import Contact from './pages/Contact';
-import { UserProvider } from './components/UserContext';
-import Register from './pages/Register';
-import Career from './pages/Career';
-import Dashboard from './components/HomeDashboard/Dashboard';
-import JobDetails from './pages/JobDetails';
-import RegsiteredUsers from './pages/RegsiteredUsers';
-import TermsAndCondtions from './pages/TermsAndCondtions';
-import PrivacyAndPolicy from './pages/PrivacyAndPolicy';
-import TestingPage from './pages/TestingPage';
-import ForgotPassword from './pages/ForgotPassword';
-import NewPassword from './pages/NewPassword';
-import Themes from './pages/Themes';
-import Capital from './pages/Capital';
-
-
+import { Routes, Route } from "react-router-dom";
+import AppStruct from "./structure/AppStruct";
+import CompTest from "./pages/CompTest";
+import Users from "./pages/Users";
+import AppHeader from "./layout/AppHeader";
+import AppFooter from "./layout/AppFooter";
+import Services from "./pages/Services";
+import LoginPage from "./pages/LoginPage";
+import Homepage from "./pages/Homepage";
+import Contact from "./pages/Contact";
+import { UserProvider } from "./components/UserContext";
+import Register from "./pages/Register";
+import Career from "./pages/Career";
+import Dashboard from "./components/HomeDashboard/Dashboard";
+import JobDetails from "./pages/JobDetails";
+import RegsiteredUsers from "./pages/RegsiteredUsers";
+import TermsAndCondtions from "./pages/TermsAndCondtions";
+import PrivacyAndPolicy from "./pages/PrivacyAndPolicy";
+import TestingPage from "./pages/TestingPage";
+import ForgotPassword from "./pages/ForgotPassword";
+import NewPassword from "./pages/NewPassword";
+import Themes from "./pages/Themes";
+import LeadsPage from "./pages/LeadsPage";
+import Capital from "./pages/Capital"
 
 function App() {
   return (
