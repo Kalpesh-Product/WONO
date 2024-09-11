@@ -67,7 +67,7 @@ const Themes = () => {
                         <span className='mt-2'>Fully tech ready, integrated and responsive updated and latest WoNo themes</span>
                     </div>
 
-                    <div className="themePage-content-grid mt-3">
+                    <div className="themePage-content-grid">
                         {themeImages.map((image, index) => (
                             <div className="theme-grid" key={index}>
                                 <img onClick={()=>navigate('/themes/products')} src={image.src} alt={image.alt} />

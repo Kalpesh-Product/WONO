@@ -12,29 +12,33 @@
 }
 
 .themePage-header {
-    margin-bottom: 2rem;
-    padding: 2rem 7.5rem;
+    padding: 4rem 7.5rem 0 7.5rem;
 }
 .themePage-header h2{
     font-weight: bold;
     font-size: 3rem;
-    margin-bottom: 30px;
+    margin-bottom: 2rem;
 }
 .themePage-header p{
     font-weight: 600;
+    margin-bottom: 2rem;
 }
 
 .themePage-content-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
-    padding: 2rem 7.5rem;
+    padding: 2rem 7.5rem 2rem 7.5rem;
 }
 
 .themePage-content-header {
     text-align: left;
     padding: 0 7.5rem;
 }
+.themePage-content-header h3{
+    margin-bottom: 2rem;
+}
+
 
 .theme-grid {
     width: 100%;
@@ -44,7 +48,7 @@
 }
 
 .theme-grid img {
-    width: 120%;
+    width: 100%;
     height: 100%;
     object-fit: cover;
     transition: all 0.2s ease;
@@ -56,20 +60,20 @@
 }
 
 .themePage-featured {
-    height: 100vh;
+    height: 90vh;
     width: 100%;
     padding: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 2rem 7.5rem;
+    padding: 0 7.5rem;
 }
 
 .themePage-featured-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     background-color: white;
-    padding: 2rem;
+    /* padding: 2rem; */
     gap: 1rem;
     border-radius: 10px;
 }
@@ -82,44 +86,52 @@
 }
 
 .themePage-featured-header h1 {
-    font-size: 4rem;
+    font-size: 3rem;
     text-align: left;
     padding: 0 3rem;
-    margin-bottom: 40px;
+    padding-right: 15rem;
+    margin: 2rem 0
 }
 
 .themePage-featured-content {
     width: 100%;
-    /* padding-left: 3rem; */
+    padding-left: 3rem;
 }
 
 .themePage-featured-button {
     display: flex;
     justify-content: start;
+    align-items: start;
+    width: 100%;
+    padding-left: 3rem;
+}
+.themePage-featured-button button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    margin-left: 0 ;
 }
 
 .themePage-featured-grid-2 {
     width: 100%;
-    border-radius: 20px;
-    height: 400px;
+    height: 100%;
     position: relative;
 }
 
 .themePage-featured-grid-2 img {
     width: 100%;
     height: 100%;
-    border-radius: 20px;
-    object-fit: contain;
-    /* margin-bottom: 40px; */
-    /* object-position: bottom; */
+    object-fit: cover;
+    object-position: center;
 }
 .themePage-website-features{
     display: flex;
     align-items: start;
     justify-content: center;
     flex-direction: column;
-    padding: 4rem 7.5rem;
-    height: 100vh;
+    padding: 0 7.5rem;
+    height: 90vh;
 }
 .themePage-website-features-grid{
     display: grid;
@@ -129,7 +141,7 @@
 }
 .themePage-website-features h1{
     font-size: 4rem;
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
 }
 .themePage-website-header{
     padding-right: 30%;
@@ -139,11 +151,11 @@
 
 
 .themePage-website-support-section{
-    padding: 4rem 7rem;
+    padding: 0 7rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: 90vh;
     background-color: rgb(233, 249, 255);
 }
 .themePage-website-support{
@@ -157,6 +169,7 @@
 .themePage-website-support-grid{
     display: grid;
     grid-template-columns: repeat(3,1fr);
+    gap: 2rem;
     vertical-align: middle;
 }
 .themePage-website-support-header{
@@ -166,7 +179,8 @@
 }
 .themePage-website-support-header h1{
     font-size: 4rem;
-    margin-bottom: 4rem;
+
+    margin-bottom: 2rem;
 }
 
 .themePage-website-support-grid-1{
@@ -175,10 +189,11 @@
     align-items: start;
     justify-content: space-between;
     padding: 0.5rem;
+    border-top: 2px solid black;
     
 }
 .themePage-website-support-grid-1 h2{
-    margin-bottom: 2rem;
+    margin: 2rem 0
 }
 .themePage-website-support-grid-1 p{
     /* white-space: nowrap; */
@@ -199,7 +214,8 @@
     justify-content: center;
     height: 70vh;
     padding: 0 7rem;
-    background-color: rgb(153, 221, 255);
+    background-color: #0093E9;
+    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
 }
 .themePage-website-success{
     display: flex;

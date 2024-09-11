@@ -7,7 +7,7 @@
     src: url('../assets/WONO_images/img/fonts/Poppins-Regular.ttf');
   }
   .product-page-section{
-    height: 100vh;
+    height: 95vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -17,7 +17,7 @@
 .product-page{
     background-color: black;
     color:white;
-    padding: 2rem 7rem;
+    padding: 0 7rem;
 }
 .product-page *{
     color:white;
@@ -25,7 +25,7 @@
 }
 .product-page-grid{
     display: grid;
-    grid-template-columns: 40% 1fr;
+    grid-template-columns: 1fr 70%;
 }
 .product-page-grid-item h1{
     text-transform: uppercase;
@@ -77,13 +77,13 @@
 
 /* perks */
 .product-page-perks-section{
-    height: 100vh;
+    height: 90vh;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 .product-page-perks{
-    padding: 2rem 7rem;
+    padding: 0 7rem;
 }
 .product-page-perks-grid{
     display: grid;
@@ -101,22 +101,20 @@
 .product-page-perks-grid-2{
    display: grid;
    grid-template-columns: repeat(2,1fr);
-   padding: 1rem;
+   gap: 2rem;
 }
 .product-page-perks-grid-2-item-layout{
     display: grid;
     grid-template-columns: 10% 1fr;
 }
-.product-page-perks-description h4{
-    margin: 0;
-}
 
 .product-page-perks-grid-2-item-layout i{
     height: 100%;
-    padding: 0.5rem 0.5rem;
+    padding: 0.3rem 0rem 0 0rem;
 }
 .product-page-perks-description h4{
     margin-bottom: 1rem;
+    font-size: 1.1rem;
 }
 .product-page-perks-description{
     margin-bottom: 1rem;
@@ -149,14 +147,15 @@
     margin-bottom: 4rem;
 }
 .product-page-build-section{
-    background-color: black;
+    background-color: #0093E9;
+    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
 }
 .product-page-build-section *{
-   color: white;
+   color: black;
 }
 
 .product-page-build{
-    padding: 2rem 7rem;
+    padding: 4rem 7rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -164,8 +163,15 @@
 }
 .product-page-build span{
 font-size: 2rem;
-padding: 2rem 12rem;
+padding: 0rem 12rem 2rem 12rem;
 text-align: center;
 font-weight: bold;
+}
+
+.product-page-button{
+    background-color: black;
+    color: white;
+    border: none;
+    margin: 0 16px;
 }
 
