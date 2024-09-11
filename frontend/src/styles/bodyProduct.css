@@ -1,0 +1,8 @@
+.product-page-grid{
+    display: grid;
+    grid-template-columns: 40% 60%;
+}
+
+.product-page-image-container{
+    
+}
