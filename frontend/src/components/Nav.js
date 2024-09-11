@@ -57,31 +57,12 @@ const NavBar = () => {
           />
         </div>
         <div className="custom-navbar-menu nav-tabss">
-          <Link
-            to="/services"
-            className={activeTab === "Services" ? "active" : ""}
-            onClick={() => changeActiveTab("Services")}>
-            SaaS
-          </Link>
-          <Link
-            to="/capital"
-            className={activeTab === "Capital" ? "active" : ""}
-            onClick={() => changeActiveTab("capital")}>
-            Capital
-          </Link>
-          <Link to="/themes" className={activeTab === "Theme" ? "active" : ""}>
-            Theme
-          </Link>
-          <Link to="/leads" className={activeTab === "Leads" ? "active" : ""}>
-            Leads
-          </Link>
-          <Link
-            to="/career"
-            className={activeTab === "Career" ? "active" : ""}
-            onClick={() => changeActiveTab("Career")}>
-            Career
-          </Link>
-
+          <Link to='/services' className={activeTab === 'Services'? 'active':''} onClick={()=>changeActiveTab('Services')}>SaaS</Link>
+          <Link to='/capital' className={activeTab === 'capital'? 'active':''} onClick={()=>changeActiveTab('capital')}>Capital</Link>
+          <Link to='#' className={activeTab === 'Contact'? 'active':''}>Theme</Link>
+          <Link to='#' className={activeTab === 'Contact'? 'active':''}>Leads</Link>
+          <Link to='/career'  className={activeTab === 'Career'? 'active':''} onClick={()=>changeActiveTab('Career')}>Career</Link>
+         
           {user ? (
             <Link to={"/dashboard"} className="active">
               Dashboard
