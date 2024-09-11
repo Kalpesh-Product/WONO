@@ -5,7 +5,7 @@ const Capital = () => {
   return (
     <>
     <div className='headingContainer'>
-        <h1 className='capital-heading'>We held the daring build legandary Companies.</h1>
+        <h1 className='capital-heading'>We help the daring build legandary Companies.</h1>
         <button className='connect-with-us-btn'>CONNECT WITH US</button>
     </div>
     <div className='capital-cards-section'>
@@ -35,7 +35,7 @@ const Capital = () => {
             </img>
         </div>
         <div className='plus-icon'>+</div>
-        <p><b>Access 50+ Services</b><span> that removes friction from fund management for venture funds, rolling funds and syndicates.</span></p>
+        <p><b>Access 50+ Services</b><span> that removes friction from fund management for venture funds and syndicates.</span></p>
        </div>
        <div className='cards-with-text'>
         <h3>Equity Management</h3>
@@ -50,8 +50,7 @@ const Capital = () => {
     <div className='capital-big-text'>
         <h1>Our software suite amplifies opportunity for
 venture, private equity firms and debt firms,
-<br></br>
-<br></br>
+
 regardless of stage or provider and helps you
 secure the accurate INVESTOR!</h1>
     </div>
@@ -74,6 +73,7 @@ secure the accurate INVESTOR!</h1>
         </div>
     </div>
     <div className='capital-last-button-section'>
+        <h1>LET THE FUNDRAISE BEGIN!</h1>
         <button className='Connect-with-us-today-btn'>
             CONNECT WITH US TODAY
         </button>
