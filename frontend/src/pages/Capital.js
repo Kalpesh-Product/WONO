@@ -16,7 +16,7 @@ const Capital = () => {
             </img>
         </div>
         <div className='plus-icon'>+</div>
-        <p><b>Investor relations reimagined.</b><span>Leverage software to drive meaningful,actionable engagement.</span></p>
+        <p><b>Investor relations reimagined.</b><span> Leverage software to drive meaningful,actionable engagement.</span></p>
        </div>
 
        <div className='cards-with-text'>
@@ -26,7 +26,7 @@ const Capital = () => {
             </img>
         </div>
         <div className='plus-icon'>+</div>
-        <p><b>Consolidate Your Capital Management</b><span>with seamless, flexible and secure banking solutions</span></p>
+        <p><b>Consolidate Your Capital Management</b><span> with seamless, flexible and secure banking solutions</span></p>
        </div>
        <div className='cards-with-text'>
         <h3>Full Service Funds</h3>
@@ -35,7 +35,7 @@ const Capital = () => {
             </img>
         </div>
         <div className='plus-icon'>+</div>
-        <p><b>Access 50+ Services</b><span>that removes friction from fund management for venture funds, rolling funds and syndicates.</span></p>
+        <p><b>Access 50+ Services</b><span> that removes friction from fund management for venture funds, rolling funds and syndicates.</span></p>
        </div>
        <div className='cards-with-text'>
         <h3>Equity Management</h3>
@@ -44,12 +44,14 @@ const Capital = () => {
             </img>
         </div>
         <div className='plus-icon'>+</div>
-        <p><b>Modern cab tables for high-growth companies</b><span>Unmatched automations turn equity into an advantage.</span></p>
+        <p><b>Modern cab tables for high-growth companies</b><span> Unmatched automations turn equity into an advantage.</span></p>
        </div>
     </div>
     <div className='capital-big-text'>
         <h1>Our software suite amplifies opportunity for
 venture, private equity firms and debt firms,
+<br></br>
+<br></br>
 regardless of stage or provider and helps you
 secure the accurate INVESTOR!</h1>
     </div>
@@ -60,6 +62,11 @@ secure the accurate INVESTOR!</h1>
     </div>
     <div className='big-end-image'>
         <img src='https://assets.startbootstrap.com/img/screenshots/templates/sb-admin.png' alt='end-image'></img>
+    </div>
+    <div className='capital-last-button-section'>
+        <button className='Connect-with-us-today-btn'>
+            CONNECT WITH US TODAY
+        </button>
     </div>
 
     </>

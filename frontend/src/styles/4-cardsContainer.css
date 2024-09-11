@@ -58,7 +58,7 @@
     display: inline-block;
     min-width: 400px; /* Ensure the cards are wide enough to cause overflow */
     background-color: white;
-    padding: 20px;
+    padding: 30px 20px;
     border-radius: 10px;
     flex-shrink: 0;
     white-space: nowrap;
@@ -67,7 +67,7 @@
   
   .card-icon {
     width: 45px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
   }
   
   .card-icon img {
@@ -75,12 +75,14 @@
   }
   .card-title{
     margin-bottom: 20px;
+    font-weight: bold;
   }
   
   .Tickmark-text {
     display: flex;
     align-items: center;
     margin-bottom: 2px;
+    color: #363636;
   }
   
   .Tickmark-text img {
