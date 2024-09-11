@@ -248,19 +248,23 @@ const LeadsPage = () => {
             resources.
           </h2>
           <br />
-          <p className="automatedPlatformFontSize">
+          {/* <p className="automatedPlatformFontSize">
             Automated platform and our resources are FREE .. you pay only if you
             start paid ads!
-          </p>
-          <div>
+          </p> */}
+          {/* <div>
             <div className="">
               <div className="container my-3 ">
-                {/* <div className="row  border-bottom border-dark border-3 pb-5 bg-primary"> */}
+          
                 <div className="row   ">
-                  <div className="col-lg-4"></div>
-                  <div className="col-lg-4"></div>
-                  {/* <div className="col-lg-4 bg-danger"> */}
-                  <div className="col-lg-4  d-flex justify-content-center align-items-center">
+                  <div className="col-lg-9">
+                    <p className="automatedPlatformFontSize">
+                      Automated platform and our resources are FREE .. you pay
+                      only if you start paid ads!
+                    </p>
+                  </div>
+              
+                  <div className="col-lg-3  d-flex justify-content-center align-items-center">
                     <div className="">
                       <button
                         className="get-started-submit-button "
@@ -274,6 +278,35 @@ const LeadsPage = () => {
                 <br />
               </div>
             </div>
+          </div> */}
+
+          <div>
+            <div className="">
+              <div className="container my-3 pe-0">
+                {/* <div className="row  border-bottom border-dark border-3 pb-5 bg-primary"> */}
+                <div className="row ">
+                  <div className="col-lg-9 ps-0">
+                    <p className="automatedPlatformFontSize automatedPlatformPadding">
+                      Automated platform and our resources are FREE .. you pay
+                      only if you start paid ads!
+                    </p>
+                  </div>
+                  {/* <div className="col-lg-4"></div> */}
+                  {/* <div className="col-lg-4 bg-danger"> */}
+                  <div className="col-lg-3  d-flex justify-content-end align-items-center">
+                    <div className="">
+                      <button
+                        className="get-started-submit-button "
+                        onClick={handleRegister}>
+                        Get Started
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <br />
+                {/* <hr /> */}
+              </div>
+            </div>
           </div>
         </div>
 
@@ -284,8 +317,10 @@ const LeadsPage = () => {
         <div className="organic-leads-section   container wono-text-spacing spaceBetweenSections fontPoppinsRegular">
           <br />
           <br />
-          <h2>Our core focus is to generate ORGANIC LEADS!</h2>
-          <h2>With NO INVESTMENTS!</h2>
+          <h2 className="googleSheetsHeading">
+            Our core focus is to generate ORGANIC LEADS!
+          </h2>
+          <h2 className="googleSheetsHeading">With NO INVESTMENTS!</h2>
           <br />
           <div className="bottom-container row">
             <div className="checklist col-lg-4">
@@ -346,13 +381,16 @@ const LeadsPage = () => {
               {/* <div className="organic-leads-images-section  col-lg-8 "> */}
               <div className="image-grid d-flex flex-column justify-content-center align-items-center ">
                 {/* <div className="image-grid d-flex flex-column justify-content-center align-items-center "> */}
-                <div className="img-row-1  d-flex flex-row justify-content-around align-items-center w-100">
+                {/* <div className="img-row-1  d-flex flex-row justify-content-around align-items-center w-100"> */}
+                <div className="img-row-1  d-flex flex-row justify-content-between align-items-center w-100">
                   {/* <div className="img-row-1  d-flex flex-row justify-content-center align-items-center"> */}
                   <div className="top-first">
-                    <img
-                      src={GoogleMyBusinessImage}
-                      alt="tick-mark"
-                      className="WidthHeight1"></img>
+                    <div className="WidthHeight2">
+                      <img
+                        src={GoogleMyBusinessImage}
+                        alt="tick-mark"
+                        className="WidthHeight1"></img>
+                    </div>
                   </div>
                   <div className="top-second">
                     {" "}
@@ -376,7 +414,8 @@ const LeadsPage = () => {
                       className="WidthHeight1"></img>
                   </div>
                 </div>
-                <div className="img-row-2  d-flex flex-row justify-content-around align-items-center w-100">
+                {/* <div className="img-row-2  d-flex flex-row justify-content-around align-items-center w-100"> */}
+                <div className="img-row-2  d-flex flex-row justify-content-between align-items-center w-100">
                   {/* <div className="img-row-2  d-flex flex-row justify-content-center align-items-center"> */}
                   <div className="middle-first">
                     {" "}
@@ -407,7 +446,8 @@ const LeadsPage = () => {
                       className="WidthHeight1"></img>
                   </div>
                 </div>
-                <div className="img-row-3  d-flex flex-row justify-content-around align-items-center w-100">
+                {/* <div className="img-row-3  d-flex flex-row justify-content-around align-items-center w-100"> */}
+                <div className="img-row-3  d-flex flex-row justify-content-between align-items-center w-100">
                   {/* <div className="img-row-3  d-flex flex-row justify-content-center align-items-center"> */}
                   <div className="bottom-first">
                     {" "}
@@ -446,7 +486,7 @@ const LeadsPage = () => {
 
         <div className="google-sheets-section fontPoppinsRegular spaceBetweenSections">
           <div>
-            <div className="py-4 mt-2 wono-text-spacing">
+            <div className="py-4 mt-2 wono-text-spacing ">
               <h2 className="googleSheetsHeading">
                 Automated Google LEAD SHEET!
               </h2>
@@ -454,7 +494,7 @@ const LeadsPage = () => {
                 Never miss any leads generated from our platform.
               </h2>
             </div>
-            <div className="organic-leads-images-section">
+            <div className="organic-leads-images-section wono-text-spacing topSpaceBetweenSections">
               <img
                 src={GoogleSheetsImage}
                 alt=""
@@ -511,7 +551,7 @@ const LeadsPage = () => {
           <br />
           <div className="marketing-body">
             <div className="cards flexForCards">
-              <div className=" individual-card">
+              <div className=" individual-card individual-card-front">
                 <h2 className="fs-4">SEO tools</h2>
                 <p>
                   Use a complete suite of advanced SEO tools to optimize your
@@ -532,7 +572,7 @@ const LeadsPage = () => {
                   engage your audience, send promotions and increase traffic.
                 </p>
               </div>
-              <div className=" individual-card">
+              <div className=" individual-card individual-card-front">
                 <h2 className="fs-4">Analytics</h2>
                 <p>
                   Get reports with actionable insights and data about your site
@@ -553,7 +593,7 @@ const LeadsPage = () => {
                   logo generator.
                 </p>
               </div>
-              <div className=" individual-card">
+              <div className=" individual-card individual-card-front">
                 <h2 className="fs-4">Facebook & Instagram Ads</h2>
                 <p>
                   Launch targeted ad campaigns on Facebook and Instagram to
