@@ -60,8 +60,18 @@ secure the accurate INVESTOR!</h1>
         <img className='card-img-1' src='https://assets.smfgindiacredit.com/sites/default/files/Venture-Capital.jpg?VersionId=YDGq4VyQQAdW2x57A5ucusQkZbmffKwh' alt='card-img-2'></img>
         <img className='card-img-1' src='https://www.techfunnel.com/wp-content/uploads/2021/07/debt-financing.png' alt='card-img-3'></img>
     </div>
+    {/* Raise Frictionless fundressing for startup*/}
     <div className='big-end-image'>
+        <div className='frictionless-heading-with-btns'>
+            <h1><span>Raise</span> - Frictionless fundraising for startups</h1>
+            <div className='frictionless-btns'>
+                <button className='capital-start-for-free-btn btn1'>Start for free</button>
+                <button className='capital-start-for-free-btn btn2'>Contact sales</button>
+            </div>
+        </div>
+        <div className='big-end-dashboard-img'>
         <img src='https://assets.startbootstrap.com/img/screenshots/templates/sb-admin.png' alt='end-image'></img>
+        </div>
     </div>
     <div className='capital-last-button-section'>
         <button className='Connect-with-us-today-btn'>
