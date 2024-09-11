@@ -16,7 +16,7 @@ const Capital = () => {
             </img>
         </div>
         <div className='plus-icon'>+</div>
-        <p><b>Investor relations reimagined.</b><span>Leverage software to drive meaningful,actionable engagement.</span></p>
+        <p><b>Investor relations reimagined.</b><span> Leverage software to drive meaningful,actionable engagement.</span></p>
        </div>
 
        <div className='cards-with-text'>
@@ -26,7 +26,7 @@ const Capital = () => {
             </img>
         </div>
         <div className='plus-icon'>+</div>
-        <p><b>Consolidate Your Capital Management</b><span>with seamless, flexible and secure banking solutions</span></p>
+        <p><b>Consolidate Your Capital Management</b><span> with seamless, flexible and secure banking solutions</span></p>
        </div>
        <div className='cards-with-text'>
         <h3>Full Service Funds</h3>
@@ -35,7 +35,7 @@ const Capital = () => {
             </img>
         </div>
         <div className='plus-icon'>+</div>
-        <p><b>Access 50+ Services</b><span>that removes friction from fund management for venture funds, rolling funds and syndicates.</span></p>
+        <p><b>Access 50+ Services</b><span> that removes friction from fund management for venture funds, rolling funds and syndicates.</span></p>
        </div>
        <div className='cards-with-text'>
         <h3>Equity Management</h3>
@@ -44,12 +44,14 @@ const Capital = () => {
             </img>
         </div>
         <div className='plus-icon'>+</div>
-        <p><b>Modern cab tables for high-growth companies</b><span>Unmatched automations turn equity into an advantage.</span></p>
+        <p><b>Modern cab tables for high-growth companies</b><span> Unmatched automations turn equity into an advantage.</span></p>
        </div>
     </div>
     <div className='capital-big-text'>
         <h1>Our software suite amplifies opportunity for
 venture, private equity firms and debt firms,
+<br></br>
+<br></br>
 regardless of stage or provider and helps you
 secure the accurate INVESTOR!</h1>
     </div>
@@ -58,8 +60,23 @@ secure the accurate INVESTOR!</h1>
         <img className='card-img-1' src='https://assets.smfgindiacredit.com/sites/default/files/Venture-Capital.jpg?VersionId=YDGq4VyQQAdW2x57A5ucusQkZbmffKwh' alt='card-img-2'></img>
         <img className='card-img-1' src='https://www.techfunnel.com/wp-content/uploads/2021/07/debt-financing.png' alt='card-img-3'></img>
     </div>
+    {/* Raise Frictionless fundressing for startup*/}
     <div className='big-end-image'>
+        <div className='frictionless-heading-with-btns'>
+            <h1><span>Raise</span> - Frictionless fundraising for startups</h1>
+            <div className='frictionless-btns'>
+                <button className='capital-start-for-free-btn btn1'>Start for free</button>
+                <button className='capital-start-for-free-btn btn2'>Contact sales</button>
+            </div>
+        </div>
+        <div className='big-end-dashboard-img'>
         <img src='https://assets.startbootstrap.com/img/screenshots/templates/sb-admin.png' alt='end-image'></img>
+        </div>
+    </div>
+    <div className='capital-last-button-section'>
+        <button className='Connect-with-us-today-btn'>
+            CONNECT WITH US TODAY
+        </button>
     </div>
 
     </>
