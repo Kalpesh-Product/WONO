@@ -25,15 +25,7 @@
 
 
 .body-partners-master {
-    background-color: white;
-    /* height: 80vh; */
-    /* display: flex; */
-    /* align-items: center; */
-    /* justify-content: center; */
-    /* flex-direction: column; */
-    /* overflow: hidden; */
-    /* padding-left: 7rem; */
-    /* padding-right: 7rem; */
+    background-color: rgb(255, 255, 255);
 }
 
 .grow-your-business-color h2 {
@@ -66,7 +58,7 @@
     align-items: start;
     justify-content: flex-start;
     flex-direction: column;
-    padding: 6rem 6rem 0rem 7rem;
+    padding: 6rem 4.7rem 0rem 6.8rem;
     width: 100%;
 }
 
@@ -119,6 +111,7 @@
     color: white;
     /* padding: 0.5rem; */
     padding: 20px;
+    border: none;
 }
 
 .partner-button-space {

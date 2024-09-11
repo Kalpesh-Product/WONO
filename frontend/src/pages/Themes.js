@@ -1,5 +1,6 @@
 import React from 'react'
 import '../styles/bodyThemes.css'
+import '../styles/specialClasses.css'
 import CafeImage from "../assets/WONO_images/img/website-builder/new-layout/cafe.png";
 import Cafe_2 from "../assets/WONO_images/img/website-builder/new-layout/cafe-2.png";
 import Cafe_3 from "../assets/WONO_images/img/website-builder/new-layout/cafe-3.png";
@@ -70,7 +71,7 @@ const Themes = () => {
                         ))}
                     </div>
 
-                    <div className='themePage-featured'>
+                    <div className='themePage-featured wono-gray-background'>
                         <div className="themePage-featured-grid">
                             <div className="themePage-featured-grid-1">
                                 <div className="themePage-featured-header">
@@ -117,8 +118,42 @@ const Themes = () => {
                                     </div>
                                 ))}
                             </div>
-                            <div className="themePage-website-butt">
-                                <button className='get-started-submit-button'>Get started</button>
+                            <div className="themePage-website-button">
+                                <button style={{margin:'20px 20px 20px 0'}} className='get-started-submit-button'>Get started</button>
+                            </div>
+                        </div>
+                    </div>
+                   
+                    <div className="themePage-website-support-section">
+                        <div className="themePage-website-support">
+                            <div className="themePage-website-support-header">
+                                <h1>We're here for you</h1>
+                            </div>
+                            <div className="themePage-website-support-grid">
+                                <div className="themePage-website-support-grid-1">
+                                    <h2><b>Get answers</b></h2>
+                                    <p>Watch tutorials and read detailed articles in Wono help center</p>
+                                    <span>Go to Help Center →</span>
+                                </div>
+                                <div className="themePage-website-support-grid-1">
+                                    <h2><b>Contact Us</b></h2>
+                                    <p>Get support by chat or schedule a call with a Customer Care Expert</p>
+                                    <span>Chat With us →</span>
+                                </div>
+                                <div className="themePage-website-support-grid-1">
+                                    <h2><b>Hire a pro</b></h2>
+                                    <p>Get help at any stage -- from site creation to online growth</p>
+                                    <span>Browse all services →</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="themePage-website-success-section wono-gray-background ">
+                        <div className="themePage-website-success ">
+                            <h1>Tomorrow's success starts today</h1>
+                            <div>
+                            <button className='get-started-submit-button'>Get started</button>
                             </div>
                         </div>
                     </div>

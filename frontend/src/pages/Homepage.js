@@ -152,11 +152,11 @@ const Homepage = () => {
           </div>
           <div className="first-section-grid-item-2">
             <span className="home-desc">
-              We support Nomad Businesses for FREE! World’s Largest b2b SaaS
-              platform which supports Nomad Lifestyle across 25+ countries !
+              <span>We support Nomad Businesses for FREE!</span> <br/>
+              World’s Largest b2b SaaS platform which supports Nomad Lifestyle across 25+ countries !
             </span>
             <div className="home-section-buttons">
-              <div>
+              <div style={{width:'100%'}}>
                 <button
                   className="home-section-register-button"
                   onClick={handleRegister}>
@@ -393,13 +393,16 @@ const Homepage = () => {
                     </div>
                   ))}
                 </div>
-                <Link to="/themes">View all</Link>
+                <Link to="/themes">View more</Link>
+
               </div>
+       
             </div>
           </div>
         </div>
 
         <div className="testimonial-section  body-partners-master">
+        <hr />
           <div className=" pt-1">
             <br />
             <br />
