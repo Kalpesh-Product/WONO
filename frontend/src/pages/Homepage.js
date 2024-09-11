@@ -142,7 +142,7 @@ const Homepage = () => {
             <div className="black-overlay"></div>
           </div>
           <div className="first-section-grid-item-1">
-            <h2 className="home-main-title">
+            <h2 className="home-main-title ">
               <span className="w"> W</span>
               <span className="O">o</span>rld
               <span className="n">N</span>
@@ -152,11 +152,12 @@ const Homepage = () => {
           </div>
           <div className="first-section-grid-item-2">
             <span className="home-desc">
-              <span>We support Nomad Businesses for FREE!</span> <br/>
-              World’s Largest b2b SaaS platform which supports Nomad Lifestyle across 25+ countries !
+              <span>We support Nomad Businesses for FREE!</span> <br />
+              World’s Largest b2b SaaS platform which supports Nomad Lifestyle
+              across 25+ countries !
             </span>
             <div className="home-section-buttons">
-              <div style={{width:'100%'}}>
+              <div style={{ width: "100%" }}>
                 <button
                   className="home-section-register-button"
                   onClick={handleRegister}>
@@ -394,9 +395,7 @@ const Homepage = () => {
                   ))}
                 </div>
                 <Link to="/themes">View more</Link>
-
               </div>
-       
             </div>
           </div>
         </div>
@@ -453,7 +452,9 @@ const Homepage = () => {
         <div className="last-section body-partners-master w-100 ">
           <div className="pt-5 customMargin pb-5">
             <div className="grow-your-business-color p-3">
-              <h2><b>GROW YOUR BUSINESS WITH US</b></h2>
+              <h2>
+                <b>GROW YOUR BUSINESS WITH US</b>
+              </h2>
               <br />
 
               <p className="last-spacing smaller-font-for-para">
