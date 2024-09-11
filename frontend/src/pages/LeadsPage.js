@@ -51,7 +51,7 @@ import WebsiteImage from "../assets/leads_images/website-logo.png";
 import LinkedinImage from "../assets/leads_images/linkedin-logo.png";
 
 import FacebookImage from "../assets/leads_images/facebook-logo.png";
-import InstagramImage from "../assets/leads_images/facebook-logo.png";
+import InstagramImage from "../assets/leads_images/instagram-logo.png";
 import FreeIntegrationsImage from "../assets/leads_images/free-integrations-icon.png";
 
 import CrossPromotionsImage from "../assets/leads_images/cross-promotions-logo.png";
@@ -59,6 +59,11 @@ import DatabaseImage from "../assets/leads_images/database-icon.png";
 import WhatsappImage from "../assets/leads_images/whatsapp-icon.png";
 
 import RoiImage from "../assets/leads_images/roi.jpg";
+import CompleteViewImage from "../assets/leads_images/complete-view-image.jpg";
+import FinerPointsImage from "../assets/leads_images/finer-points-image.jpg";
+
+import "../styles/specialClasses.css";
+import "../styles/leadsPage.css";
 
 const LeadsPage = () => {
   const menuTitles = {
@@ -234,17 +239,17 @@ const LeadsPage = () => {
           <FourCardsComponents />
         </div> */}
 
-        <div className="leads-heading-section   wono-text-spacing">
+        <div className="leads-heading-section  wono-text-spacing fontPoppinsRegular">
           <br />
           <br />
-          <h2>
+          <h2 className="FFFF">
             Generate continues structured leads for your business with the
-            support of our automated pla orm and trained and experienced
+            support of our automated platform and trained and experienced
             resources.
           </h2>
           <br />
-          <p>
-            Automated pla orm and our resources are FREE .. you pay only if you
+          <p className="automatedPlatformFontSize">
+            Automated platform and our resources are FREE .. you pay only if you
             start paid ads!
           </p>
           <div>
@@ -272,12 +277,11 @@ const LeadsPage = () => {
           </div>
         </div>
 
-        <div className="leads-image-section  ">
+        <div className="leads-image-section  fontPoppinsRegular">
           <img src={LeadsImage} alt="" className="full-width-image" />
         </div>
 
-        {/* <div className="organic-leads-section  bg-warning container wono-text-spacing pb-4"> */}
-        <div className="organic-leads-section   container wono-text-spacing pb-4">
+        <div className="organic-leads-section   container wono-text-spacing spaceBetweenSections fontPoppinsRegular">
           <br />
           <br />
           <h2>Our core focus is to generate ORGANIC LEADS!</h2>
@@ -285,78 +289,154 @@ const LeadsPage = () => {
           <br />
           <div className="bottom-container row">
             <div className="checklist col-lg-4">
-              <p className="card-text">
-                <div className="Tickmark-text">
-                  <img src={TickmarkImg} alt="tick-mark"></img>
-                  Google My Business
-                </div>
-                <div className="Tickmark-text">
-                  <img src={TickmarkImg} alt="tick-mark"></img>
-                  Google Maps
-                </div>
-                <div className="Tickmark-text">
-                  <img src={TickmarkImg} alt="tick-mark"></img>
-                  Google Reviews
-                </div>
-                <div className="Tickmark-text">
-                  <img src={TickmarkImg} alt="tick-mark"></img>
-                  Google SEO
-                </div>
-                <div className="Tickmark-text">
-                  <img src={TickmarkImg} alt="tick-mark"></img>
-                  Website
-                </div>
-                <div className="Tickmark-text">
-                  <img src={TickmarkImg} alt="tick-mark"></img>
-                  LinkedIn
-                </div>
-                <div className="Tickmark-text">
-                  <img src={TickmarkImg} alt="tick-mark"></img>
-                  Facebook
-                </div>
-                <div className="Tickmark-text">
-                  <img src={TickmarkImg} alt="tick-mark"></img>
-                  Instagram
-                </div>
-                <div className="Tickmark-text">
-                  <img src={TickmarkImg} alt="tick-mark"></img>
-                  Free Integrations
-                </div>
-                <div className="Tickmark-text">
-                  <img src={TickmarkImg} alt="tick-mark"></img>
-                  Cross Promotions
-                </div>
-                <div className="Tickmark-text">
-                  <img src={TickmarkImg} alt="tick-mark"></img>
-                  Database
-                </div>
-                <div className="Tickmark-text">
-                  <img src={TickmarkImg} alt="tick-mark"></img>
-                  What's App
-                </div>
-              </p>
+              <div>
+                <p className="card-text">
+                  <div className="Tickmark-text">
+                    <img src={TickmarkImg} alt="tick-mark"></img>
+                    Google My Business
+                  </div>
+                  <div className="Tickmark-text">
+                    <img src={TickmarkImg} alt="tick-mark"></img>
+                    Google Maps
+                  </div>
+                  <div className="Tickmark-text">
+                    <img src={TickmarkImg} alt="tick-mark"></img>
+                    Google Reviews
+                  </div>
+                  <div className="Tickmark-text">
+                    <img src={TickmarkImg} alt="tick-mark"></img>
+                    Google SEO
+                  </div>
+                  <div className="Tickmark-text">
+                    <img src={TickmarkImg} alt="tick-mark"></img>
+                    Website
+                  </div>
+                  <div className="Tickmark-text">
+                    <img src={TickmarkImg} alt="tick-mark"></img>
+                    LinkedIn
+                  </div>
+                  <div className="Tickmark-text">
+                    <img src={TickmarkImg} alt="tick-mark"></img>
+                    Facebook
+                  </div>
+                  <div className="Tickmark-text">
+                    <img src={TickmarkImg} alt="tick-mark"></img>
+                    Instagram
+                  </div>
+                  <div className="Tickmark-text">
+                    <img src={TickmarkImg} alt="tick-mark"></img>
+                    Free Integrations
+                  </div>
+                  <div className="Tickmark-text">
+                    <img src={TickmarkImg} alt="tick-mark"></img>
+                    Cross Promotions
+                  </div>
+                  <div className="Tickmark-text">
+                    <img src={TickmarkImg} alt="tick-mark"></img>
+                    Database
+                  </div>
+                  <div className="Tickmark-text">
+                    <img src={TickmarkImg} alt="tick-mark"></img>
+                    What's App
+                  </div>
+                </p>
+              </div>
             </div>
-            {/* <div className="organic-leads-images-section bg-danger col-lg-8 "> */}
-            <div className="organic-leads-images-section  col-lg-8 ">
-              {/* <div className="image-grid d-flex flex-column justify-content-center align-items-center bg-secondary"> */}
+            <div className="organic-leads-images-section  col-lg-8 pe-0">
+              {/* <div className="organic-leads-images-section  col-lg-8 "> */}
               <div className="image-grid d-flex flex-column justify-content-center align-items-center ">
-                {/* <div className="img-row-1 bg-info d-flex flex-row justify-content-center align-items-center"> */}
-                <div className="img-row-1  d-flex flex-row justify-content-center align-items-center">
-                  <div className="top-first">logo 1</div>
-                  <div className="top-second">logo 2</div>
-                  <div className="top-third">logo 3</div>
+                {/* <div className="image-grid d-flex flex-column justify-content-center align-items-center "> */}
+                <div className="img-row-1  d-flex flex-row justify-content-around align-items-center w-100">
+                  {/* <div className="img-row-1  d-flex flex-row justify-content-center align-items-center"> */}
+                  <div className="top-first">
+                    <img
+                      src={GoogleMyBusinessImage}
+                      alt="tick-mark"
+                      className="WidthHeight1"></img>
+                  </div>
+                  <div className="top-second">
+                    {" "}
+                    <img
+                      src={GoogleMapsImage}
+                      alt="tick-mark"
+                      className="WidthHeight1"></img>
+                  </div>
+                  <div className="top-third">
+                    {" "}
+                    <img
+                      src={GoogleSeoImage}
+                      alt="tick-mark"
+                      className="WidthHeight1"></img>
+                  </div>
+                  <div className="top-fourth">
+                    {" "}
+                    <img
+                      src={FacebookImage}
+                      alt="tick-mark"
+                      className="WidthHeight1"></img>
+                  </div>
                 </div>
-                {/* <div className="img-row-2 bg-success d-flex flex-row justify-content-center align-items-center"> */}
-                <div className="img-row-2  d-flex flex-row justify-content-center align-items-center">
-                  <div className="top-first">logo 4</div>
-                  <div className="top-second">logo 5</div>
-                  <div className="top-third">logo 6</div>
+                <div className="img-row-2  d-flex flex-row justify-content-around align-items-center w-100">
+                  {/* <div className="img-row-2  d-flex flex-row justify-content-center align-items-center"> */}
+                  <div className="middle-first">
+                    {" "}
+                    <img
+                      src={WebsiteImage}
+                      alt="tick-mark"
+                      className="WidthHeight1"></img>
+                  </div>
+                  <div className="middle-second">
+                    {" "}
+                    <img
+                      src={GoogleReviewsImage}
+                      alt="tick-mark"
+                      className="WidthHeight1"></img>
+                  </div>
+                  <div className="middle-third">
+                    {" "}
+                    <img
+                      src={LinkedinImage}
+                      alt="tick-mark"
+                      className="WidthHeight1"></img>
+                  </div>
+                  <div className="middle-fourth">
+                    {" "}
+                    <img
+                      src={DatabaseImage}
+                      alt="tick-mark"
+                      className="WidthHeight1"></img>
+                  </div>
                 </div>
-                {/* <div className="img-row-3 bg-primary d-flex flex-row justify-content-center align-items-center"> */}
-                <div className="img-row-3  d-flex flex-row justify-content-center align-items-center">
-                  <div className="top-first">logo 7</div>
-                  <div className="top-second">logo 8</div>
-                  <div className="top-third">logo 9</div>
+                <div className="img-row-3  d-flex flex-row justify-content-around align-items-center w-100">
+                  {/* <div className="img-row-3  d-flex flex-row justify-content-center align-items-center"> */}
+                  <div className="bottom-first">
+                    {" "}
+                    <img
+                      src={InstagramImage}
+                      alt="tick-mark"
+                      className="WidthHeight1"></img>
+                  </div>
+                  <div className="bottom-second">
+                    {" "}
+                    <img
+                      src={FreeIntegrationsImage}
+                      alt="tick-mark"
+                      className="WidthHeight1"></img>
+                  </div>
+                  <div className="bottom-third">
+                    {" "}
+                    <img
+                      src={CrossPromotionsImage}
+                      alt="tick-mark"
+                      className="WidthHeight1"></img>
+                  </div>
+                  <div className="bottom-fourth">
+                    {" "}
+                    <img
+                      src={WhatsappImage}
+                      alt="tick-mark"
+                      className="WidthHeight1"></img>
+                  </div>
                 </div>
               </div>
             </div>
@@ -364,11 +444,15 @@ const LeadsPage = () => {
           </div>
         </div>
 
-        <div className="google-sheets-section ">
+        <div className="google-sheets-section fontPoppinsRegular spaceBetweenSections">
           <div>
             <div className="py-4 mt-2 wono-text-spacing">
-              <h2>Automated Google LEAD SHEET!</h2>
-              <h2>Never miss any leads generated from our platform.</h2>
+              <h2 className="googleSheetsHeading">
+                Automated Google LEAD SHEET!
+              </h2>
+              <h2 className="googleSheetsHeading">
+                Never miss any leads generated from our platform.
+              </h2>
             </div>
             <div className="organic-leads-images-section">
               <img
@@ -380,177 +464,208 @@ const LeadsPage = () => {
           </div>
         </div>
 
-        <div className="marketing h-5">Marketing</div>
-
-        {/* <div className="better-roi h-5 bg-warning wono-text-spacing "> */}
-        <div className="better-roi h-5  wono-text-spacing ">
-          <div className="container">
-            <div className="row ">
-              <div className="col-lg-6 ">
-                <img src={RoiImage} alt="" className="w-100" />
-              </div>
-              {/* <div className="col-lg-6 text-end bg-danger d-flex flex-column justify-content-center"> */}
-              <div className="col-lg-6 text-end  d-flex flex-column justify-content-center">
-                {/* <div className="bg-success"> */}
-                <div className="">
-                  <h2>Get better ROI from your marketing.</h2>
-                </div>
-                {/* <div className="bg-info"> */}
-                <div className="">
-                  <p>
-                    Discover all the ways that Analytics surfaces helpful
-                    insights for a complete understanding of your customers —
-                    from built-in automation and customized reporting, to
-                    cross-platform attribution and more.
-                  </p>
-                </div>
-              </div>
+        <div className="marketing-section  wono-text-spacing fontPoppinsRegular spaceBetweenSections">
+          <div className="marketing-header  pt-5">
+            <div>
+              <p>RUN & SCALE YOUR BUSINESS</p>
             </div>
-          </div>
-        </div>
-
-        <div className="complete-view h-5 wono-text-spacing">
-          {" "}
-          <div className="container">
-            <div className="row ">
-              {/* <div className="col-lg-6 text-end bg-danger d-flex flex-column justify-content-center"> */}
-              <div className="col-lg-6 text-end  d-flex flex-column justify-content-center">
-                {/* <div className="bg-success"> */}
-                <div className="">
-                  <h2>Get better ROI from your marketing.</h2>
-                </div>
-                {/* <div className="bg-info"> */}
-                <div className="">
-                  <p>
-                    Discover all the ways that Analytics surfaces helpful
-                    insights for a complete understanding of your customers —
-                    from built-in automation and customized reporting, to
-                    cross-platform attribution and more.
-                  </p>
-                </div>
+            {/* <div className="d-flex justify-content-between">
+              <div className="bg-secondary">
+                <h2>Marketing</h2>
               </div>
-              <div className="col-lg-6 ">
-                <img src={RoiImage} alt="" className="w-100" />
+              <div>
+                <button
+                  className="get-started-submit-button "
+                  onClick={handleRegister}>
+                  Get Started
+                </button>
               </div>
-            </div>
-          </div>
-        </div>
+            </div> */}
 
-        <div className="finer-points h-5 wono-text-spacing">
-          {" "}
-          <div className="container">
-            <div className="row ">
-              <div className="col-lg-6 ">
-                <img src={RoiImage} alt="" className="w-100" />
-              </div>
-              {/* <div className="col-lg-6 text-end bg-danger d-flex flex-column justify-content-center"> */}
-              <div className="col-lg-6 text-end  d-flex flex-column justify-content-center">
-                {/* <div className="bg-success"> */}
-                <div className="">
-                  <h2>Get better ROI from your marketing.</h2>
-                </div>
-                {/* <div className="bg-info"> */}
-                <div className="">
-                  <p>
-                    Discover all the ways that Analytics surfaces helpful
-                    insights for a complete understanding of your customers —
-                    from built-in automation and customized reporting, to
-                    cross-platform attribution and more.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="leads-call-to-action h-5">Leads Call To Action</div>
-
-        <div className="partners-section body-partners-master ">
-          {/* <div className="mt-5 container"> */}
-          <div className="m-0 container  w-100">
-            {/* First div (1/2) */}
-            <div className="">
-              <div className="customMargin_top">
-                <div>
-                  <h2>One Partner Platform,</h2>
-                  <h2>Infinite possibilities and opportunities!</h2>
-                </div>
-              </div>
-            </div>
-            <br />
-            {/* <div className="bg-info pt-3 m-5"> */}
-            {/* <div className="container  text-left customMargin_top"> */}
-            <div className="  text-left customMargin_top ">
-              <div className="row  border-bottom border-dark border-3 pb-5">
-                <div className="col-lg-4 col-sm-12 col-xs-12 col-md-6 text-left">
-                  <div className="m-1 border-top border-dark border-3">
-                    <br />
-                    <h3>Global Bookings</h3>
-                    <br />
-                    <p>
-                      Become a globally acceptable business where customers can
-                      book your offerings seamlessly and with great experience.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="col-lg-4 col-sm-12 col-xs-12 col-md-6 text-left">
-                  <div className="m-1 border-top border-dark border-3">
-                    <br />
-                    <h3>Internal Systems & Processes</h3>
-                    <br />
-                    <p>
-                      Our SaaS platform has everything covered for your business
-                      requirements and we customize ourselves as per your needs.
-                    </p>
-                  </div>
-                </div>
-                <div className="col-lg-4 col-sm-12 col-xs-12 col-md-6 text-left">
-                  <div className="m-1 border-top border-dark border-3">
-                    <div>
-                      <br />
-                      <h3>Growth & Revenues</h3>
-                      <br />
-                      <p>
-                        Our approach is based on data and analytics to help you
-                        make decisions which will grow your business without
-                        employee dependency.
-                      </p>
+            <div>
+              <div className="">
+                <div className="container my-3 pe-0">
+                  {/* <div className="row  border-bottom border-dark border-3 pb-5 bg-primary"> */}
+                  <div className="row ">
+                    <div className="col-lg-4 ps-0">
+                      <h2 className="fs-1">Marketing</h2>
                     </div>
-                  </div>
-                </div>
-
-                <div className="">
-                  <div className="container my-3 ">
-                    {/* <div className="row  border-bottom border-dark border-3 pb-5 bg-primary"> */}
-                    <div className="row   ">
-                      <div className="col-lg-4"></div>
-                      <div className="col-lg-4"></div>
-                      {/* <div className="col-lg-4 bg-danger"> */}
-                      <div className="col-lg-4  d-flex justify-content-center align-items-center">
-                        <div className="">
-                          <button
-                            className="get-started-submit-button "
-                            onClick={handleRegister}>
-                            Get Started
-                          </button>
-                        </div>
+                    <div className="col-lg-4"></div>
+                    {/* <div className="col-lg-4 bg-danger"> */}
+                    <div className="col-lg-4  d-flex justify-content-end align-items-center">
+                      <div className="">
+                        <button
+                          className="get-started-submit-button "
+                          onClick={handleRegister}>
+                          Get Started
+                        </button>
                       </div>
                     </div>
-                    <br />
-                    <br />
                   </div>
+                  {/* <br /> */}
+                  <hr />
                 </div>
               </div>
-              {/* <div className='four-cards-section' style={{ padding: "0", marginBottom: "-60px", marginTop: "20px" }}>
-                <FourCardsComponents />
-            </div> */}
             </div>
-            {/* </div> */}
           </div>
           <br />
-          <br />
+          <div className="marketing-body">
+            <div className="cards flexForCards">
+              <div className=" individual-card">
+                <h2 className="fs-4">SEO tools</h2>
+                <p>
+                  Use a complete suite of advanced SEO tools to optimize your
+                  site for search and increase your organic traffic.
+                </p>
+              </div>
+              <div className=" individual-card">
+                <h2 className="fs-4">Google Ads with WoNo</h2>
+                <p>
+                  Launch a Google Ads campaign to reach your site's target
+                  audience and appear high up in Google search results.
+                </p>
+              </div>
+              <div className=" individual-card">
+                <h2 className="fs-4">Email marketing</h2>
+                <p>
+                  Create and customize strong email marketing campaigns to
+                  engage your audience, send promotions and increase traffic.
+                </p>
+              </div>
+              <div className=" individual-card">
+                <h2 className="fs-4">Analytics</h2>
+                <p>
+                  Get reports with actionable insights and data about your site
+                  and marketing activities.
+                </p>
+              </div>
+              <div className=" individual-card">
+                <h2 className="fs-4">Google Business Profile</h2>
+                <p>
+                  Attract the right customers and boost credibility by managing
+                  your business’s presence on Google Maps, Search and more.
+                </p>
+              </div>
+              <div className=" individual-card">
+                <h2 className="fs-4">Logo Maker</h2>
+                <p>
+                  Create a custom logo for your brand in minutes with our AI
+                  logo generator.
+                </p>
+              </div>
+              <div className=" individual-card">
+                <h2 className="fs-4">Facebook & Instagram Ads</h2>
+                <p>
+                  Launch targeted ad campaigns on Facebook and Instagram to
+                  generate leads and drive traffic.
+                </p>
+              </div>
+              <div className=" individual-card">
+                <h2 className="fs-4">Marketing integrations</h2>
+                <p>
+                  Connect tools such as Google Analytics and Facebook Pixel and
+                  CAPI to get insights on site traffic, visitor behavior and
+                  more.
+                </p>
+              </div>
+              <div className=" individual-card">
+                <h2 className="fs-4">Social media marketing</h2>
+                <p>
+                  Design, schedule, and easily share your content across
+                  multiple platforms to boost engagement.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
+
+        <div className="better-roi-section  wono-text-spacing fontPoppinsRegular spaceBetweenSections">
+          {/* <div className="better-roi h-5  wono-text-spacing "> */}
+          <div className="container paddingRight0">
+            <div className="row ">
+              <div className="col-lg-6 ">
+                <img src={RoiImage} alt="" className="w-100" />
+              </div>
+              <div className="col-lg-6 text-start  d-flex flex-column justify-content-center pe-0">
+                {/* <div className="col-lg-6 text-end  d-flex flex-column justify-content-center"> */}
+                <div className="">
+                  {/* <div className=""> */}
+                  <h2 className="fs-1 fontPoppinsRegular">
+                    Get better ROI from your marketing.
+                  </h2>
+                </div>
+                <div className="">
+                  {/* <div className=""> */}
+                  <p className="pt-3">
+                    Discover all the ways that Analytics surfaces helpful
+                    insights for a complete understanding of your customers —
+                    from built-in automation and customized reporting, to
+                    cross-platform attribution and more.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="complete-view-section h-5 wono-text-spacing fontPoppinsRegular topSpaceBetweenSections">
+          {" "}
+          <div className="container pe-0">
+            <div className="row ">
+              <div className="col-lg-6 text-start  d-flex flex-column justify-content-center">
+                {/* <div className="col-lg-6 text-end  d-flex flex-column justify-content-center"> */}
+                <div className="">
+                  {/* <div className=""> */}
+                  <h2 className="fontSizeCompleteView fontPoppinsRegular">
+                    Get a complete view.
+                  </h2>
+                </div>
+                <div className="">
+                  {/* <div className=""> */}
+                  <p className="pt-3">
+                    Analytics helps you get a more complete understanding of how
+                    your customers engage with your business so you can deliver
+                    better experiences and drive results.
+                  </p>
+                </div>
+              </div>
+              <div className="col-lg-6 pe-0">
+                <img src={CompleteViewImage} alt="" className="w-100" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="finer-points-section h-5 wono-text-spacing fontPoppinsRegular bottomSpaceBetweenSections">
+          {" "}
+          <div className="container pe-0">
+            <div className="row ">
+              <div className="col-lg-6 text-start  d-flex flex-column justify-content-center">
+                {/* <div className="col-lg-6 text-end  d-flex flex-column justify-content-center"> */}
+                <div className="">
+                  {/* <div className=""> */}
+                  <h2 className="fontSizeCompleteView fontPoppinsRegular">
+                    The finer points.
+                  </h2>
+                </div>
+                <div className="">
+                  {/* <div className=""> */}
+                  <p className="pt-3">
+                    Analytics helps you understand how people use your sites and
+                    apps, so you can take action to improve their experience.
+                    Discover what Google Analytics can do by checking out the
+                    features listed below.
+                  </p>
+                </div>
+              </div>
+              <div className="col-lg-6 pe-0">
+                <img src={FinerPointsImage} alt="" className="w-100" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* <div className="leads-call-to-action h-5">Leads Call To Action</div> */}
 
         {/* <div
         className="backend-container-master"
@@ -599,7 +714,7 @@ const LeadsPage = () => {
         </div>
       </div> */}
 
-        <div
+        {/* <div
           className="website-container-master"
           style={{ backgroundColor: "black" }}>
           <div className="website-panel-container">
@@ -616,26 +731,7 @@ const LeadsPage = () => {
               </p>
             </div>
             <div className="website-panel">
-              {/* <div className="website-panel-sidebar">
-                            <div className="website-sidebar-header">
-                                <div className="website-sidebar-logo">
-                                    <img src={BiznestLogo} alt='' />
-                                </div>
-                            </div>
-
-                            <Nav id="website-sidebar" className="flex-column p-0 website-sidebar">
-                                {Object.keys(website_menus).map((key) => (
-                                    <Nav.Link
-                                        key={key}
-                                        onClick={() => handleWebMenuSelect(key)}
-                                        className={selectedMenu === key ? 'active' : ''}
-                                    >
-                                        {website_menus[key]}
-                                    </Nav.Link>
-                                ))}
-                            </Nav>
-
-                        </div> */}
+       
               <div
                 className={`website-panel-right ${
                   selectedId ? "modal-open" : ""
@@ -650,9 +746,9 @@ const LeadsPage = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
 
-        <div className="testimonial-section  body-partners-master">
+        {/* <div className="testimonial-section  body-partners-master">
           <div className=" pt-3">
             <br />
             <br />
@@ -691,21 +787,21 @@ const LeadsPage = () => {
             <br />
             <br />
           </div>
-        </div>
+        </div> */}
 
-        <div className="last-section body-partners-master w-100 ">
+        <div className="last-section body-partners-master w-100 fontPoppinsRegular">
           <div className="pt-5 customMargin pb-5">
             <div className="grow-your-business-color p-3">
-              <h2>GROW YOUR BUSINESS WITH US</h2>
+              <h2>
+                <b className="leadsCtafontSize">
+                  Now that’s how we generate continues leads for you!
+                </b>
+              </h2>
               <br />
 
-              <p>
-                We have you covered across … build website, manage bookings,
-                sets processes, HR support, task management, ticket management,
-                marketing, generating leads, accounting, finance, customer
-                support, fundraising, and any customized requirements for
-                managing your business to grow and become successful shall all
-                be delivered by WoNo.
+              <p className="last-spacing leadsCtaTextFont">
+                This takes a lot of effort, time and patience … need to start
+                soon!
               </p>
               <div className="partner-button-space">
                 <button
