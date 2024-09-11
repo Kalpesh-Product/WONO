@@ -18,6 +18,9 @@ footer {
   color: white;
   font-family: Popins-Regular;
 }
+.footer-copyright p{
+  font-family: Popins-Regular;
+}
 
 .footer-container a:hover {
   color: rgb(175, 175, 175);
