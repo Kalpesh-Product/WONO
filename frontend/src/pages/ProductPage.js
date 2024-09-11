@@ -6,8 +6,10 @@ import Cafe_3 from "../assets/WONO_images/img/website-builder/new-layout/cafe-3.
 import CoWorkingImage from "../assets/WONO_images/img/website-builder/new-layout/co-working.png";
 import TickmarkImg from "../assets/check.png"
 import '../styles/bodyProduct.css'
+import { useNavigate } from 'react-router-dom';
 
 const ProductPage = () => {
+  const navigate = useNavigate()
   return (
     <div>
       <div className='product-page-master'>
@@ -47,7 +49,7 @@ const ProductPage = () => {
                     <hr style={{ width: '35%' }} />
                   </div>
                   <div className="product-page-button-space">
-                    <button className='product-page-button'>Try theme</button>
+                    <button onClick={()=>navigate('/login')} className='product-page-button'>Try theme</button>
                   </div>
                   <div className="product-page-update-text">
                     <span>Last updated on Sep 11, 2024</span>

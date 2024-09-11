@@ -2,6 +2,7 @@ import React from 'react'
 import '../styles/bodyThemes.css'
 import '../styles/specialClasses.css'
 import CafeImage from "../assets/WONO_images/img/website-builder/new-layout/cafe.png";
+import BiznestImage from "../assets/WONO_images/img/products-images/biznestImage.png";
 import Cafe_2 from "../assets/WONO_images/img/website-builder/new-layout/cafe-2.png";
 import Cafe_3 from "../assets/WONO_images/img/website-builder/new-layout/cafe-3.png";
 import CoWorkingImage from "../assets/WONO_images/img/website-builder/new-layout/co-working.png";
@@ -17,7 +18,7 @@ const Themes = () => {
     const navigate = useNavigate();
 
     const themeImages = [
-        { src: CafeImage, alt: "Cafe Image" },
+        { src: BiznestImage, alt: "BiznestImage" },
         { src: CoWorkingImage, alt: "Co-Working Image" },
         { src: CoLivingImage, alt: "Co-Living Image" },
         { src: Boutique, alt: "Boutique Image" },
