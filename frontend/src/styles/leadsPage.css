@@ -1,0 +1,97 @@
+.WidthHeight1 {
+    max-width: 120px;
+    max-height: 120px;
+}
+
+/* .individual-card {
+    max-width: 200px;
+    max-height: 100px;
+}
+
+.flexForCards {
+    display: flex;
+    flex-wrap: wrap;
+} */
+
+
+.flexForCards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    /* Adds space between the cards */
+}
+
+.fontSizeCompleteView {
+    font-size: 90px;
+}
+
+.individual-card {
+    /* background-color: #f8f9fa; */
+    background-color: white;
+    /* Light background color for contrast */
+    /* border: 1px solid #ddd; */
+    /* border-radius: 10px; */
+    padding: 20px;
+    /* Adds padding inside the cards */
+    width: calc(33.33% - 20px);
+    /* Makes three cards fit per row with some spacing */
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+    /* Adds a slight shadow for visual appeal */
+    margin-bottom: 20px;
+    /* Space between rows */
+}
+
+.paddingRight0 {
+    padding-right: 0px !important;
+}
+
+.leadsCtafontSize {
+    font-size: 44px;
+}
+
+.leadsCtaTextFont {
+    font-size: 36px !important;
+}
+
+.automatedPlatformFontSize {
+    font-size: 18px;
+}
+
+.FFFF {
+    font-size: 2.45rem !important;
+}
+
+.spaceBetweenSections {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.topSpaceBetweenSections {
+    padding-top: 30px;
+
+}
+
+.bottomSpaceBetweenSections {
+
+    padding-bottom: 30px;
+}
+
+.googleSheetsHeading {
+    font-size: 44px;
+}
+
+
+
+/* Media query for phone view (max-width: 768px or smaller) */
+@media (max-width: 768px) {
+    .individual-card {
+        width: 100%;
+        /* Makes the cards stack on top of each other */
+    }
+
+    .flexForCards {
+        justify-content: center;
+        /* Center-aligns the cards on small screens */
+    }
+}
