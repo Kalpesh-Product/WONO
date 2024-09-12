@@ -77,10 +77,10 @@
     /* 44px / 16 */
 }
 
-.leadsCtaTextFont {
+/* .leadsCtaTextFont {
     font-size: 2.25rem !important;
-    /* 36px / 16 */
-}
+  
+} */
 
 .automatedPlatformFontSize {
     font-size: 1.125rem;
@@ -92,10 +92,10 @@
     /* 30px / 16 */
 }
 
-.FFFF {
+/* .FFFF {
     font-size: 2.6rem !important;
     line-height: 1.4;
-}
+} */
 
 .spaceBetweenSections {
     padding-top: 1.875rem;
@@ -202,6 +202,18 @@
     box-sizing: border-box;
 } */
 
+@media (min-width: 1025px) {
+    .FFFF {
+        font-size: 2.6rem !important;
+        line-height: 1.4;
+    }
+
+    .leadsCtaTextFont {
+        font-size: 2.25rem !important;
+
+    }
+}
+
 /* Media query for tablet view (max-width: 1024px or smaller) */
 @media (max-width: 1024px) {
     .individual-card {
@@ -222,7 +234,7 @@
     }
 
     .leadsCtaTextFont {
-        font-size: 1.75rem;
+        font-size: 1.25rem;
     }
 
     .automatedPlatformFontSize {
