@@ -2,6 +2,7 @@ import React from 'react'
 import '../styles/bodyThemes.css'
 import '../styles/specialClasses.css'
 import CafeImage from "../assets/WONO_images/img/website-builder/new-layout/cafe.png";
+import BiznestImage from "../assets/WONO_images/img/products-images/biznestImage.png";
 import Cafe_2 from "../assets/WONO_images/img/website-builder/new-layout/cafe-2.png";
 import Cafe_3 from "../assets/WONO_images/img/website-builder/new-layout/cafe-3.png";
 import CoWorkingImage from "../assets/WONO_images/img/website-builder/new-layout/co-working.png";
@@ -10,19 +11,22 @@ import CoWorkingImage_2 from "../assets/WONO_images/img/website-builder/new-layo
 import CoWorkingImage_3 from "../assets/WONO_images/img/website-builder/new-layout/co-working-3.png";
 import Featured from "../assets/WONO_images/img/website-builder/new-layout/featured/featured-1.png";
 import Boutique from "../assets/WONO_images/img/website-builder/new-layout/boutique.png";
+import { useNavigate } from 'react-router-dom';
 
 const Themes = () => {
 
+    const navigate = useNavigate();
+
     const themeImages = [
-        { src: CafeImage, alt: "Cafe Image" },
-        { src: CoWorkingImage, alt: "Co-Working Image" },
-        { src: CoLivingImage, alt: "Co-Living Image" },
-        { src: Boutique, alt: "Boutique Image" },
-        { src: CoWorkingImage_2, alt: "CoLivingImage_2" },
-        { src: CoWorkingImage_3, alt: "CoLivingImage_3" },
-        { src: Cafe_2, alt: "Cafe_2" },
-        { src: Cafe_3, alt: "Cafe_3" },
-    ];
+        { src: BiznestImage, alt: "BiznestImage", tag: "business" },
+        { src: CoWorkingImage, alt: "Co-Working Image", tag: "co-working" },
+        { src: CoLivingImage, alt: "Co-Living Image", tag: "co-living" },
+        { src: Boutique, alt: "Boutique Image", tag: "boutique" },
+        { src: CoWorkingImage_2, alt: "CoLivingImage_2", tag: "co-working" },
+        { src: CoWorkingImage_3, alt: "CoLivingImage_3", tag: "co-working" },
+        { src: Cafe_2, alt: "Cafe_2", tag: "cafe" },
+        { src: Cafe_3, alt: "Cafe_3", tag: "cafe" },
+      ];
 
     const themeWebsiteGridData = [
         {
@@ -63,10 +67,17 @@ const Themes = () => {
                         <span className='mt-2'>Fully tech ready, integrated and responsive updated and latest WoNo themes</span>
                     </div>
 
-                    <div className="themePage-content-grid mt-3">
+                    <div className="themePage-content-grid">
                         {themeImages.map((image, index) => (
                             <div className="theme-grid" key={index}>
-                                <img src={image.src} alt={image.alt} />
+                                <img
+                                    onClick={() => {
+                                        navigate('/themes/products', { state: { image } })
+                                        window.scrollTo({ top: 0, behavior: "smooth" })
+                                    }}
+                                    src={image.src}
+                                    alt={image.alt}
+                                />
                             </div>
                         ))}
                     </div>
@@ -94,7 +105,7 @@ const Themes = () => {
                                     </ul>
                                 </div>
                                 <div className="themePage-featured-button">
-                                    <button className='get-started-submit-button'>Get started</button>
+                                    <button className='get-started-main-button'>Get started</button>
                                 </div>
 
                             </div>
@@ -118,12 +129,13 @@ const Themes = () => {
                                     </div>
                                 ))}
                             </div>
-                            <div className="themePage-website-button">
-                                <button style={{margin:'20px 20px 20px 0'}} className='get-started-submit-button'>Get started</button>
+                            <div style={{ padding: 0 }} className="themePage-featured-button">
+                                <button
+                                    className='get-started-main-button'>Get started</button>
                             </div>
                         </div>
                     </div>
-                   
+
                     <div className="themePage-website-support-section">
                         <div className="themePage-website-support">
                             <div className="themePage-website-support-header">
@@ -149,11 +161,16 @@ const Themes = () => {
                         </div>
                     </div>
 
-                    <div className="themePage-website-success-section wono-gray-background ">
+                    <div className="themePage-website-success-section">
                         <div className="themePage-website-success ">
                             <h1>Tomorrow's success starts today</h1>
-                            <div>
-                            <button className='get-started-submit-button'>Get started</button>
+                            <div style={{
+                                padding: '4rem 0 0 0',
+                                alignItems: 'center',
+                                justifyContent: 'center',
+                                width: '45%'
+                            }} className='themePage-featured-button'>
+                                <button className='get-started-main-button'>Get started</button>
                             </div>
                         </div>
                     </div>

@@ -11,6 +11,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
+
+
 @font-face {
     font-family: BAUHS93;
     src: url('../assets/WONO_images/img/fonts/BAUHS93.ttf');
@@ -39,6 +41,11 @@
 @font-face {
     font-family: Mistral;
     src: url('../assets/WONO_images/img/fonts/MISTRAL.TTF');
+}
+
+@font-face {
+    font-family: Telma-Variable;
+    src: url('../assets/WONO_images/img/fonts/Telma-Variable.ttf');
 }
 
 
@@ -125,7 +132,7 @@
     border: none;
     font-family: Popins-Regular;
     cursor: pointer;
-    font-size: 24px;
+    font-size: 16px;
 }
 
 .first-section-grid-item-2 * {
@@ -144,7 +151,8 @@
 .home-main-title {
     color: black;
     font-size: 6rem;
-    font-family: Mistral;
+    /* font-family: Mistral; */
+    font-family: Telma-Variable;
     margin-top: 3rem;
     /* padding: 6rem 6rem 1rem 6rem; */
 }
@@ -153,7 +161,8 @@
 .O {
     color: rgb(10, 169, 239);
     display: contents;
-    font-family: Mistral;
+    /* font-family: Mistral; */
+    font-family: Telma-Variable;
 }
 
 .n {
@@ -169,7 +178,8 @@
     text-align: left;
     font-family: Popins-Medium;
 }
-.home-desc span{
+
+.home-desc span {
     font-weight: 600;
     font-size: x-large;
     font-family: Popins-Medium;
@@ -202,7 +212,8 @@
         /* padding: 0rem 2rem 2rem 2rem; */
         color: black;
         font-size: 2rem;
-        font-family: Mistral;
+        /* font-family: Mistral; */
+        font-family: Telma-Variable;
         margin-top: 1rem;
     }
 
@@ -219,33 +230,12 @@
         background-color: rgb(10, 169, 239);
         padding: 0.5rem 2rem 0.5rem 2rem;
         color: black;
-        border-radius: 5px;
+        border-radius: 30px;
         border: none;
         font-family: Popins-Regular;
         cursor: pointer;
     }
 
-    .home-section-register-button {
-
-        width: 100%;
-
-        margin: 0;
-
-        background-color: yellow;
-
-        padding: 0.5rem 2rem 0.5rem 2rem;
-
-        color: black;
-
-        border-radius: 5px;
-
-        border: none;
-
-        font-family: Popins-Regular;
-
-        cursor: pointer;
-
-    }
 
     .background-div {
         height: 100%;
@@ -271,6 +261,10 @@
         text-align: center;
         padding: 1rem;
         font-family: Popins-Medium;
+        
+    }
+    .home-desc span {
+     font-size: 1rem;     
     }
 
     .form-card {
@@ -805,7 +799,7 @@
     /* padding: 2rem; */
     text-align: center;
     margin-bottom: 20px;
-    font-size: 3rem;
+    font-size: 2.8rem;
 }
 
 .website-panel-container h3 {
@@ -814,6 +808,7 @@
     text-align: center;
     margin-bottom: 20px;
 }
+
 .website-panel-container p {
     font-size: 1rem;
     text-align: center;
@@ -947,7 +942,7 @@
     }
 
     .website-panel-container {
-        padding: 0.5rem;
+        padding: 2rem;
     }
 
     .website-sidebar {
@@ -982,7 +977,19 @@
     }
 
     .website-panel-header {
-        position: sticky;
+        text-align: left;
+    }
+    .website-panel-header h2{
+        font-size: 2rem;
+        text-align: left;
+    }
+    .website-panel-header h3{
+        font-size: 1.5rem;
+        text-align: left;
+    }
+    .website-panel-header p{
+        font-size: 1.2rem;
+        text-align: left;
     }
 
     .website-sidebar-header {
@@ -1152,7 +1159,8 @@
     object-fit: cover;
     object-position: top;
 }
-.last-section *{
+
+.last-section * {
     font-family: Popins-Regular;
 }
 
