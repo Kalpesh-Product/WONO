@@ -11,6 +11,8 @@ import CoWorkingImage_2 from "../assets/WONO_images/img/website-builder/new-layo
 import CoWorkingImage_3 from "../assets/WONO_images/img/website-builder/new-layout/co-working-3.png";
 import Featured from "../assets/WONO_images/img/website-builder/new-layout/featured/featured-1.png";
 import Boutique from "../assets/WONO_images/img/website-builder/new-layout/boutique.png";
+import CoWorkingMewo from "../assets/WONO_images/img/website-builder/new-layout/co-working-mewo.png";
+import Hostels from "../assets/WONO_images/img/website-builder/new-layout/hostels.png";
 import { useNavigate } from 'react-router-dom';
 
 const Themes = () => {
@@ -26,28 +28,30 @@ const Themes = () => {
         { src: CoWorkingImage_3, alt: "CoLivingImage_3", tag: "co-working" },
         { src: Cafe_2, alt: "Cafe_2", tag: "cafe" },
         { src: Cafe_3, alt: "Cafe_3", tag: "cafe" },
-      ];
+        { src: CoWorkingMewo, alt: "CoWorkingMewo", tag: "co-working" },
+        { src: Hostels, alt: "Hostels", tag: "hostels" },
+    ];
 
     const themeWebsiteGridData = [
         {
             title: "Faster Loading",
-            description: "Wono is designed for performance",
+            description: "Wix is designed for performance so your site loads faster",
         },
         {
-            title: "Responsive Design",
-            description: "Wono ensures a seamless experience across devices",
+            title: "Built with SEO in mind",
+            description: "Get the SEO capabilities you need to optimize your site for search visibility.",
         },
         {
-            title: "SEO Friendly",
-            description: "Built with best practices for search engine optimization",
+            title: "Enterprise-grade security",
+            description: "We keep your site and visitors data protected, 24/7.",
         },
         {
-            title: "Customizable",
-            description: "Highly flexible and customizable layouts",
+            title: "Resilient infrastructure",
+            description: "Multi-cloud hosting ensures 99.9% uptime, even during traffic spikes.",
         },
         {
-            title: "Security",
-            description: "Wono offers top-notch security for your business",
+            title: "Accessible for everyone",
+            description: "Make your own website inclusive with built-in accessibility tools.",
         },
     ];
 
@@ -64,7 +68,7 @@ const Themes = () => {
                 <div className="themePage-content">
                     <div className="themePage-content-header">
                         <h3>Top Theme Recommendations</h3>
-                        <span className='mt-2'>Fully tech ready, integrated and responsive updated and latest WoNo themes</span>
+                        <span>Fully tech ready, integrated and responsive updated and latest WoNo themes</span>
                     </div>
 
                     <div className="themePage-content-grid">

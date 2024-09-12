@@ -9,6 +9,8 @@ import CoWorkingImage_2 from "../assets/WONO_images/img/website-builder/new-layo
 import CoWorkingImage_3 from "../assets/WONO_images/img/website-builder/new-layout/co-working-3.png";
 import Featured from "../assets/WONO_images/img/website-builder/new-layout/featured/featured-1.png";
 import Boutique from "../assets/WONO_images/img/website-builder/new-layout/boutique.png";
+import CoWorkingMewo from "../assets/WONO_images/img/website-builder/new-layout/co-working-mewo.png";
+import Hostels from "../assets/WONO_images/img/website-builder/new-layout/hostels.png";
 import TickmarkImg from "../assets/check.png"
 import '../styles/bodyProduct.css'
 import { useNavigate, useLocation } from 'react-router-dom';
@@ -71,6 +73,8 @@ const ProductPage = () => {
     { src: CoWorkingImage_3, alt: "CoLivingImage_3", tag: "co-working" },
     { src: Cafe_2, alt: "Cafe_2", tag: "cafe" },
     { src: Cafe_3, alt: "Cafe_3", tag: "cafe" },
+    { src: CoWorkingMewo, alt: "CoWorkingMewo", tag: "co-working" },
+    { src: Hostels, alt: "Hostels", tag: "hostels" },
   ];
 
   const navigate = useNavigate()
