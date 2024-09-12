@@ -13,6 +13,10 @@
     src: url('../assets/WONO_images/img/fonts/Poppins-Black.ttf');
 }
 
+.capital-master *{
+    font-family: Popins-Regular;
+}
+
 .headingContainer{
     
     height: 350px;

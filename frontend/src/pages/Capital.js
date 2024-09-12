@@ -5,7 +5,7 @@ import DashboardImage from "../assets/imgdashboard.png"
 
 const Capital = () => {
   return (
-    <>
+    <div className='capital-master'>
     <div className='headingContainer'>
         <h1 className='capital-heading'>We help the daring build legandary Companies.</h1>
         <button className='connect-with-us-btn'>CONNECT WITH US</button>
@@ -87,7 +87,7 @@ secure the accurate INVESTOR!</h1>
         </button>
     </div>
 
-    </>
+    </div>
 
   )
 }
