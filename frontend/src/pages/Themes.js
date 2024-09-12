@@ -86,7 +86,7 @@ const Themes = () => {
                         ))}
                     </div>
 
-                    <div className='themePage-featured wono-gray-background'>
+                    <div className='themePage-featured'>
                         <div className="themePage-featured-grid">
                             <div className="themePage-featured-grid-1">
                                 <div className="themePage-featured-header">
