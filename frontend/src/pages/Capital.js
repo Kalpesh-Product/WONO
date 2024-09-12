@@ -55,9 +55,15 @@ regardless of stage or provider and helps you
 secure the accurate INVESTOR!</h1>
     </div>
     <div className='three-card-images'>
-        <img className='card-img-1' src='https://media.istockphoto.com/id/660743390/photo/angel-investor.jpg?s=612x612&w=0&k=20&c=bMCsPyNz0LLMVYmFh0Kn2f0prRikRbjyNzc9dfvjGcY=' alt='card-img-1'></img>
-        <img className='card-img-1' src='https://assets.smfgindiacredit.com/sites/default/files/Venture-Capital.jpg?VersionId=YDGq4VyQQAdW2x57A5ucusQkZbmffKwh' alt='card-img-2'></img>
-        <img className='card-img-1' src='https://www.techfunnel.com/wp-content/uploads/2021/07/debt-financing.png' alt='card-img-3'></img>
+        <div className='card-img-1'>
+        <img  src='https://media.istockphoto.com/id/660743390/photo/angel-investor.jpg?s=612x612&w=0&k=20&c=bMCsPyNz0LLMVYmFh0Kn2f0prRikRbjyNzc9dfvjGcY=' alt='card-img-1'></img>
+        </div>
+        <div className='card-img-1'>
+        <img  src='https://assets.smfgindiacredit.com/sites/default/files/Venture-Capital.jpg?VersionId=YDGq4VyQQAdW2x57A5ucusQkZbmffKwh' alt='card-img-2'></img>
+        </div>
+        <div className='card-img-1'>
+        <img  src='https://www.techfunnel.com/wp-content/uploads/2021/07/debt-financing.png' alt='card-img-3'></img>
+        </div>
     </div>
     {/* Raise Frictionless fundressing for startup*/}
     <div className='big-end-image'>
