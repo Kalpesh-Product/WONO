@@ -144,7 +144,7 @@ const Themes = () => {
                             <div className="themePage-website-support-grid">
                                 <div className="themePage-website-support-grid-1">
                                     <h2><b>Get answers</b></h2>
-                                    <p>Watch tutorials and read detailed articles in Wono help center</p>
+                                    <p>Watch tutorials and read detailed articles in help center</p>
                                     <span>Go to Help Center →</span>
                                 </div>
                                 <div className="themePage-website-support-grid-1">
