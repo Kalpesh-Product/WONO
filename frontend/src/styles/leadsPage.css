@@ -17,6 +17,31 @@
     align-items: center;
 }
 
+.smallerImageWidthHeight {
+    max-height: 6.25rem;
+
+    max-width: 6.25rem;
+
+}
+
+.WidthHeight3 {
+    max-width: 13rem;
+    max-height: 7.5rem;
+}
+
+.widthHeight4 {
+    max-width: 8.5rem;
+
+    max-height: 8.5rem;
+
+}
+
+.widthHeight5 {
+    max-width: 8.5rem;
+
+    max-height: 8.5rem;
+}
+
 .flexForCards {
     display: flex;
     flex-wrap: wrap;
@@ -52,10 +77,10 @@
     /* 44px / 16 */
 }
 
-.leadsCtaTextFont {
+/* .leadsCtaTextFont {
     font-size: 2.25rem !important;
-    /* 36px / 16 */
-}
+  
+} */
 
 .automatedPlatformFontSize {
     font-size: 1.125rem;
@@ -67,10 +92,10 @@
     /* 30px / 16 */
 }
 
-.FFFF {
+/* .FFFF {
     font-size: 2.6rem !important;
     line-height: 1.4;
-}
+} */
 
 .spaceBetweenSections {
     padding-top: 1.875rem;
@@ -112,12 +137,10 @@
     align-items: center;
 }
 
-.smallerImageWidthHeight {
-    max-height: 6.25rem;
-    /* 100px / 16 */
-    max-width: 6.25rem;
-    /* 100px / 16 */
+.hrStyling {
+    width: 80%;
 }
+
 
 .individual-card-last-row-no-bottom-spacing {
     margin-bottom: 0;
@@ -179,6 +202,18 @@
     box-sizing: border-box;
 } */
 
+@media (min-width: 1025px) {
+    .FFFF {
+        font-size: 2.6rem !important;
+        line-height: 1.4;
+    }
+
+    .leadsCtaTextFont {
+        font-size: 2.25rem !important;
+
+    }
+}
+
 /* Media query for tablet view (max-width: 1024px or smaller) */
 @media (max-width: 1024px) {
     .individual-card {
@@ -199,7 +234,7 @@
     }
 
     .leadsCtaTextFont {
-        font-size: 1.75rem;
+        font-size: 1.25rem;
     }
 
     .automatedPlatformFontSize {
