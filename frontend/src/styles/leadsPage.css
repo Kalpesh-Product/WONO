@@ -17,6 +17,31 @@
     align-items: center;
 }
 
+.smallerImageWidthHeight {
+    max-height: 6.25rem;
+
+    max-width: 6.25rem;
+
+}
+
+.WidthHeight3 {
+    max-width: 13rem;
+    max-height: 7.5rem;
+}
+
+.widthHeight4 {
+    max-width: 8.5rem;
+
+    max-height: 8.5rem;
+
+}
+
+.widthHeight5 {
+    max-width: 8.5rem;
+
+    max-height: 8.5rem;
+}
+
 .flexForCards {
     display: flex;
     flex-wrap: wrap;
@@ -112,12 +137,10 @@
     align-items: center;
 }
 
-.smallerImageWidthHeight {
-    max-height: 6.25rem;
-    /* 100px / 16 */
-    max-width: 6.25rem;
-    /* 100px / 16 */
+.hrStyling {
+    width: 80%;
 }
+
 
 .individual-card-last-row-no-bottom-spacing {
     margin-bottom: 0;

@@ -37,7 +37,9 @@ import WebsiteWorkation from "./WebsiteBuilder/WebsiteWorkation";
 import "../styles/bodyPartners.css";
 import BiznestTestimonial from "../assets/testimonials/BIZ Nest Testimonial.png";
 import LeadsImage from "../assets/leads_images/leads-section-image.webp";
+import LeadsImagepng from "../assets/leads_images/leads-section-image.png";
 import GoogleSheetsImage from "../assets/leads_images/google-sheets-image.webp";
+import GoogleSheetsImagepng from "../assets/leads_images/google-sheets-image.png";
 // import "../styles/bodyLastBanner.css";
 
 import TickmarkImg from "../assets/check.png";
@@ -239,7 +241,7 @@ const LeadsPage = () => {
           <FourCardsComponents />
         </div> */}
 
-        <div className="leads-heading-section  wono-text-spacing fontPoppinsRegular  topPaddingAboveFirstSection bottomPaddingForSections">
+        <div className="leads-heading-section  wono-text-spacing fontPoppinsRegular  topPaddingAboveFirstSection bottomPaddingBelowFirstSection">
           <h2 className="FFFF mt-2">
             Generate continues structured leads for your business with the
             support of our automated platform and trained and experienced
@@ -290,14 +292,15 @@ const LeadsPage = () => {
                 </div>
                 {/* <div className="col-lg-4"></div> */}
                 {/* <div className="col-lg-4 bg-danger"> */}
-                <div className="col-lg-3  d-flex justify-content-end align-items-center">
-                  <div className="">
-                    <button
-                      className="get-started-submit-button mb-0"
-                      onClick={handleRegister}>
-                      Get Started
-                    </button>
-                  </div>
+                <div className="col-lg-3  d-flex justify-content-lg-end justify-content-md-end justify-content-center justify-content-sm-center align-items-center pe-0">
+                  {/* <div className=""> */}
+                  <button
+                    // className="get-started-submit-button mb-0"
+                    className="get-started-main-button mt-4 mb-0"
+                    onClick={handleRegister}>
+                    Get Started
+                  </button>
+                  {/* </div> */}
                 </div>
               </div>
               <br />
@@ -307,7 +310,7 @@ const LeadsPage = () => {
         </div>
 
         <div className="leads-image-section  fontPoppinsRegular ">
-          <img src={LeadsImage} alt="" className="full-width-image" />
+          <img src={LeadsImagepng} alt="" className="full-width-image" />
         </div>
 
         <div className="organic-leads-section   container wono-text-spacing topPaddingForSections bottomPaddingForSections  fontPoppinsRegular">
@@ -383,12 +386,12 @@ const LeadsPage = () => {
                 <div className="img-row-1  d-flex flex-row justify-content-between align-items-center w-100">
                   {/* <div className="img-row-1  d-flex flex-row justify-content-center align-items-center"> */}
                   <div className="top-first">
-                    <div className="WidthHeight2">
-                      <img
-                        src={GoogleMyBusinessImage}
-                        alt="tick-mark"
-                        className="WidthHeight1"></img>
-                    </div>
+                    {/* <div className="WidthHeight2"> */}
+                    <img
+                      src={GoogleMyBusinessImage}
+                      alt="tick-mark"
+                      className="WidthHeight1"></img>
+                    {/* </div> */}
                   </div>
                   <div className="top-second">
                     {" "}
@@ -398,20 +401,22 @@ const LeadsPage = () => {
                       className="WidthHeight1"></img>
                   </div>
                   <div className="top-third">
-                    <div className="CenterElement WidthHeight2">
-                      <img
-                        src={GoogleSeoImage}
-                        alt="tick-mark"
-                        className="smallerImageWidthHeight"></img>
-                    </div>
+                    {/* <div className="CenterElement WidthHeight2"> */}
+                    <img
+                      src={GoogleSeoImage}
+                      alt="tick-mark"
+                      // className="smallerImageWidthHeight"></img>
+                      className="widthHeight5"></img>
+                    {/* </div> */}
                   </div>
                   <div className="top-fourth">
-                    <div className="CenterElement WidthHeight2">
-                      <img
-                        src={FacebookImage}
-                        alt="tick-mark"
-                        className="smallerImageWidthHeight"></img>
-                    </div>
+                    {/* <div className="CenterElement WidthHeight2"> */}
+                    <img
+                      src={FacebookImage}
+                      alt="tick-mark"
+                      // className="smallerImageWidthHeight"></img>
+                      className="WidthHeight1"></img>
+                    {/* </div> */}
                   </div>
                 </div>
                 {/* <div className="img-row-2  d-flex flex-row justify-content-around align-items-center w-100"> */}
@@ -422,21 +427,21 @@ const LeadsPage = () => {
                     <img
                       src={WebsiteImage}
                       alt="tick-mark"
-                      className="WidthHeight1"></img>
+                      className="WidthHeight3"></img>
                   </div>
                   <div className="middle-second">
                     {" "}
                     <img
                       src={GoogleReviewsImage}
                       alt="tick-mark"
-                      className="WidthHeight1"></img>
+                      className="WidthHeight3"></img>
                   </div>
                   <div className="middle-third">
                     {" "}
                     <img
                       src={LinkedinImage}
                       alt="tick-mark"
-                      className="WidthHeight1"></img>
+                      className="WidthHeight3"></img>
                   </div>
                   <div className="middle-fourth">
                     {" "}
@@ -450,27 +455,29 @@ const LeadsPage = () => {
                 <div className="img-row-3  d-flex flex-row justify-content-between align-items-center w-100">
                   {/* <div className="img-row-3  d-flex flex-row justify-content-center align-items-center"> */}
                   <div className="bottom-first">
-                    <div className="CenterElement WidthHeight2">
-                      <img
-                        src={InstagramImage}
-                        alt="tick-mark"
-                        className="smallerImageWidthHeight"></img>
-                    </div>
+                    {/* <div className="CenterElement WidthHeight2"> */}
+                    <img
+                      src={InstagramImage}
+                      alt="tick-mark"
+                      // className="smallerImageWidthHeight"></img>
+                      className="widthHeight4"></img>
+                    {/* </div> */}
                   </div>
                   <div className="bottom-second">
-                    <div className="CenterElement WidthHeight2">
-                      <img
-                        src={FreeIntegrationsImage}
-                        alt="tick-mark"
-                        className="smallerImageWidthHeight"></img>
-                    </div>
+                    {/* <div className="CenterElement WidthHeight2"> */}
+                    <img
+                      src={FreeIntegrationsImage}
+                      alt="tick-mark"
+                      // className="smallerImageWidthHeight"></img>
+                      className="WidthHeight1"></img>
+                    {/* </div> */}
                   </div>
                   <div className="bottom-third">
                     {" "}
                     <img
                       src={CrossPromotionsImage}
                       alt="tick-mark"
-                      className="WidthHeight1"></img>
+                      className="WidthHeight3"></img>
                   </div>
                   <div className="bottom-fourth">
                     {" "}
@@ -487,7 +494,7 @@ const LeadsPage = () => {
         </div>
 
         {/* <div className="google-sheets-section fontPoppinsRegular spaceBetweenSections"> */}
-        <div className="google-sheets-section fontPoppinsRegular greyishShade  topPaddingForSections bottomPaddingForSections">
+        <div className="google-sheets-section fontPoppinsRegular   topPaddingForSections bottomPaddingForSections">
           <div>
             <div className="pb-4  wono-text-spacing ">
               <h2 className="googleSheetsHeading">
@@ -499,7 +506,7 @@ const LeadsPage = () => {
             </div>
             <div className="organic-leads-images-section wono-text-spacing topSpaceBetweenSections">
               <img
-                src={GoogleSheetsImage}
+                src={GoogleSheetsImagepng}
                 alt=""
                 className="full-width-image"
               />
@@ -536,14 +543,20 @@ const LeadsPage = () => {
                     </div>
                     <div className="col-lg-4"></div>
                     {/* <div className="col-lg-4 bg-danger"> */}
-                    <div className="col-lg-4  d-flex justify-content-end align-items-center">
-                      <div className="">
+                    <div className="col-lg-4 d-flex justify-content-lg-end justify-content-md-end justify-content-center justify-content-sm-center align-items-center pe-0">
+                      {/* <div className="">
                         <button
                           className="get-started-submit-button "
                           onClick={handleRegister}>
                           Get Started
                         </button>
-                      </div>
+                      </div> */}
+
+                      <button
+                        className="get-started-main-button mt-4 "
+                        onClick={handleRegister}>
+                        Get Started
+                      </button>
                     </div>
                   </div>
                   {/* <br /> */}
@@ -623,7 +636,11 @@ const LeadsPage = () => {
           </div>
         </div>
 
-        <div className="better-roi-section  wono-text-spacing fontPoppinsRegular topPaddingForSections bottomPaddingForSections greyishShade">
+        <div className="CenterElement">
+          <hr className="hrStyling" />
+        </div>
+
+        <div className="better-roi-section  wono-text-spacing fontPoppinsRegular topPaddingForSections bottomPaddingForSections ">
           {/* <div className="better-roi h-5  wono-text-spacing "> */}
           <div className="container paddingRight0">
             <div className="row ">
@@ -652,7 +669,11 @@ const LeadsPage = () => {
           </div>
         </div>
 
-        <div className="complete-view-section h-5 wono-text-spacing fontPoppinsRegular topPaddingForSections">
+        <div className="CenterElement">
+          <hr className="hrStyling" />
+        </div>
+
+        <div className="complete-view-section h-5 wono-text-spacing fontPoppinsRegular topPaddingForSections bottomPaddingForSections">
           {" "}
           <div className="container pe-0">
             <div className="row ">
@@ -680,10 +701,17 @@ const LeadsPage = () => {
           </div>
         </div>
 
-        <div className="finer-points-section h-5 wono-text-spacing fontPoppinsRegular bottomPaddingForSections">
+        <div className="CenterElement">
+          <hr className="hrStyling" />
+        </div>
+
+        <div className="finer-points-section h-5 wono-text-spacing fontPoppinsRegular topPaddingForSections bottomPaddingForSections">
           {" "}
           <div className="container pe-0">
             <div className="row ">
+              <div className="col-lg-6 pe-0">
+                <img src={FinerPointsImage} alt="" className="w-100" />
+              </div>
               <div className="col-lg-6 text-start  d-flex flex-column justify-content-center">
                 {/* <div className="col-lg-6 text-end  d-flex flex-column justify-content-center"> */}
                 <div className="">
@@ -701,9 +729,6 @@ const LeadsPage = () => {
                     features listed below.
                   </p>
                 </div>
-              </div>
-              <div className="col-lg-6 pe-0">
-                <img src={FinerPointsImage} alt="" className="w-100" />
               </div>
             </div>
           </div>
@@ -843,13 +868,14 @@ const LeadsPage = () => {
               </h2>
               <br />
 
-              <p className="last-spacing leadsCtaTextFont">
+              <p className="last-spacing leadsCtaTextFont mb-5">
                 This takes a lot of effort, time and patience … need to start
                 soon!
               </p>
               <div className="partner-button-space">
                 <button
-                  className="partner-submit-button mb-2"
+                  // className="partner-submit-button mb-2"
+                  className="get-started-main-button mb-2"
                   onClick={handleRegister}>
                   Get Started
                 </button>
