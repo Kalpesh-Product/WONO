@@ -239,15 +239,13 @@ const LeadsPage = () => {
           <FourCardsComponents />
         </div> */}
 
-        <div className="leads-heading-section  wono-text-spacing fontPoppinsRegular">
-          <br />
-          <br />
-          <h2 className="FFFF">
+        <div className="leads-heading-section  wono-text-spacing fontPoppinsRegular spaceBetweenSections marginBetweenSections">
+          <h2 className="FFFF mt-2">
             Generate continues structured leads for your business with the
             support of our automated platform and trained and experienced
             resources.
           </h2>
-          <br />
+
           {/* <p className="automatedPlatformFontSize">
             Automated platform and our resources are FREE .. you pay only if you
             start paid ads!
@@ -281,51 +279,51 @@ const LeadsPage = () => {
           </div> */}
 
           <div>
-            <div className="">
-              <div className="container my-3 pe-0">
-                {/* <div className="row  border-bottom border-dark border-3 pb-5 bg-primary"> */}
-                <div className="row ">
-                  <div className="col-lg-9 ps-0">
-                    <p className="automatedPlatformFontSize automatedPlatformPadding">
-                      Automated platform and our resources are FREE .. you pay
-                      only if you start paid ads!
-                    </p>
-                  </div>
-                  {/* <div className="col-lg-4"></div> */}
-                  {/* <div className="col-lg-4 bg-danger"> */}
-                  <div className="col-lg-3  d-flex justify-content-end align-items-center">
-                    <div className="">
-                      <button
-                        className="get-started-submit-button "
-                        onClick={handleRegister}>
-                        Get Started
-                      </button>
-                    </div>
+            <div className="container  pe-0">
+              {/* <div className="row  border-bottom border-dark border-3 pb-5 bg-primary"> */}
+              <div className="row ">
+                <div className="col-lg-9 ps-0">
+                  <p className="automatedPlatformFontSize automatedPlatformPadding mb-0">
+                    Automated platform and our resources are FREE .. you pay
+                    only if you start paid ads!
+                  </p>
+                </div>
+                {/* <div className="col-lg-4"></div> */}
+                {/* <div className="col-lg-4 bg-danger"> */}
+                <div className="col-lg-3  d-flex justify-content-end align-items-center">
+                  <div className="">
+                    <button
+                      className="get-started-submit-button mb-0"
+                      onClick={handleRegister}>
+                      Get Started
+                    </button>
                   </div>
                 </div>
-                <br />
-                {/* <hr /> */}
               </div>
+              <br />
+              {/* <hr /> */}
             </div>
           </div>
         </div>
 
-        <div className="leads-image-section  fontPoppinsRegular">
+        <div className="leads-image-section  fontPoppinsRegular bottomSpaceBetweenSections">
           <img src={LeadsImage} alt="" className="full-width-image" />
         </div>
 
-        <div className="organic-leads-section   container wono-text-spacing spaceBetweenSections fontPoppinsRegular">
+        <div className="organic-leads-section   container wono-text-spacing spaceBetweenSections marginBetweenSections  fontPoppinsRegular">
           {/* <br /> */}
-          <br />
-          <h2 className="googleSheetsHeading">
-            Our core focus is to generate ORGANIC LEADS!
-          </h2>
-          <h2 className="googleSheetsHeading">With NO INVESTMENTS!</h2>
-          <br />
+          {/* <br /> */}
+          <div className="extraBottomSpaceOurCoreFocus">
+            <h2 className="googleSheetsHeading">
+              Our core focus is to generate ORGANIC LEADS!
+            </h2>
+            <h2 className="googleSheetsHeading">With NO INVESTMENTS!</h2>
+          </div>
+          {/* <br /> */}
           <div className="bottom-container row">
             <div className="checklist col-lg-4">
-              <div>
-                <p className="card-text">
+              <div className="h-100">
+                <p className="card-text h-100 d-flex flex-column justify-content-between checklistFont">
                   <div className="Tickmark-text">
                     <img src={TickmarkImg} alt="tick-mark"></img>
                     Google My Business
@@ -400,18 +398,20 @@ const LeadsPage = () => {
                       className="WidthHeight1"></img>
                   </div>
                   <div className="top-third">
-                    {" "}
-                    <img
-                      src={GoogleSeoImage}
-                      alt="tick-mark"
-                      className="WidthHeight1"></img>
+                    <div className="CenterElement WidthHeight2">
+                      <img
+                        src={GoogleSeoImage}
+                        alt="tick-mark"
+                        className="smallerImageWidthHeight"></img>
+                    </div>
                   </div>
                   <div className="top-fourth">
-                    {" "}
-                    <img
-                      src={FacebookImage}
-                      alt="tick-mark"
-                      className="WidthHeight1"></img>
+                    <div className="CenterElement WidthHeight2">
+                      <img
+                        src={FacebookImage}
+                        alt="tick-mark"
+                        className="smallerImageWidthHeight"></img>
+                    </div>
                   </div>
                 </div>
                 {/* <div className="img-row-2  d-flex flex-row justify-content-around align-items-center w-100"> */}
@@ -450,18 +450,20 @@ const LeadsPage = () => {
                 <div className="img-row-3  d-flex flex-row justify-content-between align-items-center w-100">
                   {/* <div className="img-row-3  d-flex flex-row justify-content-center align-items-center"> */}
                   <div className="bottom-first">
-                    {" "}
-                    <img
-                      src={InstagramImage}
-                      alt="tick-mark"
-                      className="WidthHeight1"></img>
+                    <div className="CenterElement WidthHeight2">
+                      <img
+                        src={InstagramImage}
+                        alt="tick-mark"
+                        className="smallerImageWidthHeight"></img>
+                    </div>
                   </div>
                   <div className="bottom-second">
-                    {" "}
-                    <img
-                      src={FreeIntegrationsImage}
-                      alt="tick-mark"
-                      className="WidthHeight1"></img>
+                    <div className="CenterElement WidthHeight2">
+                      <img
+                        src={FreeIntegrationsImage}
+                        alt="tick-mark"
+                        className="smallerImageWidthHeight"></img>
+                    </div>
                   </div>
                   <div className="bottom-third">
                     {" "}
@@ -491,7 +493,7 @@ const LeadsPage = () => {
               <h2 className="googleSheetsHeading">
                 Automated Google LEAD SHEET!
               </h2>
-              <h2 className="googleSheetsHeading">
+              <h2 className="googleSheetsHeading mb-0">
                 Never miss any leads generated from our platform.
               </h2>
             </div>
@@ -506,10 +508,10 @@ const LeadsPage = () => {
         </div>
 
         <div className="marketing-section  wono-text-spacing fontPoppinsRegular spaceBetweenSections">
-          <div className="marketing-header  pt-5">
-            <div>
-              <p>RUN & SCALE YOUR BUSINESS</p>
-            </div>
+          <div className="marketing-header  ">
+            {/* <div>
+              <p className="mb-0">RUN & SCALE YOUR BUSINESS</p>
+            </div> */}
             {/* <div className="d-flex justify-content-between">
               <div className="bg-secondary">
                 <h2>Marketing</h2>
@@ -525,11 +527,12 @@ const LeadsPage = () => {
 
             <div>
               <div className="">
-                <div className="container my-3 pe-0">
+                <div className="container mb-3 pe-0">
                   {/* <div className="row  border-bottom border-dark border-3 pb-5 bg-primary"> */}
                   <div className="row ">
                     <div className="col-lg-4 ps-0">
-                      <h2 className="fs-1">Marketing</h2>
+                      <p className="mb-0">RUN & SCALE YOUR BUSINESS</p>
+                      <h2 className="fs-1 pt-2">Marketing</h2>
                     </div>
                     <div className="col-lg-4"></div>
                     {/* <div className="col-lg-4 bg-danger"> */}
@@ -560,6 +563,20 @@ const LeadsPage = () => {
                 </p>
               </div>
               <div className=" individual-card">
+                <h2 className="fs-4">Analytics</h2>
+                <p>
+                  Get reports with actionable insights and data about your site
+                  and marketing activities.
+                </p>
+              </div>
+              <div className=" individual-card">
+                <h2 className="fs-4">Logo Maker</h2>
+                <p>
+                  Create a custom logo for your brand in minutes with our AI
+                  logo generator.
+                </p>
+              </div>
+              <div className=" individual-card individual-card-front">
                 <h2 className="fs-4">Google Ads with WoNo</h2>
                 <p>
                   Launch a Google Ads campaign to reach your site's target
@@ -573,13 +590,6 @@ const LeadsPage = () => {
                   engage your audience, send promotions and increase traffic.
                 </p>
               </div>
-              <div className=" individual-card individual-card-front">
-                <h2 className="fs-4">Analytics</h2>
-                <p>
-                  Get reports with actionable insights and data about your site
-                  and marketing activities.
-                </p>
-              </div>
               <div className=" individual-card">
                 <h2 className="fs-4">Google Business Profile</h2>
                 <p>
@@ -587,21 +597,14 @@ const LeadsPage = () => {
                   your business’s presence on Google Maps, Search and more.
                 </p>
               </div>
-              <div className=" individual-card">
-                <h2 className="fs-4">Logo Maker</h2>
-                <p>
-                  Create a custom logo for your brand in minutes with our AI
-                  logo generator.
-                </p>
-              </div>
-              <div className=" individual-card individual-card-front">
+              <div className=" individual-card individual-card-front individual-card-last-row-no-bottom-spacing">
                 <h2 className="fs-4">Facebook & Instagram Ads</h2>
                 <p>
                   Launch targeted ad campaigns on Facebook and Instagram to
                   generate leads and drive traffic.
                 </p>
               </div>
-              <div className=" individual-card">
+              <div className=" individual-card individual-card-last-row-no-bottom-spacing">
                 <h2 className="fs-4">Marketing integrations</h2>
                 <p>
                   Connect tools such as Google Analytics and Facebook Pixel and
@@ -609,7 +612,7 @@ const LeadsPage = () => {
                   more.
                 </p>
               </div>
-              <div className=" individual-card">
+              <div className=" individual-card individual-card-last-row-no-bottom-spacing">
                 <h2 className="fs-4">Social media marketing</h2>
                 <p>
                   Design, schedule, and easily share your content across
@@ -631,7 +634,7 @@ const LeadsPage = () => {
                 {/* <div className="col-lg-6 text-end  d-flex flex-column justify-content-center"> */}
                 <div className="">
                   {/* <div className=""> */}
-                  <h2 className="fs-1 fontPoppinsRegular">
+                  <h2 className="ROIFontSize fontPoppinsRegular">
                     Get better ROI from your marketing.
                   </h2>
                 </div>
@@ -846,7 +849,7 @@ const LeadsPage = () => {
               </p>
               <div className="partner-button-space">
                 <button
-                  className="partner-submit-button "
+                  className="partner-submit-button mb-2"
                   onClick={handleRegister}>
                   Get Started
                 </button>
