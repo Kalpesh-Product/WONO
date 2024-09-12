@@ -14,7 +14,7 @@
     align-items: center;
     justify-content: center;
     background-color: black;
-    padding: 4rem 0 6rem 0;
+    padding: 4rem 0 4rem 0;
 }
 
 .product-page-master * {
@@ -114,7 +114,7 @@
 }
 
 .product-page-perks {
-    padding: 6rem 7rem;
+    padding: 4rem 7rem;
 }
 
 .product-page-perks-grid {
@@ -170,7 +170,7 @@
 }
 
 .product-page-reccomendations {
-    padding: 6rem 7.4rem;
+    padding: 4rem 7.4rem;
 }
 
 .product-page-reccomendations-grid {
@@ -197,7 +197,7 @@
 }
 
 .product-page-reccomendations-header {
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
 }
 .product-page-reccomendations-header h2{
    margin: 0;
@@ -214,7 +214,7 @@
 }
 
 .product-page-build {
-    padding: 6rem 7rem;
+    padding: 4rem 7rem;
     display: flex;
     align-items: center;
     justify-content: center;

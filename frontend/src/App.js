@@ -23,6 +23,9 @@ import Themes from "./pages/Themes";
 import LeadsPage from "./pages/LeadsPage";
 import Capital from "./pages/Capital";
 import ProductPage from "./pages/ProductPage";
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
+
 
 function App() {
   return (
