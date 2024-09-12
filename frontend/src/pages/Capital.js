@@ -1,7 +1,7 @@
 import React from 'react'
 import "../styles/capital.css"
 import "../styles/specialClasses.css"
-import DashboardImage from "../assets/imgdashboard.png"
+import DashboardImage from "../assets/IpadDashboardImg.png"
 
 const Capital = () => {
   return (

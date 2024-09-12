@@ -65,10 +65,12 @@ const NavBar = () => {
             changeActiveTab('capital')
             window.scrollTo({ top: 0, behavior: "smooth" })
             }}>Capital</Link>
-          <Link to='/themes' onClick={()=>window.scrollTo({ top: 0, behavior: "smooth" })} className={activeTab === 'Contact'? 'active':''}>Theme</Link>
+          <Link to='/themes' onClick={()=>{changeActiveTab('themes');  window.scrollTo({ top: 0, behavior: "smooth" })}} className={activeTab === 'themes'? 'active':''}
+          >Theme</Link>
           <Link to='/leads' onClick={()=>{
+            changeActiveTab('leads');
             window.scrollTo({ top: 0, behavior: "smooth" })
-          }} className={activeTab === 'Contact'? 'active':''}>Leads</Link>
+          }} className={activeTab === 'leads'? 'active':''}>Leads</Link>
           <Link to='/career'  className={activeTab === 'Career'? 'active':''} onClick={()=>{
             changeActiveTab('Career')
             window.scrollTo({ top: 0, behavior: "smooth" })
