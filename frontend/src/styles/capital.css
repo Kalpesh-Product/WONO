@@ -24,12 +24,13 @@
 .capital-heading{
     width: 100%;
     text-align: center;
-    padding-top: 5%;
+    padding-top: 4rem;
     padding-left: 30%;
     padding-right: 30%;
     position: absolute;
     font-family:Popins-regular;
     font-size: 40px;
+    font-weight: bold;
 }
 .connect-with-us-btn{
     position: absolute;
@@ -45,8 +46,8 @@
 .capital-cards-section{
     background-color: black;
     padding-left: 8%;
-    padding-right: 20%;
-    padding-top: 20px;
+    padding-right: 19%;
+    padding-top: 50px;
     display: flex;
     flex-direction: row;
     gap: 10px;
@@ -63,6 +64,7 @@
     position: relative;
     margin-top: 0;
     font-size: 15px;
+    padding-bottom: 50px;
 
 }
 .cards-with-text p span{
@@ -70,32 +72,31 @@
 }
 
 .capital-img {
-    width: 300px;
+    width: 285px;
     border-radius: 10px;
     height: 400px;
     overflow: hidden;
 }
 .capital-img img{
-    width: 100%;
-    height: 100%;
-}
-.capital-img img:hover{
-    width: 120%;
+    width: 110%;
     height: 100%;
     object-fit: cover;
-    transition: width 0.5s ease;
+    transition: all 0.5s ease;
+}
+.capital-img img:hover{
+   width: 100%;
 }
 .plus-icon{
     color: white;
     background-color: rgba(0, 0, 0, 0.2);
     position: relative;
-    font-size: 30px;
     bottom: 60px;
+    font-size: 35px;
     z-index: 1;
     border-radius: 50px;
     height: 50px;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
     left:80%;
     width: 50px;
@@ -108,7 +109,7 @@
 }
 .capital-big-text {
     font-family: Popins-Regular;
-    padding: 10% 10% 10% 9%;
+    padding: 5% 10% 5% 9%;
     
 }
 .capital-big-text h1{
@@ -122,20 +123,24 @@
     justify-content: center;
     flex-direction: row;
     width: 100%;
-    height:500px;
+    height:100%;
     gap: 6px;
-    margin-bottom: 10%;
-
+    
 }
 .three-card-images .card-img-1{
-    width: 487px;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+.card-img-1 img{
+    width: 100%;
     height: 100%;
+    object-fit: cover;
 }
 .big-end-image{
     width: 100%;
     height:90%;
-    margin-bottom: 10%;
-    padding-top: 20px;
+    
     background-color: black;
 }
 .big-end-image img{
@@ -145,7 +150,8 @@
 }
 .capital-last-button-section{
     position: relative;
-    background-color: black;
+    background-color:#0093E9;
+    background-image:linear-gradient(160deg , #0093E9 0%, #80D0C7 100%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -153,28 +159,32 @@
     width: 100%;
     height: 300px;
     border-bottom: 1px solid rgba(13,110,253);
+    
 }
 .capital-last-button-section h1{
-    color: white;
+    color: black;
     font-family: Popins-Regular;
     font-size: 80px;
     font-weight: bold;
+    padding-bottom: 20px;
 
 }
 .Connect-with-us-today-btn{
     width: 400px;
     height: 50px;
-    background-color:rgba(13,110,253);
+    background-color:black;
     color: white;
     font-family: Popins-Regular;
     
+    
 }
+
 .frictionless-heading-with-btns{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 10% 19% 5% 19%;
+    padding: 5% 19% 5% 19%;
 }
 .frictionless-heading-with-btns h1{
     font-size:  70px;
@@ -182,8 +192,11 @@
     color: white;
     text-align: center;
 }
+.frictionless-btns{
+    margin-top: 5%;
+}
 .capital-start-for-free-btn{
-    margin-top: 20px;
+    margin-top: 5%;
     width: 150px;
     height:50px;
     border-radius: 5px;
@@ -198,7 +211,7 @@
     color: rgba(13,110,253);
 }
 .big-end-dashboard-img{
-    padding: 3% 8% 0px 8%;
+    padding: 3% 8% 3% 8%;
 }
 
 
