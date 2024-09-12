@@ -8,12 +8,13 @@
 }
 
 .product-page-section {
-    height: 95vh;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     background-color: black;
+    padding: 4rem 0 6rem 0;
 }
 
 .product-page-master * {
@@ -58,14 +59,21 @@
 }
 
 .product-page-image-container {
+    height: 100%;
     width: 100%;
     overflow: hidden;
 }
 
 .product-page-image-container img {
-    width: 100%;
+    width: 120%;
     height: 100%;
-    object-fit: cover;
+    
+    object-fit: contain;
+    object-position: center;
+    transform: translateX(-8%);
+}
+.product-page-image-mobile{
+    display: none;
 }
 
 .product-page-update-text {
@@ -106,12 +114,12 @@
 }
 
 .product-page-perks {
-    padding: 8rem 7rem;
+    padding: 6rem 7rem;
 }
 
 .product-page-perks-grid {
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 40% 60%;
 }
 
 .product-page-perks-grid-1 {
@@ -143,12 +151,14 @@
 
 .product-page-perks-description h4 {
     margin-bottom: 1rem;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: bold;
+    line-break: strict;
 }
 
 .product-page-perks-description span {
     font-size: 1rem;
+    letter-spacing: 1px;
 }
 
 .product-page-perks-description {
@@ -160,7 +170,7 @@
 }
 
 .product-page-reccomendations {
-    padding: 8rem 7.4rem;
+    padding: 6rem 7.4rem;
 }
 
 .product-page-reccomendations-grid {
@@ -189,6 +199,10 @@
 .product-page-reccomendations-header {
     margin-bottom: 4rem;
 }
+.product-page-reccomendations-header h2{
+   margin: 0;
+   font-weight: 600;
+}
 
 .product-page-build-section {
     background-color: #0093E9;
@@ -200,7 +214,7 @@
 }
 
 .product-page-build {
-    padding: 8rem 7rem;
+    padding: 6rem 7rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -209,7 +223,7 @@
 
 .product-page-build span {
     font-size: 2rem;
-    padding: 0rem 12rem 6rem 12rem;
+    padding: 0rem 12rem 4rem 12rem;
     text-align: center;
     font-weight: bold;
 }
@@ -279,6 +293,9 @@
     
     .product-page-features img {
         padding-right: 1rem;
+    }
+    .product-page-image-mobile{
+        display: contents;
     }
     
     .product-page-features span {

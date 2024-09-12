@@ -63,7 +63,7 @@ const ProductPage = () => {
     "No code & Self-serve",
   ];
   const recommendations = [
-    { src: BiznestImage, alt: "BiznestImage", tag: "business" },
+    { src: BiznestImage, alt: "BiznestImage", tag: "co-working" },
     { src: CoWorkingImage, alt: "Co-Working Image", tag: "co-working" },
     { src: CoLivingImage, alt: "Co-Living Image", tag: "co-living" },
     { src: Boutique, alt: "Boutique Image", tag: "boutique" },

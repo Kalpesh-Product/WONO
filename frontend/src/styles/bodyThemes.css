@@ -12,7 +12,7 @@
 }
 
 .themePage-header {
-    padding: 4rem 7.5rem 4rem 7.5rem;
+    padding: 4rem 7.5rem 2rem 7.5rem;
 }
 .themePage-header h2{
     font-weight: bold;
@@ -37,7 +37,7 @@
 .themePage-content-header {
     text-align: left;
     padding: 0 7.5rem;
-    margin-bottom: 2rem;
+    margin-bottom: 6rem;
 }
 .themePage-content-header h3{
     margin-bottom: 2rem;
@@ -72,7 +72,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 6rem 7.5rem;
+    padding: 0rem 7.5rem;
 }
 
 .themePage-featured-grid {
@@ -132,6 +132,7 @@
     height: 100%;
     position: relative;
     background-color: rgb(168,229,255);
+    padding: 6rem 0;
 }
 
 .themePage-featured-grid-2 img {
@@ -152,11 +153,11 @@
     grid-template-columns: repeat(3,1fr);
     gap: 1rem;
     text-align: left;
-    margin-bottom: 6rem;
+    margin-bottom: 4rem;
 }
 .themePage-website-features h1{
     font-size: 4rem;
-    margin-bottom: 6rem;
+    margin-bottom: 4rem;
 }
 .themePage-website-header{
     padding-right: 30%;
@@ -210,7 +211,7 @@
     margin: 2rem 0
 }
 .themePage-website-support-grid-1 p{
-    /* white-space: nowrap; */
+    margin-bottom: 2rem;
 }
 .themePage-website-support-grid-1 span{
     font-weight: bold;
@@ -236,6 +237,9 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+}
+.themePage-website-success h1{
+    margin: 0;
 }
 
 @media (max-width:768px) {
