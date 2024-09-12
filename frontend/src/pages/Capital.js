@@ -1,5 +1,7 @@
 import React from 'react'
 import "../styles/capital.css"
+import "../styles/specialClasses.css"
+import DashboardImage from "../assets/imgdashboard.png"
 
 const Capital = () => {
   return (
@@ -75,12 +77,12 @@ secure the accurate INVESTOR!</h1>
             </div>
         </div>
         <div className='big-end-dashboard-img'>
-        <img src='https://assets.startbootstrap.com/img/screenshots/templates/sb-admin.png' alt='end-image'></img>
+        <img src={DashboardImage} alt='end-image'></img>
         </div>
     </div>
     <div className='capital-last-button-section'>
         <h1>LET THE FUNDRAISE BEGIN!</h1>
-        <button className='Connect-with-us-today-btn'>
+        <button className='get-started-main-button'>
             CONNECT WITH US TODAY
         </button>
     </div>
