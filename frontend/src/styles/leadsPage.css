@@ -42,13 +42,15 @@
     /* Light background color for contrast */
     /* border: 1px solid #ddd; */
     /* border-radius: 10px; */
-    padding: 20px;
+    /* padding: 20px; */
+    padding: 10px 0px;
     /* Adds padding inside the cards */
     width: calc(33.33% - 20px);
     /* Makes three cards fit per row with some spacing */
     /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
     /* Adds a slight shadow for visual appeal */
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
+    margin-bottom: 10px;
     /* Space between rows */
 }
 
@@ -87,6 +89,11 @@
     padding-bottom: 30px;
 }
 
+.marginBetweenSections {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
 .topSpaceBetweenSections {
     padding-top: 30px;
 
@@ -101,6 +108,37 @@
     font-size: 44px;
 }
 
+.ROIFontSize {
+    font-size: 4rem;
+}
+
+.CenterElement {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.smallerImageWidthHeight {
+    max-height: 100px;
+    max-width: 100px;
+}
+
+.individual-card-last-row-no-bottom-spacing {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.checklistFont {
+    font-size: 18px;
+}
+
+.extraTopSpace30 {
+    padding-top: 30px;
+}
+
+.extraBottomSpaceOurCoreFocus {
+    padding-bottom: 75px;
+}
 
 
 /* Media query for phone view (max-width: 768px or smaller) */
