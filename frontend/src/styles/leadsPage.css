@@ -1,11 +1,15 @@
 .WidthHeight1 {
-    max-width: 120px;
-    max-height: 120px;
+    max-width: 7.5rem;
+    /* 120px / 16 */
+    max-height: 7.5rem;
+    /* 120px / 16 */
 }
 
 .WidthHeight2 {
-    width: 120px;
-    max-height: 120px;
+    width: 7.5rem;
+    /* 120px / 16 */
+    max-height: 7.5rem;
+    /* 120px / 16 */
     margin: auto;
     display: flex;
     flex-direction: row;
@@ -13,45 +17,26 @@
     align-items: center;
 }
 
-/* .individual-card {
-    max-width: 200px;
-    max-height: 100px;
-}
-
-.flexForCards {
-    display: flex;
-    flex-wrap: wrap;
-} */
-
-
 .flexForCards {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 20px;
-    /* Adds space between the cards */
+    gap: 1.25rem;
+    /* 20px / 16 */
 }
 
 .fontSizeCompleteView {
-    font-size: 90px;
+    font-size: 5.625rem;
+    /* 90px / 16 */
 }
 
 .individual-card {
-    /* background-color: #f8f9fa; */
-    background-color: white;
-    /* Light background color for contrast */
-    /* border: 1px solid #ddd; */
-    /* border-radius: 10px; */
-    /* padding: 20px; */
-    padding: 10px 0px;
-    /* Adds padding inside the cards */
-    width: calc(33.33% - 20px);
-    /* Makes three cards fit per row with some spacing */
-    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
-    /* Adds a slight shadow for visual appeal */
-    /* margin-bottom: 20px; */
-    margin-bottom: 10px;
-    /* Space between rows */
+    padding: 0.625rem 0rem;
+    /* 10px / 16 */
+    width: calc(33.33% - 1.25rem);
+    /* 20px / 16 */
+    margin-bottom: 0.625rem;
+    /* 10px / 16 */
 }
 
 .individual-card-front {
@@ -59,57 +44,66 @@
 }
 
 .paddingRight0 {
-    padding-right: 0px !important;
+    padding-right: 0rem !important;
 }
 
 .leadsCtafontSize {
-    font-size: 44px;
+    font-size: 2.75rem;
+    /* 44px / 16 */
 }
 
 .leadsCtaTextFont {
-    font-size: 36px !important;
+    font-size: 2.25rem !important;
+    /* 36px / 16 */
 }
 
 .automatedPlatformFontSize {
-    font-size: 18px;
+    font-size: 1.125rem;
+    /* 18px / 16 */
 }
 
 .automatedPlatformPadding {
-    padding-top: 30px;
+    padding-top: 1.875rem;
+    /* 30px / 16 */
 }
 
 .FFFF {
-    /* font-size: 2.45rem !important; */
     font-size: 2.6rem !important;
     line-height: 1.4;
 }
 
 .spaceBetweenSections {
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 1.875rem;
+    /* 30px / 16 */
+    padding-bottom: 1.875rem;
+    /* 30px / 16 */
 }
 
 .marginBetweenSections {
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: 1.875rem;
+    /* 30px / 16 */
+    margin-bottom: 1.875rem;
+    /* 30px / 16 */
 }
 
 .topSpaceBetweenSections {
-    padding-top: 30px;
-
+    padding-top: 1.875rem;
+    /* 30px / 16 */
 }
 
 .bottomSpaceBetweenSections {
-
-    padding-bottom: 30px;
+    padding-bottom: 1.875rem;
+    /* 30px / 16 */
 }
 
 .googleSheetsHeading {
-    font-size: 44px;
+    font-size: 2.75rem;
+    /* 44px / 16 */
 }
 
 .ROIFontSize {
     font-size: 4rem;
+    /* 64px / 16 */
 }
 
 .CenterElement {
@@ -119,8 +113,10 @@
 }
 
 .smallerImageWidthHeight {
-    max-height: 100px;
-    max-width: 100px;
+    max-height: 6.25rem;
+    /* 100px / 16 */
+    max-width: 6.25rem;
+    /* 100px / 16 */
 }
 
 .individual-card-last-row-no-bottom-spacing {
@@ -129,27 +125,282 @@
 }
 
 .checklistFont {
-    font-size: 18px;
+    font-size: 1.125rem;
+    /* 18px / 16 */
 }
 
 .extraTopSpace30 {
-    padding-top: 30px;
+    padding-top: 1.875rem;
+    /* 30px / 16 */
 }
 
 .extraBottomSpaceOurCoreFocus {
-    padding-bottom: 75px;
+    padding-bottom: 4.6875rem;
+    /* 75px / 16 */
 }
 
+.greyishShade {
+    background-color: rgb(240, 240, 240);
+}
+
+.topPaddingAboveFirstSection {
+    padding-top: 4rem;
+}
+
+.bottomPaddingBelowFirstSection {
+    padding-bottom: 4rem;
+}
+
+
+.topPaddingForSections {
+    padding-top: 6rem;
+}
+
+.bottomPaddingForSections {
+    padding-bottom: 6rem;
+}
+
+
+/* Media query for phone view (max-width: 768px or smaller) */
+/* @media (max-width: 768px) {
+    .individual-card {
+        width: 100%;
+    }
+
+    .flexForCards {
+        justify-content: center;
+    }
+} */
+
+/* General responsive adjustments */
+/* body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
+
+/* Media query for tablet view (max-width: 1024px or smaller) */
+@media (max-width: 1024px) {
+    .individual-card {
+        width: 48%;
+        margin-bottom: 1rem;
+    }
+
+    .flexForCards {
+        justify-content: space-between;
+    }
+
+    .fontSizeCompleteView {
+        font-size: 4rem;
+    }
+
+    .leadsCtafontSize {
+        font-size: 2rem;
+    }
+
+    .leadsCtaTextFont {
+        font-size: 1.75rem;
+    }
+
+    .automatedPlatformFontSize {
+        font-size: 1rem;
+    }
+
+    .googleSheetsHeading {
+        font-size: 2rem;
+    }
+
+    .ROIFontSize {
+        font-size: 3rem;
+    }
+
+    .FFFF {
+        font-size: 2rem;
+    }
+
+    .checklistFont {
+        font-size: 1rem;
+    }
+}
 
 /* Media query for phone view (max-width: 768px or smaller) */
 @media (max-width: 768px) {
     .individual-card {
         width: 100%;
-        /* Makes the cards stack on top of each other */
     }
 
     .flexForCards {
         justify-content: center;
-        /* Center-aligns the cards on small screens */
+    }
+
+    .fontSizeCompleteView {
+        font-size: 3rem;
+    }
+
+    .leadsCtafontSize {
+        font-size: 1.75rem;
+    }
+
+    .leadsCtaTextFont {
+        font-size: 1.5rem;
+    }
+
+    .automatedPlatformFontSize {
+        font-size: 0.875rem;
+    }
+
+    .googleSheetsHeading {
+        font-size: 1.75rem;
+    }
+
+    .ROIFontSize {
+        font-size: 2.5rem;
+    }
+
+    .FFFF {
+        font-size: 1.75rem;
+    }
+
+    .checklistFont {
+        font-size: 0.875rem;
+    }
+
+    .WidthHeight1,
+    .WidthHeight2 {
+        max-width: 5rem;
+        max-height: 5rem;
+    }
+
+    .smallerImageWidthHeight {
+        max-height: 4rem;
+        max-width: 4rem;
+    }
+
+    .extraBottomSpaceOurCoreFocus {
+        padding-bottom: 2rem;
+    }
+
+    .spaceBetweenSections,
+    .marginBetweenSections,
+    .topSpaceBetweenSections,
+    .bottomSpaceBetweenSections {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .paddingRight0 {
+        padding-right: 0 !important;
+    }
+
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .row {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .col-lg-6,
+    .col-lg-4,
+    .col-lg-3,
+    .col-lg-9,
+    .col-lg-12 {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .organic-leads-images-section {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .organic-leads-images-section img {
+        width: 100%;
+    }
+
+    .image-grid {
+        flex-direction: column;
+    }
+
+    .img-row-1,
+    .img-row-2,
+    .img-row-3 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .img-row-1 div,
+    .img-row-2 div,
+    .img-row-3 div {
+        margin-bottom: 1rem;
+    }
+
+    .marketing-header {
+        text-align: center;
+    }
+
+    .marketing-header h2 {
+        font-size: 2rem;
+    }
+
+    .marketing-header p {
+        font-size: 1rem;
+    }
+
+    .marketing-body {
+        text-align: center;
+    }
+
+    .better-roi-section,
+    .complete-view-section,
+    .finer-points-section {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .better-roi-section img,
+    .complete-view-section img,
+    .finer-points-section img {
+        width: 100%;
+    }
+
+    .better-roi-section .col-lg-6,
+    .complete-view-section .col-lg-6,
+    .finer-points-section .col-lg-6 {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .better-roi-section .col-lg-6.text-start,
+    .complete-view-section .col-lg-6.text-start,
+    .finer-points-section .col-lg-6.text-start {
+        text-align: center;
+    }
+
+    .better-roi-section .col-lg-6.text-start p,
+    .complete-view-section .col-lg-6.text-start p,
+    .finer-points-section .col-lg-6.text-start p {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .last-section {
+        text-align: center;
+    }
+
+    .last-section h2 {
+        font-size: 2rem;
+    }
+
+    .last-section p {
+        font-size: 1.25rem;
+    }
+
+    .last-section .partner-button-space {
+        text-align: center;
     }
 }

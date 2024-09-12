@@ -239,7 +239,7 @@ const LeadsPage = () => {
           <FourCardsComponents />
         </div> */}
 
-        <div className="leads-heading-section  wono-text-spacing fontPoppinsRegular spaceBetweenSections marginBetweenSections">
+        <div className="leads-heading-section  wono-text-spacing fontPoppinsRegular  topPaddingAboveFirstSection bottomPaddingForSections">
           <h2 className="FFFF mt-2">
             Generate continues structured leads for your business with the
             support of our automated platform and trained and experienced
@@ -306,11 +306,11 @@ const LeadsPage = () => {
           </div>
         </div>
 
-        <div className="leads-image-section  fontPoppinsRegular bottomSpaceBetweenSections">
+        <div className="leads-image-section  fontPoppinsRegular ">
           <img src={LeadsImage} alt="" className="full-width-image" />
         </div>
 
-        <div className="organic-leads-section   container wono-text-spacing spaceBetweenSections marginBetweenSections  fontPoppinsRegular">
+        <div className="organic-leads-section   container wono-text-spacing topPaddingForSections bottomPaddingForSections  fontPoppinsRegular">
           {/* <br /> */}
           {/* <br /> */}
           <div className="extraBottomSpaceOurCoreFocus">
@@ -487,9 +487,9 @@ const LeadsPage = () => {
         </div>
 
         {/* <div className="google-sheets-section fontPoppinsRegular spaceBetweenSections"> */}
-        <div className="google-sheets-section fontPoppinsRegular ">
+        <div className="google-sheets-section fontPoppinsRegular greyishShade  topPaddingForSections bottomPaddingForSections">
           <div>
-            <div className="py-4  wono-text-spacing ">
+            <div className="pb-4  wono-text-spacing ">
               <h2 className="googleSheetsHeading">
                 Automated Google LEAD SHEET!
               </h2>
@@ -497,7 +497,7 @@ const LeadsPage = () => {
                 Never miss any leads generated from our platform.
               </h2>
             </div>
-            <div className="organic-leads-images-section wono-text-spacing spaceBetweenSections">
+            <div className="organic-leads-images-section wono-text-spacing topSpaceBetweenSections">
               <img
                 src={GoogleSheetsImage}
                 alt=""
@@ -507,7 +507,7 @@ const LeadsPage = () => {
           </div>
         </div>
 
-        <div className="marketing-section  wono-text-spacing fontPoppinsRegular spaceBetweenSections">
+        <div className="marketing-section  wono-text-spacing fontPoppinsRegular  topPaddingForSections bottomPaddingForSections">
           <div className="marketing-header  ">
             {/* <div>
               <p className="mb-0">RUN & SCALE YOUR BUSINESS</p>
@@ -623,7 +623,7 @@ const LeadsPage = () => {
           </div>
         </div>
 
-        <div className="better-roi-section  wono-text-spacing fontPoppinsRegular spaceBetweenSections">
+        <div className="better-roi-section  wono-text-spacing fontPoppinsRegular topPaddingForSections bottomPaddingForSections greyishShade">
           {/* <div className="better-roi h-5  wono-text-spacing "> */}
           <div className="container paddingRight0">
             <div className="row ">
@@ -652,7 +652,7 @@ const LeadsPage = () => {
           </div>
         </div>
 
-        <div className="complete-view-section h-5 wono-text-spacing fontPoppinsRegular topSpaceBetweenSections">
+        <div className="complete-view-section h-5 wono-text-spacing fontPoppinsRegular topPaddingForSections">
           {" "}
           <div className="container pe-0">
             <div className="row ">
@@ -680,7 +680,7 @@ const LeadsPage = () => {
           </div>
         </div>
 
-        <div className="finer-points-section h-5 wono-text-spacing fontPoppinsRegular bottomSpaceBetweenSections">
+        <div className="finer-points-section h-5 wono-text-spacing fontPoppinsRegular bottomPaddingForSections">
           {" "}
           <div className="container pe-0">
             <div className="row ">
