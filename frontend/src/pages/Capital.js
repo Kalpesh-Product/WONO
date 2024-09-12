@@ -1,13 +1,17 @@
 import React from 'react'
 import "../styles/capital.css"
 import "../styles/specialClasses.css"
-import DashboardImage from "../assets/IpadDashboardImg.png"
+import DashboardImage from "../assets/newDashboard.png"
 
 const Capital = () => {
   return (
     <>
     <div className='headingContainer'>
-        <h1 className='capital-heading'>We help the daring build legandary Companies.</h1>
+        <h1 className='capital-heading'>We  
+             <span className='hero_animation-container'>
+                   help the daring
+                  <svg fill="none" viewBox="0 0 390 97" className="hero__animation hero__animation--standard"><path d="M2,76.26c16.11,4.95,31.91,3.84,48.58,3.84,20.39,0,40.67,0,61,1,18,.87,36-1,53.94-1,15.79,0,31.51,1.81,47.31,1.21,24.51-.93,49.17-2.18,73.68-2.49,19.45-.25,39.4,1.59,58.76-.64,15-1.73,29-2.29,39.75-14.79C387.89,60.1,390.5,48.5,386.5,40c-5.69-12.09-12.63-18.68-23.67-25.17C341.68,2.4,314.67,1.82,291.09,2c-21.31.2-55.45,3.62-68.52,24.46C212.14,43.1,212,59.57,227.79,72.77c24.81,20.81,63.45,26.8,93.41,18.85"></path></svg>
+            </span> build legandary Companies.</h1>
         <button className='connect-with-us-btn'>CONNECT WITH US</button>
     </div>
     <div className='capital-cards-section'>
@@ -19,6 +23,7 @@ const Capital = () => {
         </div>
         <div className='plus-icon'>+</div>
         <p><b>Investor relations reimagined.</b><span> Leverage software to drive meaningful,actionable engagement.</span></p>
+        <hr className='line-seperation-cards-capitalpage'></hr>
        </div>
 
        <div className='cards-with-text'>
@@ -78,7 +83,9 @@ secure the accurate INVESTOR!</h1>
         </div>
         <div className='big-end-dashboard-img'>
         <img src={DashboardImage} alt='end-image'></img>
+        <div className='back-wrapper-dashboard-img'></div>
         </div>
+        
     </div>
     <div className='capital-last-button-section'>
         <h1>LET THE FUNDRAISE BEGIN!</h1>
