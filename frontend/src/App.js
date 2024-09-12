@@ -22,6 +22,7 @@ import NewPassword from "./pages/NewPassword";
 import Themes from "./pages/Themes";
 import LeadsPage from "./pages/LeadsPage";
 import Capital from "./pages/Capital";
+import ProductPage from "./pages/ProductPage";
 
 function App() {
   return (
@@ -49,6 +50,7 @@ function App() {
           <Route path="/themes" element={<Themes />} />
           <Route path="/capital" element={<Capital />} />
           <Route path="/leads" element={<LeadsPage />} />
+          <Route path="/themes/products" element={<ProductPage />} />
         </Routes>
         <AppFooter />
       </UserProvider>

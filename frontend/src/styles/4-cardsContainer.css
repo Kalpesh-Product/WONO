@@ -35,7 +35,7 @@
   overflow: hidden;
   /* Hide the overflow */
   position: relative;
- 
+
 }
 
 
@@ -56,6 +56,7 @@
   /* box-shadow: 0 8px 16px rgba(255, 255, 255, 0.6); */
   /* Prevents overflowing outside the wrapper */
 }
+
 .four-cards-wrapper::before,
 .four-cards-wrapper::after {
   content: '';
@@ -69,12 +70,12 @@
 
 .four-cards-wrapper::before {
   left: 0;
-  background: linear-gradient(to right, #f4f4f4 70%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(to right, #f4f4f4 90%, rgba(255, 255, 255, 0) 100%);
 }
 
 .four-cards-wrapper::after {
   right: 0;
-  background: linear-gradient(to left, #f4f4f4 70%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(to left, #f4f4f4 90%, rgba(255, 255, 255, 0) 100%);
 }
 
 .four-cards-content {
@@ -161,5 +162,26 @@
   .four-cards-content {
     animation: none;
     transition: none;
+  }
+
+  .four-cards-wrapper::before,
+  .four-cards-wrapper::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 2rem;
+    z-index: 3;
+    pointer-events: none;
+  }
+
+  .four-cards-wrapper::before {
+    left: 0;
+    background: linear-gradient(to right, #f4f4f4 70%, rgba(255, 255, 255, 0) 100%);
+  }
+
+  .four-cards-wrapper::after {
+    right: 0;
+    background: linear-gradient(to left, #f4f4f4 70%, rgba(255, 255, 255, 0) 100%);
   }
 }

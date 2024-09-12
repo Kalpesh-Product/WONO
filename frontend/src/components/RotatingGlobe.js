@@ -10,7 +10,7 @@ const RotatingGlobe = () => {
 
     useFrame(() => {
         if (globeRef.current) {
-          globeRef.current.rotation.y += 0.002;
+          globeRef.current.rotation.y += 0.007;
         }
       });
 

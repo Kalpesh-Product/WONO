@@ -14,7 +14,7 @@ const FourCardsComponents = () => {
     const cardsData = [
       { icon: Frontend, title: "FRONTEND", features: ["Website/Native-apps", "Payment Gateway", "Meeting Rooms", "Customer Profile & more"] },
       { icon: Finance, title: "FINANCE & ACCOUNTING", features: ["Automated Invoicing", "Cashflow & Projections", "Budget Management", "Working Capital & more"] },
-      { icon: Customer, title: "CUSTOMER MANAGEMENT SERVICES", features: ["Ticket Raising & Logs", "Internal Booking Engine", "Internal Communication & Logs", "Customer Management & more"] },
+      { icon: Customer, title: "CUSTOMER MANAGEMENT SERVICES", features: ["Ticket Raising & Logs", "Internal Booking Engine", "Internal Communication", "Customer Management & more"] },
       { icon: Analytics, title: "ANALYTICS", features: ["Key Business Trends", "Full Data Analysis", "Customer Reports", "Employee Reports & more"] },
       { icon: HR, title: "HR SUPPORT", features: ["Attendance & Engagements", "Task Allotment & Management", "Performance Analysis", "Employee Appraisals & more"] },
       { icon: Marketing, title: "MARKETING", features: ["Search Engine Optimization", "Search Engine Marketing", "Ad Network", "Lead Generation & more"] }
