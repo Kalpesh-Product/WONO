@@ -140,7 +140,7 @@ const NavBar = () => {
             onClick={handleClose}>
             SaaS
           </Link>
-          <Link className="custom-offcanvas-link" to="#" onClick={handleClose}>
+          <Link className="custom-offcanvas-link" to="/capital" onClick={handleClose}>
             Capital
           </Link>
           <Link className="custom-offcanvas-link" to="/themes" onClick={handleClose}>
