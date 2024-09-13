@@ -36,6 +36,18 @@
     font-weight: bold;
     
 }
+.capital-heading-sub{
+    width: 100%;
+    text-align: center;
+    padding-top: 7.3rem;
+    padding-left: 30%;
+    padding-right: 30%;
+    position: absolute;
+    font-family:Popins-regular;
+    font-size: 40px;
+    font-weight: bold;
+    
+}
 .connect-with-us-btn{
     position: absolute;
     bottom: 5rem;
@@ -152,7 +164,7 @@
     background-color: black;
 }
 .big-end-image img{
-    height: 100%;
+    height: 35rem;
     width: 100%;
     
 }
@@ -228,9 +240,7 @@
     color: rgba(13,110,253);
 }
 .big-end-dashboard-img {
-    padding: 0 8% 3% 8%;
-   
-    
+    padding: 0 8% 0 8%;
 }
 .hero_animation-container{
     position: relative;
@@ -251,8 +261,8 @@
     top: 0;
     transform-origin: left;
     z-index: -1;
-    padding-bottom: 15px;
-    padding-left: 46px;
+    padding-bottom: 18px;
+    padding-left: 48px;
 }
 
    
@@ -286,17 +296,22 @@
     }
     .headingContainer{
         display: flex;
-        align-items: center;
-        justify-content: center;
+        margin-left: 0;
+        margin-right: 0;
+       
     }
     .capital-heading{
         position: relative;
-        font-size: 25px;
+        font-size: 26px;
+        padding-top: 4rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
+    
     .connect-with-us-btn{
-        position: absolute;
-        right: 0px;
-        bottom: 10px;
+        left: 70px;
+        align-items: flex-start;
+
     }
     .capital-big-text h1{
         font-size: 25px;
@@ -308,7 +323,68 @@
         height:100px;
         margin-bottom: 40%;
     }
+    /* Green-Round -Marker-heading */
+    .hero__animation{
+        padding-left: 20px;
+        padding-bottom: 10px;
+        height: 60px;
+    }
+    /* End */
+    /* 4cards section */
+   
+    .capital-cards-section {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        
 
+      
+    }
+    .frictionless-btns{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 300px;
+    }
+    .big-end-dashboard-img{
+        height: 15rem;
+    }
 
-
+    .capital-img {
+        max-width: 720px; /* Adjust to the calculated width */
+        width: 100%;     /* Ensure it scales down for smaller screens */
+        height: 200px;     /* Adjust height to maintain the aspect ratio */
+    }
+    .plus-icon{
+        font-size: 20px;
+        height: 30px;
+        width: 30px;
+    }
+    /* end */
+    /* 3 Crads section */
+    .three-card-images{
+        display: flex;
+        flex-direction: row;
+        height: 200px;
+        overflow-y: hidden;
+    }
+    .card-img-1 {
+        width: 100%;
+        height: 100%;
+        
+    }
+    .card-img-1 img{
+       
+        object-fit: cover;
+    }
+    .frictionless-heading-with-btns h1{
+        font-size: 25px;
+    }
+    .capital-last-button-section h1{
+        font-size: 25px;
+    }
 }
+@media (min-width: 2560px) {
+    .capital-img {
+      max-width: calc((100vw - 14rem) / 3); /* Adjust this value based on how many images are displayed in a row */
+    }
+  }
