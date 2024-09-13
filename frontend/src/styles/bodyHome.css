@@ -817,7 +817,7 @@
 
 .website-panel {
     min-height: 100%;
-    padding: 2rem 0rem 2rem 0rem;
+    padding: 2rem 0rem 0rem 0rem;
     gap: 1rem;
     border-radius: 20px;
 }

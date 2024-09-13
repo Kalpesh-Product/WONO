@@ -2,12 +2,12 @@ import React from 'react';
 import Slider from 'react-slick';
 import "../styles/4-cardsContainer.css";
 import TickmarkImg from "../assets/check.png";
-import Frontend from '../assets/WONO_images/img/key-features/frontend.jpg';
-import Finance from '../assets/WONO_images/img/key-features/finance.jpg';
-import Customer from '../assets/WONO_images/img/key-features/crm.jpg';
-import Analytics from '../assets/WONO_images/img/key-features/analytics.jpg';
-import HR from '../assets/WONO_images/img/key-features/hr.jpg';
-import Marketing from '../assets/WONO_images/img/key-features/marketing.jpg';
+import Frontend from '../assets/WONO_images/img/key-features/website.png';
+import Finance from '../assets/WONO_images/img/key-features/finance.png';
+import Customer from '../assets/WONO_images/img/key-features/CustomerLatest.png';
+import Analytics from '../assets/WONO_images/img/key-features/dashboard.png';
+import HR from '../assets/WONO_images/img/key-features/HR.png';
+import Marketing from '../assets/WONO_images/img/key-features/seo.png';
 import { useNavigate } from 'react-router-dom';
 
 const FourCardsComponents = () => {
@@ -88,8 +88,8 @@ const FourCardsComponents = () => {
         {cardsData.map((card, index) => (
           <div key={index} className="card_1 shadow">
             <div className="card-body">
-              <div className="card-icon">
-                <img src={card.icon} alt={card.title} />
+              <div className="card-icon" >
+                <img src={card.icon} alt={card.title} style={{boxShadow:"10px solid grey"}} />
               </div>
               <h5 className="card-title">{card.title}</h5>
               <div className="card-text">
