@@ -372,20 +372,21 @@
     .three-card-images{
         display: flex;
         flex-direction: row;
-        height: 200px;
+        height: 300px;
         overflow: hidden;
         margin-bottom: 0;
         width: 100%;
     }
     .card-img-1 {
-        flex: 1;
-        width: 200px;
+        
+        width: 100%;
         height: 100%;
+        position: relative;
     }
     .card-img-1 img{
         width: 100%;
         height: 100%;
-        object-fit: cover;
+        object-fit: fill;
         object-position: center;
     }
     
