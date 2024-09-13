@@ -1,0 +1,99 @@
+@font-face {
+    font-family: Popins-Semibold;
+    src: url('../assets/WONO_images/img/fonts/Poppins-SemiBold.ttf');
+}
+
+@font-face {
+    font-family: Popins-Regular;
+    src: url('../assets/WONO_images/img/fonts/Poppins-Regular.ttf');
+}
+
+.no-border {
+    border: none;
+    outline: none;
+    /* Optional: Removes the outline when the input is focused */
+}
+
+.no-border:focus {
+    outline: none;
+    /* Optional: Keeps the input borderless when focused */
+}
+
+.poppinsRegular {
+    font-family: Popins-Regular;
+}
+
+.poppinsSemibold {
+    font-family: Popins-Semibold;
+}
+
+
+.loginTopPadding {
+    padding-top: 10rem;
+}
+
+.loginBottomPadding {
+    padding-bottom: 10rem;
+}
+
+
+.divideFiftyPercent {
+    display: flex;
+    flex-direction: column;
+}
+
+.CenterElement {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hrStyling {
+    width: 80%;
+
+}
+
+.zeroHeight {
+    height: 0;
+}
+
+.loginDividingContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.vertical-line {
+    width: 0.1rem;
+    /* width: 1.1rem; */
+    /* Thickness of the line */
+    background-color: rgb(110, 110, 110);
+    /* Color of the line */
+    height: 100%;
+    /* width: 100%; */
+    /* Full height */
+}
+
+.fullHeight {
+    height: 100%;
+}
+
+.hrHeight {
+    height: 1rem;
+}
+
+.lineSideMargin {
+    margin-left: 6rem;
+    margin-right: 6rem;
+}
+
+.loginButtonStyling {
+    background-color: white;
+    ;
+    color: rgb(10, 169, 239);
+    padding: 0.5rem 2rem;
+    border-radius: 30px;
+    margin: 0;
+    border: 0.1rem solid rgb(10, 169, 239);
+    ;
+}
