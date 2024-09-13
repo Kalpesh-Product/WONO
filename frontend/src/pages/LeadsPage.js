@@ -636,8 +636,8 @@ const LeadsPage = () => {
           </div>
         </div>
 
-        <div className="CenterElement">
-          <hr className="hrStyling" />
+        <div className="CenterElement zeroHeight">
+          <hr className="hrStyling zeroHeight" />
         </div>
 
         <div className="better-roi-section  wono-text-spacing fontPoppinsRegular topPaddingForSections bottomPaddingForSections ">
@@ -651,13 +651,13 @@ const LeadsPage = () => {
                 {/* <div className="col-lg-6 text-end  d-flex flex-column justify-content-center"> */}
                 <div className="">
                   {/* <div className=""> */}
-                  <h2 className="ROIFontSize fontPoppinsRegular">
+                  <h2 className="ROIFontSize fontPoppinsRegular m-0">
                     Get better ROI from your marketing.
                   </h2>
                 </div>
                 <div className="">
                   {/* <div className=""> */}
-                  <p className="pt-3">
+                  <p className="topPaddingInsideSections">
                     Discover all the ways that Analytics surfaces helpful
                     insights for a complete understanding of your customers —
                     from built-in automation and customized reporting, to
@@ -669,25 +669,25 @@ const LeadsPage = () => {
           </div>
         </div>
 
-        <div className="CenterElement">
-          <hr className="hrStyling" />
+        <div className="CenterElement zeroHeight">
+          <hr className="hrStyling zeroHeight" />
         </div>
 
         <div className="complete-view-section h-5 wono-text-spacing fontPoppinsRegular topPaddingForSections bottomPaddingForSections">
           {" "}
           <div className="container pe-0">
-            <div className="row ">
-              <div className="col-lg-6 text-start  d-flex flex-column justify-content-center">
+            <div className="row invertDivs">
+              <div className="col-lg-6 text-start  d-flex flex-column  justify-content-center ">
                 {/* <div className="col-lg-6 text-end  d-flex flex-column justify-content-center"> */}
                 <div className="">
                   {/* <div className=""> */}
-                  <h2 className="fontSizeCompleteView fontPoppinsRegular">
+                  <h2 className="fontSizeCompleteView fontPoppinsRegular m-0">
                     Get a complete view.
                   </h2>
                 </div>
                 <div className="">
                   {/* <div className=""> */}
-                  <p className="pt-3">
+                  <p className="topPaddingInsideSections">
                     Analytics helps you get a more complete understanding of how
                     your customers engage with your business so you can deliver
                     better experiences and drive results.
@@ -701,8 +701,8 @@ const LeadsPage = () => {
           </div>
         </div>
 
-        <div className="CenterElement">
-          <hr className="hrStyling" />
+        <div className="CenterElement zeroHeight">
+          <hr className="hrStyling zeroHeight" />
         </div>
 
         <div className="finer-points-section h-5 wono-text-spacing fontPoppinsRegular topPaddingForSections bottomPaddingForSections">
@@ -716,13 +716,13 @@ const LeadsPage = () => {
                 {/* <div className="col-lg-6 text-end  d-flex flex-column justify-content-center"> */}
                 <div className="">
                   {/* <div className=""> */}
-                  <h2 className="fontSizeCompleteView fontPoppinsRegular">
+                  <h2 className="fontSizeCompleteView fontPoppinsRegular m-0">
                     The finer points.
                   </h2>
                 </div>
                 <div className="">
                   {/* <div className=""> */}
-                  <p className="pt-3">
+                  <p className="topPaddingInsideSections">
                     Analytics helps you understand how people use your sites and
                     apps, so you can take action to improve their experience.
                     Discover what Google Analytics can do by checking out the
@@ -860,15 +860,16 @@ const LeadsPage = () => {
 
         <div className="last-section body-partners-master w-100 fontPoppinsRegular">
           <div className="pt-5 customMargin pb-5">
-            <div className="grow-your-business-color p-3">
-              <h2>
-                <b className="leadsCtafontSize">
+            <div className="grow-your-business-color">
+              <h2 className="m-0">
+                {/* <b className="leadsCtafontSize">
                   Now that’s how we generate continues leads for you!
-                </b>
+                </b> */}
+                Now that’s how we generate continues leads for you!
               </h2>
-              <br />
+              {/* <br /> */}
 
-              <p className="last-spacing leadsCtaTextFont mb-5">
+              <p className="last-spacing leadsCtaTextFont m-0 topPaddingInsideSections bottomPaddingInsideSections">
                 This takes a lot of effort, time and patience … need to start
                 soon!
               </p>

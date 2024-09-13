@@ -1,191 +1,215 @@
-.WidthHeight1 {
-    max-width: 7.5rem;
-    /* 120px / 16 */
-    max-height: 7.5rem;
-    /* 120px / 16 */
-}
+    /* img,
+    div,
+    section {
+        max-width: 100%;
+        overflow-x: hidden;
+    } */
 
-.WidthHeight2 {
-    width: 7.5rem;
-    /* 120px / 16 */
-    max-height: 7.5rem;
-    /* 120px / 16 */
-    margin: auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
 
-.smallerImageWidthHeight {
-    max-height: 6.25rem;
+    .WidthHeight1 {
+        max-width: 7.5rem;
+        /* 120px / 16 */
+        max-height: 7.5rem;
+        /* 120px / 16 */
+    }
 
-    max-width: 6.25rem;
+    .WidthHeight2 {
+        width: 7.5rem;
+        /* 120px / 16 */
+        max-height: 7.5rem;
+        /* 120px / 16 */
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
 
-}
+    .smallerImageWidthHeight {
+        max-height: 6.25rem;
 
-.WidthHeight3 {
-    max-width: 13rem;
-    max-height: 7.5rem;
-}
+        max-width: 6.25rem;
 
-.widthHeight4 {
-    max-width: 8.5rem;
+    }
 
-    max-height: 8.5rem;
+    .WidthHeight3 {
+        max-width: 13rem;
+        max-height: 7.5rem;
+    }
 
-}
+    .widthHeight4 {
+        max-width: 8.5rem;
 
-.widthHeight5 {
-    max-width: 8.5rem;
+        max-height: 8.5rem;
 
-    max-height: 8.5rem;
-}
+    }
 
-.flexForCards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 1.25rem;
-    /* 20px / 16 */
-}
+    .widthHeight5 {
+        max-width: 8.5rem;
 
-.fontSizeCompleteView {
-    font-size: 5.625rem;
-    /* 90px / 16 */
-}
+        max-height: 8.5rem;
+    }
 
-.individual-card {
-    padding: 0.625rem 0rem;
-    /* 10px / 16 */
-    width: calc(33.33% - 1.25rem);
-    /* 20px / 16 */
-    margin-bottom: 0.625rem;
-    /* 10px / 16 */
-}
+    .flexForCards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 1.25rem;
+        /* 20px / 16 */
+    }
 
-.individual-card-front {
-    padding-left: 0;
-}
+    .fontSizeCompleteView {
+        font-size: 5.625rem;
+        /* 90px / 16 */
+    }
 
-.paddingRight0 {
-    padding-right: 0rem !important;
-}
+    .individual-card {
+        padding: 0.625rem 0rem;
+        /* 10px / 16 */
+        width: calc(33.33% - 1.25rem);
+        /* 20px / 16 */
+        margin-bottom: 0.625rem;
+        /* 10px / 16 */
+    }
 
-.leadsCtafontSize {
-    font-size: 2.75rem;
-    /* 44px / 16 */
-}
+    .individual-card-front {
+        padding-left: 0;
+    }
 
-/* .leadsCtaTextFont {
+    .paddingRight0 {
+        padding-right: 0rem !important;
+    }
+
+    .leadsCtafontSize {
+        font-size: 2.75rem;
+        /* 44px / 16 */
+    }
+
+    /* .leadsCtaTextFont {
     font-size: 2.25rem !important;
   
 } */
 
-.automatedPlatformFontSize {
-    font-size: 1.125rem;
-    /* 18px / 16 */
-}
+    .automatedPlatformFontSize {
+        font-size: 1.125rem;
+        /* 18px / 16 */
+    }
 
-.automatedPlatformPadding {
-    padding-top: 1.875rem;
-    /* 30px / 16 */
-}
+    .automatedPlatformPadding {
+        padding-top: 1.875rem;
+        /* 30px / 16 */
+    }
 
-/* .FFFF {
+    /* .FFFF {
     font-size: 2.6rem !important;
     line-height: 1.4;
 } */
 
-.spaceBetweenSections {
-    padding-top: 1.875rem;
-    /* 30px / 16 */
-    padding-bottom: 1.875rem;
-    /* 30px / 16 */
-}
+    .spaceBetweenSections {
+        padding-top: 1.875rem;
+        /* 30px / 16 */
+        padding-bottom: 1.875rem;
+        /* 30px / 16 */
+    }
 
-.marginBetweenSections {
-    margin-top: 1.875rem;
-    /* 30px / 16 */
-    margin-bottom: 1.875rem;
-    /* 30px / 16 */
-}
+    .marginBetweenSections {
+        margin-top: 1.875rem;
+        /* 30px / 16 */
+        margin-bottom: 1.875rem;
+        /* 30px / 16 */
+    }
 
-.topSpaceBetweenSections {
-    padding-top: 1.875rem;
-    /* 30px / 16 */
-}
+    .topSpaceBetweenSections {
+        padding-top: 1.875rem;
+        /* 30px / 16 */
+    }
 
-.bottomSpaceBetweenSections {
-    padding-bottom: 1.875rem;
-    /* 30px / 16 */
-}
+    .bottomSpaceBetweenSections {
+        padding-bottom: 1.875rem;
+        /* 30px / 16 */
+    }
 
-.googleSheetsHeading {
-    font-size: 2.75rem;
-    /* 44px / 16 */
-}
+    .googleSheetsHeading {
+        font-size: 2.75rem;
+        /* 44px / 16 */
+    }
 
-.ROIFontSize {
-    font-size: 4rem;
-    /* 64px / 16 */
-}
+    .ROIFontSize {
+        font-size: 4rem;
+        /* 64px / 16 */
+    }
 
-.CenterElement {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+    .CenterElement {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
-.hrStyling {
-    width: 80%;
-}
+    .hrStyling {
+        width: 80%;
 
+    }
 
-.individual-card-last-row-no-bottom-spacing {
-    margin-bottom: 0;
-    padding-bottom: 0;
-}
-
-.checklistFont {
-    font-size: 1.125rem;
-    /* 18px / 16 */
-}
-
-.extraTopSpace30 {
-    padding-top: 1.875rem;
-    /* 30px / 16 */
-}
-
-.extraBottomSpaceOurCoreFocus {
-    padding-bottom: 4.6875rem;
-    /* 75px / 16 */
-}
-
-.greyishShade {
-    background-color: rgb(240, 240, 240);
-}
-
-.topPaddingAboveFirstSection {
-    padding-top: 4rem;
-}
-
-.bottomPaddingBelowFirstSection {
-    padding-bottom: 4rem;
-}
+    .zeroHeight {
+        height: 0;
+    }
 
 
-.topPaddingForSections {
-    padding-top: 6rem;
-}
+    .individual-card-last-row-no-bottom-spacing {
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
 
-.bottomPaddingForSections {
-    padding-bottom: 6rem;
-}
+    .checklistFont {
+        font-size: 1.125rem;
+        /* 18px / 16 */
+    }
+
+    .extraTopSpace30 {
+        padding-top: 1.875rem;
+        /* 30px / 16 */
+    }
+
+    .extraBottomSpaceOurCoreFocus {
+        /* padding-bottom: 4.6875rem; */
+        padding-bottom: 4rem;
+        /* 75px / 16 */
+    }
+
+    .greyishShade {
+        background-color: rgb(240, 240, 240);
+    }
+
+    .topPaddingAboveFirstSection {
+        padding-top: 4rem;
+    }
+
+    .bottomPaddingBelowFirstSection {
+        padding-bottom: 4rem;
+    }
 
 
-/* Media query for phone view (max-width: 768px or smaller) */
-/* @media (max-width: 768px) {
+    .topPaddingForSections {
+        /* padding-top: 6rem; */
+        padding-top: 4rem;
+    }
+
+    .bottomPaddingForSections {
+        /* padding-bottom: 6rem; */
+        padding-bottom: 4rem;
+    }
+
+    .topPaddingInsideSections {
+        padding-top: 2rem;
+    }
+
+    .bottomPaddingInsideSections {
+        padding-bottom: 2rem;
+    }
+
+
+    /* Media query for phone view (max-width: 768px or smaller) */
+    /* @media (max-width: 768px) {
     .individual-card {
         width: 100%;
     }
@@ -195,247 +219,261 @@
     }
 } */
 
-/* General responsive adjustments */
-/* body {
+    /* General responsive adjustments */
+    /* body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 } */
 
-@media (min-width: 1025px) {
-    .FFFF {
-        font-size: 2.6rem !important;
-        line-height: 1.4;
+    @media (min-width: 1025px) {
+        .FFFF {
+            font-size: 2.6rem !important;
+            line-height: 1.4;
+        }
+
+        .leadsCtaTextFont {
+            font-size: 2.25rem !important;
+
+        }
     }
 
-    .leadsCtaTextFont {
-        font-size: 2.25rem !important;
+    /* Media query for tablet view (max-width: 1024px or smaller) */
+    @media (max-width: 1024px) {
+        .individual-card {
+            width: 48%;
+            margin-bottom: 1rem;
+        }
 
-    }
-}
+        .flexForCards {
+            justify-content: space-between;
+        }
 
-/* Media query for tablet view (max-width: 1024px or smaller) */
-@media (max-width: 1024px) {
-    .individual-card {
-        width: 48%;
-        margin-bottom: 1rem;
-    }
+        .fontSizeCompleteView {
+            font-size: 4rem;
+        }
 
-    .flexForCards {
-        justify-content: space-between;
-    }
+        .leadsCtafontSize {
+            font-size: 2rem;
+        }
 
-    .fontSizeCompleteView {
-        font-size: 4rem;
-    }
+        .leadsCtaTextFont {
+            font-size: 1.25rem;
+        }
 
-    .leadsCtafontSize {
-        font-size: 2rem;
-    }
+        .automatedPlatformFontSize {
+            font-size: 1rem;
+        }
 
-    .leadsCtaTextFont {
-        font-size: 1.25rem;
-    }
+        .googleSheetsHeading {
+            font-size: 2rem;
+        }
 
-    .automatedPlatformFontSize {
-        font-size: 1rem;
-    }
+        .ROIFontSize {
+            font-size: 3rem;
+        }
 
-    .googleSheetsHeading {
-        font-size: 2rem;
-    }
+        .FFFF {
+            font-size: 2rem;
+        }
 
-    .ROIFontSize {
-        font-size: 3rem;
-    }
-
-    .FFFF {
-        font-size: 2rem;
-    }
-
-    .checklistFont {
-        font-size: 1rem;
-    }
-}
-
-/* Media query for phone view (max-width: 768px or smaller) */
-@media (max-width: 768px) {
-    .individual-card {
-        width: 100%;
+        .checklistFont {
+            font-size: 1rem;
+        }
     }
 
-    .flexForCards {
-        justify-content: center;
-    }
+    /* MOBILE VIEW */
+    /* Media query for phone view (max-width: 768px or smaller) */
+    @media (max-width: 768px) {
 
-    .fontSizeCompleteView {
-        font-size: 3rem;
-    }
+        /* img,
+    div,
+    section {
+        max-width: 100%;
+        overflow-x: hidden;
+    } */
 
-    .leadsCtafontSize {
-        font-size: 1.75rem;
-    }
+        .invertDivs {
+            display: flex;
+            flex-direction: column-reverse;
+        }
 
-    .leadsCtaTextFont {
-        font-size: 1.5rem;
-    }
+        .individual-card {
+            width: 100%;
+        }
 
-    .automatedPlatformFontSize {
-        font-size: 0.875rem;
-    }
+        .flexForCards {
+            justify-content: center;
+        }
 
-    .googleSheetsHeading {
-        font-size: 1.75rem;
-    }
+        .fontSizeCompleteView {
+            font-size: 3rem;
+        }
 
-    .ROIFontSize {
-        font-size: 2.5rem;
-    }
+        .leadsCtafontSize {
+            font-size: 1.75rem;
+        }
 
-    .FFFF {
-        font-size: 1.75rem;
-    }
+        .leadsCtaTextFont {
+            font-size: 1.5rem;
+        }
 
-    .checklistFont {
-        font-size: 0.875rem;
-    }
+        .automatedPlatformFontSize {
+            font-size: 0.875rem;
+        }
 
-    .WidthHeight1,
-    .WidthHeight2 {
-        max-width: 5rem;
-        max-height: 5rem;
-    }
+        .googleSheetsHeading {
+            font-size: 1.75rem;
+        }
 
-    .smallerImageWidthHeight {
-        max-height: 4rem;
-        max-width: 4rem;
-    }
+        .ROIFontSize {
+            font-size: 2.5rem;
+        }
 
-    .extraBottomSpaceOurCoreFocus {
-        padding-bottom: 2rem;
-    }
+        .FFFF {
+            font-size: 1.75rem;
+        }
 
-    .spaceBetweenSections,
-    .marginBetweenSections,
-    .topSpaceBetweenSections,
-    .bottomSpaceBetweenSections {
-        padding-top: 1rem;
-        padding-bottom: 1rem;
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-    }
+        .checklistFont {
+            font-size: 0.875rem;
+        }
 
-    .paddingRight0 {
-        padding-right: 0 !important;
-    }
+        .WidthHeight1,
+        .WidthHeight2 {
+            max-width: 5rem;
+            max-height: 5rem;
+        }
 
-    .container {
-        padding-left: 1rem;
-        padding-right: 1rem;
-    }
+        .smallerImageWidthHeight {
+            max-height: 4rem;
+            max-width: 4rem;
+        }
 
-    .row {
-        margin-left: 0;
-        margin-right: 0;
-    }
+        .extraBottomSpaceOurCoreFocus {
+            padding-bottom: 2rem;
+        }
 
-    .col-lg-6,
-    .col-lg-4,
-    .col-lg-3,
-    .col-lg-9,
-    .col-lg-12 {
-        padding-left: 0;
-        padding-right: 0;
-    }
+        .spaceBetweenSections,
+        .marginBetweenSections,
+        .topSpaceBetweenSections,
+        .bottomSpaceBetweenSections {
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
 
-    .organic-leads-images-section {
-        padding-left: 0;
-        padding-right: 0;
-    }
+        .paddingRight0 {
+            padding-right: 0 !important;
+        }
 
-    .organic-leads-images-section img {
-        width: 100%;
-    }
+        .container {
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
 
-    .image-grid {
-        flex-direction: column;
-    }
+        .row {
+            margin-left: 0;
+            margin-right: 0;
+        }
 
-    .img-row-1,
-    .img-row-2,
-    .img-row-3 {
-        flex-direction: column;
-        align-items: center;
-    }
+        .col-lg-6,
+        .col-lg-4,
+        .col-lg-3,
+        .col-lg-9,
+        .col-lg-12 {
+            padding-left: 0;
+            padding-right: 0;
+        }
 
-    .img-row-1 div,
-    .img-row-2 div,
-    .img-row-3 div {
-        margin-bottom: 1rem;
-    }
+        .organic-leads-images-section {
+            padding-left: 0;
+            padding-right: 0;
+        }
 
-    .marketing-header {
-        text-align: center;
-    }
+        .organic-leads-images-section img {
+            width: 100%;
+        }
 
-    .marketing-header h2 {
-        font-size: 2rem;
-    }
+        .image-grid {
+            flex-direction: column;
+        }
 
-    .marketing-header p {
-        font-size: 1rem;
-    }
+        .img-row-1,
+        .img-row-2,
+        .img-row-3 {
+            flex-direction: column;
+            align-items: center;
+        }
 
-    .marketing-body {
-        text-align: center;
-    }
+        .img-row-1 div,
+        .img-row-2 div,
+        .img-row-3 div {
+            margin-bottom: 1rem;
+        }
 
-    .better-roi-section,
-    .complete-view-section,
-    .finer-points-section {
-        padding-left: 1rem;
-        padding-right: 1rem;
-    }
+        .marketing-header {
+            text-align: center;
+        }
 
-    .better-roi-section img,
-    .complete-view-section img,
-    .finer-points-section img {
-        width: 100%;
-    }
+        .marketing-header h2 {
+            font-size: 2rem;
+        }
 
-    .better-roi-section .col-lg-6,
-    .complete-view-section .col-lg-6,
-    .finer-points-section .col-lg-6 {
-        padding-left: 0;
-        padding-right: 0;
-    }
+        .marketing-header p {
+            font-size: 1rem;
+        }
 
-    .better-roi-section .col-lg-6.text-start,
-    .complete-view-section .col-lg-6.text-start,
-    .finer-points-section .col-lg-6.text-start {
-        text-align: center;
-    }
+        .marketing-body {
+            text-align: center;
+        }
 
-    .better-roi-section .col-lg-6.text-start p,
-    .complete-view-section .col-lg-6.text-start p,
-    .finer-points-section .col-lg-6.text-start p {
-        padding-left: 1rem;
-        padding-right: 1rem;
-    }
+        .better-roi-section,
+        .complete-view-section,
+        .finer-points-section {
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
 
-    .last-section {
-        text-align: center;
-    }
+        .better-roi-section img,
+        .complete-view-section img,
+        .finer-points-section img {
+            width: 100%;
+        }
 
-    .last-section h2 {
-        font-size: 2rem;
-    }
+        .better-roi-section .col-lg-6,
+        .complete-view-section .col-lg-6,
+        .finer-points-section .col-lg-6 {
+            padding-left: 0;
+            padding-right: 0;
+        }
 
-    .last-section p {
-        font-size: 1.25rem;
-    }
+        .better-roi-section .col-lg-6.text-start,
+        .complete-view-section .col-lg-6.text-start,
+        .finer-points-section .col-lg-6.text-start {
+            text-align: center;
+        }
 
-    .last-section .partner-button-space {
-        text-align: center;
+        .better-roi-section .col-lg-6.text-start p,
+        .complete-view-section .col-lg-6.text-start p,
+        .finer-points-section .col-lg-6.text-start p {
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+
+        .last-section {
+            text-align: center;
+        }
+
+        .last-section h2 {
+            font-size: 2rem;
+        }
+
+        .last-section p {
+            font-size: 1.25rem;
+        }
+
+        .last-section .partner-button-space {
+            text-align: center;
+        }
     }
-}
