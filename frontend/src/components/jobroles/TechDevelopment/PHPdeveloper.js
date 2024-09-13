@@ -4,8 +4,7 @@ import { Link } from 'react-router-dom'
 const PHPdeveloper = () => {
   return (
     <div>
-        <div className="col-lg-12 order-2 order-lg-1 mt-3 mt-lg-0 d-flex flex-column justify-content-center"
-                    data-aos="fade-up" data-aos-delay="100">
+        
                     <h3 className="m-b-2">About the Job</h3>
                     <p>A PHP Developer is responsible for creating and implementing Web-based products using PHP, MySQL, Ajax, and JavaScript. Should develop back-end components, connect the application with other web services, and assist front-end developers by ensuring their work integrates with the application. Client Coordination
                     Experience needed-PHP, Laravel, Cloud Server, SQL, OOPs concept, strong logical thinking, Team handling.</p>
@@ -57,7 +56,7 @@ const PHPdeveloper = () => {
                     <hr style={{ marginTop: "20px" }}></hr>
                     <p style={{ marginBottom: "50px" }}>Please send in your Resume to <strong>Email:<Link to="mailto:response@wono.co">response@wono.co</Link></strong>
                       if unable to apply now</p>
-                </div>
+               
     </div>
   )
 }

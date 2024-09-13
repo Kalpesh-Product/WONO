@@ -21,6 +21,10 @@ section{
     border: 0;
     border-bottom: 4px solid #e2e4e6;
   }
+  .container-jobDetails{
+    padding-left: 7rem;
+    padding-right: 7rem;
+  }
   
   .features .tab-content{
     margin-top: 30px;

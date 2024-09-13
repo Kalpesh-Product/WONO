@@ -62,14 +62,17 @@ const Jobrole = () => {
           <div className='col-lg-6' style={{textAlign:"right"}}>
             <p style={{fontWeight:"600",margin:"10px 0"}}>
               <span className='link-btn'>Full-Time | On-Site| Goa </span>
-              <Link to={`/jobdetails/2/${encodeURIComponent('Jr. UI/UX Developer')}`}><i className='fa fa-cheveron-right' >Apply</i></Link>
+              <Link to={`/jobdetails/2/${encodeURIComponent('Jr.UI/UX Developer')}`}><i className='fa fa-cheveron-right' >Apply</i></Link>
             </p>
           </div>
           </div>  
         </Accordion.Body>
+        
         <Accordion.Body>
+          
           <div className='mob-down' style={{display:"flex"}}>
           <div className='col-lg-6'>
+          <hr style={{borderColor:"1px solid black"}}></hr>
             <h5 style={{fontSize:"1.5rem",margin:"10 0",color:"#000"}}> 2. PHP Developer</h5>
           </div>
           <div className='col-lg-6' style={{textAlign:"right"}}>
