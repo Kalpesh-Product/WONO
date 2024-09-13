@@ -21,6 +21,11 @@ import ForgotPassword from "./pages/ForgotPassword";
 import NewPassword from "./pages/NewPassword";
 import Themes from "./pages/Themes";
 import LeadsPage from "./pages/LeadsPage";
+import Capital from "./pages/Capital";
+import ProductPage from "./pages/ProductPage";
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
+
 
 function App() {
   return (
@@ -45,9 +50,10 @@ function App() {
           <Route path="/termsandconditions" element={<TermsAndCondtions />} />
           <Route path="/privacy" element={<PrivacyAndPolicy />} />
           <Route path="/testing" element={<TestingPage />} />
+          <Route path="/themes" element={<Themes />} />
+          <Route path="/capital" element={<Capital />} />
           <Route path="/leads" element={<LeadsPage />} />
-          <Route path='/themes' element={<Themes/>}/>
-      
+          <Route path="/themes/products" element={<ProductPage />} />
         </Routes>
         <AppFooter />
       </UserProvider>

@@ -93,7 +93,7 @@ const Footer = () => {
         </div>
 
         <div className="mt-3 py-5">
-          <div className="text-center px-1">
+          <div className="text-center px-1 footer-copyright">
             <p>
               &copy; Copyright 2024-25 by WONOCO PRIVATE LIMITED - SINGAPORE.
               All rights reserved.

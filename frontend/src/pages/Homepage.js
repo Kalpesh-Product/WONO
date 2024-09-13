@@ -142,7 +142,7 @@ const Homepage = () => {
             <div className="black-overlay"></div>
           </div>
           <div className="first-section-grid-item-1">
-            <h2 className="home-main-title">
+            <h2 className="home-main-title ">
               <span className="w"> W</span>
               <span className="O">o</span>rld
               <span className="n">N</span>
@@ -152,11 +152,12 @@ const Homepage = () => {
           </div>
           <div className="first-section-grid-item-2">
             <span className="home-desc">
-              We support Nomad Businesses for FREE! World’s Largest b2b SaaS
-              platform which supports Nomad Lifestyle across 25+ countries !
+              <span>We support Nomad Businesses for FREE!</span> <br />
+              World’s Largest b2b SaaS platform which supports Nomad Lifestyle
+              across 25+ countries !
             </span>
             <div className="home-section-buttons">
-              <div>
+              <div style={{ width: "100%" }}>
                 <button
                   className="home-section-register-button"
                   onClick={handleRegister}>
@@ -393,7 +394,7 @@ const Homepage = () => {
                     </div>
                   ))}
                 </div>
-                <Link to="/themes">View all</Link>
+                <Link onClick={()=>window.scrollTo({ top: 0, behavior: "smooth" })} to="/themes">View more</Link>
               </div>
             </div>
           </div>
@@ -405,9 +406,9 @@ const Homepage = () => {
             <br />
             <br />
             {/* <div className="container border-top border-dark border-2"> */}
-            <div className="container ">
+            <div className="container p-0 ">
               <div className="row ">
-                <div className="col-lg-7 d-flex flex-column justify-content-between ">
+                <div className="col-lg-7 d-flex flex-column justify-content-between p-0 ms-0">
                   <div className=" ">
                     <br />
                     {/* <h4 className="bg-danger testimonial-right-spacing"> */}
@@ -433,11 +434,11 @@ const Homepage = () => {
                   </div>
                 </div>
                 {/* <div className="col-lg-5 mt-3 bg-warning d-flex flex-row justify-content-end"> */}
-                <div className="col-lg-5 mt-3  d-flex flex-row justify-content-end">
+                <div className="col-lg-5 mt-3  d-flex flex-row justify-content-end ps-5 pe-0">
                   <img
                     src={BiznestTestimonial}
                     alt=""
-                    className="custom-image-biznest"
+                    className="custom-image-biznest ms-5"
                   />
                 </div>
               </div>
@@ -450,8 +451,10 @@ const Homepage = () => {
 
         <div className="last-section body-partners-master w-100 ">
           <div className="pt-5 customMargin pb-5">
-            <div className="grow-your-business-color ">
-              <h2>GROW YOUR BUSINESS WITH US</h2>
+            <div className="grow-your-business-color p-3">
+              <h2>
+                <b>GROW YOUR BUSINESS WITH US</b>
+              </h2>
               <br />
 
               <p className="last-spacing smaller-font-for-para">

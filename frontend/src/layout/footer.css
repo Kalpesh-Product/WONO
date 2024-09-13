@@ -16,6 +16,10 @@ footer {
   text-decoration: none;
   font-size: 14px;
   color: white;
+  font-family: Popins-Regular;
+}
+.footer-copyright p{
+  font-family: Popins-Regular;
 }
 
 .footer-container a:hover {
@@ -33,11 +37,12 @@ footer {
 .footer-section-2,
 .footer-section-3 {
   display: flex;
-  align-items: center;
+  align-items: start;
   justify-content: center;
   flex-direction: column;
-  padding: 2rem;
+  padding: 2rem 0;
   text-transform: uppercase;
+  font-family: Popins-Regular;
 }
 
 .footer-section-1 {

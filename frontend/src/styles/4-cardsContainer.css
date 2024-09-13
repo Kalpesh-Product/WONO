@@ -1,121 +1,122 @@
-@keyframes marquee {
-    from {
-      transform: translateX(0%); /* Start from the beginning */
-    }
-    to {
-      transform: translateX(-100%); /* End at the last card */
-    }
-  }
-@keyframes marquee-mobile {
-    from {
-      transform: translateX(100%); /* Start from the beginning */
-    }
-    to {
-      transform: translateX(-100%); /* End at the last card */
-    }
-  }
-
-  @font-face {
-    font-family: Popins-Regular;
-    src: url('../assets/WONO_images/img/fonts/Poppins-Regular.ttf');
+.four-cards-parent {
+  margin: 0;
+  padding: 4rem 7rem;
+  background-color: #fdfdfd;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
 }
-  
-  .four-cards-parent {
-    margin:  0;
-    padding: 4rem 7rem;
-    background-color: #f4f4f4;
-    height: 70vh;
-    overflow: hidden; /* Hide the overflow */
-    position: relative;
-  }
-  .four-cards-parent * {
-    font-family: Popins-Regular;
-  }
-  
-  .four-cards-header {
-    text-align: center;
-    margin-bottom: 20px;
-  }
+.four-cards-header h2{
+  text-align: center;
+  font-size: 4.7rem;
+  white-space: nowrap;
+}
+.four-cards-wrapper {
+  padding: 4rem 7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-  .four-cards-wrapper {
-    /* padding: 0 14rem; */
-    overflow: hidden; /* Prevents overflowing outside the wrapper */
-  }
-  
-  .four-cards-content {
-    display: flex;
-    gap: 20px;
-    animation: marquee 30s linear infinite; 
-    white-space: nowrap; 
-    transition: animation-play-state 0.3s ease;
-    padding: 2rem;
-  }
-  .four-cards-content:hover {
-    animation-play-state: paused; /* Pause animation on hover */
-  }
-  
-  .card_1 {
-    display: inline-block;
-    min-width: 400px; /* Ensure the cards are wide enough to cause overflow */
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    flex-shrink: 0;
-    white-space: nowrap;
-    
-  }
-  
-  .card-icon {
-    width: 45px;
-    margin-bottom: 20px;
-  }
-  
-  .card-icon img {
-    width: 100%;
-  }
-  .card-title{
-    margin-bottom: 20px;
-  }
-  
-  .Tickmark-text {
-    display: flex;
-    align-items: center;
-    margin-bottom: 2px;
-  }
-  
-  .Tickmark-text img {
-    width: 16px;
-    margin-right: 10px;
-  }
-  
-  .key-features-link-space {
-    text-align: center;
-    margin-top: 20px;
-  }
-  
-  .key-features-link {
-    color: black;
-    font-weight: bold;
-    cursor: pointer;
-  }
-  
-  .key-features-link:hover {
-    text-decoration: underline;
-  }
-  
-  @media (max-width:768px) {
+.card-body{
+  width: 100% !important;
+}
+.card_1 {
+  background-color: white;
+  padding: 30px 20px;
+  border-radius: 10px;
+  width: 250px !important;
+  margin:0.5rem 53px;
+  height: 330px;
+}
 
-    .four-cards-parent{
-        padding: 1rem;
-    }
-    .four-cards-wrapper {
-        overflow-x: scroll; 
-      }
-    .card_1{
-        min-width: 400px;
-    }
-    .four-cards-content{
-        animation:none;
-        transition: none;
-    }
-  }
+.card-icon {
+  width: 45px;
+  margin-bottom: 40px;
+}
+
+.card-icon img {
+  width: 100%;
+}
+
+.card-title {
+  display: flex;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.Tickmark-text {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2px;
+  color: #363636;
+  font-size: 0.9rem;
+}
+
+.Tickmark-text img {
+  width: 16px;
+  margin-right: 10px;
+}
+
+.key-features-link-space {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.key-features-link {
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.key-features-link:hover {
+  text-decoration: underline;
+}
+.slick-prev,
+.slick-next {
+  background-color: black; /* Background color for arrows */
+  border: none;
+  border-radius: 50%;
+  width: 30px; /* Arrow size */
+  height: 30px; /* Arrow size */
+  line-height: 30px;
+  text-align: center;
+  font-size: 18px; /* Arrow symbol size */
+  cursor: pointer;
+  z-index: 1; /* Ensure arrows are above the slider */
+}
+
+.slick-prev {
+  left: 70px; /* Distance from the left edge */
+}
+
+.slick-next {
+  right: 10px; /* Distance from the right edge */
+}
+
+.slick-prev:before,
+.slick-next:before {
+  content: ''; /* Override default content */
+  display: block;
+}
+
+button.slick-prev.slick-arrow{
+  left: -32px;
+  margin-left: 46px;
+}
+button.slick-prev.slick-arrow::before{
+  color: black;
+  font-size: 2rem;
+}
+button.slick-next.slick-arrow{
+  margin-right: 43px;
+}
+
+button.slick-next.slick-arrow::before{
+  color: black;
+  font-size: 2rem;
+}
+
+
+
