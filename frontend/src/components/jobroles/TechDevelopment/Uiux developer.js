@@ -12,7 +12,7 @@ const  developer = () => {
                     <h3 class="m-b-2">Responsibilities</h3>
                     <p>
                       ● UI Development:
-                      <br></br>
+                      
                       Develop and maintain responsive, user-friendly web interfaces using HTML, CSS, and JavaScript.<br></br>
 - Ensure cross-browser compatibility and optimize web pages for maximum speed and scalability.<br></br>
 - Develop custom Template themes and plugins based on project requirements.<br></br>
@@ -22,30 +22,30 @@ const  developer = () => {
                       <br></br><br></br>
 
                       ● UI Design:
-                      <br></br>
-                      - Create visually appealing and consistent user interfaces and graphics for websites.<br></br>
+                      
+                       Create visually appealing and consistent user interfaces and graphics for websites.<br></br>
 - Collaborate with designers to develop design systems, style guides, and UI components that align with brand guidelines.<br></br>
 
                       <br></br><br></br>
 
                       ● Collaboration & Communication:
-                      <br></br>
-                      - Work closely with UX designers to understand design requirements and user flows.<br></br>
+                     
+                       Work closely with UX designers to understand design requirements and user flows.<br></br>
 - Collaborate with senior UI Engineers and backend developers to integrate UI components with backend systems.<br></br>
 - Present and communicate design and development solutions to stakeholders and incorporate feedback.<br></br>
 
                       <br></br><br></br>
 
                       ●  Quality Assurance:
-                      <br></br>
-                      - Conduct code reviews and ensure high standards of code quality and maintainability.<br></br>
+                      
+                       Conduct code reviews and ensure high standards of code quality and maintainability.<br></br>
 - Perform usability testing and debugging to ensure a seamless user experience.<br></br>
 - Implement and advocate for best-practices in front-end development and user experience design.<br></br>
 
                       <br></br><br></br>
 
                       ● Continuous UI Improvement:
-                      <br></br>
+                      
                       - Stay up-to-date with industry trends, tools, and technologies.<br></br>
 - Continuously seek to improve the user experience & interface through innovation and best-practices.<br></br>
 - Participate in team meetings, brainstorming sessions, and design reviews.<br></br>

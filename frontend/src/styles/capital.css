@@ -21,16 +21,13 @@
     
     height: 350px;
     position: relative;
-    margin-left: 80px;
-    margin-right: 80px;
+   padding: 4rem 7rem;
 }
 .capital-heading{
     width: 100%;
     text-align: center;
-    padding-top: 4rem;
-    padding-left: 30%;
-    padding-right: 30%;
-    position: absolute;
+   
+   
     font-family:Popins-regular;
     font-size: 40px;
     font-weight: bold;
@@ -39,10 +36,6 @@
 .capital-heading-sub{
     width: 100%;
     text-align: center;
-    padding-top: 7.3rem;
-    padding-left: 30%;
-    padding-right: 30%;
-    position: absolute;
     font-family:Popins-regular;
     font-size: 40px;
     font-weight: bold;
@@ -50,8 +43,7 @@
 }
 .connect-with-us-btn{
     position: absolute;
-    bottom: 5rem;
-    right: 20px;
+    right: 7rem;
     width: 200px;
     height: 50px;
     background-color: black;
@@ -297,17 +289,18 @@
         
     }
     .headingContainer{
-        display: flex;
-        margin-left: 0;
-        margin-right: 0;
+        height: 350px;
+    position: relative;
+    padding: 4rem 0rem;
+        
        
     }
     .capital-heading{
         position: relative;
         font-size: 26px;
-        padding-top: 4rem;
+        /* padding-top: 4rem;
         padding-left: 1rem;
-        padding-right: 1rem;
+        padding-right: 1rem; */
     }
     
     .connect-with-us-btn{
@@ -327,8 +320,8 @@
     }
     /* Green-Round -Marker-heading */
     .hero__animation{
-        padding-left: 20px;
-        padding-bottom: 10px;
+        padding-left: 53px;
+        padding-bottom: 9px;
         height: 60px;
     }
     /* End */
@@ -404,7 +397,7 @@
         font-size: 26px;
         padding-left: 0;
         padding-right: 0;
-        padding-top: 7rem;
+        
     }
 }
 @media (min-width: 2560px) {
