@@ -129,10 +129,11 @@ const LoginPage = () => {
 
   return (
     <>
-      <div className="login-section loginTopPadding loginBottomPadding  poppinsRegular bg-info">
+      {/* <div className="login-section loginTopPadding loginBottomPadding  poppinsRegular bg-info"> */}
+      <div className="login-section loginTopPadding loginBottomPadding  poppinsRegular ">
         <h1 className="text-center fw-bold">Log In</h1>
         <p className="text-center">
-          Don't have an account? <span>Sign Up</span>
+          Don't have an account? <span className="wono-blue-text">Sign Up</span>
         </p>
         <div className="loginDividingContainer ">
           <div className="loginLeftContainer ">
@@ -143,13 +144,13 @@ const LoginPage = () => {
                   <input type="email" class="no-border" />
                   <hr className="mb-0 mt-1" />
                 </div>
-                <div className="inputAndLabelContainer d-flex flex-column justify-content-center">
+                <div className="inputAndLabelContainer d-flex flex-column justify-content-center pt-2">
                   <label htmlFor="">Password</label>
                   <input type="password" class="no-border" />
                   <hr className="mb-0 mt-1" />
                 </div>
-                <p>forgot Password?</p>
-                <div>
+                <p className="m-0 py-4">Forgot Password?</p>
+                <div className="centerInPhone">
                   <button className="loginButtonStyling">Login</button>
                 </div>
               </form>
@@ -159,7 +160,7 @@ const LoginPage = () => {
             hello
             <hr className="hrStyling border border-secondary" />
           </div> */}
-          <div className="fullHeight">
+          <div className="fullHeight LoginMiddleContainer">
             <div class="vertical-line lineSideMargin">
               <hr className="hrHeight" />
             </div>
@@ -169,22 +170,42 @@ const LoginPage = () => {
               <hr className="hrHeight" />
             </div>
           </div>
-          <div className="loginRightContainer bg-warning">
-            <div className="loginWithSection bg-danger d-flex flex-column justify-content-center align-items-center bg-success">
-              <div className="LoginWithGoogleContainer loginWithBox d-flex justify-content-between align-items-center bg-primary centerElement w-100">
-                <div className="loginWithIconBox bg-info">
+
+          <div className="phoneDividerContainer">
+            <div className="phoneDivider w-100">
+              <div className="w-100 bg-secondary border-secondary border-bottom  line-height">
+                {/* .  */}
+              </div>
+              <div className="w-100 text-center">or</div>
+              <div className="w-100 bg-secondary border-secondary border-bottom line-height">
+                {/* . */}
+              </div>
+            </div>
+          </div>
+
+          {/* <div className="loginRightContainer bg-warning"> */}
+          <div className="loginRightContainer ">
+            {/* <div className="loginWithSection bg-danger d-flex flex-column justify-content-center align-items-center bg-success"> */}
+            <div className="loginWithSection  d-flex flex-column justify-content-center align-items-center ">
+              {/* <div className="LoginWithGoogleContainer loginWithBox d-flex justify-content-between align-items-center bg-primary centerElement w-100"> */}
+              <div className="LoginWithGoogleContainer loginWithBox loginWithGoogleBox loginWithGoogleBox d-flex justify-content-between align-items-center  centerElement w-100">
+                {/* <div className="loginWithIconBox bg-info centerElement"> */}
+                <div className="loginWithIconBox loginWithGoogleIconBox  centerElement">
                   <img
                     src={LoginWithGoogleImage}
                     alt=""
                     className="imageDimensions"
                   />
                 </div>
-                <div className="LoginWithGoogleText LoginWithText bg-secondary centerElement w-100">
-                  <div> Login With Google</div>
+                {/* <div className="LoginWithGoogleText LoginWithText bg-secondary centerElement w-100"> */}
+                <div className="LoginWithGoogleText LoginWithText  centerElement w-100">
+                  <div> Continue with Google</div>
                 </div>
               </div>
-              <div className="LoginWithFacebookContainer loginWithBox d-flex justify-content-between align-items-center bg-primary centerElement">
-                <div className="loginWithIconBox bg-info">
+              {/* <div className="LoginWithFacebookContainer loginWithBox d-flex justify-content-between align-items-center bg-primary centerElement"> */}
+              <div className="LoginWithFacebookContainer loginWithBox loginWithFacebookBox d-flex justify-content-between align-items-center  centerElement">
+                {/* <div className="loginWithIconBox bg-info centerElement"> */}
+                <div className="loginWithIconBox loginWithFacebookIconBox centerElement">
                   {" "}
                   <img
                     src={LoginWithFacebookImage}
@@ -192,12 +213,15 @@ const LoginPage = () => {
                     className="imageDimensions"
                   />
                 </div>
-                <div className="LoginWithFacebookText LoginWithText bg-secondary centerElement w-100">
-                  <div>Login With Facebook</div>
+                {/* <div className="LoginWithFacebookText LoginWithText bg-secondary centerElement w-100"> */}
+                <div className="LoginWithFacebookText LoginWithText  centerElement w-100">
+                  <div>Continue with Facebook</div>
                 </div>
               </div>
-              <div className="LoginWithEmailContainer loginWithBox d-flex justify-content-between align-items-center bg-primary centerElement">
-                <div className="loginWithIconBox bg-info">
+              {/* <div className="LoginWithEmailContainer loginWithBox d-flex justify-content-between align-items-center bg-primary centerElement"> */}
+              <div className="LoginWithEmailContainer loginWithBox loginWithEmailBox d-flex justify-content-between align-items-center  centerElement">
+                {/* <div className="loginWithIconBox bg-info centerElement"> */}
+                <div className="loginWithIconBox loginWithEmailIconBox centerElement">
                   {" "}
                   <img
                     src={LoginWithEmailImage}
@@ -205,8 +229,9 @@ const LoginPage = () => {
                     className="imageDimensions"
                   />
                 </div>
-                <div className="LoginWithEmailText LoginWithText bg-secondary centerElement w-100">
-                  <div>Login With Email</div>
+                {/* <div className="LoginWithEmailText LoginWithText bg-secondary centerElement w-100"> */}
+                <div className="LoginWithEmailText LoginWithText  centerElement w-100">
+                  <div>Continue with Email</div>
                 </div>
               </div>
             </div>
@@ -214,11 +239,11 @@ const LoginPage = () => {
         </div>
       </div>
 
-      <div className="bg-dark">
+      {/* <div className="bg-dark">
         <br />
-      </div>
+      </div> */}
 
-      <div className="login-container">
+      {/* <div className="login-container">
         <div className="login-left-container">
           <h2 className="text-center mb-4">Login to your account</h2>
           <form className="loginForm" onSubmit={handleSubmit}>
@@ -296,7 +321,7 @@ const LoginPage = () => {
           title={modalTitle}>
           {modalMessage}
         </Modals>
-      </div>
+      </div> */}
     </>
   );
 };
