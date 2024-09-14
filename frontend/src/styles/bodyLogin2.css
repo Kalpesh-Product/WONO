@@ -86,8 +86,10 @@
 }
 
 .lineSideMargin {
-    margin-left: 6rem;
-    margin-right: 6rem;
+    /* margin-left: 6rem; */
+    margin-left: auto;
+    /* margin-right: 6rem; */
+    margin-right: auto;
 }
 
 .loginButtonStyling {
@@ -111,10 +113,12 @@
     width: 20rem;
 }
 
-/* .LoginMiddleContainer {
-    height: 100%;
-    width: 20rem;
-} */
+.LoginMiddleContainer {
+    /* height: 100%;
+    width: 20rem; */
+    margin-left: 6rem;
+    margin-right: 6rem;
+}
 
 .loginWithSection {
     height: 100%;
@@ -213,10 +217,23 @@
     display: none;
 }
 
+/* Only Large Screen */
 
-/* MOBILE VIEW */
+@media (min-width: 1061px) {
+    .LoginMiddleContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+
+
+/* TAB & MOBILE VIEW */
 /* Media query for phone view (max-width: 768px or smaller) */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) { */
+@media (max-width: 1060px) {
 
     /* img,
         div,

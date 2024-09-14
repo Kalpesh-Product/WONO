@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react";
 import "../styles/bodyLogin.css";
 import "../styles/bodyLogin2.css";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { GoogleLogin } from "@react-oauth/google";
 import { jwtDecode } from "jwt-decode";
 import { UserContext } from "../components/UserContext";
@@ -75,7 +75,8 @@ const LoginPage = () => {
     const usernameRegex = /^.{2,}$/; // At least 2 characters long
     if (!usernameRegex.test(username)) {
       setModalTitle("Invalid Username");
-      setModalMessage("Enter a valid username");
+      // setModalMessage("Enter a valid username");
+      setModalMessage("Enter a valid email");
       setShowModal(true); // Show the modal for the error
       return; // Exit the function if the username is invalid
     }
@@ -107,7 +108,8 @@ const LoginPage = () => {
     // Username validation using regex (at least 2 characters long)
     const usernameRegex = /^.{2,}$/; // At least 2 characters
     if (!usernameRegex.test(value)) {
-      setUserNameError("Enter a valid username");
+      // setUserNameError("Enter a valid username");
+      setUserNameError("Enter a valid email");
     } else {
       setUserNameError(""); // Clear error if username is valid
     }
@@ -133,7 +135,11 @@ const LoginPage = () => {
       <div className="login-section loginTopPadding loginBottomPadding poppinsRegular">
         <h1 className="text-center fw-bold">Log In</h1>
         <p className="text-center">
-          Don't have an account? <span className="wono-blue-text">Sign Up</span>
+          {/* Don't have an account? <span className="wono-blue-text">Sign Up</span> */}
+          Don't have an account?{" "}
+          <Link to="/register" className="wono-blue-text text-decoration-none">
+            Sign Up
+          </Link>
         </p>
         <div className="loginDividingContainer">
           <div className="loginLeftContainer">
@@ -213,18 +219,22 @@ const LoginPage = () => {
                   <div>Continue with Facebook</div>
                 </div>
               </div>
-              <div className="LoginWithEmailContainer loginWithBox loginWithEmailBox d-flex justify-content-between align-items-center centerElement">
-                <div className="loginWithIconBox loginWithEmailIconBox centerElement">
-                  <img
-                    src={LoginWithEmailImage}
-                    alt="Email Icon"
-                    className="imageDimensions"
-                  />
+              {/*  */}
+              <Link to="/register" className="text-decoration-none">
+                <div className="LoginWithEmailContainer loginWithBox loginWithEmailBox d-flex justify-content-between align-items-center centerElement">
+                  <div className="loginWithIconBox loginWithEmailIconBox centerElement">
+                    <img
+                      src={LoginWithEmailImage}
+                      alt="Email Icon"
+                      className="imageDimensions"
+                    />
+                  </div>
+                  <div className="LoginWithEmailText LoginWithText centerElement w-100">
+                    <div>Continue with Email</div>
+                  </div>
                 </div>
-                <div className="LoginWithEmailText LoginWithText centerElement w-100">
-                  <div>Continue with Email</div>
-                </div>
-              </div>
+              </Link>
+              {/*  */}
             </div>
           </div>
         </div>

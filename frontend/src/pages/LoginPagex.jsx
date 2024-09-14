@@ -17,7 +17,7 @@ import LoginWithGoogleImage from "../assets/WONO_images/img/login_images/google-
 import LoginWithFacebookImage from "../assets/WONO_images/img/login_images/login-with-facebook-icon.png";
 import LoginWithEmailImage from "../assets/WONO_images/img/login_images/email-icon.png";
 
-const LoginPage = () => {
+const LoginPagex = () => {
     
   const navigate = useNavigate();
   const { setUser } = useContext(UserContext);
@@ -423,4 +423,4 @@ const LoginPage = () => {
   );
 };
 
-export default LoginPage;
+export default LoginPagex;
