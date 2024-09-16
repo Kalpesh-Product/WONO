@@ -109,7 +109,7 @@ const Themes = () => {
                     <li>Full-stack web dev tools for custom functionality</li>
                   </ul>
                 </div>
-                <div className="themePage-featured-button">
+                <div className="themePage-featured-button ">
                   <button
                     className="get-started-main-button"
                     onClick={() => {
@@ -201,7 +201,7 @@ const Themes = () => {
               <h1>Tomorrow's success starts today</h1>
               <div
                 style={{
-                  padding: "4rem 0 0 0",
+                  padding: "2rem 0 0 0",
                   alignItems: "center",
                   justifyContent: "center",
                   width: "45%",

@@ -110,7 +110,8 @@
     background-color: black;
     color: white;
     /* padding: 0.5rem; */
-    padding: 20px;
+    /* padding: 20px; */
+    padding: 10px 20px;
     border: none;
 }
 
@@ -126,7 +127,8 @@
     background-color: black;
     color: white;
     /* padding: 0.5rem; */
-    padding: 20px 40px;
+    /* padding: 20px 40px; */
+    padding: 10px 40px;
     /* margin: auto */
 }
 

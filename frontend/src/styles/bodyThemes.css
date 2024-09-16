@@ -7,6 +7,10 @@
     padding: 2rem 7rem;
 } */
 
+.themesBtnPadding {
+    padding: 2rem 0 0;
+}
+
 .themePage-master * {
     font-family: Popins-Regular;
 }

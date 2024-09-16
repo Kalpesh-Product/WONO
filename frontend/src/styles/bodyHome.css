@@ -8,6 +8,59 @@
     height: 100%
 }
 
+.placeholder {
+    display: inline
+}
+
+/* .date-picker>.placeholder::after {
+    content: "Date Of Birth";
+    pointer-events: none;
+    position: absolute;
+    inset: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    text-align: inherit;
+    color: #222;
+    padding: 0 10px;
+} */
+
+.date-picker {
+    position: relative;
+}
+
+.date-picker>.placeholder::after {
+    content: "Date Of Birth";
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    /* Adjust this value to align the text properly */
+    transform: translateY(-50%);
+    color: black;
+    font-weight: bold;
+    /* color: red; */
+    /* padding: 0 10px; */
+    padding: 0 5px;
+    background: white;
+    /* Ensure the background matches the input field */
+    z-index: 1;
+}
+
+.date-picker input {
+    position: relative;
+    z-index: 2;
+    background: transparent;
+    /* Ensure the input background is transparent */
+    color: transparent;
+    /* Hide the default date text */
+}
+
+.date-picker input:focus {
+    color: #000;
+    /* Show the input text when focused */
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
@@ -261,10 +314,11 @@
         text-align: center;
         padding: 1rem;
         font-family: Popins-Medium;
-        
+
     }
+
     .home-desc span {
-     font-size: 1rem;     
+        font-size: 1rem;
     }
 
     .form-card {
@@ -906,9 +960,8 @@
 
     margin-bottom: 20px;
 }
-.website-panel-right
 
-.template-preview-container {
+.website-panel-right .template-preview-container {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -920,7 +973,7 @@
 .template-preview-container img {
     width: 100%;
     height: 100%;
-    
+
     transition: all ease 0.3s;
     vertical-align: middle;
 }
@@ -981,15 +1034,18 @@
     .website-panel-header {
         text-align: left;
     }
-    .website-panel-header h2{
+
+    .website-panel-header h2 {
         font-size: 2rem;
         text-align: left;
     }
-    .website-panel-header h3{
+
+    .website-panel-header h3 {
         font-size: 1.5rem;
         text-align: left;
     }
-    .website-panel-header p{
+
+    .website-panel-header p {
         font-size: 1.2rem;
         text-align: left;
     }
