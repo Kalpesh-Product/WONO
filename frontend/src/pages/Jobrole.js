@@ -18,9 +18,9 @@ const Jobrole = () => {
         <div className='testingContainer'>
             <h1></h1>
         </div>
-        <Accordion defaultActiveKey="0">
-      <Accordion.Item eventKey="0">
-        <Accordion.Header>I. Product Management</Accordion.Header>
+        <Accordion >
+      <Accordion.Item eventKey='0'>
+        <Accordion.Header>I. Productsss  Management</Accordion.Header>
         <Accordion.Body>
           
           <div className='mob-down' style={{display:"flex"}}>
@@ -86,7 +86,7 @@ const Jobrole = () => {
         <Accordion.Body>
           <div className='mob-down' style={{display:"flex"}}>
           <div className='col-lg-6'>
-            <h5 style={{fontSize:"1.5rem",margin:"10 0",color:"#000"}}> 3. Web Developer Intern</h5>
+            <h5 style={{fontSize:"1.5rem",margin:"10 0",color:"#000"}}> 3. Webs Developer Intern</h5>
           </div>
           <div className='col-lg-6' style={{textAlign:"right"}}>
             <p style={{fontWeight:"600",margin:"10px 0"}}>

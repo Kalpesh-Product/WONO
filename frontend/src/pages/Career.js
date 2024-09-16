@@ -10,7 +10,7 @@ const Career = () => {
             <div className="career-section">
                 <h3 style={{ marginBottom: "50px" }}>JOIN OUR TEAM</h3>
                 <div className='accrodion'>
-                    <h2 style={{ fontSize: "30px", fontWeight: "bold", marginBottom:'2rem' }}>OPEN POSITIONS</h2>
+                    <h2 style={{ fontSize: "30px", fontWeight: "bold", marginBottom:'1rem' }}>OPEN POSITION</h2>
                     <Jobrole/>
                 </div>
             </div>

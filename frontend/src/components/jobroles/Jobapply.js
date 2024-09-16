@@ -135,7 +135,8 @@ const Jobapply = ({jobTitle}) => {
 
           <div className="col-md-6">
             <div className="date-picker" tabindex="0">
-              <input className='form-control' type="date" name="date" id="datePicker" required="" max="2024-08-15" value={formvalues.date} onChange={handleInputChange}></input>
+             
+              <input className='form-control' type="date" name="date" id="datePicker" required="" max="2024-08-15"  placeholder='date' value={formvalues.date} onChange={handleInputChange}></input>
               <div className="placeholder"></div>
             </div>
           </div>
@@ -145,7 +146,6 @@ const Jobapply = ({jobTitle}) => {
           </div>
 
           <div className="col-md-6">
-
             <select class="form-select select-f" aria-label="Default select example" name="location" value={formvalues.location} onChange={handleInputChange}>
               <option value="" disabled="" selected="">State</option>
               <option value="Andhra Pradesh	">Andhra Pradesh </option>
@@ -259,7 +259,7 @@ Anything additional that you want us to know besides all above shared informatio
 
   </div>
       </form>
-        <div style={{height:'300px'}}>
+        <div>
           <Modal show={showModal} onHide={handleCloseModal} >
         {/* <Modal.Header closeButton>
           <Modal.Title>Form Submission Error</Modal.Title>

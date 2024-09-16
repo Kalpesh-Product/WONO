@@ -136,6 +136,7 @@
     /* height: auto; */
     min-height: 400px;
     /* Maintains the image's aspect ratio */
+    border-radius: 10px;
 }
 
 /* .grow-your-business-color {
