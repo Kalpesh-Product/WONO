@@ -12,20 +12,21 @@
 }
 
 .themePage-header {
-    padding: 4rem  7.5rem 4rem 7.5rem;
+    padding: 4rem 7.5rem 4rem 7.5rem;
 }
-.themePage-header h2{
+
+.themePage-header h2 {
     font-weight: bold;
     font-size: 3rem;
     margin-bottom: 2rem;
 }
-.themePage-header p{
+
+.themePage-header p {
     font-weight: 400;
 }
 
-.themePage-content{
- 
-}
+.themePage-content {}
+
 .themePage-content-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -39,10 +40,12 @@
     padding: 4rem 7.5rem 0 7.5rem;
     background-color: rgb(240, 240, 240);
 }
-.themePage-content-header h3{
+
+.themePage-content-header h3 {
     margin-bottom: 2rem;
 }
-.themePage-content-header span{
+
+.themePage-content-header span {
     padding-bottom: 2rem;
 }
 
@@ -64,7 +67,7 @@
 
 .theme-grid img:hover {
     transform: scale(1.2);
-    cursor: pointer ;
+    cursor: pointer;
 }
 
 .themePage-featured {
@@ -103,11 +106,13 @@
     width: 100%;
     margin-bottom: 2rem;
 }
-.themePage-featured-content ul{
+
+.themePage-featured-content ul {
     margin-bottom: 0;
     font-size: 1rem;
 }
-.themePage-featured-content ul li{
+
+.themePage-featured-content ul li {
     margin-bottom: 0;
     margin-bottom: 0.5rem;
     font-size: 1.2rem;
@@ -120,18 +125,19 @@
     align-items: start;
     width: 100%;
 }
+
 .themePage-featured-button button {
     display: flex;
     justify-content: center;
     align-items: center;
     /* width: 100%; */
-    margin-left: 0 ;
+    margin-left: 0;
 }
 
 .themePage-featured-grid-2 {
     width: 100%;
     position: relative;
-    background-color: rgb(168,229,255);
+    background-color: rgb(168, 229, 255);
     padding: 0 0;
 }
 
@@ -140,7 +146,8 @@
     object-fit: contain;
     object-position: center;
 }
-.themePage-website-features{
+
+.themePage-website-features {
     display: flex;
     align-items: start;
     justify-content: center;
@@ -148,35 +155,41 @@
     padding: 4rem 7rem 4rem 7.5rem;
     height: 100%;
 }
-.themePage-website-features-grid{
+
+.themePage-website-features-grid {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     column-gap: 8rem;
     text-align: left;
-    margin-bottom: 4rem;
+    /* margin-bottom: 4rem; */
+    margin-bottom: 2rem !important;
 }
-.themePage-website-features h1{
+
+.themePage-website-features h1 {
     font-size: 4rem;
     margin-bottom: 4rem;
 }
-.themePage-website-features p{
+
+.themePage-website-features p {
     margin-bottom: 2rem;
 }
-.themePage-website-header{
+
+.themePage-website-header {
     padding-right: 30%;
     width: 100%;
     text-align: left;
 }
 
 
-.themePage-website-support-section{
+.themePage-website-support-section {
     padding: 4rem 7rem;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: rgb(233, 249, 255);
 }
-.themePage-website-support{
+
+.themePage-website-support {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -184,49 +197,55 @@
 }
 
 
-.themePage-website-support-grid{
+.themePage-website-support-grid {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     vertical-align: middle;
 }
-.themePage-website-support-header{
-    
+
+.themePage-website-support-header {
+
     width: 100%;
     text-align: left;
 }
-.themePage-website-support-header h1{
+
+.themePage-website-support-header h1 {
     font-size: 4rem;
 
     margin-bottom: 2rem;
 }
 
-.themePage-website-support-grid-1{
+.themePage-website-support-grid-1 {
     display: flex;
     flex-direction: column;
     align-items: start;
     justify-content: space-between;
     padding: 0.5rem;
     border-top: 2px solid black;
-    
+
 }
-.themePage-website-support-grid-1 h2{
+
+.themePage-website-support-grid-1 h2 {
     margin: 2rem 0
 }
-.themePage-website-support-grid-1 p{
+
+.themePage-website-support-grid-1 p {
     margin-bottom: 2rem;
 }
-.themePage-website-support-grid-1 span{
+
+.themePage-website-support-grid-1 span {
     font-weight: bold;
     border-bottom: 2px solid black;
     transition: border 0.3s ease;
 }
-.themePage-website-support-grid-1 span:hover{
+
+.themePage-website-support-grid-1 span:hover {
     cursor: pointer;
     border: none;
 }
 
-.themePage-website-success-section{
+.themePage-website-success-section {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -234,14 +253,16 @@
     background-color: #0093E9;
     background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
 }
-.themePage-website-success{
+
+.themePage-website-success {
     display: flex;
     width: 100%;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
-.themePage-website-success h1{
+
+.themePage-website-success h1 {
     margin: 0;
 }
 
@@ -250,46 +271,48 @@
         margin-bottom: 2rem;
         padding: 1rem 2rem;
     }
-    .themePage-header h2{
+
+    .themePage-header h2 {
         font-weight: bold;
         font-size: 2rem;
         margin-bottom: 30px;
     }
-    .themePage-header p{
+
+    .themePage-header p {
         font-weight: 600;
     }
-    
+
     .themePage-content-grid {
         display: grid;
         grid-template-columns: 1fr;
         gap: 2rem;
         padding: 2rem 2rem;
     }
-    
+
     .themePage-content-header {
         text-align: left;
         padding: 0 2rem;
     }
-    
+
     .theme-grid {
         width: 100%;
         height: 100%;
         overflow: hidden;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     }
-    
+
     .theme-grid img {
         width: 100%;
         height: 100%;
         object-fit: cover;
         transition: all 0.2s ease;
     }
-    
+
     .theme-grid img:hover {
         transform: scale(1.2);
-        cursor: pointer ;
+        cursor: pointer;
     }
-    
+
     .themePage-featured {
         height: 100%;
         width: 100%;
@@ -299,7 +322,7 @@
         justify-content: center;
         padding: 1rem 1rem;
     }
-    
+
     .themePage-featured-grid {
         display: grid;
         grid-template-columns: 1fr;
@@ -308,31 +331,31 @@
         gap: 1rem;
         border-radius: 10px;
     }
-    
+
     .themePage-featured-grid-1 {
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
     }
-    
+
     .themePage-featured-header h1 {
         font-size: 2.5rem;
         text-align: left;
         padding: 0 1rem;
         margin-bottom: 40px;
     }
-    
+
     .themePage-featured-content {
         width: 100%;
         /* padding-left: 3rem; */
     }
-    
+
     .themePage-featured-button {
         display: flex;
         justify-content: center;
     }
-    
+
     .themePage-featured-grid-2 {
         width: 100%;
         border-radius: 20px;
@@ -340,7 +363,7 @@
         position: relative;
         display: none;
     }
-    
+
     .themePage-featured-grid-2 img {
         width: 100%;
         height: 100%;
@@ -349,7 +372,8 @@
         /* margin-bottom: 40px; */
         /* object-position: bottom; */
     }
-    .themePage-website-features{
+
+    .themePage-website-features {
         display: flex;
         align-items: start;
         justify-content: center;
@@ -357,25 +381,28 @@
         padding: 2rem 1rem;
         height: 100%;
     }
-    .themePage-website-features-grid{
+
+    .themePage-website-features-grid {
         display: grid;
         grid-template-columns: 1fr;
         gap: 1rem;
         text-align: center;
     }
-    .themePage-website-features h1{
+
+    .themePage-website-features h1 {
         font-size: 2rem;
         margin-bottom: 4rem;
         text-align: center;
     }
-    .themePage-website-header{
+
+    .themePage-website-header {
         padding-right: 10%;
         width: 100%;
         text-align: left;
     }
-    
-    
-    .themePage-website-support-section{
+
+
+    .themePage-website-support-section {
         padding: 2rem 1rem;
         display: flex;
         align-items: center;
@@ -383,55 +410,61 @@
         height: 100%;
         background-color: rgb(233, 249, 255);
     }
-    .themePage-website-support{
+
+    .themePage-website-support {
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
     }
-    
-    
-    .themePage-website-support-grid{
+
+
+    .themePage-website-support-grid {
         display: grid;
         grid-template-columns: 1fr;
         vertical-align: middle;
     }
-    
-    .themePage-website-support-header{
-        
+
+    .themePage-website-support-header {
+
         width: 100%;
         text-align: left;
     }
-    .themePage-website-support-header h1{
+
+    .themePage-website-support-header h1 {
         font-size: 4rem;
         margin-bottom: 4rem;
     }
-    
-    .themePage-website-support-grid-1{
+
+    .themePage-website-support-grid-1 {
         display: flex;
         flex-direction: column;
         align-items: start;
         justify-content: space-between;
         padding: 0.5rem;
-        
+
     }
-    .themePage-website-support-grid-1 h2{
+
+    .themePage-website-support-grid-1 h2 {
         margin-bottom: 2rem;
     }
-    .themePage-website-support-grid-1 p{
+
+    .themePage-website-support-grid-1 p {
         /* white-space: nowrap; */
     }
-    .themePage-website-support-grid-1 span{
+
+    .themePage-website-support-grid-1 span {
         font-weight: bold;
         border-bottom: 2px solid black;
         transition: border 0.3s ease;
     }
-    .themePage-website-support-grid-1 span:hover{
+
+    .themePage-website-support-grid-1 span:hover {
         cursor: pointer;
         border: none;
     }
-    
-    .themePage-website-success-section{
+
+    .themePage-website-success-section {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -439,7 +472,8 @@
         padding: 0 1rem;
         background-color: rgb(153, 221, 255);
     }
-    .themePage-website-success{
+
+    .themePage-website-success {
         display: flex;
         width: 100%;
         align-items: center;

@@ -50,49 +50,49 @@ const Footer = () => {
               />
             </div>
           </div>
-        <div className="footer-container">
+          <div className="footer-container">
+            <div className="footer-section-3">
+              <h5>SaaS</h5>
+              <h5>Leads</h5>
+              <h5>Themes</h5>
+            </div>
 
-          <div className="footer-section-3">
-            <h5>SaaS</h5>
-            <h5>Leads</h5>
-            <h5>Themes</h5>
-          </div>
-
-          <div className="footer-section-3">
-            <h5>Accounting</h5>
-            <h5>Projections</h5>
-            <h5>Capital</h5>
-          </div>
-          <div className="footer-section-3">
-            <h5>About</h5>
-            <Link
-              to={"/career"}
-              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
-              Careers
-            </Link>
-            <Link
-              to={"/contact"}
-              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
-              Contact
-            </Link>
-          </div>
-          <div className="footer-section-3">
-            <h5>FAQs</h5>
-            <Link
-              to={"/privacy"}
-              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
-              Privacy
-            </Link>
-            <Link
-              to={"/termsandconditions"}
-              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
-              T&C
-            </Link>
+            <div className="footer-section-3">
+              <h5>Accounting</h5>
+              <h5>Projections</h5>
+              <h5>Capital</h5>
+            </div>
+            <div className="footer-section-3">
+              <h5>About</h5>
+              <Link
+                to={"/career"}
+                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+                Careers
+              </Link>
+              <Link
+                to={"/contact"}
+                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+                Contact
+              </Link>
+            </div>
+            <div className="footer-section-3">
+              <h5>FAQs</h5>
+              <Link
+                to={"/privacy"}
+                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+                Privacy
+              </Link>
+              <Link
+                to={"/termsandconditions"}
+                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+                T&C
+              </Link>
+            </div>
           </div>
         </div>
-        </div>
 
-        <div className="mt-3 py-5">
+        {/* <div className="mt-3 py-5"> */}
+        <div className="mt-3 py-3">
           <div className="text-center px-1 footer-copyright">
             <p>
               &copy; Copyright 2024-25 by WONOCO PRIVATE LIMITED - SINGAPORE.

@@ -534,7 +534,8 @@ const LeadsPage = () => {
 
             <div>
               <div className="">
-                <div className="container mb-3 pe-0">
+                {/* <div className="container mb-3 pe-0 border-bottom border-secondary"> */}
+                <div className="container pb-3 pe-0 border-bottom border-secondary">
                   {/* <div className="row  border-bottom border-dark border-3 pb-5 bg-primary"> */}
                   <div className="row ">
                     <div className="col-lg-4 ps-0">
@@ -560,7 +561,7 @@ const LeadsPage = () => {
                     </div>
                   </div>
                   {/* <br /> */}
-                  <hr />
+                  {/* <hr /> */}
                 </div>
               </div>
             </div>
@@ -861,7 +862,7 @@ const LeadsPage = () => {
         <div className="last-section body-partners-master w-100 fontPoppinsRegular">
           <div className="pt-5 customMargin pb-5">
             <div className="grow-your-business-color">
-              <h2 className="m-0">
+              <h2 className="m-0 fw-bold">
                 {/* <b className="leadsCtafontSize">
                   Now that’s how we generate continues leads for you!
                 </b> */}

@@ -5,6 +5,14 @@
         overflow-x: hidden;
     } */
 
+    .Tickmark-text {
+        /* display: flex; */
+        /* align-items: center; */
+        /* margin-bottom: 6px; */
+        /* color: #363636; */
+        font-size: unset;
+        /* font-family: Popins-Regular; */
+    }
 
     .WidthHeight1 {
         max-width: 7.5rem;

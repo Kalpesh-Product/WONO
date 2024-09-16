@@ -1,6 +1,7 @@
-import React, {useState} from 'react'
+import React, { useState } from "react";
 import CafeImage from "../assets/WONO_images/img/website-builder/new-layout/cafe.png";
 import BiznestImage from "../assets/WONO_images/img/products-images/biznestImage.png";
+import BiznestImageOverlay from "../assets/WONO_images/img/products-images/biznestImage-overlay.png";
 import Cafe_2 from "../assets/WONO_images/img/website-builder/new-layout/cafe-2.png";
 import Cafe_3 from "../assets/WONO_images/img/website-builder/new-layout/cafe-3.png";
 import CoWorkingImage from "../assets/WONO_images/img/website-builder/new-layout/co-working.png";
@@ -11,13 +12,12 @@ import Featured from "../assets/WONO_images/img/website-builder/new-layout/featu
 import Boutique from "../assets/WONO_images/img/website-builder/new-layout/boutique.png";
 import CoWorkingMewo from "../assets/WONO_images/img/website-builder/new-layout/co-working-mewo.png";
 import Hostels from "../assets/WONO_images/img/website-builder/new-layout/hostels.png";
-import TickmarkImg from "../assets/check.png"
-import '../styles/bodyProduct.css'
-import { useNavigate, useLocation } from 'react-router-dom';
-
+import TickmarkImg from "../assets/check.png";
+import blueTickmarkImg from "../assets/blue-tick-no-bg-15.png";
+import "../styles/bodyProduct.css";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const ProductPage = () => {
-
   const perks = [
     {
       icon: "fa-regular fa-circle-check",
@@ -73,52 +73,68 @@ const ProductPage = () => {
     { src: CoWorkingImage_3, alt: "CoLivingImage_3", tag: "co-working" },
     { src: Cafe_2, alt: "Cafe_2", tag: "cafe" },
     { src: Cafe_3, alt: "Cafe_3", tag: "cafe" },
-    { src: CoWorkingMewo, alt: "CoWorkingMewo", tag: "co-working" },
+    // { src: CoWorkingMewo, alt: "CoWorkingMewo", tag: "co-working" },
     { src: Hostels, alt: "Hostels", tag: "hostels" },
   ];
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const location = useLocation();
-  const { image: initialImage } = location.state || { image: { src: BiznestImage, tag: "business", alt: "Product Image" } };
+  const { image: initialImage } = location.state || {
+    image: { src: BiznestImage, tag: "business", alt: "Product Image" },
+  };
 
   const [currentImage, setCurrentImage] = useState(initialImage);
 
-
   // Filter the recommendations based on the current image's tag
-  const filteredRecommendations = recommendations.filter(rec => rec.tag === currentImage.tag);
+  const filteredRecommendations = recommendations.filter(
+    (rec) => rec.tag === currentImage.tag
+  );
 
   // Handle image click in the recommendations grid
   const handleImageClick = (newImage) => {
     setCurrentImage(newImage);
-    window.scrollTo({ top: 0, behavior: "smooth" })
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
     <div>
-      <div className='product-page-master'>
+      <div className="product-page-master">
         <div className="product-page-section">
           <div className="product-page">
             <div className="product-page-header">
               {/* <h1>Product Page</h1> */}
             </div>
             <div className="product-page-content">
-
               <div className="product-page-grid">
-
                 <div className="product-page-left-container">
                   <div className="product-page-grid-item">
                     <h1>Inclusions</h1>
                     <div className="product-page-feature">
                       {features.map((feature, index) => (
                         <div key={index} className="product-page-features">
-                          <img src={TickmarkImg} alt="tick-mark" />
+                          {/* <img src={TickmarkImg} alt="tick-mark" /> */}
+                          <img
+                            className="blut-tick-img"
+                            src={blueTickmarkImg}
+                            alt="tick-mark"
+                          />
                           <span>{feature}</span>
                         </div>
                       ))}
                     </div>
                     <div className="product-page-button-space">
-                      <button style={{ backgroundColor: 'white', color: 'black', marginBottom: '2rem', marginLeft: '0' }} onClick={() => navigate('/login')} className='product-page-button'>Try theme</button>
+                      <button
+                        style={{
+                          backgroundColor: "white",
+                          color: "black",
+                          marginBottom: "2rem",
+                          marginLeft: "0",
+                        }}
+                        onClick={() => navigate("/login")}
+                        className="product-page-button">
+                        Try theme
+                      </button>
                     </div>
                     <div className="product-page-update-text">
                       <span>Last updated on Sep 11, 2024</span>
@@ -127,9 +143,9 @@ const ProductPage = () => {
                   </div>
                 </div>
 
-
                 <div className="product-page-image-container">
-                <img src={currentImage.src} alt={currentImage.alt} />
+                  {/* <img src={currentImage.src} alt={currentImage.alt} /> */}
+                  <img src={BiznestImageOverlay} alt={currentImage.alt} />
                 </div>
               </div>
             </div>
@@ -168,7 +184,10 @@ const ProductPage = () => {
             </div>
             <div className="product-page-reccomendations-grid">
               {filteredRecommendations.map((rec, index) => (
-                <div key={index} className="product-page-reccomendations-grid-image" onClick={() => handleImageClick(rec)}>
+                <div
+                  key={index}
+                  className="product-page-reccomendations-grid-image"
+                  onClick={() => handleImageClick(rec)}>
                   <img src={rec.src} alt={rec.alt} />
                 </div>
               ))}
@@ -178,15 +197,17 @@ const ProductPage = () => {
 
         <div className="product-page-build-section">
           <div className="product-page-build">
-            <span>Build fast, sell more and  grow more revenues immediately with WoNo</span>
+            <span>
+              Build fast, sell more and grow more revenues immediately with WoNo
+            </span>
             <div className="product-page-build-button-space">
-              <button className='product-page-button'>It's FREE</button>
+              <button className="product-page-button">It's FREE</button>
             </div>
           </div>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default ProductPage
+export default ProductPage;

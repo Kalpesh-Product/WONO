@@ -101,17 +101,30 @@ const LoginPage = () => {
     setPassword("");
   };
 
+  // const handleUsernameChange = (e) => {
+  //   const value = e.target.value;
+  //   setUserName(value);
+
+  //   // Username validation using regex (at least 2 characters long)
+  //   const usernameRegex = /^.{2,}$/; // At least 2 characters
+  //   if (!usernameRegex.test(value)) {
+  //     // setUserNameError("Enter a valid username");
+  //     setUserNameError("Enter a valid email");
+  //   } else {
+  //     setUserNameError(""); // Clear error if username is valid
+  //   }
+  // };
+
   const handleUsernameChange = (e) => {
     const value = e.target.value;
     setUserName(value);
 
-    // Username validation using regex (at least 2 characters long)
-    const usernameRegex = /^.{2,}$/; // At least 2 characters
-    if (!usernameRegex.test(value)) {
-      // setUserNameError("Enter a valid username");
-      setUserNameError("Enter a valid email");
+    // Email validation using regex
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    if (!emailRegex.test(value)) {
+      setUserNameError("Enter a valid email address");
     } else {
-      setUserNameError(""); // Clear error if username is valid
+      setUserNameError(""); // Clear error if the email is valid
     }
   };
 

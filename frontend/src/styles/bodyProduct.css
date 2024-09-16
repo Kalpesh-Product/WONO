@@ -7,6 +7,11 @@
     src: url('../assets/WONO_images/img/fonts/Poppins-Regular.ttf');
 }
 
+/* .blut-tick-img {
+    width: 200px;
+    height: 200px;
+} */
+
 .product-page-section {
     height: 100%;
     display: flex;
@@ -37,9 +42,10 @@
     grid-template-columns: 1fr 70%;
 }
 
-.product-page-grid-item{
-   padding-left: 0.6rem;
+.product-page-grid-item {
+    padding-left: 0.6rem;
 }
+
 .product-page-grid-item h1 {
     text-transform: uppercase;
     margin-bottom: 2rem;
@@ -68,11 +74,12 @@
 .product-page-image-container img {
     width: 100%;
     height: 100%;
-    
+
     object-fit: contain;
     object-position: center;
 }
-.product-page-image-mobile{
+
+.product-page-image-mobile {
     display: none;
 }
 
@@ -192,6 +199,7 @@
     object-fit: cover;
     transition: all 0.2s ease;
 }
+
 .product-page-reccomendations-grid-image img:hover {
     transform: scale(1.2);
 }
@@ -199,9 +207,10 @@
 .product-page-reccomendations-header {
     margin-bottom: 2rem;
 }
-.product-page-reccomendations-header h2{
-   margin: 0;
-   font-weight: 600;
+
+.product-page-reccomendations-header h2 {
+    margin: 0;
+    font-weight: 600;
 }
 
 .product-page-build-section {
@@ -227,7 +236,8 @@
     text-align: center;
     font-weight: bold;
 }
-.product-page-build-button-space{
+
+.product-page-build-button-space {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -251,68 +261,71 @@
         justify-content: center;
         background-color: black;
     }
-    
+
     .product-page-master * {
         font-family: Popins-Regular;
     }
-    
+
     .product-page {
         background-color: black;
         color: white;
         padding: 2rem;
     }
-    
+
     .product-page * {
         color: white;
         font-family: Popins-Regular;
     }
-    
+
     .product-page-grid {
         display: grid;
         grid-template-columns: 1fr;
         gap: 2rem;
     }
-    
-    .product-page-grid-item{
-       padding-left: 0.6rem;
+
+    .product-page-grid-item {
+        padding-left: 0.6rem;
     }
+
     .product-page-grid-item h1 {
         text-transform: uppercase;
         margin-bottom: 2rem;
         font-weight: bold;
         text-align: center;
     }
-    
+
     .product-page-feature {
         margin: 1rem 0 1rem 0;
     }
+
     .product-page-feature div {
         margin: 1rem 0 1rem 0;
-        padding-left: 1.5rem ;
+        padding-left: 1.5rem;
     }
-    
+
     .product-page-features img {
         padding-right: 1rem;
     }
-    .product-page-image-mobile{
+
+    .product-page-image-mobile {
         display: contents;
     }
-    
+
     .product-page-features span {
         font-size: 1.3rem;
     }
-    
+
     .product-page-image-container {
         width: 100%;
         overflow: hidden;
     }
-    
+
     .product-page-image-container img {
         width: 100%;
         height: 100%;
         object-fit: cover;
     }
-    
+
     .product-page-update-text {
         display: flex;
         flex-direction: column;
@@ -322,16 +335,16 @@
         padding-right: 2rem;
         text-align: center;
     }
-    
+
     .product-page-update-text * {
         color: rgb(129, 129, 129);
     }
-    
+
     .product-page-button-space {
         width: 100%;
         text-align: center;
     }
-    
+
     .product-page-button {
         padding: 1rem 2rem;
         background-color: white;
@@ -342,9 +355,9 @@
         margin-bottom: 2rem;
         margin-left: 2rem;
     }
-    
-    
-    
+
+
+
     /* perks */
     .product-page-perks-section {
         height: 100%;
@@ -352,102 +365,103 @@
         align-items: center;
         justify-content: center;
     }
-    
+
     .product-page-perks {
         padding: 2rem 2rem;
     }
-    
+
     .product-page-perks-grid {
         display: grid;
         grid-template-columns: 1fr;
     }
-    
+
     .product-page-perks-grid-1 {
         display: flex;
         align-items: start;
         justify-content: start;
     }
-    
+
     .product-page-perks-grid-1 span {
         font-weight: bold;
         font-size: 2rem;
         padding-bottom: 2rem;
     }
-    
+
     .product-page-perks-grid-2 {
         display: grid;
         grid-template-columns: 1fr;
         gap: 2rem;
     }
-    
+
     .product-page-perks-grid-2-item-layout {
         display: grid;
         grid-template-columns: 10% 1fr;
     }
-    
+
     .product-page-perks-grid-2-item-layout i {
         height: 100%;
         padding: 0.3rem 0rem 0 0rem;
     }
-    
+
     .product-page-perks-description h4 {
         margin-bottom: 1rem;
         font-size: 1.2rem;
         font-weight: bold;
     }
-    
+
     .product-page-perks-description span {
         font-size: 1rem;
     }
-    
+
     .product-page-perks-description {
         margin-bottom: 1rem;
     }
-    
+
     .product-page-reccomendations-section {
         background-color: rgb(233, 249, 255);
     }
-    
+
     .product-page-reccomendations {
         padding: 2rem;
     }
-    
+
     .product-page-reccomendations-grid {
         display: grid;
         grid-template-columns: 1fr;
         gap: 2rem;
     }
-    
+
     .product-page-reccomendations-grid-image {
         width: 100%;
         height: 100%;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
         overflow: hidden;
     }
-    
+
     .product-page-reccomendations-grid-image img {
         width: 100%;
         height: 100%;
         object-fit: cover;
         transition: all 0.2s ease;
     }
+
     .product-page-reccomendations-grid-image img:hover {
         transform: scale(1.2);
     }
-    
+
     .product-page-reccomendations-header {
         margin-bottom: 4rem;
     }
-    
+
     .product-page-build-section {
         background-color: #0093E9;
         background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
     }
-    
+
     .product-page-build-section * {
         color: black;
     }
-    
+
     .product-page-build {
         padding: 2rem;
         display: flex;
@@ -455,20 +469,21 @@
         justify-content: center;
         flex-direction: column;
     }
-    
+
     .product-page-build span {
         font-size: 2rem;
         padding: 0rem 2rem 2rem 2rem;
         text-align: center;
         font-weight: bold;
     }
-    .product-page-build-button-space{
+
+    .product-page-build-button-space {
         display: flex;
         align-items: center;
         justify-content: center;
         width: 100%;
     }
-    
+
     .product-page-build-button-space button {
         background-color: black;
         color: white;

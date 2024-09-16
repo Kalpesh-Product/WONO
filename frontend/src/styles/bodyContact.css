@@ -35,3 +35,36 @@
     }
 
 }
+
+.wono-text-spacing {
+    padding-left: 7rem;
+    padding-right: 7rem;
+}
+
+/* New Styles */
+
+/* Display PC layout on larger screens (e.g., desktop) */
+@media (min-width: 768px) {
+    /* .pc-screen {
+        display: flex;
+      
+    } */
+
+    .wono-text-spacing {
+        padding-left: 7rem;
+        padding-right: 7rem;
+    }
+}
+
+/* Display mobile layout on smaller screens */
+@media (max-width: 767px) {
+    /* .mobile-screen {
+        display: block;
+     
+    } */
+
+    .wono-text-spacing {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}

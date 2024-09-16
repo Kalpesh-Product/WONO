@@ -5,7 +5,7 @@ import "../styles/bodyContact.css";
 const Contact = () => {
   return (
     <>
-      <section id="contact" className="contact">
+      <section id="contact" className="contact wono-text-spacing">
         <div className="container">
           <div className="row gy-4">
             <div className="col-lg-6">
@@ -20,7 +20,8 @@ const Contact = () => {
                 }}>
                 About Us
               </h3>
-              <p style={{ fontSize: "17px", color: "#000", textAlign: "left" }}>
+              {/* <p style={{ fontSize: "17px", color: "#000", textAlign: "left" }}> */}
+              <p style={{ fontSize: "1rem", color: "#000", textAlign: "left" }}>
                 WoNo's B2B Software As A Service (SaaS) Licensing tools are
                 being developed post in depth discussions with 100's of
                 businesses who are trying to develop and evolve the Nomads &amp;
@@ -30,7 +31,8 @@ const Contact = () => {
                 wants to partner with us and we are providing them with our SaaS
                 Tools FREE of Cost in our Testing Phase.
               </p>
-              <p style={{ fontSize: "17px", color: "#000", textAlign: "left" }}>
+              {/* <p style={{ fontSize: "17px", color: "#000", textAlign: "left" }}> */}
+              <p style={{ fontSize: "1rem", color: "#000", textAlign: "left" }}>
                 WoNo's eventual B2B2C is the largest Nomad Community which is
                 being developed and designed exclusively for individuals and
                 companies who intend to work remotely from the various aspiring
@@ -136,7 +138,7 @@ const Contact = () => {
         </div>
       </section>
 
-      <div className="map-container">
+      <div className="map-container wono-text-spacing">
         <div className="map-grid">
           <div>
             <iframe
