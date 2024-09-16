@@ -10,7 +10,7 @@ const RotatingGlobe = () => {
 
     useFrame(() => {
         if (globeRef.current) {
-          globeRef.current.rotation.y += 0.007;
+          globeRef.current.rotation.y += 0.005
         }
       });
 
@@ -169,7 +169,7 @@ const RotatingGlobe = () => {
 
   return (
     <>
-    <mesh ref={globeRef} >
+    <mesh ref={globeRef}  rotation={[100.6, 90, 0]}>
     <sphereGeometry args={[5, 50, 50]} />
     <meshBasicMaterial map={texture} />
      

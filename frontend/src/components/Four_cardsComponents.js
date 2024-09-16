@@ -52,7 +52,7 @@ const FourCardsComponents = () => {
 
   const settings = {
     dots: false,
-    infinite: false,
+    infinite: true,
     speed: 500,
     slidesToShow: 3, // Adjust for how many cards to show at once
     prevArrow: <PrevArrow />, // Custom previous arrow
@@ -64,7 +64,7 @@ const FourCardsComponents = () => {
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
-          infinite: false,
+          infinite: true,
           dots: true
         }
       },
@@ -112,8 +112,7 @@ const FourCardsComponents = () => {
             navigate("/services");
             window.scrollTo({ top: 0, behavior: "smooth" });
           }}
-          className="key-features-link"
-        >
+          className="key-features-link">
           View more
         </span>
       </div>

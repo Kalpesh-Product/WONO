@@ -18,7 +18,7 @@ const Jobrole = () => {
         <div className='testingContainer'>
             <h1></h1>
         </div>
-        <Accordion defaultActiveKey="0">
+        <Accordion >
       <Accordion.Item eventKey="0">
         <Accordion.Header>I. Product Management</Accordion.Header>
         <Accordion.Body>

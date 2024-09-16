@@ -43,11 +43,11 @@
 }
 .connect-with-us-btn{
     position: absolute;
-    right: 7rem;
-    width: 200px;
-    height: 50px;
+    right: 6rem;
     background-color: black;
     color: white;
+    border-radius: 30px;
+    padding: 0.5rem 2rem;
     font-family: Popins-Regular;
 
 }
@@ -116,7 +116,7 @@
 }
 .plus-icon:hover{
     color: white;
-    background-color: #CF9FFF;
+    background-color: black;
     cursor: pointer;
 }
 .capital-big-text {

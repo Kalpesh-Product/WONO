@@ -81,6 +81,7 @@
 
 .key-features-link:hover {
   text-decoration: underline;
+  color: blue;
 }
 .slick-prev,
 .slick-next {

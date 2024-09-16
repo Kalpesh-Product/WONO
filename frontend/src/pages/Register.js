@@ -338,7 +338,7 @@ const Register = () => {
                               type="submit"
                               className="register-page-button"
                               onClick={handleNext}
-                              style={{width:'100%'}}
+                              style={{width:'50%'}}
                             >
                             Next
                             </button>
@@ -503,6 +503,7 @@ const Register = () => {
                             <button
                               type="submit"
                               className="register-page-button"
+                              style={{width:"50%"}}
                               onClick={handleNext}
                             >
                               Next

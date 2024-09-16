@@ -2,6 +2,7 @@ import React from 'react'
 import "../styles/capital.css"
 import "../styles/specialClasses.css"
 import DashboardImage from "../assets/ipadcopy.png"
+import {Link} from 'react-router-dom'
 
 const Capital = () => {
   return (
@@ -13,7 +14,7 @@ const Capital = () => {
                   <svg fill="none" viewBox="0 0 390 97" className="hero__animation hero__animation--standard"><path d="M2,76.26c16.11,4.95,31.91,3.84,48.58,3.84,20.39,0,40.67,0,61,1,18,.87,36-1,53.94-1,15.79,0,31.51,1.81,47.31,1.21,24.51-.93,49.17-2.18,73.68-2.49,19.45-.25,39.4,1.59,58.76-.64,15-1.73,29-2.29,39.75-14.79C387.89,60.1,390.5,48.5,386.5,40c-5.69-12.09-12.63-18.68-23.67-25.17C341.68,2.4,314.67,1.82,291.09,2c-21.31.2-55.45,3.62-68.52,24.46C212.14,43.1,212,59.57,227.79,72.77c24.81,20.81,63.45,26.8,93.41,18.85"></path></svg>
             </span> build </h1>
         <h1 className='capital-heading-sub'>legandary Companies.</h1>
-        <button className='connect-with-us-btn'>CONNECT WITH US</button>
+        <Link to="/register"><button className='connect-with-us-btn'>CONNECT WITH US</button></Link>
     </div>
     <div className='capital-cards-section'>
        <div className='cards-with-text'>
@@ -78,8 +79,8 @@ secure the accurate INVESTOR!</h1>
         <div className='frictionless-heading-with-btns'>
             <h1><span>Raise</span> - Frictionless fundraising for startups</h1>
             <div className='frictionless-btns'>
-                <button className='capital-start-for-free-btn btn1'>Start for free</button>
-                <button className='capital-start-for-free-btn btn2'>Contact sales</button>
+                <Link to="/register"><button className='capital-start-for-free-btn btn1'>Start for free</button></Link>
+                <Link to="/register"><button className='capital-start-for-free-btn btn2'>Contact sales</button></Link>
             </div>
         </div>
         <div className='big-end-dashboard-img'>
@@ -90,9 +91,9 @@ secure the accurate INVESTOR!</h1>
     </div>
     <div className='capital-last-button-section'>
         <h1>LET THE FUNDRAISE BEGIN!</h1>
-        <button className='get-started-main-button'>
+        <Link to="/register"><button className='get-started-main-button'>
             CONNECT WITH US TODAY
-        </button>
+        </button></Link>
     </div>
 
     </div>
