@@ -1,3 +1,11 @@
+@font-face {
+  font-family: Popins-Regular;
+  src: url('../assets/WONO_images/img/fonts/Poppins-Regular.ttf');
+}
+
+.four-cards-parent *{
+  font-family: Popins-Regular;
+}
 .four-cards-parent {
   margin: 0;
   padding: 4rem 7rem;
@@ -7,9 +15,13 @@
   position: relative;
   width: 100%;
 }
-.four-cards-header h2{
+.four-cards-header{
+  text-align: center;
+}
+.four-cards-header span{
   text-align: center;
   font-size: 4.4rem;
+  font-weight: 700;
   /* white-space: nowrap; */
 }
 .four-cards-wrapper {
@@ -138,9 +150,9 @@ button.slick-next.slick-arrow::before{
     position: relative;
     width: 100%;
   }
-  .four-cards-header h2{
+  .four-cards-header span{
     text-align: center;
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 
   .card_1 {
@@ -152,10 +164,17 @@ button.slick-next.slick-arrow::before{
     height: 330px; */
     background-color: #fff;
       border-radius: 10px;
-      height: 330px;
-      margin: .5rem 9px;
+      height: 362px;
+      margin: .5rem 30px;
       padding: 30px 20px;
-      width: 300px !important;
+      width: 262px !important;
+  }
+  button.slick-prev.slick-arrow{
+    left: -37px;
+    margin-left: 46px;
+  }
+  button.slick-next.slick-arrow{
+    margin-right: 43px;
   }
 }
 

@@ -484,4 +484,7 @@
         .last-section .partner-button-space {
             text-align: center;
         }
+        .Tickmark-text {
+            font-size: 14px;
+        }
     }

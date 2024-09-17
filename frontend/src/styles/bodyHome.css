@@ -172,6 +172,9 @@
     /* padding-left: 4.7rem; */
     width: 100%;
 }
+.home-section-register-button-space{
+    width: 100%;
+}
 
 
 .home-section-register-button {
@@ -275,6 +278,9 @@
         align-items: center;
         justify-content: center;
         /* padding-left: 1rem; */
+    }
+    .home-section-register-button-space{
+        width: 90%;
     }
 
     .home-section-register-button {
@@ -429,7 +435,7 @@
     }
 
     .N-Commerce>h3>strong {
-        font-size: clamp(75px, 22vw, 85px);
+        font-size: clamp(75px, 22vw, 93px);
         color: #fff;
         padding: 1rem;
     }
@@ -1092,7 +1098,8 @@
     .testimonial-section {
         /* background-color: #cae4ff !important; */
         margin-top: 0 !important;
-        padding: 1rem;
+        padding: 0 1.9rem;
+        padding-right: 1.3rem;
     }
 }
 
