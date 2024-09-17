@@ -187,7 +187,7 @@ const Jobapply = ({ jobTitle }) => {
                 name="date"
                 id="datePicker"
                 required=""
-                max="2024-08-15"
+                // max="2024-08-15"
                 placeholder=" "
                 value={formvalues.date}
                 onChange={handleInputChange}></input>

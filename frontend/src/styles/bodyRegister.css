@@ -5,19 +5,21 @@
 
 section {
   padding: 0;
+  border: none;
 }
 
 .register-master {
-  /* height: 100; */
+ padding: 4rem 0;
+ border: none;
 }
 
 .next-button-width {
-  width: 100px !important;
+  width: 200px !important;
 }
 
-.register-container {
+.register-container *{
   /* padding: 2rem; */
-  font-family: Popins-Semibold;
+  font-family: Popins-Regular !important;
 }
 
 .register-page-button-space {
@@ -26,7 +28,8 @@ section {
   align-items: center;
   justify-content: center;
   padding: 2rem;
-
+  padding-bottom: 0;
+  margin: 0;
 }
 
 .register-page-button-space>* {
@@ -71,6 +74,10 @@ section {
   padding: 0.7em;
   padding-left: 1rem;
 }
+
+
+
+
 
 @media (max-width: 768px) {
 
