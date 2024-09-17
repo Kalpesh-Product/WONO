@@ -2,32 +2,110 @@
     font-family: Popins-Semibold;
     src: url('../assets/WONO_images/img/fonts/Poppins-SemiBold.ttf');
 }
+@font-face {
+    font-family: Popins-Regular;
+    src: url('../assets/WONO_images/img/fonts/Poppins-Regular.ttf');
+}
 
-.services {
+
+
+.services{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
-
-.services > h1{
-   color : rgb(54,77,89)
+.services *{
+    font-family: Popins-Regular;
 }
+
+.services:not(:last-child) {
+    padding: 0 7.5rem;
+}
+
+.SaaS-main-heading {
+    text-align: center;
+    padding: 4rem 0 4rem 0;
+}
+
+.SaaS-main-heading h1 {
+    font-size: 3rem;
+    padding: 0 0 2rem 0;
+}
+
+.SaaS-main-heading h4 {
+    padding-bottom: 2rem;
+}
+
+.services-header-button-space {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding-top: 2.5rem;
+}
+.SaaS-featured-master h1{
+    padding-top: 4rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.SaaS-featured-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 4rem 0;
+    column-gap: 2rem;
+}
+.SaaS-featured-grid-left{
+    font-size: 1.5rem;
+}
+
+.SaaS-featured-grid-right {
+    width: 100%;
+    overflow: hidden;
+}
+
+.SaaS-featured-grid-right img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.SaaS-grid-heading {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2rem 0 0 0;
+    width: 100%;
+}
+
+.SaaS-grid-heading h2 {
+    font-weight: 600;
+    font-size: 2.5rem;
+}
+
+.SaaS-grid-heading span {
+    font-size: 1.5rem;
+}
+
 
 .businesses {
     width: 100%;
+    padding: 2rem 0 0 0;
 }
-.businesses > div > h1{
-    text-align: center;
-    padding: 2rem;
-    margin-bottom: 2rem;
-    font-size: 56px;
+
+.businesses>div>h1 {
+    text-align: start;
+    font-size: 2rem;
     font-weight: 700;
-    text-align: center;
+    text-align: start;
     font-family: Popins-SemiBold;
-    color : rgb(54,77,89)
+    color: black;
+    text-transform: uppercase;
 }
-.businesses > div > hr{
+
+.businesses>div>hr {
     margin: 0;
     border: 4px solid #0875e2;
     opacity: 1;
@@ -37,20 +115,22 @@
 
 .business-grid {
     display: grid;
-    grid-template-columns: repeat(6, 1fr); /* 5 columns */
-    gap: 2rem; /* Space between grid items */
+    grid-template-columns: repeat(6, 1fr);
+    /* 5 columns */
+    gap: 2rem;
+    /* Space between grid items */
     width: 100%;
-    margin-bottom: 3rem;
-    margin-top: 3rem;
-    padding: 0 4rem 0 4rem;
+    margin: 4rem 0 4rem 0;
+    padding: 0;
     text-transform: uppercase;
 }
 
-.business-service > span {
+.business-service>span {
     font-family: Popins-Regular;
     font-weight: 700;
     text-align: center;
 }
+
 .business-service {
     display: flex;
     flex-direction: column;
@@ -58,147 +138,168 @@
     justify-content: center;
 }
 
-.business-service > img {
-    width: 70px;
-    margin-bottom: 0.8rem;
-}
-@media (max-width: 768px) {
-    .business-grid {
-        grid-template-columns: 50% 1fr;
-        grid-template-rows: auto;
-        padding: 2rem;
-        gap: 2rem;
-        text-transform: uppercase;
-    }
-    .businesses > div > h1{
-        padding: 1rem 0 1rem 0 ;
-    }
-}
-
-
-/* Direct customers  */
-
-.direct-customers {
-    width: 100%;
-}
-.direct-customers > div > h1{
-    text-align: center;
-    padding: 2rem;
-    margin-bottom: 2rem;
-    font-size: 56px;
-    font-weight: 700;
-    text-align: center;
-    font-family: Popins-SemiBold;
-    color : rgb(54,77,89)
-}
-.direct-customers > div > hr{
-    margin: 0;
-    border: 4px solid #0875e2;
-    opacity: 1;
-    padding: 0;
-    width: 90%;
-}
-
-.direct-customers-grid {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr); /* 5 columns */
-    gap: 2rem; /* Space between grid items */
-    width: 100%;
-    margin-bottom: 3rem;
-    margin-top: 3rem;
-    padding: 0 4rem 0 4rem;
-    text-transform: uppercase;
-}
-
-.direct-customers-service > span {
-    font-family: Popins-Regular;
-    font-weight: 700;
-    text-align: center;
-}
-.direct-customers-service {
+.SaaS-last-banner-section {
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 4rem 0;
+    background-color: #0093E9;
+    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+    width: calc(100% + 15rem);
+    margin: 0 -7.5rem;
+    text-align: center;
+}
+.SaaS-last-banner h2{
+    font-family: Popins-Semibold;
+    font-size: 2.7rem;
 }
 
-.direct-customers-service > img {
-    width: 70px;
+
+.business-service>img {
+    width: 50px;
     margin-bottom: 0.8rem;
 }
+
 @media (max-width: 768px) {
-    .direct-customers-grid {
-        grid-template-columns: 50% 1fr;
-        grid-template-rows: auto;
-        padding: 2rem;
-        gap: 2rem;
-        text-transform: uppercase;
+    .services{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
-    .direct-customers > div > h1{
-        padding: 1rem 0 1rem 0 ;
-    }
-}
-
-
-/* financing  */
-
-.financing {
-    width: 100%;
-}
-.financing > div > h1{
-    text-align: center;
-    padding: 2rem 0 0 2rem;
-    margin-bottom: 2rem;
-    font-size: 56px;
-    font-weight: 700;
-    text-align: center;
-    font-family: Popins-SemiBold;
-    color : rgb(54,77,89)
-}
-.financing > div > hr{
-    margin: 0;
-    border: 4px solid #0875e2;
-    opacity: 1;
-    padding: 0;
-    width: 90%;
-}
-
-.financing-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 5 columns */
-    gap: 1rem; /* Space between grid items */
-    width: 100%;
-    margin-bottom: 3rem;
-    margin-top: 3rem;
-    padding: 0 4rem 0 4rem;
-    text-transform: uppercase;
     
+    .services:not(:last-child) {
+        padding: 0 1.7rem;
+    }
+    
+    .SaaS-main-heading {
+        text-align: start;
+        padding: 4rem 0 2rem 0;
+    }
+    
+    .SaaS-main-heading h1 {
+        font-size: 2rem;
+        padding: 0 0 2rem 0;
+    }
+    
+    .SaaS-main-heading h4 {
+        padding-bottom: 2rem;
+    }
+    
+    .services-header-button-space {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding-top: 2rem;
+    }
+    .SaaS-featured-master h1{
+        padding-top: 2rem;
+    }
+    
+    .SaaS-featured-grid {
+        display: grid;
+        grid-template-columns:1fr;
+        gap: 2rem;
+        padding: 4rem 0;
+    }
+    
+    .SaaS-featured-grid-right {
+        width: 100%;
+        overflow: hidden;
+    }
+    
+    .SaaS-featured-grid-right img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+    .SaaS-grid{
+        padding: 0;
+    }
+    
+    .SaaS-grid-heading {
+        display: flex;
+        align-items: start;
+        justify-content: center;
+        flex-direction: column;
+        padding: 2rem 0 0 0;
+        width: 100%;
+    }
+    
+    .SaaS-grid-heading h2 {
+        font-size: 2rem;
+    }
+    
+    .SaaS-grid-heading span {
+        font-size: 1.5rem;
+    }
+    
+    
+    .businesses {
+        width: 100%;
+        padding: 2rem 0 0 0;
+    }
+    
+    .businesses>div>h1 {
+        text-align: start;
+        font-size: 1.7rem;
+        font-weight: 700;
+        font-family: Popins-SemiBold;
+        color: black;
+        padding: 0;
+    }
+    
+    .businesses>div>hr {
+        margin: 0;
+        border: 4px solid #0875e2;
+        opacity: 1;
+        padding: 0;
+        width: 90%;
+    }
+    
+    .business-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        /* 5 columns */
+        gap: 2rem;
+        /* Space between grid items */
+        width: 100%;
+        margin: 2rem 0 2rem 0;;
+        text-transform: uppercase;
+    }
+    
+    .business-service>span {
+        font-family: Popins-Regular;
+        font-weight: 700;
+        text-align: center;
+        font-size: 0.7rem;
+    }
+    
+    .business-service {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .SaaS-last-banner-section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 4rem 0;
+        background-color: #0093E9;
+        background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+        width: calc(100% + 3rem);
+        margin: 0 -2rem;
+        text-align: center;
+    }
+    
+    
+    .business-service>img {
+        width: 50px;
+        margin-bottom: 0.8rem;
+    }
 }
 
-.financing-service > span {
-    font-family: Popins-Regular;
-    font-weight: 700;
-    text-align: center;
-}
-.financing-service {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add drop shadow here */
-}
 
-.financing-service > img {
-    width: 70px;
-    margin-bottom: 0.8rem;
-}
-@media (max-width: 768px) {
-    .financing-grid {
-        grid-template-columns: 50% 1fr;
-        grid-template-rows: auto; /* Adjust rows based on content */
-    }
-    .financing > div > h1{
-        padding: 1rem 0 1rem 0 ;
-    }
-}

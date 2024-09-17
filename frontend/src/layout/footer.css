@@ -68,7 +68,7 @@ footer {
 @media (max-width: 768px) {
   .footer-container {
     grid-template-columns: 1fr 1fr;
-    gap: 0rem;
+    column-gap: 5rem;
   }
 
   .footer-master {
