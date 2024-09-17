@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import AppStruct from "./structure/AppStruct";
 import CompTest from "./pages/CompTest";
@@ -28,10 +29,15 @@ import "slick-carousel/slick/slick-theme.css";
 
 
 function App() {
+  const [activeTab, setActiveTab] = useState("Home");
+
+  const changeActiveTab = (activeTab) => {
+    setActiveTab(activeTab);
+  };
   return (
     <div>
       <UserProvider>
-        <AppHeader />
+        <AppHeader activeTab={activeTab} changeActiveTab={changeActiveTab}  />
         <Routes>
           <Route path="/" element={<AppStruct />} />
           <Route path="/test" element={<CompTest />} />
@@ -55,7 +61,7 @@ function App() {
           <Route path="/leads" element={<LeadsPage />} />
           <Route path="/themes/products" element={<ProductPage />} />
         </Routes>
-        <AppFooter />
+        <AppFooter   changeActiveTab={changeActiveTab}  />
       </UserProvider>
     </div>
   );
