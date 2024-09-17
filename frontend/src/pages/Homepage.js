@@ -277,8 +277,9 @@ const Homepage = () => {
                       <div className="col-lg-4  d-flex justify-content-center align-items-center">
                         <div className="">
                           <button
-                            className="get-started-submit-button "
-                            onClick={handleRegister}>
+                            className="get-started-submit-button m-0"
+                            onClick={handleRegister}
+>
                             Get Started
                           </button>
                         </div>

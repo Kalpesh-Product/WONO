@@ -29,44 +29,6 @@ const LoginPage = () => {
   const [modalMessage, setModalMessage] = useState("");
   axios.defaults.withCredentials = true;
 
-  const settings = {
-    dots: true,
-    infinite: true,
-    dotsClass: "login-slick-dots",
-    prevArrow: <div className="login-slick-prev" />,
-    nextArrow: <div className="login-slick-next" />,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: false,
-    autoplaySpeed: 3000,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          infinite: true,
-          dots: true,
-        },
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          initialSlide: 1,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  };
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -208,18 +170,37 @@ const LoginPage = () => {
           </div>
           <div className="loginRightContainer">
             <div className="loginWithSection d-flex flex-column justify-content-center align-items-center">
-              <div className="LoginWithGoogleContainer loginWithBox loginWithGoogleBox d-flex justify-content-between align-items-center centerElement w-100">
-                <div className="loginWithIconBox loginWithGoogleIconBox centerElement">
-                  <img
-                    src={LoginWithGoogleImage}
-                    alt="Google Icon"
-                    className="imageDimensions"
-                  />
-                </div>
-                <div className="LoginWithGoogleText LoginWithText centerElement w-100">
-                  <div>Continue with Google</div>
-                </div>
-              </div>
+              <GoogleLogin
+                onSuccess={handleLoginSuccess}
+                onFailure={handleLoginError}
+                render={(renderProps) => (
+                  <div
+                    style={{
+                      display: 'flex',
+                      justifyContent: 'space-between',
+                      alignItems: 'center',
+                      width: '100%',
+                      padding: '10px',
+                      border: '1px solid #ccc',
+                      borderRadius: '5px',
+                      cursor: 'pointer'
+                    }}
+                    onClick={renderProps.onClick}
+                    disabled={renderProps.disabled}
+                  >
+                    <div style={{ marginRight: '10px' }}>
+                      <img
+                        src={LoginWithGoogleImage}
+                        alt="Google Icon"
+                        style={{ width: '20px', height: '20px' }}
+                      />
+                    </div>
+                    <div style={{ flexGrow: 1, textAlign: 'center' }}>
+                      Continue with Google
+                    </div>
+                  </div>
+                )}
+              />
               <div className="LoginWithFacebookContainer loginWithBox loginWithFacebookBox d-flex justify-content-between align-items-center centerElement">
                 <div className="loginWithIconBox loginWithFacebookIconBox centerElement">
                   <img
