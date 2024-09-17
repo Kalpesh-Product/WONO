@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../layout/footer.css";
+import "../styles/componentStyle.css";
 import WonoLogo from "../assets/WONO_images/img/WONO_LOGO_white _TP.png";
 // Import the FontAwesomeIcon component
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -11,7 +12,7 @@ import {
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
 
-const Footer = () => {
+const Footer = ({changeActiveTab}) => {
   return (
     <>
       <footer className="black-background text-light py-4">
@@ -24,7 +25,7 @@ const Footer = () => {
               INTERNATIONAL PLAZA SINGAPORE - 079903
               <br />
               <span className="text-lowercase color-of-o">
-                response@wono.co
+              <Link to="mailto:response@wono.co" style={{textDecoration:"none"}}>response@wono.co</Link>
               </span>
             </span>
             <div className="icons-section">
@@ -52,31 +53,40 @@ const Footer = () => {
           </div>
           <div className="footer-container">
             <div className="footer-section-3">
-              <h5>SaaS</h5>
-              <h5>Leads</h5>
-              <h5>Themes</h5>
+              <h5><Link to="#">SaaS</Link></h5>
+              <h5 onClick={()=>{
+            changeActiveTab('leads')
+            window.scrollTo({ top: 0, behavior: "smooth" })
+            }}><Link to={"/leads"}>Leads</Link></h5>
+              <h5 onClick={()=>{
+            changeActiveTab('themes')
+            window.scrollTo({ top: 0, behavior: "smooth" })
+            }}><Link to={"/themes"}>Themes</Link></h5>
             </div>
 
             <div className="footer-section-3">
-              <h5>Accounting</h5>
-              <h5>Projections</h5>
-              <h5>Capital</h5>
+              <h5><Link to="#">Accounting</Link></h5>
+              <h5><Link to="#">Projections</Link></h5>
+              <h5 onClick={()=>{
+            changeActiveTab('capital')
+            window.scrollTo({ top: 0, behavior: "smooth" })
+            }}><Link to={'/capital'}>Capital</Link></h5>
             </div>
             <div className="footer-section-3">
-              <h5>About</h5>
+              <h5><Link to="#">About</Link></h5>
               <Link
                 to={"/career"}
-                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+                onClick={() =>{changeActiveTab('Career'); window.scrollTo({ top: 0, behavior: "smooth" })}}>
                 Careers
               </Link>
               <Link
                 to={"/contact"}
-                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+                onClick={() => {changeActiveTab('contact');window.scrollTo({ top: 0, behavior: "smooth" })}}>
                 Contact
               </Link>
             </div>
             <div className="footer-section-3">
-              <h5>FAQs</h5>
+              <h5><Link to="#">FAQs</Link></h5>
               <Link
                 to={"/privacy"}
                 onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>

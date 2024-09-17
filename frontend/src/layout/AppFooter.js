@@ -2,10 +2,10 @@ import React from 'react'
 import Footer from '../components/Footer'
 import './footer.css'
 
-const AppFooter = () => {
+const AppFooter = ({changeActiveTab}) => {
   return (
     <>
-    <Footer/>
+    <Footer  changeActiveTab={changeActiveTab} />
     </>
   )
 }
