@@ -173,7 +173,7 @@ const Homepage = () => {
             <Canvas
               camera={{
                 position: [0, 0, ismobile ? 15 : 25],
-                fov: ismobile ? 90 : 40,
+                fov: ismobile ? 50 : 40,
               }}>
               <ambientLight intensity={0.5} />
               <pointLight position={[10, 10, 10]} />
