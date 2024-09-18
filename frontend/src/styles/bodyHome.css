@@ -29,7 +29,7 @@
     position: relative;
 }
 
-.date-picker>.placeholder::after {
+.date-picker>.placeholder::before {
     content: "Date Of Birth";
     pointer-events: none;
     position: absolute;
@@ -172,6 +172,9 @@
     /* padding-left: 4.7rem; */
     width: 100%;
 }
+.home-section-register-button-space{
+    width: 100%;
+}
 
 
 .home-section-register-button {
@@ -275,6 +278,9 @@
         align-items: center;
         justify-content: center;
         /* padding-left: 1rem; */
+    }
+    .home-section-register-button-space{
+        width: 90%;
     }
 
     .home-section-register-button {
@@ -429,7 +435,7 @@
     }
 
     .N-Commerce>h3>strong {
-        font-size: clamp(75px, 22vw, 85px);
+        font-size: clamp(75px, 22vw, 93px);
         color: #fff;
         padding: 1rem;
     }
@@ -1057,6 +1063,22 @@
         position: sticky;
         left: 0;
     }
+    .website-panel-right .template-preview-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .template-preview-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        transition: all ease 0.3s;
+        vertical-align: middle;
+    }
 }
 
 
@@ -1076,7 +1098,8 @@
     .testimonial-section {
         /* background-color: #cae4ff !important; */
         margin-top: 0 !important;
-        padding: 1rem;
+        padding: 0 1.9rem;
+        padding-right: 1.3rem;
     }
 }
 

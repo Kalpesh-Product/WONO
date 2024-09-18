@@ -29,44 +29,6 @@ const LoginPage = () => {
   const [modalMessage, setModalMessage] = useState("");
   axios.defaults.withCredentials = true;
 
-  const settings = {
-    dots: true,
-    infinite: true,
-    dotsClass: "login-slick-dots",
-    prevArrow: <div className="login-slick-prev" />,
-    nextArrow: <div className="login-slick-next" />,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: false,
-    autoplaySpeed: 3000,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          infinite: true,
-          dots: true,
-        },
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          initialSlide: 1,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  };
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -208,6 +170,7 @@ const LoginPage = () => {
           </div>
           <div className="loginRightContainer">
             <div className="loginWithSection d-flex flex-column justify-content-center align-items-center">
+            <div className="loginWithSection d-flex flex-column justify-content-center align-items-center">
               <div className="LoginWithGoogleContainer loginWithBox loginWithGoogleBox d-flex justify-content-between align-items-center centerElement w-100">
                 <div className="loginWithIconBox loginWithGoogleIconBox centerElement">
                   <img
@@ -219,6 +182,7 @@ const LoginPage = () => {
                 <div className="LoginWithGoogleText LoginWithText centerElement w-100">
                   <div>Continue with Google</div>
                 </div>
+              </div>
               </div>
               <div className="LoginWithFacebookContainer loginWithBox loginWithFacebookBox d-flex justify-content-between align-items-center centerElement">
                 <div className="loginWithIconBox loginWithFacebookIconBox centerElement">

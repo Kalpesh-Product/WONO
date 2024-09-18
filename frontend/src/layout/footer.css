@@ -6,7 +6,8 @@
 footer {
   width: 100%
 }
-.footer-master{
+
+.footer-master {
   display: flex;
   justify-content: space-between;
   padding: 0 7rem;
@@ -18,7 +19,8 @@ footer {
   color: white;
   font-family: Popins-Regular;
 }
-.footer-copyright p{
+
+.footer-copyright p {
   font-family: Popins-Regular;
 }
 
@@ -66,12 +68,16 @@ footer {
 @media (max-width: 768px) {
   .footer-container {
     grid-template-columns: 1fr 1fr;
-    gap: 0rem;
+    column-gap: 5rem;
   }
-  .footer-master{
+
+  .footer-master {
     flex-wrap: wrap;
     padding: 0 1rem;
+    justify-content: center;
   }
+
+
 
   .footer-section-1 {
     align-items: center;
@@ -94,6 +100,18 @@ footer {
   .footer-section-2>* {
     padding: 0.5rem;
     font-size: 14px;
+  }
+
+  .footer-section-1,
+  .footer-section-2,
+  .footer-section-3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2rem 0;
+    text-transform: uppercase;
+    font-family: Popins-Regular;
   }
 }
 

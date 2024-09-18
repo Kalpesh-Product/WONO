@@ -99,7 +99,7 @@
     }
 
     .testimonial-right-spacing {
-        padding-right: 100px;
+        /* padding-right: 100px; */
     }
 
 }
@@ -167,4 +167,15 @@
 
 .full-width-image {
     width: 100%;
+}
+
+@media (max-width:768px) {
+    .custom-image-biznest {
+        width: 100%;
+        /* Image will take up the full width of its container */
+        /* height: auto; */
+        min-height: 400px;
+        /* Maintains the image's aspect ratio */
+        border-radius: 10px;
+    }
 }
