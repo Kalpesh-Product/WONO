@@ -62,7 +62,7 @@ const FourCardsComponents = () => {
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 1,
           slidesToScroll: 1,
           infinite: true,
           dots: true
@@ -81,7 +81,7 @@ const FourCardsComponents = () => {
   return (
     <div className="four-cards-parent">
       <div className="four-cards-header">
-        <h2><b>KEY MODULES FOR YOUR BUSINESS</b></h2>
+        <span>KEY MODULES FOR YOUR BUSINESS</span>
       </div>
 
       <Slider {...settings} className="four-cards-wrapper">

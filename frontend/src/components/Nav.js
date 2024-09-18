@@ -8,16 +8,16 @@ import axios from "axios";
 import "../styles/componentStyle.css";
 import WonoLogo from "../assets/WONO_images/img/WONO_LOGO_white _TP.png";
 
-const NavBar = () => {
+const NavBar = ({activeTab ,changeActiveTab}) => {
   const navigate = useNavigate();
   const { user, setUser } = useContext(UserContext);
   const [show, setShow] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
-  const [activeTab, setActiveTab] = useState("Home");
+  // const [activeTab, setActiveTab] = useState("Home");
 
-  const changeActiveTab = (activeTab) => {
-    setActiveTab(activeTab);
-  };
+  // const changeActiveTab = (activeTab) => {
+  //   setActiveTab(activeTab);
+  // };
 
   const handleLogout = async () => {
     try {

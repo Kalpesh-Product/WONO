@@ -157,7 +157,7 @@ const Homepage = () => {
               across 25+ countries !
             </span>
             <div className="home-section-buttons">
-              <div style={{ width: "100%" }}>
+              <div className="home-section-register-button-space">
                 <button
                   className="home-section-register-button"
                   onClick={handleRegister}>
@@ -173,7 +173,7 @@ const Homepage = () => {
             <Canvas
               camera={{
                 position: [0, 0, ismobile ? 15 : 25],
-                fov: ismobile ? 90 : 40,
+                fov: ismobile ? 50 : 40,
               }}>
               <ambientLight intensity={0.5} />
               <pointLight position={[10, 10, 10]} />
@@ -277,8 +277,9 @@ const Homepage = () => {
                       <div className="col-lg-4  d-flex justify-content-center align-items-center">
                         <div className="">
                           <button
-                            className="get-started-submit-button "
-                            onClick={handleRegister}>
+                            className="get-started-submit-button m-0"
+                            onClick={handleRegister}
+>
                             Get Started
                           </button>
                         </div>
@@ -416,7 +417,7 @@ const Homepage = () => {
                   <div className=" ">
                     <br />
                     {/* <h4 className="bg-danger testimonial-right-spacing"> */}
-                    <h3 className=" testimonial-right-spacing">
+                    <h3 className="testimonial-right-spacing">
                       “We went from managing 3,000 sq ft to 50,000+ sq ft in the
                       most efficient and seamless manner with tech, processes,
                       data analytics, customer & employee management and due to
@@ -438,11 +439,11 @@ const Homepage = () => {
                   </div>
                 </div>
                 {/* <div className="col-lg-5 mt-3 bg-warning d-flex flex-row justify-content-end"> */}
-                <div className="col-lg-5 mt-3  d-flex flex-row justify-content-end ps-5 pe-0">
+                <div className="col-lg-5 mt-3  d-flex flex-row justify-content-center px-0">
                   <img
                     src={BiznestTestimonial}
                     alt=""
-                    className="custom-image-biznest ms-5"
+                    className="custom-image-biznest"
                   />
                 </div>
               </div>

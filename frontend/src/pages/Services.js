@@ -1,306 +1,443 @@
 import React from 'react'
-import {  TransactionalWebsite, BookingEngine, MeetingRoomEngine, PaymentGateway, Blog, Hiring, LeadGeneration, EmailMarketing, DataMarketing, SearchEngineMarketing, SearchEngineOptimisation, GoogleMyBusiness, EmployeeTaskManagement, EmployeeAttendance, CompanyCompliances, CustomerAgreements, VendorAgreements, EmployeeAgreements, CustomerInvoicing, AccountingTools, BusinessProjections, BudgetManagement, CashflowManagement, AnnualFiling, EmployeePerformance, EmployeeAppraisals, ReadyProcesses, ReadyPolicies, MeetingRoomManagement, BirthdayManagement, CustomerService, Chat, Trainings, CustomisedSupport, BusinessAnalytics, CustomerReports, EmployeeReports, FinancialReports, CustomerAnalytics, EmployeeAnalytics, HRSupport, GlobalNomadship, CentralNomadAccount, RemoteWorkingJobs, PrivateLivingSpace, CoWorkingSpace, FurnishedSpaces, Internet, MeetingRooms, BoardRooms, TrainingRooms, Community, Events, Ticketing, Visa, PersonalisedAssist, BestPricing, MultiLocationOptions, PassionProjects, VentureCapital, VentureDebt, WorkingCapital } from '../assets/WONO_images/img/icon_service';
+import { TransactionalWebsite, BookingEngine, MeetingRoomEngine, PaymentGateway, Blog, Hiring, LeadGeneration, EmailMarketing, DataMarketing, SearchEngineMarketing, SearchEngineOptimisation, GoogleMyBusiness, EmployeeTaskManagement, EmployeeAttendance, CompanyCompliances, CustomerAgreements, VendorAgreements, EmployeeAgreements, CustomerInvoicing, AccountingTools, BusinessProjections, BudgetManagement, CashflowManagement, AnnualFiling, EmployeePerformance, EmployeeAppraisals, ReadyProcesses, ReadyPolicies, MeetingRoomManagement, BirthdayManagement, CustomerService, Chat, Trainings, CustomisedSupport, BusinessAnalytics, CustomerReports, EmployeeReports, FinancialReports, CustomerAnalytics, EmployeeAnalytics, HRSupport, GlobalNomadship, CentralNomadAccount, RemoteWorkingJobs, PrivateLivingSpace, CoWorkingSpace, FurnishedSpaces, Internet, MeetingRooms, BoardRooms, TrainingRooms, Community, Events, Ticketing, Visa, PersonalisedAssist, BestPricing, MultiLocationOptions, PassionProjects, VentureCapital, VentureDebt, WorkingCapital } from '../assets/WONO_images/img/icon_service';
+import { useNavigate } from 'react-router-dom';
+import ServiceGridImage from '../assets/WONO_images/img/services/servicegrid.png'
+import blueTickmarkImg from "../assets/blue-tick-no-bg-15.png";
+
 
 
 import '../styles/bodyServices.css'
 const Services = () => {
+
+    const navigate = useNavigate()
     return (
         <>
             <div className="services">
-                <div className="businesses">
-                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>
-                        <h1>FOR BUSINESSES</h1>
-                        <hr></hr>
+
+                <div className="SaaS-main-heading">
+                    <h1>The #1 & only Nomad Businesses SaaS Platform</h1>
+                    <h4>No Code Website + Native Apps + Booking Engine + Payment Gateway + Accounting +
+                        Reports + Analytics + HR Support + Customer & Client Management + Marketing and more. </h4>
+                    <span>Everything that your business needs in one single platform which is seamless and easy to use.</span>
+                    <div className="services-header-button-space">
+                        <button className='get-started-main-button'>
+                            Get Started
+                        </button>
                     </div>
-                    <div className="business-grid">
-                        <div className="business-service" key={1}>
-                            <img src={TransactionalWebsite} alt="TransactionalWebsite" />
-                            <span>Transactional Website</span>
-                        </div>
-                        <div className="business-service" key={2}>
-                            <img src={BookingEngine} alt="BookingEngine" />
-                            <span>Booking Engine</span>
-                        </div>
-                        <div className="business-service" key={3}>
-                            <img src={MeetingRoomEngine} alt="MeetingRoomEngine" />
-                            <span>Meeting Room Engine</span>
-                        </div>
-                        <div className="business-service" key={4}>
-                            <img src={PaymentGateway} alt="PaymentGateway" />
-                            <span>Payment Gateway</span>
-                        </div>
-                        <div className="business-service" key={5}>
-                            <img src={Blog} alt="Blog" />
-                            <span>Blog</span>
-                        </div>
-                        <div className="business-service" key={6}>
-                            <img src={Hiring} alt="Hiring" />
-                            <span>Career/Hiring</span>
-                        </div>
-                        {/* End of first 6 divs */}
+                </div>
+                <hr className="hrStyling zeroHeight" style={{ width: '100%' }} />
 
-                        <div className="business-service" key={7}>
-                            <img src={GoogleMyBusiness} alt="GoogleMyBusiness" />
-                            <span>Google My Business</span>
+                <div className="SaaS-featured-master">
+                    <h1>Real-time operations</h1>
+                    <div className="SaaS-featured-grid">
+                        <div className="SaaS-featured-grid-left">
+                            <span>
+                                Manage your business in real-time across
+                                all business verticals.
+                            </span><br/><br/>
+                            <span>
+                                Operate your business in real-time with
+                                the micro most details of inventory,
+                                bookings, accounts, analytics, leads,
+                                sales, reports, tasks, logs, menu,
+                                complaints, requests etc.
+                            </span>
                         </div>
-                        <div className="business-service" key={8}>
-                            <img src={SearchEngineOptimisation} alt="SearchEngineOptimisation" />
-                            <span>Search Engine Optimisation</span>
-                        </div>
-                        <div className="business-service" key={9}>
-                            <img src={SearchEngineMarketing} alt="SearchEngineMarketing" />
-                            <span>Search Engine Marketing</span>
-                        </div>
-                        <div className="business-service" key={10}>
-                            <img src={DataMarketing} alt="DataMarketing" />
-                            <span>Data Marketing</span>
-                        </div>
-                        <div className="business-service" key={11}>
-                            <img src={EmailMarketing} alt="EmailMarketing" />
-                            <span>Email Marketing</span>
-                        </div>
-                        <div className="business-service" key={12}>
-                            <img src={LeadGeneration} alt="LeadGeneration" />
-                            <span>Lead Generation</span>
-                        </div>
-                        {/* End of last 6 divs */}
-                        {/* 1st to 6th divs */}
-                        <div className="business-service" key={13}>
-                            <img src={EmployeeTaskManagement} alt="EmployeeTaskManagement" />
-                            <span>Employee Task Management</span>
-                        </div>
-                        <div className="business-service" key={14}>
-                            <img src={EmployeeAttendance} alt="EmployeeAttendance" />
-                            <span>Employee Attendance</span>
-                        </div>
-                        <div className="business-service" key={15}>
-                            <img src={CompanyCompliances} alt="CompanyCompliances" />
-                            <span>Company Compliances</span>
-                        </div>
-                        <div className="business-service" key={16}>
-                            <img src={CustomerAgreements} alt="CustomerAgreements" />
-                            <span>Customer Agreements</span>
-                        </div>
-                        <div className="business-service" key={17}>
-                            <img src={VendorAgreements} alt="VendorAgreements" />
-                            <span>Vendor Agreements</span>
-                        </div>
-                        <div className="business-service" key={18}>
-                            <img src={EmployeeAgreements} alt="EmployeeAgreements" />
-                            <span>Employee Agreements</span>
-                        </div>
-                        {/* End of 1st 6 divs */}
-
-                        {/* 7th to 12th divs */}
-                        <div className="business-service" key={19}>
-                            <img src={CustomerInvoicing} alt="CustomerInvoicing" />
-                            <span>Customer Invoicing</span>
-                        </div>
-                        <div className="business-service" key={20}>
-                            <img src={AccountingTools} alt="AccountingTools" />
-                            <span>Accounting Tools</span>
-                        </div>
-                        <div className="business-service" key={21}>
-                            <img src={BusinessProjections} alt="BusinessProjections" />
-                            <span>Business Projections</span>
-                        </div>
-                        <div className="business-service" key={22}>
-                            <img src={BudgetManagement} alt="BudgetManagement" />
-                            <span>Budget Management</span>
-                        </div>
-                        <div className="business-service" key={23}>
-                            <img src={CashflowManagement} alt="CashflowManagement" />
-                            <span>Cashflow Management</span>
-                        </div>
-                        <div className="business-service" key={24}>
-                            <img src={AnnualFiling} alt="AnnualFiling" />
-                            <span>Annual Filing</span>
-                        </div>
-                        {/* End of 7th 6 divs */}
-
-                        <div className="business-service" key={25}>
-                            <img src={HRSupport} alt="HRSupport" />
-                            <span>HR Support</span>
-                        </div>
-                        <div className="business-service" key={26}>
-                            <img src={EmployeePerformance} alt="EmployeePerformance" />
-                            <span>Employee Performance</span>
-                        </div>
-                        <div className="business-service" key={27}>
-                            <img src={EmployeeAppraisals} alt="EmployeeAppraisals" />
-                            <span>Employee Appraisals</span>
-                        </div>
-                        <div className="business-service" key={28}>
-                            <img src={ReadyProcesses} alt="ReadyProcesses" />
-                            <span>Ready Processes</span>
-                        </div>
-                        <div className="business-service" key={29}>
-                            <img src={ReadyPolicies} alt="ReadyPolicies" />
-                            <span>Ready Policies</span>
-                        </div>
-                        <div className="business-service" key={30}>
-                            <img src={MeetingRoomManagement} alt="MeetingRoomManagement" />
-                            <span>Meeting Room Management</span>
-                        </div>
-
-                        {/* End of 8th 6 divs */}
-
-                        <div className="business-service" key={31}>
-                            <img src={BirthdayManagement} alt="BirthdayManagement" />
-                            <span>Birthday Management</span>
-                        </div>
-                        <div className="business-service" key={32}>
-                            <img src={CustomerService} alt="CustomerService" />
-                            <span>Customer Service</span>
-                        </div>
-                        <div className="business-service" key={33}>
-                            <img src={Chat} alt="Chat" />
-                            <span>Chat</span>
-                        </div>
-                        <div className="business-service" key={34}>
-                            <img src={Trainings} alt="Trainings" />
-                            <span>Trainings</span>
-                        </div>
-                        <div className="business-service" key={35}>
-                            <img src={CustomisedSupport} alt="CustomisedSupport" />
-                            <span>Customised Support</span>
-                        </div>
-                        <div className="business-service" key={36}>
-                            <img src={BusinessAnalytics} alt="BusinessAnalytics" />
-                            <span>Business Analytics</span>
-                        </div>
-
-                        {/* End of 9th 6 divs */}
-
-                        <div className="business-service" key={37}>
-                            <img src={CustomerAnalytics} alt="CustomerAnalytics" />
-                            <span>Customer Analytics</span>
-                        </div>
-                        <div className="business-service" key={38}>
-                            <img src={EmployeeAnalytics} alt="EmployeeAnalytics" />
-                            <span>Employee Analytics</span>
-                        </div>
-                        <div className="business-service" key={39}>
-                            <img src={CustomerReports} alt="CustomerReports" />
-                            <span>Customer Reports</span>
-                        </div>
-                        <div className="business-service" key={40}>
-                            <img src={EmployeeReports} alt="EmployeeReports" />
-                            <span>Employee Reports</span>
-                        </div>
-                        <div className="business-service" key={41}>
-                            <img src={FinancialReports} alt="FinancialReports" />
-                            <span>Financial Reports</span>
+                        <div className="SaaS-featured-grid-right">
+                            <img src={ServiceGridImage} alt="ServiceGridImage" />
                         </div>
                     </div>
                 </div>
-                <div className="direct-customers">
-                    <div style={{ width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>
-                        <h1>FOR DIRECT CUSTOMERS</h1>
-                        <hr></hr>
 
+                <hr className="hrStyling zeroHeight" style={{ width: '100%' }} />
+
+                <div className="SaaS-grid">
+                    <div className="SaaS-grid-heading">
+                        <h2>Available SaaS & Automation Solutions</h2>
+                        <span>We'll keep adding as you discover gaps and issues in your business!
+                        </span>
                     </div>
-                    <div className="direct-customers-grid">
-                        <div className="direct-customers-service" key={42}>
-                            <img src={GlobalNomadship} alt="GlobalNomadship" />
-                            <span>Global Nomadship</span>
+                    <div className="businesses" style={{ paddingTop: '4rem' }}>
+                        <div style={{ display: 'flex', alignItems: 'start', justifyContent: 'start', flexDirection: 'column' }}>
+                            <h1>Frontend</h1>
                         </div>
-                        <div className="direct-customers-service" key={43}>
-                            <img src={CentralNomadAccount} alt="CentralNomadAccount" />
-                            <span>Central Nomad Account</span>
-                        </div>
-                        <div className="direct-customers-service" key={44}>
-                            <img src={RemoteWorkingJobs} alt="RemoteWorkingJobs" />
-                            <span>Remote Working Jobs</span>
-                        </div>
-                        <div className="direct-customers-service" key={45}>
-                            <img src={PrivateLivingSpace} alt="PrivateLivingSpace" />
-                            <span>Private Living Space</span>
-                        </div>
-                        <div className="direct-customers-service" key={46}>
-                            <img src={CoWorkingSpace} alt="CoWorkingSpace" />
-                            <span>Co-Working Space</span>
-                        </div>
-                        <div className="direct-customers-service" key={47}>
-                            <img src={FurnishedSpaces} alt="FurnishedSpaces" />
-                            <span>Furnished Spaces</span>
-                        </div>
-                        {/* End of first 6 divs */}
+                        <div className="business-grid">
+                            <div className="business-service" key={1}>
+                                <img src={TransactionalWebsite} alt="TransactionalWebsite" />
+                                <span>Website</span>
+                            </div>
+                            <div className="business-service" key={2}>
+                                <img src={BookingEngine} alt="BookingEngine" />
+                                <span>Bookings</span>
+                            </div>
+                            <div className="business-service" key={3}>
+                                <img src={MeetingRoomEngine} alt="MeetingRoomEngine" />
+                                <span>Mobile Site</span>
+                            </div>
+                            <div className="business-service" key={4}>
+                                <img src={PaymentGateway} alt="PaymentGateway" />
+                                <span>iOS App</span>
+                            </div>
+                            <div className="business-service" key={5}>
+                                <img src={Blog} alt="Blog" />
+                                <span>Android App</span>
+                            </div>
+                            <div className="business-service" key={6}>
+                                <img src={Hiring} alt="Hiring" />
+                                <span>Payment Gateway</span>
+                            </div>
+                            {/* End of first 6 divs */}
 
-                        <div className="direct-customers-service" key={48}>
-                            <img src={Internet} alt="Internet" />
-                            <span>Internet</span>
-                        </div>
-                        <div className="direct-customers-service" key={49}>
-                            <img src={MeetingRooms} alt="MeetingRooms" />
-                            <span>Meeting Rooms</span>
-                        </div>
-                        <div className="direct-customers-service" key={50}>
-                            <img src={BoardRooms} alt="BoardRooms" />
-                            <span>Board Rooms</span>
-                        </div>
-                        <div className="direct-customers-service" key={51}>
-                            <img src={TrainingRooms} alt="TrainingRooms" />
-                            <span>Training Rooms</span>
-                        </div>
-                        <div className="direct-customers-service" key={52}>
-                            <img src={Community} alt="Community" />
-                            <span>Community</span>
-                        </div>
-                        <div className="direct-customers-service" key={53}>
-                            <img src={Events} alt="Events" />
-                            <span>Events</span>
-                        </div>
-                        {/* End of second 6 divs */}
+                            <div className="business-service" key={7}>
+                                <img src={GoogleMyBusiness} alt="GoogleMyBusiness" />
+                                <span>Customer Profile</span>
+                            </div>
+                            <div className="business-service" key={8}>
+                                <img src={SearchEngineOptimisation} alt="SearchEngineOptimisation" />
+                                <span>Notifications</span>
+                            </div>
+                            <div className="business-service" key={9}>
+                                <img src={SearchEngineMarketing} alt="SearchEngineMarketing" />
+                                <span>Chat</span>
+                            </div>
+                            <div className="business-service" key={10}>
+                                <img src={DataMarketing} alt="DataMarketing" />
+                                <span>Tickets</span>
+                            </div>
+                            <div className="business-service" key={11}>
+                                <img src={EmailMarketing} alt="EmailMarketing" />
+                                <span>Events</span>
+                            </div>
+                            <div className="business-service" key={12}>
+                                <img src={LeadGeneration} alt="LeadGeneration" />
+                                <span>Customer Service</span>
+                            </div>
+                            {/* End of last 6 divs */}
 
-                        <div className="direct-customers-service" key={54}>
-                            <img src={Ticketing} alt="Ticketing" />
-                            <span>Ticketing</span>
-                        </div>
-                        <div className="direct-customers-service" key={55}>
-                            <img src={Visa} alt="Visa" />
-                            <span>Visa</span>
-                        </div>
-                        <div className="direct-customers-service" key={56}>
-                            <img src={PersonalisedAssist} alt="PersonalisedAssist" />
-                            <span>Personalised Assist</span>
-                        </div>
-                        <div className="direct-customers-service" key={57}>
-                            <img src={BestPricing} alt="BestPricing" />
-                            <span>Best Pricing</span>
-                        </div>
-                        <div className="direct-customers-service" key={58}>
-                            <img src={MultiLocationOptions} alt="MultiLocationOptions" />
-                            <span>Multi Location Options</span>
-                        </div>
-                        <div className="direct-customers-service" key={59}>
-                            <img src={PassionProjects} alt="PassionProjects" />
-                            <span>Passion Projects</span>
+                            {/* Till here */}
                         </div>
                     </div>
+                    <div className="businesses">
+                        <div style={{ display: 'flex', alignItems: 'start', justifyContent: 'start', flexDirection: 'column' }}>
+                            <h1>FINANCE & ACCOUNTING</h1>
+                        </div>
+                        <div className="business-grid">
+                            <div className="business-service" key={1}>
+                                <img src={TransactionalWebsite} alt="TransactionalWebsite" />
+                                <span>Invoicing</span>
+                            </div>
+                            <div className="business-service" key={2}>
+                                <img src={BookingEngine} alt="BookingEngine" />
+                                <span>Cashflow</span>
+                            </div>
+                            <div className="business-service" key={3}>
+                                <img src={MeetingRoomEngine} alt="MeetingRoomEngine" />
+                                <span>Projections</span>
+                            </div>
+                            <div className="business-service" key={4}>
+                                <img src={PaymentGateway} alt="PaymentGateway" />
+                                <span>Budget</span>
+                            </div>
+                            <div className="business-service" key={5}>
+                                <img src={Blog} alt="Blog" />
+                                <span>Working Capital</span>
+                            </div>
+                            <div className="business-service" key={6}>
+                                <img src={Hiring} alt="Hiring" />
+                                <span>Financial Reports</span>
+                            </div>
+                            {/* End of first 6 divs */}
 
+                            <div className="business-service" key={7}>
+                                <img src={GoogleMyBusiness} alt="GoogleMyBusiness" />
+                                <span>Collections</span>
+                            </div>
+                            <div className="business-service" key={8}>
+                                <img src={SearchEngineOptimisation} alt="SearchEngineOptimisation" />
+                                <span>Notifications</span>
+                            </div>
+                            <div className="business-service" key={9}>
+                                <img src={SearchEngineMarketing} alt="SearchEngineMarketing" />
+                                <span>Follow ups</span>
+                            </div>
+                            <div className="business-service" key={10}>
+                                <img src={DataMarketing} alt="DataMarketing" />
+                                <span>Taxes</span>
+                            </div>
+                            <div className="business-service" key={11}>
+                                <img src={EmailMarketing} alt="EmailMarketing" />
+                                <span>Compliances</span>
+                            </div>
+                            <div className="business-service" key={12}>
+                                <img src={LeadGeneration} alt="LeadGeneration" />
+                                <span>Analytics</span>
+                            </div>
+                            {/* End of last 6 divs */}
+
+                            {/* Till here */}
+                        </div>
+                    </div>
+
+                    <div className="businesses">
+                        <div style={{ display: 'flex', alignItems: 'start', justifyContent: 'start', flexDirection: 'column' }}>
+                            <h1>Sales & Marketing</h1>
+                        </div>
+                        <div className="business-grid">
+                            <div className="business-service" key={1}>
+                                <img src={TransactionalWebsite} alt="TransactionalWebsite" />
+                                <span>Automated SEO</span>
+                            </div>
+                            <div className="business-service" key={2}>
+                                <img src={BookingEngine} alt="BookingEngine" />
+                                <span>Personalised SEM</span>
+                            </div>
+                            <div className="business-service" key={3}>
+                                <img src={MeetingRoomEngine} alt="MeetingRoomEngine" />
+                                <span>Ad Networks</span>
+                            </div>
+                            <div className="business-service" key={4}>
+                                <img src={PaymentGateway} alt="PaymentGateway" />
+                                <span>Lead Generation</span>
+                            </div>
+                            <div className="business-service" key={5}>
+                                <img src={Blog} alt="Blog" />
+                                <span>Social Media</span>
+                            </div>
+                            <div className="business-service" key={6}>
+                                <img src={Hiring} alt="Hiring" />
+                                <span>Email Marketing</span>
+                            </div>
+                            {/* End of first 6 divs */}
+
+                            <div className="business-service" key={7}>
+                                <img src={GoogleMyBusiness} alt="GoogleMyBusiness" />
+                                <span>SMS Marketing</span>
+                            </div>
+                            <div className="business-service" key={8}>
+                                <img src={SearchEngineOptimisation} alt="SearchEngineOptimisation" />
+                                <span>What's App Integration</span>
+                            </div>
+                            <div className="business-service" key={9}>
+                                <img src={SearchEngineMarketing} alt="SearchEngineMarketing" />
+                                <span>Live Chat</span>
+                            </div>
+                            <div className="business-service" key={10}>
+                                <img src={DataMarketing} alt="DataMarketing" />
+                                <span>Referrals</span>
+                            </div>
+                            <div className="business-service" key={11}>
+                                <img src={EmailMarketing} alt="EmailMarketing" />
+                                <span>Blogs</span>
+                            </div>
+                            <div className="business-service" key={12}>
+                                <img src={LeadGeneration} alt="LeadGeneration" />
+                                <span>Vlogs</span>
+                            </div>
+                            {/* End of last 6 divs */}
+
+                            {/* Till here */}
+                        </div>
+                    </div>
+
+
+                    <div className="businesses">
+                        <div style={{ display: 'flex', alignItems: 'start', justifyContent: 'start', flexDirection: 'column' }}>
+                            <h1>HR Support</h1>
+                        </div>
+                        <div className="business-grid">
+                            <div className="business-service" key={1}>
+                                <img src={TransactionalWebsite} alt="TransactionalWebsite" />
+                                <span>Attendance</span>
+                            </div>
+                            <div className="business-service" key={2}>
+                                <img src={BookingEngine} alt="BookingEngine" />
+                                <span>Payroll</span>
+                            </div>
+                            <div className="business-service" key={3}>
+                                <img src={MeetingRoomEngine} alt="MeetingRoomEngine" />
+                                <span>Payslips</span>
+                            </div>
+                            <div className="business-service" key={4}>
+                                <img src={PaymentGateway} alt="PaymentGateway" />
+                                <span>Leaves</span>
+                            </div>
+                            <div className="business-service" key={5}>
+                                <img src={Blog} alt="Blog" />
+                                <span>Holidays</span>
+                            </div>
+                            <div className="business-service" key={6}>
+                                <img src={Hiring} alt="Hiring" />
+                                <span>SOP's</span>
+                            </div>
+                            {/* End of first 6 divs */}
+
+                            <div className="business-service" key={7}>
+                                <img src={GoogleMyBusiness} alt="GoogleMyBusiness" />
+                                <span>Policies</span>
+                            </div>
+                            <div className="business-service" key={8}>
+                                <img src={SearchEngineOptimisation} alt="SearchEngineOptimisation" />
+                                <span>Task Management</span>
+                            </div>
+                            <div className="business-service" key={9}>
+                                <img src={SearchEngineMarketing} alt="SearchEngineMarketing" />
+                                <span>Performance</span>
+                            </div>
+                            <div className="business-service" key={10}>
+                                <img src={DataMarketing} alt="DataMarketing" />
+                                <span>Appraisals</span>
+                            </div>
+                            <div className="business-service" key={11}>
+                                <img src={EmailMarketing} alt="EmailMarketing" />
+                                <span>Templates</span>
+                            </div>
+                            <div className="business-service" key={11}>
+                                <img src={EmailMarketing} alt="EmailMarketing" />
+                                <span>e-Sign</span>
+                            </div>
+                            {/* End of last div */}
+
+                            {/* Till here */}
+                        </div>
+                    </div>
+
+                    <div className="businesses">
+                        <div style={{ display: 'flex', alignItems: 'start', justifyContent: 'start', flexDirection: 'column' }}>
+                            <h1>Customer Management Services</h1>
+                        </div>
+                        <div className="business-grid">
+                            <div className="business-service" key={1}>
+                                <img src={TransactionalWebsite} alt="TransactionalWebsite" />
+                                <span>Ticket Raising</span>
+                            </div>
+                            <div className="business-service" key={2}>
+                                <img src={BookingEngine} alt="BookingEngine" />
+                                <span>Complaint Logs</span>
+                            </div>
+                            <div className="business-service" key={3}>
+                                <img src={MeetingRoomEngine} alt="MeetingRoomEngine" />
+                                <span>Meetings Rooms</span>
+                            </div>
+                            <div className="business-service" key={4}>
+                                <img src={PaymentGateway} alt="PaymentGateway" />
+                                <span>Café Orders</span>
+                            </div>
+                            <div className="business-service" key={5}>
+                                <img src={Blog} alt="Blog" />
+                                <span>Visitors</span>
+                            </div>
+                            <div className="business-service" key={6}>
+                                <img src={Hiring} alt="Hiring" />
+                                <span>Announcements</span>
+                            </div>
+                            {/* End of first 6 divs */}
+
+                            <div className="business-service" key={7}>
+                                <img src={GoogleMyBusiness} alt="GoogleMyBusiness" />
+                                <span>Feedback</span>
+                            </div>
+                            <div className="business-service" key={8}>
+                                <img src={SearchEngineOptimisation} alt="SearchEngineOptimisation" />
+                                <span>Customer Rating</span>
+                            </div>
+                            <div className="business-service" key={9}>
+                                <img src={SearchEngineMarketing} alt="SearchEngineMarketing" />
+                                <span>Customer Service</span>
+                            </div>
+                            <div className="business-service" key={10}>
+                                <img src={DataMarketing} alt="DataMarketing" />
+                                <span>Auto Responses</span>
+                            </div>
+                            <div className="business-service" key={11}>
+                                <img src={EmailMarketing} alt="EmailMarketing" />
+                                <span>Reports</span>
+                            </div>
+                            <div className="business-service" key={12}>
+                                <img src={LeadGeneration} alt="LeadGeneration" />
+                                <span>Analytics</span>
+                            </div>
+                            {/* End of last 6 divs */}
+
+                            {/* Till here */}
+                        </div>
+                    </div>
+
+                    <div className="businesses">
+                        <div style={{ display: 'flex', alignItems: 'start', justifyContent: 'start', flexDirection: 'column' }}>
+                            <h1>Reports & Analytics</h1>
+                        </div>
+                        <div className="business-grid">
+                            <div className="business-service" key={1}>
+                                <img src={TransactionalWebsite} alt="TransactionalWebsite" />
+                                <span>Company Dashboard</span>
+                            </div>
+                            <div className="business-service" key={2}>
+                                <img src={BookingEngine} alt="BookingEngine" />
+                                <span>Customer Trends</span>
+                            </div>
+                            <div className="business-service" key={3}>
+                                <img src={MeetingRoomEngine} alt="MeetingRoomEngine" />
+                                <span>Business Trends</span>
+                            </div>
+                            <div className="business-service" key={4}>
+                                <img src={PaymentGateway} alt="PaymentGateway" />
+                                <span>Vendor Playouts</span>
+                            </div>
+                            <div className="business-service" key={5}>
+                                <img src={Blog} alt="Blog" />
+                                <span>Cashflow</span>
+                            </div>
+                            <div className="business-service" key={6}>
+                                <img src={Hiring} alt="Hiring" />
+                                <span>Key Notifications</span>
+                            </div>
+                            {/* End of first 6 divs */}
+
+                            <div className="business-service" key={7}>
+                                <img src={GoogleMyBusiness} alt="GoogleMyBusiness" />
+                                <span>Full Data Analysis</span>
+                            </div>
+                            <div className="business-service" key={8}>
+                                <img src={SearchEngineOptimisation} alt="SearchEngineOptimisation" />
+                                <span>Customer Reports</span>
+                            </div>
+                            <div className="business-service" key={9}>
+                                <img src={SearchEngineMarketing} alt="SearchEngineMarketing" />
+                                <span>Employee Reports</span>
+                            </div>
+                            <div className="business-service" key={10}>
+                                <img src={DataMarketing} alt="DataMarketing" />
+                                <span>Milestone Reports</span>
+                            </div>
+                            <div className="business-service" key={11}>
+                                <img src={EmailMarketing} alt="EmailMarketing" />
+                                <span>Taxes Reports</span>
+                            </div>
+                            <div className="business-service" key={12}>
+                                <img src={LeadGeneration} alt="LeadGeneration" />
+                                <span>Customised Reports</span>
+                            </div>
+                            {/* End of last 6 divs */}
+
+                            {/* Till here */}
+                        </div>
+                    </div>
                 </div>
-                <div className="financing">
-                    <div style={{ width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>
-                        <h1>FOR FINANCING</h1>
-                        <hr></hr>
 
-                    </div>
-                    <div className="financing-grid">
-                       <div className="financing-service" key={60}>
-                        <img src={VentureCapital} alt="VentureCapital" />
-                        <span>Venture Capital</span> 
-                       </div>
-                       <div className="financing-service" key={61}>
-                       <img src={VentureDebt} alt="VentureDebt" />
-                       <span>Venture Debt</span> 
-                       </div>
-                       <div className="financing-service" key={62}>
-                       <img src={WorkingCapital} alt="WorkingCapital" />
-                       <span>Working Capital</span> 
-                       </div>
+                <div className="SaaS-last-banner-section">
+                    <div className="SaaS-last-banner">
+                        <h2>Unleash<br /> your growth potential</h2>
+                        <div className="services-header-button-space">
+                            <button onClick={()=>{
+                                navigate('/register')
+                                window.scrollTo({top:0, behavior:'smooth'})
+                            }} className='get-started-main-button'>
+                                Get Started
+                            </button>
+                        </div>
                     </div>
                 </div>
+
             </div>
 
 
