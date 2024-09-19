@@ -130,6 +130,7 @@ const Homepage = () => {
 
   // mobile screen for globe responsiveness
   const ismobile = window.innerWidth < 769;
+  const istab = window.innerWidth < 1025;
 
   return (
     <div className="master-container">
@@ -173,7 +174,7 @@ const Homepage = () => {
             <Canvas
               camera={{
                 position: [0, 0, ismobile ? 15 : 25],
-                fov: ismobile ? 50 : 40,
+                fov: ismobile ? 50 : istab ? 60 : 40,
               }}>
               <ambientLight intensity={0.5} />
               <pointLight position={[10, 10, 10]} />
