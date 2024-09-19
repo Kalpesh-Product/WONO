@@ -23,7 +23,7 @@ const Capital = () => {
                         <img src='https://cdn.sanity.io/images/q8bht0jl/production/9d6463d6289e7fc2c3b2a276459c70c8e84a6134-864x1151.jpg?auto=format&fit=max&q=100&w=432' alt='capital-img-1'>
                         </img>
                     </div>
-                    <div className='plus-icon'>+</div>
+                    <div className='plus-icon'></div>
                     <p><b>Investor relations reimagined.</b><span> Leverage software to drive meaningful,actionable engagement.</span></p>
                     <hr className='line-seperation-cards-capitalpage'></hr>
                 </div>

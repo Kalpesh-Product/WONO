@@ -7,11 +7,7 @@ import { jwtDecode } from "jwt-decode";
 import { UserContext } from "../components/UserContext";
 import Modals from "../components/Modals";
 import axios from "axios";
-import Carousels from "../components/Carousels";
-import Batman from "../assets/batman.png";
-import Spiderman from "../assets/spiderman.png";
-import Slider from "react-slick";
-import BookingEngine from "../assets/WONO_images/img/booking_engine_login.png";
+import { Container, Box, Grid, TextField, Button } from '@mui/material';
 
 import LoginWithGoogleImage from "../assets/WONO_images/img/login_images/google-icon2.png";
 import LoginWithFacebookImage from "../assets/WONO_images/img/login_images/login-with-facebook-icon.png";
@@ -118,39 +114,66 @@ const LoginPage = () => {
         </p>
         <div className="loginDividingContainer">
           <div className="loginLeftContainer">
-            <div className="loginFormContainer">
-              <form onSubmit={handleSubmit}>
-                <div className="inputAndLabelContainer d-flex flex-column justify-content-center">
-                  <label htmlFor="username">Email</label>
-                  <input
-                    type="email"
-                    className="no-border"
-                    value={username}
-                    onChange={handleUsernameChange}
-                  />
-                  <hr className="mb-0 mt-1" />
-                  {userNameError && (
-                    <div className="text-danger">{userNameError}</div>
-                  )}
-                </div>
-                <div className="inputAndLabelContainer d-flex flex-column justify-content-center pt-2">
-                  <label htmlFor="password">Password</label>
-                  <input
-                    type="password"
-                    className="no-border"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                  />
-                  <hr className="mb-0 mt-1" />
-                </div>
-                <p className="m-0 py-4">Forgot Password?</p>
-                <div className="centerInPhone">
-                  <button type="submit" className="loginButtonStyling">
-                    Login
-                  </button>
-                </div>
-              </form>
-            </div>
+            <Container maxWidth="sm" style={{paddingTop:'3rem'}}>
+              <Box component="form" sx={{ flexGrow: 1 }} onSubmit={handleSubmit} noValidate autoComplete="off">
+                <Grid container spacing={2}>
+                  <Grid item xs={12}>
+                    <TextField
+                      label="Email"
+                      variant="standard"
+                      type="email"
+                      value={username}
+                      onChange={handleUsernameChange}
+                      error={!!userNameError}
+                      helperText={userNameError}
+                      required
+                      fullWidth
+                      InputProps={{
+                        disableUnderline: false, // Keep underline (bottom border) enabled
+                        sx: {
+                          borderBottom: '1px solid', // Customize the bottom border style if needed
+                        },
+                      }}
+                    />
+                  </Grid>
+
+                  <Grid item xs={12}>
+                    <TextField
+                      label="Password"
+                      variant="standard"
+                      type="password"
+                      value={password}
+                      onChange={(e) => setPassword(e.target.value)}
+                      required
+                      fullWidth
+                      InputProps={{
+                        disableUnderline: false, // Keep underline (bottom border) enabled
+                        sx: {
+                          borderBottom: '1px solid gray', // Customize the bottom border style if needed
+                        },
+                      }}
+                    />
+                  </Grid>
+
+              
+
+                  <Grid style={{paddingTop:'0'}} p={0} item xs={12}>
+                    <Box p={0} mt={2}>
+                      <a href="#" style={{ textDecoration: 'none' }}>Forgot Password?</a>
+                    </Box>
+                  </Grid>
+
+                  <Grid item xs={12}>
+                    <div className="centerInPhone">
+                      <button type="submit" className="loginButtonStyling">
+                        Login
+                      </button>
+                    </div>
+
+                  </Grid>
+                </Grid>
+              </Box>
+            </Container>
           </div>
           <div className="fullHeight LoginMiddleContainer">
             <div className="vertical-line lineSideMargin">
@@ -170,19 +193,19 @@ const LoginPage = () => {
           </div>
           <div className="loginRightContainer">
             <div className="loginWithSection d-flex flex-column justify-content-center align-items-center">
-            <div className="loginWithSection d-flex flex-column justify-content-center align-items-center">
-              <div className="LoginWithGoogleContainer loginWithBox loginWithGoogleBox d-flex justify-content-between align-items-center centerElement w-100">
-                <div className="loginWithIconBox loginWithGoogleIconBox centerElement">
-                  <img
-                    src={LoginWithGoogleImage}
-                    alt="Google Icon"
-                    className="imageDimensions"
-                  />
+              <div className="loginWithSection d-flex flex-column justify-content-center align-items-center">
+                <div className="LoginWithGoogleContainer loginWithBox loginWithGoogleBox d-flex justify-content-between align-items-center centerElement w-100">
+                  <div className="loginWithIconBox loginWithGoogleIconBox centerElement">
+                    <img
+                      src={LoginWithGoogleImage}
+                      alt="Google Icon"
+                      className="imageDimensions"
+                    />
+                  </div>
+                  <div className="LoginWithGoogleText LoginWithText centerElement w-100">
+                    <div>Continue with Google</div>
+                  </div>
                 </div>
-                <div className="LoginWithGoogleText LoginWithText centerElement w-100">
-                  <div>Continue with Google</div>
-                </div>
-              </div>
               </div>
               <div className="LoginWithFacebookContainer loginWithBox loginWithFacebookBox d-flex justify-content-between align-items-center centerElement">
                 <div className="loginWithIconBox loginWithFacebookIconBox centerElement">
@@ -194,6 +217,10 @@ const LoginPage = () => {
                 </div>
                 <div className="LoginWithFacebookText LoginWithText centerElement w-100">
                   <div>Continue with Facebook</div>
+                </div>
+
+                <div className="login-empty-padding">
+                  
                 </div>
               </div>
               {/*  */}

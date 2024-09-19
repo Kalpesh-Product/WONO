@@ -130,6 +130,7 @@ const Homepage = () => {
 
   // mobile screen for globe responsiveness
   const ismobile = window.innerWidth < 769;
+  const isTablet = window.innerWidth < 1025;
 
   return (
     <div className="master-container">
@@ -173,7 +174,7 @@ const Homepage = () => {
             <Canvas
               camera={{
                 position: [0, 0, ismobile ? 15 : 25],
-                fov: ismobile ? 50 : 40,
+                fov: ismobile ? 40 : isTablet ? 60 : 30,
               }}>
               <ambientLight intensity={0.5} />
               <pointLight position={[10, 10, 10]} />
@@ -212,7 +213,7 @@ const Homepage = () => {
           <FourCardsComponents />
         </div>
 
-        <div className="partners-section body-partners-master  ">
+        <div className="partners-section ">
           {/* <div className="mt-5 container"> */}
           <div className="m-0 container  w-100 ">
             {/* First div (1/2) */}
@@ -294,8 +295,6 @@ const Homepage = () => {
             </div>
             {/* </div> */}
           </div>
-          <br />
-          <br />
         </div>
 
         {/* <div
@@ -400,16 +399,12 @@ const Homepage = () => {
         </div>
 
         <div className="testimonial-section  body-partners-master">
-          <div className=" pt-1">
-            <br />
-            <br />
-            <br />
+          <div className=" pt-5 pb-5">
             {/* <div className="container border-top border-dark border-2"> */}
             <div className="container p-0 ">
               <div className="row ">
                 <div className="col-lg-7 d-flex flex-column justify-content-between p-0 ms-0">
                   <div className=" ">
-                    <br />
                     {/* <h4 className="bg-danger testimonial-right-spacing"> */}
                     <h3 className="testimonial-right-spacing">
                       “We went from managing 3,000 sq ft to 50,000+ sq ft in the
@@ -433,7 +428,7 @@ const Homepage = () => {
                   </div>
                 </div>
                 {/* <div className="col-lg-5 mt-3 bg-warning d-flex flex-row justify-content-end"> */}
-                <div className="col-lg-5 mt-3  d-flex flex-row justify-content-center px-0">
+                <div className="col-lg-5 mt-3 custom-image-biznest-container d-flex flex-row justify-content-center px-0">
                   <img
                     src={BiznestTestimonial}
                     alt=""
@@ -442,13 +437,10 @@ const Homepage = () => {
                 </div>
               </div>
             </div>
-            <br />
-            <br />
-            <br />
           </div>
         </div>
 
-        <div className="last-section body-partners-master w-100 ">
+        <div className="last-section  w-100 ">
           <div className="pt-5 customMargin pb-5">
             <div className="grow-your-business-color p-3">
               <h2>

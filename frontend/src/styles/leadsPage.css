@@ -288,6 +288,9 @@
         .checklistFont {
             font-size: 1rem;
         }
+        .leads-databseImage{
+            display: none;
+        }
     }
 
     /* MOBILE VIEW */

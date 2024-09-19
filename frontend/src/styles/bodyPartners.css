@@ -29,7 +29,7 @@
 }
 
 .grow-your-business-color h2 {
-    font-size: 42px;
+    font-size: 5.3rem;
 }
 
 .grow-your-business-color p {
@@ -58,7 +58,7 @@
     align-items: start;
     justify-content: flex-start;
     flex-direction: column;
-    padding: 4rem 4.7rem 0rem 6.8rem;
+    padding: 4rem 4.7rem 4rem 6.8rem;
     width: 100%;
 }
 
@@ -69,6 +69,39 @@
 } */
 
 /* For mobile screens (e.g., max-width 767px) */
+
+
+@media (max-width:1024px) {
+    .customMargin_top {
+        display: flex;
+        align-items: start;
+        justify-content: flex-start;
+        flex-direction: column;
+        padding: 2rem 3rem;
+        width: 100%;
+    }
+    .body-partners-master {
+        background-color: rgb(255, 255, 255);
+        padding-left: 4.5rem;
+    }
+    .grow-your-business-color h2 {
+        font-size: 3.3rem;
+    }
+}
+
+@media (min-width: 1024px) {
+
+
+    .custom-justify {
+        justify-content: flex-start;
+    }
+
+    .testimonial-right-spacing {
+        padding-right: 5rem;
+    }
+
+}
+
 @media (max-width: 768px) {
     .customMargin {
         padding-left: 1rem;
@@ -84,10 +117,13 @@
         align-items: start;
         justify-content: flex-start;
         flex-direction: column;
-        padding: 1rem 1rem 0rem 1rem;
+        padding: 2rem 1rem 2rem 1rem;
         width: 100%;
     }
-
+    .body-partners-master {
+        background-color: rgb(255, 255, 255);
+        padding-left: 2rem;
+    }
 
 }
 
@@ -101,8 +137,10 @@
     .testimonial-right-spacing {
         /* padding-right: 100px; */
     }
+ 
 
 }
+
 
 .get-started-submit-button {
     width: 100%;
@@ -133,13 +171,11 @@
 }
 
 .custom-image-biznest {
-    /* width: 100%; */
-    /* Image will take up the full width of its container */
-    /* height: auto; */
     min-height: 400px;
-    /* Maintains the image's aspect ratio */
     border-radius: 10px;
 }
+
+
 
 /* .grow-your-business-color {
     background-color: #0093E9;
@@ -176,6 +212,16 @@
         /* height: auto; */
         min-height: 400px;
         /* Maintains the image's aspect ratio */
+        border-radius: 10px;
+    }
+}
+
+@media (max-width:1024px) {
+    .custom-image-biznest-container{
+        margin : 0 0 2rem 0 !important
+    }
+    .custom-image-biznest {
+        min-height: 400px;
         border-radius: 10px;
     }
 }

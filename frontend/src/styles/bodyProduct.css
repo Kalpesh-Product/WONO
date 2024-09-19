@@ -251,6 +251,69 @@
     margin: 0 16px;
     width: 20%;
 }
+@media (max-width:1024px) {
+    .product-page {
+        background-color: black;
+        color: white;
+        padding: 0 3rem;
+    }
+    .product-page-grid {
+        display: grid;
+        grid-template-columns: 1fr 70%;
+        column-gap: 1rem;
+    }
+    .product-page-features span {
+        font-size: 1.1rem;
+    }
+    .product-page-image-container {
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+        padding-bottom: 11rem;
+    }
+    .product-page-perks {
+        padding: 4rem;
+    }
+    .product-page-perks-grid {
+        display: grid;
+        grid-template-columns: 40% 60%;
+        column-gap: 1rem;
+    }
+    .product-page-perks-grid-1 span {
+        font-weight: bold;
+        font-size: 1.8rem;
+    }
+    .product-page-perks-description h4 {
+        margin-bottom: 1rem;
+        font-size: 1rem;
+        font-weight: bold;
+        line-break: strict;
+    }
+    .product-page-perks-description span {
+        font-size: 0.8rem;
+        letter-spacing: 1px;
+    }
+    .product-page-reccomendations {
+        padding: 4rem;
+    }
+    .product-page-perks-grid-2-item-layout i {
+        height: 100%;
+        padding: 0.1rem 0rem 0 0rem;
+    }
+    .product-page-build {
+        padding: 4rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .product-page-build span {
+        font-size: 2.5rem;
+        padding: 0rem 0 2rem 0;
+        text-align: center;
+        font-weight: bold;
+    }
+}
 
 @media (max-width:768px) {
     .product-page-section {
@@ -269,7 +332,7 @@
     .product-page {
         background-color: black;
         color: white;
-        padding: 2rem;
+        padding: 1rem;
     }
 
     .product-page * {
@@ -291,7 +354,9 @@
         text-transform: uppercase;
         margin-bottom: 2rem;
         font-weight: bold;
-        text-align: center;
+        text-align: start;
+        padding-left: 1.5rem;
+
     }
 
     .product-page-feature {
@@ -318,6 +383,7 @@
     .product-page-image-container {
         width: 100%;
         overflow: hidden;
+        padding: 0;
     }
 
     .product-page-image-container img {
@@ -383,7 +449,7 @@
 
     .product-page-perks-grid-1 span {
         font-weight: bold;
-        font-size: 2rem;
+        font-size: 1.7rem;
         padding-bottom: 2rem;
     }
 
@@ -472,7 +538,7 @@
 
     .product-page-build span {
         font-size: 2rem;
-        padding: 0rem 2rem 2rem 2rem;
+        padding: 0rem 0rem 2rem 0rem;
         text-align: center;
         font-weight: bold;
     }

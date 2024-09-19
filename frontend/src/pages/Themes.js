@@ -12,6 +12,7 @@ import CoWorkingImage_3 from "../assets/WONO_images/img/website-builder/new-layo
 import Featured from "../assets/WONO_images/img/website-builder/new-layout/featured/featured-1.png";
 import Boutique from "../assets/WONO_images/img/website-builder/new-layout/boutique.png";
 import CoWorkingMewo from "../assets/WONO_images/img/website-builder/new-layout/co-working-mewo.png";
+import BizNestMockup from "../assets/WONO_images/img/website-builder/new-layout/Macbook-mockup.png";
 import Hostels from "../assets/WONO_images/img/website-builder/new-layout/hostels.png";
 import { useNavigate } from "react-router-dom";
 
@@ -33,7 +34,7 @@ const Themes = () => {
 
   const themeWebsiteGridData = [
     {
-      title: "Faster Loading",
+      title: "Faster loading",
       description: "Wix is designed for performance so your site loads faster",
     },
     {
@@ -55,7 +56,13 @@ const Themes = () => {
       description:
         "Make your own website inclusive with built-in accessibility tools.",
     },
+    {
+      title: "Easy Customization",
+      description:
+        "Personalize your website effortlessly by using  customizable templates.",
+    },
   ];
+  
 
   return (
     <div>
@@ -122,7 +129,7 @@ const Themes = () => {
               </div>
 
               <div className="themePage-featured-grid-2">
-                <img src={Featured} alt="coWorking" />
+                <img src={BizNestMockup} alt="coWorking" />
               </div>
             </div>
           </div>
@@ -171,7 +178,7 @@ const Themes = () => {
                     Watch tutorials and read detailed articles in Wono help
                     center
                   </p>
-                  <span>Go to Help Center →</span>
+                  <span>Go to FAQ →</span>
                 </div>
                 <div className="themePage-website-support-grid-1">
                   <h2>
@@ -181,7 +188,10 @@ const Themes = () => {
                     Get support by chat or schedule a call with a Customer Care
                     Expert
                   </p>
-                  <span>Chat With us →</span>
+                  <span onClick={()=>{
+                    navigate('/contact')
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}>Connect With us →</span>
                 </div>
                 <div className="themePage-website-support-grid-1">
                   <h2>
@@ -190,7 +200,10 @@ const Themes = () => {
                   <p>
                     Get help at any stage -- from site creation to online growth
                   </p>
-                  <span>Browse all services →</span>
+                  <span onClick={()=>{
+                    navigate('/services')
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}>Browse all services →</span>
                 </div>
               </div>
             </div>

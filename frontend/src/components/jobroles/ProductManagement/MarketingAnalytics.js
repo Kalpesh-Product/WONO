@@ -7,7 +7,7 @@ const MarketingAnalytics = () => {
       <p>
         We are seeking a knowledgeable and experienced Marketing Analytics who is a great SEO/Google analytics Expert to optimize our online presence and enhance search engine visibility. The ideal candidate will possess expertise in managing web optimization strategies, staying updated with search engine algorithms, and leveraging various SEO tools to drive organic traffic and improve rankings.
       </p>
-      <h3 className="m-b-2">Responsibilities</h3>
+      <h3 style={{textTransform:'uppercase'}} className="m-b-2">Responsibilities</h3>
       <ul>
         <li>Manage and optimize website content to ensure it meets Google's Webmaster guidelines and best practices.</li>
         <li>Conduct comprehensive keyword research to identify opportunities and optimize content accordingly.</li>

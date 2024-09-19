@@ -228,7 +228,7 @@ const Register = () => {
         <div
           className="card flex justify-content-center"
           style={{ backgroundColor: "white", padding: 0, border: 'none' }}>
-          <Stepper style={{ paddingTop: 0 }} activeStep={currentStep}>
+          <Stepper style={{ paddingTop: 0, textTransform:'uppercase' }} activeStep={currentStep}>
             <Step label="Personal Details" />
             <Step label="Company Details" />
             <Step label="Services" />
@@ -578,7 +578,7 @@ const Register = () => {
             {currentStep === 2 && (
               <>
                 <div className="registration-section-header">
-                  <h2>Select your services</h2>
+                  <h2 style={{textTransform:'uppercase'}}>Select your services</h2>
                 </div>
 
                 <div className="register-container">
