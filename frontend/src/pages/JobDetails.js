@@ -9,6 +9,7 @@ import PHPdeveloper from "../components/jobroles/TechDevelopment/PHPdeveloper.js
 import WebdeveloperIntern from "../components/jobroles/TechDevelopment/WebdeveloperIntern.js";
 import MarketingAnalytics from "../components/jobroles/ProductManagement/MarketingAnalytics.js"
 import UiDesignerComp from '../components/jobroles/ProductManagement/UiDesignerComp.js';
+import Jobdescription from '../components/jobroles/Jobdescription.js';
 import Aos from 'aos'
 import 'aos/dist/aos.css';
 import { Link } from 'react-router-dom'
@@ -56,10 +57,11 @@ const JobDetails = () => {
                   
                    <div className="col-lg-12 order-2 order-lg-1 mt-3 mt-lg-0 d-flex flex-column justify-content-center"
                     data-aos="fade-up" data-aos-delay="100">
-                      {decodedTitle === 'Marketing Analytics' ? (<MarketingAnalytics/>) : decodedTitle === 'PHP Developer' ? (<PHPdeveloper/>):
+                      {/* {decodedTitle === 'Marketing Analytics' ? (<MarketingAnalytics/>) : decodedTitle === 'PHP Developer' ? (<PHPdeveloper/>):
                   decodedTitle === 'Web Developer Intern' ? (<WebdeveloperIntern/>) : decodedTitle === 'Finance Intern' ? (<FinanceIntern/>):
                   decodedTitle === 'HR Generalist' ? (<HrGeneralist/>): decodedTitle === 'Executive Assistant to CEO'? (<ExecutiveAssistanceToCEO/>):
-                  decodedTitle === 'UI Designer' ? (<UiDesignerComp/>): decodedTitle === 'Jr.UI/UX Developer' ? (<developer/>):(<PHPdeveloper/>)} 
+                  decodedTitle === 'UI Designer' ? (<UiDesignerComp/>): decodedTitle === 'Jr.UI/UX Developer' ? (<developer/>):(<PHPdeveloper/>)}  */}
+                  <Jobdescription decodedTitle={decodedTitle}/>
                     
                 </div> 
               </div>

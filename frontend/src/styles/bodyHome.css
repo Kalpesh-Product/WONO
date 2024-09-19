@@ -29,37 +29,52 @@
     position: relative;
 }
 
-.date-picker>.placeholder::before {
+/* .date-picker>.placeholder::before {
     content: "Date Of Birth";
     pointer-events: none;
     position: absolute;
     top: 50%;
     left: 10px;
-    /* Adjust this value to align the text properly */
+    
     transform: translateY(-50%);
     color: black;
     font-weight: bold;
-    /* color: red; */
-    /* padding: 0 10px; */
+    
     padding: 0 5px;
     background: white;
-    /* Ensure the background matches the input field */
+   
     z-index: 1;
+} */
+.placeholder {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: black;
+    font-weight: bold;
+    background: white;
+    z-index: 1;
+    pointer-events: none; /* Prevent interaction with the placeholder */
 }
 
 .date-picker input {
     position: relative;
     z-index: 2;
     background: transparent;
-    /* Ensure the input background is transparent */
-    color: transparent;
-    /* Hide the default date text */
+   
+    color:transparent;
+   
 }
 
 .date-picker input:focus {
     color: #000;
-    /* Show the input text when focused */
+   
 }
+.date-picker input:active {
+    color: #000;
+   
+}
+
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
