@@ -236,8 +236,8 @@
 .business-service-card {
     display: grid;
     grid-template-columns: 23% 1fr;
-    background-color: rgb(247, 247, 247);
     padding: 1rem;
+    border-radius: 5px;
 }
 
 .business-service-card-content {

@@ -176,7 +176,7 @@ const Services = () => {
                             </div>
                             <div className="business-grid">
                                 {services_frontend.map(service => (
-                                    <div className="business-service-card" key={service.id}>
+                                    <div className="business-service-card shadow" key={service.id}>
                                         <div className="business-service-card-image">
                                             <img src={service.image} alt={service.alt} />
                                         </div>

@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 // MongoDB connection URI
-const uri = 'mongodb://localhost:27017/WonoUserData'; // Replace with your MongoDB URI and database name
+const uri = 'mongodb+srv://wonoadmin:Admin007@cluster0.d9cnr.mongodb.net/sWonoUserData'; // Replace with your MongoDB URI and database name
 
 // Create a connection to MongoDB
 mongoose.connect(uri, {

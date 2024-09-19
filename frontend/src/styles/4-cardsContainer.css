@@ -35,18 +35,12 @@
   width: 100% !important;
 }
 .card_1 {
-  /* background-color: white;
-  padding: 30px 20px;
-  border-radius: 10px;
-  width: 250px !important;
-  margin:0.5rem 53px;
-  height: 330px; */
-  background-color: #fff;
+background-color: #fff;
     border-radius: 10px;
     height: 330px;
-    margin: .5rem 60px;
+    margin: 0.5rem 10px;
     padding: 30px 20px;
-    width: 300px !important;
+    width: 270px !important;
 }
 
 .card-icon {

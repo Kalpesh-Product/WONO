@@ -62,14 +62,14 @@
         padding-right: 7rem;
     }
 }
-@media (min-width: 820px) {
+/* @media (min-width: 820px) {
 
 
     .wono-text-spacing {
         padding-left: 1.7rem;
         padding-right: 1.7rem;
     }
-}
+} */
 
 /* Display mobile layout on smaller screens */
 @media (max-width: 767px) {
