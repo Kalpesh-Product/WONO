@@ -57,7 +57,7 @@ const Themes = () => {
         "Make your own website inclusive with built-in accessibility tools.",
     },
     {
-      title: "Easy Customization",
+      title: "Easy customization",
       description:
         "Personalize your website effortlessly by using  customizable templates.",
     },

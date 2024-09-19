@@ -157,7 +157,7 @@ const ProductPage = () => {
             <div className="product-page-perks-grid">
               <div className="product-page-perks-grid-1">
                 <span>
-                  Built with confidence &#x2014; <br /> the Theme Store promise
+                  Built with confidence &#x2014; <br /> The theme store promise
                 </span>
               </div>
               <div className="product-page-perks-grid-2">

@@ -326,6 +326,12 @@
         object-fit: contain;
         object-position: center;
     }
+    .themePage-website-header {
+        padding-right: 0%;
+        width: 100%;
+        text-align: left;
+    }
+    
     .themePage-website-features {
         display: flex;
         align-items: start;

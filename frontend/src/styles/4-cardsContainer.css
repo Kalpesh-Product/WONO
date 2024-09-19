@@ -140,7 +140,37 @@ button.slick-next.slick-arrow::before{
   font-size: 2rem;
 }
 
+@media (max-width:1024px) {
+  .four-cards-parent {
+    margin: 0;
+    padding: 4rem 1rem;
+    background-color: #fdfdfd;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+  }
+  .four-cards-header span{
+    text-align: center;
+    font-size: 2.5rem;
+  }
 
+  .card_1 {
+    background-color: #fff;
+      border-radius: 10px;
+      height: 362px;
+      margin: .5rem 29px;
+      padding: 30px 20px;
+      width: 262px !important;
+  }
+  button.slick-prev.slick-arrow{
+    left: -37px;
+    margin-left: 46px;
+  }
+  button.slick-next.slick-arrow{
+    margin-right: 43px;
+  }
+}
 
 @media (max-width:768px) {
   .four-cards-parent {
@@ -180,37 +210,7 @@ button.slick-next.slick-arrow::before{
   }
 }
 
-@media (max-width:1024px) {
-  .four-cards-parent {
-    margin: 0;
-    padding: 4rem 1rem;
-    background-color: #fdfdfd;
-    height: 100%;
-    overflow: hidden;
-    position: relative;
-    width: 100%;
-  }
-  .four-cards-header span{
-    text-align: center;
-    font-size: 2.5rem;
-  }
 
-  .card_1 {
-    background-color: #fff;
-      border-radius: 10px;
-      height: 362px;
-      margin: .5rem 29px;
-      padding: 30px 20px;
-      width: 262px !important;
-  }
-  button.slick-prev.slick-arrow{
-    left: -37px;
-    margin-left: 46px;
-  }
-  button.slick-next.slick-arrow{
-    margin-right: 43px;
-  }
-}
 
 
 
