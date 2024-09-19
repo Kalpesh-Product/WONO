@@ -29,3 +29,27 @@ section{
   .features .tab-content{
     margin-top: 30px;
   }
+  .custom-list{
+    list-style-type: none; 
+  }
+  .custom-list li {
+    position: relative; /* Needed to position the check mark */
+    padding-left: 25px; /* Space for the check mark */
+}
+
+.custom-list li::before {
+    content: '✔'; /* Unicode for check mark */
+    position: absolute;
+    left: 0; /* Position the check mark */
+    color: green; /* Color of the check mark */
+    font-size: 20px; /* Adjust size if needed */
+}
+  
+  @media (max-width:768px) {
+    .container-jobDetails{
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+    
+  }
+  

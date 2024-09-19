@@ -14,7 +14,7 @@ const Jobdescription = ({ decodedTitle }) => {
                         {jobs.content.map((job, index) => (
                             <div key={index}>
                                 <br></br>
-                                <h1 style={{fontWeight:"bold",fontSize:"30px"}}>{job.subtitle}</h1>
+                                <h1  className="m-b-2">{job.subtitle}</h1>
                                 <br />
                                 <br></br>
                                 {typeof job.description === "string" ? (
@@ -23,9 +23,12 @@ const Jobdescription = ({ decodedTitle }) => {
                                         <br></br>
 
                                     </>
-                                ) : (<ul>
+                                ) : (<ul className='custom-list'>
                                     {job.description?.list.map((item, itemIndex) => (
+                                        <>
                                         <li key={itemIndex}>{item || ""}</li>
+                                        <br></br>
+                                        </>
 
                                     ))}
                                     <br></br>
@@ -41,7 +44,7 @@ const Jobdescription = ({ decodedTitle }) => {
                 )
             }
             <hr style={{ marginTop: "20px" }}></hr>
-            <p style={{ marginBottom: "50px" }}>Please send in your Resume to <strong>Email: <Link to="mailto :response@wono.co"> response@wono.co </Link></strong>
+            <p style={{ marginBottom: "50px" }}>Please send in your Resume to <strong>Email : <Link to="mailto:response@wono.co"> response@wono.co </Link></strong>
                 if unable to apply now</p>
         </div>
     )
