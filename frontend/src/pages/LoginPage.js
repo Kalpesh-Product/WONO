@@ -18,6 +18,7 @@ const LoginPage = () => {
   const { setUser } = useContext(UserContext);
   const [error, setError] = useState("");
   const [username, setUserName] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [userNameError, setUserNameError] = useState("");
   const [showModal, setShowModal] = useState(false); // Control modal visibility
@@ -31,8 +32,8 @@ const LoginPage = () => {
 
     // Username validation using regex
     const usernameRegex = /^.{2,}$/; // At least 2 characters long
-    if (!usernameRegex.test(username)) {
-      setModalTitle("Invalid Username");
+    if (!usernameRegex.test(email)) {
+      setModalTitle("Invalid email");
       // setModalMessage("Enter a valid username");
       setModalMessage("Enter a valid email");
       setShowModal(true); // Show the modal for the error
@@ -41,7 +42,7 @@ const LoginPage = () => {
 
     try {
       const response = await axios.post("http://localhost:5000/login", {
-        username,
+        email,
         password,
       });
 
@@ -50,7 +51,7 @@ const LoginPage = () => {
       navigate("/dashboard");
     } catch (error) {
       setModalTitle("Login Failed");
-      setModalMessage("Invalid username or password");
+      setModalMessage("Invalid email or password");
       setShowModal(true); // Show the modal for the error
       console.error("Login Failed:", error);
     }
@@ -75,7 +76,7 @@ const LoginPage = () => {
 
   const handleUsernameChange = (e) => {
     const value = e.target.value;
-    setUserName(value);
+    setEmail(value);
 
     // Email validation using regex
     const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
@@ -122,7 +123,7 @@ const LoginPage = () => {
                       label="Email"
                       variant="standard"
                       type="email"
-                      value={username}
+                      value={email}
                       onChange={handleUsernameChange}
                       error={!!userNameError}
                       helperText={userNameError}
@@ -246,8 +247,11 @@ const LoginPage = () => {
       <Modals
         show={showModal}
         handleClose={handleCloseModal}
-        title={modalTitle}>
+        title={modalTitle}
+        closeText={'Close'}
+        >
         {modalMessage}
+        
       </Modals>
     </>
   );

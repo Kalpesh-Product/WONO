@@ -146,7 +146,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 2rem 0 0 0;
+    padding: 4rem 0 0 0;
     width: 100%;
 
 }
@@ -155,6 +155,7 @@
     font-weight: 600;
     font-size: 4rem;
     font-family: ComicSansMS;
+    position: relative;
 }
 
 .SaaS-grid-heading>h2 span {
@@ -162,7 +163,7 @@
 }
 
 .SaaS-grid-underline-container {
-    position: relative;
+  
     font-size: 4rem !important;
     font-family: ComicSansMS;
 }
@@ -173,24 +174,24 @@
 
 .SaaS-grid-blue-underline {
     position: absolute;
-    width: 100%;
+    width: 100px;
     height: 108px;
-    top: -9px;
-    left: -144px;
-    display: none;
+    top: 0px;
+    left: 0px;
 }
 
-.SaaS-grid-blue-underline path {
+/* .SaaS-grid-blue-underline path {
     fill: #0093E9;
     stroke: #0093E9;
     stroke-width: 0;
     height: 1px;
-}
+} */
 
 
 
 .SaaS-grid-heading span {
     font-size: 1.5rem;
+    padding: 2rem 0 2rem 0;
 }
 
 
@@ -235,10 +236,13 @@
 
 .business-service-card {
     display: grid;
-    grid-template-columns: 23% 1fr;
+    grid-template-columns: 27% 1fr;
     padding: 1rem;
     border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    column-gap: 1rem;
 }
+
 
 .business-service-card-content {
     display: flex;
@@ -260,7 +264,10 @@
 }
 
 .business-service-card-image {
-    width: 50px;
+    /* background-color: red; */
+    padding: 0.4rem 0.6rem;
+    width: 60px;
+    border-radius: 5px;
 }
 
 .business-service-card img {
@@ -297,13 +304,19 @@
 
 .SaaS-last-banner h2 {
     font-family: Popins-Semibold;
-    font-size: 5.1rem;
+    font-size: 5.8rem;
 }
 
 
 .business-service>img {
     width: 50px;
     margin-bottom: 0.8rem;
+}
+@media (max-width:1440px) {
+    .SaaS-last-banner h2 {
+        font-family: Popins-Semibold;
+        font-size: 4.7rem;
+    }
 }
 
 @media (max-width: 1024px) {

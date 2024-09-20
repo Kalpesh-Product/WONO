@@ -3,14 +3,17 @@ import "../styles/bodyThemes.css";
 import "../styles/specialClasses.css";
 import CafeImage from "../assets/WONO_images/img/website-builder/new-layout/cafe.png";
 import BiznestImage from "../assets/WONO_images/img/products-images/biznestImage.png";
+import BiznestImageMockup from "../assets/WONO_images/img/website-builder/new-layout/mobile/mockups/biznest-mockup.png";
 import Cafe_2 from "../assets/WONO_images/img/website-builder/new-layout/cafe-2.png";
 import Cafe_3 from "../assets/WONO_images/img/website-builder/new-layout/cafe-3.png";
 import CoWorkingImage from "../assets/WONO_images/img/website-builder/new-layout/co-working.png";
+import CoWorkingImageMockup from "../assets/WONO_images/img/website-builder/new-layout/mobile/mockups/co-working-mockup-bg.png";
 import CoLivingImage from "../assets/WONO_images/img/website-builder/new-layout/co-living.png";
 import CoWorkingImage_2 from "../assets/WONO_images/img/website-builder/new-layout/co-working-2.png";
 import CoWorkingImage_3 from "../assets/WONO_images/img/website-builder/new-layout/co-working-3.png";
 import Featured from "../assets/WONO_images/img/website-builder/new-layout/featured/featured-1.png";
 import Boutique from "../assets/WONO_images/img/website-builder/new-layout/boutique.png";
+import BoutiqueMockup from "../assets/WONO_images/img/website-builder/new-layout/mobile/mockups/boutique-mockup.png";
 import CoWorkingMewo from "../assets/WONO_images/img/website-builder/new-layout/co-working-mewo.png";
 import BizNestMockup from "../assets/WONO_images/img/website-builder/new-layout/Macbook-mockup.png";
 import Hostels from "../assets/WONO_images/img/website-builder/new-layout/hostels.png";
@@ -20,10 +23,10 @@ const Themes = () => {
   const navigate = useNavigate();
 
   const themeImages = [
-    { src: BiznestImage, alt: "BiznestImage", tag: "co-working" },
-    { src: CoWorkingImage, alt: "Co-Working Image", tag: "co-working" },
+    { src: BiznestImage, mockup: BiznestImageMockup, alt: "BiznestImage", tag: "co-working" },
+    { src: CoWorkingImage,mockup: CoWorkingImageMockup, alt: "Co-Working Image", tag: "co-working" },
     { src: CoLivingImage, alt: "Co-Living Image", tag: "co-living" },
-    { src: Boutique, alt: "Boutique Image", tag: "boutique" },
+    { src: Boutique,mockup: BoutiqueMockup, alt: "Boutique Image", tag: "boutique" },
     { src: CoWorkingImage_2, alt: "CoLivingImage_2", tag: "co-working" },
     { src: CoWorkingImage_3, alt: "CoLivingImage_3", tag: "co-working" },
     { src: Cafe_2, alt: "Cafe_2", tag: "cafe" },

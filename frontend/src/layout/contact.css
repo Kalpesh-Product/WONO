@@ -9,6 +9,10 @@ section{
     font-family: Popins-Regular;
 }
 
+ .contact-form *{
+    font-family: Popins-Regular;
+ }
+
 .contact .contact-form{
     width: 100%;
     margin-top: 55px;

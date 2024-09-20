@@ -251,6 +251,37 @@ app.post('/submit-form', (req, res) => {
 
 });
 
+const enquirySchema = new mongoose.Schema({
+  name: String,
+  email: String,
+  mobile: String,
+  partnerstype: String,
+  message: String,
+}, { collection: 'enquiryDetails' });
+
+const Enquiry = mongoose.model('Enquiry', enquirySchema);
+
+app.post('/enquiries', async (req, res) => {
+  const { name, email, mobile, partnerstype, message } = req.body;
+
+  try {
+    const newEnquiry = new Enquiry({
+      name,
+      email,
+      mobile,
+      partnerstype,
+      message
+    });
+
+    await newEnquiry.save();
+    res.status(201).json({ message: 'Enquiry submitted successfully!' });
+  } catch (error) {
+    console.error('Error saving enquiry:', error);
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
+});
+
+
 
 //regdetails schema
 
@@ -428,25 +459,24 @@ app.post('/reset-password', async (req, res) => {
 
 // Route to handle user login
 app.post('/login', async (req, res) => {
-  const { username, password } = req.body;
+  const { email, password } = req.body;
 
   try {
-    // Query to check user credentials
-    const [rows] = await promisePool.query(
-      'SELECT * FROM user_data WHERE username = ? AND password = ?',
-      [username, password]
-    );
+    // Query to check user credentials in MongoDB
+    const user = await User.findOne({ email: email, password: password });
 
-    if (rows.length === 0) {
+    if (!user) {
       return res.status(401).json({ error: 'Invalid email or password' });
     }
-    const user = rows[0];
+
     // Set session user data
     req.session.user = {
-      id: user.id,
+      id: user._id,
       email: user.email,
       name: user.name
     };
+
+    // Send back the session user data
     res.json({
       user: req.session.user
     });
@@ -455,6 +485,7 @@ app.post('/login', async (req, res) => {
     res.status(500).json({ error: 'Internal Server Error' });
   }
 });
+
 
 //forgot password
 
@@ -555,8 +586,10 @@ app.post('/logout', (req, res) => {
 // Route to fetch all users
 app.get("/users", async (req, res) => {
   try {
-    const [rows] = await promisePool.query("SELECT * FROM user_data");
-    res.json(rows);
+    // Fetch all users from the registrationDetails collection
+    const users = await User.find();
+
+    res.json(users); // Send the fetched data as JSON
   } catch (error) {
     console.error("Database error:", error.message);
     res.status(500).send("Failed to fetch user details.");
@@ -572,19 +605,16 @@ app.get("/check-email", async (req, res) => {
   }
 
   try {
-    // Query to check if email exists in the database
-    const [rows] = await promisePool.query(
-      "SELECT COUNT(*) AS count FROM user_data WHERE email = ?",
-      [email]
-    );
-    const isDuplicate = rows[0].count > 0;
+    // Use the Mongoose model to check if the email exists in the collection
+    const isDuplicate = await User.exists({ email: email });
 
-    res.status(200).json({ isDuplicate });
+    res.status(200).json({ isDuplicate: !!isDuplicate });
   } catch (error) {
     console.error("Error checking email:", error);
     res.status(500).json({ error: "Internal server error" });
   }
 });
+
 
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);

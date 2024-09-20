@@ -10,6 +10,7 @@ import CoWorkingImage_2 from "../assets/WONO_images/img/website-builder/new-layo
 import CoWorkingImage_3 from "../assets/WONO_images/img/website-builder/new-layout/co-working-3.png";
 import Featured from "../assets/WONO_images/img/website-builder/new-layout/featured/featured-1.png";
 import Boutique from "../assets/WONO_images/img/website-builder/new-layout/boutique.png";
+import BoutiqueMockup from "../assets/WONO_images/img/website-builder/new-layout/mobile/mockups/boutique-mockup.png";
 import CoWorkingMewo from "../assets/WONO_images/img/website-builder/new-layout/co-working-mewo.png";
 import Hostels from "../assets/WONO_images/img/website-builder/new-layout/hostels.png";
 import TickmarkImg from "../assets/check.png";
@@ -68,7 +69,7 @@ const ProductPage = () => {
     { src: BiznestImage, alt: "BiznestImage", tag: "co-working" },
     { src: CoWorkingImage, alt: "Co-Working Image", tag: "co-working" },
     { src: CoLivingImage, alt: "Co-Living Image", tag: "co-living" },
-    { src: Boutique, alt: "Boutique Image", tag: "boutique" },
+    { src: Boutique,mockup: BoutiqueMockup, alt: "Boutique Image", tag: "boutique" },
     { src: CoWorkingImage_2, alt: "CoLivingImage_2", tag: "co-working" },
     { src: CoWorkingImage_3, alt: "CoLivingImage_3", tag: "co-working" },
     { src: Cafe_2, alt: "Cafe_2", tag: "cafe" },
@@ -81,7 +82,7 @@ const ProductPage = () => {
 
   const location = useLocation();
   const { image: initialImage } = location.state || {
-    image: { src: BiznestImage, tag: "business", alt: "Product Image" },
+    image: { src: BiznestImage, tag: "co-working", alt: "Product Image" },
   };
 
   const [currentImage, setCurrentImage] = useState(initialImage);
@@ -145,7 +146,7 @@ const ProductPage = () => {
 
                 <div className="product-page-image-container">
                   {/* <img src={currentImage.src} alt={currentImage.alt} /> */}
-                  <img src={BiznestImageOverlay} alt={currentImage.alt} />
+                  <img src={currentImage.mockup} alt={currentImage.alt} />
                 </div>
               </div>
             </div>

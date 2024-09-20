@@ -1,8 +1,49 @@
-import React from "react";
+import React, { useState } from "react";
+import axios from "axios";
 import "../layout/contact.css";
 import "../styles/bodyContact.css";
+import {
+  TextField,
+  Button,
+  Grid,
+  Box,
+  Select,
+  MenuItem,
+  FormControl,
+  InputLabel,
+  TextareaAutosize,
+} from '@mui/material';
 
 const Contact = () => {
+
+
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    mobile: '',
+    partnerstype: '',
+    message: ''
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const response = await axios.post('http://localhost:5000/enquiries', formData);
+      console.log('Enquiry submitted successfully:', response.data);
+      // Reset form or show success message
+    } catch (error) {
+      console.error('Error submitting enquiry:', error);
+      // Handle error (show error message)
+    }
+  };
+
+
   return (
     <>
       <section id="contact" className="contact wono-text-spacing">
@@ -44,95 +85,91 @@ const Contact = () => {
               </p>
             </div>
             <div className="col-lg-6">
-              <form name="form-p" className="contact-form">
-                <h3
-                  style={{
-                    marginBottom: "30px",
-                    color: "#000",
-                    fontWeight: "bold",
-                  }}>
+              <Box component="form" onSubmit={handleSubmit} sx={{ mt: 4 }}>
+                <h3 style={{ marginBottom: '30px', color: '#000', fontWeight: 'bold' }}>
                   CONNECT WITH US
                 </h3>
-                <div className="row gy-3">
-                  <div className="col-md-6">
-                    <input
-                      type="text"
+                <Grid container spacing={2}>
+                  <Grid item xs={12} sm={6}>
+                    <TextField
+                      required
+                      fullWidth
+                      label="Name"
                       name="name"
-                      class="form-control"
-                      placeholder="Name"
-                      required=""></input>
-                  </div>
+                      value={formData.name}
+                      onChange={handleChange}
+                      variant="outlined"
+                    />
+                  </Grid>
 
-                  <div className="col-md-6 ">
-                    <input
-                      type="email"
-                      class="form-control"
+                  <Grid item xs={12} sm={6}>
+                    <TextField
+                      required
+                      fullWidth
+                      label="Email"
                       name="email"
-                      placeholder="Email"
-                      required=""></input>
-                  </div>
+                      type="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      variant="outlined"
+                    />
+                  </Grid>
 
-                  <div className="col-md-6 mt-4">
-                    <input
-                      type="text"
-                      class="form-control"
+                  <Grid item xs={12} sm={6}>
+                    <TextField
+                      required
+                      fullWidth
+                      label="Mobile Number"
                       name="mobile"
-                      pattern="[1-9]{1}[0-9]{9}"
-                      placeholder="Mobile Number"
-                      required=""></input>
-                  </div>
+                      type="tel"
+                      inputProps={{ pattern: '[1-9]{1}[0-9]{9}' }}
+                      value={formData.mobile}
+                      onChange={handleChange}
+                      variant="outlined"
+                    />
+                  </Grid>
 
-                  <div className="col-md-6 mt-4">
-                    {/* <input type="text" name="name" className="form-control" placeholder="Type of Company" required></input> */}
-                    <select
-                      className="form-select select-f"
-                      aria-label="Default select example"
-                      name="partnerstype">
-                      <option value="" disabled="" selected="">
-                        Type of Partnership
-                      </option>
-                      <option value="B2B SaaS Technology Licensing ">
-                        B2B SaaS Technology Licensing{" "}
-                      </option>
-                      <option value="B2C Workation/Co-Working Booking ">
-                        B2C Workation/Co-Working Booking{" "}
-                      </option>
-                      <option value="Landlord Partnerships ">
-                        Landlord Partnerships{" "}
-                      </option>
-                      <option value="Investment Related ">
-                        Investment Related{" "}
-                      </option>
-                      <option value="Coffee Meeting to know us better">
-                        Coffee Meeting to know us better
-                      </option>
-                    </select>
-                  </div>
+                  <Grid item xs={12} sm={6}>
+                    <FormControl fullWidth required variant="outlined">
+                      <InputLabel id="partnerstype-label">Type of Partnership</InputLabel>
+                      <Select
+                        labelId="partnerstype-label"
+                        name="partnerstype"
+                        value={formData.partnerstype}
+                        onChange={handleChange}
+                        label="Type of Partnership" // Make sure to include the label prop
+                        variant="outlined" // Ensure variant is set
+                      >
+                        <MenuItem value="" disabled>
+                          Type of Partnership
+                        </MenuItem>
+                        <MenuItem value="B2B SaaS Technology Licensing">B2B SaaS Technology Licensing</MenuItem>
+                        <MenuItem value="Landlord Partnerships">Landlord Partnerships</MenuItem>
+                        <MenuItem value="Investment Related">Investment Related</MenuItem>
+                        <MenuItem value="Coffee Meeting to know us better">Coffee Meeting to know us better</MenuItem>
+                      </Select>
+                    </FormControl>
+                  </Grid>
 
-                  <div className="col-md-12 mt-4">
-                    <textarea
-                      className="form-control"
-                      name="message"
-                      rows="4"
+                  <Grid item xs={12}>
+                    <TextareaAutosize
+                      required
+                      minRows={4}
                       placeholder="Message"
-                      required=""></textarea>
-                  </div>
+                      name="message"
+                      style={{ width: '100%', padding: '10px' }}
+                      value={formData.message}
+                      onChange={handleChange}
+                    />
+                  </Grid>
 
-                  <div className="col-md-12 text-center mt-5">
-                    <input
-                      type="hidden"
-                      name="pagename"
-                      value="Contact"></input>
-
-                    <button
-                      name="submit"
-                      type="submit"
-                      className="btn-lg btn-block submit-button">
+                  <Grid item xs={12} textAlign="center">
+                    <button type="submit" className="submit-button">
                       CONNECT
                     </button>
-                  </div>
-                </div>
-              </form>
+                  </Grid>
+                </Grid>
+              </Box>
             </div>
           </div>
         </div>

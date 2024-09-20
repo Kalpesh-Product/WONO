@@ -225,10 +225,7 @@ const Homepage = () => {
                 </div>
               </div>
             </div>
-            <br />
-            {/* <div className="bg-info pt-3 m-5"> */}
-            {/* <div className="container  text-left customMargin_top"> */}
-            <div className="  text-left customMargin_top  pt-0">
+            <div className="text-left customMargin_bottom  pt-0">
               <div className="row  ">
                 <div className="col-lg-4 col-sm-12 col-xs-12 col-md-6 text-left">
                   <div className="m-1 border-top border-dark border-2">
@@ -428,7 +425,7 @@ const Homepage = () => {
                   </div>
                 </div>
                 {/* <div className="col-lg-5 mt-3 bg-warning d-flex flex-row justify-content-end"> */}
-                <div className="col-lg-5 mt-3 custom-image-biznest-container d-flex flex-row justify-content-center px-0">
+                <div className="col-lg-5 mt-3 custom-image-biznest-container d-flex flex-row justify-content-end px-0">
                   <img
                     src={BiznestTestimonial}
                     alt=""
@@ -448,7 +445,7 @@ const Homepage = () => {
               </h2>
               <br />
 
-              <p className="last-spacing smaller-font-for-para">
+              <p className="last-spacing">
                 We have you covered across … build website, manage bookings,
                 sets processes, HR support, task management, ticket management,
                 marketing, generating leads, accounting, finance, customer

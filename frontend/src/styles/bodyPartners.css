@@ -29,11 +29,11 @@
 }
 
 .grow-your-business-color h2 {
-    font-size: 5.05rem;
+    font-size: 5.4rem;
 }
 
 .grow-your-business-color p {
-    font-size: 22px;
+    font-size: 0.875rem;
 }
 
 .partners-section>* {
@@ -58,8 +58,16 @@
     align-items: start;
     justify-content: flex-start;
     flex-direction: column;
-    padding: 4rem 4.7rem 2rem 6.8rem;
+    padding: 4rem 4.7rem 4rem 6.8rem;
     width: 100%;
+}
+.customMargin_bottom{
+        display: flex;
+        align-items: start;
+        justify-content: flex-start;
+        flex-direction: column;
+        padding: 4rem 4.7rem 4rem 6.8rem;
+        width: 100%; 
 }
 
 
@@ -69,6 +77,11 @@
 } */
 
 /* For mobile screens (e.g., max-width 767px) */
+@media (max-width:1440px) {
+    .grow-your-business-color h2 {
+        font-size: 5.05rem;
+    }
+}
 
 
 @media (max-width:1024px) {
@@ -97,7 +110,7 @@
     }
 
     .testimonial-right-spacing {
-        padding-right: 5rem;
+        padding-right: 0;
     }
 
 }
