@@ -57,6 +57,7 @@
 .custom-navbar-menu {
   display: flex;
   align-items: center;
+  text-transform: uppercase;
 }
 
 
@@ -69,6 +70,12 @@
   position: relative;
   gap: 20px;
   /* Smooth transition for color and text-decoration */
+}
+
+.custom-navbar-buttons {
+  display: flex;
+  gap: 20px;
+  padding-right: 6rem;
 }
 
 /* Changes */
@@ -185,7 +192,18 @@
 }
 
 /* Media Queries */
-@media (max-width: 800px) {
+
+@media (max-width:1024px) {
+  .custom-navbar-buttons {
+    display: flex;
+    gap: 20px;
+    padding-right: 2rem;
+  }
+  .custom-navbar-logo {
+    padding: 0.5rem 0.5rem 0.5rem 2rem;
+  }
+}
+@media (max-width: 820px) {
   .custom-navbar-menu {
     display: none;
     /* Hide menu on small screens */
@@ -209,7 +227,9 @@
     width: 50%;
     /* Smaller width for screens less than 768px */
   }
+
 }
+
 
 .profile-container {
   display: flex;

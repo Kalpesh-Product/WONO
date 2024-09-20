@@ -69,6 +69,7 @@ footer {
   .footer-container {
     grid-template-columns: 1fr 1fr;
     column-gap: 5rem;
+    row-gap: 2rem;
   }
 
   .footer-master {
@@ -93,8 +94,9 @@ footer {
   }
 
   .footer-section-1>* {
-    padding: 0.5rem;
+    padding: 2rem 0 0 0;
     font-size: 14px;
+    margin: 0;
   }
 
   .footer-section-2>* {
@@ -109,9 +111,13 @@ footer {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 2rem 0;
+    padding: 0;
     text-transform: uppercase;
     font-family: Popins-Regular;
+  }
+  .footer-copyright p {
+    font-family: Popins-Regular;
+    padding: 0 1.7rem;
   }
 }
 

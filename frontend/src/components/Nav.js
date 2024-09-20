@@ -100,7 +100,7 @@ const NavBar = ({activeTab ,changeActiveTab}) => {
               </div>
             </div>
           ) : (
-            <div style={{ display: "flex", gap: "20px", paddingRight: "6rem" }}>
+            <div className="custom-navbar-buttons" >
               <Link
                 onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
                 to="/login"

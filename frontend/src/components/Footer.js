@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "../layout/footer.css";
 import "../styles/componentStyle.css";
 import WonoLogo from "../assets/WONO_images/img/WONO_LOGO_white _TP.png";
@@ -13,12 +13,16 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 const Footer = ({changeActiveTab}) => {
+  const navigate = useNavigate()
   return (
     <>
-      <footer className="black-background text-light py-4">
+      <footer className="black-background text-light">
         <div className="footer-master">
           <div className="footer-section-1">
-            <img src={WonoLogo} alt="logo" />
+            <img onClick={()=>{
+              navigate('/home')
+              window.scrollTo({top:'0', behavior:'smooth'})
+            }} src={WonoLogo} style={{cursor:'pointer'}} alt="logo" />
             <span>
               WONOCO PRIVATE LIMITED 10 ANSON ROAD #33-10
               <br />
@@ -53,7 +57,10 @@ const Footer = ({changeActiveTab}) => {
           </div>
           <div className="footer-container">
             <div className="footer-section-3">
-              <h5><Link to="#">SaaS</Link></h5>
+              <h5 onClick={()=>{
+            changeActiveTab('Services')
+            window.scrollTo({ top: 0, behavior: "smooth" })
+            }} ><Link to="/services">SaaS</Link></h5>
               <h5 onClick={()=>{
             changeActiveTab('leads')
             window.scrollTo({ top: 0, behavior: "smooth" })
@@ -102,11 +109,11 @@ const Footer = ({changeActiveTab}) => {
         </div>
 
         {/* <div className="mt-3 py-5"> */}
-        <div className="mt-3 py-3">
+        <div className="py-4">
           <div className="text-center px-1 footer-copyright">
             <p>
               &copy; Copyright 2024-25 by WONOCO PRIVATE LIMITED - SINGAPORE.
-              All rights reserved.
+              All Rights Reserved.
             </p>
           </div>
         </div>

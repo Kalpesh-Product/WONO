@@ -32,9 +32,9 @@ app.use(session({
   }
 }))
 app.use(cors({
-  origin:["http://localhost:3000"],
+  origin: ["http://localhost:3000"],
   methods: ["GET", "POST"],
-  credentials : true
+  credentials: true
 }
 ));
 
@@ -79,7 +79,7 @@ app.get('/session', (req, res) => {
 
 //Banner-Email
 
-app.post('/banner-email',async(req,res)=>{
+app.post('/banner-email', async (req, res) => {
   const { name, email, number, selectedOption } = req.body;
 
   const Options = {
@@ -87,48 +87,47 @@ app.post('/banner-email',async(req,res)=>{
     to: 'productwonoco@gmail.com', // Send to the user
     subject: 'Your Data is Received',
     text: `Hello ${name},\n\nWe have received your data with the following details:\n\nName: ${name}\nEmail: ${email}\nMobile: ${number}\nOption: ${selectedOption}\n\nThank you!`
-};
+  };
 
-try{
-  await transport.sendMail(Options);
+  try {
+    await transport.sendMail(Options);
 
-        // Auto-reply
-        const autoReplyOptions = {
-            from: 'anushri.bhagat263@gmail.com',
-            to: email, // Send to yourself
-            subject: 'New Submission Received',
-            html: `<h1>Thank you for your concern.</h1>
+    // Auto-reply
+    const autoReplyOptions = {
+      from: 'anushri.bhagat263@gmail.com',
+      to: email, // Send to yourself
+      subject: 'New Submission Received',
+      html: `<h1>Thank you for your concern.</h1>
             <br></br>
             <p>
             We have received your application. We will get back to you in 24hrs.
             </p>`
-        };
+    };
 
-        await transport.sendMail(autoReplyOptions);
+    await transport.sendMail(autoReplyOptions);
 
-        res.json({ success: true });
+    res.json({ success: true });
 
-}
-catch(error)
-{
-  console.error('Error sending email:', error);
-  res.json({ success: false });
-}
+  }
+  catch (error) {
+    console.error('Error sending email:', error);
+    res.json({ success: false });
+  }
 })// End Banner-Email
 
 
 
 
-app.post('/send-email', (req,res) =>{
-    const {jobTitle,name,email,date,number,location,experience,linkedInProfile,resume,monthlySalary,expectedSalary,
-        daysToJoin,relocateGoa,personality,skills,specialexperience,willing,message} = req.body;
+app.post('/send-email', (req, res) => {
+  const { jobTitle, name, email, date, number, location, experience, linkedInProfile, resume, monthlySalary, expectedSalary,
+    daysToJoin, relocateGoa, personality, skills, specialexperience, willing, message } = req.body;
 
-        //Apply form email content
-        const Mailoption = {
-            from:'anushri.bhagat263@gmail.com',
-            to:email,
-            subject:`Job Application: ${name} - ${jobTitle}`,
-            html:`<head><style>
+  //Apply form email content
+  const Mailoption = {
+    from: 'anushri.bhagat263@gmail.com',
+    to: email,
+    subject: `Job Application: ${name} - ${jobTitle}`,
+    html: `<head><style>
 table, td {
   border: 1px solid;
 }
@@ -174,20 +173,20 @@ table, td {
 </table>
 </div>
 </body>`,
-        };
+  };
 
-        transport.sendMail(Mailoption,(error,info)=>{
-            if(error){
-                return res.status(500).send('Failed to send Email',+ error.message);
-            }
-            res.status(200).send('Application details have been sent');
-  });
+  transport.sendMail(Mailoption, (error, info) => {
+    if (error) {
+      return res.status(500).send('Failed to send Email', + error.message);
+    }
+    res.status(200).send('Application details have been sent');
+  });
 });
 
 // Route to download the CSV file
 app.get('/download-csv', (req, res) => {
   const filePath = path.join(__dirname, 'form_data.csv');
-  
+
   // Check if the file exists
   if (fs.existsSync(filePath)) {
     res.download(filePath);
@@ -198,83 +197,178 @@ app.get('/download-csv', (req, res) => {
 
 
 
-app.post('/submit-form',(req,res)=>{
-    const {jobTitle,name,email ,date,number,location,experience,linkedInProfile,resume,monthlySalary,expectedSalary,
-      daysToJoin,relocateGoa,personality,skills,specialexperience,willing,message} = req.body;
+app.post('/submit-form', (req, res) => {
+  const { jobTitle, name, email, date, number, location, experience, linkedInProfile, resume, monthlySalary, expectedSalary,
+    daysToJoin, relocateGoa, personality, skills, specialexperience, willing, message } = req.body;
 
-      let formData = req.body;
+  let formData = req.body;
 
-      const query = `INSERT into apply_form (jobTitle,namee,email,application_date,PhoneNumber,location,
+  const query = `INSERT into apply_form (jobTitle,namee,email,application_date,PhoneNumber,location,
       experience,linkedInProfile,resumelink,monthlySalary,expectedSalary,daysToJoin,relocateGoa,personality,
       skills,specialexperience,willing,message
       ) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)`
-  
-      promisePool.query(query,[jobTitle,name,email,date,number,location,experience,linkedInProfile,resume,
-        monthlySalary,expectedSalary,daysToJoin,relocateGoa,personality,skills,specialexperience,willing,
-        message
-      ],(err,result)=>{
-        if(err)
-        {
-          console.log('Error saving data', err);
-          res.status(500).send('Error saving data');
-          return;
-        }
-        res.status(200).send('Data saved successfully');
-      });
 
-  const filePath = path.join(__dirname,"form_data.csv");
+  promisePool.query(query, [jobTitle, name, email, date, number, location, experience, linkedInProfile, resume,
+    monthlySalary, expectedSalary, daysToJoin, relocateGoa, personality, skills, specialexperience, willing,
+    message
+  ], (err, result) => {
+    if (err) {
+      console.log('Error saving data', err);
+      res.status(500).send('Error saving data');
+      return;
+    }
+    res.status(200).send('Data saved successfully');
+  });
+
+  const filePath = path.join(__dirname, "form_data.csv");
 
   const fields = Object.keys(formData);
 
-  const csvParser = new Parser({fields});
+  const csvParser = new Parser({ fields });
 
   let csv = csvParser.parse([formData]);
 
-  if(fs.existsSync(filePath))
-  {
-    fs.appendFile(filePath , "\n" + csv, (error)=>{
-      if(error){
+  if (fs.existsSync(filePath)) {
+    fs.appendFile(filePath, "\n" + csv, (error) => {
+      if (error) {
         console.error('Error appending to csv file:', error);
         res.status(500).send('Failed to send formdata');
         return;
       }
-       res.send('FormData saved successfully');
-      });
+      res.send('FormData saved successfully');
+    });
   }
-  else{
-    fs.writeFile(filePath,csv, (err) => {
-      if(err){
-        console.error('Error writing to csv file:',err);
+  else {
+    fs.writeFile(filePath, csv, (err) => {
+      if (err) {
+        console.error('Error writing to csv file:', err);
         res.status(500).send('Failed to send form Data');
         return;
       }
       res.send("Formdata saved successfully");
     });
   }
-    
-  });
+
+});
+
+const enquirySchema = new mongoose.Schema({
+  name: String,
+  email: String,
+  mobile: String,
+  partnerstype: String,
+  message: String,
+}, { collection: 'enquiryDetails' });
+
+const Enquiry = mongoose.model('Enquiry', enquirySchema);
+
+
+
+app.post('/enquiries', async (req, res) => {
+  const { name, email, mobile, partnerstype, message } = req.body;
+
+  try {
+    const newEnquiry = new Enquiry({
+      name,
+      email,
+      mobile,
+      partnerstype,
+      message
+    });
+
+    await newEnquiry.save();
+
+    const userEmailTemplate = (name) => `
+  <div style="font-family: Arial, sans-serif; padding: 20px;">
+    <h2 style="color: #4CAF50;">Thank You for Your Enquiry</h2>
+    <p>Dear ${name},</p>
+    <p>Thank you for your enquiry. We appreciate your interest and will get back to you shortly.</p>
+    <p>Best regards,<br>Your Company Name</p>
+  </div>
+`;
+
+
+    const companyEmailTemplate = (name, email, mobile, partnerstype, message) => `
+  <div style="font-family: Arial, sans-serif; padding: 20px;">
+    <h2 style="color: #4CAF50;">New Enquiry Received</h2>
+    <p>You have received a new enquiry:</p>
+    <ul>
+      <li><strong>Name:</strong> ${name}</li>
+      <li><strong>Email:</strong> ${email}</li>
+      <li><strong>Mobile:</strong> ${mobile}</li>
+      <li><strong>Partner Type:</strong> ${partnerstype}</li>
+      <li><strong>Message:</strong> ${message}</li>
+    </ul>
+    <p>Best regards,<br>Your Company Name</p>
+  </div>
+`;
+
+
+
+    await transporter.sendMail({
+      from: 'aiwinraj1810@gmail.com', // sender address
+      to: email, // user email
+      subject: 'Thank You for Your Enquiry',
+      html: userEmailTemplate(name)
+    });
+
+    // Send email to the company
+    await transporter.sendMail({
+      from: 'aiwinraj1810@gmail.com', // sender address
+      to: 'productwonoco@gmail.com', // company email
+      subject: 'New Enquiry Received',
+      html: companyEmailTemplate(name, email, mobile, partnerstype, message)
+    });
+    res.status(201).json({ message: 'Enquiry submitted successfully!' });
+  } catch (error) {
+    console.error('Error saving enquiry:', error);
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
+});
+
 
 
 //regdetails schema
 
 const userSchema = new mongoose.Schema({
-  name: String,
-  mobile: String,
-  email: String,
-  country: String,
-  city: String,
-  state: String,
-  companyName: String,
-  industry: String,
-  companySize: String,
-  companyType: String,
-  companyCity: String,
-  companyState: String,
-  websiteURL: String,
-  linkedinURL: String,
-  username: String,
-  password: String
-},{ collection: 'registrationDetails' });
+  // Personal Information Section
+  personalInfo: {
+    name: { type: String, required: false },
+    mobile: { type: String, required: false },
+    email: { type: String, required: false }, // Make optional
+    country: String,
+    city: String,
+    state: String,
+  },
+
+  // Company Information Section
+  companyInfo: {
+    companyName: String,
+    industry: String,
+    companySize: String,
+    companyType: String,
+    companyCity: String,
+    companyState: String,
+    websiteURL: String,
+    linkedinURL: String,
+  },
+
+  // Login Credentials (if needed in future)
+  credentials: {
+    username: String,
+    password: String,
+  },
+
+  // Service Selection Section
+  selectedServices: {
+    service1: { type: Boolean, default: false },
+    service2: { type: Boolean, default: false },
+    service3: { type: Boolean, default: false },
+    service4: { type: Boolean, default: false },
+  },
+
+}, { collection: 'registrationDetails' });
+
+
 
 // Define UserService schema
 const userServiceSchema = new mongoose.Schema({
@@ -285,9 +379,12 @@ const userServiceSchema = new mongoose.Schema({
 // Create models
 const User = mongoose.model('User', userSchema);
 const UserService = mongoose.model('UserService', userServiceSchema);
-  
-  
+
+
 // Route to handle form submission
+
+
+
 app.post("/register", async (req, res) => {
   const {
     email,
@@ -313,28 +410,65 @@ app.post("/register", async (req, res) => {
     const uniqueNumber = crypto.randomInt(1000, 9999);
     const password = `${username}@Wono${uniqueNumber}`;
 
-    // Insert user data into User collection
-    const user = new User({
-      name,
-      mobile,
-      email,
-      country,
-      city,
-      state,
-      companyName,
-      industry,
-      companySize,
-      companyType,
-      companyCity,
-      companyState,
-      websiteURL,
-      linkedinURL,
-      username,
-      password
-    });
+    // Check if user already exists
+    let user = await User.findOne({ 'personalInfo.email': email });
+
+    if (!user) {
+      // If user doesn't exist, create a new one
+      user = new User({
+        personalInfo: {
+          name,
+          mobile,
+          email,
+          country,
+          city,
+          state,
+        },
+        companyInfo: {
+          companyName,
+          industry,
+          companySize,
+          companyType,
+          companyCity,
+          companyState,
+          websiteURL,
+          linkedinURL,
+        },
+        credentials: {
+          username,
+          password
+        },
+        selectedServices
+      });
+    } else {
+      // Update existing user
+      user.personalInfo = {
+        name,
+        mobile,
+        email,
+        country,
+        city,
+        state,
+      };
+      user.companyInfo = {
+        companyName,
+        industry,
+        companySize,
+        companyType,
+        companyCity,
+        companyState,
+        websiteURL,
+        linkedinURL,
+      };
+      user.selectedServices = selectedServices;
+      user.credentials = {
+        username,
+        password
+      };
+    }
 
     const savedUser = await user.save();
-    
+
     // Insert selected services into UserService collection
     const serviceEntries = Object.keys(selectedServices)
       .filter(service => selectedServices[service])
@@ -363,7 +497,7 @@ app.post("/register", async (req, res) => {
 
     const companyMailOptions = {
       from: "your_email@gmail.com",
-      to: "company_email@gmail.com",
+      to: "productwon@gmail.com",
       subject: "New User Registration",
       html: `
         <h1>New User Registration Details</h1>
@@ -401,55 +535,108 @@ app.post("/register", async (req, res) => {
 });
 
 
+app.post("/register/section", async (req, res) => {
+  const { section, data } = req.body;
+  console.log(`Received section: ${section}`);
+  console.log('Received data:', data);
+
+  try {
+    // Find the user by email or create a new one
+    let user = await User.findOne({ 'personalInfo.email': data.email });
+    if (!user) {
+      console.log("No user found, creating a new one");
+      user = new User();
+    } else {
+      console.log("User found, updating existing one");
+    }
+
+    // Initialize fields if not present
+    if (!user.personalInfo) user.personalInfo = {};
+    if (!user.companyInfo) user.companyInfo = {};
+    if (!user.selectedServices) user.selectedServices = {};
+
+    // Update user data based on the section
+    switch (section) {
+      case 'personal':
+        user.personalInfo = { ...user.personalInfo, ...data };
+        break;
+      case 'company':
+        user.companyInfo = { ...user.companyInfo, ...data };
+        break;
+      case 'services':
+        user.selectedServices = { ...user.selectedServices, ...data };
+        break;
+      default:
+        return res.status(400).send("Invalid section");
+    }
+
+    // Save the user
+    const savedUser = await user.save();
+    console.log("User saved:", savedUser);
+    res.status(200).send("Section data updated successfully!");
+  } catch (error) {
+    console.error("Database error:", error.message);
+    res.status(500).send("Failed to update section data: " + error.message);
+  }
+});
+
+
+
+
+
+
+
 
 app.post('/reset-password', async (req, res) => {
   const { email, password } = req.body;
 
   if (!email || !password) {
-      return res.status(400).json({ error: 'Email and new password are required' });
+    return res.status(400).json({ error: 'Email and new password are required' });
   }
 
   try {
-      // Update the password in the database
-      const [result] = await promisePool.query(
-          'UPDATE user_data SET password = ? WHERE email = ?',
-          [password, email]
-      );
+    // Update the password in the database
+    const [result] = await promisePool.query(
+      'UPDATE user_data SET password = ? WHERE email = ?',
+      [password, email]
+    );
 
-      // Check if the update was successful
-      if (result.affectedRows === 0) {
-          return res.status(404).json({ error: 'Email not found' });
-      }
+    // Check if the update was successful
+    if (result.affectedRows === 0) {
+      return res.status(404).json({ error: 'Email not found' });
+    }
 
-      res.status(200).json({ message: 'Password updated successfully' });
+    res.status(200).json({ message: 'Password updated successfully' });
   } catch (error) {
-      console.error('Error in /reset-password:', error);
-      res.status(500).json({ error: 'An error occurred while processing your request' });
+    console.error('Error in /reset-password:', error);
+    res.status(500).json({ error: 'An error occurred while processing your request' });
   }
 });
 
 
 // Route to handle user login
 app.post('/login', async (req, res) => {
-  const { username, password } = req.body;
+  const { email, password } = req.body;
 
   try {
-    // Query to check user credentials
-    const [rows] = await promisePool.query(
-      'SELECT * FROM user_data WHERE username = ? AND password = ?',
-      [username, password]
-    );
+    // Query to check user credentials in MongoDB
+    const user = await User.findOne({
+      'personalInfo.email': email,
+      'credentials.password': password
+    });
 
-    if (rows.length === 0) {
+    if (!user) {
       return res.status(401).json({ error: 'Invalid email or password' });
     }
-    const user = rows[0];
+
     // Set session user data
     req.session.user = {
-      id: user.id,
-      email: user.email,
-      name: user.name
+      id: user._id,
+      email: user.personalInfo.email,
+      name: user.personalInfo.name
     };
+
+    // Send back the session user data
     res.json({
       user: req.session.user
     });
@@ -458,6 +645,8 @@ app.post('/login', async (req, res) => {
     res.status(500).json({ error: 'Internal Server Error' });
   }
 });
+
+
 
 //forgot password
 
@@ -530,7 +719,7 @@ app.post('/verify-otp', async (req, res) => {
       return res.status(400).json({ error: 'Invalid OTP' });
     }
 
-     promisePool.query(
+    promisePool.query(
       'UPDATE user_data SET otp = NULL WHERE email = ?', [email]
     );
 
@@ -558,8 +747,10 @@ app.post('/logout', (req, res) => {
 // Route to fetch all users
 app.get("/users", async (req, res) => {
   try {
-    const [rows] = await promisePool.query("SELECT * FROM user_data");
-    res.json(rows);
+    // Fetch all users from the registrationDetails collection
+    const users = await User.find();
+
+    res.json(users); // Send the fetched data as JSON
   } catch (error) {
     console.error("Database error:", error.message);
     res.status(500).send("Failed to fetch user details.");
@@ -575,19 +766,16 @@ app.get("/check-email", async (req, res) => {
   }
 
   try {
-    // Query to check if email exists in the database
-    const [rows] = await promisePool.query(
-      "SELECT COUNT(*) AS count FROM user_data WHERE email = ?",
-      [email]
-    );
-    const isDuplicate = rows[0].count > 0;
+    // Use the Mongoose model to check if the email exists in the collection
+    const isDuplicate = await User.exists({ email: email });
 
-    res.status(200).json({ isDuplicate });
+    res.status(200).json({ isDuplicate: !!isDuplicate });
   } catch (error) {
     console.error("Error checking email:", error);
     res.status(500).json({ error: "Internal server error" });
   }
 });
+
 
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);

@@ -94,8 +94,7 @@
 
 .loginButtonStyling {
     background-color: white;
-    ;
-    color: rgb(10, 169, 239);
+    color: rgb(0, 0, 0);
     padding: 0.5rem 2rem;
     border-radius: 30px;
     margin: 0;
@@ -216,6 +215,9 @@
 .phoneDividerContainer {
     display: none;
 }
+.login-empty-padding{
+    padding-bottom: 13rem;
+}
 
 /* Only Large Screen */
 
@@ -226,6 +228,9 @@
         justify-content: center;
         align-items: center;
     }
+    /* .loginBottomPadding {
+        padding-bottom: 4rem;
+    } */
 
 }
 
@@ -284,6 +289,6 @@
     }
 
     .loginBottomPadding {
-        padding-bottom: 4rem;
+        padding-bottom: 12.34rem;
     }
 }

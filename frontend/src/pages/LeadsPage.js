@@ -241,9 +241,9 @@ const LeadsPage = () => {
           <FourCardsComponents />
         </div> */}
 
-        <div className="leads-heading-section  wono-text-spacing fontPoppinsRegular  topPaddingAboveFirstSection bottomPaddingBelowFirstSection">
+        <div className="leads-heading-section  fontPoppinsRegular  topPaddingAboveFirstSection bottomPaddingBelowFirstSection">
           <h2 className="FFFF mt-2">
-            Generate continues structured leads for your business with the
+            Generate continuos structured leads for your business with the
             support of our automated platform and trained and experienced
             resources.
           </h2>
@@ -313,7 +313,7 @@ const LeadsPage = () => {
           <img src={LeadsImagepng} alt="" className="full-width-image" />
         </div>
 
-        <div className="organic-leads-section   container wono-text-spacing topPaddingForSections bottomPaddingForSections  fontPoppinsRegular">
+        <div className="organic-leads-section container  topPaddingForSections bottomPaddingForSections  fontPoppinsRegular">
           {/* <br /> */}
           {/* <br /> */}
           <div className="extraBottomSpaceOurCoreFocus">
@@ -373,7 +373,7 @@ const LeadsPage = () => {
                   </div>
                   <div className="Tickmark-text">
                     <img src={TickmarkImg} alt="tick-mark"></img>
-                    What's App
+                    WhatsApp
                   </div>
                 </p>
               </div>
@@ -448,7 +448,7 @@ const LeadsPage = () => {
                     <img
                       src={DatabaseImage}
                       alt="tick-mark"
-                      className="WidthHeight1"></img>
+                      className="WidthHeight1 leads-databseImage"></img>
                   </div>
                 </div>
                 {/* <div className="img-row-3  d-flex flex-row justify-content-around align-items-center w-100"> */}
@@ -496,7 +496,7 @@ const LeadsPage = () => {
         {/* <div className="google-sheets-section fontPoppinsRegular spaceBetweenSections"> */}
         <div className="google-sheets-section fontPoppinsRegular   topPaddingForSections bottomPaddingForSections">
           <div>
-            <div className="pb-4  wono-text-spacing ">
+            <div className="pb-4">
               <h2 className="googleSheetsHeading">
                 Automated Google LEAD SHEET!
               </h2>
@@ -504,7 +504,7 @@ const LeadsPage = () => {
                 Never miss any leads generated from our platform.
               </h2>
             </div>
-            <div className="organic-leads-images-section wono-text-spacing topSpaceBetweenSections">
+            <div className="organic-leads-images-section  topSpaceBetweenSections">
               <img
                 src={GoogleSheetsImagepng}
                 alt=""
@@ -514,7 +514,7 @@ const LeadsPage = () => {
           </div>
         </div>
 
-        <div className="marketing-section  wono-text-spacing fontPoppinsRegular  topPaddingForSections bottomPaddingForSections">
+        <div className="marketing-section  fontPoppinsRegular  topPaddingForSections bottomPaddingForSections">
           <div className="marketing-header  ">
             {/* <div>
               <p className="mb-0">RUN & SCALE YOUR BUSINESS</p>
@@ -641,7 +641,7 @@ const LeadsPage = () => {
           <hr className="hrStyling zeroHeight" />
         </div>
 
-        <div className="better-roi-section  wono-text-spacing fontPoppinsRegular topPaddingForSections bottomPaddingForSections ">
+        <div className="better-roi-section  wono-text-spacing fontPoppinsRegular topPaddingInsideSections bottomPaddingForSections ">
           {/* <div className="better-roi h-5  wono-text-spacing "> */}
           <div className="container paddingRight0">
             <div className="row ">
@@ -706,7 +706,7 @@ const LeadsPage = () => {
           <hr className="hrStyling zeroHeight" />
         </div>
 
-        <div className="finer-points-section h-5 wono-text-spacing fontPoppinsRegular topPaddingForSections bottomPaddingForSections">
+        <div className="finer-points-section h-5 fontPoppinsRegular topPaddingForSections bottomPaddingForSections">
           {" "}
           <div className="container pe-0">
             <div className="row ">
@@ -859,14 +859,14 @@ const LeadsPage = () => {
           </div>
         </div> */}
 
-        <div className="last-section body-partners-master w-100 fontPoppinsRegular">
+        <div className="last-section  w-100 fontPoppinsRegular">
           <div className="pt-5 customMargin pb-5">
             <div className="grow-your-business-color">
               <h2 className="m-0 fw-bold">
                 {/* <b className="leadsCtafontSize">
                   Now that’s how we generate continues leads for you!
                 </b> */}
-                Now that’s how we generate continues leads for you!
+                Now that’s how we generate continuos leads for you!
               </h2>
               {/* <br /> */}
 

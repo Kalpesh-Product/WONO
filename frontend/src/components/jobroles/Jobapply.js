@@ -190,8 +190,14 @@ const Jobapply = ({ jobTitle }) => {
                 // max="2024-08-15"
                 placeholder=" "
                 value={formvalues.date}
-                onChange={handleInputChange}></input>
-              <div className="placeholder"></div>
+                onChange={handleInputChange}
+                onFocus={(e) => e.target.parentElement.querySelector('.placeholder').style.display = 'none'}
+        onBlur={(e) => {
+            if (!e.target.value) {
+                e.target.parentElement.querySelector('.placeholder').style.display = 'block';
+            }
+        }}></input>
+              <div className="placeholder" style={{ display: formvalues.date ? 'none' : 'block' }}> Date of Birth</div>
             </div>
           </div>
 
