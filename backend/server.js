@@ -116,71 +116,124 @@ app.post('/banner-email', async (req, res) => {
 })// End Banner-Email
 
 
+const jobApplicationSchema = new mongoose.Schema({
+  jobTitle: String,
+  name: String,
+  email: String,
+  date: Date,
+  number: String,
+  location: String,
+  experience: String,
+  linkedInProfile: String,
+  resume: String,
+  monthlySalary: Number,
+  expectedSalary: Number,
+  daysToJoin: Number,
+  relocateGoa: Boolean,
+  personality: String,
+  skills: String,
+  specialexperience: String,
+  willing: String,
+  message: String
+}, { timestamps: true });
 
+const JobApplication = mongoose.model('JobApplication', jobApplicationSchema);
 
-app.post('/send-email', (req, res) => {
+app.post('/send-email', async (req, res) => {
   const { jobTitle, name, email, date, number, location, experience, linkedInProfile, resume, monthlySalary, expectedSalary,
     daysToJoin, relocateGoa, personality, skills, specialexperience, willing, message } = req.body;
 
-  //Apply form email content
-  const Mailoption = {
-    from: 'anushri.bhagat263@gmail.com',
-    to: email,
-    subject: `Job Application: ${name} - ${jobTitle}`,
-    html: `<head><style>
-table, td {
-  border: 1px solid;
-}
-</style></head>
- <body style="font-family: 'Poppins', sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; -webkit-text-size-adjust: none; -ms-text-size-adjust: none;">
- 
-<div style="width: 100%; max-width: 600px; background-color: #ffffff; margin: 20px auto; padding: 2rem; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
- <div style="padding: 1rem; text-align: center; border-radius: 1rem;">
-                <h1 style="font-size: 2rem; text-align: center; margin: 0; padding-bottom: 20px;">
-                    Application form for the post of<br></br>
-                    <b>${jobTitle}</b>
-                </h1>
-  </div>
-<table style="width: 100%; border-collapse: collapse; border-radius:1rem">
-  <tr>
-    <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">Jobtitle</td>
-    <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">${jobTitle}</td>
-  </tr>
-  <tr>
-    <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">name</td>
-    <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">${name}</td>
-  </tr>
-  <tr>
-    <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">Experience</td>
-    <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">${experience}</td>
-  </tr>
-  <tr>
-    <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">LinkedInProfile</td>
-    <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;"><a href="">${linkedInProfile}</a></td>
-  </tr>
-  <tr>
-    <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">Personality</td>
-    <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">${personality}</td>
-  </tr>
-  <tr>
-    <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">Skills</td>
-    <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">${skills}</td>
-  </tr>
-  <tr>
-    <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">ResumeLink</td>
-    <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;"><a href=${resume}>${resume}</a></td>
-  </tr> 
-</table>
-</div>
-</body>`,
-  };
-
-  transport.sendMail(Mailoption, (error, info) => {
-    if (error) {
-      return res.status(500).send('Failed to send Email', + error.message);
-    }
-    res.status(200).send('Application details have been sent');
+  // Save the application details to MongoDB
+  const jobApplication = new JobApplication({
+    jobTitle,
+    name,
+    email,
+    date,
+    number,
+    location,
+    experience,
+    linkedInProfile,
+    resume,
+    monthlySalary,
+    expectedSalary,
+    daysToJoin,
+    relocateGoa,
+    personality,
+    skills,
+    specialexperience,
+    willing,
+    message
   });
+
+  try {
+    // Save to MongoDB
+    await jobApplication.save();
+
+    // Email options
+    const Mailoption = {
+      from: 'anushri.bhagat263@gmail.com',
+      to: email,
+      subject: `Job Application: ${name} - ${jobTitle}`,
+      html: `<head><style>
+  table, td {
+    border: 1px solid;
+  }
+  </style></head>
+   <body style="font-family: 'Poppins', sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; -webkit-text-size-adjust: none; -ms-text-size-adjust: none;">
+   
+  <div style="width: 100%; max-width: 600px; background-color: #ffffff; margin: 20px auto; padding: 2rem; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+   <div style="padding: 1rem; text-align: center; border-radius: 1rem;">
+                  <h1 style="font-size: 2rem; text-align: center; margin: 0; padding-bottom: 20px;">
+                      Application form for the post of<br></br>
+                      <b>${jobTitle}</b>
+                  </h1>
+    </div>
+  <table style="width: 100%; border-collapse: collapse; border-radius:1rem">
+    <tr>
+      <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">Jobtitle</td>
+      <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">${jobTitle}</td>
+    </tr>
+    <tr>
+      <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">name</td>
+      <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">${name}</td>
+    </tr>
+    <tr>
+      <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">Experience</td>
+      <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">${experience}</td>
+    </tr>
+    <tr>
+      <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">LinkedInProfile</td>
+      <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;"><a href="">${linkedInProfile}</a></td>
+    </tr>
+    <tr>
+      <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">Personality</td>
+      <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">${personality}</td>
+    </tr>
+    <tr>
+      <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">Skills</td>
+      <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">${skills}</td>
+    </tr>
+    <tr>
+      <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">ResumeLink</td>
+      <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;"><a href=${resume}>${resume}</a></td>
+    </tr> 
+  </table>
+  </div>
+  </body>`,
+    };
+
+    // Send email
+    transport.sendMail(Mailoption, (error, info) => {
+      if (error) {
+        return res.status(500).send('Failed to send Email: ' + error.message);
+      }
+      res.status(200).send('Application details have been sent');
+    });
+
+  } catch (error) {
+    console.error('Error saving application:', error);
+    res.status(500).send('Failed to save application');
+  }
 });
 
 // Route to download the CSV file
@@ -579,11 +632,6 @@ app.post("/register/section", async (req, res) => {
     res.status(500).send("Failed to update section data: " + error.message);
   }
 });
-
-
-
-
-
 
 
 
