@@ -1,3 +1,8 @@
+if (process.env.NODE_ENV != "production") {
+  // if the project is deployed for production, the environment variables from .env file will not be used (usually hosting services like heroku, aws, etc have process.env.NODE_ENV set equal to production)
+  require("dotenv").config();
+}
+
 const express = require("express");
 const bodyParser = require("body-parser");
 const nodemailer = require("nodemailer");
@@ -15,7 +20,7 @@ const { parse, format } = require('date-fns');
 
 
 const app = express();
-const port = 5000;
+const port = process.env.PORT;
 
 // Middleware to parse JSON data
 app.use(express.json());
@@ -33,7 +38,7 @@ app.use(session({
   }
 }))
 app.use(cors({
-  origin: ["http://localhost:3000"],
+  origin: [process.env.FRONTEND_PORT],
   methods: ["GET", "POST"],
   credentials: true
 }
@@ -44,7 +49,7 @@ const transporter = nodemailer.createTransport({
   service: "gmail", // You can use other services like Yahoo, Outlook, etc.
   auth: {
     user: "aiwinraj1810@gmail.com", // Your email
-    pass: "egbu dugk nupf xjry", // Your email password or app password
+    pass: process.env.EMAIL_AIWIN_PASS, // Your email password or app password
   },
 });
 
@@ -59,7 +64,10 @@ const transport = nodemailer.createTransport({
 
 
 
-
+// Test route
+app.get("/", (req, res) => {
+  res.json({ message: "Backend here" });
+});
 
 app.post('/', (req, res) => {
   console.log('Session Data:', req.session);
