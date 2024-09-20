@@ -206,9 +206,19 @@
 .capital-last-button-section h1 {
     color: black;
     font-family: Popins-Regular;
-    font-size: 5.8rem;
+    font-size:6rem;
     font-weight: bold;
     padding-bottom: 2rem;
+}
+
+@media (max-width:1440px) {
+    .capital-last-button-section h1 {
+        color: black;
+        font-family: Popins-Regular;
+        font-size: 6rem;
+        font-weight: bold;
+        padding-bottom: 2rem;
+    }
 }
 
 .Connect-with-us-today-btn {

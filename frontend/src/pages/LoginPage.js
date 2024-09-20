@@ -26,66 +26,63 @@ const LoginPage = () => {
   const [modalTitle, setModalTitle] = useState("Error"); // Modal title
   const [modalMessage, setModalMessage] = useState("");
   const [token, setToken] = useState('');
-  axios.defaults.withCredentials = true;
+  // axios.defaults.withCredentials = true;
 
 
   const handleSubmit = async (event) => {
-    event.preventDefault();
+  //   event.preventDefault();
 
-    // Function to decode JWT token
+  
+  //   const usernameRegex = /^.{2,}$/; 
+  //   if (!usernameRegex.test(email)) {
+  //     setModalTitle("Invalid email");
+  //     setModalMessage("Enter a valid email");
+  //     setShowModal(true); 
+  //     return; 
+  //   }
+
+  //   try {
+  //     const response = await axios.post("https://wono-xtev.vercel.app/login", {
+  //       email,
+  //       password,
+  //     });
+
+  //     const { user } = response.data;
+  //     setUser(user);
+  //     navigate("/dashboard");
+  //   } catch (error) {
+  //     setModalTitle("Login Failed");
+  //     setModalMessage("Invalid email or password");
+  //     setShowModal(true); 
+  //     console.error("Login Failed:", error);
+  //   }
+
+  //   setUserName("");
+  //   setPassword("");
+  // };
+
+  // const handleLoginResolve = ({ provider, data }) => {
+  //   console.log('Provider:', provider);
+  //   console.log('Data:', data);
 
 
-    // Username validation using regex
-    const usernameRegex = /^.{2,}$/; // At least 2 characters long
-    if (!usernameRegex.test(email)) {
-      setModalTitle("Invalid email");
-      // setModalMessage("Enter a valid username");
-      setModalMessage("Enter a valid email");
-      setShowModal(true); // Show the modal for the error
-      return; // Exit the function if the username is invalid
-    }
+  //   const token = data.access_token || data.id_token;
 
-    try {
-      const response = await axios.post("https://wono-xtev.vercel.app/login", {
-        email,
-        password,
-      });
+  //   if (token) {
+  //     try {
+       
+  //       const decodedToken = jwtDecode(token);
+  //       console.log('Decoded Token:', decodedToken);
 
-      const { user } = response.data;
-      setUser(user);
-      navigate("/dashboard");
-    } catch (error) {
-      setModalTitle("Login Failed");
-      setModalMessage("Invalid email or password");
-      setShowModal(true); // Show the modal for the error
-      console.error("Login Failed:", error);
-    }
+       
+  //       console.log('User ID:', decodedToken.sub); 
+  //       console.log('Email:', decodedToken.email); 
 
-    setUserName("");
-    setPassword("");
-  };
-
-  const handleLoginResolve = ({ provider, data }) => {
-    console.log('Provider:', provider);
-    console.log('Data:', data);
-
-    // Get the token from data
-    const token = data.access_token || data.id_token;
-
-    if (token) {
-      try {
-        // Decode the JWT token
-        const decodedToken = jwtDecode(token);
-        console.log('Decoded Token:', decodedToken);
-
-        // Example of accessing user information
-        console.log('User ID:', decodedToken.sub); // Example of accessing user ID
-        console.log('Email:', decodedToken.email); // Example of accessing user email
-        // ... access other details
-      } catch (error) {
-        console.error('Error decoding token:', error);
-      }
-    }
+  //     } catch (error) {
+  //       console.error('Error decoding token:', error);
+  //     }
+  //   }
+  navigate('/dashboard')
   };
 
   // const handleUsernameChange = (e) => {
@@ -212,7 +209,7 @@ const LoginPage = () => {
           <div className="loginRightContainer">
             <div className="loginWithSection d-flex flex-column justify-content-center align-items-center">
               <div className="loginWithSection d-flex flex-column justify-content-center align-items-center">
-                <LoginSocialGoogle
+                {/* <LoginSocialGoogle
                   client_id={"358669748567-d4e1dl47ic6patb61sidq0ipdvllb0bn.apps.googleusercontent.com"}
                   scope="openid profile email"
                   access_type="offline"
@@ -221,7 +218,9 @@ const LoginPage = () => {
                     console.log('Error:', err);
                   }}
                 >
-                  <div className="LoginWithGoogleContainer loginWithBox loginWithGoogleBox d-flex justify-content-between align-items-center centerElement w-100">
+                  
+                </LoginSocialGoogle> */}
+                <div className="LoginWithGoogleContainer loginWithBox loginWithGoogleBox d-flex justify-content-between align-items-center centerElement w-100">
                     <div className="loginWithIconBox loginWithGoogleIconBox centerElement">
                       <img
                         src={LoginWithGoogleImage}
@@ -233,7 +232,6 @@ const LoginPage = () => {
                       <div>Continue with Google</div>
                     </div>
                   </div>
-                </LoginSocialGoogle>
               </div>
               <div className="LoginWithFacebookContainer loginWithBox loginWithFacebookBox d-flex justify-content-between align-items-center centerElement">
                 <div className="loginWithIconBox loginWithFacebookIconBox centerElement">

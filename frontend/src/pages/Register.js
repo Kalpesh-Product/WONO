@@ -82,86 +82,87 @@ const Register = () => {
   };
 
   const handleNext = async (e) => {
-    e.preventDefault();
-    const validationErrors = validateCurrentStep();
+    // e.preventDefault();
+    // const validationErrors = validateCurrentStep();
   
-    if (Object.keys(validationErrors).length === 0) {
-      try {
-        // Determine the current section and prepare data
-        let sectionData = {};
-        let sectionName = '';
+    // if (Object.keys(validationErrors).length === 0) {
+    //   try {
+        
+    //     let sectionData = {};
+    //     let sectionName = '';
   
-        // Extract the email from formData for duplicate check
-        const { email } = formData;
+        
+    //     const { email } = formData;
   
-        // Check for duplicate email in the database
-        if (currentStep === 0 && email) { // Assuming email is only in the personal section
-          const isDuplicate = await checkEmailDuplicate(formData.email);
-          if (isDuplicate) {
-            setErrors((prevErrors) => ({
-              ...prevErrors,
-              email: 'This email is already in use.',
-            }));
-            return;
-          }}
+       
+    //     if (currentStep === 0 && email) { 
+    //       const isDuplicate = await checkEmailDuplicate(formData.email);
+    //       if (isDuplicate) {
+    //         setErrors((prevErrors) => ({
+    //           ...prevErrors,
+    //           email: 'This email is already in use.',
+    //         }));
+    //         return;
+    //       }}
   
-        // Set section data based on current step
-        switch (currentStep) {
-          case 0:
-            sectionData = {
-              email: formData.email,
-              name: formData.name,
-              mobile: formData.mobile,
-              country: formData.country,
-              city: formData.city,
-              state: formData.state,
-            };
-            sectionName = 'personal';
-            break;
-          case 1:
-            sectionData = {
-              companyName: formData.companyName,
-              industry: formData.industry,
-              companySize: formData.companySize,
-              companyType: formData.companyType,
-              companyCity: formData.companyCity,
-              companyState: formData.companyState,
-              websiteURL: formData.websiteURL,
-              linkedinURL: formData.linkedinURL,
-            };
-            sectionName = 'company';
-            break;
-          case 2:
-            sectionData = formData.selectedServices;
-            sectionName = 'services';
-            break;
-          // Add more cases as needed
-          default:
-            return;
-        }
+       
+    //     switch (currentStep) {
+    //       case 0:
+    //         sectionData = {
+    //           email: formData.email,
+    //           name: formData.name,
+    //           mobile: formData.mobile,
+    //           country: formData.country,
+    //           city: formData.city,
+    //           state: formData.state,
+    //         };
+    //         sectionName = 'personal';
+    //         break;
+    //       case 1:
+    //         sectionData = {
+    //           companyName: formData.companyName,
+    //           industry: formData.industry,
+    //           companySize: formData.companySize,
+    //           companyType: formData.companyType,
+    //           companyCity: formData.companyCity,
+    //           companyState: formData.companyState,
+    //           websiteURL: formData.websiteURL,
+    //           linkedinURL: formData.linkedinURL,
+    //         };
+    //         sectionName = 'company';
+    //         break;
+    //       case 2:
+    //         sectionData = formData.selectedServices;
+    //         sectionName = 'services';
+    //         break;
+      
+    //       default:
+    //         return;
+    //     }
   
-        // Send data to the backend
-        const response = await fetch("https://wono-xtev.vercel.app/register/section", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ section: sectionName, data: sectionData }),
-        });
+        
+    //     const response = await fetch("https://wono-xtev.vercel.app/register/section", {
+    //       method: "POST",
+    //       headers: {
+    //         "Content-Type": "application/json",
+    //       },
+    //       body: JSON.stringify({ section: sectionName, data: sectionData }),
+    //     });
   
-        if (!response.ok) {
-          throw new Error("Network response was not ok");
-        }
+    //     if (!response.ok) {
+    //       throw new Error("Network response was not ok");
+    //     }
   
-        console.log(await response.text());
+    //     console.log(await response.text());
   
-        // Move to the next step
-        setCurrentStep((prev) => prev + 1);
-      } catch (error) {
-        console.error("There was a problem with the fetch operation:", error);
-        // Handle the error, e.g., show an error message to the user
-      }
-    }
+    
+    //   } catch (error) {
+    //     console.error("There was a problem with the fetch operation:", error);
+        
+    //   }
+      
+    // }
+    setCurrentStep((prev) => prev + 1);
   };
   
 
@@ -788,9 +789,12 @@ const Register = () => {
                       <button
                         className="register-page-button next-button-width"
                         onClick={handleSubmit}>
-                        Submit
+                        Resend
                       </button>
-                      <span>Already have an account ? log-in</span>
+                      <span>Already have an account ? <span style={{textDecoration:'underline'}} onClick={()=>{
+                        navigate('/login')
+                        window.scrollTo({top:0, behavior:'smooth'})
+                        }}>log-in</span></span>
                     </div>
                   </div>
                 </div>
