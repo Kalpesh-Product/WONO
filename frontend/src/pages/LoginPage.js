@@ -46,7 +46,7 @@ const LoginPage = () => {
     }
 
     try {
-      const response = await axios.post("http://localhost:5000/login", {
+      const response = await axios.post("https://wono-xtev.vercel.app/login", {
         email,
         password,
       });

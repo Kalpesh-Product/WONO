@@ -66,7 +66,7 @@ const Register = () => {
   const checkEmailDuplicate = async (email) => {
     try {
       const response = await fetch(
-        `http://localhost:5000/check-email?email=${encodeURIComponent(email)}`
+        `https://wono-xtev.vercel.app/check-email?email=${encodeURIComponent(email)}`
       );
       console.log("Response status:", response.status);
       if (response.status === 200) {
@@ -141,7 +141,7 @@ const Register = () => {
         }
   
         // Send data to the backend
-        const response = await fetch("http://localhost:5000/register/section", {
+        const response = await fetch("https://wono-xtev.vercel.app/register/section", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -266,7 +266,7 @@ const Register = () => {
       };
   
       // Final submission to complete the registration
-      const response = await fetch("http://localhost:5000/register", {
+      const response = await fetch("https://wono-xtev.vercel.app/register", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
