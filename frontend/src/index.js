@@ -7,6 +7,18 @@ import reportWebVitals from './reportWebVitals';
 import {BrowserRouter} from 'react-router-dom'
 import { GoogleOAuthProvider } from '@react-oauth/google';
 
+
+// index.js or App.js
+// const observerErrorHandler = (e) => {
+//   if (e.message === 'ResizeObserver loop completed with undelivered notifications.') {
+//     e.preventDefault();
+//   }
+// };
+
+// window.addEventListener('error', observerErrorHandler);
+
+
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>

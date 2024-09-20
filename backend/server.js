@@ -84,7 +84,7 @@ app.post('/banner-email', async (req, res) => {
 
   const Options = {
     from: 'anushri.bhagat263@gmail.com',
-    to: 'productwonoco@gmail.com', // Send to the user
+    to: email, // Send to the user
     subject: 'Your Data is Received',
     text: `Hello ${name},\n\nWe have received your data with the following details:\n\nName: ${name}\nEmail: ${email}\nMobile: ${number}\nOption: ${selectedOption}\n\nThank you!`
   };

@@ -1,7 +1,7 @@
 // NavBar.js
 import React, { useContext, useState } from "react";
 import { UserContext } from "./UserContext";
-import { useNavigate } from "react-router-dom";
+import { useNavigate,useLocation } from "react-router-dom";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import { Link } from "react-router-dom";
 import axios from "axios";
@@ -10,6 +10,8 @@ import WonoLogo from "../assets/WONO_images/img/WONO_LOGO_white _TP.png";
 
 const NavBar = ({activeTab ,changeActiveTab}) => {
   const navigate = useNavigate();
+  const location = useLocation();
+  const isAuthPage = location.pathname === '/login' || location.pathname === '/register';
   const { user, setUser } = useContext(UserContext);
   const [show, setShow] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -57,21 +59,21 @@ const NavBar = ({activeTab ,changeActiveTab}) => {
           />
         </div>
         <div className="custom-navbar-menu nav-tabss">
-          <Link to='/services' className={activeTab === 'Services'? 'active':''} onClick={()=>{
+          <Link to='/services' className={!isAuthPage && activeTab === 'Services'? 'active':''} onClick={()=>{
             changeActiveTab('Services')
             window.scrollTo({ top: 0, behavior: "smooth" })
             }}>SaaS</Link>
-          <Link to='/capital'  className={activeTab === 'capital'? 'active':''} onClick={()=>{
+          <Link to='/capital'  className={!isAuthPage && activeTab === 'capital'? 'active':''} onClick={()=>{
             changeActiveTab('capital')
             window.scrollTo({ top: 0, behavior: "smooth" })
             }}>Capital</Link>
-          <Link to='/themes' onClick={()=>{changeActiveTab('themes');  window.scrollTo({ top: 0, behavior: "smooth" })}} className={activeTab === 'themes'? 'active':''}
+          <Link to='/themes' onClick={()=>{changeActiveTab('themes');  window.scrollTo({ top: 0, behavior: "smooth" })}} className={!isAuthPage && activeTab === 'themes'? 'active':''}
           >Theme</Link>
           <Link to='/leads' onClick={()=>{
             changeActiveTab('leads');
             window.scrollTo({ top: 0, behavior: "smooth" })
-          }} className={activeTab === 'leads'? 'active':''}>Leads</Link>
-          <Link to='/career'  className={activeTab === 'Career'? 'active':''} onClick={()=>{
+          }} className={!isAuthPage && activeTab === 'leads'? 'active':''}>Leads</Link>
+          <Link to='/career'  className={!isAuthPage && activeTab === 'Career'? 'active':''} onClick={()=>{
             changeActiveTab('Career')
             window.scrollTo({ top: 0, behavior: "smooth" })
             }}>Career</Link>
@@ -102,13 +104,13 @@ const NavBar = ({activeTab ,changeActiveTab}) => {
           ) : (
             <div className="custom-navbar-buttons" >
               <Link
-                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+                onClick={() =>{changeActiveTab(null); window.scrollTo({ top: 0, behavior: "smooth" })}}
                 to="/login"
                 className="login-button">
                 SIGN IN
               </Link>
               <Link
-                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+                onClick={() =>{changeActiveTab(null); window.scrollTo({ top: 0, behavior: "smooth" })}}
                 className="register-button"
                 to="/register">
                 SIGN UP
