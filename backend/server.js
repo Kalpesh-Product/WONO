@@ -11,6 +11,7 @@ const session = require('express-session')
 const cookieParser = require('cookie-parser')
 const crypto = require('crypto');
 const mongoose = require('mongoose');
+const { parse, format } = require('date-fns');
 
 
 const app = express();
@@ -120,15 +121,15 @@ const jobApplicationSchema = new mongoose.Schema({
   jobTitle: String,
   name: String,
   email: String,
-  date: Date,
+  date: String,
   number: String,
   location: String,
   experience: String,
   linkedInProfile: String,
   resume: String,
-  monthlySalary: Number,
-  expectedSalary: Number,
-  daysToJoin: Number,
+  monthlySalary: String,
+  expectedSalary: String,
+  daysToJoin: String,
   relocateGoa: Boolean,
   personality: String,
   skills: String,
@@ -143,12 +144,15 @@ app.post('/send-email', async (req, res) => {
   const { jobTitle, name, email, date, number, location, experience, linkedInProfile, resume, monthlySalary, expectedSalary,
     daysToJoin, relocateGoa, personality, skills, specialexperience, willing, message } = req.body;
 
+  const parsedDate = parse(date, 'dd-MM-yyyy', new Date());
+  const formattedDate = format(parsedDate, 'dd-MM-yyyy');
+
   // Save the application details to MongoDB
   const jobApplication = new JobApplication({
     jobTitle,
     name,
     email,
-    date,
+    date: formattedDate,
     number,
     location,
     experience,
@@ -250,59 +254,59 @@ app.get('/download-csv', (req, res) => {
 
 
 
-app.post('/submit-form', (req, res) => {
-  const { jobTitle, name, email, date, number, location, experience, linkedInProfile, resume, monthlySalary, expectedSalary,
-    daysToJoin, relocateGoa, personality, skills, specialexperience, willing, message } = req.body;
+// app.post('/submit-form', (req, res) => {
+//   const { jobTitle, name, email, date, number, location, experience, linkedInProfile, resume, monthlySalary, expectedSalary,
+//     daysToJoin, relocateGoa, personality, skills, specialexperience, willing, message } = req.body;
 
-  let formData = req.body;
+//   let formData = req.body;
 
-  const query = `INSERT into apply_form (jobTitle,namee,email,application_date,PhoneNumber,location,
-      experience,linkedInProfile,resumelink,monthlySalary,expectedSalary,daysToJoin,relocateGoa,personality,
-      skills,specialexperience,willing,message
-      ) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)`
+//   const query = `INSERT into apply_form (jobTitle,namee,email,application_date,PhoneNumber,location,
+//       experience,linkedInProfile,resumelink,monthlySalary,expectedSalary,daysToJoin,relocateGoa,personality,
+//       skills,specialexperience,willing,message
+//       ) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)`
 
-  promisePool.query(query, [jobTitle, name, email, date, number, location, experience, linkedInProfile, resume,
-    monthlySalary, expectedSalary, daysToJoin, relocateGoa, personality, skills, specialexperience, willing,
-    message
-  ], (err, result) => {
-    if (err) {
-      console.log('Error saving data', err);
-      res.status(500).send('Error saving data');
-      return;
-    }
-    res.status(200).send('Data saved successfully');
-  });
+//   promisePool.query(query, [jobTitle, name, email, date, number, location, experience, linkedInProfile, resume,
+//     monthlySalary, expectedSalary, daysToJoin, relocateGoa, personality, skills, specialexperience, willing,
+//     message
+//   ], (err, result) => {
+//     if (err) {
+//       console.log('Error saving data', err);
+//       res.status(500).send('Error saving data');
+//       return;
+//     }
+//     res.status(200).send('Data saved successfully');
+//   });
 
-  const filePath = path.join(__dirname, "form_data.csv");
+//   const filePath = path.join(__dirname, "form_data.csv");
 
-  const fields = Object.keys(formData);
+//   const fields = Object.keys(formData);
 
-  const csvParser = new Parser({ fields });
+//   const csvParser = new Parser({ fields });
 
-  let csv = csvParser.parse([formData]);
+//   let csv = csvParser.parse([formData]);
 
-  if (fs.existsSync(filePath)) {
-    fs.appendFile(filePath, "\n" + csv, (error) => {
-      if (error) {
-        console.error('Error appending to csv file:', error);
-        res.status(500).send('Failed to send formdata');
-        return;
-      }
-      res.send('FormData saved successfully');
-    });
-  }
-  else {
-    fs.writeFile(filePath, csv, (err) => {
-      if (err) {
-        console.error('Error writing to csv file:', err);
-        res.status(500).send('Failed to send form Data');
-        return;
-      }
-      res.send("Formdata saved successfully");
-    });
-  }
+//   if (fs.existsSync(filePath)) {
+//     fs.appendFile(filePath, "\n" + csv, (error) => {
+//       if (error) {
+//         console.error('Error appending to csv file:', error);
+//         res.status(500).send('Failed to send formdata');
+//         return;
+//       }
+//       res.send('FormData saved successfully');
+//     });
+//   }
+//   else {
+//     fs.writeFile(filePath, csv, (err) => {
+//       if (err) {
+//         console.error('Error writing to csv file:', err);
+//         res.status(500).send('Failed to send form Data');
+//         return;
+//       }
+//       res.send("Formdata saved successfully");
+//     });
+//   }
 
-});
+// });
 
 const enquirySchema = new mongoose.Schema({
   name: String,
@@ -331,28 +335,78 @@ app.post('/enquiries', async (req, res) => {
     await newEnquiry.save();
 
     const userEmailTemplate = (name) => `
-  <div style="font-family: Arial, sans-serif; padding: 20px;">
-    <h2 style="color: #4CAF50;">Thank You for Your Enquiry</h2>
-    <p>Dear ${name},</p>
-    <p>Thank you for your enquiry. We appreciate your interest and will get back to you shortly.</p>
-    <p>Best regards,<br>Your Company Name</p>
-  </div>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Thank You Email</title>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    </head>
+    <body style="font-family: 'Poppins', sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; -webkit-text-size-adjust: none; -ms-text-size-adjust: none;">
+        <div style="width: 100%; max-width: 600px; background-color: #ffffff; margin: 20px auto; padding: 2rem; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+            <div style="background-color: #daf5fe; padding: 1rem; text-align: center; border-radius: 1rem;">
+                <h1 style="font-size: 2rem; text-align: center; margin: 0; padding-bottom: 20px; color: black;">Thank You for Your Enquiry</h1>
+            </div>
+            <div style="padding: 1rem;">
+                <p style="font-size: 16px; color: #333;">Dear ${name},</p>
+                <p style="font-size: 16px; color: #333;">Thank you for your enquiry. We appreciate your interest and will get back to you shortly.</p>
+                <p style="font-size: 16px; color: #333;">Best regards,<br><b>WONOCO PRIVATE LIMITED</b></p>
+            </div>
+        </div>
+    </body>
+    </html>
 `;
 
 
     const companyEmailTemplate = (name, email, mobile, partnerstype, message) => `
-  <div style="font-family: Arial, sans-serif; padding: 20px;">
-    <h2 style="color: #4CAF50;">New Enquiry Received</h2>
-    <p>You have received a new enquiry:</p>
-    <ul>
-      <li><strong>Name:</strong> ${name}</li>
-      <li><strong>Email:</strong> ${email}</li>
-      <li><strong>Mobile:</strong> ${mobile}</li>
-      <li><strong>Partner Type:</strong> ${partnerstype}</li>
-      <li><strong>Message:</strong> ${message}</li>
-    </ul>
-    <p>Best regards,<br>Your Company Name</p>
-  </div>
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>New Enquiry Email</title>
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  </head>
+  <body style="font-family: 'Poppins', sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; -webkit-text-size-adjust: none; -ms-text-size-adjust: none;">
+      <div style="width: 100%; max-width: 600px; background-color: #ffffff; margin: 20px auto; padding: 2rem; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+          <div style="background-color: #daf5fe; padding: 1rem; text-align: center; border-radius: 1rem;">
+            <h1 style="font-size: 2rem; text-align: center; margin: 0; padding-bottom: 20px; color: black;">
+                W<span style="color: #0d6efd;">O</span>N<span style="color: #0d6efd;">O</span> enquiry
+            </h1>
+            
+          </div>
+          <p style="font-size: 16px; color: #333;">New enquiry recieved</p>
+          <table style="width: 100%; border-collapse: collapse;">
+              <tr>
+                  <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;"><strong>Name:</strong></td>
+                  <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">${name}</td>
+              </tr>
+              <tr>
+                  <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;"><strong>Email:</strong></td>
+                  <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">${email}</td>
+              </tr>
+              <tr>
+                  <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;"><strong>Mobile:</strong></td>
+                  <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">${mobile}</td>
+              </tr>
+              <tr>
+                  <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;"><strong>Partner Type:</strong></td>
+                  <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">${partnerstype}</td>
+              </tr>
+              <tr>
+                  <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;"><strong>Message:</strong></td>
+                  <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">${message}</td>
+              </tr>
+          </table>
+          <p>Best regards,</p>
+          <b><p style="font-size: 16px; color: #333;">
+            W<span style="color: #0d6efd;">O</span>N<span style="color: #0d6efd;">O</span>C<span style="color: #0d6efd;">O</span> PRIVATE LIMITED
+        </p>
+        </b>
+      </div>
+  </body>
+  </html>
 `;
 
 
@@ -387,7 +441,7 @@ const userSchema = new mongoose.Schema({
   personalInfo: {
     name: { type: String, required: false },
     mobile: { type: String, required: false },
-    email: { type: String, required: false }, // Make optional
+    email: { type: String, required: false, unique : true }, // Make optional
     country: String,
     city: String,
     state: String,
@@ -418,6 +472,8 @@ const userSchema = new mongoose.Schema({
     service3: { type: Boolean, default: false },
     service4: { type: Boolean, default: false },
   },
+
+  otp: { type: String, required: false },
 
 }, { collection: 'registrationDetails' });
 
@@ -633,7 +689,76 @@ app.post("/register/section", async (req, res) => {
   }
 });
 
+app.post('/forgot-password', async (req, res) => {
+  const { email } = req.body;
 
+  if (!email) {
+    return res.status(400).json({ error: 'Email is required' });
+  }
+
+  try {
+    const user = await User.findOne({ 'personalInfo.email': email });
+
+    if (!user) {
+      return res.status(404).json({ error: 'Email not found' });
+    }
+
+    const generatedOTP = crypto.randomInt(100000, 999999).toString();
+
+    user.otp = generatedOTP;
+    await user.save();
+
+    const mailOptions = {
+      from: 'aiwinraj1810@gmail.com',
+      to: email,
+      subject: 'Password Reset OTP',
+      text: `Your OTP for password reset is ${generatedOTP}`
+    };
+
+    try {
+      await transporter.sendMail(mailOptions);
+      res.status(200).json({ message: 'OTP sent successfully' });
+    } catch (error) {
+      console.error('Error sending OTP email:', error);
+      res.status(500).json({ error: 'Failed to send OTP email' });
+    }
+
+  } catch (error) {
+    console.error('Error in /forgot-password:', error);
+    res.status(500).json({ error: 'An error occurred while processing your request' });
+  }
+});
+
+//verify otp
+
+app.post('/verify-otp', async (req, res) => {
+  const { email, otp } = req.body;
+
+  if (!email || !otp) {
+    return res.status(400).json({ error: 'Email and OTP are required' });
+  }
+
+  try {
+    const user = await User.findOne({ 'personalInfo.email': email });
+
+    if (!user) {
+      return res.status(404).json({ error: 'Email not found' });
+    }
+
+    if (otp !== user.otp) {
+      return res.status(400).json({ error: 'Invalid OTP' });
+    }
+
+    user.otp = null; // Clear the OTP
+    await user.save();
+
+    res.status(200).json({ message: 'OTP verified successfully' });
+
+  } catch (error) {
+    console.error('Error in /verify-otp:', error);
+    res.status(500).json({ error: 'An error occurred while processing your request' });
+  }
+});
 
 app.post('/reset-password', async (req, res) => {
   const { email, password } = req.body;
@@ -643,16 +768,14 @@ app.post('/reset-password', async (req, res) => {
   }
 
   try {
-    // Update the password in the database
-    const [result] = await promisePool.query(
-      'UPDATE user_data SET password = ? WHERE email = ?',
-      [password, email]
-    );
+    const user = await User.findOne({ 'personalInfo.email': email });
 
-    // Check if the update was successful
-    if (result.affectedRows === 0) {
+    if (!user) {
       return res.status(404).json({ error: 'Email not found' });
     }
+
+    user.credentials.password = password; // Update password
+    await user.save();
 
     res.status(200).json({ message: 'Password updated successfully' });
   } catch (error) {
@@ -698,86 +821,7 @@ app.post('/login', async (req, res) => {
 
 //forgot password
 
-app.post('/forgot-password', async (req, res) => {
-  const { email } = req.body;
 
-  if (!email) {
-    return res.status(400).json({ error: 'Email is required' });
-  }
-
-  try {
-    const [rows] = await promisePool.query(
-      'SELECT * FROM user_data WHERE email = ?', [email]
-    );
-
-    if (rows.length === 0) {
-      return res.status(404).json({ error: 'Email not found' });
-    }
-
-    const generatedOTP = crypto.randomInt(100000, 999999);
-
-    await promisePool.query(
-      'UPDATE user_data SET otp = ? WHERE email = ?', [generatedOTP, email]
-    );
-
-    const mailOptions = {
-      from: 'aiwinraj1810@gmail.com',
-      to: email,
-      subject: 'Password Reset OTP',
-      text: `Your OTP for password reset is ${generatedOTP}`
-    };
-
-    try {
-      await transporter.sendMail(mailOptions);
-      res.status(200).json({ message: 'OTP sent successfully' });
-    } catch (error) {
-      console.error('Error sending OTP email:', error);
-      res.status(500).json({ error: 'Failed to send OTP email' });
-    }
-
-  } catch (error) {
-    console.error('Error in /forgot-password:', error);
-    res.status(500).json({ error: 'An error occurred while processing your request' });
-  }
-});
-
-//verify otp
-
-app.post('/verify-otp', async (req, res) => {
-  const { email, otp } = req.body;
-  console.log(req.body)
-
-  if (!email || !otp) {
-    return res.status(400).json({ error: 'Email and OTP are required' });
-  }
-
-  try {
-    const [rows] = await promisePool.query(
-      'SELECT otp FROM user_data WHERE email = ?', [email]
-    );
-
-    if (rows.length === 0) {
-      return res.status(404).json({ error: 'Email not found' });
-    }
-    console.log(email)
-    const storedOtp = rows[0].otp;
-    console.log(rows[0].otp)
-    console.log(storedOtp)
-    if (otp !== storedOtp) {
-      return res.status(400).json({ error: 'Invalid OTP' });
-    }
-
-    promisePool.query(
-      'UPDATE user_data SET otp = NULL WHERE email = ?', [email]
-    );
-
-    res.status(200).json({ message: 'OTP verified successfully' });
-
-  } catch (error) {
-    console.error('Error in /verify-otp:', error);
-    res.status(500).json({ error: 'An error occurred while processing your request' });
-  }
-});
 
 
 // server.js or your main server file
@@ -814,8 +858,7 @@ app.get("/check-email", async (req, res) => {
   }
 
   try {
-    // Use the Mongoose model to check if the email exists in the collection
-    const isDuplicate = await User.exists({ email: email });
+    const isDuplicate = await User.findOne({ 'personalInfo.email': email });
 
     res.status(200).json({ isDuplicate: !!isDuplicate });
   } catch (error) {

@@ -177,7 +177,7 @@ const LoginPage = () => {
 
                   <Grid style={{ paddingTop: '0' }} p={0} item xs={12}>
                     <Box p={0} mt={2}>
-                      <a href="#" style={{ textDecoration: 'none' }}>Forgot Password?</a>
+                      <Link to="/forgot-password" style={{ textDecoration: 'none' }}>Forgot Password?</Link>
                     </Box>
                   </Grid>
 

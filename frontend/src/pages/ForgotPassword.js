@@ -7,6 +7,7 @@ import Batman from '../assets/batman.png'
 import Spiderman from '../assets/spiderman.png'
 import Slider from "react-slick";
 import BookingEngine from '../assets/WONO_images/img/booking_engine_login.png'
+import { TextField, Button, Grid, Typography } from '@mui/material';
 
 const ForgotPassword = () => {
     const navigate = useNavigate();
@@ -202,40 +203,57 @@ const ForgotPassword = () => {
                 {/* Email form */}
                 {!passwordReset && (
                     <form className='forgot-password-form' onSubmit={handleSubmit}>
-                        <div className="mb-3">
-                            <input
-                                type="email"
-                                name="email"
-                                className="form-control"
-                                placeholder="Email Address"
-                                aria-label="email"
-                                value={emailFormData.email}
-                                onChange={handleEmailChange}
-                            />
-                            {error && <div className="text-danger">{error}</div>}
-                        </div>
+                        <Grid container spacing={2}>
+                            <Grid item xs={12}>
+                                <TextField
+                                    fullWidth
+                                    label="Email Address"
+                                    name="email"
+                                    variant="outlined"
+                                    type="email"
+                                    value={emailFormData.email}
+                                    onChange={handleEmailChange}
+                                    error={!!error} // Displays error style if error exists
+                                    helperText={error} // Displays error message
+                                    aria-label="email"
+                                />
+                            </Grid>
+                            <div className="forgot-password-button">
 
-                        <div className="mb-3">
-                            <button type="submit" className="forgot-password-button w-100">
-                                Send OTP
-                            </button>
-                        </div>
+                                <button
+                                    type="submit"
+                                    className='submit-button'
+                                >
+                                    Send OTP
+                                </button>
+
+                            </div>
+                        </Grid>
                     </form>
                 )}
 
                 {/* OTP form */}
                 {passwordReset && !otpVerification && (
-                    <form className='forgot-password-form' onSubmit={handleOTPsumbit}>
-                        <div className="mb-3">
-                            <input
-                                type="text"
-                                name="otp"
-                                placeholder='Enter OTP'
-                                value={otpForm.otp}
-                                onChange={handleOtpChange}
-                                required
-                            />
-                            <button type='submit' style={{ margin: '1rem 0 1rem 0' }} className="forgot-password-button w-100 p-20">Verify OTP</button>
+                    <form className="forgot-password-form" onSubmit={handleOTPsumbit}>
+                        <TextField
+                            variant="outlined"
+                            margin="normal"
+                            fullWidth
+                            required
+                            label="Enter OTP"
+                            name="otp"
+                            value={otpForm.otp}
+                            onChange={handleOtpChange}
+                        />
+                        <div className="forgot-password-button">
+
+                            <button
+                                type="submit"
+                                className='submit-button'
+                            >
+                                Verify OTP
+                            </button>
+
                         </div>
                     </form>
                 )}
@@ -243,32 +261,39 @@ const ForgotPassword = () => {
                 {/* New password form */}
                 {passwordReset && otpVerification && (
                     <form className='forgot-password-form' onSubmit={handlePasswordSubmit}>
-                        <div className="mb-3">
-                            <input
-                                type="password"
-                                name="newPassword"
-                                placeholder="New Password"
-                                value={newPassword}
-                                onChange={handlePasswordChange}
-                                required
-                            />
-                        </div>
-                        <div className="mb-3">
-                            <input
-                                type="password"
-                                name="confirmPassword"
-                                placeholder="Confirm New Password"
-                                value={confirmPassword}
-                                onChange={handlePasswordChange}
-                                required
-                            />
-                        </div>
-                        {error && <div className="text-danger">{error}</div>}
-                        {successMessage && <div className="text-success">{successMessage}</div>}
-                        <div className="mb-3">
-                            <button type="submit" className="forgot-password-button w-100 w-100">
-                                Reset Password
+                        <TextField
+                            variant="outlined"
+                            margin="normal"
+                            fullWidth
+                            required
+                            type="password"
+                            name="newPassword"
+                            label="New Password"
+                            value={newPassword}
+                            onChange={handlePasswordChange}
+                        />
+                        <TextField
+                            variant="outlined"
+                            margin="normal"
+                            fullWidth
+                            required
+                            type="password"
+                            name="confirmPassword"
+                            label="Confirm New Password"
+                            value={confirmPassword}
+                            onChange={handlePasswordChange}
+                        />
+                        {error && <Typography color="error" variant="body2">{error}</Typography>}
+                        {successMessage && <Typography color="success" variant="body2">{successMessage}</Typography>}
+                        <div className="forgot-password-button">
+
+                            <button
+                                type="submit"
+                                className='submit-button'
+                            >
+                                Change password
                             </button>
+
                         </div>
                     </form>
                 )}
@@ -277,7 +302,7 @@ const ForgotPassword = () => {
                     <span>Remembered your password? <Link to="/login" className="text-primary">Login</Link></span>
                 </div>
             </div>
-            <div className="forgot-password-right-container">
+            {/* <div className="forgot-password-right-container">
                 <div className="container" style={{backgroundColor:'white', borderRadius:'20px'}}>
                     <div className="login-carousel-container">
                         <Slider {...settings}>
@@ -296,7 +321,7 @@ const ForgotPassword = () => {
                     </div>
 
                 </div>
-            </div>
+            </div> */}
 
             {/* Toast notifications */}
             <ToastContainer className="p-3" position="top-center">

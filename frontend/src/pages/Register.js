@@ -63,6 +63,24 @@ const Register = () => {
     handleCheckboxChange(service);
   };
 
+  const checkEmailDuplicate = async (email) => {
+    try {
+      const response = await fetch(
+        `http://localhost:5000/check-email?email=${encodeURIComponent(email)}`
+      );
+      console.log("Response status:", response.status);
+      if (response.status === 200) {
+        const result = await response.json();
+        console.log("Duplicate check result:", result);
+        return result.isDuplicate;
+      }
+      throw new Error("Failed to check email");
+    } catch (error) {
+      console.error("Error checking email:", error);
+      return false;
+    }
+  };
+
   const handleNext = async (e) => {
     e.preventDefault();
     const validationErrors = validateCurrentStep();
@@ -73,6 +91,21 @@ const Register = () => {
         let sectionData = {};
         let sectionName = '';
   
+        // Extract the email from formData for duplicate check
+        const { email } = formData;
+  
+        // Check for duplicate email in the database
+        if (currentStep === 0 && email) { // Assuming email is only in the personal section
+          const isDuplicate = await checkEmailDuplicate(formData.email);
+          if (isDuplicate) {
+            setErrors((prevErrors) => ({
+              ...prevErrors,
+              email: 'This email is already in use.',
+            }));
+            return;
+          }}
+  
+        // Set section data based on current step
         switch (currentStep) {
           case 0:
             sectionData = {
@@ -126,11 +159,12 @@ const Register = () => {
         setCurrentStep((prev) => prev + 1);
       } catch (error) {
         console.error("There was a problem with the fetch operation:", error);
+        // Handle the error, e.g., show an error message to the user
       }
     }
   };
   
-  
+
   
   
   // Helper function to get section name
@@ -212,21 +246,6 @@ const Register = () => {
     return newErrors;
   };
 
-  const checkEmailDuplicate = async (email) => {
-    try {
-      const response = await fetch(
-        `http://localhost:5000/check-email?email=${encodeURIComponent(email)}`
-      );
-      if (response.status === 200) {
-        const result = await response.json();
-        return result.isDuplicate;
-      }
-      throw new Error("Failed to check email");
-    } catch (error) {
-      console.error("Error checking email:", error);
-      return false;
-    }
-  };
   //handlesubmit section
   const handleSubmit = async (event) => {
     event.preventDefault();
