@@ -84,7 +84,7 @@ app.post('/banner-email',async(req,res)=>{
 
   const Options = {
     from: 'anushri.bhagat263@gmail.com',
-    to: 'productwonoco@gmail.com', // Send to the user
+    to: email, // Send to the user
     subject: 'Your Data is Received',
     text: `Hello ${name},\n\nWe have received your data with the following details:\n\nName: ${name}\nEmail: ${email}\nMobile: ${number}\nOption: ${selectedOption}\n\nThank you!`
 };
@@ -126,7 +126,7 @@ app.post('/send-email', (req,res) =>{
         //Apply form email content
         const Mailoption = {
             from:'anushri.bhagat263@gmail.com',
-            to:email,
+            to:'productwonoco@gmail.com',
             subject:`Job Application: ${name} - ${jobTitle}`,
             html:`<head><style>
 table, td {
@@ -176,12 +176,31 @@ table, td {
 </body>`,
         };
 
+        const autoReplyOptions = {
+          from: 'anushri.bhagat263@gmail.com',
+          to: email, // Send to yourself
+          subject: 'New Submission Received',
+          html: `<h1>Thank you for your concern.</h1>
+          <br></br>
+          <p>
+          We have received your application. We will get back to you in 24hrs.
+          </p>`
+      };
+
+
         transport.sendMail(Mailoption,(error,info)=>{
             if(error){
                 return res.status(500).send('Failed to send Email',+ error.message);
             }
             res.status(200).send('Application details have been sent');
   });
+        transport.sendMail(autoReplyOptions,(error,info)=>{
+          if(error){
+            return res.status(500).send('Failed to send Email',+ error.message);
+        }
+        res.status(200).send('Application details have been sent');
+
+        })
 });
 
 // Route to download the CSV file
