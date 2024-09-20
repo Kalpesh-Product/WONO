@@ -38,7 +38,7 @@ app.use(session({
   }
 }))
 app.use(cors({
-  origin: [process.env.FRONTEND_PORT],
+  origin: process.env.FRONTEND_PORT,
   methods: ["GET", "POST"],
   credentials: true
 }
