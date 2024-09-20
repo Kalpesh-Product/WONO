@@ -1,7 +1,7 @@
 // NavBar.js
 import React, { useContext, useState } from "react";
 import { UserContext } from "./UserContext";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import { Link } from "react-router-dom";
 import axios from "axios";
@@ -13,6 +13,15 @@ import ProfileImage from "../assets/WONO_images/img/wono-img-profile.png";
 
 const NavBar = ({ activeTab, changeActiveTab }) => {
   const navigate = useNavigate();
+
+  const location = useLocation();
+  const isAuthPage =
+    location.pathname === "/login" || location.pathname === "/register";
+  const isthempage = location.pathname === "/themes";
+  const isservices = location.pathname === "/services";
+  const isleadspage = location.pathname === "/leads";
+  const iscareerpage = location.pathname === "/career";
+  const iscapitalpage = location.pathname === "/capital";
   const { user, setUser } = useContext(UserContext);
   const [show, setShow] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -64,7 +73,11 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
             <>
               <Link
                 to="/services"
-                className={activeTab === "Services" ? "active" : ""}
+                className={
+                  (!isAuthPage && isservices) || activeTab === "Services"
+                    ? "active"
+                    : ""
+                }
                 onClick={() => {
                   changeActiveTab("Services");
                   window.scrollTo({ top: 0, behavior: "smooth" });
@@ -73,7 +86,12 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
               </Link>
               <Link
                 to="/capital"
-                className={activeTab === "capital" ? "active" : ""}
+                className={
+                  (!isAuthPage && iscapitalpage && !isservices) ||
+                  activeTab === "capital"
+                    ? "active"
+                    : ""
+                }
                 onClick={() => {
                   changeActiveTab("capital");
                   window.scrollTo({ top: 0, behavior: "smooth" });
@@ -86,7 +104,11 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
                   changeActiveTab("themes");
                   window.scrollTo({ top: 0, behavior: "smooth" });
                 }}
-                className={activeTab === "themes" ? "active" : ""}>
+                className={
+                  (!isAuthPage && isthempage) || activeTab === "themes"
+                    ? "active"
+                    : ""
+                }>
                 Theme
               </Link>
               <Link
@@ -95,12 +117,19 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
                   changeActiveTab("leads");
                   window.scrollTo({ top: 0, behavior: "smooth" });
                 }}
-                className={activeTab === "leads" ? "active" : ""}>
+                className={
+                  (!isAuthPage && !isservices && isleadspage) ||
+                  activeTab === "leads"
+                    ? "active"
+                    : ""
+                }>
                 Leads
               </Link>
               <Link
                 to="/career"
-                className={activeTab === "Career" ? "active" : ""}
+                className={
+                  !isAuthPage && activeTab === "Career" ? "active" : ""
+                }
                 onClick={() => {
                   changeActiveTab("Career");
                   window.scrollTo({ top: 0, behavior: "smooth" });
