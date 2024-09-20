@@ -101,7 +101,7 @@ const Jobapply = ({ jobTitle }) => {
         if (
             formvalues.name === "" ||
             formvalues.email === "" ||
-            formvalues.date === "" ||
+           
             formvalues.daysToJoin === "" ||
             formvalues.expectedSalary === "" ||
             formvalues.experience === "" ||
@@ -192,7 +192,7 @@ const Jobapply = ({ jobTitle }) => {
                             <DatePicker
                                 label="Date of Birth"
                                 value={formvalues.date ? parse(formvalues.date, 'dd-MM-yyyy', new Date()) : null}
-                                onChange={handleChange('date')} 
+                                // onChange={handleChange('date')} 
                                 slotProps={{ textField: { fullWidth: true } }}
                                 
                                 
