@@ -79,7 +79,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
-
+@font-face {
+    font-family: Caveat;
+    src: url('../assets/WONO_images/img/fonts/Caveat.ttf');
+}
 
 @font-face {
     font-family: BAUHS93;
@@ -223,8 +226,10 @@
     color: black;
     font-size: 6rem;
     /* font-family: Mistral; */
-    font-family: Telma-Variable;
+    font-family: Caveat;
     margin-top: 3rem;
+    text-transform: uppercase;
+    font-weight: 900;
     /* padding: 6rem 6rem 1rem 6rem; */
 }
 
@@ -233,7 +238,7 @@
     color: rgb(10, 169, 239);
     display: contents;
     /* font-family: Mistral; */
-    font-family: Telma-Variable;
+    font-family: Caveat;
 }
 
 .n {
@@ -269,8 +274,8 @@
     width: 60%;
 }
 
-/* Responsive styles for screens 768px and below */
-@media (max-width: 768px) {
+/* Responsive styles for screens 1024px and below */
+@media (max-width: 1024px) {
     .home-page-container {
         grid-template-columns: 1fr;
         /* Stack columns vertically */
@@ -280,12 +285,11 @@
     }
 
     .home-main-title {
-        /* padding: 0rem 2rem 2rem 2rem; */
-        color: black;
-        font-size: 2rem;
-        /* font-family: Mistral; */
+        color: #000;
         font-family: Telma-Variable;
-        margin-top: 1rem;
+        font-size: 3.2rem;
+        margin-top: 0;
+
     }
 
     .home-section-buttons {
@@ -332,10 +336,104 @@
     }
 
     .home-desc {
-        text-align: center;
-        padding: 1rem;
         font-family: Popins-Medium;
+        padding: 1rem;
+        text-align: center;
+        font-size:0.9rem;
+    }
 
+    .home-desc span {
+        font-size: 1rem;
+    }
+
+    .form-card {
+        align-items: center;
+        margin: 3rem 0 0rem 0;
+        width: 80%;
+        height: 60%;
+        padding: 1.5rem;
+    }
+
+    .w {
+        margin-left: -7px;
+    }
+
+    .n {
+        margin-left: 5px;
+    }
+
+    .c {
+        margin-left: 1px;
+    }
+
+}
+
+
+@media (max-width: 768px) {
+    .home-page-container {
+        grid-template-columns: 1fr;
+        /* Stack columns vertically */
+        height: 100vh;
+        /* Adjust height to fit content */
+        padding: 0;
+    }
+
+    .home-main-title {
+        color: #000;
+        font-family: Telma-Variable;
+        font-size: 2rem;
+        margin-top: 0;
+
+    }
+
+    .home-section-buttons {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* padding-left: 1rem; */
+    }
+    .home-section-register-button-space{
+        width: 90%;
+    }
+
+    .home-section-register-button {
+        width: 100%;
+        margin: 0;
+        background-color: rgb(10, 169, 239);
+        padding: 0.5rem 2rem 0.5rem 2rem;
+        color: black;
+        border-radius: 30px;
+        border: none;
+        font-family: Popins-Regular;
+        cursor: pointer;
+    }
+
+
+    .background-div {
+        height: 100%;
+        /* Adjust background height to fit the container */
+    }
+
+    .first-section-grid-item-1 {
+        /* display: block; */
+        /* height: 100vh; */
+        /* margin-bottom: 4rem; */
+        margin-top: 4rem;
+    }
+
+    .first-section-grid-item-2 {
+
+        grid-template-columns: 1fr;
+        border: none;
+        /* Optional: remove border if needed */
+        margin-bottom: 5rem;
+    }
+
+    .home-desc {
+        font-family: Popins-Medium;
+        padding: 1rem;
+        text-align: center;
+        font-size:0.9rem;
     }
 
     .home-desc span {
@@ -441,7 +539,24 @@
 }
 
 
-
+@media (max-width:1024px) {
+    .N-Commerce {
+        flex: 0 0 53%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        font-family: Bebas-Regular;
+        padding: 0rem 4rem;
+        padding-right: 3rem;
+    }
+    .Globe-N-Commerce {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        height: 60vh;
+        background-color: black;
+    }
+}
 
 @media (max-width: 768px) {
 
@@ -480,7 +595,8 @@
     .Globe-N-Commerce {
         display: flex;
         flex-direction: column;
-        height: 100vh;
+        height: 100%;
+        padding: 2rem 0;
     }
 
     .Globe img {
@@ -862,10 +978,9 @@
 }
 
 .website-panel-container {
-    padding: 4rem 7.5rem 4rem 7.5rem;
-    background-color: #e9f9ff;
+    padding: 4rem 8rem 4rem 8rem;
+    background-color: #f7f7f7;
     color: black;
-    margin: 2rem 0rem 0 0;
 
 }
 
@@ -987,7 +1102,7 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 18rem;
+    height: auto;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
@@ -1005,6 +1120,42 @@
     /* Chrome, Safari, and Opera */
 }
 
+
+
+
+@media (max-width:1024px) {
+    .website-panel-container {
+        padding: 4rem;
+        background-color: #f7f7f7;
+        color: black;
+    
+    }
+
+    .website-panel-content {
+        display: grid;
+        grid-template-columns: 50% 1fr;
+        padding: 2rem 0;
+        gap: 2rem;
+    
+        margin-bottom: 20px;
+    }
+
+    .website-panel-right .template-preview-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    }
+    
+    .template-preview-container img {
+        width: 100%;
+        height: 100%;
+        transition: all ease 0.3s;
+        vertical-align: middle;
+    }
+}
 
 @media (max-width:768px) {
     .website-container-master {
@@ -1062,12 +1213,12 @@
     }
 
     .website-panel-header h3 {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         text-align: left;
     }
 
     .website-panel-header p {
-        font-size: 1.2rem;
+        font-size: 1rem;
         text-align: left;
     }
 
@@ -1115,6 +1266,13 @@
         margin-top: 0 !important;
         padding: 0 1.9rem;
         padding-right: 1.3rem;
+    }
+}
+@media (max-width:1024px) {
+    .testimonial-section {
+        /* background-color: #cae4ff !important; */
+        margin-top: 0 !important;
+        padding: 0 1.6rem 0 1.3rem;
     }
 }
 

@@ -19,6 +19,11 @@ font-size: 32px;
 margin: 0;
 padding: 2rem 1rem 2rem 1rem;
 }
+@media (max-width:1024px) {
+    .career-section {
+        padding: 2rem 3rem 6rem 3rem;
+    }
+}
 
 @media (max-width: 768px) {
     .career-section{

@@ -65,24 +65,24 @@ const Register = () => {
 
   const handleNext = async (e) => {
     e.preventDefault();
-    // const validationErrors = validateCurrentStep();
+    const validationErrors = validateCurrentStep();
 
-    // if (Object.keys(validationErrors).length === 0) {
+    if (Object.keys(validationErrors).length === 0) {
 
-    //   if (currentStep === 0 && formData.email) {
-    //     const isDuplicate = await checkEmailDuplicate(formData.email);
-    //     if (isDuplicate) {
-    //       setErrors((prevErrors) => ({
-    //         ...prevErrors,
-    //         email: 'This email is already in use.',
-    //       }));
-    //       return;
-    //     }
-    //   }
+      if (currentStep === 0 && formData.email) {
+        const isDuplicate = await checkEmailDuplicate(formData.email);
+        if (isDuplicate) {
+          setErrors((prevErrors) => ({
+            ...prevErrors,
+            email: 'This email is already in use.',
+          }));
+          return;
+        }
+      }
 
-    //   console.log(formData);
-    // }
-    setCurrentStep((prev) => prev + 1);
+      console.log(formData);
+      setCurrentStep((prev) => prev + 1);
+    }
   };
 
   const handleBack = () => {
@@ -228,7 +228,7 @@ const Register = () => {
         <div
           className="card flex justify-content-center"
           style={{ backgroundColor: "white", padding: 0, border: 'none' }}>
-          <Stepper style={{ paddingTop: 0 }} activeStep={currentStep}>
+          <Stepper style={{ paddingTop: 0, textTransform:'uppercase' }} activeStep={currentStep}>
             <Step label="Personal Details" />
             <Step label="Company Details" />
             <Step label="Services" />
@@ -578,7 +578,7 @@ const Register = () => {
             {currentStep === 2 && (
               <>
                 <div className="registration-section-header">
-                  <h2>Select your services</h2>
+                  <h2 style={{textTransform:'uppercase'}}>Select your services</h2>
                 </div>
 
                 <div className="register-container">
