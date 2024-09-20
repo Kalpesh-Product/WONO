@@ -130,7 +130,7 @@ const Ticker = () => {
         <h1 className="headlineFont" id="headline">
           Countdown To Setting Up Your Account
         </h1>
-        <div id="countdown">
+        {/* <div id="countdown">
           <div class="time-unit">
             <span id="days"></span> days
           </div>
@@ -140,6 +140,24 @@ const Ticker = () => {
           <div class="time-unit">
             <span id="minutes"></span> Minutes
           </div>
+          <div class="time-unit">
+            <span id="seconds"></span> Seconds
+          </div>
+        </div> */}
+
+        <div id="countdown">
+          <div class="time-unit">
+            <span id="days"></span> days
+          </div>
+          <div class="colon">:</div> {/* Colon after days */}
+          <div class="time-unit">
+            <span id="hours"></span> Hours
+          </div>
+          <div class="colon">:</div> {/* Colon after hours */}
+          <div class="time-unit">
+            <span id="minutes"></span> Minutes
+          </div>
+          <div class="colon">:</div> {/* Colon after minutes */}
           <div class="time-unit">
             <span id="seconds"></span> Seconds
           </div>

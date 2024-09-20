@@ -55,7 +55,8 @@ body {
     display: flex;
     justify-content: center;
     /* gap: 1em; */
-    gap: 5em;
+    /* gap: 5em; */
+    gap: 2em;
 }
 
 .time-unit {
@@ -99,6 +100,18 @@ body {
     background-color: #0093E9;
 }
 
+
+.colon {
+    font-size: 8rem;
+    /* Adjust the size to match the time units */
+    padding: 0 0.2em;
+    /* padding: 0; */
+    /* Adjust the spacing around the colons */
+    color: #333;
+    /* Set the color */
+    text-align: center;
+}
+
 @media all and (max-width: 768px) {
     /* 
         .headlineFont {
@@ -129,7 +142,9 @@ body {
     #countdown {
         display: flex;
         justify-content: center;
-        gap: 1em;
+        /* gap: 1em; */
+        /* gap: 0.5rem; */
+        gap: 0;
         /* gap: 5em; */
     }
 
@@ -137,5 +152,16 @@ body {
         display: block;
         font-size: 4.5rem;
         /* font-size: 8.5rem; */
+    }
+
+    .colon {
+        font-size: 4rem;
+        /* Adjust the size to match the time units */
+        /* padding: 0 0.1em; */
+        padding: 0;
+        /* Adjust the spacing around the colons */
+        color: #333;
+        /* Set the color */
+        text-align: center;
     }
 }

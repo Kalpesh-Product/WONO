@@ -7,6 +7,9 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import "../styles/componentStyle.css";
 import WonoLogo from "../assets/WONO_images/img/WONO_LOGO_white _TP.png";
+// import ProfileImage from "../assets/WONO_images/img/profile-image-wono.png";
+// import ProfileImage from "../assets/WONO_images/img/user-profile.webp";
+import ProfileImage from "../assets/WONO_images/img/wono-img-profile.png";
 
 const NavBar = ({ activeTab, changeActiveTab }) => {
   const navigate = useNavigate();
@@ -109,7 +112,8 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
 
           {user ? (
             <Link to={"/dashboard"} className="active">
-              Dashboard
+              {/* Dashboard */}
+              Activating Soon
             </Link>
           ) : null}
         </div>
@@ -120,7 +124,8 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
                 className="profile-container"
                 onClick={() => setDropdownOpen(!dropdownOpen)}>
                 <img
-                  src={user.picture}
+                  // src={user.picture}
+                  src={ProfileImage}
                   alt={user.name}
                   className="profile-image"
                 />
