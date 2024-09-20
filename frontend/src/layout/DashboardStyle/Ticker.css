@@ -1,5 +1,5 @@
 /* General styling */
-:root {
+/* :root {
     --smaller: .75;
 }
 
@@ -13,7 +13,7 @@ html,
 body {
     height: 100%;
     margin: 0;
-}
+} */
 
 /* body {
     align-items: center;
@@ -25,25 +25,37 @@ body {
 .tickerContainer {
     color: #333;
     /* margin: 0 auto; */
-    margin-top: 10rem;
+    /* margin-top: 10rem; */
+    /* height: 100vh; */
+    /* height: 20rem; */
+    /* height: 22rem; */
     text-align: center;
     align-items: center;
     /* background-color: #ffd54f; */
     /* background-color: #ffd54f; */
     background-color: #0093E9;
-    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+    /* background-color: yellow; */
+    /* background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%); */
 }
 
-h1 {
+.tickerPadding {
+    /* padding-top: 3rem; */
+    /* height: 25rem; */
+    height: 20rem;
+    /* height: 70vh; */
+}
+
+/* h1 {
     font-weight: normal;
     letter-spacing: .125rem;
     text-transform: uppercase;
-}
+} */
 
 #countdown {
     display: flex;
     justify-content: center;
-    gap: 1em;
+    /* gap: 1em; */
+    gap: 5em;
 }
 
 .time-unit {
@@ -55,7 +67,8 @@ h1 {
 
 .time-unit span {
     display: block;
-    font-size: 4.5rem;
+    /* font-size: 4.5rem; */
+    font-size: 8.5rem;
 }
 
 .emoji {
@@ -75,12 +88,22 @@ h1 {
 
 .headlineFont {
     font-size: 3.2rem !important;
+
+    font-weight: normal;
+    letter-spacing: .125rem;
+    text-transform: uppercase;
+}
+
+
+.cont {
+    background-color: #0093E9;
 }
 
 @media all and (max-width: 768px) {
-    h1 {
+    /* 
+        .headlineFont {
         font-size: calc(1.5rem * var(--smaller));
-    }
+    } */
 
     .time-unit {
         font-size: calc(1.125rem * var(--smaller));
@@ -97,5 +120,22 @@ h1 {
 
     .headlineFont {
         font-size: 1.2rem !important;
+
+        font-weight: normal;
+        letter-spacing: .125rem;
+        text-transform: uppercase;
+    }
+
+    #countdown {
+        display: flex;
+        justify-content: center;
+        gap: 1em;
+        /* gap: 5em; */
+    }
+
+    .time-unit span {
+        display: block;
+        font-size: 4.5rem;
+        /* font-size: 8.5rem; */
     }
 }

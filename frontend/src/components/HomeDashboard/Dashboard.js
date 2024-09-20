@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 import Header from "./Header";
 import Sidebar from "./Sidebar";
 import Home from "./Home";
-import "../../layout/DashboardStyle/dashboard.css";
+// import "../../layout/DashboardStyle/dashboard.css";
+import "../../layout/DashboardStyle/Ticker.css";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import Ticker from "./Ticker";
@@ -48,7 +49,8 @@ const Dashboard = () => {
         </div> */}
         <div
           className="cont"
-          style={{ width: "100%", padding: 0, height: "100vh" }}>
+          // style={{ width: "100%", padding: 0, height: "25rem" }}>
+          style={{ width: "100%", padding: 0, height: "70vh" }}>
           <Ticker />
         </div>
       </div>

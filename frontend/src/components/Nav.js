@@ -8,7 +8,7 @@ import axios from "axios";
 import "../styles/componentStyle.css";
 import WonoLogo from "../assets/WONO_images/img/WONO_LOGO_white _TP.png";
 
-const NavBar = ({activeTab ,changeActiveTab}) => {
+const NavBar = ({ activeTab, changeActiveTab }) => {
   const navigate = useNavigate();
   const { user, setUser } = useContext(UserContext);
   const [show, setShow] = useState(false);
@@ -57,25 +57,56 @@ const NavBar = ({activeTab ,changeActiveTab}) => {
           />
         </div>
         <div className="custom-navbar-menu nav-tabss">
-          <Link to='/services' className={activeTab === 'Services'? 'active':''} onClick={()=>{
-            changeActiveTab('Services')
-            window.scrollTo({ top: 0, behavior: "smooth" })
-            }}>SaaS</Link>
-          <Link to='/capital'  className={activeTab === 'capital'? 'active':''} onClick={()=>{
-            changeActiveTab('capital')
-            window.scrollTo({ top: 0, behavior: "smooth" })
-            }}>Capital</Link>
-          <Link to='/themes' onClick={()=>{changeActiveTab('themes');  window.scrollTo({ top: 0, behavior: "smooth" })}} className={activeTab === 'themes'? 'active':''}
-          >Theme</Link>
-          <Link to='/leads' onClick={()=>{
-            changeActiveTab('leads');
-            window.scrollTo({ top: 0, behavior: "smooth" })
-          }} className={activeTab === 'leads'? 'active':''}>Leads</Link>
-          <Link to='/career'  className={activeTab === 'Career'? 'active':''} onClick={()=>{
-            changeActiveTab('Career')
-            window.scrollTo({ top: 0, behavior: "smooth" })
-            }}>Career</Link>
-         
+          {!user ? (
+            <>
+              <Link
+                to="/services"
+                className={activeTab === "Services" ? "active" : ""}
+                onClick={() => {
+                  changeActiveTab("Services");
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}>
+                SaaS
+              </Link>
+              <Link
+                to="/capital"
+                className={activeTab === "capital" ? "active" : ""}
+                onClick={() => {
+                  changeActiveTab("capital");
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}>
+                Capital
+              </Link>
+              <Link
+                to="/themes"
+                onClick={() => {
+                  changeActiveTab("themes");
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
+                className={activeTab === "themes" ? "active" : ""}>
+                Theme
+              </Link>
+              <Link
+                to="/leads"
+                onClick={() => {
+                  changeActiveTab("leads");
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
+                className={activeTab === "leads" ? "active" : ""}>
+                Leads
+              </Link>
+              <Link
+                to="/career"
+                className={activeTab === "Career" ? "active" : ""}
+                onClick={() => {
+                  changeActiveTab("Career");
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}>
+                Career
+              </Link>
+            </>
+          ) : null}
+
           {user ? (
             <Link to={"/dashboard"} className="active">
               Dashboard
@@ -100,7 +131,7 @@ const NavBar = ({activeTab ,changeActiveTab}) => {
               </div>
             </div>
           ) : (
-            <div className="custom-navbar-buttons" >
+            <div className="custom-navbar-buttons">
               <Link
                 onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
                 to="/login"
@@ -140,10 +171,16 @@ const NavBar = ({activeTab ,changeActiveTab}) => {
             onClick={handleClose}>
             SaaS
           </Link>
-          <Link className="custom-offcanvas-link" to="/capital" onClick={handleClose}>
+          <Link
+            className="custom-offcanvas-link"
+            to="/capital"
+            onClick={handleClose}>
             Capital
           </Link>
-          <Link className="custom-offcanvas-link" to="/themes" onClick={handleClose}>
+          <Link
+            className="custom-offcanvas-link"
+            to="/themes"
+            onClick={handleClose}>
             Themes
           </Link>
           <Link

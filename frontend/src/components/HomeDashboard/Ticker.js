@@ -125,28 +125,30 @@ const Ticker = () => {
     //   </div>
     // </div>
 
-    <div class="tickerContainer py-4 sidePadding ">
-      <h1 className="headlineFont" id="headline">
-        Countdown To Setting Up Your Account
-      </h1>
-      <div id="countdown">
-        <div class="time-unit">
-          <span id="days"></span> days
+    <div class="tickerContainer tickerPadding sidePadding  h-100 d-flex justify-content-center align-items-center">
+      <div className="my-auto ">
+        <h1 className="headlineFont" id="headline">
+          Countdown To Setting Up Your Account
+        </h1>
+        <div id="countdown">
+          <div class="time-unit">
+            <span id="days"></span> days
+          </div>
+          <div class="time-unit">
+            <span id="hours"></span> Hours
+          </div>
+          <div class="time-unit">
+            <span id="minutes"></span> Minutes
+          </div>
+          <div class="time-unit">
+            <span id="seconds"></span> Seconds
+          </div>
         </div>
-        <div class="time-unit">
-          <span id="hours"></span> Hours
+        <div id="content" class="emoji">
+          <span>🥳</span>
+          <span>🎉</span>
+          <span>🎂</span>
         </div>
-        <div class="time-unit">
-          <span id="minutes"></span> Minutes
-        </div>
-        <div class="time-unit">
-          <span id="seconds"></span> Seconds
-        </div>
-      </div>
-      <div id="content" class="emoji">
-        <span>🥳</span>
-        <span>🎉</span>
-        <span>🎂</span>
       </div>
     </div>
   );
