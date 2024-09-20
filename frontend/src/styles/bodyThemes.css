@@ -21,11 +21,12 @@
 
 .themePage-header h1 {
     font-weight: bold;
-    font-size: 4rem;
+    font-size: 3rem;
     margin-bottom: 2rem;
 }
 
 .themePage-header p {
+    font-size: 1.2rem;
     font-weight: 400;
 }
 

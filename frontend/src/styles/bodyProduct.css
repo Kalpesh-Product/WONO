@@ -127,6 +127,7 @@
 .product-page-perks-grid {
     display: grid;
     grid-template-columns: 40% 60%;
+    padding: 0 0.7rem;
 }
 
 .product-page-perks-grid-1 {
