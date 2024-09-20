@@ -66,24 +66,84 @@ const Register = () => {
   const handleNext = async (e) => {
     e.preventDefault();
     const validationErrors = validateCurrentStep();
-
+  
     if (Object.keys(validationErrors).length === 0) {
-
-      if (currentStep === 0 && formData.email) {
-        const isDuplicate = await checkEmailDuplicate(formData.email);
-        if (isDuplicate) {
-          setErrors((prevErrors) => ({
-            ...prevErrors,
-            email: 'This email is already in use.',
-          }));
-          return;
+      try {
+        // Determine the current section and prepare data
+        let sectionData = {};
+        let sectionName = '';
+  
+        switch (currentStep) {
+          case 0:
+            sectionData = {
+              email: formData.email,
+              name: formData.name,
+              mobile: formData.mobile,
+              country: formData.country,
+              city: formData.city,
+              state: formData.state,
+            };
+            sectionName = 'personal';
+            break;
+          case 1:
+            sectionData = {
+              companyName: formData.companyName,
+              industry: formData.industry,
+              companySize: formData.companySize,
+              companyType: formData.companyType,
+              companyCity: formData.companyCity,
+              companyState: formData.companyState,
+              websiteURL: formData.websiteURL,
+              linkedinURL: formData.linkedinURL,
+            };
+            sectionName = 'company';
+            break;
+          case 2:
+            sectionData = formData.selectedServices;
+            sectionName = 'services';
+            break;
+          // Add more cases as needed
+          default:
+            return;
         }
+  
+        // Send data to the backend
+        const response = await fetch("http://localhost:5000/register/section", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ section: sectionName, data: sectionData }),
+        });
+  
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+  
+        console.log(await response.text());
+  
+        // Move to the next step
+        setCurrentStep((prev) => prev + 1);
+      } catch (error) {
+        console.error("There was a problem with the fetch operation:", error);
       }
-
-      console.log(formData);
-      setCurrentStep((prev) => prev + 1);
     }
   };
+  
+  
+  
+  
+  // Helper function to get section name
+  const getSectionName = (step) => {
+    switch (step) {
+      case 0: return 'personal';
+      case 1: return 'company';
+      case 2: return 'services';
+      // Add more cases as needed
+      default: return 'unknown';
+    }
+  };
+  
 
   const handleBack = () => {
     setCurrentStep((prev) => prev - 1);
@@ -170,21 +230,23 @@ const Register = () => {
   //handlesubmit section
   const handleSubmit = async (event) => {
     event.preventDefault();
-
+  
     // Check for duplicate email
     console.log("handleSubmit");
-
+  
     // Show "Sending details" modal
     setModalMessage(
       <img src={emailSend} style={{ width: 100 }} alt="emailSend" />
     );
     setIsLoading(true);
-
+  
     try {
       const dataToSubmit = {
         ...formData,
         selectedServices: formData.selectedServices,
       };
+  
+      // Final submission to complete the registration
       const response = await fetch("http://localhost:5000/register", {
         method: "POST",
         headers: {
@@ -192,18 +254,18 @@ const Register = () => {
         },
         body: JSON.stringify(dataToSubmit),
       });
-
+  
       if (!response.ok) {
         throw new Error("Network response was not ok");
       }
-
+  
       const result = await response.text();
       console.log(result);
-
+  
       // Show "Email sent" message
       // setModalMessage('Email sent');
       console.log("Email sent");
-
+  
       // Navigate to login after a successful submission
       setTimeout(() => {
         navigate("/login");
@@ -213,13 +275,14 @@ const Register = () => {
       console.log("Failed to send registration details");
     } finally {
       setIsLoading(false);
-
+  
       // Clear modal message after some time
       setTimeout(() => {
         setModalMessage("");
       }, 3000);
     }
   };
+  
 
   const isChecked = (service) => formData.selectedServices[service];
   return (

@@ -261,6 +261,8 @@ const enquirySchema = new mongoose.Schema({
 
 const Enquiry = mongoose.model('Enquiry', enquirySchema);
 
+
+
 app.post('/enquiries', async (req, res) => {
   const { name, email, mobile, partnerstype, message } = req.body;
 
@@ -274,6 +276,48 @@ app.post('/enquiries', async (req, res) => {
     });
 
     await newEnquiry.save();
+
+    const userEmailTemplate = (name) => `
+  <div style="font-family: Arial, sans-serif; padding: 20px;">
+    <h2 style="color: #4CAF50;">Thank You for Your Enquiry</h2>
+    <p>Dear ${name},</p>
+    <p>Thank you for your enquiry. We appreciate your interest and will get back to you shortly.</p>
+    <p>Best regards,<br>Your Company Name</p>
+  </div>
+`;
+
+
+    const companyEmailTemplate = (name, email, mobile, partnerstype, message) => `
+  <div style="font-family: Arial, sans-serif; padding: 20px;">
+    <h2 style="color: #4CAF50;">New Enquiry Received</h2>
+    <p>You have received a new enquiry:</p>
+    <ul>
+      <li><strong>Name:</strong> ${name}</li>
+      <li><strong>Email:</strong> ${email}</li>
+      <li><strong>Mobile:</strong> ${mobile}</li>
+      <li><strong>Partner Type:</strong> ${partnerstype}</li>
+      <li><strong>Message:</strong> ${message}</li>
+    </ul>
+    <p>Best regards,<br>Your Company Name</p>
+  </div>
+`;
+
+
+
+    await transporter.sendMail({
+      from: 'aiwinraj1810@gmail.com', // sender address
+      to: email, // user email
+      subject: 'Thank You for Your Enquiry',
+      html: userEmailTemplate(name)
+    });
+
+    // Send email to the company
+    await transporter.sendMail({
+      from: 'aiwinraj1810@gmail.com', // sender address
+      to: 'productwonoco@gmail.com', // company email
+      subject: 'New Enquiry Received',
+      html: companyEmailTemplate(name, email, mobile, partnerstype, message)
+    });
     res.status(201).json({ message: 'Enquiry submitted successfully!' });
   } catch (error) {
     console.error('Error saving enquiry:', error);
@@ -286,23 +330,45 @@ app.post('/enquiries', async (req, res) => {
 //regdetails schema
 
 const userSchema = new mongoose.Schema({
-  name: String,
-  mobile: String,
-  email: String,
-  country: String,
-  city: String,
-  state: String,
-  companyName: String,
-  industry: String,
-  companySize: String,
-  companyType: String,
-  companyCity: String,
-  companyState: String,
-  websiteURL: String,
-  linkedinURL: String,
-  username: String,
-  password: String
+  // Personal Information Section
+  personalInfo: {
+    name: { type: String, required: false },
+    mobile: { type: String, required: false },
+    email: { type: String, required: false }, // Make optional
+    country: String,
+    city: String,
+    state: String,
+  },
+
+  // Company Information Section
+  companyInfo: {
+    companyName: String,
+    industry: String,
+    companySize: String,
+    companyType: String,
+    companyCity: String,
+    companyState: String,
+    websiteURL: String,
+    linkedinURL: String,
+  },
+
+  // Login Credentials (if needed in future)
+  credentials: {
+    username: String,
+    password: String,
+  },
+
+  // Service Selection Section
+  selectedServices: {
+    service1: { type: Boolean, default: false },
+    service2: { type: Boolean, default: false },
+    service3: { type: Boolean, default: false },
+    service4: { type: Boolean, default: false },
+  },
+
 }, { collection: 'registrationDetails' });
+
+
 
 // Define UserService schema
 const userServiceSchema = new mongoose.Schema({
@@ -316,6 +382,9 @@ const UserService = mongoose.model('UserService', userServiceSchema);
 
 
 // Route to handle form submission
+
+
+
 app.post("/register", async (req, res) => {
   const {
     email,
@@ -341,25 +410,62 @@ app.post("/register", async (req, res) => {
     const uniqueNumber = crypto.randomInt(1000, 9999);
     const password = `${username}@Wono${uniqueNumber}`;
 
-    // Insert user data into User collection
-    const user = new User({
-      name,
-      mobile,
-      email,
-      country,
-      city,
-      state,
-      companyName,
-      industry,
-      companySize,
-      companyType,
-      companyCity,
-      companyState,
-      websiteURL,
-      linkedinURL,
-      username,
-      password
-    });
+    // Check if user already exists
+    let user = await User.findOne({ 'personalInfo.email': email });
+
+    if (!user) {
+      // If user doesn't exist, create a new one
+      user = new User({
+        personalInfo: {
+          name,
+          mobile,
+          email,
+          country,
+          city,
+          state,
+        },
+        companyInfo: {
+          companyName,
+          industry,
+          companySize,
+          companyType,
+          companyCity,
+          companyState,
+          websiteURL,
+          linkedinURL,
+        },
+        credentials: {
+          username,
+          password
+        },
+        selectedServices
+      });
+    } else {
+      // Update existing user
+      user.personalInfo = {
+        name,
+        mobile,
+        email,
+        country,
+        city,
+        state,
+      };
+      user.companyInfo = {
+        companyName,
+        industry,
+        companySize,
+        companyType,
+        companyCity,
+        companyState,
+        websiteURL,
+        linkedinURL,
+      };
+      user.selectedServices = selectedServices;
+      user.credentials = {
+        username,
+        password
+      };
+    }
 
     const savedUser = await user.save();
 
@@ -391,7 +497,7 @@ app.post("/register", async (req, res) => {
 
     const companyMailOptions = {
       from: "your_email@gmail.com",
-      to: "company_email@gmail.com",
+      to: "productwon@gmail.com",
       subject: "New User Registration",
       html: `
         <h1>New User Registration Details</h1>
@@ -429,6 +535,57 @@ app.post("/register", async (req, res) => {
 });
 
 
+app.post("/register/section", async (req, res) => {
+  const { section, data } = req.body;
+  console.log(`Received section: ${section}`);
+  console.log('Received data:', data);
+
+  try {
+    // Find the user by email or create a new one
+    let user = await User.findOne({ 'personalInfo.email': data.email });
+    if (!user) {
+      console.log("No user found, creating a new one");
+      user = new User();
+    } else {
+      console.log("User found, updating existing one");
+    }
+
+    // Initialize fields if not present
+    if (!user.personalInfo) user.personalInfo = {};
+    if (!user.companyInfo) user.companyInfo = {};
+    if (!user.selectedServices) user.selectedServices = {};
+
+    // Update user data based on the section
+    switch (section) {
+      case 'personal':
+        user.personalInfo = { ...user.personalInfo, ...data };
+        break;
+      case 'company':
+        user.companyInfo = { ...user.companyInfo, ...data };
+        break;
+      case 'services':
+        user.selectedServices = { ...user.selectedServices, ...data };
+        break;
+      default:
+        return res.status(400).send("Invalid section");
+    }
+
+    // Save the user
+    const savedUser = await user.save();
+    console.log("User saved:", savedUser);
+    res.status(200).send("Section data updated successfully!");
+  } catch (error) {
+    console.error("Database error:", error.message);
+    res.status(500).send("Failed to update section data: " + error.message);
+  }
+});
+
+
+
+
+
+
+
 
 app.post('/reset-password', async (req, res) => {
   const { email, password } = req.body;
@@ -463,7 +620,10 @@ app.post('/login', async (req, res) => {
 
   try {
     // Query to check user credentials in MongoDB
-    const user = await User.findOne({ email: email, password: password });
+    const user = await User.findOne({
+      'personalInfo.email': email,
+      'credentials.password': password
+    });
 
     if (!user) {
       return res.status(401).json({ error: 'Invalid email or password' });
@@ -472,8 +632,8 @@ app.post('/login', async (req, res) => {
     // Set session user data
     req.session.user = {
       id: user._id,
-      email: user.email,
-      name: user.name
+      email: user.personalInfo.email,
+      name: user.personalInfo.name
     };
 
     // Send back the session user data
@@ -485,6 +645,7 @@ app.post('/login', async (req, res) => {
     res.status(500).json({ error: 'Internal Server Error' });
   }
 });
+
 
 
 //forgot password

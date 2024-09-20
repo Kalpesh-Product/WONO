@@ -251,6 +251,15 @@
     margin: 0 16px;
     width: 20%;
 }
+
+@media (max-width:1440px) {
+    .product-page-build span {
+        font-size: 2.1rem;
+        padding: 0rem 0rem 2rem 0rem;
+        text-align: center;
+        font-weight: bold;
+    } 
+}
 @media (max-width:1024px) {
     .product-page {
         background-color: black;

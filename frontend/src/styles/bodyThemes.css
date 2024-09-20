@@ -185,6 +185,16 @@
     width: 100%;
     text-align: left;
 }
+.themes-view-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 2rem 0 0 0 ;
+}
+.themes-view-button button{
+   width: 50% !important;
+}
 
 
 .themePage-website-support-section {
@@ -272,6 +282,14 @@
     margin: 0;
     font-size: 4.9rem;
     font-weight: bold;
+}
+
+@media (max-width:1440px) {
+    .themePage-website-success h1 {
+        margin: 0;
+        font-size: 4.4rem;
+        font-weight: bold;
+    }
 }
 @media (max-width:1024px) {
     .themePage-header {

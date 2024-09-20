@@ -1,511 +1,481 @@
 {
-    "UI Designer": {
-        "jobTitle": "UI Designer",
-        "content": [
-            {
-                "subtitle": "About the Job",
-                "description": "We are looking for a creative UI Designer to join our team. As a UI Designer, you will be responsible for crafting beautiful and intuitive interfaces for our products. You will work closely with our development and product teams to bring ideas to life.\n\nYou should be passionate about user experience and design, with a keen eye for detail."
-            },
-            {
-                "subtitle": "Responsibilities",
-                "description": {
-                    "list": [
-                        "Design user interfaces for web and mobile applications.",
-                        "Collaborate with product managers and developers to create intuitive, user-friendly software.",
-                        "Develop wireframes, mockups, and prototypes to communicate design ideas.",
-                        "Ensure consistency of design across various digital platforms.",
-                        "Stay up to date with design trends and best practices."
-                    ]
-                }
-            },
-            {
-                "subtitle": "Qualifications",
-                "description": {
-                    "list": [
-                        "Bachelor’s degree in Graphic Design, UI/UX Design, or a related field.",
-                        "Proven experience as a UI Designer or similar role.",
-                        "Proficient in design software like Adobe XD, Sketch, or Figma.",
-                        "Strong understanding of UX principles and user-centered design.",
-                        "Excellent communication skills and attention to detail."
-                    ]
-                }
-            }
-        ]
-    },
-    "Marketing Analytics": {
-        "jobTitle": "Marketing Analytics",
-        "content": [
-            {
-                "subtitle": "About the Job",
-                "description": "We are seeking a knowledgeable and experienced Marketing Analytics who is a great SEO/Google analytics Expert to optimize our online presence and enhance search engine visibility. The ideal candidate will possess expertise in managing web optimization strategies, staying updated with search engine algorithms, and leveraging various SEO tools to drive organic traffic and improve rankings."
-            },
-            {
-                "subtitle": "Responsibilities",
-                "description": {
-                    "list": [
-                        " Manage and optimize website content to ensure it meets Google's Webmaster guidelines and best practices",
-                        "Conduct comprehensive keyword research to identify opportunities and optimize content accordingly",
-                        "Develop and execute comprehensive SEO strategies to improve organic search rankings and drive qualified traffic",
-                        " Implement on-page and off-page SEO strategies to enhance website performance and visibility on search engines",
-                        " Optimize website content, meta tags, headers, and URLs for target keywords",
-                        " Conduct technical SEO audits and identify areas for improvement",
-                        " Collaborate with web developers to ensure SEO best practices are implemented on the website",
-                        " Monitor and resolve issues related to website indexing, crawlability, and site speed",
-                        " Work closely with content creators to develop SEO-optimized content",
-                        " Provide guidelines and recommendations for content optimization",
-                        " Ensure content is aligned with SEO strategies and objectives",
-                        " Develop and execute effective link-building strategies",
-                        " Identify and engage with relevant industry influencers and websites for backlink opportunities",
-                        " Monitor and analyze backlink profiles to ensure quality and relevance",
-                        " Monitor and analyze website performance using tools such as Google Analytics, Google Search Console, SEMrush, and other relevant SEO software",
-                        " Analyze competitors and industry trends to inform SEO strategy",
-                        " Generate regular reports on website performance, traffic metrics, and SEO insights to drive continuous improvement",
-                        " Troubleshoot SEO issues, identify areas for improvement, and implement corrective measures",
-                        " Stay updated with industry trends, search engine algorithms, and best practices to adapt strategies accordingly",
-                        " Continuously test and refine SEO strategies based on industry developments",
-                        " Communicate effectively with stakeholders, including clients, project managers, and team members, to ensure project requirements are met"
-                    ]
-                }
-            }
-        ]
-    },
-    "Jr. UI/UX Developer": {
-        "jobTitle": "Jr. UI/UX Developer",
-        "content": [
-            {
-                "subtitle": "About the Job",
-                "description": "We are looking for a front-end web developer who is motivated to combine the art of design with the art of programming. Responsibilities will include translation of the UI/UX design to actual code that will produce visual elements of the website and web based tools. You will closely work with the UI/UX designer and bridge the gap between web design and technical implementation, taking an active role on both sides and defining how the website looks as well as how it works. As a UI/UX developer, you will be responsible for the full spectrum of web design & development tasks, from visual design & graphics creation to front-end development using HTML ,CSS & JavaScript.You will collaborate closely with multi-functional teams including product managers, designers, developers,etc to ensure our digital products are not only visually appealing but also intuitive, user-centric and fully responsive. Your expertise in HTML, CSS, and JavaScript will be crucial in delivering outstanding user experiences."
-            },
-            {
-                "subtitle": "Responsibilities",
-                "description": {
-                    "list": [
-                        " Manage and optimize website content to ensure it meets Google's Webmaster guidelines and best practices",
-                        "Conduct comprehensive keyword research to identify opportunities and optimize content accordingly",
-                        "Develop and execute comprehensive SEO strategies to improve organic search rankings and drive qualified traffic",
-                        " Implement on-page and off-page SEO strategies to enhance website performance and visibility on search engines",
-                        " Optimize website content, meta tags, headers, and URLs for target keywords",
-                        " Conduct technical SEO audits and identify areas for improvement",
-                        " Collaborate with web developers to ensure SEO best practices are implemented on the website",
-                        " Monitor and resolve issues related to website indexing, crawlability, and site speed",
-                        " Work closely with content creators to develop SEO-optimized content",
-                        " Provide guidelines and recommendations for content optimization",
-                        " Ensure content is aligned with SEO strategies and objectives",
-                        " Develop and execute effective link-building strategies",
-                        " Identify and engage with relevant industry influencers and websites for backlink opportunities",
-                        " Monitor and analyze backlink profiles to ensure quality and relevance",
-                        " Monitor and analyze website performance using tools such as Google Analytics, Google Search Console, SEMrush, and other relevant SEO software",
-                        " Analyze competitors and industry trends to inform SEO strategy",
-                        " Generate regular reports on website performance, traffic metrics, and SEO insights to drive continuous improvement",
-                        " Troubleshoot SEO issues, identify areas for improvement, and implement corrective measures",
-                        " Stay updated with industry trends, search engine algorithms, and best practices to adapt strategies accordingly",
-                        " Continuously test and refine SEO strategies based on industry developments",
-                        " Communicate effectively with stakeholders, including clients, project managers, and team members, to ensure project requirements are met"
-                    ]
-                }
-            }
-        ]
-    },
-    "PHP Developer": {
-        "jobTitle": "Jr. UI/UX Developer",
-        "content": [
-            {
-                "subtitle": "About the Job",
-                "description": "We are looking for a front-end web developer who is motivated to combine the art of design with the art of programming. Responsibilities will include translation of the UI/UX design to actual code that will produce visual elements of the website and web based tools. You will closely work with the UI/UX designer and bridge the gap between web design and technical implementation, taking an active role on both sides and defining how the website looks as well as how it works. As a UI/UX developer, you will be responsible for the full spectrum of web design & development tasks, from visual design & graphics creation to front-end development using HTML ,CSS & JavaScript.You will collaborate closely with multi-functional teams including product managers, designers, developers,etc to ensure our digital products are not only visually appealing but also intuitive, user-centric and fully responsive. Your expertise in HTML, CSS, and JavaScript will be crucial in delivering outstanding user experiences."
-            },
-            {
-                "subtitle": "Responsibilities",
-                "description": {
-                    "list": [
-                        " Manage and optimize website content to ensure it meets Google's Webmaster guidelines and best practices",
-                        "Conduct comprehensive keyword research to identify opportunities and optimize content accordingly",
-                        "Develop and execute comprehensive SEO strategies to improve organic search rankings and drive qualified traffic",
-                        " Implement on-page and off-page SEO strategies to enhance website performance and visibility on search engines",
-                        " Optimize website content, meta tags, headers, and URLs for target keywords",
-                        " Conduct technical SEO audits and identify areas for improvement",
-                        " Collaborate with web developers to ensure SEO best practices are implemented on the website",
-                        " Monitor and resolve issues related to website indexing, crawlability, and site speed",
-                        " Work closely with content creators to develop SEO-optimized content",
-                        " Provide guidelines and recommendations for content optimization",
-                        " Ensure content is aligned with SEO strategies and objectives",
-                        " Develop and execute effective link-building strategies",
-                        " Identify and engage with relevant industry influencers and websites for backlink opportunities",
-                        " Monitor and analyze backlink profiles to ensure quality and relevance",
-                        " Monitor and analyze website performance using tools such as Google Analytics, Google Search Console, SEMrush, and other relevant SEO software",
-                        " Analyze competitors and industry trends to inform SEO strategy",
-                        " Generate regular reports on website performance, traffic metrics, and SEO insights to drive continuous improvement",
-                        " Troubleshoot SEO issues, identify areas for improvement, and implement corrective measures",
-                        " Stay updated with industry trends, search engine algorithms, and best practices to adapt strategies accordingly",
-                        " Continuously test and refine SEO strategies based on industry developments",
-                        " Communicate effectively with stakeholders, including clients, project managers, and team members, to ensure project requirements are met"
-                    ]
-                }
-            }
-        ]
-    },
-    "Web Developer Intern": {
-        "jobTitle": "Web Developer Intern",
-        "content": [
-            {
-                "subtitle": "About the Job",
-                "description": "We are seeking a dedicated Web Developer Intern to join our dynamic team. The Web Developer Intern role supports and assists the web development team in coding, modifying and delivering technically feature rich websites web applications, portals and platforms with focus on robustness, security, technical superiority and innovative features in line with client expectations. & plus youe will be working on our proprietary framework and language, contributing to the development of innovative solutions that drive our business."
-            },
-            {
-                "subtitle": "Roles And Responsibilities",
-                "description": {
-                    "list": [
-                        " Write well designed, testable, efficient code by using best software development practices",
-                        " Create website layout/user interface by using standard HTML/CSS practices",
-                        " Integrate data from various back-end services and databases",
-                        " Gather and refine specifications and requirements based on technical need",
-                        " Create and maintain software documentation",
-                        " Be responsible for maintaining, expanding, and scaling our site",
-                        " Cooperate with web designers to match visual design intent",
-                        " Participate in the entire application lifecycle, focusing on coding and dbugging",
-                        " Write clean code to develop functional web applications",
-                        " Troubleshoot and debug applications",
-                        " Perform UI tests to optimize performance",
-                        " Manage cutting-edge technologies to improve legacy applications",
-                        " Gather and address technical and design requirements",
-                        " Build reusable code and libraries for future use",
-                        " User-friendly with developers, designers and system administrators to idetify new features follow emerging technologies"
-                    ]
-                }
-            },
-            {
-                "subtitle": "Requirements",
-                "description": {
-                    "list": [
-                        " Write well designed, testable, efficient code by using best software development practices",
-                        " Create website layout/user interface by using standard HTML/CSS practices",
-                        " Integrate data from various back-end services and databases",
-                        " Gather and refine specifications and requirements based on technical need",
-                        " Create and maintain software documentation",
-                        " Be responsible for maintaining, expanding, and scaling our site",
-                        " Cooperate with web designers to match visual design intent",
-                        " Participate in the entire application lifecycle, focusing on coding and dbugging",
-                        " Write clean code to develop functional web applications",
-                        " Troubleshoot and debug applications",
-                        " Perform UI tests to optimize performance",
-                        " Manage cutting-edge technologies to improve legacy applications",
-                        " Gather and address technical and design requirements",
-                        " Build reusable code and libraries for future use",
-                        " User-friendly with developers, designers and system administrators to idetify new features follow emerging technologies"
-                    ]
-                }
-            }
-        ]
-    },
-    "Web Developer Intern": {
-        "jobTitle": "Web Developer Intern",
-        "content": [
-            {
-                "subtitle": "About the Job",
-                "description": "We are seeking a dedicated Web Developer Intern to join our dynamic team. The Web Developer Intern role supports and assists the web development team in coding, modifying and delivering technically feature rich websites web applications, portals and platforms with focus on robustness, security, technical superiority and innovative features in line with client expectations. & plus youe will be working on our proprietary framework and language, contributing to the development of innovative solutions that drive our business."
-            },
-            {
-                "subtitle": "Roles And Responsibilities",
-                "description": {
-                    "list": [
-                        " Write well designed, testable, efficient code by using best software development practices",
-                        " Create website layout/user interface by using standard HTML/CSS practices",
-                        " Integrate data from various back-end services and databases",
-                        " Gather and refine specifications and requirements based on technical need",
-                        " Create and maintain software documentation",
-                        " Be responsible for maintaining, expanding, and scaling our site",
-                        " Cooperate with web designers to match visual design intent",
-                        " Participate in the entire application lifecycle, focusing on coding and dbugging",
-                        " Write clean code to develop functional web applications",
-                        " Troubleshoot and debug applications",
-                        " Perform UI tests to optimize performance",
-                        " Manage cutting-edge technologies to improve legacy applications",
-                        " Gather and address technical and design requirements",
-                        " Build reusable code and libraries for future use",
-                        " User-friendly with developers, designers and system administrators to idetify new features follow emerging technologies"
-                    ]
-                }
-            }
-        ]
-    },
-    "Finance Intern": {
-        "jobTitle": "Finance Intern",
-        "content": [
-            {
-                "subtitle": "About the Job",
-                "description": "We are seeking a dynamic and motivated Finance Intern to join our team. As a Finance Intern you will have the opportunity to gain valuable experience and insight into the financial operations of our organization. This internship is designed to provide hands-on experience in various aspects of finance, accounting, and financial analysis."
-            },
-            {
-                "subtitle": "Responsibilities",
-                "description": {
-                    "list": [
-                        " Assist in day today accounting task",
-                        " Assist in financial reporting and analysis tasks",
-                        " Compile and analyse financial data, ensuring accuracy and completeness",
-                        " Organize and manage bills, receipts, and financial documents",
-                        " Ensure proper filing and organization of accounting folders ",
-                        " Assist in maintaining accounting protocols and standards",
-                        " Visiting bank and other branch whenever required "
-                    ]
-                }
-            },
-            {
-                "subtitle": "Skills And Qualifications",
-                "description": {
-                    "list": [
-                        " Currently pursuing a degree in Finance and Accounting field",
-                        "Strong analytical and problem-solving skills",
-                        "Proficiency in Microsoft Excel",
-                        "Excellent attention to detail and organizational abilities",
-                        "Ability to work independently and as part of a team",
-                        "Strong verbal and written communication skills",
-                        "Prior internship experience or coursework in finance/accounting is a plus"
-                    ]
-                }
-            }
-        ]
-    },
-    "HR Generalist": {
-        "jobTitle": "HR Generalist",
-        "content": [
-            {
-                "subtitle": "HR Responsibilities",
-                "description": {
-                    "list": [
-                        " Develop and execute human resources strategies aligned with the company's business goals",
-                        " Collaborate with executive leadership to drive organizational growth and enhance overallemployee experience",
-                        " Draft process for better functioning of the organisation",
-                        " Maintain discipline in the functioning of the organisation",
-                        " Design performance metrics and evaluate the same on quarterly basis",
-                        " Architect the employee appraisal programme based on performance",
-                        " Manage the overall compliances of the organisation",
-                        " Ensure all compliances are active and renewed on time",
-                        " Engage in employee training programs",
-                        " Provide monthly progress and performance reports to management",
-                        " Work with ethics and in a unbiased manner without favouritism",
-                        " Ensure neutral feedback to employees and management"
-                    ]
-                }
-            },
-            {
-                "subtitle": "HR for Talent Acquisition and Retention",
-                "description": {
-                    "list": [
-                        " Draft and oversee the entire recruitment and onboarding process to attract top talent",
-                        " Develop and implement strategies for employee retention, career development, and succssion planning.",
-                        " Ensure hiring is done before time via agency or other teams",
-                        " Ensure regular company updates in internal & external ecosystem",
-                        " Design employee benefits program"
-                    ]
-                }
-            },
-            {
-                "subtitle": "HR for Employee Engagement",
-                "description": {
-                    "list": [
-                        " Foster a positive and inclusive workplace culture that values diversity and promotes employee engagement",
-                        "Implement initiatives to enhance employee satisfaction, well-being, and work-life balance."
-                    ]
-                }
-            },
-            {
-                "subtitle": "HR for Performance Management",
-                "description": {
-                    "list": [
-                        " Design employee performance program",
-                        " Set annual targets for all business verticals and individuals",
-                        " Monitor and share monthly performance of employees",
-                        " Lead the development and implementation of performance manageent processes",
-                        " Provide guidance on goal setting, performance reviews, and professional development plans",
-                        " Design annual appraisal and bonus policy and process"
-                    ]
-                }
-            },
-            {
-                "subtitle": "HR for Training and Development",
-                "description": {
-                    "list": [
-                        " Identify training needs and collaborate with department heads to implement effective training programs",
-                        " Support leadership development and mentorship initiatives"
-                    ]
-                }
-            },
-            {
-                "subtitle": "HR for Compliance",
-                "description": {
-                    "list": [
-                        " Stay current with labour laws and industry regulations to ensure company compliance",
-                        " Implement policies and procedures to mitigate legal risks",
-                        " Manage the overall compliances of the organisation",
-                        " Ensure all compliances are active and renewed on time",
-                        " Design the employee audit program",
-                        " Manages seamless attendance and leaves",
-                        " All employees verifications as per audit and compliance requirements"
-                    ]
-                }
-            },
-            {
-                "subtitle": "Employee for Relations",
-                "description": {
-                    "list": [
-                        " Address employee relations issues, conduct investigations, and provide guidance on conflict resolution",
-                        "Serve as a resource for employees and managers on HR-related matters"
-                    ]
-                }
-            },
-            {
-                "subtitle": "Qualifications",
-                "description": {
-                    "list": [
-                        " Proven experience as an Senior HR Executive or in a similar Senior Leadership position and experience in working with Founders/Promoters",
-                        "Proven ability to build a strong team in the past. We shall need to know the positions closed in the past and their current performance and value in the current organisations",
-                        "In-depth knowledge of human resources principles, practices, and regulations",
-                        "Demonstrated success in developing and implementing HR strategies that align with business objectives",
-                        "Strong leadership and interpersonal skills with the ability to build positive relationships at all levels",
-                        "Excellent communication, drafting and negotiation skills",
-                        "Master's degree in Human Resources, Business Administration, or a related field is preferred",
-                        "Should have experience in managing start to end of all compliance requirements to run an organisation",
-                        "Should have strong past experience with existing contacts in compliance dept such as PF, ESIC etc",
-                        "Should have experience in working on licensed platforms to make HR Dept seamless and automated for reports and performance monitoring",
-                        "Should be capable of managing the entre HR Dept of an organisation and should have revenant proven past experience in the same",
-                        "Should be a super team recruiter and should know to source in the most optimal and cost effective manner",
-                        "Should be experience in designing tests before any personal interviews",
-                        "Should be an ace in reports and performance metrics management",
-                        "Relevant HR certifications (e.g., SHRM-SCP, SPHR) are a plus",
-                        "Should be the Lead Custodian of the HR vertical and ensure minimum involvement of top management and should run the organisation in the most compliant, high performance and happy environment"
-                    ]
-                }
-            }
-        ]
-    },
-    "Executive Assistant to CEO": {
-        "jobTitle": "Executive Assistant to CEO",
-        "content": [
-            {
-                "subtitle": "Responsibilities and Requirements"
-            },
-            {
-                "subtitle": "Executive Assistant Responsibilities",
-                "description": {
-                    "list": [
-                        " Develop and execute human resources strategies aligned with the Manage and maintain CEO’s schedule and calendar, including prioritizing and coordinating appointments and meetings",
-                        " Arrange and coordinate travel itineraries, both domestic and international, and prepare travel expense reports",
-                        " Prepare correspondence, reports, presentations, and other documents as requested by the CEO",
-                        " Conduct research and compile data to prepare documents and reports for review and presentation by the CEO",
-                        " Attend meetings with the CEO, taking notes, and following up on action items",
-                        " Screen and prioritize incoming communications, including phone calls, emails, letters, and requests for meetings",
-                        " Manage confidential information with discretion and professionalism",
-                        " Coordinate and facilitate communication between the CEO and internal staff as well as external contacts",
-                        " Handle requests and queries appropriately and ensure timely resolution",
-                        " Anticipate the needs of the CEO and proactively address issues that arise"
-                    ]
-                }
-            },
-            {
-                "subtitle": "Executive Assistant Requirements",
-                "description": {
-                    "list": [
-                        " Currently pursuing a degree in Finance and Accounting field",
-                        "Strong analytical and problem-solving skills",
-                        "Proficiency in Microsoft Excel",
-                        "Excellent attention to detail and organizational abilities",
-                        "Ability to work independently and as part of a team",
-                        "Strong verbal and written communication skills",
-                        "Prior internship experience or coursework in finance/accounting is a plus"
-                    ]
-                }
-            }
-        ]
-    },
-    "Sr.Manager Sales & Bussiness Development": {
-        "jobTitle": "Sr.Manager Sales & Business Development",
-        "content": [
-            {
-                "subtitle": "Responsibilities",
-                "description": {
-                    "list": [
-                        " Responsible for Lifestyle Sales to Corporates & Startups for Working & Living in Destinations such as Goa and other such aspirational destinations in India",
-                        " Study the Market Pulse and make targeted database.",
-                        " Study and make relevant and sharp presentations around our offerings which are customised for our clients",
-                        " Pitch the same in the most dynamic and customised manner to ensure maximum client conversion",
-                        " Maintain large database of clients and keep sourcing fresh database every month",
-                        " Work on Annual Targets and present monthly and quarterly reports",
-                        " Develop a growth strategy focused both on financial gain and customer satisfaction",
-                        " Conduct research to identify new markets and customer needs",
-                        " Arrange business meetings with prospective clients",
-                        " Promote the company’s products/services addressing or predicting clients’ objectives",
-                        " Prepare contracts and ensure adherence to law-established rules and guidelines",
-                        " Keep records of sales, revenue, invoices etc",
-                        " Provide trustworthy feedback and after-sales support",
-                        " Build long-term relationships with new and existing customer",
-                        " Develop entry level staff into valuable salespeople.",
-                        " Develop a team and train, activate and grow the team",
-                        " Prepare monthly reports and analysis for management"
-                    ]
-                }
-            },
-            {
-                "subtitle": "Requirements and Skills",
-                "description": {
-                    "list": [
-                        "Proven experience as Sales & Business Development Manager",
-                        "Proven enterprise B2B sales track record",
-                        "Experience in customer support is a plus",
-                        "Proficiency in MS Office and CRM software (e.g. Salesforce)",
-                        "Proficiency in English",
-                        "Market knowledge",
-                        "Communication and negotiation skills",
-                        "Ability to build rapport",
-                        "Time management and planning skills",
-                        "Master’s in business administration, sales or relevant fiel"
-                    ]
-                }
-            }
-        ]
-    },
-    "Social Media Executive": {
-        "jobTitle": "Social Media Marketing",
-        "content": [
-            {
-                "subtitle": "About the job",
-                "description": "We are searching for a talented social media Assistant to represent our company by building a social media presence for our brands. The social media Assistant will be required to run advertising campaigns and drive engagement by creating high-quality original content. You should also engage influencers, manage our community by responding to comments, and oversee our customer service across all platforms."
-            },
-            {
-                "subtitle": "Responsibilities",
-                "description": {
-                    "list": [
-                        " Excellent knowledge of branding and promotional activities for all leading social media platforms such as Facebook, Twitter, Instagram, LinkedIn, etc",
-                        " Assist with the planning of marketing strategies to help drive traffic and engagement to the website",
-                        " Design and deliver creative and engaging social media posts and strategies",
-                        " Develop original content for our various products, occasion-based campaigns, customer engagement camaign, and property",
-                        " Form key relationships with influencers across social media platforms for collaboration",
-                        " Identify the latest trends and technologies to improve digital marketing performance",
-                        " Creating branded content regularly for propagating brand vision and purpose",
-                        " Engage with social media users and respond to any mentions over Facebook, Twitter, Instagram, Linkedn, Pinterest, etc.",
-                        " Run paid Ads on social media platforms to target the audience",
-                        " Create social media calendar for 30 days and schedule accordingly",
-                        " Create reels on trending audio (4-6 Reels in a month)",
-                        " Proven experience in social media marketing, particularly in post-scheduling and creative curation",
-                        " Exceptional organizational skills with the ability to manage multiple projects and meet deadlines",
-                        " Creative mindset with the ability to generate innovative ideas for engaging social media content",
-                        " Proficiency in using social media management tools and analytics platforms",
-                        " Knowledge of videography and video editing is a plus",
-                        " Familiarity with SEO and digital marketing concepts"
-                    ]
-                }
-            },
-            {
-                "subtitle": "What you will bring",
-                "description": {
-                    "list": [
-                        " BA/BS degree in marketing or a related field",
-                        " Familiarity with online marketing channel",
-                        " Up to date with the latest digital technologies and social media trends with a command of each network and their best practices",
-                        " Creative thinker",
-                        " Excellent communication skills",
-                        " Knowledge of the Adobe Photoshop/ Canva is a bonus"
-                    ]
-                }
-            }
-        ]
-    }
+  "UI Designer": {
+    "jobTitle": "UI Designer",
+    "content": [
+      {
+        "subtitle": "About the Job",
+        "description": "We are looking for a creative UI Designer to join our team. As a UI Designer, you will be responsible for crafting beautiful and intuitive interfaces for our products. You will work closely with our development and product teams to bring ideas to life.\n\nYou should be passionate about user experience and design, with a keen eye for detail."
+      },
+      {
+        "subtitle": "Responsibilities",
+        "description": {
+          "list": [
+            "Design user interfaces for web and mobile applications.",
+            "Collaborate with product managers and developers to create intuitive, user-friendly software.",
+            "Develop wireframes, mockups, and prototypes to communicate design ideas.",
+            "Ensure consistency of design across various digital platforms.",
+            "Stay up to date with design trends and best practices."
+          ]
+        }
+      },
+      {
+        "subtitle": "Qualifications",
+        "description": {
+          "list": [
+            "Bachelor’s degree in Graphic Design, UI/UX Design, or a related field.",
+            "Proven experience as a UI Designer or similar role.",
+            "Proficient in design software like Adobe XD, Sketch, or Figma.",
+            "Strong understanding of UX principles and user-centered design.",
+            "Excellent communication skills and attention to detail."
+          ]
+        }
+      }
+    ]
+  },
+  "Marketing Analytics": {
+    "jobTitle": "Marketing Analytics",
+    "content": [
+      {
+        "subtitle": "About the Job",
+        "description": "We are seeking a knowledgeable and experienced Marketing Analytics who is a great SEO/Google analytics Expert to optimize our online presence and enhance search engine visibility. The ideal candidate will possess expertise in managing web optimization strategies, staying updated with search engine algorithms, and leveraging various SEO tools to drive organic traffic and improve rankings."
+      },
+      {
+        "subtitle": "Responsibilities",
+        "description": {
+          "list": [
+            "Manage and optimize website content to ensure it meets Google's Webmaster guidelines and best practices.",
+            "Conduct comprehensive keyword research to identify opportunities and optimize content accordingly.",
+            "Develop and execute comprehensive SEO strategies to improve organic search rankings and drive qualified traffic.",
+            "Implement on-page and off-page SEO strategies to enhance website performance and visibility on search engines.",
+            "Optimize website content, meta tags, headers, and URLs for target keywords.",
+            "Conduct technical SEO audits and identify areas for improvement.",
+            "Collaborate with web developers to ensure SEO best practices are implemented on the website.",
+            "Monitor and resolve issues related to website indexing, crawlability, and site speed.",
+            "Work closely with content creators to develop SEO-optimized content.",
+            "Provide guidelines and recommendations for content optimization.",
+            "Ensure content is aligned with SEO strategies and objectives.",
+            "Develop and execute effective link-building strategies.",
+            "Identify and engage with relevant industry influencers and websites for backlink opportunities.",
+            "Monitor and analyze backlink profiles to ensure quality and relevance.",
+            "Monitor and analyze website performance using tools such as Google Analytics, Google Search Console, SEMrush, and other relevant SEO software.",
+            "Analyze competitors and industry trends to inform SEO strategy.",
+            "Generate regular reports on website performance, traffic metrics, and SEO insights to drive continuous improvement.",
+            "Troubleshoot SEO issues, identify areas for improvement, and implement corrective measures.",
+            "Stay updated with industry trends, search engine algorithms, and best practices to adapt strategies accordingly.",
+            "Continuously test and refine SEO strategies based on industry developments.",
+            "Communicate effectively with stakeholders, including clients, project managers, and team members, to ensure project requirements are met."
+          ]
+        }
+      }
+    ]
+  },
+  "Jr. UI/UX Developer": {
+    "jobTitle": "Jr. UI/UX Developer",
+    "content": [
+      {
+        "subtitle": "About the Job",
+        "description": "We are looking for a front-end web developer who is motivated to combine the art of design with the art of programming. Responsibilities will include translation of the UI/UX design to actual code that will produce visual elements of the website and web based tools. You will closely work with the UI/UX designer and bridge the gap between web design and technical implementation, taking an active role on both sides and defining how the website looks as well as how it works. As a UI/UX developer, you will be responsible for the full spectrum of web design & development tasks, from visual design & graphics creation to front-end development using HTML ,CSS & JavaScript.You will collaborate closely with multi-functional teams including product managers, designers, developers,etc to ensure our digital products are not only visually appealing but also intuitive, user-centric and fully responsive. Your expertise in HTML, CSS, and JavaScript will be crucial in delivering outstanding user experiences."
+      },
+      {
+        "subtitle": "Responsibilities",
+        "description": {
+          "list": [
+            "Manage and optimize website content to ensure it meets Google's Webmaster guidelines and best practices.",
+            "Conduct comprehensive keyword research to identify opportunities and optimize content accordingly.",
+            "Develop and execute comprehensive SEO strategies to improve organic search rankings and drive qualified traffic.",
+            "Implement on-page and off-page SEO strategies to enhance website performance and visibility on search engines.",
+            "Optimize website content, meta tags, headers, and URLs for target keywords.",
+            "Conduct technical SEO audits and identify areas for improvement.",
+            "Collaborate with web developers to ensure SEO best practices are implemented on the website.",
+            "Monitor and resolve issues related to website indexing, crawlability, and site speed.",
+            "Work closely with content creators to develop SEO-optimized content.",
+            "Provide guidelines and recommendations for content optimization.",
+            "Ensure content is aligned with SEO strategies and objectives.",
+            "Develop and execute effective link-building strategies.",
+            "Identify and engage with relevant industry influencers and websites for backlink opportunities.",
+            "Monitor and analyze backlink profiles to ensure quality and relevance.",
+            "Monitor and analyze website performance using tools such as Google Analytics, Google Search Console, SEMrush, and other relevant SEO software.",
+            "Analyze competitors and industry trends to inform SEO strategy.",
+            "Generate regular reports on website performance, traffic metrics, and SEO insights to drive continuous improvement.",
+            "Troubleshoot SEO issues, identify areas for improvement, and implement corrective measures.",
+            "Stay updated with industry trends, search engine algorithms, and best practices to adapt strategies accordingly.",
+            "Continuously test and refine SEO strategies based on industry developments.",
+            "Communicate effectively with stakeholders, including clients, project managers, and team members, to ensure project requirements are met."
+          ]
+        }
+      }
+    ]
+  },
+  "PHP Developer": {
+    "jobTitle": "Jr. UI/UX Developer",
+    "content": [
+      {
+        "subtitle": "About the Job",
+        "description": "We are looking for a front-end web developer who is motivated to combine the art of design with the art of programming. Responsibilities will include translation of the UI/UX design to actual code that will produce visual elements of the website and web based tools. You will closely work with the UI/UX designer and bridge the gap between web design and technical implementation, taking an active role on both sides and defining how the website looks as well as how it works. As a UI/UX developer, you will be responsible for the full spectrum of web design & development tasks, from visual design & graphics creation to front-end development using HTML ,CSS & JavaScript.You will collaborate closely with multi-functional teams including product managers, designers, developers,etc to ensure our digital products are not only visually appealing but also intuitive, user-centric and fully responsive. Your expertise in HTML, CSS, and JavaScript will be crucial in delivering outstanding user experiences."
+      },
+      {
+        "subtitle": "Responsibilities",
+        "description": {
+          "list": [
+            "Manage and optimize website content to ensure it meets Google's Webmaster guidelines and best practices.",
+            "Conduct comprehensive keyword research to identify opportunities and optimize content accordingly.",
+            "Develop and execute comprehensive SEO strategies to improve organic search rankings and drive qualified traffic.",
+            "Implement on-page and off-page SEO strategies to enhance website performance and visibility on search engines.",
+            "Optimize website content, meta tags, headers, and URLs for target keywords.",
+            "Conduct technical SEO audits and identify areas for improvement.",
+            "Collaborate with web developers to ensure SEO best practices are implemented on the website.",
+            "Monitor and resolve issues related to website indexing, crawlability, and site speed.",
+            "Work closely with content creators to develop SEO-optimized content.",
+            "Provide guidelines and recommendations for content optimization.",
+            "Ensure content is aligned with SEO strategies and objectives.",
+            "Develop and execute effective link-building strategies.",
+            "Identify and engage with relevant industry influencers and websites for backlink opportunities.",
+            "Monitor and analyze backlink profiles to ensure quality and relevance.",
+            "Monitor and analyze website performance using tools such as Google Analytics, Google Search Console, SEMrush, and other relevant SEO software.",
+            "Analyze competitors and industry trends to inform SEO strategy.",
+            "Generate regular reports on website performance, traffic metrics, and SEO insights to drive continuous improvement.",
+            "Troubleshoot SEO issues, identify areas for improvement, and implement corrective measures.",
+            "Stay updated with industry trends, search engine algorithms, and best practices to adapt strategies accordingly.",
+            "Continuously test and refine SEO strategies based on industry developments.",
+            "Communicate effectively with stakeholders, including clients, project managers, and team members, to ensure project requirements are met."
+          ]
+        }
+      }
+    ]
+  },
+  "Web Developer Intern": {
+    "jobTitle": "Web Developer Intern",
+    "content": [
+      {
+        "subtitle": "About the Job",
+        "description": "We are seeking a dedicated Web Developer Intern to join our dynamic team. The Web Developer Intern role supports and assists the web development team in coding, modifying and delivering technically feature rich websites web applications, portals and platforms with focus on robustness, security, technical superiority and innovative features in line with client expectations. & plus youe will be working on our proprietary framework and language, contributing to the development of innovative solutions that drive our business."
+      },
+      {
+        "subtitle": "Roles And Responsibilities",
+        "description": {
+          "list": [
+            "Write well-designed, testable, efficient code by using best software development practices.",
+            "Create website layout/user interface by using standard HTML/CSS practices.",
+            "Integrate data from various back-end services and databases.",
+            "Gather and refine specifications and requirements based on technical need.",
+            "Create and maintain software documentation.",
+            "Be responsible for maintaining, expanding, and scaling our site.",
+            "Cooperate with web designers to match visual design intent.",
+            "Participate in the entire application lifecycle, focusing on coding and debugging.",
+            "Write clean code to develop functional web applications.",
+            "Troubleshoot and debug applications.",
+            "Perform UI tests to optimize performance.",
+            "Manage cutting-edge technologies to improve legacy applications.",
+            "Gather and address technical and design requirements.",
+            "Build reusable code and libraries for future use.",
+            "Work user-friendly with developers, designers, and system administrators to identify new features and follow emerging technologies."
+          ]
+        }
+      },
+      {
+        "subtitle": "Requirements",
+        "description": {
+          "list": [
+            "Write well-designed, testable, efficient code by using best software development practices.",
+            "Create website layout/user interface by using standard HTML/CSS practices.",
+            "Integrate data from various back-end services and databases.",
+            "Gather and refine specifications and requirements based on technical need.",
+            "Create and maintain software documentation.",
+            "Be responsible for maintaining, expanding, and scaling our site.",
+            "Cooperate with web designers to match visual design intent.",
+            "Participate in the entire application lifecycle, focusing on coding and debugging.",
+            "Write clean code to develop functional web applications.",
+            "Troubleshoot and debug applications.",
+            "Perform UI tests to optimize performance.",
+            "Manage cutting-edge technologies to improve legacy applications.",
+            "Gather and address technical and design requirements.",
+            "Build reusable code and libraries for future use.",
+            "Work in a user-friendly manner with developers, designers, and system administrators to identify new features and follow emerging technologies."
+          ]
+        }
+      }
+    ]
+  },
+
+  "Finance Intern": {
+    "jobTitle": "Finance Intern",
+    "content": [
+      {
+        "subtitle": "About the Job",
+        "description": "We are seeking a dynamic and motivated Finance Intern to join our team. As a Finance Intern you will have the opportunity to gain valuable experience and insight into the financial operations of our organization. This internship is designed to provide hands-on experience in various aspects of finance, accounting, and financial analysis."
+      },
+      {
+        "subtitle": "Responsibilities",
+        "description": {
+          "list": [
+            "Assist in day-to-day accounting tasks.",
+            "Assist in financial reporting and analysis tasks.",
+            "Compile and analyze financial data, ensuring accuracy and completeness.",
+            "Organize and manage bills, receipts, and financial documents.",
+            "Ensure proper filing and organization of accounting folders.",
+            "Assist in maintaining accounting protocols and standards.",
+            "Visit bank and other branches whenever required."
+          ]
+        }
+      },
+      {
+        "subtitle": "Skills And Qualifications",
+        "description": {
+          "list": [
+            " Currently pursuing a degree in Finance and Accounting field",
+            "Strong analytical and problem-solving skills",
+            "Proficiency in Microsoft Excel",
+            "Excellent attention to detail and organizational abilities",
+            "Ability to work independently and as part of a team",
+            "Strong verbal and written communication skills",
+            "Prior internship experience or coursework in finance/accounting is a plus"
+          ]
+        }
+      }
+    ]
+  },
+  "HR Generalist": {
+    "jobTitle": "HR Generalist",
+    "content": [
+      {
+        "subtitle": "HR Responsibilities",
+        "description": {
+          "list": [
+            "Develop and execute human resources strategies aligned with the company's business goals.",
+            "Collaborate with executive leadership to drive organizational growth and enhance overall employee experience.",
+            "Draft processes for better functioning of the organization.",
+            "Maintain discipline in the functioning of the organization.",
+            "Design performance metrics and evaluate the same on a quarterly basis.",
+            "Architect the employee appraisal program based on performance.",
+            "Manage the overall compliances of the organization.",
+            "Ensure all compliances are active and renewed on time.",
+            "Engage in employee training programs.",
+            "Provide monthly progress and performance reports to management.",
+            "Work with ethics and in an unbiased manner without favoritism.",
+            "Ensure neutral feedback to employees and management."
+          ]
+        }
+      },
+      {
+        "subtitle": "HR for Talent Acquisition and Retention",
+        "description": {
+          "list": [
+            "Draft and oversee the entire recruitment and onboarding process to attract top talent.",
+            "Develop and implement strategies for employee retention, career development, and succession planning.",
+            "Ensure hiring is done ahead of time via agency or other teams.",
+            "Ensure regular company updates in internal and external ecosystems.",
+            "Design employee benefits program."
+          ]
+        }
+      },
+      {
+        "subtitle": "HR for Employee Engagement",
+        "description": {
+          "list": [
+            " Foster a positive and inclusive workplace culture that values diversity and promotes employee engagement.",
+            "Implement initiatives to enhance employee satisfaction, well-being, and work-life balance."
+          ]
+        }
+      },
+      {
+        "subtitle": "HR for Performance Management",
+        "description": {
+          "list": [
+            "Design employee performance program.",
+            "Set annual targets for all business verticals and individuals.",
+            "Monitor and share monthly performance of employees.",
+            "Lead the development and implementation of performance management processes.",
+            "Provide guidance on goal setting, performance reviews, and professional development plans.",
+            "Design annual appraisal and bonus policy and process."
+          ]
+        }
+      },
+      {
+        "subtitle": "HR for Training and Development",
+        "description": {
+          "list": [
+            " Identify training needs and collaborate with department heads to implement effective training programs.",
+            " Support leadership development and mentorship initiatives."
+          ]
+        }
+      },
+      {
+        "subtitle": "HR for Compliance",
+        "description": {
+          "list": [
+            "Stay current with labor laws and industry regulations to ensure company compliance.",
+            "Implement policies and procedures to mitigate legal risks.",
+            "Manage the overall compliances of the organization.",
+            "Ensure all compliances are active and renewed on time.",
+            "Design the employee audit program.",
+            "Manage seamless attendance and leaves.",
+            "Conduct employee verifications as per audit and compliance requirements."
+          ]
+        }
+      },
+      {
+        "subtitle": "Employee for Relations",
+        "description": {
+          "list": [
+            " Address employee relations issues, conduct investigations, and provide guidance on conflict resolution.",
+            "Serve as a resource for employees and managers on HR-related matters."
+          ]
+        }
+      },
+      {
+        "subtitle": "Qualifications",
+        "description": {
+          "list": [
+            "Proven experience as a Senior HR Executive or in a similar Senior Leadership position and experience in working with Founders/Promoters.",
+            "Proven ability to build a strong team in the past. We shall need to know the positions closed in the past and their current performance and value in the current organizations.",
+            "In-depth knowledge of human resources principles, practices, and regulations.",
+            "Demonstrated success in developing and implementing HR strategies that align with business objectives.",
+            "Strong leadership and interpersonal skills with the ability to build positive relationships at all levels.",
+            "Excellent communication, drafting, and negotiation skills.",
+            "Master's degree in Human Resources, Business Administration, or a related field is preferred.",
+            "Should have experience in managing start to end of all compliance requirements to run an organization.",
+            "Should have strong past experience with existing contacts in compliance departments such as PF, ESIC, etc.",
+            "Should have experience in working on licensed platforms to make the HR department seamless and automated for reports and performance monitoring.",
+            "Should be capable of managing the entire HR department of an organization and should have relevant proven past experience in the same.",
+            "Should be a super team recruiter and should know how to source in the most optimal and cost-effective manner.",
+            "Should be experienced in designing tests before any personal interviews.",
+            "Should be an ace in reports and performance metrics management.",
+            "Relevant HR certifications (e.g., SHRM-SCP, SPHR) are a plus.",
+            "Should be the Lead Custodian of the HR vertical and ensure minimum involvement of top management while running the organization in the most compliant, high-performance, and happy environment."
+          ]
+        }
+      }
+    ]
+  },
+  "Executive Assistant to CEO": {
+    "jobTitle": "Executive Assistant to CEO",
+    "content": [
+      {
+        "subtitle": "Responsibilities and Requirements"
+      },
+      {
+        "subtitle": "Executive Assistant Responsibilities",
+        "description": {
+          "list": [
+            "Develop and execute human resources strategies aligned with the company, and manage and maintain the CEO’s schedule and calendar, including prioritizing and coordinating appointments and meetings.",
+            "Arrange and coordinate travel itineraries, both domestic and international, and prepare travel expense reports.",
+            "Prepare correspondence, reports, presentations, and other documents as requested by the CEO.",
+            "Conduct research and compile data to prepare documents and reports for review and presentation by the CEO.",
+            "Attend meetings with the CEO, take notes, and follow up on action items.",
+            "Screen and prioritize incoming communications, including phone calls, emails, letters, and requests for meetings.",
+            "Manage confidential information with discretion and professionalism.",
+            "Coordinate and facilitate communication between the CEO and internal staff as well as external contacts.",
+            "Handle requests and queries appropriately and ensure timely resolution.",
+            "Anticipate the needs of the CEO and proactively address issues that arise."
+          ]
+        }
+      },
+      {
+        "subtitle": "Executive Assistant Requirements",
+        "description": {
+          "list": [
+            "Currently pursuing a degree in Finance and Accounting field.",
+            "Strong analytical and problem-solving skills.",
+            "Proficiency in Microsoft Excel.",
+            "Excellent attention to detail and organizational abilities.",
+            "Ability to work independently and as part of a team.",
+            "Strong verbal and written communication skills.",
+            "Prior internship experience or coursework in finance/accounting is a plus."
+          ]
+        }
+      }
+    ]
+  },
+  "Sr.Manager Sales & Bussiness Development": {
+    "jobTitle": "Sr.Manager Sales & Business Development",
+    "content": [
+      {
+        "subtitle": "Responsibilities",
+        "description": {
+          "list": [
+            "Responsible for Lifestyle Sales to Corporates and Startups for Working and Living in destinations such as Goa and other aspirational locations in India.",
+            "Study the market pulse and make targeted databases.",
+            "Study and make relevant and sharp presentations around our offerings that are customized for our clients.",
+            "Pitch the same in the most dynamic and customized manner to ensure maximum client conversion.",
+            "Maintain a large database of clients and keep sourcing fresh data every month.",
+            "Work on annual targets and present monthly and quarterly reports.",
+            "Develop a growth strategy focused on both financial gain and customer satisfaction.",
+            "Conduct research to identify new markets and customer needs.",
+            "Arrange business meetings with prospective clients.",
+            "Promote the company’s products and services, addressing or predicting clients’ objectives.",
+            "Prepare contracts and ensure adherence to law-established rules and guidelines.",
+            "Keep records of sales, revenue, invoices, etc.",
+            "Provide trustworthy feedback and after-sales support.",
+            "Build long-term relationships with new and existing customers.",
+            "Develop entry-level staff into valuable salespeople.",
+            "Develop a team and train, activate, and grow the team.",
+            "Prepare monthly reports and analyses for management."
+          ]
+        }
+      },
+      {
+        "subtitle": "Requirements and Skills",
+        "description": {
+          "list": [
+            "Proven experience as a Sales and Business Development Manager.",
+            "Proven enterprise B2B sales track record.",
+            "Experience in customer support is a plus.",
+            "Proficiency in MS Office and CRM software (e.g., Salesforce).",
+            "Proficiency in English.",
+            "Market knowledge.",
+            "Communication and negotiation skills.",
+            "Ability to build rapport.",
+            "Time management and planning skills.",
+            "Master’s in Business Administration, Sales, or a relevant field."
+          ]
+        }
+      }
+    ]
+  },
+  "Social Media Executive": {
+    "jobTitle": "Social Media Marketing",
+    "content": [
+      {
+        "subtitle": "About the job",
+        "description": "We are searching for a talented social media Assistant to represent our company by building a social media presence for our brands. The social media Assistant will be required to run advertising campaigns and drive engagement by creating high-quality original content. You should also engage influencers, manage our community by responding to comments, and oversee our customer service across all platforms."
+      },
+      {
+        "subtitle": "Responsibilities",
+        "description": {
+          "list": [
+            "Excellent knowledge of branding and promotional activities for all leading social media platforms such as Facebook, Twitter, Instagram, LinkedIn, etc.",
+            "Assist with the planning of marketing strategies to help drive traffic and engagement to the website.",
+            "Design and deliver creative and engaging social media posts and strategies.",
+            "Develop original content for our various products, occasion-based campaigns, customer engagement campaigns, and property.",
+            "Form key relationships with influencers across social media platforms for collaboration.",
+            "Identify the latest trends and technologies to improve digital marketing performance.",
+            "Create branded content regularly for propagating brand vision and purpose.",
+            "Engage with social media users and respond to any mentions over Facebook, Twitter, Instagram, LinkedIn, Pinterest, etc.",
+            "Run paid ads on social media platforms to target the audience.",
+            "Create a social media calendar for 30 days and schedule accordingly.",
+            "Create reels on trending audio (4-6 reels in a month).",
+            "Proven experience in social media marketing, particularly in post-scheduling and creative curation.",
+            "Exceptional organizational skills with the ability to manage multiple projects and meet deadlines.",
+            "Creative mindset with the ability to generate innovative ideas for engaging social media content.",
+            "Proficiency in using social media management tools and analytics platforms.",
+            "Knowledge of videography and video editing is a plus.",
+            "Familiarity with SEO and digital marketing concepts."
+          ]
+        }
+      },
+      {
+        "subtitle": "What you will bring",
+        "description": {
+          "list": [
+            "BA/BS degree in marketing or a related field.",
+            "Familiarity with online marketing channels.",
+            "Up to date with the latest digital technologies and social media trends, with a command of each network and their best practices.",
+            "Creative thinker.",
+            "Excellent communication skills.",
+            "Knowledge of Adobe Photoshop/Canva is a bonus."
+          ]
+        }
+      }
+    ]
+  }
 }

@@ -114,7 +114,10 @@ const Services = () => {
                     </h4>
                     <span>Everything that your business needs in one single platform which is seamless and easy to use.</span>
                     <div className="services-header-button-space">
-                        <button className='get-started-main-button'>
+                        <button onClick={()=>{
+                            navigate('/login')
+                            window.scrollTo({top:0, behavior:'smooth'})
+                        }} className='get-started-main-button'>
                             Get Started
                         </button>
                     </div>
@@ -171,7 +174,7 @@ const Services = () => {
                             <div className="business-grid">
                                 {services_frontend.map(service => (
                                     <div className="business-service-card shadow" key={service.id}>
-                                        <div className="business-service-card-image shadow">
+                                        <div className="business-service-card-image ">
                                             <img src={service.image} alt={service.alt} />
                                         </div>
                                         <div className="business-service-card-content">
@@ -189,7 +192,7 @@ const Services = () => {
                             <div className="business-grid">
                                 {services_financeAccounting.map(service => (
                                     <div className="business-service-card shadow" key={service.id}>
-                                        <div className="business-service-card-image shadow">
+                                        <div className="business-service-card-image ">
                                             <img src={service.image} alt={service.alt} />
                                         </div>
                                         <div className="business-service-card-content">
@@ -208,7 +211,7 @@ const Services = () => {
                             <div className="business-grid">
                                 {services_salesMarketing.map(service => (
                                     <div className="business-service-card shadow" key={service.id}>
-                                        <div className="business-service-card-image shadow">
+                                        <div className="business-service-card-image ">
                                             <img src={service.image} alt={service.alt} />
                                         </div>
                                         <div className="business-service-card-content">
@@ -228,7 +231,7 @@ const Services = () => {
                             <div className="business-grid">
                                 {services_hrSupport.map(service => (
                                     <div className="business-service-card shadow" key={service.id}>
-                                        <div className="business-service-card-image shadow">
+                                        <div className="business-service-card-image ">
                                             <img src={service.image} alt={service.alt} />
                                         </div>
                                         <div className="business-service-card-content">
@@ -247,7 +250,7 @@ const Services = () => {
                             <div className="business-grid">
                                 {services_customerManagement.map(service => (
                                     <div className="business-service-card shadow" key={service.id}>
-                                        <div className="business-service-card-image shadow">
+                                        <div className="business-service-card-image ">
                                             <img src={service.image} alt={service.alt} />
                                         </div>
                                         <div className="business-service-card-content">
