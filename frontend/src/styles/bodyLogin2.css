@@ -289,6 +289,7 @@
     }
 
     .loginBottomPadding {
-        padding-bottom: 12.34rem;
+        padding-bottom: 4rem;
+        height: 67.2vh;
     }
 }

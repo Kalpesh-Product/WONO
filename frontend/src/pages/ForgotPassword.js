@@ -299,7 +299,7 @@ const ForgotPassword = () => {
                 )}
 
                 <div className="text-center mt-3">
-                    <span>Remembered your password? <Link to="/login" className="text-primary">Login</Link></span>
+                    <span>Remembered your password ? <Link to="/login" className="">Login</Link></span>
                 </div>
             </div>
             {/* <div className="forgot-password-right-container">

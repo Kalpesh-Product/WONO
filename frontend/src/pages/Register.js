@@ -84,17 +84,17 @@ const Register = () => {
   const handleNext = async (e) => {
     // e.preventDefault();
     // const validationErrors = validateCurrentStep();
-  
+
     // if (Object.keys(validationErrors).length === 0) {
     //   try {
-        
+
     //     let sectionData = {};
     //     let sectionName = '';
-  
-        
+
+
     //     const { email } = formData;
-  
-       
+
+
     //     if (currentStep === 0 && email) { 
     //       const isDuplicate = await checkEmailDuplicate(formData.email);
     //       if (isDuplicate) {
@@ -104,8 +104,8 @@ const Register = () => {
     //         }));
     //         return;
     //       }}
-  
-       
+
+
     //     switch (currentStep) {
     //       case 0:
     //         sectionData = {
@@ -135,12 +135,12 @@ const Register = () => {
     //         sectionData = formData.selectedServices;
     //         sectionName = 'services';
     //         break;
-      
+
     //       default:
     //         return;
     //     }
-  
-        
+
+
     //     const response = await fetch("https://wono-xtev.vercel.app/register/section", {
     //       method: "POST",
     //       headers: {
@@ -148,26 +148,26 @@ const Register = () => {
     //       },
     //       body: JSON.stringify({ section: sectionName, data: sectionData }),
     //     });
-  
+
     //     if (!response.ok) {
     //       throw new Error("Network response was not ok");
     //     }
-  
+
     //     console.log(await response.text());
-  
-    
+
+
     //   } catch (error) {
     //     console.error("There was a problem with the fetch operation:", error);
-        
+
     //   }
-      
+
     // }
     setCurrentStep((prev) => prev + 1);
   };
-  
 
-  
-  
+
+
+
   // Helper function to get section name
   const getSectionName = (step) => {
     switch (step) {
@@ -178,7 +178,7 @@ const Register = () => {
       default: return 'unknown';
     }
   };
-  
+
 
   const handleBack = () => {
     setCurrentStep((prev) => prev - 1);
@@ -250,22 +250,22 @@ const Register = () => {
   //handlesubmit section
   const handleSubmit = async (event) => {
     event.preventDefault();
-  
+
     // Check for duplicate email
     console.log("handleSubmit");
-  
+
     // Show "Sending details" modal
     setModalMessage(
       <img src={emailSend} style={{ width: 100 }} alt="emailSend" />
     );
     setIsLoading(true);
-  
+
     try {
       const dataToSubmit = {
         ...formData,
         selectedServices: formData.selectedServices,
       };
-  
+
       // Final submission to complete the registration
       const response = await fetch("https://wono-xtev.vercel.app/register", {
         method: "POST",
@@ -274,18 +274,18 @@ const Register = () => {
         },
         body: JSON.stringify(dataToSubmit),
       });
-  
+
       if (!response.ok) {
         throw new Error("Network response was not ok");
       }
-  
+
       const result = await response.text();
       console.log(result);
-  
+
       // Show "Email sent" message
       // setModalMessage('Email sent');
       console.log("Email sent");
-  
+
       // Navigate to login after a successful submission
       setTimeout(() => {
         navigate("/login");
@@ -295,28 +295,69 @@ const Register = () => {
       console.log("Failed to send registration details");
     } finally {
       setIsLoading(false);
-  
+
       // Clear modal message after some time
       setTimeout(() => {
         setModalMessage("");
       }, 3000);
     }
   };
-  
+
 
   const isChecked = (service) => formData.selectedServices[service];
   return (
     <div className="register-master">
       <section id="contact" className="register">
         <div
-          className="card flex justify-content-center"
-          style={{ backgroundColor: "white", padding: 0, border: 'none' }}>
-          <Stepper style={{ paddingTop: 0, textTransform:'uppercase' }} activeStep={currentStep}>
-            <Step label="Personal Details" />
-            <Step label="Company Details" />
-            <Step label="Services" />
-            <Step label="Account activation" />
+          className="card flex justify-content-center "
+          style={{ backgroundColor: "white", padding: 0, border: 'none', fontFamily:'inherit' }}>
+            <div className="stepper-container">
+
+          <Stepper
+            connectorStateColors={true}
+            styleConfig={{
+              activeBgColor: '#2196F3',  // Blue for the active step
+              completedBgColor: '#4CAF50',  // Green for completed steps
+              inactiveBgColor: '#E0E0E0',  // Color for inactive steps
+              size: '2.5em',  // Step size (Optional)
+              activeTextColor: '#FFFFFF',  // Text color for active step
+              completedTextColor: '#FFFFFF',  // Text color for completed steps
+              inactiveTextColor: '#000000',  // Text color for inactive steps
+              circleFontSize: '1rem',  // Font size for step number (Optional)
+              fontFamily: 'inherit'
+            }}
+            connectorStyleConfig={{
+              size: 3,  // Thickness of the connector line
+              activeColor: '#4CAF50',  // Color of the connector when active
+              completedColor: '#4CAF50',  // Color of the connector when completed
+              inactiveColor: '#E0E0E0'  // Color of the connector when inactive
+            }}
+            style={{ paddingTop: 0, textTransform: 'uppercase' }}
+            activeStep={currentStep}
+          >
+            <Step
+              label="Personal Details"
+              completed={currentStep > 0}  // Step is completed if currentStep is greater than 0
+              children={currentStep > 0 ? '✓' : 1}  // Show tick mark if completed, else show step number
+               stepClassName="stepper-container"
+            />
+            <Step
+              label="Company Details"
+              completed={currentStep > 1}  // Step is completed if currentStep is greater than 1
+              children={currentStep > 1 ? '✓' : 2}
+            />
+            <Step
+              label="Services"
+              completed={currentStep > 2}  // Step is completed if currentStep is greater than 2
+              children={currentStep > 2 ? '✓' : 3}
+            />
+            <Step
+              label="Account Activation"
+              completed={currentStep > 3}  // Step is completed if currentStep is greater than 3
+              children={currentStep > 3 ? '✓' : 4}
+            />
           </Stepper>
+            </div>
 
           <form
             name="form-p"
@@ -465,7 +506,9 @@ const Register = () => {
                               By clicking below you accept the terms and conditions
                             </span>
                             <span style={{ display: 'block', marginTop: '10px' }}>
-                              Already have an account <Link to="/login">Log-in</Link>
+                              Already have an account ? <Link onClick={() => {
+                                window.scrollTo({ top: 0, behavior: 'instant' })
+                              }} to="/login">Log-in</Link>
                             </span>
                           </Box>
                         </Grid>
@@ -637,16 +680,18 @@ const Register = () => {
                               By clicking below you accept the terms and conditions
                             </span>
                             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                            <button
-                              type="submit"
-                              className="register-page-button next-button-width"
-                              onClick={handleNext}
-                              style={{ width: "100%" }}>
-                              Next
-                            </button>
-                          </div>
+                              <button
+                                type="submit"
+                                className="register-page-button next-button-width"
+                                onClick={handleNext}
+                                style={{ width: "100%" }}>
+                                Next
+                              </button>
+                            </div>
                             <span style={{ display: 'block', marginTop: '10px' }}>
-                              Already have an account <Link to="/login">Log-in</Link>
+                              Already have an account ? <Link onClick={() => {
+                                window.scrollTo({ top: 0, behavior: 'instant' })
+                              }} to="/login">Log-in</Link>
                             </span>
                           </Box>
                         </Grid>
@@ -661,7 +706,7 @@ const Register = () => {
             {currentStep === 2 && (
               <>
                 <div className="registration-section-header">
-                  <h2 style={{textTransform:'uppercase'}}>Select your services</h2>
+                  <h2 style={{ textTransform: 'uppercase' }}>Select your services</h2>
                 </div>
 
                 <div className="register-container">
@@ -755,24 +800,31 @@ const Register = () => {
                   <div className="account-activation-section">
                     <div className="account-activation-description">
                       <span>
-                        An email has been send to your email address :
-                        <b>{formData.email ? formData.email : "EMAIL HERE"}</b>{" "}
+                        An email has been send to your email address : <b>{formData.email ? formData.email : "EMAIL HERE"}</b>{" "}
                         containing all the further process for activating the
                         account.
                       </span>
 
                       <span>
                         Please let us know if there is any more queries from
-                        your side or you can connect us as : response@wono.co
+                        your side or you can connect us as : <b>response@wono.co</b>
                       </span>
                       <div className="mail-client-container">
                         <div className="mail-client">
-                          <img src={gmailLogo} alt="Website" />
-                          <span>Open G-mail</span>
+                          <div className="mail-client-image">
+                            <img src={gmailLogo} alt="Website" />
+                          </div>
+                          <div className="mail-client-text">
+                            <span>Open G-mail</span>
+                          </div>
                         </div>
                         <div className="mail-client">
-                          <img src={outlookLogo} alt="Outlook" />
-                          <span>Open Outlook</span>
+                          <div className="mail-client-image">
+                            <img src={outlookLogo} alt="Outlook" />
+                          </div>
+                          <div className="mail-client-text">
+                            <span>Open Outlook</span>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -791,10 +843,11 @@ const Register = () => {
                         onClick={handleSubmit}>
                         Resend
                       </button>
-                      <span>Already have an account ? <span style={{textDecoration:'underline'}} onClick={()=>{
-                        navigate('/login')
-                        window.scrollTo({top:0, behavior:'smooth'})
-                        }}>log-in</span></span>
+                      <span style={{ display: 'block', marginTop: '10px' }}>
+                        Already have an account ? <Link onClick={() => {
+                          window.scrollTo({ top: 0, behavior: 'instant' })
+                        }} to="/login">Log-in</Link>
+                      </span>
                     </div>
                   </div>
                 </div>

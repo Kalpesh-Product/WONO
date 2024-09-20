@@ -155,7 +155,7 @@ h2 {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    font-family: Popins-Semibold;
+    font-family: Popins-Regular;
 }
 
 .forgot-password-left-container {
@@ -196,12 +196,27 @@ h2 {
     margin: 0;
     width: 100%;
 }
+@media (max-width:1024px) {
+
+    .forgot-password-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 70vh;
+        width: 100%;
+        font-family: Popins-Regular;
+    }
+    .forgot-password-left-container h2 {
+        font-family: Popins-Regular;
+        font-size: 3.5rem;
+    }
+}
 
 @media (max-width: 768px) {
     .forgot-password-container {
         display: flex;
         flex-direction: column;
-        height: 100%;
+        height: 100vh;
     }
 
     .forgot-password-left-container {

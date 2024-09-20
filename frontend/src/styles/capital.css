@@ -198,22 +198,22 @@
     justify-content: center;
     flex-direction: column;
     width: 100%;
-    padding: 4rem 7rem 6rem 7rem;
+    padding: 4rem 7rem 4rem 7rem;
     border-bottom: 1px solid rgba(13, 110, 253);
 
 }
 
 .capital-last-button-section h1 {
-    color: black;
+    color: #212529;
     font-family: Popins-Regular;
-    font-size:6rem;
+    font-size:6.5rem;
     font-weight: bold;
     padding-bottom: 2rem;
 }
 
 @media (max-width:1440px) {
     .capital-last-button-section h1 {
-        color: black;
+        color: #212529;
         font-family: Popins-Regular;
         font-size: 6rem;
         font-weight: bold;

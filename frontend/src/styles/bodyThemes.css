@@ -19,9 +19,9 @@
     padding: 4rem 7.5rem 4rem 7.5rem;
 }
 
-.themePage-header h2 {
+.themePage-header h1 {
     font-weight: bold;
-    font-size: 3rem;
+    font-size: 4rem;
     margin-bottom: 2rem;
 }
 
@@ -47,6 +47,7 @@
 
 .themePage-content-header h3 {
     margin-bottom: 2rem;
+    font-weight: 600;
 }
 
 .themePage-content-header span {
@@ -185,15 +186,17 @@
     width: 100%;
     text-align: left;
 }
-.themes-view-button{
+
+.themes-view-button {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
-    padding: 2rem 0 0 0 ;
+    padding: 2rem 0 0 0;
 }
-.themes-view-button button{
-   width: 50% !important;
+
+.themes-view-button button {
+    width: 50% !important;
 }
 
 
@@ -278,28 +281,31 @@
     flex-direction: column;
 }
 
-.themePage-website-success h1 {
+.themePage-website-success h2 {
     margin: 0;
     font-size: 4.9rem;
     font-weight: bold;
 }
 
 @media (max-width:1440px) {
-    .themePage-website-success h1 {
+    .themePage-website-success h2 {
         margin: 0;
-        font-size: 4.5rem;
+        font-size: 4.6rem;
         font-weight: bold;
     }
 }
+
 @media (max-width:1024px) {
     .themePage-header {
-        padding: 4rem ;
+        padding: 4rem;
     }
+
     .themePage-content-header {
         text-align: left;
         padding: 4rem 4rem 0 4rem;
         background-color: rgb(240, 240, 240);
     }
+
     .themePage-content-grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -307,12 +313,14 @@
         padding: 2rem 4rem 4rem 4rem;
         background-color: rgb(240, 240, 240);
     }
+
     .themePage-featured-grid {
         display: flex;
         flex-direction: column;
         gap: 1rem;
         border-radius: 10px;
     }
+
     .themePage-featured {
         height: 100%;
         width: 100%;
@@ -321,6 +329,7 @@
         justify-content: center;
         padding: 4rem;
     }
+
     .themePage-featured-grid-1 {
         display: flex;
         align-items: center;
@@ -328,28 +337,31 @@
         flex-direction: column;
         padding-left: 6.5rem;
     }
+
     .themePage-featured-header {
         width: 100%;
     }
+
     .themePage-featured-header h1 {
         font-size: 4rem;
         text-align: left;
         padding-right: 0rem;
         margin: 2rem 0;
     }
-    
+
     .themePage-featured-grid-2 img {
         width: 100%;
         height: 100%;
         object-fit: contain;
         object-position: center;
     }
+
     .themePage-website-header {
         padding-right: 0%;
         width: 100%;
         text-align: left;
     }
-    
+
     .themePage-website-features {
         display: flex;
         align-items: start;
@@ -358,6 +370,7 @@
         padding: 4rem;
         height: 100%;
     }
+
     .themePage-website-features-grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -366,19 +379,38 @@
         /* margin-bottom: 4rem; */
         margin-bottom: 2rem !important;
     }
+
+    .themePage-website-support-grid-1 h2 {
+        margin: 2rem 0;
+        font-size: 2.5rem;
+    }
+    .themePage-website-support-grid-1 p {
+        margin-bottom: 2rem;
+        font-size: 1.5rem;
+    }
+
+    .themePage-website-support-grid-1 span {
+        font-weight: bold;
+        border-bottom: 2px solid black;
+        transition: border 0.3s ease;
+        font-size: 1.5rem;
+    }
+
     .themePage-website-features-grid h4 {
         font-size: 1.3rem;
     }
+
     .themePage-website-support-section {
-        padding: 4rem ;
+        padding: 4rem;
         display: flex;
         align-items: center;
         justify-content: center;
         background-color: rgb(233, 249, 255);
     }
-    .themePage-website-success h1 {
+
+    .themePage-website-success h2 {
         margin: 0;
-        font-size: 3.6rem;
+        font-size: 4.87rem;
         font-weight: bold;
         text-align: center;
     }
@@ -391,10 +423,12 @@
         margin-bottom: 0;
     }
 
-    .themePage-header h2 {
+
+
+    .themePage-header h1 {
         font-weight: bold;
         font-size: 2rem;
-        margin-bottom: 30px;
+        margin-bottom: 2rem;
     }
 
     .themePage-header p {
@@ -411,6 +445,17 @@
     .themePage-content-header {
         text-align: left;
         padding: 2rem 2rem;
+    }
+
+    .themePage-content-header h3 {
+        text-align: left;
+        padding: 0rem 0rem;
+        font-size: 2rem;
+        font-weight: 300;
+    }
+    .themePage-content-header span {
+        text-align: left;
+        font-size: 1rem;
     }
 
     .theme-grid {
@@ -440,6 +485,9 @@
         align-items: center;
         justify-content: center;
     }
+    .themePage-featured-header h1{
+        margin: 0;
+    }
 
     .themePage-featured-grid {
         display: grid;
@@ -459,10 +507,15 @@
     }
 
     .themePage-featured-header h1 {
-        font-size: 2.5rem;
+        font-size: 2rem;
         text-align: left;
-        padding: 0 1rem;
+        padding: 0 0 0 1rem;
         margin-bottom: 40px;
+    }
+    .themePage-featured-content ul li {
+        margin-bottom: 0;
+        margin-bottom: 0.5rem;
+        font-size: 1rem;
     }
 
     .themePage-featured-content {
@@ -505,13 +558,19 @@
         display: grid;
         grid-template-columns: 1fr;
         gap: 1rem;
-        text-align: center;
+        text-align: start;
+        margin-bottom: 0 !important;
     }
 
     .themePage-website-features h1 {
-        font-size: 2.5rem;
+        font-size: 1.9rem;
         margin-bottom: 4rem;
         text-align: start;
+    }
+
+    .themePage-website-features p {
+        margin-bottom: 2rem;
+        font-size: 1rem;
     }
 
     .themePage-website-header {
@@ -551,8 +610,8 @@
     }
 
     .themePage-website-support-header h1 {
-        font-size: 2.4rem;
-        margin-bottom: 4rem;
+        font-size: 2rem;
+        margin-bottom: 2rem;
     }
 
     .themePage-website-support-grid-1 {
@@ -565,17 +624,19 @@
     }
 
     .themePage-website-support-grid-1 h2 {
+        font-size: 1.3rem;
         margin-bottom: 2rem;
     }
 
     .themePage-website-support-grid-1 p {
-        /* white-space: nowrap; */
+        font-size: 1rem;
     }
 
     .themePage-website-support-grid-1 span {
         font-weight: bold;
         border-bottom: 2px solid black;
         transition: border 0.3s ease;
+        font-size: 1.2rem;
     }
 
     .themePage-website-support-grid-1 span:hover {
@@ -599,7 +660,8 @@
         flex-direction: column;
         text-align: center;
     }
-    .themePage-website-success h1 {
+
+    .themePage-website-success h2 {
         margin: 0;
         font-size: 2rem;
         font-weight: bold;
