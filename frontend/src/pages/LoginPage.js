@@ -2,7 +2,8 @@ import React, { useState, useContext } from "react";
 import "../styles/bodyLogin.css";
 import "../styles/bodyLogin2.css";
 import { Link, useNavigate } from "react-router-dom";
-import { GoogleLogin } from "@react-oauth/google";
+import { GoogleLoginButton } from 'react-social-login-buttons';
+import { LoginSocialGoogle } from 'reactjs-social-login'
 import { jwtDecode } from "jwt-decode";
 import { UserContext } from "../components/UserContext";
 import Modals from "../components/Modals";
@@ -24,11 +25,15 @@ const LoginPage = () => {
   const [showModal, setShowModal] = useState(false); // Control modal visibility
   const [modalTitle, setModalTitle] = useState("Error"); // Modal title
   const [modalMessage, setModalMessage] = useState("");
+  const [token, setToken] = useState('');
   axios.defaults.withCredentials = true;
 
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+
+    // Function to decode JWT token
+
 
     // Username validation using regex
     const usernameRegex = /^.{2,}$/; // At least 2 characters long
@@ -58,6 +63,29 @@ const LoginPage = () => {
 
     setUserName("");
     setPassword("");
+  };
+
+  const handleLoginResolve = ({ provider, data }) => {
+    console.log('Provider:', provider);
+    console.log('Data:', data);
+
+    // Get the token from data
+    const token = data.access_token || data.id_token;
+
+    if (token) {
+      try {
+        // Decode the JWT token
+        const decodedToken = jwtDecode(token);
+        console.log('Decoded Token:', decodedToken);
+
+        // Example of accessing user information
+        console.log('User ID:', decodedToken.sub); // Example of accessing user ID
+        console.log('Email:', decodedToken.email); // Example of accessing user email
+        // ... access other details
+      } catch (error) {
+        console.error('Error decoding token:', error);
+      }
+    }
   };
 
   // const handleUsernameChange = (e) => {
@@ -115,13 +143,13 @@ const LoginPage = () => {
         </p>
         <div className="loginDividingContainer">
           <div className="loginLeftContainer">
-            <Container maxWidth="sm" style={{paddingTop:'3rem'}}>
+            <Container maxWidth="sm" style={{ paddingTop: '3rem' }}>
               <Box component="form" sx={{ flexGrow: 1 }} onSubmit={handleSubmit} noValidate autoComplete="off">
                 <Grid container spacing={2}>
                   <Grid item xs={12}>
                     <TextField
                       label="Email"
-                      variant="standard"
+                      variant="outlined"
                       type="email"
                       value={email}
                       onChange={handleUsernameChange}
@@ -129,36 +157,25 @@ const LoginPage = () => {
                       helperText={userNameError}
                       required
                       fullWidth
-                      InputProps={{
-                        disableUnderline: false, // Keep underline (bottom border) enabled
-                        sx: {
-                          borderBottom: '1px solid', // Customize the bottom border style if needed
-                        },
-                      }}
+          
                     />
                   </Grid>
 
                   <Grid item xs={12}>
                     <TextField
                       label="Password"
-                      variant="standard"
+                      variant="outlined"
                       type="password"
                       value={password}
                       onChange={(e) => setPassword(e.target.value)}
                       required
                       fullWidth
-                      InputProps={{
-                        disableUnderline: false, // Keep underline (bottom border) enabled
-                        sx: {
-                          borderBottom: '1px solid gray', // Customize the bottom border style if needed
-                        },
-                      }}
                     />
                   </Grid>
 
-              
 
-                  <Grid style={{paddingTop:'0'}} p={0} item xs={12}>
+
+                  <Grid style={{ paddingTop: '0' }} p={0} item xs={12}>
                     <Box p={0} mt={2}>
                       <a href="#" style={{ textDecoration: 'none' }}>Forgot Password?</a>
                     </Box>
@@ -195,18 +212,28 @@ const LoginPage = () => {
           <div className="loginRightContainer">
             <div className="loginWithSection d-flex flex-column justify-content-center align-items-center">
               <div className="loginWithSection d-flex flex-column justify-content-center align-items-center">
-                <div className="LoginWithGoogleContainer loginWithBox loginWithGoogleBox d-flex justify-content-between align-items-center centerElement w-100">
-                  <div className="loginWithIconBox loginWithGoogleIconBox centerElement">
-                    <img
-                      src={LoginWithGoogleImage}
-                      alt="Google Icon"
-                      className="imageDimensions"
-                    />
+                <LoginSocialGoogle
+                  client_id={"358669748567-d4e1dl47ic6patb61sidq0ipdvllb0bn.apps.googleusercontent.com"}
+                  scope="openid profile email"
+                  access_type="offline"
+                  onResolve={handleLoginResolve}
+                  onReject={(err) => {
+                    console.log('Error:', err);
+                  }}
+                >
+                  <div className="LoginWithGoogleContainer loginWithBox loginWithGoogleBox d-flex justify-content-between align-items-center centerElement w-100">
+                    <div className="loginWithIconBox loginWithGoogleIconBox centerElement">
+                      <img
+                        src={LoginWithGoogleImage}
+                        alt="Google Icon"
+                        className="imageDimensions"
+                      />
+                    </div>
+                    <div className="LoginWithGoogleText LoginWithText centerElement w-100">
+                      <div>Continue with Google</div>
+                    </div>
                   </div>
-                  <div className="LoginWithGoogleText LoginWithText centerElement w-100">
-                    <div>Continue with Google</div>
-                  </div>
-                </div>
+                </LoginSocialGoogle>
               </div>
               <div className="LoginWithFacebookContainer loginWithBox loginWithFacebookBox d-flex justify-content-between align-items-center centerElement">
                 <div className="loginWithIconBox loginWithFacebookIconBox centerElement">
@@ -221,7 +248,7 @@ const LoginPage = () => {
                 </div>
 
                 <div className="login-empty-padding">
-                  
+
                 </div>
               </div>
               {/*  */}
@@ -249,9 +276,9 @@ const LoginPage = () => {
         handleClose={handleCloseModal}
         title={modalTitle}
         closeText={'Close'}
-        >
+      >
         {modalMessage}
-        
+
       </Modals>
     </>
   );
