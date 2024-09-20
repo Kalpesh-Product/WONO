@@ -12,6 +12,12 @@ const NavBar = ({activeTab ,changeActiveTab}) => {
   const navigate = useNavigate();
   const location = useLocation();
   const isAuthPage = location.pathname === '/login' || location.pathname === '/register';
+  const isthempage =location.pathname === '/themes';
+  const isservices = location.pathname === '/services';
+  const isleadspage = location.pathname === '/leads';
+  const iscareerpage = location.pathname === '/career';
+  const iscapitalpage = location.pathname === '/capital'
+
   const { user, setUser } = useContext(UserContext);
   const [show, setShow] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -59,20 +65,20 @@ const NavBar = ({activeTab ,changeActiveTab}) => {
           />
         </div>
         <div className="custom-navbar-menu nav-tabss">
-          <Link to='/services' className={!isAuthPage && activeTab === 'Services'? 'active':''} onClick={()=>{
+          <Link to='/services' className={!isAuthPage && isservices|| activeTab === 'Services'? 'active':''} onClick={()=>{
             changeActiveTab('Services')
             window.scrollTo({ top: 0, behavior: "smooth" })
             }}>SaaS</Link>
-          <Link to='/capital'  className={!isAuthPage && activeTab === 'capital'? 'active':''} onClick={()=>{
+          <Link to='/capital'  className={!isAuthPage && iscapitalpage && !isservices||  activeTab === 'capital'? 'active':''} onClick={()=>{
             changeActiveTab('capital')
             window.scrollTo({ top: 0, behavior: "smooth" })
             }}>Capital</Link>
-          <Link to='/themes' onClick={()=>{changeActiveTab('themes');  window.scrollTo({ top: 0, behavior: "smooth" })}} className={!isAuthPage && activeTab === 'themes'? 'active':''}
+          <Link to='/themes' onClick={()=>{changeActiveTab('themes');  window.scrollTo({ top: 0, behavior: "smooth" })}} className={!isAuthPage && isthempage || activeTab === 'themes'? 'active':''}
           >Theme</Link>
           <Link to='/leads' onClick={()=>{
             changeActiveTab('leads');
             window.scrollTo({ top: 0, behavior: "smooth" })
-          }} className={!isAuthPage && activeTab === 'leads'? 'active':''}>Leads</Link>
+          }} className={!isAuthPage &&  !isservices && isleadspage|| activeTab === 'leads'? 'active':''}>Leads</Link>
           <Link to='/career'  className={!isAuthPage && activeTab === 'Career'? 'active':''} onClick={()=>{
             changeActiveTab('Career')
             window.scrollTo({ top: 0, behavior: "smooth" })

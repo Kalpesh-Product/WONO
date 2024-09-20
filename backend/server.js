@@ -154,6 +154,11 @@ table, td {
     <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">Experience</td>
     <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">${experience}</td>
   </tr>
+   <tr>
+    <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">LinkedInProfile</td>
+    <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;"><a href="">${location}</a></td>
+  </tr>
+
   <tr>
     <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">LinkedInProfile</td>
     <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;"><a href="">${linkedInProfile}</a></td>

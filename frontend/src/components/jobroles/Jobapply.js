@@ -192,7 +192,7 @@ const Jobapply = ({ jobTitle }) => {
                             <DatePicker
                                 label="Date of Birth"
                                 value={formvalues.date ? parse(formvalues.date, 'dd-MM-yyyy', new Date()) : null}
-                                // onChange={handleChange('date')} 
+                                 onChange={handleChange('date')} 
                                 slotProps={{ textField: { fullWidth: true } }}
                                 
                                 
