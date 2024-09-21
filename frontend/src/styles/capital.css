@@ -203,7 +203,7 @@
 
 }
 
-.capital-last-button-section h1 {
+.capital-last-button-section h2 {
     color: #212529;
     font-family: Popins-Regular;
     font-size:6.5rem;
@@ -212,7 +212,7 @@
 }
 
 @media (max-width:1440px) {
-    .capital-last-button-section h1 {
+    .capital-last-button-section h2 {
         color: #212529;
         font-family: Popins-Regular;
         font-size: 6rem;
@@ -355,7 +355,7 @@
         text-align: center;
     }
     
-    .capital-last-button-section h1 {
+    .capital-last-button-section h2 {
         color: black;
         font-family: Popins-Regular;
         font-size: 97px;
@@ -503,7 +503,7 @@
         font-size: 25px;
     }
 
-    .capital-last-button-section h1 {
+    .capital-last-button-section h2 {
         font-size: 25px;
         padding-bottom: 0;
         margin-bottom: 1rem;
@@ -550,6 +550,9 @@
         /* padding-top: 4rem;
         padding-left: 1rem;
         padding-right: 1rem; */
+    }
+    .cards-with-text h3{
+        font-size: 15px;
     }
 
     .connect-with-us-btn {
@@ -664,10 +667,10 @@
         font-size: 25px;
     }
 
-    .capital-last-button-section h1 {
-        font-size: 25px;
+    .capital-last-button-section h2 {
+        font-size: 2rem;
         padding-bottom: 0;
-        margin-bottom: 1rem;
+        /* margin-bottom: 1rem; */
     }
 
     .capital-heading-sub {
