@@ -26,14 +26,14 @@ const LoginPage = () => {
   const [modalTitle, setModalTitle] = useState("Error"); // Modal title
   const [modalMessage, setModalMessage] = useState("");
   const [token, setToken] = useState('');
-  axios.defaults.withCredentials = true;
+
+
+
+  // axios.defaults.withCredentials = true;
 
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-
-
-
     // Username validation using regex
     const usernameRegex = /^.{2,}$/; // At least 2 characters long
     if (!usernameRegex.test(email)) {
@@ -93,7 +93,7 @@ const LoginPage = () => {
     setEmail(value);
 
     // Email validation using regex
-    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{1,}$/;
     if (!emailRegex.test(value)) {
       setUserNameError("Enter a valid email address");
     } else {

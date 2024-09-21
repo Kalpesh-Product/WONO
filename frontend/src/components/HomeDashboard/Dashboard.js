@@ -11,7 +11,7 @@ import Ticker from "./Ticker";
 const Dashboard = () => {
   const navigate = useNavigate();
   const [openSidebarToggle, setOpenSidebarToggle] = useState(false);
-  axios.defaults.withCredentials = true;
+  // axios.defaults.withCredentials = true;
   useEffect(() => {
     axios
       .post("/")

@@ -21,12 +21,10 @@ const { parse, format } = require('date-fns');
 
 
 const app = express();
+
 app.use(cors({
-  origin: (origin, callback) => {
-    // Allow all origins
-    callback(null, origin || '*');
-  },
-  credentials: true, // Allow credentials (cookies, sessions)
+  origin: true, // Reflects the request origin, allowing all origins
+  credentials: true, // Allow cookies to be sent
 }));
 const port = process.env.PORT;
 
@@ -40,7 +38,7 @@ app.use(session({
   resave: false,
   saveUninitialized: false,
   cookie: {
-    secure: true, // Set to true if using HTTPS
+    secure: false, // Set to true if using HTTPS
     httpOnly: true,
     sameSite: 'lax', // Allow cross-origin requests with credentials
     maxAge: 1000 * 60 * 60 * 2, // 2 hours
