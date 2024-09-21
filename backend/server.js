@@ -18,6 +18,8 @@ const crypto = require('crypto');
 const mongoose = require('mongoose');
 const { parse, format } = require('date-fns');
 
+app.use(cors());
+
 
 const app = express();
 const port = process.env.PORT;
@@ -37,12 +39,7 @@ app.use(session({
     maxAge: 1000 * 60 * 60 * 2 // 2 hours
   }
 }))
-app.use(cors({
-  origin: process.env.FRONTEND_PORT,
-  methods: ["GET", "POST"],
-  credentials: true
-}
-));
+
 
 // Setup Nodemailer transporter
 const transporter = nodemailer.createTransport({

@@ -148,6 +148,15 @@
         width: 100%;
     }
 
+    .customMargin_bottom {
+        display: flex;
+        align-items: start;
+        justify-content: flex-start;
+        flex-direction: column;
+        padding: 2rem 1rem;
+        width: 100%;
+    }
+
     .body-partners-master {
         background-color: rgb(255, 255, 255);
         padding-left: 2rem;

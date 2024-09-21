@@ -605,12 +605,12 @@
     }
 
     .services:not(:last-child) {
-        padding: 0 1.7rem;
+        padding: 0 1.9rem;
     }
 
     .SaaS-main-heading {
         text-align: start;
-        padding: 2rem 0 2rem 0;
+        padding: 0rem 0 2rem 0;
 
     }
 
@@ -633,7 +633,7 @@
 
     .SaaS-main-heading h1 {
         font-size: 2rem;
-        padding: 2rem 0 4rem 0;
+        padding: 2rem 0 2rem 0;
         line-height: 130%;
     }
 
@@ -672,6 +672,9 @@
         grid-template-columns: 1fr;
         gap: 2rem;
         padding: 4rem 0;
+    }
+    .SaaS-featured-grid-left {
+        font-size: 1.353rem;
     }
 
     .SaaS-featured-grid-right {
@@ -724,7 +727,8 @@
     }
 
     .SaaS-grid-heading span {
-        font-size: 1.5rem;
+        font-size: 1.353rem;
+        padding-bottom: 0;
     }
 
     .business-service-card {
@@ -764,7 +768,7 @@
 
     .businesses>div>h1 {
         text-align: start;
-        font-size: 1.7rem;
+        font-size: 1.5rem;
         font-weight: 700;
         font-family: Popins-SemiBold;
         color: black;
@@ -783,7 +787,7 @@
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         width: 100%;
-        margin: 4rem 0 4rem 0;
+        margin: 2rem 0 2rem 0;
         padding: 0;
         column-gap: 2rem;
         row-gap:1rem ;
