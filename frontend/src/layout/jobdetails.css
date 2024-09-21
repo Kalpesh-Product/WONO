@@ -1,55 +1,84 @@
-section{
-    overflow: hidden;
-  }
-  .features .nav-tabs{
-    border: 0;
-  }
-  .features .nav-link.active{
-    background-color: transparent;
-    color: #000;
-    border-color: #000;
-  }
-  .features .nav-link{
-    padding: 15px 0;
-    transition: 0.3s;
-    border-radius: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    height: 100%;
-    border: 0;
-    border-bottom: 4px solid #e2e4e6;
-  }
-  .container-jobDetails{
-    padding-left: 7rem;
-    padding-right: 7rem;
-  }
-  
-  .features .tab-content{
-    margin-top: 30px;
-  }
-  .custom-list{
-    list-style-type: none; 
-  }
-  .custom-list li {
-    position: relative; /* Needed to position the check mark */
-    padding-left: 25px; /* Space for the check mark */
+section {
+  overflow: hidden;
+}
+
+.features .nav-tabs {
+  border: 0;
+}
+
+.features .nav-link.active {
+  background-color: transparent;
+  color: #000;
+  border-color: #000;
+}
+
+.features .nav-link {
+  padding: 15px 0;
+  transition: 0.3s;
+  border-radius: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  height: 100%;
+  border: 0;
+  border-bottom: 4px solid #e2e4e6;
+}
+
+.container-jobDetails {
+  padding-left: 7rem;
+  padding-right: 7rem;
+}
+
+.features .tab-content {
+  margin-top: 30px;
+}
+
+.custom-list {
+  list-style-type: none;
+}
+
+.custom-list li {
+  position: relative;
+  /* Needed to position the check mark */
+  padding-left: 25px;
+  /* Space for the check mark */
 }
 
 .custom-list li::before {
-    content: '✔'; /* Unicode for check mark */
-    position: absolute;
-    left: 0; /* Position the check mark */
-    color: green; /* Color of the check mark */
-    font-size: 20px; /* Adjust size if needed */
+  content: '✔';
+  /* Unicode for check mark */
+  position: absolute;
+  left: 0;
+  /* Position the check mark */
+  color: green;
+  /* Color of the check mark */
+  font-size: 20px;
+  /* Adjust size if needed */
 }
-  
-  @media (max-width:768px) {
-    .container-jobDetails{
-      padding-left: 2rem;
-      padding-right: 2rem;
-    }
-    
+
+form h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: popins-Regular;
+}
+
+form .apply-form-btn {
+  font-family: popins-Regular;
+  padding: 0.5rem 2rem;
+  border-radius: 30px;
+  color: white;
+}
+
+@media (max-width:768px) {
+  .container-jobDetails {
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
-  
+
+  .mobileFont {
+    font-size: 1rem;
+  }
+
+}
