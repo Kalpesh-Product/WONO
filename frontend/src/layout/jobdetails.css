@@ -44,6 +44,18 @@ section{
     color: green; /* Color of the check mark */
     font-size: 20px; /* Adjust size if needed */
 }
+form h2{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: popins-Regular;
+}
+form .apply-form-btn{
+  font-family: popins-Regular;
+  padding: 0.5rem 2rem;
+  border-radius: 30px;
+  color: white;
+}
   
   @media (max-width:768px) {
     .container-jobDetails{

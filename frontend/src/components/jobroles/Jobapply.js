@@ -155,11 +155,11 @@ const Jobapply = ({ jobTitle }) => {
   return (
     <div>
       <form name="form-p" onSubmit={handleSubmit}>
-        <h6>
+        <h2>
           APPLICATION FORM
-        </h6>
+        </h2>
         <Grid container spacing={2}>
-          <Grid item md={6}>
+          <Grid item md={6} xs={12}>
             <TextField
               type="text"
               name="name"
@@ -172,7 +172,7 @@ const Jobapply = ({ jobTitle }) => {
             />
           </Grid>
 
-          <Grid item md={6}>
+          <Grid item md={6} xs={12}>
             <TextField
               type="email"
               name="email"
@@ -185,7 +185,7 @@ const Jobapply = ({ jobTitle }) => {
             />
           </Grid>
 
-          <Grid item md={6}>
+          <Grid item md={6} xs={12}>
             <LocalizationProvider dateAdapter={AdapterDateFns}>
               <DatePicker
                 label="Date of Birth"
@@ -201,7 +201,7 @@ const Jobapply = ({ jobTitle }) => {
             </LocalizationProvider>
           </Grid>
 
-          <Grid item md={6}>
+          <Grid item md={6} xs={12}>
             <TextField
               type="tel"
               name="number"
@@ -215,9 +215,10 @@ const Jobapply = ({ jobTitle }) => {
             />
           </Grid>
 
-          <Grid item md={6}>
+          <Grid item md={6} xs={12}>
             <FormControl fullWidth required>
-              <InputLabel>State</InputLabel>
+              <InputLabel
+              slotProps={{ textField: { fullWidth: true } }}>State</InputLabel>
               <Select
                 name="location"
                 value={formvalues.location}
@@ -232,7 +233,7 @@ const Jobapply = ({ jobTitle }) => {
             </FormControl>
           </Grid>
 
-          <Grid item md={6}>
+          <Grid item md={6} xs={12}>
             <TextField
               type="number"
               name="experience"
@@ -245,7 +246,7 @@ const Jobapply = ({ jobTitle }) => {
             />
           </Grid>
 
-          <Grid item md={6}>
+          <Grid item md={6} xs={12}>
             <TextField
               type="text"
               name="linkedInProfile"
@@ -257,7 +258,7 @@ const Jobapply = ({ jobTitle }) => {
             />
           </Grid>
 
-          <Grid item md={6}>
+          <Grid item md={6} xs={12}>
             <TextField
               type="file"
               name="resume"
@@ -269,7 +270,7 @@ const Jobapply = ({ jobTitle }) => {
             />
           </Grid>
 
-          <Grid item md={6}>
+          <Grid item md={6} xs={12}>
             <TextField
               type="number"
               name="monthlySalary"
@@ -282,7 +283,7 @@ const Jobapply = ({ jobTitle }) => {
             />
           </Grid>
 
-          <Grid item md={6}>
+          <Grid item md={6} xs={12}>
             <TextField
               type="number"
               name="expectedSalary"
@@ -295,13 +296,15 @@ const Jobapply = ({ jobTitle }) => {
             />
           </Grid>
 
-          <Grid item md={6}>
+          <Grid item md={6} xs={12}>
             <FormControl fullWidth required>
-              <InputLabel>How Soon You Can Join?</InputLabel>
+              <InputLabel
+              slotProps={{ textField: { fullWidth: true } }}>How Soon You Can Join?</InputLabel>
               <Select
                 name="daysToJoin"
                 value={formvalues.daysToJoin}
                 onChange={handleInputChange}
+                fullWidth
               >
                 <MenuItem value="" disabled>Select</MenuItem>
                 <MenuItem value="15 Days">15 Days</MenuItem>
@@ -313,7 +316,7 @@ const Jobapply = ({ jobTitle }) => {
             </FormControl>
           </Grid>
 
-          <Grid item md={6}>
+          <Grid item md={6} xs={12}>
             <FormControl fullWidth required>
               <InputLabel>Will You Relocate to Goa?</InputLabel>
               <Select
@@ -327,8 +330,9 @@ const Jobapply = ({ jobTitle }) => {
             </FormControl>
           </Grid>
 
-          <Grid item md={12}>
-            <TextField
+          <Grid item md={12} xs={12}>
+            {/* <TextField
+              multiline={true}
               name="personality"
               minRows={4}
               placeholder="Who are you as a person?"
@@ -336,11 +340,18 @@ const Jobapply = ({ jobTitle }) => {
               style={{ width: '100%' }}
               value={formvalues.personality}
               onChange={handleInputChange}
-            />
+            /> */}
+            <textarea name="input47" rows="3" cols="10" style={{ width: '100%',padding:"10px" ,borderColor:"#9E9E9E"}}
+            placeholder="Who are you as a person?"
+            
+            >
+        
+    </textarea>
           </Grid>
 
-          <Grid item md={12}>
-            <TextField
+          <Grid item md={12} xs={12}>
+            {/* <TextField
+              
               name="skills"
               minRows={4}
               placeholder="What skill sets do you have for the job that you have applied?"
@@ -348,11 +359,16 @@ const Jobapply = ({ jobTitle }) => {
               style={{ width: '100%' }}
               value={formvalues.skills}
               onChange={handleInputChange}
-            />
+            /> */}
+             <textarea name="input47" rows="3" cols="10" style={{ width: '100%',padding:"10px",borderColor:"#BDBDBD" }}
+            placeholder="What skill sets do you have for the job that you have applied?"
+            
+            ></textarea>
           </Grid>
 
-          <Grid item md={12}>
-            <TextField
+          <Grid item md={12} xs={12}>
+            {/* <TextField
+              
               name="specialexperience"
               minRows={4}
               placeholder="Why should we consider you for joining our company?"
@@ -360,11 +376,16 @@ const Jobapply = ({ jobTitle }) => {
               style={{ width: '100%' }}
               value={formvalues.specialexperience}
               onChange={handleInputChange}
-            />
+            /> */}
+            <textarea name="input47" rows="3" cols="10" style={{ width: '100%',padding:"10px",borderColor:"#BDBDBD" }}
+            placeholder="Why should we consider you for joining our company?"
+            
+            ></textarea>
           </Grid>
 
-          <Grid item md={12}>
-            <TextField
+          <Grid item md={12} xs={12}>
+            {/* <TextField
+              
               name="willing"
               minRows={4}
               placeholder="Are you willing to bootstrap to join a growing startup?"
@@ -372,11 +393,17 @@ const Jobapply = ({ jobTitle }) => {
               style={{ width: '100%' }}
               value={formvalues.willing}
               onChange={handleInputChange}
-            />
+            /> */}
+            <textarea name="input47" rows="3" cols="10" style={{ width: '100%',padding:"10px" ,borderColor:"#BDBDBD"}}
+            placeholder="Are you willing to bootstrap to join a growing startup?"
+            
+            ></textarea>
+
           </Grid>
 
-          <Grid item md={12}>
-            <TextField
+          <Grid item md={12} xs={12}>
+            {/* <TextField
+              
               name="message"
               minRows={4}
               placeholder="Personal Message"
@@ -384,11 +411,15 @@ const Jobapply = ({ jobTitle }) => {
               style={{ width: '100%' }}
               value={formvalues.message}
               onChange={handleInputChange}
-            />
+            /> */}
+            <textarea name="input47" rows="3" cols="10" style={{ width: '100%',padding:"10px",borderColor:"#BDBDBD" }}
+            placeholder="Personal Message"
+            
+            ></textarea>
           </Grid>
 
-          <Grid item md={12} textAlign="center">
-            <Button variant="contained" color="primary" type="submit">
+          <Grid item md={12} xs={12} textAlign="center">
+            <Button variant="contained" color="primary" type="submit" style={{backgroundColor:"black",}} className="apply-form-btn">
               SUBMIT
             </Button>
           </Grid>
