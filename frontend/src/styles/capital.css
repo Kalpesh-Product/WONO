@@ -58,8 +58,8 @@
 
 .capital-cards-section {
     background-color: black;
-    padding-left: 7rem;
-    padding-right: 7rem;
+    padding-left: 8rem;
+    padding-right: 8rem;
     padding-top: 50px;
     display: flex;
     flex-direction: row;
@@ -136,7 +136,7 @@
 .capital-big-text {
     font-family: Popins-Regular;
     /* padding: 5% 4rem 5% 4rem; */
-    padding: 4rem 7rem;
+    padding: 4rem 7.3rem;
 
 }
 
@@ -206,12 +206,9 @@
 .capital-last-button-section h1 {
     color: black;
     font-family: Popins-Regular;
-    font-size: 97px;
+    font-size: 5.8rem;
     font-weight: bold;
     padding-bottom: 2rem;
-
-
-
 }
 
 .Connect-with-us-today-btn {

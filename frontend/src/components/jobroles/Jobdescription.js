@@ -44,7 +44,7 @@ const Jobdescription = ({ decodedTitle }) => {
                 )
             }
             <hr style={{ marginTop: "20px" }}></hr>
-            <p style={{ marginBottom: "50px" }}>Please send in your Resume to <strong>Email : <Link to="mailto:response@wono.co"> response@wono.co </Link></strong>
+            <p style={{ marginBottom: "50px" }}>Please send in your Resume to <strong>Email : <Link to="mailto:hr@wono.co"> hr@wono.co </Link></strong>
                 if unable to apply now</p>
         </div>
     )

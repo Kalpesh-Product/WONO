@@ -37,8 +37,8 @@
 .card_1 {
 background-color: #fff;
     border-radius: 10px;
-    height: 330px;
-    margin: 0.5rem 10px;
+    height: 22.125rem;
+    margin: 0.5rem 19px;
     padding: 30px 20px;
     width: 270px !important;
 }
@@ -132,6 +132,17 @@ button.slick-next.slick-arrow{
 button.slick-next.slick-arrow::before{
   color: black;
   font-size: 2rem;
+}
+@media (max-width:1440px) {
+  
+  .card_1 {
+    background-color: #fff;
+    border-radius: 10px;
+    height: 22.695rem;
+    margin: 0.5rem 10px;
+    padding: 30px 20px;
+    width: 257px !important;
+  }
 }
 
 @media (max-width:1024px) {

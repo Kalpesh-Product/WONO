@@ -215,25 +215,6 @@
         padding-bottom: 2rem;
     }
 
-
-    /* Media query for phone view (max-width: 768px or smaller) */
-    /* @media (max-width: 768px) {
-    .individual-card {
-        width: 100%;
-    }
-
-    .flexForCards {
-        justify-content: center;
-    }
-} */
-
-    /* General responsive adjustments */
-    /* body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-} */
-
     @media (min-width: 1025px) {
         .FFFF {
             font-size: 2.6rem !important;
@@ -244,6 +225,22 @@
             font-size: 2.25rem !important;
 
         }
+    }
+
+    .leads-heading-section{
+        padding: 4rem 7.5rem;
+    }
+    .organic-leads-section{
+        padding: 4rem 7.7rem;
+    }
+    .google-sheets-section{
+        padding: 4rem 8rem;
+    }
+    .marketing-section{
+        padding: 4rem 7.7rem;
+    }
+    .finer-points-section{
+        padding: 2rem 6rem 2rem 6rem;
     }
 
     /* Media query for tablet view (max-width: 1024px or smaller) */
@@ -290,6 +287,27 @@
         }
         .leads-databseImage{
             display: none;
+        }
+        .leads-heading-section{
+            padding: 3rem 4rem ;
+        }
+        .organic-leads-section{
+            padding: 3rem 4rem;
+        }
+        .google-sheets-section{
+            padding: 3rem 4rem;
+        }
+        .marketing-section{
+            padding: 3rem 4rem;
+        }
+        .finer-points-section{
+            padding: 3rem 4rem;
+        }
+        .better-roi-section{
+            padding: 3rem 4rem !important;
+        }
+        .complete-view-section{
+            padding: 3rem 4rem !important;
         }
     }
 
@@ -490,4 +508,20 @@
         .Tickmark-text {
             font-size: 14px;
         }
+        .leads-heading-section{
+            padding: 2rem ;
+        }
+        .organic-leads-section{
+            padding: 2rem;
+        }
+        .google-sheets-section{
+            padding: 2rem;
+        }
+        .marketing-section{
+            padding: 2rem;
+        }
+        .finer-points-section{
+            padding: 1rem;
+        }
+    
     }

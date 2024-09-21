@@ -12,8 +12,7 @@ const Jobrole = () => {
   return (
     <>
 
-      <div className='border'>
-      </div>
+
       <div className='JobRole'>
         <div className='testingContainer'>
           <h1></h1>
