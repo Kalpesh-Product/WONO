@@ -18,10 +18,10 @@ const crypto = require('crypto');
 const mongoose = require('mongoose');
 const { parse, format } = require('date-fns');
 
-app.use(cors());
 
 
 const app = express();
+app.use(cors());
 const port = process.env.PORT;
 
 // Middleware to parse JSON data

@@ -26,78 +26,67 @@ const LoginPage = () => {
   const [modalTitle, setModalTitle] = useState("Error"); // Modal title
   const [modalMessage, setModalMessage] = useState("");
   const [token, setToken] = useState('');
-  // axios.defaults.withCredentials = true;
+  axios.defaults.withCredentials = true;
 
 
   const handleSubmit = async (event) => {
-  //   event.preventDefault();
-
-  
-  //   const usernameRegex = /^.{2,}$/; 
-  //   if (!usernameRegex.test(email)) {
-  //     setModalTitle("Invalid email");
-  //     setModalMessage("Enter a valid email");
-  //     setShowModal(true); 
-  //     return; 
-  //   }
-
-  //   try {
-  //     const response = await axios.post("https://wono-xtev.vercel.app/login", {
-  //       email,
-  //       password,
-  //     });
-
-  //     const { user } = response.data;
-  //     setUser(user);
-  //     navigate("/dashboard");
-  //   } catch (error) {
-  //     setModalTitle("Login Failed");
-  //     setModalMessage("Invalid email or password");
-  //     setShowModal(true); 
-  //     console.error("Login Failed:", error);
-  //   }
-
-  //   setUserName("");
-  //   setPassword("");
-  // };
-
-  // const handleLoginResolve = ({ provider, data }) => {
-  //   console.log('Provider:', provider);
-  //   console.log('Data:', data);
+    event.preventDefault();
 
 
-  //   const token = data.access_token || data.id_token;
 
-  //   if (token) {
-  //     try {
-       
-  //       const decodedToken = jwtDecode(token);
-  //       console.log('Decoded Token:', decodedToken);
+    // Username validation using regex
+    const usernameRegex = /^.{2,}$/; // At least 2 characters long
+    if (!usernameRegex.test(email)) {
+      setModalTitle("Invalid email");
+      // setModalMessage("Enter a valid username");
+      setModalMessage("Enter a valid email");
+      setShowModal(true); // Show the modal for the error
+      return; // Exit the function if the username is invalid
+    }
 
-       
-  //       console.log('User ID:', decodedToken.sub); 
-  //       console.log('Email:', decodedToken.email); 
+    try {
+      const response = await axios.post("http://localhost:5000/login", {
+        email,
+        password,
+      });
 
-  //     } catch (error) {
-  //       console.error('Error decoding token:', error);
-  //     }
-  //   }
-  navigate('/dashboard')
+      const { user } = response.data;
+      setUser(user);
+      navigate("/dashboard");
+    } catch (error) {
+      setModalTitle("Login Failed");
+      setModalMessage("Invalid email or password");
+      setShowModal(true); // Show the modal for the error
+      console.error("Login Failed:", error);
+    }
+
+    setUserName("");
+    setPassword("");
   };
 
-  // const handleUsernameChange = (e) => {
-  //   const value = e.target.value;
-  //   setUserName(value);
+  const handleLoginResolve = ({ provider, data }) => {
+    console.log('Provider:', provider);
+    console.log('Data:', data);
 
-  //   // Username validation using regex (at least 2 characters long)
-  //   const usernameRegex = /^.{2,}$/; // At least 2 characters
-  //   if (!usernameRegex.test(value)) {
-  //     // setUserNameError("Enter a valid username");
-  //     setUserNameError("Enter a valid email");
-  //   } else {
-  //     setUserNameError(""); // Clear error if username is valid
-  //   }
-  // };
+    // Get the token from data
+    const token = data.access_token || data.id_token;
+
+    if (token) {
+      try {
+        // Decode the JWT token
+        const decodedToken = jwtDecode(token);
+        console.log('Decoded Token:', decodedToken);
+
+        // Example of accessing user information
+        console.log('User ID:', decodedToken.sub); // Example of accessing user ID
+        console.log('Email:', decodedToken.email); // Example of accessing user email
+        // ... access other details
+      } catch (error) {
+        console.error('Error decoding token:', error);
+      }
+    }
+  };
+
 
   const handleUsernameChange = (e) => {
     const value = e.target.value;
