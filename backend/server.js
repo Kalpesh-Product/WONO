@@ -8,17 +8,15 @@ const bodyParser = require("body-parser");
 const nodemailer = require("nodemailer");
 const cors = require("cors");
 const promisePool = require("./db");
-const fs = require('fs');
-const { Parser } = require('json2csv');
-const path = require('path');
+const fs = require("fs");
+const { Parser } = require("json2csv");
+const path = require("path");
 const { error } = require("console");
-const session = require('express-session')
-const cookieParser = require('cookie-parser')
-const crypto = require('crypto');
-const mongoose = require('mongoose');
-const { parse, format } = require('date-fns');
-
-
+const session = require("express-session");
+const cookieParser = require("cookie-parser");
+const crypto = require("crypto");
+const mongoose = require("mongoose");
+const { parse, format } = require("date-fns");
 
 const app = express();
 app.use(cors());
@@ -28,18 +26,19 @@ const port = process.env.PORT;
 app.use(express.json());
 app.use(bodyParser.json());
 app.use(cookieParser());
-app.use(session({
-  key: 'Wono-login',
-  secret: 'secret',
-  resave: false,
-  saveUninitialized: false,
-  cookie: {
-    secure: false, // Set to true if using HTTPS
-    httpOnly: true,
-    maxAge: 1000 * 60 * 60 * 2 // 2 hours
-  }
-}))
-
+app.use(
+  session({
+    key: "Wono-login",
+    secret: "secret",
+    resave: false,
+    saveUninitialized: false,
+    cookie: {
+      secure: false, // Set to true if using HTTPS
+      httpOnly: true,
+      maxAge: 1000 * 60 * 60 * 2, // 2 hours
+    },
+  })
+);
 
 // Setup Nodemailer transporter
 const transporter = nodemailer.createTransport({
@@ -58,41 +57,37 @@ const transport = nodemailer.createTransport({
   },
 });
 
-
-
-
 // Test route
 app.get("/", (req, res) => {
-  res.json({ message: "Backend here" });
+  res.json({ message: "Backend here" });
 });
 
-app.post('/', (req, res) => {
-  console.log('Session Data:', req.session);
+app.post("/", (req, res) => {
+  console.log("Session Data:", req.session);
   if (req.session.user) {
     res.json({ valid: true });
   } else {
     res.json({ valid: false });
   }
 });
-app.get('/session', (req, res) => {
+app.get("/session", (req, res) => {
   if (req.session.user) {
     res.json({ user: req.session.user });
   } else {
-    res.status(401).json({ error: 'Not authenticated' });
+    res.status(401).json({ error: "Not authenticated" });
   }
 });
 
-
 //Banner-Email
 
-app.post('/banner-email', async (req, res) => {
+app.post("/banner-email", async (req, res) => {
   const { name, email, number, selectedOption } = req.body;
 
   const Options = {
-    from: 'anushri.bhagat263@gmail.com',
+    from: "anushri.bhagat263@gmail.com",
     to: email, // Send to the user
-    subject: 'Your Data is Received',
-    text: `Hello ${name},\n\nWe have received your data with the following details:\n\nName: ${name}\nEmail: ${email}\nMobile: ${number}\nOption: ${selectedOption}\n\nThank you!`
+    subject: "Your Data is Received",
+    text: `Hello ${name},\n\nWe have received your data with the following details:\n\nName: ${name}\nEmail: ${email}\nMobile: ${number}\nOption: ${selectedOption}\n\nThank you!`,
   };
 
   try {
@@ -100,57 +95,75 @@ app.post('/banner-email', async (req, res) => {
 
     // Auto-reply
     const autoReplyOptions = {
-      from: 'anushri.bhagat263@gmail.com',
+      from: "anushri.bhagat263@gmail.com",
       to: email, // Send to yourself
-      subject: 'New Submission Received',
+      subject: "New Submission Received",
       html: `<h1>Thank you for your concern.</h1>
             <br></br>
             <p>
             We have received your application. We will get back to you in 24hrs.
-            </p>`
+            </p>`,
     };
 
     await transport.sendMail(autoReplyOptions);
 
     res.json({ success: true });
-
-  }
-  catch (error) {
-    console.error('Error sending email:', error);
+  } catch (error) {
+    console.error("Error sending email:", error);
     res.json({ success: false });
   }
-})// End Banner-Email
+}); // End Banner-Email
 
+const jobApplicationSchema = new mongoose.Schema(
+  {
+    jobTitle: String,
+    name: String,
+    email: String,
+    date: String,
+    number: String,
+    location: String,
+    experience: String,
+    linkedInProfile: String,
+    resume: String,
+    monthlySalary: String,
+    expectedSalary: String,
+    daysToJoin: String,
+    relocateGoa: Boolean,
+    personality: String,
+    skills: String,
+    specialexperience: String,
+    willing: String,
+    message: String,
+  },
+  { timestamps: true }
+);
 
-const jobApplicationSchema = new mongoose.Schema({
-  jobTitle: String,
-  name: String,
-  email: String,
-  date: String,
-  number: String,
-  location: String,
-  experience: String,
-  linkedInProfile: String,
-  resume: String,
-  monthlySalary: String,
-  expectedSalary: String,
-  daysToJoin: String,
-  relocateGoa: Boolean,
-  personality: String,
-  skills: String,
-  specialexperience: String,
-  willing: String,
-  message: String
-}, { timestamps: true });
+const JobApplication = mongoose.model("JobApplication", jobApplicationSchema);
 
-const JobApplication = mongoose.model('JobApplication', jobApplicationSchema);
+app.post("/send-email", async (req, res) => {
+  const {
+    jobTitle,
+    name,
+    email,
+    date,
+    number,
+    location,
+    experience,
+    linkedInProfile,
+    resume,
+    monthlySalary,
+    expectedSalary,
+    daysToJoin,
+    relocateGoa,
+    personality,
+    skills,
+    specialexperience,
+    willing,
+    message,
+  } = req.body;
 
-app.post('/send-email', async (req, res) => {
-  const { jobTitle, name, email, date, number, location, experience, linkedInProfile, resume, monthlySalary, expectedSalary,
-    daysToJoin, relocateGoa, personality, skills, specialexperience, willing, message } = req.body;
-
-  const parsedDate = parse(date, 'dd-MM-yyyy', new Date());
-  const formattedDate = format(parsedDate, 'dd-MM-yyyy');
+  const parsedDate = parse(date, "dd-MM-yyyy", new Date());
+  const formattedDate = format(parsedDate, "dd-MM-yyyy");
 
   // Save the application details to MongoDB
   const jobApplication = new JobApplication({
@@ -171,7 +184,7 @@ app.post('/send-email', async (req, res) => {
     skills,
     specialexperience,
     willing,
-    message
+    message,
   });
 
   try {
@@ -180,7 +193,7 @@ app.post('/send-email', async (req, res) => {
 
     // Email options
     const Mailoption = {
-      from: 'anushri.bhagat263@gmail.com',
+      from: "anushri.bhagat263@gmail.com",
       to: email,
       subject: `Job Application: ${name} - ${jobTitle}`,
       html: `<head><style>
@@ -234,30 +247,27 @@ app.post('/send-email', async (req, res) => {
     // Send email
     transport.sendMail(Mailoption, (error, info) => {
       if (error) {
-        return res.status(500).send('Failed to send Email: ' + error.message);
+        return res.status(500).send("Failed to send Email: " + error.message);
       }
-      res.status(200).send('Application details have been sent');
+      res.status(200).send("Application details have been sent");
     });
-
   } catch (error) {
-    console.error('Error saving application:', error);
-    res.status(500).send('Failed to save application');
+    console.error("Error saving application:", error);
+    res.status(500).send("Failed to save application");
   }
 });
 
 // Route to download the CSV file
-app.get('/download-csv', (req, res) => {
-  const filePath = path.join(__dirname, 'form_data.csv');
+app.get("/download-csv", (req, res) => {
+  const filePath = path.join(__dirname, "form_data.csv");
 
   // Check if the file exists
   if (fs.existsSync(filePath)) {
     res.download(filePath);
   } else {
-    res.status(404).send('CSV file not found');
+    res.status(404).send("CSV file not found");
   }
 });
-
-
 
 // app.post('/submit-form', (req, res) => {
 //   const { jobTitle, name, email, date, number, location, experience, linkedInProfile, resume, monthlySalary, expectedSalary,
@@ -313,19 +323,20 @@ app.get('/download-csv', (req, res) => {
 
 // });
 
-const enquirySchema = new mongoose.Schema({
-  name: String,
-  email: String,
-  mobile: String,
-  partnerstype: String,
-  message: String,
-}, { collection: 'enquiryDetails' });
+const enquirySchema = new mongoose.Schema(
+  {
+    name: String,
+    email: String,
+    mobile: String,
+    partnerstype: String,
+    message: String,
+  },
+  { collection: "enquiryDetails" }
+);
 
-const Enquiry = mongoose.model('Enquiry', enquirySchema);
+const Enquiry = mongoose.model("Enquiry", enquirySchema);
 
-
-
-app.post('/enquiries', async (req, res) => {
+app.post("/enquiries", async (req, res) => {
   const { name, email, mobile, partnerstype, message } = req.body;
 
   try {
@@ -334,7 +345,7 @@ app.post('/enquiries', async (req, res) => {
       email,
       mobile,
       partnerstype,
-      message
+      message,
     });
 
     await newEnquiry.save();
@@ -363,8 +374,13 @@ app.post('/enquiries', async (req, res) => {
     </html>
 `;
 
-
-    const companyEmailTemplate = (name, email, mobile, partnerstype, message) => `
+    const companyEmailTemplate = (
+      name,
+      email,
+      mobile,
+      partnerstype,
+      message
+    ) => `
   <!DOCTYPE html>
   <html lang="en">
   <head>
@@ -414,90 +430,86 @@ app.post('/enquiries', async (req, res) => {
   </html>
 `;
 
-
-
     await transporter.sendMail({
-      from: 'aiwinraj1810@gmail.com', // sender address
+      from: "aiwinraj1810@gmail.com", // sender address
       to: email, // user email
-      subject: 'Thank You for Your Enquiry',
-      html: userEmailTemplate(name)
+      subject: "Thank You for Your Enquiry",
+      html: userEmailTemplate(name),
     });
 
     // Send email to the company
     await transporter.sendMail({
-      from: 'aiwinraj1810@gmail.com', // sender address
-      to: 'productwonoco@gmail.com', // company email
-      subject: 'New Enquiry Received',
-      html: companyEmailTemplate(name, email, mobile, partnerstype, message)
+      from: "aiwinraj1810@gmail.com", // sender address
+      to: "productwonoco@gmail.com", // company email
+      subject: "New Enquiry Received",
+      html: companyEmailTemplate(name, email, mobile, partnerstype, message),
     });
-    res.status(201).json({ message: 'Enquiry submitted successfully!' });
+    res.status(201).json({ message: "Enquiry submitted successfully!" });
   } catch (error) {
-    console.error('Error saving enquiry:', error);
-    res.status(500).json({ error: 'Internal Server Error' });
+    console.error("Error saving enquiry:", error);
+    res.status(500).json({ error: "Internal Server Error" });
   }
 });
 
-
-
 //regdetails schema
 
-const userSchema = new mongoose.Schema({
-  // Personal Information Section
-  personalInfo: {
-    name: { type: String, required: false },
-    mobile: { type: String, required: false },
-    email: { type: String, required: false, unique : true }, // Make optional
-    country: String,
-    city: String,
-    state: String,
+const userSchema = new mongoose.Schema(
+  {
+    // Personal Information Section
+    personalInfo: {
+      name: { type: String, required: false },
+      mobile: { type: String, required: false },
+      email: { type: String, required: false, unique: true }, // Make optional
+      country: String,
+      city: String,
+      state: String,
+    },
+
+    // Company Information Section
+    companyInfo: {
+      companyName: String,
+      industry: String,
+      companySize: String,
+      companyType: String,
+      companyCity: String,
+      companyState: String,
+      websiteURL: String,
+      linkedinURL: String,
+    },
+
+    // Login Credentials (if needed in future)
+    credentials: {
+      username: String,
+      password: String,
+    },
+
+    // Service Selection Section
+    selectedServices: {
+      service1: { type: Boolean, default: false },
+      service2: { type: Boolean, default: false },
+      service3: { type: Boolean, default: false },
+      service4: { type: Boolean, default: false },
+    },
+
+    otp: { type: String, required: false },
   },
-
-  // Company Information Section
-  companyInfo: {
-    companyName: String,
-    industry: String,
-    companySize: String,
-    companyType: String,
-    companyCity: String,
-    companyState: String,
-    websiteURL: String,
-    linkedinURL: String,
-  },
-
-  // Login Credentials (if needed in future)
-  credentials: {
-    username: String,
-    password: String,
-  },
-
-  // Service Selection Section
-  selectedServices: {
-    service1: { type: Boolean, default: false },
-    service2: { type: Boolean, default: false },
-    service3: { type: Boolean, default: false },
-    service4: { type: Boolean, default: false },
-  },
-
-  otp: { type: String, required: false },
-
-}, { collection: 'registrationDetails' });
-
-
+  { collection: "registrationDetails" }
+);
 
 // Define UserService schema
-const userServiceSchema = new mongoose.Schema({
-  user_id: mongoose.Schema.Types.ObjectId,
-  service_name: String
-}, { collection: 'userServices' });
+const userServiceSchema = new mongoose.Schema(
+  {
+    user_id: mongoose.Schema.Types.ObjectId,
+    service_name: String,
+  },
+  { collection: "userServices" }
+);
 
 // Create models
-const User = mongoose.model('User', userSchema);
-const UserService = mongoose.model('UserService', userServiceSchema);
-
+const User = mongoose.model("User", userSchema);
+const UserService = mongoose.model("UserService", userServiceSchema);
 
 // Route to handle form submission
-
-
 
 app.post("/register", async (req, res) => {
   const {
@@ -520,12 +532,12 @@ app.post("/register", async (req, res) => {
 
   try {
     // Generate username and password
-    const username = name.replace(/\s+/g, '');
+    const username = name.replace(/\s+/g, "");
     const uniqueNumber = crypto.randomInt(1000, 9999);
     const password = `${username}@Wono${uniqueNumber}`;
 
     // Check if user already exists
-    let user = await User.findOne({ 'personalInfo.email': email });
+    let user = await User.findOne({ "personalInfo.email": email });
 
     if (!user) {
       // If user doesn't exist, create a new one
@@ -550,9 +562,9 @@ app.post("/register", async (req, res) => {
         },
         credentials: {
           username,
-          password
+          password,
         },
-        selectedServices
+        selectedServices,
       });
     } else {
       // Update existing user
@@ -577,7 +589,7 @@ app.post("/register", async (req, res) => {
       user.selectedServices = selectedServices;
       user.credentials = {
         username,
-        password
+        password,
       };
     }
 
@@ -585,10 +597,10 @@ app.post("/register", async (req, res) => {
 
     // Insert selected services into UserService collection
     const serviceEntries = Object.keys(selectedServices)
-      .filter(service => selectedServices[service])
-      .map(service => ({
+      .filter((service) => selectedServices[service])
+      .map((service) => ({
         user_id: savedUser._id,
-        service_name: service
+        service_name: service,
       }));
 
     if (serviceEntries.length > 0) {
@@ -629,7 +641,9 @@ app.post("/register", async (req, res) => {
         <p><strong>Company State:</strong> ${companyState}</p>
         <p><strong>Website URL:</strong> ${websiteURL}</p>
         <p><strong>LinkedIn URL:</strong> ${linkedinURL}</p>
-        <p><strong>Selected Services:</strong> ${Object.keys(selectedServices).filter(service => selectedServices[service]).join(', ')}</p>
+        <p><strong>Selected Services:</strong> ${Object.keys(selectedServices)
+          .filter((service) => selectedServices[service])
+          .join(", ")}</p>
         <p><strong>Username:</strong> ${username}</p>
         <p><strong>Password:</strong> ${password}</p>
       `,
@@ -648,15 +662,14 @@ app.post("/register", async (req, res) => {
   }
 });
 
-
 app.post("/register/section", async (req, res) => {
   const { section, data } = req.body;
   console.log(`Received section: ${section}`);
-  console.log('Received data:', data);
+  console.log("Received data:", data);
 
   try {
     // Find the user by email or create a new one
-    let user = await User.findOne({ 'personalInfo.email': data.email });
+    let user = await User.findOne({ "personalInfo.email": data.email });
     if (!user) {
       console.log("No user found, creating a new one");
       user = new User();
@@ -671,13 +684,13 @@ app.post("/register/section", async (req, res) => {
 
     // Update user data based on the section
     switch (section) {
-      case 'personal':
+      case "personal":
         user.personalInfo = { ...user.personalInfo, ...data };
         break;
-      case 'company':
+      case "company":
         user.companyInfo = { ...user.companyInfo, ...data };
         break;
-      case 'services':
+      case "services":
         user.selectedServices = { ...user.selectedServices, ...data };
         break;
       default:
@@ -694,18 +707,18 @@ app.post("/register/section", async (req, res) => {
   }
 });
 
-app.post('/forgot-password', async (req, res) => {
+app.post("/forgot-password", async (req, res) => {
   const { email } = req.body;
 
   if (!email) {
-    return res.status(400).json({ error: 'Email is required' });
+    return res.status(400).json({ error: "Email is required" });
   }
 
   try {
-    const user = await User.findOne({ 'personalInfo.email': email });
+    const user = await User.findOne({ "personalInfo.email": email });
 
     if (!user) {
-      return res.status(404).json({ error: 'Email not found' });
+      return res.status(404).json({ error: "Email not found" });
     }
 
     const generatedOTP = crypto.randomInt(100000, 999999).toString();
@@ -714,132 +727,131 @@ app.post('/forgot-password', async (req, res) => {
     await user.save();
 
     const mailOptions = {
-      from: 'aiwinraj1810@gmail.com',
+      from: "aiwinraj1810@gmail.com",
       to: email,
-      subject: 'Password Reset OTP',
-      text: `Your OTP for password reset is ${generatedOTP}`
+      subject: "Password Reset OTP",
+      text: `Your OTP for password reset is ${generatedOTP}`,
     };
 
     try {
       await transporter.sendMail(mailOptions);
-      res.status(200).json({ message: 'OTP sent successfully' });
+      res.status(200).json({ message: "OTP sent successfully" });
     } catch (error) {
-      console.error('Error sending OTP email:', error);
-      res.status(500).json({ error: 'Failed to send OTP email' });
+      console.error("Error sending OTP email:", error);
+      res.status(500).json({ error: "Failed to send OTP email" });
     }
-
   } catch (error) {
-    console.error('Error in /forgot-password:', error);
-    res.status(500).json({ error: 'An error occurred while processing your request' });
+    console.error("Error in /forgot-password:", error);
+    res
+      .status(500)
+      .json({ error: "An error occurred while processing your request" });
   }
 });
 
 //verify otp
 
-app.post('/verify-otp', async (req, res) => {
+app.post("/verify-otp", async (req, res) => {
   const { email, otp } = req.body;
 
   if (!email || !otp) {
-    return res.status(400).json({ error: 'Email and OTP are required' });
+    return res.status(400).json({ error: "Email and OTP are required" });
   }
 
   try {
-    const user = await User.findOne({ 'personalInfo.email': email });
+    const user = await User.findOne({ "personalInfo.email": email });
 
     if (!user) {
-      return res.status(404).json({ error: 'Email not found' });
+      return res.status(404).json({ error: "Email not found" });
     }
 
     if (otp !== user.otp) {
-      return res.status(400).json({ error: 'Invalid OTP' });
+      return res.status(400).json({ error: "Invalid OTP" });
     }
 
     user.otp = null; // Clear the OTP
     await user.save();
 
-    res.status(200).json({ message: 'OTP verified successfully' });
-
+    res.status(200).json({ message: "OTP verified successfully" });
   } catch (error) {
-    console.error('Error in /verify-otp:', error);
-    res.status(500).json({ error: 'An error occurred while processing your request' });
+    console.error("Error in /verify-otp:", error);
+    res
+      .status(500)
+      .json({ error: "An error occurred while processing your request" });
   }
 });
 
-app.post('/reset-password', async (req, res) => {
+app.post("/reset-password", async (req, res) => {
   const { email, password } = req.body;
 
   if (!email || !password) {
-    return res.status(400).json({ error: 'Email and new password are required' });
+    return res
+      .status(400)
+      .json({ error: "Email and new password are required" });
   }
 
   try {
-    const user = await User.findOne({ 'personalInfo.email': email });
+    const user = await User.findOne({ "personalInfo.email": email });
 
     if (!user) {
-      return res.status(404).json({ error: 'Email not found' });
+      return res.status(404).json({ error: "Email not found" });
     }
 
     user.credentials.password = password; // Update password
     await user.save();
 
-    res.status(200).json({ message: 'Password updated successfully' });
+    res.status(200).json({ message: "Password updated successfully" });
   } catch (error) {
-    console.error('Error in /reset-password:', error);
-    res.status(500).json({ error: 'An error occurred while processing your request' });
+    console.error("Error in /reset-password:", error);
+    res
+      .status(500)
+      .json({ error: "An error occurred while processing your request" });
   }
 });
 
-
 // Route to handle user login
-app.post('/login', async (req, res) => {
+app.post("/login", async (req, res) => {
   const { email, password } = req.body;
 
   try {
     // Query to check user credentials in MongoDB
     const user = await User.findOne({
-      'personalInfo.email': email,
-      'credentials.password': password
+      "personalInfo.email": email,
+      "credentials.password": password,
     });
 
     if (!user) {
-      return res.status(401).json({ error: 'Invalid email or password' });
+      return res.status(401).json({ error: "Invalid email or password" });
     }
 
     // Set session user data
     req.session.user = {
       id: user._id,
       email: user.personalInfo.email,
-      name: user.personalInfo.name
+      name: user.personalInfo.name,
     };
 
     // Send back the session user data
     res.json({
-      user: req.session.user
+      user: req.session.user,
     });
   } catch (error) {
-    console.error('Error in /login:', error);
-    res.status(500).json({ error: 'Internal Server Error' });
+    console.error("Error in /login:", error);
+    res.status(500).json({ error: "Internal Server Error" });
   }
 });
 
-
-
 //forgot password
 
-
-
-
 // server.js or your main server file
-app.post('/logout', (req, res) => {
+app.post("/logout", (req, res) => {
   req.session.destroy((err) => {
     if (err) {
-      console.error('Error destroying session:', err);
-      return res.status(500).json({ error: 'Failed to logout' });
+      console.error("Error destroying session:", err);
+      return res.status(500).json({ error: "Failed to logout" });
     }
-    res.json({ message: 'Logged out successfully' });
+    res.json({ message: "Logged out successfully" });
   });
 });
-
 
 // Route to fetch all users
 app.get("/users", async (req, res) => {
@@ -863,7 +875,7 @@ app.get("/check-email", async (req, res) => {
   }
 
   try {
-    const isDuplicate = await User.findOne({ 'personalInfo.email': email });
+    const isDuplicate = await User.findOne({ "personalInfo.email": email });
 
     res.status(200).json({ isDuplicate: !!isDuplicate });
   } catch (error) {
@@ -872,8 +884,6 @@ app.get("/check-email", async (req, res) => {
   }
 });
 
-
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });
-
