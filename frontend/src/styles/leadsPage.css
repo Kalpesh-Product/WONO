@@ -5,6 +5,16 @@
         overflow-x: hidden;
     } */
 
+    @media (min-width: 1439px) {
+        .theSpecialRow {
+            padding-left: 0.5rem;
+        }
+
+        .SpecialPaddingX {
+            padding-left: 1rem;
+        }
+    }
+
     .Tickmark-text {
         /* display: flex; */
         /* align-items: center; */
@@ -227,19 +237,23 @@
         }
     }
 
-    .leads-heading-section{
+    .leads-heading-section {
         padding: 4rem 7.5rem;
     }
-    .organic-leads-section{
+
+    .organic-leads-section {
         padding: 4rem 7.7rem;
     }
-    .google-sheets-section{
+
+    .google-sheets-section {
         padding: 4rem 8rem;
     }
-    .marketing-section{
+
+    .marketing-section {
         padding: 4rem 7.7rem;
     }
-    .finer-points-section{
+
+    .finer-points-section {
         padding: 2rem 6rem 2rem 6rem;
     }
 
@@ -285,29 +299,37 @@
         .checklistFont {
             font-size: 1rem;
         }
-        .leads-databseImage{
+
+        .leads-databseImage {
             display: none;
         }
-        .leads-heading-section{
-            padding: 3rem 4rem ;
-        }
-        .organic-leads-section{
+
+        .leads-heading-section {
             padding: 3rem 4rem;
         }
-        .google-sheets-section{
+
+        .organic-leads-section {
             padding: 3rem 4rem;
         }
-        .marketing-section{
+
+        .google-sheets-section {
             padding: 3rem 4rem;
         }
-        .finer-points-section{
+
+        .marketing-section {
             padding: 3rem 4rem;
         }
-        .better-roi-section{
-            padding: 3rem 4rem ;
+
+        .finer-points-section {
+            padding: 3rem 4rem;
         }
-        .complete-view-section{
-            padding: 3rem 4rem ;
+
+        .better-roi-section {
+            padding: 3rem 4rem;
+        }
+
+        .complete-view-section {
+            padding: 3rem 4rem;
         }
     }
 
@@ -505,23 +527,29 @@
         .last-section .partner-button-space {
             text-align: center;
         }
+
         .Tickmark-text {
             font-size: 14px;
         }
-        .leads-heading-section{
-            padding: 2rem ;
-        }
-        .organic-leads-section{
+
+        .leads-heading-section {
             padding: 2rem;
         }
-        .google-sheets-section{
+
+        .organic-leads-section {
             padding: 2rem;
         }
-        .marketing-section{
+
+        .google-sheets-section {
             padding: 2rem;
         }
-        .finer-points-section{
+
+        .marketing-section {
+            padding: 2rem;
+        }
+
+        .finer-points-section {
             padding: 1rem;
         }
-    
+
     }
