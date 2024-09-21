@@ -67,51 +67,46 @@ const Register = () => {
 
   const checkEmailDuplicate = async (email) => {
     try {
-      const response = await axios.get(
-        `/check-email`,
-        { params: { email: encodeURIComponent(email) } }
-      );
-
-      console.log("Response status:", response.status);
-
+      const response = await axios.get(`/check-email`, { params: { email } });
+      
       if (response.status === 200) {
-        const result = response.data; // Axios automatically parses JSON
-        console.log("Duplicate check result:", result);
+        const result = response.data;
         return result.isDuplicate;
       }
-
+  
       throw new Error("Failed to check email");
     } catch (error) {
       console.error("Error checking email:", error);
       return false;
     }
   };
+  
 
 
   const handleNext = async (e) => {
     e.preventDefault();
     const validationErrors = validateCurrentStep();
-
+  
     if (Object.keys(validationErrors).length === 0) {
       try {
         let sectionData = {};
         let sectionName = '';
-
+  
         // Extract the email from formData for duplicate check
         const { email } = formData;
-
-        // Check for duplicate email in the database
+  
+        // Check for duplicate email in the database (early in the process)
         if (currentStep === 0 && email) {
-          const isDuplicate = await checkEmailDuplicate(formData.email);
+          const isDuplicate = await checkEmailDuplicate(email);
           if (isDuplicate) {
             setErrors((prevErrors) => ({
               ...prevErrors,
               email: 'This email is already in use.',
             }));
-            return;
+            return; // Stop execution if the email is already in use
           }
         }
-
+  
         // Set section data based on the current step (excluding selectedServices)
         switch (currentStep) {
           case 0:
@@ -138,11 +133,10 @@ const Register = () => {
             };
             sectionName = 'company';
             break;
-          // case 2 (selectedServices) is no longer here, as this will be handled in the submit
           default:
             return;
         }
-
+  
         // Send section data to the backend
         const response = await axios.post(
           "/register/section",
@@ -156,14 +150,13 @@ const Register = () => {
             }
           }
         );
-
-        // Axios automatically throws an error for non-2xx status codes
+  
         if (response.status !== 200) {
           throw new Error("Network response was not ok");
         }
-
-        console.log(response.data); // Axios parses the response JSON automatically
-
+  
+        console.log(response.data);
+  
         // Move to the next step
         setCurrentStep((prev) => prev + 1);
       } catch (error) {
@@ -171,6 +164,7 @@ const Register = () => {
       }
     }
   };
+  
 
 
 
@@ -314,9 +308,8 @@ const Register = () => {
       <section id="contact" className="register">
         <div
           className="card flex justify-content-center "
-          style={{ backgroundColor: "white", padding: 0, border: 'none', fontFamily: 'inherit' }}>
+          style={{ backgroundColor: "white",  border: 'none', fontFamily: 'inherit' }}>
           <div className="stepper-container">
-
             <Stepper
               connectorStateColors={true}
               styleConfig={{
