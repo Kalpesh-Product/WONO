@@ -2,20 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
+import axios from 'axios';
 
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter} from 'react-router-dom'
 import { GoogleOAuthProvider } from '@react-oauth/google';
 
 
-// index.js or App.js
-// const observerErrorHandler = (e) => {
-//   if (e.message === 'ResizeObserver loop completed with undelivered notifications.') {
-//     e.preventDefault();
-//   }
-// };
+axios.defaults.baseURL = "http://localhost:5000";
 
-// window.addEventListener('error', observerErrorHandler);
 
 
 
@@ -29,8 +24,4 @@ root.render(
     </BrowserRouter>
   </React.StrictMode>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();

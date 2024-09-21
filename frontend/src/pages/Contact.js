@@ -34,7 +34,7 @@ const Contact = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:5000/enquiries', formData);
+      const response = await axios.post('/enquiries', formData);
       console.log('Enquiry submitted successfully:', response.data);
       // Reset form or show success message
     } catch (error) {
@@ -150,16 +150,20 @@ const Contact = () => {
                       </Select>
                     </FormControl>
                   </Grid>
-
                   <Grid item xs={12}>
-                    <TextareaAutosize
+                    <TextField
                       required
-                      minRows={4}
-                      placeholder="Message"
+                      label="Message" // Floating label
                       name="message"
-                      style={{ width: '100%', padding: '10px' }}
+                      multiline // Enables multiline textarea
+                      minRows={4} // Sets the minimum number of rows
+                      variant="outlined" // Optional: "outlined", "filled", or "standard"
+                      fullWidth // Expands the input to take the full width
                       value={formData.message}
                       onChange={handleChange}
+                      InputProps={{
+                        style: { padding: '10px' }, // Padding for the input area
+                      }}
                     />
                   </Grid>
 

@@ -34,7 +34,7 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
   const handleLogout = async () => {
     try {
       await axios.post(
-        "http://localhost:5000/logout",
+        "/logout",
         {},
         { withCredentials: true }
       );

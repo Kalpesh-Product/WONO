@@ -125,7 +125,7 @@ const Jobapply = ({ jobTitle }) => {
         return;
       } else {
         axios
-          .post("http://localhost:5000/send-email", formvalues)
+          .post("/send-email", formvalues)
           .then((response) => {
             alert("Email sent successfully");
           })
@@ -136,7 +136,7 @@ const Jobapply = ({ jobTitle }) => {
     }
 
     // axios
-    //     .post("http://localhost:5000/submit-form", formvalues)
+    //     .post("/submit-form", formvalues)
     //     .then((response) => {
     //         alert("Form submitted successfully");
     //     })
@@ -145,7 +145,7 @@ const Jobapply = ({ jobTitle }) => {
     //     });
 
     //   try {
-    //     const response = await axios.post('http://localhost:5000/submit-form', formvalues);
+    //     const response = await axios.post('/submit-form', formvalues);
     //     console.log('Form submitted successfully:', response.data);
     // } catch (error) {
     //     console.error('Error submitting the form:', error);

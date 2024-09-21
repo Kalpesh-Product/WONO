@@ -79,7 +79,7 @@ const ForgotPassword = () => {
 
         try {
             // Send the POST request with the email to the backend
-            const response = await axios.post('http://localhost:5000/forgot-password', {
+            const response = await axios.post('/forgot-password', {
                 email: emailFormData.email
             });
 
@@ -105,7 +105,7 @@ const ForgotPassword = () => {
     const handleOTPsumbit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('http://localhost:5000/verify-otp', {
+            const response = await axios.post('/verify-otp', {
                 email: emailFormData.email,
                 otp: otpForm.otp
             });
@@ -148,7 +148,7 @@ const ForgotPassword = () => {
         setOverlayVisible(true);
 
         try {
-            const response = await axios.post('http://localhost:5000/reset-password', {
+            const response = await axios.post('/reset-password', {
                 email: emailFormData.email, // Ensure the email is included
                 password: newPassword
             });

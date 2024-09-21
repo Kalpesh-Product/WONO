@@ -29,7 +29,7 @@
 .product-page {
     background-color: black;
     color: white;
-    padding: 0 7rem;
+    padding: 0 0rem;
 }
 
 .product-page * {
@@ -39,12 +39,12 @@
 
 .product-page-grid {
     display: grid;
-    grid-template-columns: 1fr 70%;
+    grid-template-columns: 23% 1fr;
+    column-gap: 15.9rem;
+    padding: 0 0rem;
 }
 
-.product-page-grid-item {
-    padding-left: 0.6rem;
-}
+
 
 .product-page-grid-item h1 {
     text-transform: uppercase;
@@ -89,7 +89,6 @@
     align-items: center;
     justify-content: center;
     color: rgb(129, 129, 129);
-    padding-right: 5rem;
 }
 
 .product-page-update-text * {
@@ -105,7 +104,7 @@
     background-color: white;
     color: black;
     border-radius: 30px;
-    width: 80%;
+    width: 100%;
     justify-content: space-around;
     margin-bottom: 2rem;
 }
@@ -260,17 +259,38 @@
         text-align: center;
         font-weight: bold;
     } 
+    .product-page {
+        background-color: black;
+        color: white;
+        padding: 0 0rem;
+    }
+    .product-page-grid {
+        display: grid;
+        grid-template-columns: 23% 1fr;
+        column-gap:11rem;
+        padding: 0 7rem;
+    }
+    .product-page-button {
+        padding: 1rem 2rem;
+        background-color: white;
+        color: black;
+        border-radius: 30px;
+        width: 100%;
+        justify-content: space-around;
+        margin-bottom: 2rem;
+    }
 }
 @media (max-width:1024px) {
     .product-page {
         background-color: black;
         color: white;
-        padding: 0 3rem;
+        padding: 0 4rem;
     }
     .product-page-grid {
         display: grid;
-        grid-template-columns: 1fr 70%;
-        column-gap: 1rem;
+        grid-template-columns: 26% 1fr;
+        column-gap: 3rem;
+        padding: 0;
     }
     .product-page-grid-item h1 {
         text-transform: uppercase;
@@ -287,7 +307,6 @@
         align-items: center;
         justify-content: center;
         color: rgb(129, 129, 129);
-        padding-right: 4rem;
     }
     .product-page-update-text * {
         color: rgb(129, 129, 129);

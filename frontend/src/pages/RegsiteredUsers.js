@@ -8,7 +8,7 @@ const RegisteredUsers = () => {
     // Fetch user details from the backend
     const fetchUsers = async () => {
       try {
-        const response = await fetch('http://localhost:5000/users');
+        const response = await fetch('/users');
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }

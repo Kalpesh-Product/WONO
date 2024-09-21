@@ -197,7 +197,8 @@
 }
 
 .themes-view-button button {
-    width: 50% !important;
+    width: 20% !important;
+    padding: 1rem 2rem;
 }
 
 
