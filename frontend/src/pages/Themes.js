@@ -73,10 +73,10 @@ const Themes = () => {
     <div>
       <div className="themePage-master">
         <div className="themePage-header">
-          <h2>
+          <h1>
             Choose the best business Website & Native Apps theme for your
             business{" "}
-          </h2>
+          </h1>
           <p>
             Cherry pick the features you want or ask us to customize anything
             for you for your business growth.
@@ -216,7 +216,7 @@ const Themes = () => {
 
           <div className="themePage-website-success-section">
             <div className="themePage-website-success ">
-              <h1>Tomorrow's success starts today</h1>
+              <h2>Tomorrow's success starts today</h2>
               <div
                 style={{
                   padding: "2rem 0 0 0",
@@ -229,7 +229,7 @@ const Themes = () => {
                   className="get-started-main-button"
                   onClick={() => {
                     navigate("/register");
-                    window.scrollTo({ top: 0, behavior: "smooth" });
+                    window.scrollTo({ top: 0, behavior: "instant" });
                   }}>
                   Get started
                 </button>

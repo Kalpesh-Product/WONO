@@ -2,6 +2,14 @@
   font-family: Popins-Regular;
   src: url('../assets/WONO_images/img/fonts/Poppins-Regular.ttf');
 }
+@font-face {
+  font-family: Popins-Black;
+  src: url('../assets/WONO_images/img/fonts/Poppins-Black.ttf');
+}
+@font-face {
+  font-family: Popins-Semibold;
+  src: url('../assets/WONO_images/img/fonts/Poppins-SemiBold.ttf');
+}
 
 section {
   padding: 0;
@@ -22,6 +30,9 @@ section {
   font-family: Popins-Regular !important;
 }
 
+.stepper-container *{
+  font-family: Popins-Semibold !important;
+}
 .register-page-button-space {
   display: flex;
   flex-direction: column;
@@ -77,7 +88,13 @@ section {
 
 
 
-
+@media (max-width:1024px) {
+  .register-master {
+    padding: 4rem 0;
+    border: none;
+    height: 67.2vh;
+}
+}
 
 @media (max-width: 768px) {
 
@@ -159,9 +176,9 @@ span.p-stepper-separator {
 
 /* stepper */
 
-button.StepButton-0-2-4.StepButton-d2-0-2-8.active {
+/* button.StepButton-0-2-4.StepButton-d2-0-2-8.active {
   background-color: black !important;
-}
+} */
 
 /* checkbox */
 .checkbox-group {
@@ -250,15 +267,31 @@ button {
 
 .mail-client-container {
   display: flex;
-  justify-content: flex-start;
+  width: 100%;
+  /* justify-content: flex-start; */
   /* gap: 2rem;
     padding: 2rem 0 1rem 0; */
 }
 
-.mail-client>* {
-  margin: 0 5px 0 5px;
+.mail-client {
+  display: grid;
+  grid-template-columns: 20% 1fr;
+  column-gap: 2rem;
+  padding: 0.5rem 1rem !important;
 }
 
-.mail-client>img {
+.mail-client-image{
   width: 50px;
 }
+.mail-client-text{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mail-client-image img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+
+}
+

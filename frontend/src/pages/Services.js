@@ -269,7 +269,7 @@ const Services = () => {
                             <div className="business-grid">
                                 {services_reportsAnalytics.map(service => (
                                     <div className="business-service-card shadow" key={service.id}>
-                                        <div className="business-service-card-image  shadow">
+                                        <div className="business-service-card-image">
                                             <img src={service.image} alt={service.alt} />
                                         </div>
                                         <div className="business-service-card-content">

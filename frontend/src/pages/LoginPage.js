@@ -32,7 +32,6 @@ const LoginPage = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    // Function to decode JWT token
 
 
     // Username validation using regex
@@ -88,19 +87,6 @@ const LoginPage = () => {
     }
   };
 
-  // const handleUsernameChange = (e) => {
-  //   const value = e.target.value;
-  //   setUserName(value);
-
-  //   // Username validation using regex (at least 2 characters long)
-  //   const usernameRegex = /^.{2,}$/; // At least 2 characters
-  //   if (!usernameRegex.test(value)) {
-  //     // setUserNameError("Enter a valid username");
-  //     setUserNameError("Enter a valid email");
-  //   } else {
-  //     setUserNameError(""); // Clear error if username is valid
-  //   }
-  // };
 
   const handleUsernameChange = (e) => {
     const value = e.target.value;
@@ -212,7 +198,7 @@ const LoginPage = () => {
           <div className="loginRightContainer">
             <div className="loginWithSection d-flex flex-column justify-content-center align-items-center">
               <div className="loginWithSection d-flex flex-column justify-content-center align-items-center">
-                <LoginSocialGoogle
+                {/* <LoginSocialGoogle
                   client_id={"358669748567-d4e1dl47ic6patb61sidq0ipdvllb0bn.apps.googleusercontent.com"}
                   scope="openid profile email"
                   access_type="offline"
@@ -221,7 +207,9 @@ const LoginPage = () => {
                     console.log('Error:', err);
                   }}
                 >
-                  <div className="LoginWithGoogleContainer loginWithBox loginWithGoogleBox d-flex justify-content-between align-items-center centerElement w-100">
+                  
+                </LoginSocialGoogle> */}
+                <div className="LoginWithGoogleContainer loginWithBox loginWithGoogleBox d-flex justify-content-between align-items-center centerElement w-100">
                     <div className="loginWithIconBox loginWithGoogleIconBox centerElement">
                       <img
                         src={LoginWithGoogleImage}
@@ -233,7 +221,6 @@ const LoginPage = () => {
                       <div>Continue with Google</div>
                     </div>
                   </div>
-                </LoginSocialGoogle>
               </div>
               <div className="LoginWithFacebookContainer loginWithBox loginWithFacebookBox d-flex justify-content-between align-items-center centerElement">
                 <div className="loginWithIconBox loginWithFacebookIconBox centerElement">

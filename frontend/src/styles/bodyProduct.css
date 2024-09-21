@@ -127,6 +127,7 @@
 .product-page-perks-grid {
     display: grid;
     grid-template-columns: 40% 60%;
+    padding: 0 0.7rem;
 }
 
 .product-page-perks-grid-1 {
@@ -231,8 +232,8 @@
 }
 
 .product-page-build span {
-    font-size: 2rem;
-    padding: 0rem 7rem 2rem 7rem;
+    font-size: 2.3rem;
+    padding: 0rem 0rem 2rem 0rem;
     text-align: center;
     font-weight: bold;
 }
@@ -254,7 +255,7 @@
 
 @media (max-width:1440px) {
     .product-page-build span {
-        font-size: 2.1rem;
+        font-size: 2.15rem;
         padding: 0rem 0rem 2rem 0rem;
         text-align: center;
         font-weight: bold;
@@ -271,14 +272,31 @@
         grid-template-columns: 1fr 70%;
         column-gap: 1rem;
     }
+    .product-page-grid-item h1 {
+        text-transform: uppercase;
+        margin-bottom: 2rem;
+        font-weight: bold;
+        font-size: 2.5rem;
+    }
     .product-page-features span {
         font-size: 1.1rem;
+    }
+    .product-page-update-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: rgb(129, 129, 129);
+        padding-right: 4rem;
+    }
+    .product-page-update-text * {
+        color: rgb(129, 129, 129);
+        text-align: center;
     }
     .product-page-image-container {
         height: 100%;
         width: 100%;
         overflow: hidden;
-        padding-bottom: 11rem;
     }
     .product-page-perks {
         padding: 4rem;
@@ -290,16 +308,16 @@
     }
     .product-page-perks-grid-1 span {
         font-weight: bold;
-        font-size: 1.8rem;
+        font-size: 1.9rem;
     }
     .product-page-perks-description h4 {
         margin-bottom: 1rem;
-        font-size: 1rem;
+        font-size: 1.3rem;
         font-weight: bold;
         line-break: strict;
     }
     .product-page-perks-description span {
-        font-size: 0.8rem;
+        font-size: 1rem;
         letter-spacing: 1px;
     }
     .product-page-reccomendations {
@@ -309,6 +327,17 @@
         height: 100%;
         padding: 0.1rem 0rem 0 0rem;
     }
+    .product-page-reccomendations-header h2 {
+        margin: 0;
+        font-weight: 600;
+        font-size: 2.5rem;
+    }
+    .product-page-reccomendations-grid-image {
+        width: 100%;
+        height: auto;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        overflow: hidden;
+    }
     .product-page-build {
         padding: 4rem;
         display: flex;
@@ -317,7 +346,7 @@
         flex-direction: column;
     }
     .product-page-build span {
-        font-size: 2.5rem;
+        font-size: 3.127rem;
         padding: 0rem 0 2rem 0;
         text-align: center;
         font-weight: bold;
@@ -608,7 +637,7 @@
         font-weight: bold;
         text-align: start;
         padding-left: 1.5rem;
-
+        font-size: 1.5rem;
     }
 
     .product-page-feature {
@@ -629,7 +658,7 @@
     }
 
     .product-page-features span {
-        font-size: 1.3rem;
+        font-size: 1rem;
     }
 
     .product-page-image-container {
@@ -656,6 +685,7 @@
 
     .product-page-update-text * {
         color: rgb(129, 129, 129);
+        font-size: 0.7rem;
     }
 
     .product-page-button-space {
@@ -664,11 +694,11 @@
     }
 
     .product-page-button {
-        padding: 1rem 2rem;
+        padding: 0.7rem 2rem;
         background-color: white;
         color: black;
         border-radius: 30px;
-        width: 80%;
+        width: 60%;
         justify-content: space-around;
         margin-bottom: 2rem;
         margin-left: 2rem;
@@ -742,6 +772,11 @@
     .product-page-reccomendations {
         padding: 2rem;
     }
+    .product-page-reccomendations-header h2 {
+        margin: 0;
+        font-weight: 600;
+        font-size: 1.8rem;
+    }
 
     .product-page-reccomendations-grid {
         display: grid;
@@ -751,7 +786,7 @@
 
     .product-page-reccomendations-grid-image {
         width: 100%;
-        height: 100%;
+        height: auto;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
         overflow: hidden;
     }

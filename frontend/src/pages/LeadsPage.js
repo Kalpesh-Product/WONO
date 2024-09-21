@@ -281,7 +281,7 @@ const LeadsPage = () => {
           </div> */}
 
           <div>
-            <div className="container  pe-0">
+            <div className="container sm-ps-0 sm-pe-0">
               {/* <div className="row  border-bottom border-dark border-3 pb-5 bg-primary"> */}
               <div className="row ">
                 <div className="col-lg-9 ps-0">

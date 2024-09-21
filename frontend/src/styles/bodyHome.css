@@ -286,7 +286,7 @@
 
     .home-main-title {
         color: #000;
-        font-family: Telma-Variable;
+        font-family: Caveat;
         font-size: 3.2rem;
         margin-top: 0;
 
@@ -380,7 +380,7 @@
 
     .home-main-title {
         color: #000;
-        font-family: Telma-Variable;
+        font-family: Caveat;
         font-size: 2rem;
         margin-top: 0;
 
@@ -497,7 +497,7 @@
 .N-Commerce>h3>strong {
     display: flex;
     font-family: Bebas-Regular;
-    font-size: clamp(85px, 10vw, 170px);
+    font-size: clamp(136px, 10vw, 96px);
     color: #fff;
     font-weight: 600;
     width: 100%;
@@ -572,6 +572,7 @@
 
     .Globe {
         flex: 0 0 40%;
+        /* padding: 2rem 0; */
     }
 
     .Nomads-list-bussiness {

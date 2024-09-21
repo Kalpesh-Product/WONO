@@ -304,7 +304,7 @@
 
 .SaaS-last-banner h2 {
     font-family: Popins-Semibold;
-    font-size: 5.8rem;
+    font-size: 5.2rem;
 }
 
 
@@ -315,7 +315,7 @@
 @media (max-width:1440px) {
     .SaaS-last-banner h2 {
         font-family: Popins-Semibold;
-        font-size: 4.7rem;
+        font-size: 4.9rem;
     }
 }
 
@@ -605,12 +605,12 @@
     }
 
     .services:not(:last-child) {
-        padding: 0 1.7rem;
+        padding: 0 1.9rem;
     }
 
     .SaaS-main-heading {
         text-align: start;
-        padding: 4rem 0 2rem 0;
+        padding: 0rem 0 2rem 0;
 
     }
 
@@ -633,7 +633,7 @@
 
     .SaaS-main-heading h1 {
         font-size: 2rem;
-        padding: 0 0 2rem 0;
+        padding: 2rem 0 2rem 0;
         line-height: 130%;
     }
 
@@ -672,6 +672,9 @@
         grid-template-columns: 1fr;
         gap: 2rem;
         padding: 4rem 0;
+    }
+    .SaaS-featured-grid-left {
+        font-size: 1.353rem;
     }
 
     .SaaS-featured-grid-right {
@@ -724,13 +727,14 @@
     }
 
     .SaaS-grid-heading span {
-        font-size: 1.5rem;
+        font-size: 1.353rem;
+        padding-bottom: 0;
     }
 
     .business-service-card {
         display: grid;
         grid-template-columns: 10% 1fr;
-        column-gap: 0.5rem;
+        column-gap: 1rem;
     }
     
     .business-service-card-content h4 {
@@ -747,6 +751,7 @@
     
     .business-service-card-image {
         width: 30px;
+        padding: 0;
     }
     
     .business-service-card img {
@@ -763,7 +768,7 @@
 
     .businesses>div>h1 {
         text-align: start;
-        font-size: 1.7rem;
+        font-size: 1.5rem;
         font-weight: 700;
         font-family: Popins-SemiBold;
         color: black;
@@ -782,7 +787,7 @@
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         width: 100%;
-        margin: 4rem 0 4rem 0;
+        margin: 2rem 0 2rem 0;
         padding: 0;
         column-gap: 2rem;
         row-gap:1rem ;
@@ -809,7 +814,7 @@
         padding: 4rem 2rem;
         background-color: #0093E9;
         background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
-        width: calc(100% + 3rem);
+        width: calc(100% + 3.4rem);
         margin: 0 -2rem;
         text-align: center;
     }

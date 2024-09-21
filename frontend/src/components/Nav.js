@@ -62,7 +62,7 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
             onClick={() => {
               navigate("/");
               changeActiveTab("Home");
-              window.scrollTo({ top: 0, behavior: "smooth" });
+              window.scrollTo({ top: 0, behavior: "instant" });
             }}
             src={WonoLogo}
             alt="logo"
@@ -80,7 +80,7 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
                 }
                 onClick={() => {
                   changeActiveTab("Services");
-                  window.scrollTo({ top: 0, behavior: "smooth" });
+                  window.scrollTo({ top: 0, behavior: "instant" });
                 }}>
                 SaaS
               </Link>
@@ -94,7 +94,7 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
                 }
                 onClick={() => {
                   changeActiveTab("capital");
-                  window.scrollTo({ top: 0, behavior: "smooth" });
+                  window.scrollTo({ top: 0, behavior: "instant" });
                 }}>
                 Capital
               </Link>
@@ -102,7 +102,7 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
                 to="/themes"
                 onClick={() => {
                   changeActiveTab("themes");
-                  window.scrollTo({ top: 0, behavior: "smooth" });
+                  window.scrollTo({ top: 0, behavior: "instant" });
                 }}
                 className={
                   (!isAuthPage && isthempage) || activeTab === "themes"
@@ -115,7 +115,7 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
                 to="/leads"
                 onClick={() => {
                   changeActiveTab("leads");
-                  window.scrollTo({ top: 0, behavior: "smooth" });
+                  window.scrollTo({ top: 0, behavior: "instant" });
                 }}
                 className={
                   (!isAuthPage && !isservices && isleadspage) ||
@@ -132,7 +132,7 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
                 }
                 onClick={() => {
                   changeActiveTab("Career");
-                  window.scrollTo({ top: 0, behavior: "smooth" });
+                  window.scrollTo({ top: 0, behavior: "instant" });
                 }}>
                 Career
               </Link>
@@ -167,13 +167,13 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
           ) : (
             <div className="custom-navbar-buttons">
               <Link
-                onClick={() =>{changeActiveTab(null); window.scrollTo({ top: 0, behavior: "smooth" })}}
+                onClick={() =>{changeActiveTab(null); window.scrollTo({ top: 0, behavior: "instant" })}}
                 to="/login"
                 className="login-button">
                 SIGN IN
               </Link>
               <Link
-                onClick={() =>{changeActiveTab(null); window.scrollTo({ top: 0, behavior: "smooth" })}}
+                onClick={() =>{changeActiveTab(null); window.scrollTo({ top: 0, behavior: "instant" })}}
                 className="register-button"
                 to="/register">
                 SIGN UP
