@@ -101,6 +101,21 @@ import projectionsFA from "./Projections_SaaS.png";
 import cashflowFA from "./Cashflow_SaaS.png";
 import invoicingFA from "./Invoicing_SaaS.png";
 
+import vlogsSM from "./Vlogs_SaaS.png";
+import blogsSM from "./Blogs_SaaS.png";
+import referralsSM from "./Referrals_SaaS.png";
+import livechatSM from "./LiveChat_SaaS.png";
+
+import whatsAppIntegrationSM from "./WhatsAppIntegration_SaaS.png";
+import smsMarketingSM from "./SMSMarketing_SaaS.png";
+import emailMarketingSM from "./EmailMarketing_SaaS.png";
+import socialMediaSM from "./SocialMedia_SaaS.png";
+
+import leadGenerationSM from "./LeadGeneration_SaaS.png";
+import adNetworksSM from "./AdNetworks_SaaS.png";
+import personalisedSemSM from "./PersonalisedSEM_SaaS.png";
+import automatedSeoSM from "./AutomatedSEO_SaaS.png";
+
 // Coloured icons end
 
 export {
@@ -191,4 +206,16 @@ export {
   projectionsFA,
   cashflowFA,
   invoicingFA,
+  vlogsSM,
+  blogsSM,
+  referralsSM,
+  livechatSM,
+  whatsAppIntegrationSM,
+  smsMarketingSM,
+  emailMarketingSM,
+  socialMediaSM,
+  leadGenerationSM,
+  adNetworksSM,
+  personalisedSemSM,
+  automatedSeoSM,
 };
