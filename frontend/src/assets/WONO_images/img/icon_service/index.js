@@ -70,6 +70,24 @@ import VentureCapital from "./VentureCapital.png";
 import VentureDebt from "./VentureDebt.png";
 import WorkingCapital from "./WorkingCapital.png";
 
+// Coloured icons start
+import androidAppSaas from "../icon_service_color/AndroidApp_SaaS.png";
+import bookingsSaas from "../icon_service_color/Bookings_SaaS.png";
+import chatSaas from "../icon_service_color/Chat_SaaS.png";
+import customerProfile from "../icon_service_color/CustomerProfile_SaaS.png";
+
+import customerService from "../icon_service_color/CustomerService_SaaS.png";
+import events from "../icon_service_color/Events_SaaS.png";
+import iosApp from "../icon_service_color/iOSApp_SaaS.png";
+import mobileSite from "../icon_service_color/MobileSite_SaaS.png";
+
+import notifications from "../icon_service_color/Notifications_SaaS.png";
+import paymentGateway from "../icon_service_color/PaymentGateway_SaaS.png";
+import tickets from "../icon_service_color/Tickets_SaaS.png";
+import website from "../icon_service_color/Website_SaaS.png";
+
+// Coloured icons end
+
 export {
   TransactionalWebsite,
   BookingEngine,

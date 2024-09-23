@@ -78,6 +78,11 @@
   padding-right: 6rem;
 }
 
+.custom-logout {
+  gap: 20px;
+  padding-right: 6rem;
+}
+
 /* Changes */
 
 .nav-tabss a::before {
@@ -199,10 +204,12 @@
     gap: 20px;
     padding-right: 2rem;
   }
+
   .custom-navbar-logo {
     padding: 0.5rem 0.5rem 0.5rem 2rem;
   }
 }
+
 @media (max-width: 820px) {
   .custom-navbar-menu {
     display: none;

@@ -27,7 +27,6 @@ const LoginPage = () => {
   const [modalMessage, setModalMessage] = useState("");
   const [token, setToken] = useState("");
   axios.defaults.withCredentials = true;
-  const [token, setToken] = useState("");
 
   // axios.defaults.withCredentials = true;
 
