@@ -293,3 +293,9 @@
         height: 67.2vh;
     }
 }
+@media (max-width:768px) {
+    .loginBottomPadding {
+        padding-bottom: 4rem;
+        height: 100%;
+    }
+}

@@ -8,8 +8,14 @@ import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
 import { GoogleOAuthProvider } from "@react-oauth/google";
 
-// axios.defaults.baseURL = "http://localhost:5000";
-axios.defaults.baseURL = "https://wono-backend.vercel.app";
+
+axios.defaults.baseURL = "http://localhost:5000";
+// axios.defaults.baseURL = "https://wono-backend.vercel.app";
+axios.defaults.withCredentials = true;
+
+
+
+
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

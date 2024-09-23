@@ -27,6 +27,9 @@ const LoginPage = () => {
   const [modalMessage, setModalMessage] = useState("");
   const [token, setToken] = useState("");
   axios.defaults.withCredentials = true;
+  const [token, setToken] = useState("");
+
+  // axios.defaults.withCredentials = true;
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -89,7 +92,7 @@ const LoginPage = () => {
     setEmail(value);
 
     // Email validation using regex
-    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{1,}$/;
     if (!emailRegex.test(value)) {
       setUserNameError("Enter a valid email address");
     } else {

@@ -298,7 +298,7 @@ const ForgotPassword = () => {
                     </form>
                 )}
 
-                <div className="text-center mt-3">
+                <div className="text-center">
                     <span>Remembered your password ? <Link to="/login" className="">Login</Link></span>
                 </div>
             </div>
@@ -340,7 +340,7 @@ const ForgotPassword = () => {
             {overlayVisible && (
                 <div className="overlay">
                     <div className="overlay-content">
-                        <p>Sendings</p>
+                        <p>Please wait...</p>
                     </div>
                 </div>
             )}
