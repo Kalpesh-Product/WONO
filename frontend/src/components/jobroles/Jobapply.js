@@ -14,11 +14,11 @@ import {
   Select,
   Typography,
   Grid,
-} from '@mui/material';
-import { format, parse, isValid } from 'date-fns';
+} from "@mui/material";
+import { format, parse, isValid } from "date-fns";
 
-import { LocalizationProvider, DatePicker } from '@mui/x-date-pickers';
-import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
+import { LocalizationProvider, DatePicker } from "@mui/x-date-pickers";
+import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
 
 const Jobapply = ({ jobTitle }) => {
   const navigate = useNavigate();
@@ -59,24 +59,24 @@ const Jobapply = ({ jobTitle }) => {
         value === "Yes"
           ? true
           : value === "No"
-            ? false
-            : type === "number"
-              ? parseFloat(value)
-              : value,
+          ? false
+          : type === "number"
+          ? parseFloat(value)
+          : value,
     });
   };
 
   const handleChange = (name) => (newValue) => {
     if (newValue && isValid(newValue)) {
-      const formattedDate = format(newValue, 'dd-MM-yyyy');
+      const formattedDate = format(newValue, "dd-MM-yyyy");
       setFormValues((prev) => ({
         ...prev,
-        [name]: formattedDate
+        [name]: formattedDate,
       }));
     } else {
       setFormValues((prev) => ({
         ...prev,
-        [name]: ''
+        [name]: "",
       }));
     }
   };
@@ -100,7 +100,6 @@ const Jobapply = ({ jobTitle }) => {
     if (
       formvalues.name === "" ||
       formvalues.email === "" ||
-
       formvalues.daysToJoin === "" ||
       formvalues.expectedSalary === "" ||
       formvalues.experience === "" ||
@@ -155,9 +154,7 @@ const Jobapply = ({ jobTitle }) => {
   return (
     <div>
       <form name="form-p" onSubmit={handleSubmit}>
-        <h2>
-          APPLICATION FORM
-        </h2>
+        <h2>APPLICATION FORM</h2>
         <Grid container spacing={2}>
           <Grid item md={6} xs={12}>
             <TextField
@@ -189,11 +186,15 @@ const Jobapply = ({ jobTitle }) => {
             <LocalizationProvider dateAdapter={AdapterDateFns}>
               <DatePicker
                 label="Date of Birth"
-                value={formvalues.date ? parse(formvalues.date, 'dd-MM-yyyy', new Date()) : null}
+                value={
+                  formvalues.date
+                    ? parse(formvalues.date, "dd-MM-yyyy", new Date())
+                    : null
+                }
                 onChange={(newValue) => {
                   // Ensure the selected date is valid before formatting
                   if (newValue && isValid(new Date(newValue))) {
-                    handleChange('date')(newValue);
+                    handleChange("date")(newValue);
                   }
                 }}
                 slotProps={{ textField: { fullWidth: true } }}
@@ -217,14 +218,16 @@ const Jobapply = ({ jobTitle }) => {
 
           <Grid item md={6} xs={12}>
             <FormControl fullWidth required>
-              <InputLabel
-              slotProps={{ textField: { fullWidth: true } }}>State</InputLabel>
+              <InputLabel slotProps={{ textField: { fullWidth: true } }}>
+                State
+              </InputLabel>
               <Select
                 name="location"
                 value={formvalues.location}
-                onChange={handleInputChange}
-              >
-                <MenuItem value="" disabled>Select State</MenuItem>
+                onChange={handleInputChange}>
+                <MenuItem value="" disabled>
+                  Select State
+                </MenuItem>
                 <MenuItem value="Andhra Pradesh">Andhra Pradesh</MenuItem>
                 <MenuItem value="Arunachal Pradesh">Arunachal Pradesh</MenuItem>
                 {/* Add other states here */}
@@ -298,15 +301,17 @@ const Jobapply = ({ jobTitle }) => {
 
           <Grid item md={6} xs={12}>
             <FormControl fullWidth required>
-              <InputLabel
-              slotProps={{ textField: { fullWidth: true } }}>How Soon You Can Join?</InputLabel>
+              <InputLabel slotProps={{ textField: { fullWidth: true } }}>
+                How Soon You Can Join?
+              </InputLabel>
               <Select
                 name="daysToJoin"
                 value={formvalues.daysToJoin}
                 onChange={handleInputChange}
-                fullWidth
-              >
-                <MenuItem value="" disabled>Select</MenuItem>
+                fullWidth>
+                <MenuItem value="" disabled>
+                  Select
+                </MenuItem>
                 <MenuItem value="15 Days">15 Days</MenuItem>
                 <MenuItem value="30 Days">30 Days</MenuItem>
                 <MenuItem value="45 Days">45 Days</MenuItem>
@@ -322,8 +327,7 @@ const Jobapply = ({ jobTitle }) => {
               <Select
                 name="relocateGoa"
                 value={formvalues.relocateGoa ? "Yes" : "No"}
-                onChange={handleInputChange}
-              >
+                onChange={handleInputChange}>
                 <MenuItem value="Yes">Yes</MenuItem>
                 <MenuItem value="No">No</MenuItem>
               </Select>
@@ -341,12 +345,12 @@ const Jobapply = ({ jobTitle }) => {
               value={formvalues.personality}
               onChange={handleInputChange}
             /> */}
-            <textarea name="input47" rows="3" cols="10" style={{ width: '100%',padding:"10px" ,borderColor:"#9E9E9E"}}
-            placeholder="Who are you as a person?"
-            
-            >
-        
-    </textarea>
+            <textarea
+              name="input47"
+              rows="3"
+              cols="10"
+              style={{ width: "100%", padding: "10px", borderColor: "#9E9E9E" }}
+              placeholder="Who are you as a person?"></textarea>
           </Grid>
 
           <Grid item md={12} xs={12}>
@@ -360,10 +364,12 @@ const Jobapply = ({ jobTitle }) => {
               value={formvalues.skills}
               onChange={handleInputChange}
             /> */}
-             <textarea name="input47" rows="3" cols="10" style={{ width: '100%',padding:"10px",borderColor:"#BDBDBD" }}
-            placeholder="What skill sets do you have for the job that you have applied?"
-            
-            ></textarea>
+            <textarea
+              name="input47"
+              rows="3"
+              cols="10"
+              style={{ width: "100%", padding: "10px", borderColor: "#BDBDBD" }}
+              placeholder="What skill sets do you have for the job that you have applied?"></textarea>
           </Grid>
 
           <Grid item md={12} xs={12}>
@@ -377,10 +383,12 @@ const Jobapply = ({ jobTitle }) => {
               value={formvalues.specialexperience}
               onChange={handleInputChange}
             /> */}
-            <textarea name="input47" rows="3" cols="10" style={{ width: '100%',padding:"10px",borderColor:"#BDBDBD" }}
-            placeholder="Why should we consider you for joining our company?"
-            
-            ></textarea>
+            <textarea
+              name="input47"
+              rows="3"
+              cols="10"
+              style={{ width: "100%", padding: "10px", borderColor: "#BDBDBD" }}
+              placeholder="Why should we consider you for joining our company?"></textarea>
           </Grid>
 
           <Grid item md={12} xs={12}>
@@ -394,11 +402,12 @@ const Jobapply = ({ jobTitle }) => {
               value={formvalues.willing}
               onChange={handleInputChange}
             /> */}
-            <textarea name="input47" rows="3" cols="10" style={{ width: '100%',padding:"10px" ,borderColor:"#BDBDBD"}}
-            placeholder="Are you willing to bootstrap to join a growing startup?"
-            
-            ></textarea>
-
+            <textarea
+              name="input47"
+              rows="3"
+              cols="10"
+              style={{ width: "100%", padding: "10px", borderColor: "#BDBDBD" }}
+              placeholder="Are you willing to bootstrap to join a growing startup?"></textarea>
           </Grid>
 
           <Grid item md={12} xs={12}>
@@ -412,14 +421,21 @@ const Jobapply = ({ jobTitle }) => {
               value={formvalues.message}
               onChange={handleInputChange}
             /> */}
-            <textarea name="input47" rows="3" cols="10" style={{ width: '100%',padding:"10px",borderColor:"#BDBDBD" }}
-            placeholder="Personal Message"
-            
-            ></textarea>
+            <textarea
+              name="input47"
+              rows="3"
+              cols="10"
+              style={{ width: "100%", padding: "10px", borderColor: "#BDBDBD" }}
+              placeholder="Personal Message"></textarea>
           </Grid>
 
           <Grid item md={12} xs={12} textAlign="center">
-            <Button variant="contained" color="primary" type="submit" style={{backgroundColor:"black",}} className="apply-form-btn">
+            <Button
+              variant="contained"
+              color="primary"
+              type="submit"
+              style={{ backgroundColor: "black" }}
+              className="apply-form-btn">
               SUBMIT
             </Button>
           </Grid>
