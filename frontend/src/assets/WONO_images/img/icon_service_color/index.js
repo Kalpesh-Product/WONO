@@ -86,6 +86,21 @@ import paymentGateway from "./PaymentGateway_SaaS.png";
 import tickets from "./Tickets_SaaS.png";
 import website from "./Website_SaaS.png";
 
+import analyticsFA from "./Analytics_SaaS.png";
+import compliancesFA from "./Compliances_SaaS.png";
+import taxesFA from "./Taxes_SaaS.png";
+import followUpsFA from "./Followups_SaaS.png";
+
+import notificationsFA from "./Notifications_SaaS_FA.png";
+import collectionsFA from "./Collections_SaaS.png";
+import financialReportsFA from "./FinancialReports_SaaS.png";
+import workingCapitalFA from "./WorkingCapital_SaaS.png";
+
+import budgetFA from "./Budget_SaaS.png";
+import projectionsFA from "./Projections_SaaS.png";
+import cashflowFA from "./Cashflow_SaaS.png";
+import invoicingFA from "./Invoicing_SaaS.png";
+
 // Coloured icons end
 
 export {
@@ -164,4 +179,16 @@ export {
   paymentGateway,
   tickets,
   website,
+  analyticsFA,
+  compliancesFA,
+  taxesFA,
+  followUpsFA,
+  notificationsFA,
+  collectionsFA,
+  financialReportsFA,
+  workingCapitalFA,
+  budgetFA,
+  projectionsFA,
+  cashflowFA,
+  invoicingFA,
 };
