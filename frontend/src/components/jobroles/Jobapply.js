@@ -332,12 +332,13 @@ const Jobapply = ({ jobTitle }) => {
 
           <Grid item md={12} xs={12}>
             {/* <TextField
-              multiline={true}
+              multiline
               name="personality"
               minRows={4}
+              variant="outlined"
               placeholder="Who are you as a person?"
               required
-              style={{ width: '100%' }}
+              inputProps={{style:{width:'100%'}}}
               value={formvalues.personality}
               onChange={handleInputChange}
             /> */}
