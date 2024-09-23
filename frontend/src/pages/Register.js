@@ -67,19 +67,13 @@ const Register = () => {
 
   const checkEmailDuplicate = async (email) => {
     try {
-      const response = await axios.get(
-        `http://localhost:5000/check-email`, 
-        { params: { email: encodeURIComponent(email) } }
-      );
+      const response = await axios.get(`/check-email`, { params: { email } });
       
-      console.log("Response status:", response.status);
-  
       if (response.status === 200) {
-        const result = response.data; // Axios automatically parses JSON
-        console.log("Duplicate check result:", result);
+        const result = response.data;
         return result.isDuplicate;
       }
-      
+  
       throw new Error("Failed to check email");
     } catch (error) {
       console.error("Error checking email:", error);
@@ -87,6 +81,7 @@ const Register = () => {
     }
   };
   
+
 
   const handleNext = async (e) => {
     e.preventDefault();
@@ -100,15 +95,15 @@ const Register = () => {
         // Extract the email from formData for duplicate check
         const { email } = formData;
   
-        // Check for duplicate email in the database
+        // Check for duplicate email in the database (early in the process)
         if (currentStep === 0 && email) {
-          const isDuplicate = await checkEmailDuplicate(formData.email);
+          const isDuplicate = await checkEmailDuplicate(email);
           if (isDuplicate) {
             setErrors((prevErrors) => ({
               ...prevErrors,
               email: 'This email is already in use.',
             }));
-            return;
+            return; // Stop execution if the email is already in use
           }
         }
   
@@ -138,14 +133,13 @@ const Register = () => {
             };
             sectionName = 'company';
             break;
-          // case 2 (selectedServices) is no longer here, as this will be handled in the submit
           default:
             return;
         }
   
         // Send section data to the backend
         const response = await axios.post(
-          "http://localhost:5000/register/section", 
+          "/register/section",
           {
             section: sectionName,
             data: sectionData,
@@ -156,13 +150,12 @@ const Register = () => {
             }
           }
         );
-        
-        // Axios automatically throws an error for non-2xx status codes
+  
         if (response.status !== 200) {
           throw new Error("Network response was not ok");
         }
-        
-        console.log(response.data); // Axios parses the response JSON automatically
+  
+        console.log(response.data);
   
         // Move to the next step
         setCurrentStep((prev) => prev + 1);
@@ -172,6 +165,7 @@ const Register = () => {
     }
   };
   
+
 
 
 
@@ -258,26 +252,26 @@ const Register = () => {
   //handlesubmit section
   const handleSubmit = async (event) => {
     event.preventDefault();
-  
+
     console.log("handleSubmit");
-  
+
     // Show "Sending details" modal
     setModalMessage(
       <img src={emailSend} style={{ width: 100 }} alt="emailSend" />
     );
     setIsLoading(true);
-  
+
     try {
       const dataToSubmit = {
         ...formData,
         selectedServices: formData.selectedServices, // Ensure selected services are submitted here
       };
-  
+
       setCurrentStep((prev) => prev + 1);
-  
+
       // Final submission to complete the registration
       const response = await axios.post(
-        "http://localhost:5000/register",
+        "/register",
         dataToSubmit,
         {
           headers: {
@@ -285,27 +279,27 @@ const Register = () => {
           },
         }
       );
-  
+
       // No need for response.text() with Axios, access response data directly
       console.log(response.data); // Axios parses the response JSON automatically
-  
+
       // Show "Email sent" message
       console.log("Email sent");
-  
+
       // Navigate to login after a successful submission
     } catch (error) {
       console.error("There was a problem with the submission:", error);
       console.log("Failed to send registration details");
     } finally {
       setIsLoading(false);
-  
+
       // Clear modal message after some time
       setTimeout(() => {
         setModalMessage("");
       }, 3000);
     }
   };
-  
+
 
 
   const isChecked = (service) => formData.selectedServices[service];
@@ -314,54 +308,53 @@ const Register = () => {
       <section id="contact" className="register">
         <div
           className="card flex justify-content-center "
-          style={{ backgroundColor: "white", padding: 0, border: 'none', fontFamily:'inherit' }}>
-            <div className="stepper-container">
-
-          <Stepper
-            connectorStateColors={true}
-            styleConfig={{
-              activeBgColor: '#2196F3',  // Blue for the active step
-              completedBgColor: '#4CAF50',  // Green for completed steps
-              inactiveBgColor: '#E0E0E0',  // Color for inactive steps
-              size: '2.5em',  // Step size (Optional)
-              activeTextColor: '#FFFFFF',  // Text color for active step
-              completedTextColor: '#FFFFFF',  // Text color for completed steps
-              inactiveTextColor: '#000000',  // Text color for inactive steps
-              circleFontSize: '1rem',  // Font size for step number (Optional)
-              fontFamily: 'inherit'
-            }}
-            connectorStyleConfig={{
-              size: 3,  // Thickness of the connector line
-              activeColor: '#4CAF50',  // Color of the connector when active
-              completedColor: '#4CAF50',  // Color of the connector when completed
-              inactiveColor: '#E0E0E0'  // Color of the connector when inactive
-            }}
-            style={{ paddingTop: 0, textTransform: 'uppercase' }}
-            activeStep={currentStep}
-          >
-            <Step
-              label="Personal Details"
-              completed={currentStep > 0}  // Step is completed if currentStep is greater than 0
-              children={currentStep > 0 ? '✓' : 1}  // Show tick mark if completed, else show step number
-               stepClassName="stepper-container"
-            />
-            <Step
-              label="Company Details"
-              completed={currentStep > 1}  // Step is completed if currentStep is greater than 1
-              children={currentStep > 1 ? '✓' : 2}
-            />
-            <Step
-              label="Services"
-              completed={currentStep > 2}  // Step is completed if currentStep is greater than 2
-              children={currentStep > 2 ? '✓' : 3}
-            />
-            <Step
-              label="Account Activation"
-              completed={currentStep > 3}  // Step is completed if currentStep is greater than 3
-              children={currentStep > 3 ? '✓' : 4}
-            />
-          </Stepper>
-            </div>
+          style={{ backgroundColor: "white",  border: 'none', fontFamily: 'inherit' }}>
+          <div className="stepper-container">
+            <Stepper
+              connectorStateColors={true}
+              styleConfig={{
+                activeBgColor: '#2196F3',  // Blue for the active step
+                completedBgColor: '#4CAF50',  // Green for completed steps
+                inactiveBgColor: '#E0E0E0',  // Color for inactive steps
+                size: '2.5em',  // Step size (Optional)
+                activeTextColor: '#FFFFFF',  // Text color for active step
+                completedTextColor: '#FFFFFF',  // Text color for completed steps
+                inactiveTextColor: '#000000',  // Text color for inactive steps
+                circleFontSize: '1rem',  // Font size for step number (Optional)
+                fontFamily: 'inherit'
+              }}
+              connectorStyleConfig={{
+                size: 3,  // Thickness of the connector line
+                activeColor: '#4CAF50',  // Color of the connector when active
+                completedColor: '#4CAF50',  // Color of the connector when completed
+                inactiveColor: '#E0E0E0'  // Color of the connector when inactive
+              }}
+              style={{ paddingTop: 0, textTransform: 'uppercase' }}
+              activeStep={currentStep}
+            >
+              <Step
+                label="Personal Details"
+                completed={currentStep > 0}  // Step is completed if currentStep is greater than 0
+                children={currentStep > 0 ? '✓' : 1}  // Show tick mark if completed, else show step number
+                stepClassName="stepper-container"
+              />
+              <Step
+                label="Company Details"
+                completed={currentStep > 1}  // Step is completed if currentStep is greater than 1
+                children={currentStep > 1 ? '✓' : 2}
+              />
+              <Step
+                label="Services"
+                completed={currentStep > 2}  // Step is completed if currentStep is greater than 2
+                children={currentStep > 2 ? '✓' : 3}
+              />
+              <Step
+                label="Account Activation"
+                completed={currentStep > 3}  // Step is completed if currentStep is greater than 3
+                children={currentStep > 3 ? '✓' : 4}
+              />
+            </Stepper>
+          </div>
 
           <form
             name="form-p"
@@ -844,7 +837,7 @@ const Register = () => {
                     <div className="register-page-button-space">
                       <button
                         className="register-page-button next-button-width"
-                        onClick={()=>navigate('/login')}>
+                        onClick={() => navigate('/login')}>
                         Login now
                       </button>
                       {/* <span style={{ display: 'block', marginTop: '10px' }}>

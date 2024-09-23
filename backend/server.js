@@ -21,7 +21,11 @@ const { parse, format } = require('date-fns');
 
 
 const app = express();
-app.use(cors());
+
+app.use(cors({
+  origin: true, // Reflects the request origin, allowing all origins
+  credentials: true, // Allow cookies to be sent
+}));
 const port = process.env.PORT;
 
 // Middleware to parse JSON data
@@ -36,9 +40,10 @@ app.use(session({
   cookie: {
     secure: false, // Set to true if using HTTPS
     httpOnly: true,
-    maxAge: 1000 * 60 * 60 * 2 // 2 hours
+    sameSite: 'lax', // Allow cross-origin requests with credentials
+    maxAge: 1000 * 60 * 60 * 2, // 2 hours
   }
-}))
+}));
 
 
 // Setup Nodemailer transporter
@@ -655,8 +660,17 @@ app.post("/register/section", async (req, res) => {
   console.log('Received data:', data);
 
   try {
-    // Find the user by email or create a new one
+    // Find the user by email
     let user = await User.findOne({ 'personalInfo.email': data.email });
+
+    // If user exists, but you're updating the 'personal' section, prevent duplicate email
+    if (user && section === 'personal') {
+      // If user is found, throw an error for duplicate email
+      console.log("Duplicate email found");
+      return res.status(409).json({ error: "This email is already in use." });
+    }
+
+    // If no user is found, create a new user object
     if (!user) {
       console.log("No user found, creating a new one");
       user = new User();
@@ -675,6 +689,7 @@ app.post("/register/section", async (req, res) => {
         user.personalInfo = { ...user.personalInfo, ...data };
         break;
       case 'company':
+        // You can still update the 'company' section without checking email uniqueness
         user.companyInfo = { ...user.companyInfo, ...data };
         break;
       case 'services':
@@ -693,6 +708,7 @@ app.post("/register/section", async (req, res) => {
     res.status(500).send("Failed to update section data: " + error.message);
   }
 });
+
 
 app.post('/forgot-password', async (req, res) => {
   const { email } = req.body;
@@ -871,6 +887,7 @@ app.get("/check-email", async (req, res) => {
     res.status(500).json({ error: "Internal server error" });
   }
 });
+
 
 
 app.listen(port, () => {

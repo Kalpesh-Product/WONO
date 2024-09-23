@@ -105,6 +105,10 @@ section {
   .register-container {
     padding: 2rem;
   }
+  .stepper-container *{
+    font-family: Popins-Semibold !important;
+    font-size: 0.8rem;
+  }
 }
 
 .modal {

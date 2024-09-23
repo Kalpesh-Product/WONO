@@ -33,11 +33,7 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
 
   const handleLogout = async () => {
     try {
-      await axios.post(
-        "http://localhost:5000/logout",
-        {},
-        { withCredentials: true }
-      );
+      await axios.post("/logout", {}, { withCredentials: true });
       setUser(null); // Clear the user state
       navigate("/home");
     } catch (error) {
@@ -167,13 +163,19 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
           ) : (
             <div className="custom-navbar-buttons">
               <Link
-                onClick={() =>{changeActiveTab(null); window.scrollTo({ top: 0, behavior: "instant" })}}
+                onClick={() => {
+                  changeActiveTab(null);
+                  window.scrollTo({ top: 0, behavior: "instant" });
+                }}
                 to="/login"
                 className="login-button">
                 SIGN IN
               </Link>
               <Link
-                onClick={() =>{changeActiveTab(null); window.scrollTo({ top: 0, behavior: "instant" })}}
+                onClick={() => {
+                  changeActiveTab(null);
+                  window.scrollTo({ top: 0, behavior: "instant" });
+                }}
                 className="register-button"
                 to="/register">
                 SIGN UP

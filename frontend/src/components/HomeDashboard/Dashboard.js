@@ -12,20 +12,20 @@ const Dashboard = () => {
   const navigate = useNavigate();
   const [openSidebarToggle, setOpenSidebarToggle] = useState(false);
   // axios.defaults.withCredentials = true;
-  // useEffect(() => {
-  //   axios
-  //     .post("http://localhost:5000/")
-  //     .then((response) => {
-  //       console.log(response);
-  //       if (!response.data.valid) {
-  //         navigate("/login");
-  //       }
-  //     })
-  //     .catch((error) => {
-  //       console.error("Error checking session:", error);
-  //       navigate("/login");
-  //     });
-  // }, [navigate]);
+  useEffect(() => {
+    axios
+      .post("/")
+      .then((response) => {
+        console.log(response);
+        if (!response.data.valid) {
+          navigate("/login");
+        }
+      })
+      .catch((error) => {
+        console.error("Error checking session:", error);
+        navigate("/login");
+      });
+  }, [navigate]);
 
   const openSidebar = () => {
     setOpenSidebarToggle(!openSidebarToggle);
