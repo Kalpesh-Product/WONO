@@ -18,6 +18,8 @@ const crypto = require('crypto');
 const mongoose = require('mongoose');
 const { parse, format } = require('date-fns');
 
+const multer = require("multer");
+
 
 
 const app = express();
@@ -150,7 +152,11 @@ const jobApplicationSchema = new mongoose.Schema({
 
 const JobApplication = mongoose.model('JobApplication', jobApplicationSchema);
 
-app.post('/send-email', async (req, res) => {
+
+
+app.post('/jobapply',  async (req, res) => {
+
+
   const { jobTitle, name, email, date, number, location, experience, linkedInProfile, resume, monthlySalary, expectedSalary,
     daysToJoin, relocateGoa, personality, skills, specialexperience, willing, message } = req.body;
 
@@ -186,7 +192,7 @@ app.post('/send-email', async (req, res) => {
     // Email options
     const Mailoption = {
       from: 'anushri.bhagat263@gmail.com',
-      to: email,
+      to: 'productwonoco@gmail.com',
       subject: `Job Application: ${name} - ${jobTitle}`,
       html: `<head><style>
   table, td {
@@ -196,7 +202,7 @@ app.post('/send-email', async (req, res) => {
    <body style="font-family: 'Poppins', sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; -webkit-text-size-adjust: none; -ms-text-size-adjust: none;">
    
   <div style="width: 100%; max-width: 600px; background-color: #ffffff; margin: 20px auto; padding: 2rem; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
-   <div style="padding: 1rem; text-align: center; border-radius: 1rem;">
+   <div style="padding: 1rem; text-align: center; border-radius: 1rem;background-color: #daf5fe">
                   <h1 style="font-size: 2rem; text-align: center; margin: 0; padding-bottom: 20px;">
                       Application form for the post of<br></br>
                       <b>${jobTitle}</b>
@@ -208,24 +214,61 @@ app.post('/send-email', async (req, res) => {
       <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">${jobTitle}</td>
     </tr>
     <tr>
-      <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">name</td>
+      <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">Name</td>
       <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">${name}</td>
+    </tr>
+    <tr>
+      <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">Email</td>
+      <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">${email}</td>
+    </tr>
+    <tr>
+      <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">Contact</td>
+      <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">${number}</td>
+    </tr>
+    <tr>
+      <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">Date of joining</td>
+      <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">${date}</td>
     </tr>
     <tr>
       <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">Experience</td>
       <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">${experience}</td>
     </tr>
     <tr>
+      <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">Monthly Salary</td>
+      <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">${monthlySalary}</td>
+    </tr>
+    <tr>
+      <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">Expected Salary</td>
+      <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">${expectedSalary}</td>
+    </tr>
+    <tr>
+      <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">Days to join</td>
+      <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">${daysToJoin}</td>
+    </tr>
+    <tr>
+      <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">Relocate to goa?</td>
+      <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">${relocateGoa}</td>
+    </tr>
+    <tr>
       <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">LinkedInProfile</td>
-      <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;"><a href="">${linkedInProfile}</a></td>
+      <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">${linkedInProfile}</td>
     </tr>
     <tr>
       <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">Personality</td>
       <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">${personality}</td>
     </tr>
+
     <tr>
       <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">Skills</td>
       <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">${skills}</td>
+    </tr>
+    <tr>
+      <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">willings</td>
+      <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">${willing}</td>
+    </tr>
+    <tr>
+      <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">Message</td>
+      <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">${message}</td>
     </tr>
     <tr>
       <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">ResumeLink</td>

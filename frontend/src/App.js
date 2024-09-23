@@ -28,12 +28,15 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 
-function App() {
+function App({useHideUnimportantErrors}) {
+ 
   const [activeTab, setActiveTab] = useState("Home");
 
   const changeActiveTab = (activeTab) => {
     setActiveTab(activeTab);
   };
+  useHideUnimportantErrors();
+
   return (
     <div>
       <UserProvider>
