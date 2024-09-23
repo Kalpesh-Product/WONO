@@ -861,12 +861,12 @@ const LeadsPage = () => {
 
         <div className="last-section  w-100 fontPoppinsRegular">
           <div className="pt-5 customMargin pb-5">
-            <div className="grow-your-business-color">
-              <h2 className="m-0 fw-bold">
+            <div className="grow-your-business-color w-100">
+              <h2 className="m-0 fw-bold grow-your-business-text">
                 {/* <b className="leadsCtafontSize">
                   Now that’s how we generate continues leads for you!
                 </b> */}
-                Now that’s how we generate continuos leads for you!
+                Now that’s how we generate continuous leads for you!
               </h2>
               {/* <br /> */}
 

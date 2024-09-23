@@ -24,6 +24,22 @@
 }
 
 
+@media (min-width:2560px) {
+    .grow-your-business-color h2 {
+        font-size: 5.9rem;
+    }
+
+    .leadsCtaTextFont {
+        font-size: 3.25rem !important;
+    }
+
+    .automatedPlatformFontSize {
+        font-size: 2.125rem;
+    }
+}
+
+
+
 .body-partners-master {
     background-color: rgb(255, 255, 255);
 }
@@ -94,6 +110,7 @@
         padding: 2rem 3rem;
         width: 100%;
     }
+
     .customMargin_bottom {
         display: flex;
         align-items: start;
@@ -111,6 +128,7 @@
     .grow-your-business-color h2 {
         font-size: 4.9rem;
     }
+
     .grow-your-business-color p {
         font-size: 1.75rem;
     }
