@@ -33,16 +33,16 @@ app.use(express.json());
 app.use(bodyParser.json());
 app.use(cookieParser());
 app.use(session({
-  key: 'Wono-login',
-  secret: 'secret',
+  key: 'wono_session', // Unique cookie name
+  secret: 'your-secret-key', // Replace with a strong secret
   resave: false,
   saveUninitialized: false,
   cookie: {
-    secure: false, // Set to true if using HTTPS
-    httpOnly: true,
-    sameSite: 'lax', // Allow cross-origin requests with credentials
-    maxAge: 1000 * 60 * 60 * 2, // 2 hours
-  }
+    secure: process.env.NODE_ENV === 'production', // true for HTTPS
+    httpOnly: true, // Prevents client-side JS from accessing the cookie
+    sameSite: 'lax', // Helps protect against CSRF attacks
+    maxAge: 1000 * 60 * 60 * 2, // Session expiration time (2 hours)
+  },
 }));
 
 
