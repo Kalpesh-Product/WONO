@@ -131,7 +131,7 @@ import payslipsHR from "./Payslips_SaaS.png";
 import payrollHR from "./Payroll_SaaS.png";
 import attendanceHR from "./Attendance_SaaS.png";
 
-import analyticsCM from "./Analytics_SaaS.png";
+import analyticsCM from "./Analytics2_SaaS.png";
 import reportsCM from "./Reports_SaaS.png";
 import autoresponseCM from "./AutoResponse_SaaS.png";
 import customerServiceCM from "./CustomerService_SaaS.png";
@@ -145,6 +145,19 @@ import cafeOrdersCM from "./CaféOrders_SaaS.png";
 import meetingRoomsCM from "./MeetingsRooms_SaaS.png";
 import complaintLogsCM from "./ComplaintLogs_SaaS.png";
 import ticketRaisingCM from "./TicketRaising_SaaS.png";
+
+import customisedReportsRA from "./CustomisedReports_SaaS.png";
+import taxesReportsRA from "./TaxesReports_SaaS.png";
+import milestoneReportsRA from "./MilestoneReports_SaaS.png";
+import employeeReportsRA from "./EmployeeReports_SaaS.png";
+import customerReportsRA from "./CustomerReports_SaaS.png";
+import fullDataAnalysisRA from "./FullDataAnalysis_SaaS.png";
+import keyNotificationsRA from "./KeyNotifications_SaaS.png";
+import cashflowRA from "./Cashflow2_SaaS.png";
+import vendorPayoutsRA from "./VendorPayouts_SaaS.png";
+import businessTrendsRA from "./BusinessTrends_SaaS.png";
+import customerTrends from "./CustomerTrends_SaaS.png";
+import companyDashboard from "./CompanyDashboard_SaaS.png";
 
 // Coloured icons end
 
@@ -272,4 +285,16 @@ export {
   meetingRoomsCM,
   complaintLogsCM,
   ticketRaisingCM,
+  customisedReportsRA,
+  taxesReportsRA,
+  milestoneReportsRA,
+  employeeReportsRA,
+  customerReportsRA,
+  fullDataAnalysisRA,
+  keyNotificationsRA,
+  cashflowRA,
+  vendorPayoutsRA,
+  businessTrendsRA,
+  customerTrends,
+  companyDashboard,
 };
