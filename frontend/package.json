@@ -47,7 +47,8 @@
     "slick-carousel": "^1.8.1",
     "three": "^0.167.1",
     "web-vitals": "^2.1.4",
-    "yup": "^1.4.0"
+    "yup": "^1.4.0",
+    "zustand": "^5.0.0-rc.2"
   },
   "scripts": {
     "start": "react-scripts start",

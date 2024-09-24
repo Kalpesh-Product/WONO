@@ -6,7 +6,6 @@ const uri = process.env.DB_URL; // Replace with your MongoDB URI and database na
 // Create a connection to MongoDB
 mongoose.connect(uri, {
     useNewUrlParser: true,
-    useUnifiedTopology: true
 });
 
 // Get a reference to the connection

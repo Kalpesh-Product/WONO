@@ -5,7 +5,6 @@ import { GoogleLogin } from "@react-oauth/google";
 import { TextField, MenuItem, Button, Box, Grid, Container } from '@mui/material';
 import axios from "axios";
 import { jwtDecode } from "jwt-decode";
-import { UserContext } from "../components/UserContext";
 import { useNavigate } from "react-router-dom";
 import emailSend from "../assets/WONO_images/img/emailSend.gif";
 import { Link } from "react-router-dom";
@@ -22,7 +21,6 @@ import outlookLogo from "../assets/WONO_images/img/services/outlookLogo.png";
 const Register = () => {
   const [currentStep, setCurrentStep] = useState(0);
   const navigate = useNavigate();
-  const { setUser } = useContext(UserContext);
   const [isLoading, setIsLoading] = useState(false);
   const [modalMessage, setModalMessage] = useState("");
   const [formData, setFormData] = useState({
@@ -186,12 +184,6 @@ const Register = () => {
     setCurrentStep((prev) => prev - 1);
   };
 
-  const handleLoginSuccess = (credentialResponse) => {
-    const decoded = jwtDecode(credentialResponse?.credential);
-    setUser(decoded); // Set the user's profile information
-    console.log(decoded);
-    navigate("/dashboard"); // Redirect after successful login
-  };
 
   const handleLoginError = () => {
     console.log("Login Failed");
