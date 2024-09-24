@@ -1,6 +1,6 @@
 const crypto = require('crypto');
 const { User, UserService, Enquiry, JobApplication } = require('../models/user');
-const { aiwinMail, transporter2 } = require('../email/nodemailerConfig');
+const { aiwinMail, anushriMail } = require('../email/nodemailerConfig');
 const jwt = require('jsonwebtoken');
 const { sub } = require('date-fns');
 
