@@ -131,6 +131,21 @@ import payslipsHR from "./Payslips_SaaS.png";
 import payrollHR from "./Payroll_SaaS.png";
 import attendanceHR from "./Attendance_SaaS.png";
 
+import analyticsCM from "./Analytics_SaaS.png";
+import reportsCM from "./Reports_SaaS.png";
+import autoresponseCM from "./AutoResponse_SaaS.png";
+import customerServiceCM from "./CustomerService_SaaS.png";
+
+import customerRatingCM from "./CustomerRating_SaaS.png";
+import feedbackCM from "./Feedback_SaaS.png";
+import announcementsCM from "./Announcements_SaaS.png";
+import visitorCM from "./Visitor_SaaS.png";
+
+import cafeOrdersCM from "./CaféOrders_SaaS.png";
+import meetingRoomsCM from "./MeetingsRooms_SaaS.png";
+import complaintLogsCM from "./ComplaintLogs_SaaS.png";
+import ticketRaisingCM from "./TicketRaising_SaaS.png";
+
 // Coloured icons end
 
 export {
@@ -245,4 +260,16 @@ export {
   payslipsHR,
   payrollHR,
   attendanceHR,
+  analyticsCM,
+  reportsCM,
+  autoresponseCM,
+  customerServiceCM,
+  customerRatingCM,
+  feedbackCM,
+  announcementsCM,
+  visitorCM,
+  cafeOrdersCM,
+  meetingRoomsCM,
+  complaintLogsCM,
+  ticketRaisingCM,
 };

@@ -25,11 +25,36 @@ const Themes = () => {
   const navigate = useNavigate();
 
   const themeImages = [
-    { src: BiznestImage, mockup: BiznestImageMockup, alt: "BiznestImage", tag: "co-working" },
-    { src: CoWorkingMewo,mockup: CoWorkingMewoMockup, alt: "CoWorkingMewo", tag: "co-working" },
-    { src: CoWorkingImage, mockup: CoWorkingImageMockup, alt: "Co-Working Image", tag: "co-working" },
-    { src: Boutique, mockup: BoutiqueMockup, alt: "Boutique Image", tag: "boutique" },
-    { src: CoLivingImage, mockup: CoLivingImageMockup, alt: "Co-Living Image", tag: "co-living" },
+    {
+      src: BiznestImage,
+      mockup: BiznestImageMockup,
+      alt: "BiznestImage",
+      tag: "co-working",
+    },
+    {
+      src: CoWorkingMewo,
+      mockup: CoWorkingMewoMockup,
+      alt: "CoWorkingMewo",
+      tag: "co-working",
+    },
+    {
+      src: CoWorkingImage,
+      mockup: CoWorkingImageMockup,
+      alt: "Co-Working Image",
+      tag: "co-working",
+    },
+    {
+      src: Boutique,
+      mockup: BoutiqueMockup,
+      alt: "Boutique Image",
+      tag: "boutique",
+    },
+    {
+      src: CoLivingImage,
+      mockup: CoLivingImageMockup,
+      alt: "Co-Living Image",
+      tag: "co-living",
+    },
     { src: CoWorkingImage_2, alt: "CoLivingImage_2", tag: "co-working" },
     { src: CoWorkingImage_3, alt: "CoLivingImage_3", tag: "co-working" },
     { src: Cafe_2, alt: "Cafe_2", tag: "cafe" },
@@ -67,7 +92,6 @@ const Themes = () => {
         "Personalize your website effortlessly by using  customizable templates.",
     },
   ];
-
 
   return (
     <div>
@@ -193,10 +217,13 @@ const Themes = () => {
                     Get support by chat or schedule a call with a Customer Care
                     Expert
                   </p>
-                  <span onClick={() => {
-                    navigate('/contact')
-                    window.scrollTo({ top: 0, behavior: "smooth" });
-                  }}>Connect With us →</span>
+                  <span
+                    onClick={() => {
+                      navigate("/contact");
+                      window.scrollTo({ top: 0, behavior: "smooth" });
+                    }}>
+                    Connect With us →
+                  </span>
                 </div>
                 <div className="themePage-website-support-grid-1">
                   <h2>
@@ -205,10 +232,13 @@ const Themes = () => {
                   <p>
                     Get help at any stage -- from site creation to online growth
                   </p>
-                  <span onClick={() => {
-                    navigate('/services')
-                    window.scrollTo({ top: 0, behavior: "smooth" });
-                  }}>Browse all services →</span>
+                  <span
+                    onClick={() => {
+                      navigate("/services");
+                      window.scrollTo({ top: 0, behavior: "smooth" });
+                    }}>
+                    Browse all services →
+                  </span>
                 </div>
               </div>
             </div>

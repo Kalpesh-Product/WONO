@@ -276,8 +276,7 @@ const Homepage = () => {
                         <div className="">
                           <button
                             className="get-started-submit-button m-0"
-                            onClick={handleRegister}
->
+                            onClick={handleRegister}>
                             Get Started
                           </button>
                         </div>

@@ -24,7 +24,7 @@
 }
 
 
-@media (min-width:2560px) {
+@media (min-width:2550px) {
     .grow-your-business-color h2 {
         font-size: 5.9rem;
     }
@@ -36,17 +36,26 @@
     .automatedPlatformFontSize {
         font-size: 2.125rem;
     }
+
+    .grow-your-business-color h2 {
+        font-size: 9.7rem;
+    }
 }
 
+@media (max-width: 2548px) {
+    .grow-your-business-color h2 {
+        font-size: 5.4rem;
+    }
+}
 
 
 .body-partners-master {
     background-color: rgb(255, 255, 255);
 }
 
-.grow-your-business-color h2 {
+/* .grow-your-business-color h2 {
     font-size: 5.4rem;
-}
+} */
 
 .grow-your-business-color p {
     font-size: 0.875rem;
