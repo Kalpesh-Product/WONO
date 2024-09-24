@@ -55,7 +55,7 @@ app.use(session({
 
 // Test route
 app.get("/", (req, res) => {
-  res.json({ message: "Backend here" });
+  res.json({ message: "Backend here" });
 });
 
 app.post('/', (req, res) => {

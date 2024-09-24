@@ -31,12 +31,15 @@ import PrivateRoute from "./contexts/PrivateRoute";
 import PublicRoute from "./contexts/PublicRoute";
 
 
-function App() {
+function App({useHideUnimportantErrors}) {
+ 
   const [activeTab, setActiveTab] = useState("Home");
 
   const changeActiveTab = (activeTab) => {
     setActiveTab(activeTab);
   };
+  useHideUnimportantErrors();
+
   return (
     <div>
       <UserProvider>

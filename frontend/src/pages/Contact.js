@@ -155,7 +155,7 @@ const Contact = () => {
                       required
                       label="Message" // Floating label
                       name="message"
-                      multiline // Enables multiline textarea
+                      multiline 
                       minRows={4} // Sets the minimum number of rows
                       variant="outlined" // Optional: "outlined", "filled", or "standard"
                       fullWidth // Expands the input to take the full width
