@@ -158,7 +158,7 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
 
         <div className="custom-navbar-menu">
           {loggedIn ? (
-            <div className="user-profile">
+            <div className="user-profile custom-navbar-buttons">
               <div
                 className="profile-container"
                 onClick={() => setDropdownOpen(!dropdownOpen)}>
