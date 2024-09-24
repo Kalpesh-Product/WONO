@@ -49,6 +49,8 @@ const Register = () => {
 
   const [states, setStates] = useState([]);
   const [cities, setCities] = useState([]);
+  const [companyStates, setCompanyStates] = useState([]);
+  const [companyCities, setCompanyCities] = useState([]);
   const [errors, setErrors] = useState({});
 
   useEffect(() => {
@@ -68,6 +70,25 @@ const Register = () => {
       setFormData(prev => ({ ...prev, city: '' }));
     }
   }, [formData.state]);
+
+
+  useEffect(() => {
+    const countryStates = State.getStatesOfCountry('IN'); // Fetch states of India
+    setCompanyStates(countryStates);
+    // Reset state and city on load
+    setFormData((prev) => ({ ...prev, companyState: '', companyCity: '' }));
+  }, []);
+
+  useEffect(() => {
+    if (formData.companyState) {
+      const stateCities = City.getCitiesOfState('IN', formData.companyState); // Fetch cities for the selected state
+      setCompanyCities(stateCities);
+      setFormData((prev) => ({ ...prev, companyCity: '' })); // Reset city when state changes
+    } else {
+      setCompanyCities([]); // Clear cities if no state is selected
+    }
+  }, [formData.companyState]);
+
 
   //checkbox
   const handleCheckboxChange = (service) => {
@@ -458,7 +479,7 @@ const Register = () => {
                           </TextField>
                         </Grid>
 
-                       
+
 
                         <Grid item xs={12} sm={6}>
                           <TextField
@@ -617,26 +638,7 @@ const Register = () => {
                           </TextField>
                         </Grid>
 
-                        <Grid item xs={12} sm={6}>
-                          <TextField
-                            label="City"
-                            variant="outlined"
-                            name="companyCity"
-                            select
-                            value={formData.companyCity}
-                            onChange={handleChange}
-                            error={!!errors.companyCity}
-                            helperText={errors.companyCity}
-                            required
-                            fullWidth
-                          >
-                            <MenuItem value="Mumbai">Mumbai</MenuItem>
-                            <MenuItem value="Delhi">Delhi</MenuItem>
-                            <MenuItem value="Bangalore">Bangalore</MenuItem>
-                            <MenuItem value="Chennai">Chennai</MenuItem>
-                            <MenuItem value="Kolkata">Kolkata</MenuItem>
-                          </TextField>
-                        </Grid>
+                
 
                         <Grid item xs={12} sm={6}>
                           <TextField
@@ -651,11 +653,32 @@ const Register = () => {
                             required
                             fullWidth
                           >
-                            <MenuItem value="Maharashtra">Maharashtra</MenuItem>
-                            <MenuItem value="Delhi">Delhi</MenuItem>
-                            <MenuItem value="Karnataka">Karnataka</MenuItem>
-                            <MenuItem value="Tamil Nadu">Tamil Nadu</MenuItem>
-                            <MenuItem value="West Bengal">West Bengal</MenuItem>
+                            {companyStates.map((state) => (
+                              <MenuItem key={state.isoCode} value={state.isoCode}>
+                                {state.name}
+                              </MenuItem>
+                            ))}
+                          </TextField>
+                        </Grid>
+
+                        <Grid item xs={12} sm={6}>
+                          <TextField
+                            label="City"
+                            variant="outlined"
+                            name="companyCity"
+                            select
+                            value={formData.companyCity}
+                            onChange={handleChange}
+                            error={!!errors.companyCity}
+                            helperText={errors.companyCity}
+                            required
+                            fullWidth
+                          >
+                            {companyCities.map((city) => (
+                              <MenuItem key={city.name} value={city.name}>
+                                {city.name}
+                              </MenuItem>
+                            ))}
                           </TextField>
                         </Grid>
 
