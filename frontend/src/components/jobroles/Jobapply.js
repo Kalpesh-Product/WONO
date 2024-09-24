@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Toasts from "../../components/Toasts";
 import Modals from "../Modals";
 import { Modal } from "react-bootstrap";
 // import { Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
+import { State } from 'country-state-city';
 import axios from "axios";
 import {
   TextField,
@@ -26,6 +27,7 @@ const Jobapply = ({ jobTitle }) => {
 
   const [showModal, setShowModal] = useState(false); //for generic modals
   const [showMessage, setShowMessage] = useState("");
+  const [states, setStates] = useState([]);
   const handleModal = () => setShowModal(true);
 
   const [formvalues, setFormValues] = useState({
@@ -66,6 +68,13 @@ const Jobapply = ({ jobTitle }) => {
   //             : value,
   //   });
   // };
+
+  useEffect(() => {
+    // Assuming 'IN' is the country code for India, you can replace this with any country code.
+    const countryStates = State.getStatesOfCountry('IN');
+    setStates(countryStates);
+  }, []);
+
 
 
   const handleGlobalChange = (e) => {
@@ -325,36 +334,11 @@ const Jobapply = ({ jobTitle }) => {
                 value={formvalues.location}
                 onChange={handleGlobalChange}
               >
-                <MenuItem value="" disabled>Select State</MenuItem>
-                <MenuItem value="Andhra Pradesh">Andhra Pradesh</MenuItem>
-                <MenuItem value="Arunachal Pradesh">Arunachal Pradesh</MenuItem>
-                <MenuItem value="Assam">Assam</MenuItem>
-                <MenuItem value="Bihar">Bihar</MenuItem>
-                <MenuItem value="Chhattisgarh">Chhattisgarh</MenuItem>
-                <MenuItem value="Goa">Goa</MenuItem>
-                <MenuItem value="Gujarat">Gujarat</MenuItem>
-                <MenuItem value="Haryana">Haryana</MenuItem>
-                <MenuItem value="Himachal">Himachal</MenuItem>
-                <MenuItem value="Jharkhand">Jharkhand</MenuItem>
-                <MenuItem value="Karnataka">Karnataka</MenuItem>
-                <MenuItem value="Kerala">Kerala</MenuItem>
-                <MenuItem value="Madhya Pradesh">Madhya Pradesh</MenuItem>
-                <MenuItem value="Maharashtra">Maharashtra</MenuItem>
-                <MenuItem value="Manipur">Manipur</MenuItem>
-                <MenuItem value="Meghalaya">Meghalaya</MenuItem>
-                <MenuItem value="Mizoram">Mizoram</MenuItem>
-                <MenuItem value="Nagaland">Nagaland</MenuItem>
-                <MenuItem value="Odisha">Odisha</MenuItem>
-                <MenuItem value="Punjab">Punjab</MenuItem>
-                <MenuItem value="Rajasthan">Rajasthan</MenuItem>
-                <MenuItem value="Sikkim">Sikkim</MenuItem>
-                <MenuItem value="Tamil Nadu">Tamil Nadu</MenuItem>
-                <MenuItem value="Telangana">Telangana</MenuItem>
-                <MenuItem value="Tripura">Tripura</MenuItem>
-                <MenuItem value="Uttar Pradesh">Uttar Pradesh</MenuItem>
-                <MenuItem value="Uttarakhand">Uttarakhand</MenuItem>
-                <MenuItem value="West Bengal">West Bengal</MenuItem>
-                <MenuItem value="Other">Other</MenuItem>
+                {states.map((state) => (
+                  <MenuItem key={state.isoCode} value={state.isoCode}>
+                    {state.name}
+                  </MenuItem>
+                ))}
               </Select>
             </FormControl>
           </Grid>

@@ -1,4 +1,4 @@
-import React, { useContext, useState, useRef } from "react";
+import React, { useContext, useState, useRef, useEffect } from "react";
 import "../styles/bodyRegister.css";
 import { GoogleLogin } from "@react-oauth/google";
 // import { Form, FloatingLabel } from 'react-bootstrap';
@@ -9,6 +9,7 @@ import { useNavigate } from "react-router-dom";
 import emailSend from "../assets/WONO_images/img/emailSend.gif";
 import { Link } from "react-router-dom";
 import { Stepper, Step } from "react-form-stepper";
+import { Country, State, City } from 'country-state-city';
 import {
   TransactionalWebsite,
   BookingEngine,
@@ -45,7 +46,29 @@ const Register = () => {
       service4: false,
     },
   });
+
+  const [states, setStates] = useState([]);
+  const [cities, setCities] = useState([]);
   const [errors, setErrors] = useState({});
+
+  useEffect(() => {
+    if (formData.country) {
+      const countryStates = State.getStatesOfCountry(formData.country);
+      setStates(countryStates);
+      setFormData(prev => ({ ...prev, state: '', city: '' }));
+      setCities([]);
+    }
+  }, [formData.country]);
+
+  // Fetch cities when a state is selected
+  useEffect(() => {
+    if (formData.state) {
+      const stateCities = City.getCitiesOfState(formData.country, formData.state);
+      setCities(stateCities);
+      setFormData(prev => ({ ...prev, city: '' }));
+    }
+  }, [formData.state]);
+
   //checkbox
   const handleCheckboxChange = (service) => {
     setFormData((prevState) => ({
@@ -416,49 +439,26 @@ const Register = () => {
 
                         <Grid item xs={12} sm={6}>
                           <TextField
-                            label="City"
+                            label="Country"
                             variant="outlined"
-                            name="city"
-                            value={formData.city}
+                            name="country"
+                            value={formData.country}
                             onChange={handleChange}
-                            error={!!errors.city}
-                            helperText={errors.city}
+                            error={!!errors.country}
+                            helperText={errors.country}
                             select
                             required
                             fullWidth
                           >
-                            <MenuItem value="" disabled>Select State</MenuItem>
-                            <MenuItem value="Andhra Pradesh">Andhra Pradesh</MenuItem>
-                            <MenuItem value="Arunachal Pradesh">Arunachal Pradesh</MenuItem>
-                            <MenuItem value="Assam">Assam</MenuItem>
-                            <MenuItem value="Bihar">Bihar</MenuItem>
-                            <MenuItem value="Chhattisgarh">Chhattisgarh</MenuItem>
-                            <MenuItem value="Goa">Goa</MenuItem>
-                            <MenuItem value="Gujarat">Gujarat</MenuItem>
-                            <MenuItem value="Haryana">Haryana</MenuItem>
-                            <MenuItem value="Himachal">Himachal</MenuItem>
-                            <MenuItem value="Jharkhand">Jharkhand</MenuItem>
-                            <MenuItem value="Karnataka">Karnataka</MenuItem>
-                            <MenuItem value="Kerala">Kerala</MenuItem>
-                            <MenuItem value="Madhya Pradesh">Madhya Pradesh</MenuItem>
-                            <MenuItem value="Maharashtra">Maharashtra</MenuItem>
-                            <MenuItem value="Manipur">Manipur</MenuItem>
-                            <MenuItem value="Meghalaya">Meghalaya</MenuItem>
-                            <MenuItem value="Mizoram">Mizoram</MenuItem>
-                            <MenuItem value="Nagaland">Nagaland</MenuItem>
-                            <MenuItem value="Odisha">Odisha</MenuItem>
-                            <MenuItem value="Punjab">Punjab</MenuItem>
-                            <MenuItem value="Rajasthan">Rajasthan</MenuItem>
-                            <MenuItem value="Sikkim">Sikkim</MenuItem>
-                            <MenuItem value="Tamil Nadu">Tamil Nadu</MenuItem>
-                            <MenuItem value="Telangana">Telangana</MenuItem>
-                            <MenuItem value="Tripura">Tripura</MenuItem>
-                            <MenuItem value="Uttar Pradesh">Uttar Pradesh</MenuItem>
-                            <MenuItem value="Uttarakhand">Uttarakhand</MenuItem>
-                            <MenuItem value="West Bengal">West Bengal</MenuItem>
-                            <MenuItem value="Other">Other</MenuItem>
+                            {Country.getAllCountries().map((country) => (
+                              <MenuItem key={country.isoCode} value={country.isoCode}>
+                                {country.name}
+                              </MenuItem>
+                            ))}
                           </TextField>
                         </Grid>
+
+                       
 
                         <Grid item xs={12} sm={6}>
                           <TextField
@@ -473,32 +473,31 @@ const Register = () => {
                             required
                             fullWidth
                           >
-                            <MenuItem value="Maharashtra">Maharashtra</MenuItem>
-                            <MenuItem value="Delhi">Delhi</MenuItem>
-                            <MenuItem value="Karnataka">Karnataka</MenuItem>
-                            <MenuItem value="Tamil Nadu">Tamil Nadu</MenuItem>
-                            <MenuItem value="West Bengal">West Bengal</MenuItem>
+                            {states.map((state) => (
+                              <MenuItem key={state.isoCode} value={state.isoCode}>
+                                {state.name}
+                              </MenuItem>
+                            ))}
                           </TextField>
                         </Grid>
-
                         <Grid item xs={12} sm={6}>
                           <TextField
-                            label="Country"
+                            label="City"
                             variant="outlined"
-                            name="country"
-                            value={formData.country}
+                            name="city"
+                            value={formData.city}
                             onChange={handleChange}
-                            error={!!errors.country}
-                            helperText={errors.country}
+                            error={!!errors.city}
+                            helperText={errors.city}
                             select
                             required
                             fullWidth
                           >
-                            <MenuItem value="India">India</MenuItem>
-                            <MenuItem value="United States">United States</MenuItem>
-                            <MenuItem value="United Kingdom">United Kingdom</MenuItem>
-                            <MenuItem value="Canada">Canada</MenuItem>
-                            <MenuItem value="Australia">Australia</MenuItem>
+                            {cities.map((city) => (
+                              <MenuItem key={city.name} value={city.name}>
+                                {city.name}
+                              </MenuItem>
+                            ))}
                           </TextField>
                         </Grid>
 
