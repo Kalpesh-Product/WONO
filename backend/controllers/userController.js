@@ -119,31 +119,7 @@ exports.registerUser = async (req, res) => {
       `,
         };
 
-        const companyMailOptions = {
-            from: email,
-            to: "productwonoco@gmail.com",
-            subject: "New User Registration",
-            html: `
-        <h1>New User Registration Details</h1>
-        <p><strong>Name:</strong> ${name}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Mobile:</strong> ${mobile}</p>
-        <p><strong>Country:</strong> ${country}</p>
-        <p><strong>City:</strong> ${city}</p>
-        <p><strong>State:</strong> ${state}</p>
-        <p><strong>Company Name:</strong> ${companyName}</p>
-        <p><strong>Industry:</strong> ${industry}</p>
-        <p><strong>Company Size:</strong> ${companySize}</p>
-        <p><strong>Company Type:</strong> ${companyType}</p>
-        <p><strong>Company City:</strong> ${companyCity}</p>
-        <p><strong>Company State:</strong> ${companyState}</p>
-        <p><strong>Website URL:</strong> ${websiteURL}</p>
-        <p><strong>LinkedIn URL:</strong> ${linkedinURL}</p>
-        <p><strong>Selected Services:</strong> ${Object.keys(selectedServices).filter(service => selectedServices[service]).join(', ')}</p>
-        <p><strong>Username:</strong> ${username}</p>
-        <p><strong>Password:</strong> ${password}</p>
-      `,
-        };
+       e
 
         // Send both emails concurrently
         await Promise.all([

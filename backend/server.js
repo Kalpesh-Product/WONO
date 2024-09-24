@@ -28,7 +28,6 @@ const app = express();
 app.use(cors({
   origin: true, // Reflects the request origin, allowing all origins
   credentials: true, // Allow cookies to be sent
-   allowedHeaders: '*',
 }));
 const port = process.env.PORT;
 
