@@ -1,11 +1,11 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import "../styles/bodyLogin.css";
 import "../styles/bodyLogin2.css";
 import { Link, useNavigate } from "react-router-dom";
 import { GoogleLoginButton } from 'react-social-login-buttons';
 import { LoginSocialGoogle } from 'reactjs-social-login'
 import { jwtDecode } from "jwt-decode";
-import { UserContext } from "../components/UserContext";
+import { UserContext } from "../contexts/UserContext";
 import Modals from "../components/Modals";
 import axios from "axios";
 import { Container, Box, Grid, TextField, Button } from '@mui/material';
@@ -16,9 +16,8 @@ import LoginWithEmailImage from "../assets/WONO_images/img/login_images/email-ic
 
 const LoginPage = () => {
   const navigate = useNavigate();
-  const { setUser } = useContext(UserContext);
+  const { setUsername, setLoggedIn, loggedIn, username } = useContext(UserContext);
   const [error, setError] = useState("");
-  const [username, setUserName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [userNameError, setUserNameError] = useState("");
@@ -26,6 +25,10 @@ const LoginPage = () => {
   const [modalTitle, setModalTitle] = useState("Error"); // Modal title
   const [modalMessage, setModalMessage] = useState("");
   const [token, setToken] = useState('');
+  const [loginForm, setLoginForm] = useState({
+    email: "",
+    password: ""
+  })
 
 
 
@@ -34,6 +37,9 @@ const LoginPage = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+
+
+
     // Username validation using regex
     const usernameRegex = /^.{2,}$/; // At least 2 characters long
     if (!usernameRegex.test(email)) {
@@ -48,11 +54,16 @@ const LoginPage = () => {
       const response = await axios.post("/login", {
         email,
         password,
+      }, {
+        withCredentials: true
       });
 
-      const { user } = response.data;
-      setUser(user);
-      navigate("/dashboard");
+      const data = response.data;
+      localStorage.setItem("username", data.user.name); // Save username in localStorage
+      localStorage.setItem("token", data.token); // Save token in localStorage
+      setUsername(data.user.name); // Set the username state
+      setLoggedIn(true); // Set the loggedIn state to true
+
     } catch (error) {
       setModalTitle("Login Failed");
       setModalMessage("Invalid email or password");
@@ -60,9 +71,39 @@ const LoginPage = () => {
       console.error("Login Failed:", error);
     }
 
-    setUserName("");
-    setPassword("");
+  
   };
+  useEffect(() => {
+    console.log('Effect running');
+  
+    // Check if token exists in localStorage
+    const token = localStorage.getItem("token");
+    console.log('Token:', token);
+  
+    if (token) {
+      // Token exists, so the user is already logged in
+      const storedUsername = localStorage.getItem("username");
+      console.log('Stored Username:', storedUsername);
+  
+      if (storedUsername) {
+        setUsername(storedUsername); // Set the username from localStorage
+      }
+      setLoggedIn(true); // Set the loggedIn state to true
+    } else {
+      setLoggedIn(false); // Ensure loggedIn is false if no token
+    }
+  }, [navigate]);
+  
+  useEffect(() => {
+    if (loggedIn) {
+      console.log('Navigating to dashboard');
+      navigate("/dashboard");
+    }
+  }, [loggedIn, navigate]);
+  
+  
+  
+
 
   const handleLoginResolve = ({ provider, data }) => {
     console.log('Provider:', provider);
@@ -101,12 +142,6 @@ const LoginPage = () => {
     }
   };
 
-  const handleLoginSuccess = (credentialResponse) => {
-    const decoded = jwtDecode(credentialResponse?.credential);
-    setUser(decoded); // Set the user's profile information
-    console.log(decoded);
-    navigate("/dashboard"); // Redirect after successful login
-  };
 
   const handleLoginError = () => {
     console.log("Login Failed");
@@ -143,7 +178,7 @@ const LoginPage = () => {
                       helperText={userNameError}
                       required
                       fullWidth
-          
+
                     />
                   </Grid>
 
@@ -210,17 +245,17 @@ const LoginPage = () => {
                   
                 </LoginSocialGoogle> */}
                 <div className="LoginWithGoogleContainer loginWithBox loginWithGoogleBox d-flex justify-content-between align-items-center centerElement w-100">
-                    <div className="loginWithIconBox loginWithGoogleIconBox centerElement">
-                      <img
-                        src={LoginWithGoogleImage}
-                        alt="Google Icon"
-                        className="imageDimensions"
-                      />
-                    </div>
-                    <div className="LoginWithGoogleText LoginWithText centerElement w-100">
-                      <div>Continue with Google</div>
-                    </div>
+                  <div className="loginWithIconBox loginWithGoogleIconBox centerElement">
+                    <img
+                      src={LoginWithGoogleImage}
+                      alt="Google Icon"
+                      className="imageDimensions"
+                    />
                   </div>
+                  <div className="LoginWithGoogleText LoginWithText centerElement w-100">
+                    <div>Continue with Google</div>
+                  </div>
+                </div>
               </div>
               <div className="LoginWithFacebookContainer loginWithBox loginWithFacebookBox d-flex justify-content-between align-items-center centerElement">
                 <div className="loginWithIconBox loginWithFacebookIconBox centerElement">

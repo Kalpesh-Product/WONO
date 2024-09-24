@@ -1,6 +1,6 @@
 // NavBar.js
-import React, { useContext, useState } from "react";
-import { UserContext } from "./UserContext";
+import React, { useContext, useState, useEffect } from "react";
+import { UserContext } from '../contexts/UserContext';
 import { useNavigate, useLocation } from "react-router-dom";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import { Link } from "react-router-dom";
@@ -13,7 +13,7 @@ import ProfileImage from "../assets/WONO_images/img/wono-img-profile.png";
 
 const NavBar = ({ activeTab, changeActiveTab }) => {
   const navigate = useNavigate();
-
+  const { username, loggedIn, setLoggedIn, setUsername } = useContext(UserContext);
   const location = useLocation();
   const isAuthPage =
     location.pathname === "/login" || location.pathname === "/register";
@@ -22,7 +22,6 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
   const isleadspage = location.pathname === "/leads";
   const iscareerpage = location.pathname === "/career";
   const iscapitalpage = location.pathname === "/capital";
-  const { user, setUser } = useContext(UserContext);
   const [show, setShow] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   // const [activeTab, setActiveTab] = useState("Home");
@@ -31,15 +30,38 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
   //   setActiveTab(activeTab);
   // };
 
+  // If username is not set, check localStorage
+  const storedUsername = localStorage.getItem('username');
+
+
   const handleLogout = async () => {
     try {
-      await axios.post("/logout", {}, { withCredentials: true });
-      setUser(null); // Clear the user state
-      navigate("/home");
+      const response = await axios.get("/logout", { withCredentials: true });
+  
+      if (response.status === 200) {
+        // Clear the local storage for username
+        localStorage.removeItem('token');
+        localStorage.removeItem('username');
+  
+        // Clear user context state
+        setLoggedIn(false); // Set loggedIn to false
+        setUsername(''); // Clear the username from context state
+  
+        console.log("Logged out, username cleared");
+        navigate("/login"); // Redirect to login
+      } else {
+        console.error("Error logging out:", response);
+      }
     } catch (error) {
       console.error("Error logging out:", error);
     }
   };
+
+
+  useEffect(() => {
+    console.log("LoggedIn state changed: ", loggedIn);
+  }, [loggedIn]);
+
 
   const handleRegister = () => {
     navigate("/register");
@@ -65,14 +87,17 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
           />
         </div>
         <div className="custom-navbar-menu nav-tabss">
-          {!user ? (
+          {loggedIn ? (
+            <Link to={"/dashboard"} className="active">
+              {/* Dashboard */}
+              Activating Soon
+            </Link>
+          ) : (
             <>
               <Link
                 to="/services"
                 className={
-                  (!isAuthPage && isservices) || activeTab === "Services"
-                    ? "active"
-                    : ""
+                  (!isAuthPage && isservices) || activeTab === "Services" ? "active" : ""
                 }
                 onClick={() => {
                   changeActiveTab("Services");
@@ -83,8 +108,7 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
               <Link
                 to="/capital"
                 className={
-                  (!isAuthPage && iscapitalpage && !isservices) ||
-                  activeTab === "capital"
+                  (!isAuthPage && iscapitalpage && !isservices) || activeTab === "capital"
                     ? "active"
                     : ""
                 }
@@ -101,9 +125,7 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
                   window.scrollTo({ top: 0, behavior: "instant" });
                 }}
                 className={
-                  (!isAuthPage && isthempage) || activeTab === "themes"
-                    ? "active"
-                    : ""
+                  (!isAuthPage && isthempage) || activeTab === "themes" ? "active" : ""
                 }>
                 Theme
               </Link>
@@ -114,8 +136,7 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
                   window.scrollTo({ top: 0, behavior: "instant" });
                 }}
                 className={
-                  (!isAuthPage && !isservices && isleadspage) ||
-                  activeTab === "leads"
+                  (!isAuthPage && !isservices && isleadspage) || activeTab === "leads"
                     ? "active"
                     : ""
                 }>
@@ -123,9 +144,7 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
               </Link>
               <Link
                 to="/career"
-                className={
-                  !isAuthPage && activeTab === "Career" ? "active" : ""
-                }
+                className={!isAuthPage && activeTab === "Career" ? "active" : ""}
                 onClick={() => {
                   changeActiveTab("Career");
                   window.scrollTo({ top: 0, behavior: "instant" });
@@ -133,17 +152,11 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
                 Career
               </Link>
             </>
-          ) : null}
-
-          {user ? (
-            <Link to={"/dashboard"} className="active">
-              {/* Dashboard */}
-              Activating Soon
-            </Link>
-          ) : null}
+          )}
         </div>
+
         <div className="custom-navbar-menu">
-          {user ? (
+          {loggedIn ? (
             <div className="user-profile">
               <div
                 className="profile-container"
@@ -151,10 +164,10 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
                 <img
                   // src={user.picture}
                   src={ProfileImage}
-                  alt={user.name}
+                  alt={'ProfileImage'}
                   className="profile-image"
                 />
-                <span>{user.name ? user.name : user.email}</span>
+                <span>{username || storedUsername || 'NewUser'}</span>
                 <div className={`dropdown-menu ${dropdownOpen ? "show" : ""}`}>
                   <button onClick={handleLogout}>Logout</button>
                 </div>
@@ -237,22 +250,22 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
             onClick={handleClose}>
             Contact
           </Link> */}
-          {user ? (
+          {loggedIn ? (
             <Link className="custom-offcanvas-link" to={"/dashboard"}>
               Dashboard
             </Link>
           ) : null}
-          {user ? (
+          {loggedIn ? (
             <div className="user-profile">
               <div
                 className="profile-container"
                 onClick={() => setDropdownOpen(!dropdownOpen)}>
                 <img
-                  src={user.picture}
-                  alt={user.name}
+                  src={ProfileImage}
+                  alt={'ProfileImage'}
                   className="profile-image"
                 />
-                <span>{user.name}</span>
+                <span>{username}</span>
                 <div className={`dropdown-menu ${dropdownOpen ? "show" : ""}`}>
                   <button onClick={handleLogout}>Logout</button>
                 </div>
