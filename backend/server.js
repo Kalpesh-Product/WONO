@@ -70,7 +70,7 @@ const transport = nodemailer.createTransport({
 
 // Test route
 app.get("/", (req, res) => {
-  res.json({ message: "Backend here" });
+  res.json({ message: "Backend here" });
 });
 
 app.post('/', (req, res) => {
@@ -138,7 +138,7 @@ const jobApplicationSchema = new mongoose.Schema({
   location: String,
   experience: String,
   linkedInProfile: String,
-  resume: String,
+  resume: String, // Original filename
   monthlySalary: String,
   expectedSalary: String,
   daysToJoin: String,
@@ -147,18 +147,48 @@ const jobApplicationSchema = new mongoose.Schema({
   skills: String,
   specialexperience: String,
   willing: String,
-  message: String
+  message: String,
+  resumePath: String // File path of uploaded resume
 }, { timestamps: true });
 
 const JobApplication = mongoose.model('JobApplication', jobApplicationSchema);
 
+// Configure multer to save file locally
+// Configure multer to save files locally
+const storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    const uploadPath = './uploads';
+    
+    // Check if the 'uploads' directory exists, if not, create it
+    if (!fs.existsSync(uploadPath)) {
+      fs.mkdirSync(uploadPath, { recursive: true });
+    }
+    
+    cb(null, uploadPath); // Local folder where files will be saved
+  },
+  filename: function (req, file, cb) {
+    cb(null, Date.now() + path.extname(file.originalname)); // Save file with a timestamp
+  }
+});
+
+const upload = multer({ storage });
 
 
-app.post('/jobapply',  async (req, res) => {
+
+app.post('/jobapply', upload.single('resume'), async (req, res) => {
 
 
-  const { jobTitle, name, email, date, number, location, experience, linkedInProfile, resume, monthlySalary, expectedSalary,
+  const { jobTitle, name, email, date, number, location, experience, linkedInProfile, monthlySalary, expectedSalary,
     daysToJoin, relocateGoa, personality, skills, specialexperience, willing, message } = req.body;
+
+    console.log(req.body)
+
+  // Check if file was uploaded
+  if (!req.file) {
+    return res.status(400).json({ message: 'Resume file is required' });
+  }
+
+  const resumePath = req.file.path;
 
   const parsedDate = parse(date, 'dd-MM-yyyy', new Date());
   const formattedDate = format(parsedDate, 'dd-MM-yyyy');
@@ -173,7 +203,7 @@ app.post('/jobapply',  async (req, res) => {
     location,
     experience,
     linkedInProfile,
-    resume,
+    resume: req.file.originalname, // Optional: store the original file name if needed
     monthlySalary,
     expectedSalary,
     daysToJoin,
@@ -182,12 +212,22 @@ app.post('/jobapply',  async (req, res) => {
     skills,
     specialexperience,
     willing,
-    message
-  });
+    message,
+    resumePath // Store the path of the uploaded resume
+  })
 
   try {
     // Save to MongoDB
     await jobApplication.save();
+
+
+    const autoReply = () =>{
+      `<h1>Thank you for your concern.</h1>
+            <br></br>
+            <p>
+            We have received your application. We will get back to you in 24hrs.
+            </p>`
+    }
 
     // Email options
     const Mailoption = {
@@ -270,21 +310,45 @@ app.post('/jobapply',  async (req, res) => {
       <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">Message</td>
       <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">${message}</td>
     </tr>
-    <tr>
-      <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">ResumeLink</td>
-      <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;"><a href=${resume}>${resume}</a></td>
-    </tr> 
+
   </table>
   </div>
   </body>`,
+      attachments: [
+        {
+          filename: req.file.originalname,
+          path: resumePath,
+        },
+      ],
     };
+
+    const replyMail = {
+      from: 'anushri.bhagat263@gmail.com',
+      to: email,
+      subject: `Job Application: ${name} - ${jobTitle}`,
+      html:  `<h1>Thank you for your application.</h1>
+      <br></br>
+      <p>
+      We have received your application. We will get back to you in 24hrs.
+      </p>`
+    }
+
+
 
     // Send email
     transport.sendMail(Mailoption, (error, info) => {
       if (error) {
         return res.status(500).send('Failed to send Email: ' + error.message);
       }
+      console.log('Email sent: ' + info.response);
       res.status(200).send('Application details have been sent');
+    });
+    transport.sendMail(replyMail, (error, info) => {
+      if (error) {
+        return res.status(500).send('Failed to send Email: ' + error.message);
+      }
+      console.log('Email sent: ' + info.response);
+      res.status(200).send('auto-reply sent');
     });
 
   } catch (error) {
@@ -293,17 +357,21 @@ app.post('/jobapply',  async (req, res) => {
   }
 });
 
-// Route to download the CSV file
-app.get('/download-csv', (req, res) => {
-  const filePath = path.join(__dirname, 'form_data.csv');
+// Middleware for static file serving (e.g., uploaded files)
+// app.use('/uploads', express.static('uploads'));
 
-  // Check if the file exists
-  if (fs.existsSync(filePath)) {
-    res.download(filePath);
-  } else {
-    res.status(404).send('CSV file not found');
-  }
-});
+
+// Route to download the CSV file
+// app.get('/download-csv', (req, res) => {
+//   const filePath = path.join(__dirname, 'form_data.csv');
+
+//   // Check if the file exists
+//   if (fs.existsSync(filePath)) {
+//     res.download(filePath);
+//   } else {
+//     res.status(404).send('CSV file not found');
+//   }
+// });
 
 
 
@@ -494,7 +562,7 @@ const userSchema = new mongoose.Schema({
   personalInfo: {
     name: { type: String, required: false },
     mobile: { type: String, required: false },
-    email: { type: String, required: false, unique : true }, // Make optional
+    email: { type: String, required: false, unique: true }, // Make optional
     country: String,
     city: String,
     state: String,

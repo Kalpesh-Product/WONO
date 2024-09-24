@@ -37,7 +37,7 @@ const Jobapply = ({ jobTitle }) => {
     location: "",
     experience: "",
     linkedInProfile: "",
-    resume: "",
+    resume: null,
     monthlySalary: "",
     expectedSalary: "",
     daysToJoin: "",
@@ -69,9 +69,16 @@ const Jobapply = ({ jobTitle }) => {
 
 
   const handleGlobalChange = (e) => {
-    const { name, value } = e.target;
-    setFormValues((prevData) => ({ ...prevData, [name]: value }));
+    const { name, value, files } = e.target;
+    if (files) {
+      // Handle file input
+      setFormValues((prevData) => ({ ...prevData, [name]: files[0] }));
+    } else {
+      // Handle text input
+      setFormValues((prevData) => ({ ...prevData, [name]: value }));
+    }
   };
+
 
   const handleChange = (name) => (newValue) => {
     if (newValue && isValid(newValue)) {
@@ -159,8 +166,8 @@ const Jobapply = ({ jobTitle }) => {
         setShowModal(true);
         return;
       }
-      if (formvalues.resume === "") {
-        setShowMessage("Resume link is required");
+      if (!formvalues.resume || typeof formvalues.resume === "string") {  // Check if file input is missing or not properly formatted
+        setShowMessage("Resume file is required");
         setShowModal(true);
         return;
       }
@@ -185,15 +192,44 @@ const Jobapply = ({ jobTitle }) => {
         setShowMessage("Please enter a valid email address");
         return;
       } else {
+        const data = new FormData();
+    data.append('jobTitle', formvalues.jobTitle);
+    data.append('name', formvalues.name);
+    data.append('email', formvalues.email);
+    data.append('date',formvalues.date);
+    data.append('daysToJoin',formvalues.daysToJoin);
+    data.append('expectedSalary',formvalues.expectedSalary);
+    data.append('experience',formvalues.experience);
+    data.append('monthlySalary',formvalues.monthlySalary);
+    data.append('number',formvalues.number);
+    data.append('personality',formvalues.personality);
+    data.append('relocateGoa',formvalues.relocateGoa);
+    data.append('location',formvalues.location);
+    data.append('resume',formvalues.resume);
+    data.append('skills',formvalues.skills);
+    data.append('specialexperience',formvalues.specialexperience);
+    data.append('willing',formvalues.willing);
+    
+    try{
+      await axios.post('/jobapply', data, {
+        headers: {
+          'Content-Type': 'multipart/form-data',
+        },
+      });
+      alert('Form submitted successfully!');
+
+    }catch (error) {
+      console.error('Error submitting form:', error.response ? error.response.data.message : error.message);
+    }
         
-        axios
-          .post("/jobapply", formvalues)
-          .then((response) => {
-            alert("Email sent successfully");
-          })
-          .catch((error) => {
-            console.error("There was an error sending email", error);
-          });
+        // axios
+        //   .post("/jobapply", formvalues)
+        //   .then((response) => {
+        //     alert("Email sent successfully");
+        //   })
+        //   .catch((error) => {
+        //     console.error("There was an error sending email", error);
+        //   });
       }
     }
 
