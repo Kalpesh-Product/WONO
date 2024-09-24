@@ -116,6 +116,21 @@ import adNetworksSM from "./AdNetworks_SaaS.png";
 import personalisedSemSM from "./PersonalisedSEM_SaaS.png";
 import automatedSeoSM from "./AutomatedSEO_SaaS.png";
 
+import eSignHR from "./e-Sign_SaaS.png";
+import templatesHR from "./Templates_SaaS.png";
+import appraisalsHR from "./Appraisals_SaaS.png";
+import performanceHR from "./Performance_SaaS.png";
+//
+import taskManagementHR from "./TaskManagement_SaaS.png";
+import policiesHR from "./Policies_SaaS.png";
+import sopsHR from "./SOPs_SaaS.png";
+import holidaysHR from "./Holidays_SaaS.png";
+//
+import leavesHR from "./Leaves_SaaS.png";
+import payslipsHR from "./Payslips_SaaS.png";
+import payrollHR from "./Payroll_SaaS.png";
+import attendanceHR from "./Attendance_SaaS.png";
+
 // Coloured icons end
 
 export {
@@ -218,4 +233,16 @@ export {
   adNetworksSM,
   personalisedSemSM,
   automatedSeoSM,
+  eSignHR,
+  templatesHR,
+  appraisalsHR,
+  performanceHR,
+  taskManagementHR,
+  policiesHR,
+  sopsHR,
+  holidaysHR,
+  leavesHR,
+  payslipsHR,
+  payrollHR,
+  attendanceHR,
 };
