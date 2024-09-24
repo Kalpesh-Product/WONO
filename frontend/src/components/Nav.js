@@ -9,7 +9,8 @@ import "../styles/componentStyle.css";
 import WonoLogo from "../assets/WONO_images/img/WONO_LOGO_white _TP.png";
 // import ProfileImage from "../assets/WONO_images/img/profile-image-wono.png";
 // import ProfileImage from "../assets/WONO_images/img/user-profile.webp";
-import ProfileImage from "../assets/WONO_images/img/wono-img-profile.png";
+// import ProfileImage from "../assets/WONO_images/img/wono-img-profile.png";
+import ProfileImage from "../assets/WONO_images/img/User-default.png";
 
 const NavBar = ({ activeTab, changeActiveTab }) => {
   const navigate = useNavigate();

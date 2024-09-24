@@ -20,6 +20,7 @@
 
 
 
+
 .services {
     display: flex;
     flex-direction: column;
@@ -128,13 +129,14 @@
     object-fit: contain;
 }
 
-.SaaS-grid{
+.SaaS-grid {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
-.SaaS-grid-content{
+
+.SaaS-grid-content {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -163,7 +165,7 @@
 }
 
 .SaaS-grid-underline-container {
-  
+
     font-size: 4rem !important;
     font-family: ComicSansMS;
 }
@@ -224,15 +226,15 @@
     width: 90%;
 }
 
-.business-grid {
+/* .business-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     width: 100%;
     margin: 4rem 0 4rem 0;
     padding: 0;
     column-gap: 10rem;
-    row-gap:3rem ;
-}
+    row-gap: 3rem;
+} */
 
 .business-service-card {
     display: grid;
@@ -250,6 +252,7 @@
     justify-content: center;
     flex-direction: column;
 }
+
 .business-service-card-content h4 {
     font-size: 1rem;
     margin: 0;
@@ -257,6 +260,7 @@
     text-align: start;
     line-height: 182%;
 }
+
 .business-service-card-content span {
     font-size: 0.8rem;
     margin: 0;
@@ -302,16 +306,51 @@
     text-align: center;
 }
 
-.SaaS-last-banner h2 {
+/* .SaaS-last-banner h2 {
     font-family: Popins-Semibold;
     font-size: 5.2rem;
-}
+} */
 
 
 .business-service>img {
     width: 50px;
     margin-bottom: 0.8rem;
 }
+
+@media (min-width: 2550px) {
+    .business-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        width: 100%;
+        margin: 4rem 0 4rem 0;
+        padding: 0;
+        column-gap: 40rem;
+        row-gap: 3rem;
+    }
+
+    .SaaS-last-banner h2 {
+        font-family: Popins-Semibold;
+        font-size: 9.5rem;
+    }
+}
+
+@media (max-width: 2548px) {
+    .business-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        width: 100%;
+        margin: 4rem 0 4rem 0;
+        padding: 0;
+        column-gap: 10rem;
+        row-gap: 3rem;
+    }
+
+    .SaaS-last-banner h2 {
+        font-family: Popins-Semibold;
+        font-size: 5.2rem;
+    }
+}
+
 @media (max-width:1440px) {
     .SaaS-last-banner h2 {
         font-family: Popins-Semibold;
@@ -334,6 +373,7 @@
     .services:not(:last-child) {
         padding: 0 4rem;
     }
+
     .business-grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -343,12 +383,14 @@
         column-gap: 2rem;
         row-gap: 3rem;
     }
+
     .business-service-card {
         display: grid;
         grid-template-columns: 26% 1fr;
         background-color: rgb(247, 247, 247);
         padding: 1rem;
     }
+
     .business-service-card-content span {
         font-size: 0.8rem;
         margin: 0;
@@ -461,12 +503,13 @@
         padding: 0;
     }
 
-    .SaaS-grid-content{
+    .SaaS-grid-content {
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
     }
+
     .SaaS-grid-heading {
         display: flex;
         align-items: start;
@@ -504,22 +547,23 @@
         grid-template-columns: 10% 1fr;
         column-gap: 0.5rem;
     }
-    
+
     .business-service-card-content h4 {
         font-size: 1rem;
         margin: 0;
         font-weight: bold;
     }
+
     .business-service-card-content span {
         font-size: 0.8rem;
         margin: 0;
         width: 100%;
     }
-    
+
     .business-service-card-image {
         width: 30px;
     }
-    
+
     .business-service-card img {
         width: 100%;
         height: 100%;
@@ -556,7 +600,7 @@
         margin: 4rem 0 4rem 0;
         padding: 0;
         column-gap: 2rem;
-        row-gap:1rem ;
+        row-gap: 1rem;
     }
 
     .business-service>span {
@@ -596,6 +640,7 @@
         margin-bottom: 0.8rem;
     }
 }
+
 @media (max-width: 768px) {
     .services {
         display: flex;
@@ -673,6 +718,7 @@
         gap: 2rem;
         padding: 4rem 0;
     }
+
     .SaaS-featured-grid-left {
         font-size: 1.353rem;
     }
@@ -692,12 +738,13 @@
         padding: 0;
     }
 
-    .SaaS-grid-content{
+    .SaaS-grid-content {
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
     }
+
     .SaaS-grid-heading {
         display: flex;
         align-items: start;
@@ -736,24 +783,25 @@
         grid-template-columns: 10% 1fr;
         column-gap: 1rem;
     }
-    
+
     .business-service-card-content h4 {
         font-size: 1rem;
         margin: 0;
         font-weight: bold;
         line-height: 184%;
     }
+
     .business-service-card-content span {
         font-size: 0.8rem;
         margin: 0;
         width: 100%;
     }
-    
+
     .business-service-card-image {
         width: 30px;
         padding: 0;
     }
-    
+
     .business-service-card img {
         width: 100%;
         height: 100%;
@@ -790,7 +838,7 @@
         margin: 2rem 0 2rem 0;
         padding: 0;
         column-gap: 2rem;
-        row-gap:1rem ;
+        row-gap: 1rem;
     }
 
     .business-service>span {

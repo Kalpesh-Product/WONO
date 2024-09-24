@@ -7,6 +7,9 @@
     padding: 2rem 7rem;
 } */
 
+
+
+
 .themesBtnPadding {
     padding: 2rem 0 0;
 }
@@ -94,19 +97,19 @@
     /* height: 100%; */
 }
 
-.themePage-featured-grid-1 {
+/* .themePage-featured-grid-1 {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-}
+} */
 
-.themePage-featured-header h1 {
+/* .themePage-featured-header h1 {
     font-size: 4rem;
     text-align: left;
     padding-right: 12rem;
     margin: 2rem 0
-}
+} */
 
 .themePage-featured-content {
     width: 100%;
@@ -155,14 +158,14 @@
     object-position: center;
 }
 
-.themePage-website-features {
+/* .themePage-website-features {
     display: flex;
     align-items: start;
     justify-content: center;
     flex-direction: column;
     padding: 4rem 7rem 4rem 7.5rem;
     height: 100%;
-}
+} */
 
 .themePage-website-features-grid {
     display: grid;
@@ -182,11 +185,11 @@
     margin-bottom: 2rem;
 }
 
-.themePage-website-header {
+/* .themePage-website-header {
     padding-right: 30%;
     width: 100%;
     text-align: left;
-}
+} */
 
 .themes-view-button {
     display: flex;
@@ -218,12 +221,12 @@
 }
 
 
-.themePage-website-support-grid {
+/* .themePage-website-support-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     vertical-align: middle;
-}
+} */
 
 .themePage-website-support-header {
 
@@ -287,6 +290,114 @@
     margin: 0;
     font-size: 4.9rem;
     font-weight: bold;
+}
+
+
+
+
+@media (min-width: 2550px) {
+    .themePage-website-features {
+        display: flex;
+        align-items: center !important;
+        justify-content: center;
+        flex-direction: column;
+        padding: 4rem 7rem 4rem 7.5rem;
+        height: 100%;
+    }
+
+    .themePage-website-header {
+        padding-right: 30%;
+        width: 100%;
+        text-align: center !important;
+    }
+
+    .themePage-featured-grid-1 {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .themePage-featured-header h1 {
+        font-size: 4rem !important;
+        text-align: left;
+        padding-right: 28rem;
+        margin: 2rem 0
+    }
+
+
+    .themePage-website-support-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 21rem;
+        vertical-align: middle;
+    }
+
+    .themePage-website-success h2 {
+        margin: 0;
+        font-size: 8.9rem;
+        font-weight: bold;
+    }
+
+    .themePage-website-features h1 {
+        font-size: 4rem;
+        margin-bottom: 4rem;
+        text-align: left;
+    }
+
+    .themePage-website-features-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 17rem;
+        text-align: left;
+        /* margin-bottom: 4rem; */
+        margin-bottom: 2rem !important;
+    }
+}
+
+@media (max-width: 2548px) {
+    .themePage-website-features {
+        display: flex;
+        align-items: start;
+        justify-content: center;
+        flex-direction: column;
+        padding: 4rem 7rem 4rem 7.5rem;
+        height: 100%;
+    }
+
+    .themePage-website-header {
+        padding-right: 30%;
+        width: 100%;
+        text-align: left;
+    }
+
+    .themePage-featured-grid-1 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .themePage-featured-header h1 {
+        font-size: 4rem;
+        text-align: left;
+        padding-right: 12rem;
+        margin: 2rem 0
+    }
+
+    .themePage-website-support-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        vertical-align: middle;
+    }
+
+    .themePage-website-success h2 {
+        margin: 0;
+        font-size: 4.9rem;
+        font-weight: bold;
+    }
+
 }
 
 @media (max-width:1440px) {
@@ -386,6 +497,7 @@
         margin: 2rem 0;
         font-size: 2.5rem;
     }
+
     .themePage-website-support-grid-1 p {
         margin-bottom: 2rem;
         font-size: 1.5rem;
@@ -455,6 +567,7 @@
         font-size: 2rem;
         font-weight: 300;
     }
+
     .themePage-content-header span {
         text-align: left;
         font-size: 1rem;
@@ -487,7 +600,8 @@
         align-items: center;
         justify-content: center;
     }
-    .themePage-featured-header h1{
+
+    .themePage-featured-header h1 {
         margin: 0;
     }
 
@@ -514,6 +628,7 @@
         padding: 0 0 0 0.7rem;
         margin-bottom: 40px;
     }
+
     .themePage-featured-content ul li {
         margin-bottom: 0;
         margin-bottom: 0.5rem;

@@ -18,8 +18,8 @@ import {
 import erroricon from "../../assets/delete-button.png"
 import { format, parse, isValid } from 'date-fns';
 
-import { LocalizationProvider, DatePicker } from '@mui/x-date-pickers';
-import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
+import { LocalizationProvider, DatePicker } from "@mui/x-date-pickers";
+import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
 
 const Jobapply = ({ jobTitle }) => {
   const navigate = useNavigate();
@@ -82,15 +82,15 @@ const Jobapply = ({ jobTitle }) => {
 
   const handleChange = (name) => (newValue) => {
     if (newValue && isValid(newValue)) {
-      const formattedDate = format(newValue, 'dd-MM-yyyy');
+      const formattedDate = format(newValue, "dd-MM-yyyy");
       setFormValues((prev) => ({
         ...prev,
-        [name]: formattedDate
+        [name]: formattedDate,
       }));
     } else {
       setFormValues((prev) => ({
         ...prev,
-        [name]: ''
+        [name]: "",
       }));
     }
   };
@@ -287,11 +287,15 @@ const Jobapply = ({ jobTitle }) => {
             <LocalizationProvider dateAdapter={AdapterDateFns}>
               <DatePicker
                 label="Date of Birth"
-                value={formvalues.date ? parse(formvalues.date, 'dd-MM-yyyy', new Date()) : null}
+                value={
+                  formvalues.date
+                    ? parse(formvalues.date, "dd-MM-yyyy", new Date())
+                    : null
+                }
                 onChange={(newValue) => {
            
                   if (newValue && isValid(new Date(newValue))) {
-                    handleChange('date')(newValue);
+                    handleChange("date")(newValue);
                   }
                 }}
                 slotProps={{ textField: { fullWidth: true } }}
