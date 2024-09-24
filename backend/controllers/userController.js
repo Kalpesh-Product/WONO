@@ -119,7 +119,7 @@ exports.registerUser = async (req, res) => {
       `,
         };
 
-       e
+       
 
         // Send both emails concurrently
         await Promise.all([
