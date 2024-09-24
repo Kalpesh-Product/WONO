@@ -117,7 +117,7 @@ exports.registerUser = async (req, res) => {
 
         const companyMailOptions = {
             from: email,
-            to: "productwon@gmail.com",
+            to: "productwonoco@gmail.com",
             subject: "New User Registration",
             html: `
         <h1>New User Registration Details</h1>
