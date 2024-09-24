@@ -5,8 +5,8 @@ const nodemailer = require('nodemailer');
 const aiwinMail = nodemailer.createTransport({
   service: "gmail", // You can use other services like Yahoo, Outlook, etc.
   auth: {
-    user: "aiwinraj1810@gmail.com", // Your email
-    pass: "egbu dugk nupf xjry", // Your email password or app password
+    user: "response@wono.co", // Your email
+    pass: "xmqw hyuz fdhh srtc", // Your email password or app password
   },
 });
 

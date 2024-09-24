@@ -66,33 +66,33 @@ const Register = () => {
   const checkEmailDuplicate = async (email) => {
     try {
       const response = await axios.get(`/check-email`, { params: { email } });
-      
+
       if (response.status === 200) {
         const result = response.data;
         return result.isDuplicate;
       }
-  
+
       throw new Error("Failed to check email");
     } catch (error) {
       console.error("Error checking email:", error);
       return false;
     }
   };
-  
+
 
 
   const handleNext = async (e) => {
     e.preventDefault();
     const validationErrors = validateCurrentStep();
-  
+
     if (Object.keys(validationErrors).length === 0) {
       try {
         let sectionData = {};
         let sectionName = '';
-  
+
         // Extract the email from formData for duplicate check
         const { email } = formData;
-  
+
         // Check for duplicate email in the database (early in the process)
         if (currentStep === 0 && email) {
           const isDuplicate = await checkEmailDuplicate(email);
@@ -104,7 +104,7 @@ const Register = () => {
             return; // Stop execution if the email is already in use
           }
         }
-  
+
         // Set section data based on the current step (excluding selectedServices)
         switch (currentStep) {
           case 0:
@@ -134,7 +134,7 @@ const Register = () => {
           default:
             return;
         }
-  
+
         // Send section data to the backend
         const response = await axios.post(
           "/register/section",
@@ -148,13 +148,13 @@ const Register = () => {
             }
           }
         );
-  
+
         if (response.status !== 200) {
           throw new Error("Network response was not ok");
         }
-  
+
         console.log(response.data);
-  
+
         // Move to the next step
         setCurrentStep((prev) => prev + 1);
       } catch (error) {
@@ -162,7 +162,7 @@ const Register = () => {
       }
     }
   };
-  
+
 
 
 
@@ -300,7 +300,7 @@ const Register = () => {
       <section id="contact" className="register">
         <div
           className="card flex justify-content-center "
-          style={{ backgroundColor: "white",  border: 'none', fontFamily: 'inherit' }}>
+          style={{ backgroundColor: "white", border: 'none', fontFamily: 'inherit' }}>
           <div className="stepper-container">
             <Stepper
               connectorStateColors={true}
@@ -427,11 +427,36 @@ const Register = () => {
                             required
                             fullWidth
                           >
-                            <MenuItem value="Mumbai">Mumbai</MenuItem>
-                            <MenuItem value="Delhi">Delhi</MenuItem>
-                            <MenuItem value="Bangalore">Bangalore</MenuItem>
-                            <MenuItem value="Chennai">Chennai</MenuItem>
-                            <MenuItem value="Kolkata">Kolkata</MenuItem>
+                            <MenuItem value="" disabled>Select State</MenuItem>
+                            <MenuItem value="Andhra Pradesh">Andhra Pradesh</MenuItem>
+                            <MenuItem value="Arunachal Pradesh">Arunachal Pradesh</MenuItem>
+                            <MenuItem value="Assam">Assam</MenuItem>
+                            <MenuItem value="Bihar">Bihar</MenuItem>
+                            <MenuItem value="Chhattisgarh">Chhattisgarh</MenuItem>
+                            <MenuItem value="Goa">Goa</MenuItem>
+                            <MenuItem value="Gujarat">Gujarat</MenuItem>
+                            <MenuItem value="Haryana">Haryana</MenuItem>
+                            <MenuItem value="Himachal">Himachal</MenuItem>
+                            <MenuItem value="Jharkhand">Jharkhand</MenuItem>
+                            <MenuItem value="Karnataka">Karnataka</MenuItem>
+                            <MenuItem value="Kerala">Kerala</MenuItem>
+                            <MenuItem value="Madhya Pradesh">Madhya Pradesh</MenuItem>
+                            <MenuItem value="Maharashtra">Maharashtra</MenuItem>
+                            <MenuItem value="Manipur">Manipur</MenuItem>
+                            <MenuItem value="Meghalaya">Meghalaya</MenuItem>
+                            <MenuItem value="Mizoram">Mizoram</MenuItem>
+                            <MenuItem value="Nagaland">Nagaland</MenuItem>
+                            <MenuItem value="Odisha">Odisha</MenuItem>
+                            <MenuItem value="Punjab">Punjab</MenuItem>
+                            <MenuItem value="Rajasthan">Rajasthan</MenuItem>
+                            <MenuItem value="Sikkim">Sikkim</MenuItem>
+                            <MenuItem value="Tamil Nadu">Tamil Nadu</MenuItem>
+                            <MenuItem value="Telangana">Telangana</MenuItem>
+                            <MenuItem value="Tripura">Tripura</MenuItem>
+                            <MenuItem value="Uttar Pradesh">Uttar Pradesh</MenuItem>
+                            <MenuItem value="Uttarakhand">Uttarakhand</MenuItem>
+                            <MenuItem value="West Bengal">West Bengal</MenuItem>
+                            <MenuItem value="Other">Other</MenuItem>
                           </TextField>
                         </Grid>
 

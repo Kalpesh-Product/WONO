@@ -31,7 +31,7 @@ const Jobrole = () => {
             <p style={{fontWeight:"600",margin:"10px 0"}}>
               <span className='link-btn'>Full-Time | On-Site| Goa </span>
               
-              <Link to={`/jobdetails/1/${encodeURIComponent('UI Designer')}`} ><i className='fa fa-cheveron-right'>Apply</i></Link>
+              <Link to={`/jobdetails/1/${encodeURIComponent('UI Designer')}`} ><i className='fa fa-cheveron-right' >&gt;</i></Link>
             </p>
           </div>
           </div>
@@ -137,7 +137,7 @@ const Jobrole = () => {
           <div className='col-lg-6' style={{textAlign:"right"}}>
             <p style={{fontWeight:"600",margin:"10px 0"}}>
               <span className='link-btn'>Full-Time | On-Site| Goa </span>
-              <Link to={`/jobdetails/2/${encodeURIComponent('Executive Assistant to CEO')}`}><i className='fa fa-cheveron-right'>Apply</i></Link>
+              <Link to={`/jobdetails/2/${encodeURIComponent('Executive Assistant to CEO')}`}><i className='fa fa-cheveron-right' >&gt;</i></Link>
             </p>
           </div>
           </div> 
@@ -153,7 +153,7 @@ const Jobrole = () => {
           <div className='col-lg-6' style={{textAlign:"right"}}>
             <p style={{fontWeight:"600",margin:"10px 0"}}>
               <span className='link-btn'>Full-Time | On-Site| Goa </span>
-              <Link to={`/jobdetails/2/${encodeURIComponent('Sr.Manager Sales & Bussiness Development')}`}><i className='fa fa-cheveron-right'>Apply</i></Link>
+              <Link to={`/jobdetails/2/${encodeURIComponent('Sr.Manager Sales & Bussiness Development')}`}><i className='fa fa-cheveron-right' >&gt;</i></Link>
             </p>
           </div>
           </div>  
