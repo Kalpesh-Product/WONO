@@ -485,97 +485,91 @@ exports.submitEnquiry = async (req, res) => {
     }
 };
 
-exports.submitJobApplication = async (req, res) => {
-    const { jobTitle, name, email, date, number, location, experience, linkedInProfile, resume, monthlySalary, expectedSalary,
-        daysToJoin, relocateGoa, personality, skills, specialexperience, willing, message } = req.body;
-
-    const parsedDate = parse(date, 'dd-MM-yyyy', new Date());
-    const formattedDate = format(parsedDate, 'dd-MM-yyyy');
-
+exports.createJobApplication = async (req, res) => {
+    const { jobTitle, name, email, date, number, location, experience, linkedInProfile, 
+            monthlySalary, expectedSalary, daysToJoin, relocateGoa, personality, 
+            skills, specialexperience, willing, message } = req.body;
+  
+    // Check if file was uploaded
+    if (!req.file) {
+      return res.status(400).json({ message: 'Resume file is required' });
+    }
+  
+    const resumePath = req.file.path;
+  
     const jobApplication = new JobApplication({
-        jobTitle,
-        name,
-        email,
-        date: formattedDate,
-        number,
-        location,
-        experience,
-        linkedInProfile,
-        resume,
-        monthlySalary,
-        expectedSalary,
-        daysToJoin,
-        relocateGoa,
-        personality,
-        skills,
-        specialexperience,
-        willing,
-        message
+      jobTitle,
+      name,
+      email,
+      date,
+      number,
+      location,
+      experience,
+      linkedInProfile,
+      resume: req.file.originalname,
+      monthlySalary,
+      expectedSalary,
+      daysToJoin,
+      relocateGoa,
+      personality,
+      skills,
+      specialexperience,
+      willing,
+      message,
+      resumePath
     });
-
+  
     try {
-        await jobApplication.save();
-
-        const Mailoption = {
-            from: 'anushri.bhagat263@gmail.com',
-            to: email,
-            subject: `Job Application: ${name} - ${jobTitle}`,
-            html: `<head><style>
-    table, td {
-      border: 1px solid;
-    }
-    </style></head>
-     <body style="font-family: 'Poppins', sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; -webkit-text-size-adjust: none; -ms-text-size-adjust: none;">
-     
-    <div style="width: 100%; max-width: 600px; background-color: #ffffff; margin: 20px auto; padding: 2rem; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
-     <div style="padding: 1rem; text-align: center; border-radius: 1rem;">
-                    <h1 style="font-size: 2rem; text-align: center; margin: 0; padding-bottom: 20px;">
-                        Application form for the post of<br></br>
-                        <b>${jobTitle}</b>
-                    </h1>
-      </div>
-    <table style="width: 100%; border-collapse: collapse; border-radius:1rem">
-      <tr>
-        <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">Jobtitle</td>
-        <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">${jobTitle}</td>
-      </tr>
-      <tr>
-        <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">name</td>
-        <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">${name}</td>
-      </tr>
-      <tr>
-        <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">Experience</td>
-        <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">${experience}</td>
-      </tr>
-      <tr>
-        <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">LinkedInProfile</td>
-        <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;"><a href="">${linkedInProfile}</a></td>
-      </tr>
-      <tr>
-        <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">Personality</td>
-        <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">${personality}</td>
-      </tr>
-      <tr>
-        <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">Skills</td>
-        <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">${skills}</td>
-      </tr>
-      <tr>
-        <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">ResumeLink</td>
-        <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;"><a href=${resume}>${resume}</a></td>
-      </tr> 
-    </table>
-    </div>
-    </body>`,
-        };
-
-        await transporter.sendMail(Mailoption);
-
-        res.status(200).send('Application details have been sent');
+      // Save to MongoDB
+      await jobApplication.save();
+  
+      // Email options
+      const mailOptions = {
+        from: 'anushri.bhagat263@gmail.com',
+        to: 'productwonoco@gmail.com',
+        subject: `Job Application: ${name} - ${jobTitle}`,
+        html: `<h1>Application for ${jobTitle}</h1><p>${name}, thank you for your application!</p>`,
+        attachments: [
+          {
+            filename: req.file.originalname,
+            path: resumePath,
+          },
+        ],
+      };
+  
+  
+      const replyMail = {
+        from: 'anushri.bhagat263@gmail.com',
+        to: email,
+        subject: `Job Application: ${name} - ${jobTitle}`,
+        html: `<h1>Thank you for your application.</h1><p>We have received your application. We will get back to you in 24hrs.</p>`,
+      };
+  
+      // Send emails
+  
+      anushriMail.sendMail(mailOptions, (error) => {
+        if (error) {
+          console.error('Failed to send Email:', error);
+          return res.status(500).json({ message: 'Failed to send Email: ' + error.message });
+        }
+        console.log('Email sent to employer');
+      });
+  
+      anushriMail.sendMail(replyMail, (error) => {
+        if (error) {
+          console.error('Failed to send Email:', error);
+          return res.status(500).json({ message: 'Failed to send Email: ' + error.message });
+        }
+        console.log('Auto-reply sent to applicant');
+      });
+  
+      res.status(200).json({ message: 'Application details have been sent' });
     } catch (error) {
-        console.error('Error saving application:', error);
-        res.status(500).send('Failed to save application');
+      console.error('Error saving application:', error);
+      res.status(500).json({ message: 'Failed to save application' });
     }
-};
+  };
+  
 
 // exports.checkAuth = (req, res) => {
 //     try {

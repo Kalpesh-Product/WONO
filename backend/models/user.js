@@ -72,8 +72,10 @@ const userServiceSchema = new mongoose.Schema({
     skills: String,
     specialexperience: String,
     willing: String,
-    message: String
-  });
+    message: String,
+    resumePath: String
+  }, { timestamps: true });
+  
   
 
   
@@ -83,5 +85,6 @@ const User = mongoose.model('User', userSchema);
 const UserService = mongoose.model('UserService', userServiceSchema);
 const Enquiry = mongoose.model('Enquiry', enquirySchema);
 const JobApplication = mongoose.model('JobApplication', jobApplicationSchema);
+  
 
 module.exports = {User, UserService, Enquiry, JobApplication};

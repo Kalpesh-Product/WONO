@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const requireAuth = require('../middleware/requireAuth')
+const multer = require('multer')
 const {
     registerUser,
     updateSection,
@@ -12,8 +13,10 @@ const {
     logout,
     submitEnquiry,
     submitJobApplication,
-    checkAuth
+    checkAuth,
+    createJobApplication
 } = require('../controllers/userController');
+const { upload } = require('../email/multerConfig')
 
 // Register user
 router.post('/register', registerUser);
@@ -52,8 +55,9 @@ router.get('/logout', logout);
 // Submit enquiry
 router.post('/enquiries', submitEnquiry);
 
-// Route for submitting job applications
-router.post('/jobapply', submitJobApplication);
+// Route to handle job application
+router.post('/jobapply', upload.single('resume'), createJobApplication);
+
 
 module.exports = router;
 
