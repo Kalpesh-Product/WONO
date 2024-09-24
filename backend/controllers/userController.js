@@ -103,7 +103,7 @@ exports.registerUser = async (req, res) => {
 
         // Prepare email templates
         const userMailOptions = {
-            from: "your_email@gmail.com",
+            from: "noreply@wono.co",
             to: email,
             subject: "Welcome to Our Service!",
             html: `
@@ -116,7 +116,7 @@ exports.registerUser = async (req, res) => {
         };
 
         const companyMailOptions = {
-            from: "your_email@gmail.com",
+            from: email,
             to: "productwon@gmail.com",
             subject: "New User Registration",
             html: `
@@ -246,7 +246,7 @@ exports.forgotPassword = async (req, res) => {
         await user.save();
 
         const mailOptions = {
-            from: 'aiwinraj1810@gmail.com',
+            from: 'noreply@wono.co',
             to: email,
             subject: 'Password Reset OTP',
             text: `Your OTP for password reset is ${generatedOTP}`
@@ -472,7 +472,7 @@ exports.submitEnquiry = async (req, res) => {
         });
 
         await aiwinMail.sendMail({
-            from: 'aiwinraj1810@gmail.com',
+            from: 'noreply@wono.co',
             to: 'productwonoco@gmail.com',
             subject: 'New Enquiry Received',
             html: companyEmailTemplate(name, email, mobile, partnerstype, message)
@@ -525,7 +525,7 @@ exports.createJobApplication = async (req, res) => {
   
       // Email options
       const mailOptions = {
-        from: 'anushri.bhagat263@gmail.com',
+        from: email,
         to: 'productwonoco@gmail.com',
         subject: `Job Application: ${name} - ${jobTitle}`,
         html: `<h1>Application for ${jobTitle}</h1><p>${name}, thank you for your application!</p>`,
@@ -539,7 +539,7 @@ exports.createJobApplication = async (req, res) => {
   
   
       const replyMail = {
-        from: 'anushri.bhagat263@gmail.com',
+        from: 'noreply@wono.co',
         to: email,
         subject: `Job Application: ${name} - ${jobTitle}`,
         html: `<h1>Thank you for your application.</h1><p>We have received your application. We will get back to you in 24hrs.</p>`,
