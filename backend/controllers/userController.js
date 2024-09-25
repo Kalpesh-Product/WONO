@@ -481,8 +481,8 @@ exports.submitEnquiry = async (req, res) => {
                 </div>
                 <div style="padding: 1rem;">
                     <p style="font-size: 16px; color: #333;">Dear ${name},</p>
-                    <p style="font-size: 16px; color: #333;">Thank you for your enquiry. We appreciate your interest and will get back to you shortly.</p>
-                    <p style="font-size: 16px; color: #333;">Best regards,<br><b>WONOCO PRIVATE LIMITED</b></p>
+                    <p style="font-size: 16px; color: #333;">Thank you for your enquiry. We have received your message and will get back to you shortly.</p>
+                    <p style="font-size: 16px; color: #333;">Best regards,<br><b>Wono Team</b></p>
                 </div>
             </div>
         </body>
@@ -541,7 +541,7 @@ exports.submitEnquiry = async (req, res) => {
         await aiwinMail.sendMail({
             from: 'response@wono.co',
             to: email,
-            subject: 'Thank You for Your Enquiry, Our ',
+            subject: `Wono - Thank you for your enquiry`,
             html: userEmailTemplate(name)
         });
 
@@ -549,7 +549,7 @@ exports.submitEnquiry = async (req, res) => {
             from: `"${name} <${email}>"`,
             to: 'response@wono.co',
             cc: 'productwonoco@gmail.com',
-            subject: 'New Enquiry Received',
+            subject:  `Wono - Enquiry From: ${name}`,
             replyTo: email,
             html: companyEmailTemplate(name, email, mobile, partnerstype, message)
         });
