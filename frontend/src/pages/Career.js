@@ -2,7 +2,7 @@ import React from 'react'
 import '../styles/bodyCareer.css'
 import Accordion from 'react-bootstrap/Accordion'
 import { Link } from 'react-router-dom'
-import Jobrole from '../components/Jobrole'
+import Jobrole from '../pages/Jobrole'
 
 const Career = () => {
     return (

@@ -291,6 +291,11 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
+  text-decoration: underline;
+}
+.mail-client-text :hover{
+ color: rgb(13,110,253);
 }
 .mail-client-image img{
   width: 100%;

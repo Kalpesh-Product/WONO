@@ -20,7 +20,7 @@ const Jobrole = () => {
         </div>
         <Accordion >
       <Accordion.Item eventKey='0'>
-        <Accordion.Header>I. Productsss  Management</Accordion.Header>
+        <Accordion.Header>I. Product  Management</Accordion.Header>
         <Accordion.Body>
           
           <div className='mob-down' style={{display:"flex"}}>
@@ -31,7 +31,7 @@ const Jobrole = () => {
             <p style={{fontWeight:"600",margin:"10px 0"}}>
               <span className='link-btn'>Full-Time | On-Site| Goa </span>
               
-              <Link to={`/jobdetails/1/${encodeURIComponent('UI Designer')}`} ><i className='fa fa-cheveron-right' >&gt;</i></Link>
+              <Link to={`/jobdetails/1/${encodeURIComponent('UI Designer')}`} ><i className='fa fa-cheveron-right'>&gt;</i></Link>
             </p>
           </div>
           </div>

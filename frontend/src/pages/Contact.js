@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import "../layout/contact.css";
 import "../styles/bodyContact.css";
+import { Modal } from 'react-bootstrap';
 import {
   TextField,
   Button,
@@ -24,11 +25,14 @@ const Contact = () => {
     partnerstype: '',
     message: ''
   });
+  const [showModal, setShowModal] = useState(false);
+  const handleCloseModal = () => setShowModal(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -36,6 +40,15 @@ const Contact = () => {
     try {
       const response = await axios.post('/enquiries', formData);
       console.log('Enquiry submitted successfully:', response.data);
+      // Show success modal
+      setShowModal(true);
+      setFormData({
+        name: '',
+        email: '',
+        mobile: '',
+        partnerstype: '',
+        message:''
+      })
       // Reset form or show success message
     } catch (error) {
       console.error('Error submitting enquiry:', error);
@@ -216,6 +229,18 @@ const Contact = () => {
           </div>
         </div>
       </div>
+
+      <Modal show={showModal} onHide={handleCloseModal}>
+        <Modal.Header closeButton>
+          <Modal.Title>Success</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>Your enquiry has been submitted successfully!</Modal.Body>
+        <Modal.Footer>
+          <button className="submit-button"  onClick={handleCloseModal}>
+            Close
+          </button>
+        </Modal.Footer>
+      </Modal>
     </>
   );
 };

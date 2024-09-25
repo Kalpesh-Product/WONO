@@ -121,31 +121,99 @@ exports.registerUser = async (req, res) => {
 
         const companyMailOptions = {
             from: `"${name} <${email}>"`,  // Display user's name and email as the sender
-            to: "aiwinraj1810@gmail.com",  // Manager's email
-            replyTo: email,  // If your manager replies, it will go to the user's email
+            to: "productwonoco@gmail.com",
+            replyTo: email,
             subject: "New User Registration",
             html: `
-              <h1>New User Registration Details</h1>
-              <p><strong>Name:</strong> ${name}</p>
-              <p><strong>Email:</strong> ${email}</p>
-              <p><strong>Mobile:</strong> ${mobile}</p>
-              <p><strong>Country:</strong> ${country}</p>
-              <p><strong>City:</strong> ${city}</p>
-              <p><strong>State:</strong> ${state}</p>
-              <p><strong>Company Name:</strong> ${companyName}</p>
-              <p><strong>Industry:</strong> ${industry}</p>
-              <p><strong>Company Size:</strong> ${companySize}</p>
-              <p><strong>Company Type:</strong> ${companyType}</p>
-              <p><strong>Company City:</strong> ${companyCity}</p>
-              <p><strong>Company State:</strong> ${companyState}</p>
-              <p><strong>Website URL:</strong> ${websiteURL}</p>
-              <p><strong>LinkedIn URL:</strong> ${linkedinURL}</p>
-              <p><strong>Selected Services:</strong> ${Object.keys(selectedServices).filter(service => selectedServices[service]).join(', ')}</p>
-              <p><strong>Username:</strong> ${username}</p>
-              <p><strong>Password:</strong> ${password}</p>
-            `,
-          };
-          
+              <head>
+  <style>
+    table, td {
+      border: 1px solid;
+    }
+  </style>
+</head>
+<body style="font-family: 'Poppins', sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; -webkit-text-size-adjust: none; -ms-text-size-adjust: none;">
+  <div style="width: 100%; max-width: 600px; background-color: #ffffff; margin: 20px auto; padding: 2rem; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+    <div style="padding: 1rem; text-align: center; border-radius: 1rem; background-color: #daf5fe">
+      <h1 style="font-size: 2rem; text-align: center; margin: 0; padding-bottom: 20px;">
+        New User Registration Details
+      </h1>
+    </div>
+    <table style="width: 100%; border-collapse: collapse; border-radius:1rem">
+      <tr>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">Name</td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">${name}</td>
+      </tr>
+      <tr>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">Email</td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">${email}</td>
+      </tr>
+      <tr>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">Mobile</td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">${mobile}</td>
+      </tr>
+      <tr>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">Country</td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">${country}</td>
+      </tr>
+      <tr>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">City</td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">${city}</td>
+      </tr>
+      <tr>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">State</td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">${state}</td>
+      </tr>
+      <tr>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">Company Name</td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">${companyName}</td>
+      </tr>
+      <tr>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">Industry</td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">${industry}</td>
+      </tr>
+      <tr>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">Company Size</td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">${companySize}</td>
+      </tr>
+      <tr>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">Company Type</td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">${companyType}</td>
+      </tr>
+      <tr>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">Company City</td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">${companyCity}</td>
+      </tr>
+      <tr>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">Company State</td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">${companyState}</td>
+      </tr>
+      <tr>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">Website URL</td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">${websiteURL}</td>
+      </tr>
+      <tr>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">LinkedIn URL</td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">${linkedinURL}</td>
+      </tr>
+      <tr>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">Selected Services</td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">${Object.keys(selectedServices).filter(service => selectedServices[service]).join(', ')}</td>
+      </tr>
+      <tr>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">Username</td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">${username}</td>
+      </tr>
+      <tr>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">Password</td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">${password}</td>
+      </tr>
+    </table>
+  </div>
+</body>
+ `,
+        };
+
 
         // Send both emails concurrently
         await Promise.all([
@@ -473,14 +541,16 @@ exports.submitEnquiry = async (req, res) => {
         await aiwinMail.sendMail({
             from: 'response@wono.co',
             to: email,
-            subject: 'Thank You for Your Enquiry',
+            subject: 'Thank You for Your Enquiry, Our ',
             html: userEmailTemplate(name)
         });
 
         await aiwinMail.sendMail({
-            from: 'response@wono.co',
-            to: 'productwonoco@gmail.com',
+            from: `"${name} <${email}>"`,
+            to: 'response@wono.co',
+            cc: 'productwonoco@gmail.com',
             subject: 'New Enquiry Received',
+            replyTo: email,
             html: companyEmailTemplate(name, email, mobile, partnerstype, message)
         });
 
@@ -532,7 +602,8 @@ exports.createJobApplication = async (req, res) => {
         // Email options
         const mailOptions = {
             from: `"${name} <${email}>"`,
-            to: 'productwonoco@gmail.com',
+            to: 'response@wono.co',
+            cc: 'productwonoco@gmail.com',
             subject: `Job Application: ${name} - ${jobTitle}`,
             html: `<head><style>
   table, td {

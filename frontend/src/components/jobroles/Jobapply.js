@@ -17,6 +17,7 @@ import {
   Box,
 } from '@mui/material';
 import erroricon from "../../assets/delete-button.png"
+import successIcon from "../../assets/greenTickIcon.png"
 import { format, parse, isValid } from 'date-fns';
 
 import { LocalizationProvider, DatePicker } from "@mui/x-date-pickers";
@@ -26,9 +27,11 @@ const Jobapply = ({ jobTitle }) => {
   const navigate = useNavigate();
 
   const [showModal, setShowModal] = useState(false); //for generic modals
+  const [modalType, setModalType] = useState("error"); // 'error' or 'success'
   const [showMessage, setShowMessage] = useState("");
   const [states, setStates] = useState([]);
   const handleModal = () => setShowModal(true);
+
 
   const [formvalues, setFormValues] = useState({
     jobTitle: `${jobTitle}`,
@@ -110,6 +113,7 @@ const Jobapply = ({ jobTitle }) => {
   };
   const handleCloseModal = () => {
     setShowModal(false);
+    navigate('/career')
   };
 
   const handleSubmit = async (e) => {
@@ -225,20 +229,37 @@ const Jobapply = ({ jobTitle }) => {
               'Content-Type': 'multipart/form-data',
             },
           });
-          alert('Form submitted successfully!');
+          setShowModal(true);
+          setModalType("success")
+          setShowMessage("Application submitted successfully");
+          // Reset the form fields
+          setFormValues({
+            jobTitle: `${jobTitle}`,
+            name: "",
+            email: "",
+            date: "",
+            number: "",
+            location: "",
+            experience: "",
+            linkedInProfile: "",
+            resume: null,
+            monthlySalary: "",
+            expectedSalary: "",
+            daysToJoin: "",
+            relocateGoa: "",
+            personality: "",
+            skills: "",
+            specialexperience: "",
+            willing: "",
+            message: "",
+          });
+         
 
         } catch (error) {
           console.error('Error submitting form:', error.response ? error.response.data.message : error.message);
         }
 
-        // axios
-        //   .post("/jobapply", formvalues)
-        //   .then((response) => {
-        //     alert("Email sent successfully");
-        //   })
-        //   .catch((error) => {
-        //     console.error("There was an error sending email", error);
-        //   });
+
       }
     }
 
@@ -547,25 +568,32 @@ const Jobapply = ({ jobTitle }) => {
       </Box>
       <div>
         <Modal show={showModal} onHide={handleCloseModal} style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
-          {/* <Modal.Header closeButton>
-          <Modal.Title>Form Submission Error</Modal.Title>
-        </Modal.Header> */}
+          <Modal.Header closeButton>
+            <Modal.Title>
+              {modalType === "error" ? "Form Submission Error" : "Form Submitted Successfully"}
+            </Modal.Title>
+          </Modal.Header>
+
           <div style={{ display: "flex", alignItems: "center", justifyContent: "center", marginTop: "10%", marginBottom: "20px" }}>
-            <img src={erroricon} alt="erroricon" style={{
-              width: "40px", height: "40px"
-            }}></img>
+            <img
+              src={modalType === "error" ? erroricon : successIcon} // Error icon for error, check mark for success
+              alt={modalType === "error" ? "erroricon" : "successicon"}
+              style={{ width: "40px", height: "40px" }}
+            />
           </div>
+
           <h1
             style={{
               display: "flex",
               alignContent: "center",
               justifyContent: "center",
-              color: "red",
+              color: modalType === "error" ? "red" : "green",
             }}>
-            ERROR
+            {modalType === "error" ? "ERROR" : "SUCCESS"}
           </h1>
 
           <Modal.Body><b>{showMessage}</b></Modal.Body>
+
           <button
             className="btn btn-secondary"
             onClick={handleCloseModal}
@@ -577,7 +605,6 @@ const Jobapply = ({ jobTitle }) => {
               marginLeft: "40%",
               marginBottom: "20%",
               backgroundColor: "black",
-
             }}>
             Close
           </button>

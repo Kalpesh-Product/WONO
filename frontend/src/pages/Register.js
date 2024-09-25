@@ -638,7 +638,7 @@ const Register = () => {
                           </TextField>
                         </Grid>
 
-                
+
 
                         <Grid item xs={12} sm={6}>
                           <TextField
@@ -850,7 +850,7 @@ const Register = () => {
                           <div className="mail-client-image">
                             <img src={gmailLogo} alt="Website" />
                           </div>
-                          <div className="mail-client-text">
+                          <div className="mail-client-text" onClick={() => window.open('https://mail.google.com', '_blank')}>
                             <span>Open G-mail</span>
                           </div>
                         </div>
@@ -858,9 +858,10 @@ const Register = () => {
                           <div className="mail-client-image">
                             <img src={outlookLogo} alt="Outlook" />
                           </div>
-                          <div className="mail-client-text">
+                          <div className="mail-client-text" onClick={() => window.open('https://outlook.live.com/mail/inbox', '_blank')}>
                             <span>Open Outlook</span>
                           </div>
+
                         </div>
                       </div>
                     </div>
@@ -870,7 +871,7 @@ const Register = () => {
                         folder..!!
                         <br />
                         <br />
-                        Resend and try again
+                        {/* Resend and try again */}
                       </span>
                     </div>
                     <div className="register-page-button-space">
