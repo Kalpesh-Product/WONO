@@ -32,9 +32,26 @@ const allowedHeaders = [
 
 app.use(cors({
   origin: true, // Reflects the request origin, allowing all origins
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   credentials: true, // Allow cookies to be sent
   allowedHeaders : allowedHeaders,
 }));
+
+
+// Preflight (OPTIONS) route handler
+app.options('*', cors({
+  origin: (origin, callback) => {
+    if (origin) {
+      callback(null, true);
+    } else {
+      callback(null, false);
+    }
+  },
+  methods: ['OPTIONS'],
+  credentials: true,
+  allowedHeaders: allowedHeaders, // Ensure 'Content-Type' is included for file uploads
+}));
+
 const port = process.env.PORT;
 
 // Middleware to parse JSON data
