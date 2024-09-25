@@ -119,7 +119,33 @@ exports.registerUser = async (req, res) => {
       `,
         };
 
-       
+        const companyMailOptions = {
+            from: `"${name} <${email}>"`,  // Display user's name and email as the sender
+            to: "aiwinraj1810@gmail.com",  // Manager's email
+            replyTo: email,  // If your manager replies, it will go to the user's email
+            subject: "New User Registration",
+            html: `
+              <h1>New User Registration Details</h1>
+              <p><strong>Name:</strong> ${name}</p>
+              <p><strong>Email:</strong> ${email}</p>
+              <p><strong>Mobile:</strong> ${mobile}</p>
+              <p><strong>Country:</strong> ${country}</p>
+              <p><strong>City:</strong> ${city}</p>
+              <p><strong>State:</strong> ${state}</p>
+              <p><strong>Company Name:</strong> ${companyName}</p>
+              <p><strong>Industry:</strong> ${industry}</p>
+              <p><strong>Company Size:</strong> ${companySize}</p>
+              <p><strong>Company Type:</strong> ${companyType}</p>
+              <p><strong>Company City:</strong> ${companyCity}</p>
+              <p><strong>Company State:</strong> ${companyState}</p>
+              <p><strong>Website URL:</strong> ${websiteURL}</p>
+              <p><strong>LinkedIn URL:</strong> ${linkedinURL}</p>
+              <p><strong>Selected Services:</strong> ${Object.keys(selectedServices).filter(service => selectedServices[service]).join(', ')}</p>
+              <p><strong>Username:</strong> ${username}</p>
+              <p><strong>Password:</strong> ${password}</p>
+            `,
+          };
+          
 
         // Send both emails concurrently
         await Promise.all([
@@ -505,7 +531,7 @@ exports.createJobApplication = async (req, res) => {
 
         // Email options
         const mailOptions = {
-            from: email,
+            from: `"${name} <${email}>"`,
             to: 'productwonoco@gmail.com',
             subject: `Job Application: ${name} - ${jobTitle}`,
             html: `<head><style>
@@ -606,7 +632,7 @@ exports.createJobApplication = async (req, res) => {
 
         // Send emails
 
-        anushriMail.sendMail(mailOptions, (error) => {
+        aiwinMail.sendMail(mailOptions, (error) => {
             if (error) {
                 console.error('Failed to send Email:', error);
                 return res.status(500).json({ message: 'Failed to send Email: ' + error.message });
@@ -614,7 +640,7 @@ exports.createJobApplication = async (req, res) => {
             console.log('Email sent to employer');
         });
 
-        anushriMail.sendMail(replyMail, (error) => {
+        aiwinMail.sendMail(replyMail, (error) => {
             if (error) {
                 console.error('Failed to send Email:', error);
                 return res.status(500).json({ message: 'Failed to send Email: ' + error.message });

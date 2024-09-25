@@ -25,9 +25,15 @@ const {User, UserService, Enquiry, JobApplication} = require('../backend/models/
 
 const app = express();
 
+const allowedHeaders = [
+  "Content-Type", // Allowing both types of content: multipart/form-data and application/json
+  "Authorization", // Add other headers you need here
+];
+
 app.use(cors({
   origin: true, // Reflects the request origin, allowing all origins
   credentials: true, // Allow cookies to be sent
+  allowedHeaders : allowedHeaders,
 }));
 const port = process.env.PORT;
 
