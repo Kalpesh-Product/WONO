@@ -4,7 +4,10 @@ const { aiwinMail, anushriMail } = require('../email/nodemailerConfig');
 const jwt = require('jsonwebtoken');
 const path = require('path')
 const { sub } = require('date-fns');
-const axios = require('axios'); 
+const axios = require('axios');
+const {storage} = require("../config/firebaseConfig")
+const { ref, uploadBytes, getDownloadURL } = require('firebase/storage');
+
 
 
 exports.registerUser = async (req, res) => {
@@ -573,19 +576,17 @@ exports.createJobApplication = async (req, res) => {
         return res.status(400).json({ message: 'Resume file is required' });
     }
 
-    // Form data to send to GoDaddy
-    const formData = new FormData();
-    formData.append('file', req.file.buffer, req.file.originalname); // Use the file buffer from multer
+ // Create a storage reference
+ const resumeRef = ref(storage, `resumes/${req.file.originalname}`);
+ console.log(resumeRef)
 
     try {
-        // Upload to GoDaddy
-        const uploadResponse = await axios.post('https://www.wono.co/forms/resume/', formData, {
-            headers: {
-                'Content-Type': `multipart/form-data; boundary=${formData._boundary}`,
-            },
-        });
+        // Upload file to Firebase Storage using the buffer
+        await uploadBytes(resumeRef, req.file.buffer); // Use the file buffer from multer
 
-        const resumeUrl = uploadResponse.data.fileUrl; // Adjust based on your GoDaddy server response
+        // Get the public URL of the uploaded file
+        const resumeUrl = await getDownloadURL(resumeRef);
+        console.log(resumeUrl)
 
         const jobApplication = new JobApplication({
             jobTitle,
@@ -611,9 +612,45 @@ exports.createJobApplication = async (req, res) => {
 
         // Save to MongoDB
         await jobApplication.save();
+        console.log("Saved to DB")
 
-        // Email options (as before)
-        // ...
+        // Email options (as previously defined)
+        const mailOptions = {
+            from: `"${name} <${email}>"`,
+            to: 'response@wono.co',
+            cc: 'aiwinraj1810@gmail.com',
+            subject: `Job Application: ${name} - ${jobTitle}`,
+            html: `<p>${name} has applied for the position of ${jobTitle}. You can download the resume <a href="${resumeUrl}">here</a>.</p>`,
+            attachments: [{
+                filename: req.file.originalname,
+                content: req.file.buffer, // Attach the actual file buffer
+            }],
+        };
+
+        const replyMail = {
+            from: 'response@wono.co',
+            to: email,
+            subject: `Job Application: ${name} - ${jobTitle}`,
+            html: `<h1>Thank you for your application.</h1><p>We have received your application. We will get back to you in 24hrs.</p>`,
+        };
+
+         // Send emails
+         aiwinMail.sendMail(mailOptions, (error) => {
+            if (error) {
+                console.error('Failed to send Email:', error);
+                return res.status(500).json({ message: 'Failed to send Email: ' + error.message });
+            }
+            console.log('Email sent to employer');
+        });
+
+        aiwinMail.sendMail(replyMail, (error) => {
+            if (error) {
+                console.error('Failed to send Email:', error);
+                return res.status(500).json({ message: 'Failed to send Email: ' + error.message });
+            }
+            console.log('Auto-reply sent to applicant');
+        });
+
 
         res.status(200).json({ message: 'Application details have been sent' });
     } catch (error) {

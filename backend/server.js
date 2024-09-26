@@ -29,9 +29,10 @@ const allowedHeaders = [
   "Content-Type", // Allowing both types of content: multipart/form-data and application/json
   "Authorization", // Add other headers you need here
 ];
+// "https://www.wono.co"
 
 app.use(cors({
-  origin: "https://www.wono.co", // Reflects the request origin, allowing all origins
+  origin: "https://www.wono.co" , // Reflects the request origin, allowing all origins
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   credentials: true, // Allow cookies to be sent
   allowedHeaders : allowedHeaders,
