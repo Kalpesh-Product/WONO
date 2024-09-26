@@ -64,6 +64,7 @@ const userServiceSchema = new mongoose.Schema({
     experience: String,
     linkedInProfile: String,
     resume: String,
+    resumeUrl: String,
     monthlySalary: String,
     expectedSalary: String,
     daysToJoin: String,
