@@ -5,7 +5,7 @@ const path = require('path');
 // Configure multer to save files locally
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
-        const uploadPath = path.join(__dirname, '..', 'uploads'); // Ensure proper folder structure
+        const uploadPath = path.join(__dirname, '..', 'tmp'); // Ensure proper folder structure
 
         // Check if the 'uploads' directory exists, if not, create it
         if (!fs.existsSync(uploadPath)) {

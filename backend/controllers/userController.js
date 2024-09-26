@@ -573,7 +573,7 @@ exports.createJobApplication = async (req, res) => {
     }
 
     const resumePath = req.file.path; // Local file path
-    const resumeUrl = `${req.protocol}://${req.get('host')}/uploads/${req.file.filename}`; // Public URL to access the file
+    const resumeUrl = `${req.protocol}://${req.get('host')}/tmp/${req.file.filename}`; // Public URL to access the file
     console.log("Resume path is : ",resumePath)
     console.log("Resume url is : ",resumeUrl)
 
