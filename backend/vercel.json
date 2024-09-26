@@ -16,5 +16,11 @@
         { "key": "Access-Control-Allow-Credentials", "value": "true" }
       ]
     }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "server.js"
+    }
   ]
 }
