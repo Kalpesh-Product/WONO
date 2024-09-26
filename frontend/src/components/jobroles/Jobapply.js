@@ -222,6 +222,7 @@ const Jobapply = ({ jobTitle }) => {
         data.append('skills', formvalues.skills);
         data.append('specialexperience', formvalues.specialexperience);
         data.append('willing', formvalues.willing);
+        data.append('message', formvalues.message);
 
         try {
           await axios.post('/jobapply', data, {

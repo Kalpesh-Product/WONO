@@ -2,6 +2,7 @@ const crypto = require('crypto');
 const { User, UserService, Enquiry, JobApplication } = require('../models/user');
 const { aiwinMail, anushriMail } = require('../email/nodemailerConfig');
 const jwt = require('jsonwebtoken');
+const path = require('path')
 const { sub } = require('date-fns');
 
 
@@ -560,7 +561,7 @@ exports.submitEnquiry = async (req, res) => {
         res.status(500).json({ error: 'Internal Server Error' });
     }
 };
-
+//job application - start[[[]]]
 exports.createJobApplication = async (req, res) => {
     const { jobTitle, name, email, date, number, location, experience, linkedInProfile,
         monthlySalary, expectedSalary, daysToJoin, relocateGoa, personality,
@@ -571,7 +572,10 @@ exports.createJobApplication = async (req, res) => {
         return res.status(400).json({ message: 'Resume file is required' });
     }
 
-    const resumePath = req.file.path;
+    const resumePath = req.file.path; // Local file path
+    const resumeUrl = `${req.protocol}://${req.get('host')}/uploads/${req.file.filename}`; // Public URL to access the file
+    console.log("Resume path is : ",resumePath)
+    console.log("Resume url is : ",resumeUrl)
 
     const jobApplication = new JobApplication({
         jobTitle,
@@ -582,7 +586,8 @@ exports.createJobApplication = async (req, res) => {
         location,
         experience,
         linkedInProfile,
-        resume: req.file.originalname,
+        resume: req.file.originalname, // Save the original name to DB
+        resumeUrl, // Store the public URL in the DB for future reference
         monthlySalary,
         expectedSalary,
         daysToJoin,
@@ -592,7 +597,6 @@ exports.createJobApplication = async (req, res) => {
         specialexperience,
         willing,
         message,
-        resumePath
     });
 
     try {
@@ -603,96 +607,14 @@ exports.createJobApplication = async (req, res) => {
         const mailOptions = {
             from: `"${name} <${email}>"`,
             to: 'response@wono.co',
-            cc: 'productwonoco@gmail.com',
+            cc: 'aiwinraj1810@gmail.com',
             subject: `Job Application: ${name} - ${jobTitle}`,
-            html: `<head><style>
-  table, td {
-    border: 1px solid;
-  }
-  </style></head>
-   <body style="font-family: 'Poppins', sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; -webkit-text-size-adjust: none; -ms-text-size-adjust: none;">
-   
-  <div style="width: 100%; max-width: 600px; background-color: #ffffff; margin: 20px auto; padding: 2rem; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
-   <div style="padding: 1rem; text-align: center; border-radius: 1rem;background-color: #daf5fe">
-                  <h1 style="font-size: 2rem; text-align: center; margin: 0; padding-bottom: 20px;">
-                      Application form for the post of<br></br>
-                      <b>${jobTitle}</b>
-                  </h1>
-    </div>
-  <table style="width: 100%; border-collapse: collapse; border-radius:1rem">
-    <tr>
-      <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">Jobtitle</td>
-      <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">${jobTitle}</td>
-    </tr>
-    <tr>
-      <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">Name</td>
-      <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">${name}</td>
-    </tr>
-    <tr>
-      <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">Email</td>
-      <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">${email}</td>
-    </tr>
-    <tr>
-      <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">Contact</td>
-      <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">${number}</td>
-    </tr>
-    <tr>
-      <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">Date of joining</td>
-      <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">${date}</td>
-    </tr>
-    <tr>
-      <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">Experience</td>
-      <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">${experience}</td>
-    </tr>
-    <tr>
-      <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">Monthly Salary</td>
-      <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">${monthlySalary}</td>
-    </tr>
-    <tr>
-      <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">Expected Salary</td>
-      <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">${expectedSalary}</td>
-    </tr>
-    <tr>
-      <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">Days to join</td>
-      <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">${daysToJoin}</td>
-    </tr>
-    <tr>
-      <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">Relocate to goa?</td>
-      <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">${relocateGoa}</td>
-    </tr>
-    <tr>
-      <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">LinkedInProfile</td>
-      <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">${linkedInProfile}</td>
-    </tr>
-    <tr>
-      <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">Personality</td>
-      <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">${personality}</td>
-    </tr>
-
-    <tr>
-      <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">Skills</td>
-      <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">${skills}</td>
-    </tr>
-    <tr>
-      <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">willings</td>
-      <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">${willing}</td>
-    </tr>
-    <tr>
-      <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">Message</td>
-      <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">${message}</td>
-    </tr>
-
-  </table>
-  </div>
-  </body>`,
-            attachments: [
-                {
-                    filename: req.file.originalname,
-                    path: resumePath,
-                },
-            ],
+            html: `<p>${name} has applied for the position of ${jobTitle}. You can download the resume <a href="${resumeUrl}">here</a>.</p>`,
+            attachments : [{
+                filename: req.file.originalname,
+                path: resumePath,
+            },]
         };
-
 
         const replyMail = {
             from: 'response@wono.co',
@@ -702,7 +624,6 @@ exports.createJobApplication = async (req, res) => {
         };
 
         // Send emails
-
         aiwinMail.sendMail(mailOptions, (error) => {
             if (error) {
                 console.error('Failed to send Email:', error);
@@ -725,6 +646,7 @@ exports.createJobApplication = async (req, res) => {
         res.status(500).json({ message: 'Failed to save application' });
     }
 };
+
 
 
 // exports.checkAuth = (req, res) => {

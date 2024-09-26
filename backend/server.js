@@ -53,6 +53,8 @@ app.options('*', cors({
 }));
 
 const port = process.env.PORT;
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
+
 
 // Middleware to parse JSON data
 app.use(express.json());
