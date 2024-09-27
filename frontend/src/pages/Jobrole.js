@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState} from 'react'
 import '../layout/jobrole.css'
 import  Accordion  from 'react-bootstrap/Accordion'
 import { Link} from 'react-router-dom'
@@ -6,7 +6,7 @@ import { Link} from 'react-router-dom'
 
 
 const Jobrole = () => {
-  
+
 
  
   return (
@@ -18,14 +18,18 @@ const Jobrole = () => {
         <div className='testingContainer'>
             <h1></h1>
         </div>
-        <Accordion >
-      <Accordion.Item eventKey='0'>
-        <Accordion.Header>I. Product  Management</Accordion.Header>
-        <Accordion.Body>
+        <Accordion style={{border:"none"}}>
+      <Accordion.Item eventKey='0' style={{border:"none"}}>
+        <Accordion.Header style={{
+           
+          }}>I. Product  Management</Accordion.Header>
+        <hr></hr>
+        <Accordion.Body style={{border:"none"}}>
           
           <div className='mob-down' style={{display:"flex"}}>
           <div className='col-lg-6'>
             <h5 style={{fontSize:"1.5rem",margin:"10 0",color:"#000"}}>1.UI Designer</h5>
+
           </div>
           <div className='col-lg-6' style={{textAlign:"right"}}>
             <p style={{fontWeight:"600",margin:"10px 0"}}>
@@ -35,8 +39,9 @@ const Jobrole = () => {
             </p>
           </div>
           </div>
-          
+          <hr></hr> 
         </Accordion.Body>
+        
         <Accordion.Body>
         <div className='mob-down' style={{display:"flex"}}>
           <div className='col-lg-6'>
@@ -50,10 +55,12 @@ const Jobrole = () => {
             </p>
           </div>
           </div>
+          <hr></hr> 
         </Accordion.Body>
       </Accordion.Item>
-      <Accordion.Item eventKey="1">
+      <Accordion.Item eventKey="1" style={{border:"none"}}>
         <Accordion.Header>II. Tech Development</Accordion.Header>
+        <hr></hr>
         <Accordion.Body>
           <div className='mob-down' style={{display:"flex"}}>
           <div className='col-lg-6'>
@@ -65,14 +72,15 @@ const Jobrole = () => {
               <Link to={`/jobdetails/2/${encodeURIComponent('Jr.UI/UX Developer')}`}><i className='fa fa-cheveron-right' >&gt;</i></Link>
             </p>
           </div>
-          </div>  
+          </div> 
+          <hr></hr>  
         </Accordion.Body>
         
         <Accordion.Body>
           
           <div className='mob-down' style={{display:"flex"}}>
           <div className='col-lg-6'>
-          <hr style={{borderColor:"1px solid black"}}></hr>
+          
             <h5 style={{fontSize:"1.5rem",margin:"10 0",color:"#000"}}> 2. PHP Developer</h5>
           </div>
           <div className='col-lg-6' style={{textAlign:"right"}}>
@@ -81,7 +89,8 @@ const Jobrole = () => {
               <Link to={`/jobdetails/2/${encodeURIComponent('PHP Developer')}`}><i className='fa fa-cheveron-right' >&gt;</i></Link>
             </p>
           </div>
-          </div>  
+          </div> 
+          <hr></hr>  
         </Accordion.Body>
         <Accordion.Body>
           <div className='mob-down' style={{display:"flex"}}>
@@ -97,8 +106,9 @@ const Jobrole = () => {
           </div>  
         </Accordion.Body>
       </Accordion.Item>
-      <Accordion.Item eventKey="2">
+      <Accordion.Item eventKey="2" style={{border:"none"}}>
         <Accordion.Header>III. Finance</Accordion.Header>
+        <hr></hr>
         <Accordion.Body>
         <div className='mob-down' style={{display:"flex"}}>
           <div className='col-lg-6'>
@@ -113,8 +123,9 @@ const Jobrole = () => {
           </div>  
         </Accordion.Body>
       </Accordion.Item>
-      <Accordion.Item eventKey="3">
+      <Accordion.Item eventKey="3" style={{border:"none"}}>
         <Accordion.Header>IV. Human Resource & EA</Accordion.Header>
+        <hr></hr>
         
         <Accordion.Body>
         <div className='mob-down' style={{display:"flex"}}>
@@ -127,8 +138,10 @@ const Jobrole = () => {
               <Link to={`/jobdetails/2/${encodeURIComponent('HR Generalist')}`}><i className='fa fa-cheveron-right' >&gt;</i></Link>
             </p>
           </div>
-          </div>  
+          </div> 
+          <hr></hr> 
         </Accordion.Body>
+        
         <Accordion.Body>
         <div className='mob-down' style={{display:"flex"}}>
           <div className='col-lg-6'>
@@ -143,8 +156,9 @@ const Jobrole = () => {
           </div> 
         </Accordion.Body>
       </Accordion.Item>
-      <Accordion.Item eventKey="4">
+      <Accordion.Item eventKey="4" style={{border:"none"}}>
         <Accordion.Header>V. Sales & Bussiness Development</Accordion.Header>
+        <hr></hr>
         <Accordion.Body>
         <div className='mob-down' style={{display:"flex"}}>
           <div className='col-lg-6'>
@@ -159,8 +173,9 @@ const Jobrole = () => {
           </div>  
         </Accordion.Body>
       </Accordion.Item>
-      <Accordion.Item eventKey="5">
+      <Accordion.Item eventKey="5" style={{border:"none"}}>
         <Accordion.Header>VI. Marketing</Accordion.Header>
+        <hr></hr>
         <Accordion.Body>
         <div className='mob-down' style={{display:"flex"}}>
           <div className='col-lg-6'>
