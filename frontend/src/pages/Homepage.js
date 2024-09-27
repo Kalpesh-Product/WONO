@@ -35,7 +35,7 @@ import FourCardsComponents from "../components/Four_cardsComponents";
 import WebsiteCafe from "./WebsiteBuilder/WebsiteCafe";
 import WebsiteWorkation from "./WebsiteBuilder/WebsiteWorkation";
 import "../styles/bodyPartners.css";
-import BiznestTestimonial from "../assets/testimonials/BIZ Nest Testimonial.png";
+import BiznestTestimonial from "../assets/testimonials/kashif-image.jpg";
 // import "../styles/bodyLastBanner.css";
 
 const Homepage = () => {
@@ -405,7 +405,7 @@ const Homepage = () => {
             {/* <div className="container border-top border-dark border-2"> */}
             <div className="container p-0 ">
               <div className="row ">
-                <div className="col-lg-7 d-flex flex-column justify-content-between p-0 ms-0">
+                <div className="col-lg-7 d-flex flex-column  p-0 ms-0">
                   <div className=" ">
                     {/* <h4 className="bg-danger testimonial-right-spacing"> */}
                     <h3 className="testimonial-right-spacing">
