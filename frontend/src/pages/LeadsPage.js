@@ -284,7 +284,7 @@ const LeadsPage = () => {
             <div className="container p-0">
               {/* <div className="row  border-bottom border-dark border-3 pb-5 bg-primary"> */}
               <div className="row w-100 theSpecialRow">
-                <div className="col-lg-9 ps-0">
+                <div className="col-lg-10 ps-0">
                   <p className="automatedPlatformFontSize automatedPlatformPadding mb-0">
                     Automated platform and our resources are FREE .. you pay
                     only if you start paid ads!
@@ -292,7 +292,7 @@ const LeadsPage = () => {
                 </div>
                 {/* <div className="col-lg-4"></div> */}
                 {/* <div className="col-lg-4 bg-danger"> */}
-                <div className="col-lg-3  d-flex justify-content-lg-end justify-content-md-end justify-content-center justify-content-sm-center align-items-center SpecialPaddingX pe-0">
+                <div className="col-lg-2  d-flex justify-content-lg-end justify-content-md-end justify-content-center justify-content-sm-center align-items-center SpecialPaddingX pe-0">
                   {/* <div className=""> */}
                   <button
                     // className="get-started-submit-button mb-0"
@@ -658,7 +658,7 @@ const LeadsPage = () => {
                 </div>
                 <div className="">
                   {/* <div className=""> */}
-                  <p className="topPaddingInsideSections">
+                  <p className="topPaddingInsideSections pFontAdjustment">
                     Discover all the ways that Analytics surfaces helpful
                     insights for a complete understanding of your customers —
                     from built-in automation and customized reporting, to
@@ -688,7 +688,7 @@ const LeadsPage = () => {
                 </div>
                 <div className="">
                   {/* <div className=""> */}
-                  <p className="topPaddingInsideSections">
+                  <p className="topPaddingInsideSections pFontAdjustment">
                     Analytics helps you get a more complete understanding of how
                     your customers engage with your business so you can deliver
                     better experiences and drive results.
@@ -723,7 +723,7 @@ const LeadsPage = () => {
                 </div>
                 <div className="">
                   {/* <div className=""> */}
-                  <p className="topPaddingInsideSections">
+                  <p className="topPaddingInsideSections pFontAdjustment">
                     Analytics helps you understand how people use your sites and
                     apps, so you can take action to improve their experience.
                     Discover what Google Analytics can do by checking out the
