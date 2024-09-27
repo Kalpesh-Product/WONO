@@ -431,7 +431,7 @@ const RotatingGlobe = () => {
                 rotation={bankokLabelPosition}
                 fontWeight='bold'
             >
-              BANKOK
+              BANGKOK
             </Text>
   </mesh>
   

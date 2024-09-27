@@ -9,7 +9,7 @@ import Services from "./pages/Services";
 import LoginPage from "./pages/LoginPage";
 import Homepage from "./pages/Homepage";
 import Contact from "./pages/Contact";
-import { UserProvider } from "./components/UserContext";
+import { UserProvider, UserContext } from "./contexts/UserContext";
 import Register from "./pages/Register";
 import Career from "./pages/Career";
 import Dashboard from "./components/HomeDashboard/Dashboard";
@@ -24,8 +24,11 @@ import Themes from "./pages/Themes";
 import LeadsPage from "./pages/LeadsPage";
 import Capital from "./pages/Capital";
 import ProductPage from "./pages/ProductPage";
-import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import RequireAuth from "./components/RequireAuth";
+import PrivateRoute from "./contexts/PrivateRoute";
+import PublicRoute from "./contexts/PublicRoute";
 
 
 function App({useHideUnimportantErrors}) {
@@ -40,31 +43,121 @@ function App({useHideUnimportantErrors}) {
   return (
     <div>
       <UserProvider>
-        <AppHeader activeTab={activeTab} changeActiveTab={changeActiveTab}  />
+        <AppHeader activeTab={activeTab} changeActiveTab={changeActiveTab} />
         <Routes>
-          <Route path="/" element={<AppStruct />} />
-          <Route path="/test" element={<CompTest />} />
-          <Route path="/users" element={<Users />} />
-          <Route path="/home" element={<Homepage />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/login" element={<LoginPage />} />
-          <Route path="/forgot-password" element={<ForgotPassword />} />
-          <Route path="/new-password" element={<NewPassword />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/career" element={<Career />} />
-          <Route path="/jobdetails/:id/:title" element={<JobDetails />} />
-          <Route path="/regusers" element={<RegsiteredUsers />} />
-          <Route path="/termsandconditions" element={<TermsAndCondtions />} />
-          <Route path="/privacy" element={<PrivacyAndPolicy />} />
-          <Route path="/testing" element={<TestingPage />} />
-          <Route path="/themes" element={<Themes />} />
-          <Route path="/capital" element={<Capital />} />
-          <Route path="/leads" element={<LeadsPage />} />
-          <Route path="/themes/products" element={<ProductPage />} />
+          {/* Public Routes */}
+          <Route path="/" element={
+            <PublicRoute>
+              <AppStruct />
+            </PublicRoute>
+          } />
+          <Route path="/test" element={
+            <PublicRoute>
+              <CompTest />
+            </PublicRoute>
+          } />
+          <Route path="/users" element={
+            <PublicRoute>
+              <Users />
+            </PublicRoute>
+          } />
+          <Route path="/home" element={
+            <PublicRoute>
+              <Homepage />
+            </PublicRoute>
+          } />
+          <Route path="/services" element={
+            <PublicRoute>
+              <Services />
+            </PublicRoute>
+          } />
+
+          {/* PublicRoute for login-related routes */}
+          <Route path="/login" element={
+            <PublicRoute>
+              <LoginPage />
+            </PublicRoute>
+          } />
+          <Route path="/forgot-password" element={
+            <PublicRoute>
+              <ForgotPassword />
+            </PublicRoute>
+          } />
+          <Route path="/new-password" element={
+            <PublicRoute>
+              <NewPassword />
+            </PublicRoute>
+          } />
+          <Route path="/register" element={
+            <PublicRoute>
+              <Register />
+            </PublicRoute>
+          } />
+
+          <Route path="/contact" element={
+            <PublicRoute>
+              <Contact />
+            </PublicRoute>
+          } />
+          <Route path="/career" element={
+            <PublicRoute>
+              <Career />
+            </PublicRoute>
+          } />
+          <Route path="/jobdetails/:id/:title" element={
+            <PublicRoute>
+              <JobDetails />
+            </PublicRoute>
+          } />
+          <Route path="/regusers" element={
+            <PublicRoute>
+              <RegsiteredUsers />
+            </PublicRoute>
+          } />
+          <Route path="/termsandconditions" element={
+            <PublicRoute>
+              <TermsAndCondtions />
+            </PublicRoute>
+          } />
+          <Route path="/privacy" element={
+            <PublicRoute>
+              <PrivacyAndPolicy />
+            </PublicRoute>
+          } />
+          <Route path="/testing" element={
+            <PublicRoute>
+              <TestingPage />
+            </PublicRoute>
+          } />
+          <Route path="/themes" element={
+            <PublicRoute>
+              <Themes />
+            </PublicRoute>
+          } />
+          <Route path="/capital" element={
+            <PublicRoute>
+              <Capital />
+            </PublicRoute>
+          } />
+          <Route path="/leads" element={
+            <PublicRoute>
+              <LeadsPage />
+            </PublicRoute>
+          } />
+          <Route path="/themes/products" element={
+            <PublicRoute>
+              <ProductPage />
+            </PublicRoute>
+          } />
+
+          {/* Private Route */}
+          <Route path="/dashboard" element={
+            <PrivateRoute>
+              <Dashboard />
+            </PrivateRoute>
+          } />
         </Routes>
-        <AppFooter   changeActiveTab={changeActiveTab}  />
+        <AppFooter changeActiveTab={changeActiveTab} />
       </UserProvider>
     </div>
   );

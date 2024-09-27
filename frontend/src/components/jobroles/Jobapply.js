@@ -1,9 +1,9 @@
-import React, { useState } from "react";
-import Toasts from "../../components/Toasts";
-import Modals from "../Modals";
+import React, { useState, useEffect } from "react";
+
 import { Modal } from "react-bootstrap";
 // import { Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
+import { State } from 'country-state-city';
 import axios from "axios";
 import {
   TextField,
@@ -16,17 +16,21 @@ import {
   Box,
 } from '@mui/material';
 import erroricon from "../../assets/delete-button.png"
+import successIcon from "../../assets/greenTickIcon.png"
 import { format, parse, isValid } from 'date-fns';
 
-import { LocalizationProvider, DatePicker } from '@mui/x-date-pickers';
-import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
+import { LocalizationProvider, DatePicker } from "@mui/x-date-pickers";
+import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
 
 const Jobapply = ({ jobTitle }) => {
   const navigate = useNavigate();
 
   const [showModal, setShowModal] = useState(false); //for generic modals
+  const [modalType, setModalType] = useState("error"); // 'error' or 'success'
   const [showMessage, setShowMessage] = useState("");
+  const [states, setStates] = useState([]);
   const handleModal = () => setShowModal(true);
+
 
   const [formvalues, setFormValues] = useState({
     jobTitle: `${jobTitle}`,
@@ -67,6 +71,13 @@ const Jobapply = ({ jobTitle }) => {
   //   });
   // };
 
+  useEffect(() => {
+    // Assuming 'IN' is the country code for India, you can replace this with any country code.
+    const countryStates = State.getStatesOfCountry('IN');
+    setStates(countryStates);
+  }, []);
+
+
 
   const handleGlobalChange = (e) => {
     const { name, value, files } = e.target;
@@ -82,15 +93,15 @@ const Jobapply = ({ jobTitle }) => {
 
   const handleChange = (name) => (newValue) => {
     if (newValue && isValid(newValue)) {
-      const formattedDate = format(newValue, 'dd-MM-yyyy');
+      const formattedDate = format(newValue, "dd-MM-yyyy");
       setFormValues((prev) => ({
         ...prev,
-        [name]: formattedDate
+        [name]: formattedDate,
       }));
     } else {
       setFormValues((prev) => ({
         ...prev,
-        [name]: ''
+        [name]: "",
       }));
     }
   };
@@ -101,6 +112,7 @@ const Jobapply = ({ jobTitle }) => {
   };
   const handleCloseModal = () => {
     setShowModal(false);
+    navigate('/career')
   };
 
   const handleSubmit = async (e) => {
@@ -111,125 +123,143 @@ const Jobapply = ({ jobTitle }) => {
 
     let validRegex =
       /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-      if (formvalues.name === "") {
-        setShowMessage("Name is required");
-        setShowModal(true);
-        return;
-      }
-      if (formvalues.email === "") {
-        setShowMessage("Email is required");
-        setShowModal(true);
-        return;
-      }
-      if (formvalues.date === "") {
-        setShowMessage("Date is required");
-        setShowModal(true);
-        return;
-      }
-      if (formvalues.daysToJoin === "") {
-        setShowMessage("Days to join are required");
-        setShowModal(true);
-        return;
-      }
-      if (formvalues.expectedSalary === "") {
-        setShowMessage("Expected salary is required");
-        setShowModal(true);
-        return;
-      }
-      if (formvalues.experience === "") {
-        setShowMessage("Experience is required");
-        setShowModal(true);
-        return;
-      }
-      if (formvalues.monthlySalary === "") {
-        setShowMessage("Monthly salary is required");
-        setShowModal(true);
-        return;
-      }
-      if (formvalues.number === "") {
-        setShowMessage("Phone number is required");
-        setShowModal(true);
-        return;
-      }
-      if (formvalues.personality === "") {
-        setShowMessage("Personality description is required");
-        setShowModal(true);
-        return;
-      }
-      if (formvalues.relocateGoa === "") {
-        setShowMessage("Relocation preference is required");
-        setShowModal(true);
-        return;
-      }
-      if (formvalues.location === "") {
-        setShowMessage("Location is required");
-        setShowModal(true);
-        return;
-      }
-      if (!formvalues.resume || typeof formvalues.resume === "string") {  // Check if file input is missing or not properly formatted
-        setShowMessage("Resume file is required");
-        setShowModal(true);
-        return;
-      }
-      if (formvalues.skills === "") {
-        setShowMessage("Skills are required");
-        setShowModal(true);
-        return;
-      }
-      if (formvalues.specialexperience === "") {
-        setShowMessage("Special experience is required");
-        setShowModal(true);
-        return;
-      }
-      if (formvalues.willing === "") {
-        setShowMessage("Willingness to relocate is required");
-        setShowModal(true);
-        return;
-      }
-      else {
+    if (formvalues.name === "") {
+      setShowMessage("Name is required");
+      setShowModal(true);
+      return;
+    }
+    if (formvalues.email === "") {
+      setShowMessage("Email is required");
+      setShowModal(true);
+      return;
+    }
+    if (formvalues.date === "") {
+      setShowMessage("Date is required");
+      setShowModal(true);
+      return;
+    }
+    if (formvalues.daysToJoin === "") {
+      setShowMessage("Days to join are required");
+      setShowModal(true);
+      return;
+    }
+    if (formvalues.expectedSalary === "") {
+      setShowMessage("Expected salary is required");
+      setShowModal(true);
+      return;
+    }
+    if (formvalues.experience === "") {
+      setShowMessage("Experience is required");
+      setShowModal(true);
+      return;
+    }
+    if (formvalues.monthlySalary === "") {
+      setShowMessage("Monthly salary is required");
+      setShowModal(true);
+      return;
+    }
+    if (formvalues.number === "") {
+      setShowMessage("Phone number is required");
+      setShowModal(true);
+      return;
+    }
+    if (formvalues.personality === "") {
+      setShowMessage("Personality description is required");
+      setShowModal(true);
+      return;
+    }
+    if (formvalues.relocateGoa === "") {
+      setShowMessage("Relocation preference is required");
+      setShowModal(true);
+      return;
+    }
+    if (formvalues.location === "") {
+      setShowMessage("Location is required");
+      setShowModal(true);
+      return;
+    }
+    if (!formvalues.resume || typeof formvalues.resume === "string") {  // Check if file input is missing or not properly formatted
+      setShowMessage("Resume file is required");
+      setShowModal(true);
+      return;
+    }
+    if (formvalues.skills === "") {
+      setShowMessage("Skills are required");
+      setShowModal(true);
+      return;
+    }
+    if (formvalues.specialexperience === "") {
+      setShowMessage("Special experience is required");
+      setShowModal(true);
+      return;
+    }
+    if (formvalues.willing === "") {
+      setShowMessage("Willingness to relocate is required");
+      setShowModal(true);
+      return;
+    }
+    else {
       if (!formvalues.email.match(validRegex)) {
         setShowModal(true);
         setShowMessage("Please enter a valid email address");
         return;
       } else {
         const data = new FormData();
-    data.append('jobTitle', formvalues.jobTitle);
-    data.append('name', formvalues.name);
-    data.append('email', formvalues.email);
-    data.append('date',formvalues.date);
-    data.append('daysToJoin',formvalues.daysToJoin);
-    data.append('expectedSalary',formvalues.expectedSalary);
-    data.append('experience',formvalues.experience);
-    data.append('monthlySalary',formvalues.monthlySalary);
-    data.append('number',formvalues.number);
-    data.append('personality',formvalues.personality);
-    data.append('relocateGoa',formvalues.relocateGoa);
-    data.append('location',formvalues.location);
-    data.append('resume',formvalues.resume);
-    data.append('skills',formvalues.skills);
-    data.append('specialexperience',formvalues.specialexperience);
-    data.append('willing',formvalues.willing);
-    
-    try{
-      await axios.post('/jobapply', data, {
-        headers: {
-          'Content-Type': 'multipart/form-data',
-        },
-      });
-      alert('Form submitted successfully!');
+        data.append('jobTitle', formvalues.jobTitle);
+        data.append('name', formvalues.name);
+        data.append('email', formvalues.email);
+        data.append('date', formvalues.date);
+        data.append('daysToJoin', formvalues.daysToJoin);
+        data.append('expectedSalary', formvalues.expectedSalary);
+        data.append('experience', formvalues.experience);
+        data.append('monthlySalary', formvalues.monthlySalary);
+        data.append('number', formvalues.number);
+        data.append('personality', formvalues.personality);
+        data.append('relocateGoa', formvalues.relocateGoa);
+        data.append('location', formvalues.location);
+        data.append('resume', formvalues.resume);
+        data.append('skills', formvalues.skills);
+        data.append('specialexperience', formvalues.specialexperience);
+        data.append('willing', formvalues.willing);
+        data.append('message', formvalues.message);
 
-    }catch (error) {
-      console.error('Error submitting form:', error.response ? error.response.data.message : error.message);
-    }
-        
-        // axios
-        //   .post("/jobapply", formvalues)
-        //   .then((response) => {
-        //     alert("Email sent successfully");
-        //   })
-        //   .catch((error) => {
-        //     console.error("There was an error sending email", error);
-        //   });
+        try {
+          await axios.post('/jobapply', data, {
+            headers: {
+              'Content-Type': 'multipart/form-data',
+            },
+          });
+          setShowModal(true);
+          setModalType("success")
+          setShowMessage("Application submitted successfully");
+          // Reset the form fields
+          setFormValues({
+            jobTitle: `${jobTitle}`,
+            name: "",
+            email: "",
+            date: "",
+            number: "",
+            location: "",
+            experience: "",
+            linkedInProfile: "",
+            resume: null,
+            monthlySalary: "",
+            expectedSalary: "",
+            daysToJoin: "",
+            relocateGoa: "",
+            personality: "",
+            skills: "",
+            specialexperience: "",
+            willing: "",
+            message: "",
+          });
+         
+
+        } catch (error) {
+          console.error('Error submitting form:', error.response ? error.response.data.message : error.message);
+        }
+
+
       }
     }
 
@@ -287,11 +317,15 @@ const Jobapply = ({ jobTitle }) => {
             <LocalizationProvider dateAdapter={AdapterDateFns}>
               <DatePicker
                 label="Date of Birth"
-                value={formvalues.date ? parse(formvalues.date, 'dd-MM-yyyy', new Date()) : null}
+                value={
+                  formvalues.date
+                    ? parse(formvalues.date, "dd-MM-yyyy", new Date())
+                    : null
+                }
                 onChange={(newValue) => {
-           
+
                   if (newValue && isValid(new Date(newValue))) {
-                    handleChange('date')(newValue);
+                    handleChange("date")(newValue);
                   }
                 }}
                 slotProps={{ textField: { fullWidth: true } }}
@@ -314,22 +348,22 @@ const Jobapply = ({ jobTitle }) => {
           </Grid>
 
           <Grid item md={6} xs={12}>
-            <FormControl fullWidth >
-              <InputLabel
-                slotProps={{ textField: { fullWidth: true } }}>State</InputLabel>
+            <FormControl fullWidth>
+              <InputLabel>State</InputLabel>
               <Select
                 name="location"
                 value={formvalues.location}
                 onChange={handleGlobalChange}
               >
-                <MenuItem value="" disabled>Select State</MenuItem>
-                <MenuItem value="Andhra Pradesh">Andhra Pradesh</MenuItem>
-                <MenuItem value="Arunachal Pradesh">Arunachal Pradesh</MenuItem>
-                {/* Add other states here */}
-                <MenuItem value="Other">Other</MenuItem>
+                {states.map((state) => (
+                  <MenuItem key={state.isoCode} value={state.isoCode}>
+                    {state.name}
+                  </MenuItem>
+                ))}
               </Select>
             </FormControl>
           </Grid>
+
 
           <Grid item md={6} xs={12}>
             <TextField
@@ -423,7 +457,7 @@ const Jobapply = ({ jobTitle }) => {
               value={formvalues.relocateGoa}
               onChange={handleGlobalChange}
               select
-              
+
               fullWidth
             >
               <MenuItem value="yes">Yes</MenuItem>
@@ -431,8 +465,8 @@ const Jobapply = ({ jobTitle }) => {
             </TextField>
           </Grid>
 
-          
-          
+
+
           <Grid item md={12} xs={12}>
             <TextField
               multiline
@@ -441,22 +475,22 @@ const Jobapply = ({ jobTitle }) => {
               variant="outlined"
               label="Personality"
               fullWidth
-              
-              InputProps={{style:{width:'100%'}}}
+
+              InputProps={{ style: { width: '100%' } }}
               value={formvalues.personality}
-              onChange={handleGlobalChange}         
-            /> 
+              onChange={handleGlobalChange}
+            />
             {/* <textarea name="personality" rows="3" cols="10" style={{ width: '100%',padding:"10px" ,borderColor:"#9E9E9E"}}
             placeholder="Who are you as a person?"
             value={formvalues.personality}
             onChange={handleInputChange}
             >  */}
-        
-     {/* </textarea> */}
 
-          {/* </Grid> */}
-           </Grid>
-           <Grid item md={12} xs={12}>
+            {/* </textarea> */}
+
+            {/* </Grid> */}
+          </Grid>
+          <Grid item md={12} xs={12}>
             <TextField
               multiline
               name="skills"
@@ -466,7 +500,7 @@ const Jobapply = ({ jobTitle }) => {
               value={formvalues.skills}
               onChange={handleGlobalChange}
             />
-             {/* <textarea name="skills" rows="3" cols="10" style={{ width: '100%',padding:"10px",borderColor:"#BDBDBD" }}
+            {/* <textarea name="skills" rows="3" cols="10" style={{ width: '100%',padding:"10px",borderColor:"#BDBDBD" }}
             placeholder="What skill sets do you have for the job that you have applied?"
             value={formvalues.skills}
             onChange={handleGlobalChange}
@@ -479,7 +513,7 @@ const Jobapply = ({ jobTitle }) => {
               name="specialexperience"
               minRows={4}
               label="Why should we consider you for joining our company?"
-              
+
               style={{ width: '100%' }}
               value={formvalues.specialexperience}
               onChange={handleGlobalChange}
@@ -496,7 +530,7 @@ const Jobapply = ({ jobTitle }) => {
               name="willing"
               minRows={4}
               label="Are you willing to bootstrap to join a growing startup?"
-              
+
               style={{ width: '100%' }}
               value={formvalues.willing}
               onChange={handleGlobalChange}
@@ -513,7 +547,7 @@ const Jobapply = ({ jobTitle }) => {
               name="message"
               minRows={4}
               label="Personal Message"
-              
+
               style={{ width: '100%' }}
               value={formvalues.message}
               onChange={handleGlobalChange}
@@ -532,27 +566,36 @@ const Jobapply = ({ jobTitle }) => {
           </Grid>
         </Grid>
       </Box>
-      <div>
-        <Modal show={showModal} onHide={handleCloseModal} style={{display:"flex",alignItems:"center",justifyContent:"center"}}>
-          {/* <Modal.Header closeButton>
-          <Modal.Title>Form Submission Error</Modal.Title>
-        </Modal.Header> */}
-        <div style={{ display: "flex", alignItems: "center", justifyContent: "center" ,marginTop:"10%",marginBottom:"20px" }}>
-            <img src={erroricon} alt="erroricon" style={{
-              width: "40px", height: "40px"
-            }}></img>
+      <div className="modal-container">
+        <Modal show={showModal} onHide={handleCloseModal} 
+  aria-labelledby="contained-modal-title-vcenter"
+  centered>
+          <Modal.Header closeButton>
+            <Modal.Title>
+              {modalType === "error" ? "Form Submission Error" : "Form Submitted Successfully"}
+            </Modal.Title>
+          </Modal.Header>
+
+          <div style={{ display: "flex", alignItems: "center", justifyContent: "center", marginTop: "10%", marginBottom: "20px" }}>
+            <img
+              src={modalType === "error" ? erroricon : successIcon} // Error icon for error, check mark for success
+              alt={modalType === "error" ? "erroricon" : "successicon"}
+              style={{ width: "40px", height: "40px" }}
+            />
           </div>
+
           <h1
             style={{
               display: "flex",
               alignContent: "center",
               justifyContent: "center",
-              color: "red",
+              color: modalType === "error" ? "red" : "green",
             }}>
-            ERROR
+            {modalType === "error" ? "ERROR" : "SUCCESS"}
           </h1>
-          
+
           <Modal.Body><b>{showMessage}</b></Modal.Body>
+
           <button
             className="btn btn-secondary"
             onClick={handleCloseModal}
@@ -564,7 +607,6 @@ const Jobapply = ({ jobTitle }) => {
               marginLeft: "40%",
               marginBottom: "20%",
               backgroundColor: "black",
-              
             }}>
             Close
           </button>
