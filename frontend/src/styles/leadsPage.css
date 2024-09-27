@@ -15,12 +15,17 @@
         }
     }
 
+    .pFontAdjustment {
+        font-size: 1.2rem;
+    }
+
     .Tickmark-text {
         /* display: flex; */
         /* align-items: center; */
         /* margin-bottom: 6px; */
         /* color: #363636; */
-        font-size: unset;
+        /* font-size: unset; */
+        font-size: 1.1rem;
         /* font-family: Popins-Regular; */
     }
 
@@ -109,7 +114,8 @@
 } */
 
     .automatedPlatformFontSize {
-        font-size: 1.125rem;
+        /* font-size: 1.125rem; */
+        font-size: 1.37rem;
         /* 18px / 16 */
     }
 
@@ -550,6 +556,10 @@
 
         .finer-points-section {
             padding: 1rem;
+        }
+
+        .pFontAdjustment {
+            padding-left: 0;
         }
 
     }
