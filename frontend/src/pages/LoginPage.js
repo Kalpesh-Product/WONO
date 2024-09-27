@@ -161,7 +161,7 @@ const LoginPage = () => {
         </p>
         <div className="loginDividingContainer">
           <div className="loginLeftContainer">
-            <Container maxWidth="sm" style={{ paddingTop: "3rem" }}>
+            <Container maxWidth="md" style={{ padding: "3rem 0 0" }}>
               <Box
                 component="form"
                 sx={{ flexGrow: 1 }}
@@ -247,7 +247,7 @@ const LoginPage = () => {
                 >
                   
                 </LoginSocialGoogle> */}
-                <div className="LoginWithGoogleContainer loginWithBox loginWithGoogleBox d-flex justify-content-between align-items-center centerElement w-100">
+                <div className="LoginWithGoogleContainer loginWithBox loginWithGoogleBox d-flex justify-content-between align-items-center centerElement">
                   <div className="loginWithIconBox loginWithGoogleIconBox centerElement">
                     <img
                       src={LoginWithGoogleImage}

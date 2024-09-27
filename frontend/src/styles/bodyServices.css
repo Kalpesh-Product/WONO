@@ -148,7 +148,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 4rem 0 0 0;
+    padding: 2rem 0 0 0;
     width: 100%;
 
 }
@@ -193,7 +193,7 @@
 
 .SaaS-grid-heading span {
     font-size: 1.5rem;
-    padding: 2rem 0 2rem 0;
+    padding: 1rem 0 1rem 0;
 }
 
 
@@ -304,6 +304,7 @@
     width: calc(100% + 15rem);
     margin: 0 -7.5rem;
     text-align: center;
+    text-transform: uppercase;
 }
 
 /* .SaaS-last-banner h2 {
@@ -339,22 +340,22 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         width: 100%;
-        margin: 4rem 0 4rem 0;
+        margin: 2rem 0 2rem 0;
         padding: 0;
         column-gap: 10rem;
-        row-gap: 3rem;
+        row-gap: 2rem;
     }
 
     .SaaS-last-banner h2 {
         font-family: Popins-Semibold;
-        font-size: 5.2rem;
+        font-size: 4.55rem;
     }
 }
 
 @media (max-width:1440px) {
     .SaaS-last-banner h2 {
         font-family: Popins-Semibold;
-        font-size: 4.9rem;
+        font-size: 4.155crem;
     }
 }
 

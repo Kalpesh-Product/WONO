@@ -154,7 +154,6 @@ h2 {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
     font-family: Popins-Regular;
 }
 
@@ -183,7 +182,7 @@ h2 {
     align-items: center;
     justify-content: center;
     width: 100%;
-    padding: 1rem;
+    padding: 2.625rem 1rem;
 }
 
 .forgot-password-button button {

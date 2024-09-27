@@ -132,7 +132,7 @@
     /* border: 1px solid black; */
 }
 
-.loginWithGoogleIconBox {
+/* .loginWithGoogleIconBox {
     border: 1px solid #4285F4;
 }
 
@@ -142,11 +142,11 @@
 
 .loginWithEmailIconBox {
     border: 1px solid #ea4335;
-}
+} */
 
 .loginWithBox {
     width: 20rem;
-    height: 3rem;
+    height: 3.5rem;
     /* border: 1px solid black; */
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;

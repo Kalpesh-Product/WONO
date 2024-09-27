@@ -214,7 +214,7 @@
 
     .bottomPaddingForSections {
         /* padding-bottom: 6rem; */
-        padding-bottom: 4rem;
+        padding-bottom: 2rem;
     }
 
     .topPaddingInsideSections {
@@ -242,15 +242,15 @@
     }
 
     .organic-leads-section {
-        padding: 4rem 7.7rem;
+        padding: 4rem 7.7rem 2rem;
     }
 
     .google-sheets-section {
-        padding: 4rem 8rem;
+        padding: 4rem 8rem 2rem;
     }
 
     .marketing-section {
-        padding: 4rem 7.7rem;
+        padding: 4rem 7.7rem 2rem;
     }
 
     .finer-points-section {

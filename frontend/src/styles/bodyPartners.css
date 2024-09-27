@@ -53,12 +53,13 @@
     background-color: rgb(255, 255, 255);
 }
 
-/* .grow-your-business-color h2 {
-    font-size: 5.4rem;
-} */
+.grow-your-business-color h2 {
+    text-transform: uppercase;
+    font-size: 5.1rem;
+}
 
 .grow-your-business-color p {
-    font-size: 0.875rem;
+    font-size: 1.3rem;
 }
 
 .partners-section>* {
@@ -221,6 +222,7 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
+    text-transform: uppercase;
 }
 
 .partner-submit-button {
