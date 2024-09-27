@@ -112,7 +112,6 @@ const Jobapply = ({ jobTitle }) => {
   };
   const handleCloseModal = () => {
     setShowModal(false);
-    navigate('/career')
   };
 
   const handleSubmit = async (e) => {
