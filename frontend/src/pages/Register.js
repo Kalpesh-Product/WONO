@@ -405,7 +405,7 @@ const Register = () => {
                   <h2>Let's set up your free account</h2>
                 </div>
                 <div className="register-container">
-                  <Container maxWidth="sm">
+                  <Container maxWidth="md w-50">
                     <Box
                       component="form"
                       sx={{ flexGrow: 1 }}
@@ -559,7 +559,7 @@ const Register = () => {
                   <h2>Create company profile</h2>
                 </div>
                 <div className="register-container">
-                  <Container maxWidth="sm">
+                  <Container maxWidth="md w-50">
                     <Box component="form" sx={{ flexGrow: 1 }} noValidate autoComplete="off">
                       <Grid container spacing={2}>
 
