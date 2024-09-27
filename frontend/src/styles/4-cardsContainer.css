@@ -170,9 +170,9 @@ button.slick-next.slick-arrow::before {
     background-color: #fff;
     border-radius: 10px;
     height: 22.125rem;
-    margin: 0.5rem 19px;
+    margin: 0.5rem 53px;
     padding: 30px 20px;
-    width: 270px !important;
+    width: 316px !important;
   }
 }
 
@@ -184,10 +184,10 @@ button.slick-next.slick-arrow::before {
   .card_1 {
     background-color: #fff;
     border-radius: 10px;
-    height: 22.695rem;
-    margin: 0.5rem 10px;
+    height: 24.695rem;
+    margin: 0.5rem 40px;
     padding: 30px 20px;
-    width: 257px !important;
+    width: 305px !important;
   }
 
   .four-cards-header span {
