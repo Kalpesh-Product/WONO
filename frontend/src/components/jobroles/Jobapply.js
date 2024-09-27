@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Toasts from "../../components/Toasts";
-import Modals from "../Modals";
+
 import { Modal } from "react-bootstrap";
 // import { Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
@@ -567,8 +566,10 @@ const Jobapply = ({ jobTitle }) => {
           </Grid>
         </Grid>
       </Box>
-      <div>
-        <Modal show={showModal} onHide={handleCloseModal} style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
+      <div className="modal-container">
+        <Modal show={showModal} onHide={handleCloseModal} 
+  aria-labelledby="contained-modal-title-vcenter"
+  centered>
           <Modal.Header closeButton>
             <Modal.Title>
               {modalType === "error" ? "Form Submission Error" : "Form Submitted Successfully"}
