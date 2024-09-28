@@ -18,6 +18,7 @@ import {
 } from "../assets/WONO_images/img/icon_service";
 import gmailLogo from "../assets/WONO_images/img/services/gmailLogo.jpg";
 import outlookLogo from "../assets/WONO_images/img/services/outlookLogo.png";
+import Spinners from "../components/Spinner";
 
 const Register = () => {
   const [currentStep, setCurrentStep] = useState(0);
@@ -52,6 +53,7 @@ const Register = () => {
   const [companyStates, setCompanyStates] = useState([]);
   const [companyCities, setCompanyCities] = useState([]);
   const [errors, setErrors] = useState({});
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     if (formData.country) {
@@ -131,13 +133,13 @@ const Register = () => {
 
     if (Object.keys(validationErrors).length === 0) {
       try {
+        setLoading(true); // Show the spinner
+
         let sectionData = {};
         let sectionName = '';
 
-        // Extract the email from formData for duplicate check
         const { email } = formData;
 
-        // Check for duplicate email in the database (early in the process)
         if (currentStep === 0 && email) {
           const isDuplicate = await checkEmailDuplicate(email);
           if (isDuplicate) {
@@ -145,11 +147,11 @@ const Register = () => {
               ...prevErrors,
               email: 'This email is already in use.',
             }));
-            return; // Stop execution if the email is already in use
+            setLoading(false); // Hide spinner on error
+            return;
           }
         }
 
-        // Set section data based on the current step (excluding selectedServices)
         switch (currentStep) {
           case 0:
             sectionData = {
@@ -176,36 +178,38 @@ const Register = () => {
             sectionName = 'company';
             break;
           default:
+            setLoading(false); // Hide spinner if no valid step
             return;
         }
 
-        // Send section data to the backend
         const response = await axios.post(
-          "/register/section",
+          '/register/section',
           {
             section: sectionName,
             data: sectionData,
           },
           {
             headers: {
-              "Content-Type": "application/json",
+              'Content-Type': 'application/json',
             }
           }
         );
 
         if (response.status !== 200) {
-          throw new Error("Network response was not ok");
+          throw new Error('Network response was not ok');
         }
 
         console.log(response.data);
 
-        // Move to the next step
-        setCurrentStep((prev) => prev + 1);
+        setCurrentStep((prev) => prev + 1); // Move to the next step
       } catch (error) {
-        console.error("There was a problem with the fetch operation:", error);
+        console.error('There was a problem with the fetch operation:', error);
+      } finally {
+        setLoading(false); // Always hide spinner when the request finishes
       }
     }
   };
+
 
 
 
@@ -289,15 +293,11 @@ const Register = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    console.log("handleSubmit");
+    console.log("Sending email...");
 
-    // Show "Sending details" modal
-    setModalMessage(
-      <img src={emailSend} style={{ width: 100 }} alt="emailSend" />
-    );
-    setIsLoading(true);
 
     try {
+      setLoading(true)
       const dataToSubmit = {
         ...formData,
         selectedServices: formData.selectedServices, // Ensure selected services are submitted here
@@ -327,12 +327,12 @@ const Register = () => {
       console.error("There was a problem with the submission:", error);
       console.log("Failed to send registration details");
     } finally {
-      setIsLoading(false);
+      setLoading(false);
 
       // Clear modal message after some time
-      setTimeout(() => {
-        setModalMessage("");
-      }, 3000);
+      // setTimeout(() => {
+      //   setModalMessage("");
+      // }, 3000);
     }
   };
 
@@ -892,7 +892,9 @@ const Register = () => {
             )}
           </form>
         </div>
+        {loading && <Spinners animation={'border'} variant={'dark'}/>} 
       </section>
+
     </div>
   );
 };

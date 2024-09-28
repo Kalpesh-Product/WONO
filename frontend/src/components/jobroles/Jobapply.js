@@ -18,11 +18,11 @@ import {
 import erroricon from "../../assets/delete-button.png"
 import successIcon from "../../assets/greenTickIcon.png"
 import { format, parse, isValid } from 'date-fns';
-
+import Spinners from "../Spinner";
 import { LocalizationProvider, DatePicker } from "@mui/x-date-pickers";
 import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
 
-const Jobapply = ({ jobTitle }) => {
+const Jobapply = ({ jobTitle, changeActiveTab }) => {
   const navigate = useNavigate();
 
   const [showModal, setShowModal] = useState(false); //for generic modals
@@ -30,6 +30,7 @@ const Jobapply = ({ jobTitle }) => {
   const [showMessage, setShowMessage] = useState("");
   const [states, setStates] = useState([]);
   const handleModal = () => setShowModal(true);
+  const [loading, setLoading] = useState(false)
 
 
   const [formvalues, setFormValues] = useState({
@@ -223,14 +224,13 @@ const Jobapply = ({ jobTitle }) => {
         data.append('message', formvalues.message);
 
         try {
+          setLoading(true)
           await axios.post('/jobapply', data, {
             headers: {
               'Content-Type': 'multipart/form-data',
             },
           });
-          setShowModal(true);
-          setModalType("success")
-          setShowMessage("Application submitted successfully");
+          
           // Reset the form fields
           setFormValues({
             jobTitle: `${jobTitle}`,
@@ -256,28 +256,25 @@ const Jobapply = ({ jobTitle }) => {
 
         } catch (error) {
           console.error('Error submitting form:', error.response ? error.response.data.message : error.message);
+        } finally{
+          setLoading(false)
+          setShowModal(true);
+          setModalType("success")
+          setShowMessage("Application submitted successfully");
         }
-
+        
 
       }
+      
     }
-
-    // axios
-    //     .post("/submit-form", formvalues)
-    //     .then((response) => {
-    //         alert("Form submitted successfully");
-    //     })
-    //     .catch((error) => {
-    //         console.error("Form could not be submitted", error);
-    //     });
-
-    //   try {
-    //     const response = await axios.post('/submit-form', formvalues);
-    //     console.log('Form submitted successfully:', response.data);
-    // } catch (error) {
-    //     console.error('Error submitting the form:', error);
-    // }
   };
+  const handleHideModal=(e)=>{
+    e.preventDefault();
+    setShowModal(false);
+    navigate('/career')
+    window.scrollTo({top:0, behavior:'instant'})
+    changeActiveTab('Career')
+  }
 
   return (
     <div>
@@ -565,6 +562,8 @@ const Jobapply = ({ jobTitle }) => {
           </Grid>
         </Grid>
       </Box>
+
+      {loading && <Spinners animation={'border'} variant={'dark'}/>} 
       <div className="modal-container">
         <Modal show={showModal} onHide={handleCloseModal} 
   aria-labelledby="contained-modal-title-vcenter"
@@ -595,7 +594,8 @@ const Jobapply = ({ jobTitle }) => {
 
           <Modal.Body><b>{showMessage}</b></Modal.Body>
 
-          <button
+          {modalType === "error" ?  <>
+             <button
             className="btn btn-secondary"
             onClick={handleCloseModal}
             style={{
@@ -609,6 +609,25 @@ const Jobapply = ({ jobTitle }) => {
             }}>
             Close
           </button>
+            </> : (
+            <>
+             <button
+            className="btn btn-secondary"
+            onClick={handleHideModal}
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              width: "100px",
+              marginLeft: "40%",
+              marginBottom: "20%",
+              backgroundColor: "black",
+            }}>
+            Close
+          </button>
+            </>
+          )}
+
         </Modal>
       </div>
     </div>

@@ -106,7 +106,7 @@ function App({useHideUnimportantErrors}) {
           } />
           <Route path="/jobdetails/:id/:title" element={
             <PublicRoute>
-              <JobDetails />
+              <JobDetails changeActiveTab={changeActiveTab} />
             </PublicRoute>
           } />
           <Route path="/regusers" element={

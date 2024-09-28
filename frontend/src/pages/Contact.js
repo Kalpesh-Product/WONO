@@ -3,6 +3,7 @@ import axios from "axios";
 import "../layout/contact.css";
 import "../styles/bodyContact.css";
 import { Modal } from 'react-bootstrap';
+import Spinners from "../components/Spinner";
 import {
   TextField,
   Button,
@@ -19,6 +20,7 @@ import { useNavigate } from "react-router-dom";
 const Contact = () => {
 
   const navigate = useNavigate()
+  const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -29,7 +31,6 @@ const Contact = () => {
   const [showModal, setShowModal] = useState(false);
   const handleCloseModal = () => {
     setShowModal(false)
-    navigate('/home')
   };
 
   const handleChange = (e) => {
@@ -42,6 +43,7 @@ const Contact = () => {
     e.preventDefault();
 
     try {
+      setLoading(true)
       const response = await axios.post('/enquiries', formData);
       console.log('Enquiry submitted successfully:', response.data);
       // Show success modal
@@ -57,6 +59,8 @@ const Contact = () => {
     } catch (error) {
       console.error('Error submitting enquiry:', error);
       // Handle error (show error message)
+    } finally { 
+      setLoading(false)
     }
   };
 
@@ -234,6 +238,8 @@ const Contact = () => {
         </div>
       </div>
 
+
+      {loading && <Spinners animation={'border'} variant={'dark'}/>} 
       <Modal show={showModal} onHide={handleCloseModal}>
         <Modal.Header closeButton>
           <Modal.Title>Success</Modal.Title>

@@ -21,7 +21,8 @@ const Footer = ({changeActiveTab}) => {
           <div className="footer-section-1">
             <img onClick={()=>{
               navigate('/home')
-              window.scrollTo({top:'0', behavior:'smooth'})
+              window.scrollTo({top:'0', behavior:'instant'})
+              changeActiveTab("Home");
             }} src={WonoLogo} style={{cursor:'pointer'}} alt="logo" />
             <span>
               WONOCO PRIVATE LIMITED 10 ANSON ROAD #33-10
@@ -59,15 +60,15 @@ const Footer = ({changeActiveTab}) => {
             <div className="footer-section-3">
               <h5 onClick={()=>{
             changeActiveTab('Services')
-            window.scrollTo({ top: 0, behavior: "smooth" })
+            window.scrollTo({ top: 0, behavior: "instant" })
             }} ><Link to="/services">SaaS</Link></h5>
               <h5 onClick={()=>{
             changeActiveTab('leads')
-            window.scrollTo({ top: 0, behavior: "smooth" })
+            window.scrollTo({ top: 0, behavior: "instant" })
             }}><Link to={"/leads"}>Leads</Link></h5>
               <h5 onClick={()=>{
             changeActiveTab('themes')
-            window.scrollTo({ top: 0, behavior: "smooth" })
+            window.scrollTo({ top: 0, behavior: "instant" })
             }}><Link to={"/themes"}>Themes</Link></h5>
             </div>
 
@@ -76,19 +77,19 @@ const Footer = ({changeActiveTab}) => {
               <h5><Link to="#">Projections</Link></h5>
               <h5 onClick={()=>{
             changeActiveTab('capital')
-            window.scrollTo({ top: 0, behavior: "smooth" })
+            window.scrollTo({ top: 0, behavior: "instant" })
             }}><Link to={'/capital'}>Capital</Link></h5>
             </div>
             <div className="footer-section-3">
               <h5><Link to="#">About</Link></h5>
               <Link
                 to={"/career"}
-                onClick={() =>{changeActiveTab('Career'); window.scrollTo({ top: 0, behavior: "smooth" })}}>
+                onClick={() =>{changeActiveTab('Career'); window.scrollTo({ top: 0, behavior: "instant" })}}>
                 Careers
               </Link>
               <Link
                 to={"/contact"}
-                onClick={() => {changeActiveTab('contact');window.scrollTo({ top: 0, behavior: "smooth" })}}>
+                onClick={() => {changeActiveTab('contact');window.scrollTo({ top: 0, behavior: "instant" })}}>
                 Contact
               </Link>
             </div>
@@ -96,12 +97,12 @@ const Footer = ({changeActiveTab}) => {
               <h5><Link to="#">FAQs</Link></h5>
               <Link
                 to={"/privacy"}
-                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+                onClick={() => window.scrollTo({ top: 0, behavior: "instant" })}>
                 Privacy
               </Link>
               <Link
                 to={"/termsandconditions"}
-                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+                onClick={() => window.scrollTo({ top: 0, behavior: "instant" })}>
                 T&C
               </Link>
             </div>
