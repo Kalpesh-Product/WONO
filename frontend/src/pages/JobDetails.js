@@ -7,7 +7,7 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import { Link } from "react-router-dom";
 
-const JobDetails = () => {
+const JobDetails = ({changeActiveTab}) => {
   const { title } = useParams();
   const decodedTitle = decodeURIComponent(title);
 
@@ -81,7 +81,7 @@ const JobDetails = () => {
                 <div className="row">
                   <div className="col-lg-2"></div>
                   <div className="col-lg-8 d-flex flex-column justify-content-center">
-                    <Jobapply jobTitle={title}></Jobapply>
+                    <Jobapply jobTitle={title} changeActiveTab={changeActiveTab}></Jobapply>
                   </div>
                 </div>
               </div>
