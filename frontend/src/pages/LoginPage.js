@@ -12,6 +12,7 @@ import { Container, Box, Grid, TextField, Button } from '@mui/material';
 import LoginWithGoogleImage from "../assets/WONO_images/img/login_images/google-icon2.png";
 import LoginWithFacebookImage from "../assets/WONO_images/img/login_images/login-with-facebook-icon.png";
 import LoginWithEmailImage from "../assets/WONO_images/img/login_images/email-icon.png";
+import Spinners from '../components/Spinner'
 
 const LoginPage = () => {
   const navigate = useNavigate();
@@ -24,6 +25,7 @@ const LoginPage = () => {
   const [modalTitle, setModalTitle] = useState("Error"); // Modal title
   const [modalMessage, setModalMessage] = useState("");
   const [token, setToken] = useState('');
+  const [loading, setLoading] = useState(false)
   const [loginForm, setLoginForm] = useState({
     email: "",
     password: ""
@@ -49,6 +51,7 @@ const LoginPage = () => {
     }
 
     try {
+      setLoading(true)
       const response = await axios.post("/login", {
         email,
         password,
@@ -67,6 +70,8 @@ const LoginPage = () => {
       setModalMessage("Invalid email or password");
       setShowModal(true); // Show the modal for the error
       console.error("Login Failed:", error);
+    } finally{
+      setLoading(false)
     }
 
   
@@ -161,7 +166,7 @@ const LoginPage = () => {
         </p>
         <div className="loginDividingContainer">
           <div className="loginLeftContainer">
-            <Container maxWidth="sm" style={{ paddingTop: "3rem" }}>
+            <Container maxWidth="md" style={{ padding: "3rem 0 0" }}>
               <Box
                 component="form"
                 sx={{ flexGrow: 1 }}
@@ -247,7 +252,7 @@ const LoginPage = () => {
                 >
                   
                 </LoginSocialGoogle> */}
-                <div className="LoginWithGoogleContainer loginWithBox loginWithGoogleBox d-flex justify-content-between align-items-center centerElement w-100">
+                <div className="LoginWithGoogleContainer loginWithBox loginWithGoogleBox d-flex justify-content-between align-items-center centerElement">
                   <div className="loginWithIconBox loginWithGoogleIconBox centerElement">
                     <img
                       src={LoginWithGoogleImage}
@@ -301,6 +306,7 @@ const LoginPage = () => {
         closeText={"Close"}>
         {modalMessage}
       </Modals>
+      {loading && <Spinners animation={'border'} variant={'dark'}/>} 
     </>
   );
 };

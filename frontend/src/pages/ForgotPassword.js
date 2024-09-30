@@ -196,7 +196,7 @@ const ForgotPassword = () => {
     };
 
     return (
-        <div className="forgot-password-container">
+        <div className="forgot-password-container loginTopPadding loginBottomPadding">
             <div className="forgot-password-left-container">
                 <h2 className="text-center mb-4">Password Reset</h2>
 

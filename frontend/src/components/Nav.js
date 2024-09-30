@@ -11,6 +11,7 @@ import WonoLogo from "../assets/WONO_images/img/WONO_LOGO_white _TP.png";
 // import ProfileImage from "../assets/WONO_images/img/user-profile.webp";
 // import ProfileImage from "../assets/WONO_images/img/wono-img-profile.png";
 import ProfileImage from "../assets/WONO_images/img/User-default.png";
+import Spinners from "./Spinner";
 
 const NavBar = ({ activeTab, changeActiveTab }) => {
   const navigate = useNavigate();
@@ -25,6 +26,7 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
   const iscapitalpage = location.pathname === "/capital";
   const [show, setShow] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [loading, setLoading] = useState(false)
   // const [activeTab, setActiveTab] = useState("Home");
 
   // const changeActiveTab = (activeTab) => {
@@ -37,6 +39,7 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
 
   const handleLogout = async () => {
     try {
+      setLoading(true)
       const response = await axios.get("/logout", { withCredentials: true });
   
       if (response.status === 200) {
@@ -55,6 +58,8 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
       }
     } catch (error) {
       console.error("Error logging out:", error);
+    } finally{
+      setLoading(false)
     }
   };
 
@@ -284,6 +289,8 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
           )}
         </Offcanvas.Body>
       </Offcanvas>
+
+      {loading && <Spinners animation={'border'} variant={'dark'}/>} 
     </>
   );
 };

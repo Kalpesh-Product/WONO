@@ -16,9 +16,8 @@
 .accordion-button:focus {
     z-index: 3;
     outline: 0;
-    box-shadow: none
-    ;
-} */
+    box-shadow: none;
+}
 
 i.fa.fa-cheveron-right {
     color: black;
@@ -35,3 +34,4 @@ i.fa.fa-cheveron-right:hover {
 background-color: black;
 color: white;
 }
+*/

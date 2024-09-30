@@ -53,12 +53,13 @@
     background-color: rgb(255, 255, 255);
 }
 
-/* .grow-your-business-color h2 {
-    font-size: 5.4rem;
-} */
+.grow-your-business-color h2 {
+    text-transform: uppercase;
+    font-size: 5.1rem;
+}
 
 .grow-your-business-color p {
-    font-size: 0.875rem;
+    font-size: 1.3rem;
 }
 
 .partners-section>* {
@@ -94,6 +95,10 @@
     flex-direction: column;
     padding: 4rem 4.7rem 4rem 6.8rem;
     width: 100%;
+}
+.testimonial-right-spacing {
+    padding-right: 4rem;
+    padding-bottom: 10rem;
 }
 
 
@@ -221,6 +226,7 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
+    text-transform: uppercase;
 }
 
 .partner-submit-button {
@@ -267,6 +273,16 @@
 
 .full-width-image {
     width: 100%;
+}
+.custom-image-biznest-container {
+    height: 100%;
+
+}
+.custom-image-biznest-container img{
+    width: 75%;
+    height: 75%;
+    object-fit: cover;
+
 }
 
 

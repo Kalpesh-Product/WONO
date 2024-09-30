@@ -15,12 +15,17 @@
         }
     }
 
+    .pFontAdjustment {
+        font-size: 1.2rem;
+    }
+
     .Tickmark-text {
         /* display: flex; */
         /* align-items: center; */
         /* margin-bottom: 6px; */
         /* color: #363636; */
-        font-size: unset;
+        /* font-size: unset; */
+        font-size: 1.1rem;
         /* font-family: Popins-Regular; */
     }
 
@@ -109,7 +114,8 @@
 } */
 
     .automatedPlatformFontSize {
-        font-size: 1.125rem;
+        /* font-size: 1.125rem; */
+        font-size: 1.37rem;
         /* 18px / 16 */
     }
 
@@ -214,7 +220,7 @@
 
     .bottomPaddingForSections {
         /* padding-bottom: 6rem; */
-        padding-bottom: 4rem;
+        padding-bottom: 2rem;
     }
 
     .topPaddingInsideSections {
@@ -242,15 +248,15 @@
     }
 
     .organic-leads-section {
-        padding: 4rem 7.7rem;
+        padding: 4rem 7.7rem 2rem;
     }
 
     .google-sheets-section {
-        padding: 4rem 8rem;
+        padding: 4rem 8rem 2rem;
     }
 
     .marketing-section {
-        padding: 4rem 7.7rem;
+        padding: 4rem 7.7rem 2rem;
     }
 
     .finer-points-section {
@@ -550,6 +556,10 @@
 
         .finer-points-section {
             padding: 1rem;
+        }
+
+        .pFontAdjustment {
+            padding-left: 0;
         }
 
     }
