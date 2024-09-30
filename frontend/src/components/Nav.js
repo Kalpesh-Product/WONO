@@ -19,7 +19,7 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
   const isAuthPage =
     location.pathname === "/login" || location.pathname === "/register";
   const isthempage = location.pathname === "/themes";
-  const isservices = location.pathname === "/services";
+  const isservices = location.pathname === "/saas";
   const isleadspage = location.pathname === "/leads";
   const iscareerpage = location.pathname === "/career";
   const iscapitalpage = location.pathname === "/capital";
@@ -96,7 +96,7 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
           ) : (
             <>
               <Link
-                to="/services"
+                to="/saas"
                 className={
                   (!isAuthPage && isservices) || activeTab === "Services" ? "active" : ""
                 }
@@ -105,19 +105,6 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
                   window.scrollTo({ top: 0, behavior: "instant" });
                 }}>
                 SaaS
-              </Link>
-              <Link
-                to="/capital"
-                className={
-                  (!isAuthPage && iscapitalpage && !isservices) || activeTab === "capital"
-                    ? "active"
-                    : ""
-                }
-                onClick={() => {
-                  changeActiveTab("capital");
-                  window.scrollTo({ top: 0, behavior: "instant" });
-                }}>
-                Capital
               </Link>
               <Link
                 to="/themes"
@@ -142,6 +129,19 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
                     : ""
                 }>
                 Leads
+              </Link>
+              <Link
+                to="/capital"
+                className={
+                  (!isAuthPage && iscapitalpage && !isservices) || activeTab === "capital"
+                    ? "active"
+                    : ""
+                }
+                onClick={() => {
+                  changeActiveTab("capital");
+                  window.scrollTo({ top: 0, behavior: "instant" });
+                }}>
+                Capital
               </Link>
               <Link
                 to="/career"

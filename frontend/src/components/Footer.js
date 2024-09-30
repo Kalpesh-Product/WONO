@@ -60,7 +60,7 @@ const Footer = ({changeActiveTab}) => {
               <h5 onClick={()=>{
             changeActiveTab('Services')
             window.scrollTo({ top: 0, behavior: "smooth" })
-            }} ><Link to="/services">SaaS</Link></h5>
+            }} ><Link to="/saas">SaaS</Link></h5>
               <h5 onClick={()=>{
             changeActiveTab('leads')
             window.scrollTo({ top: 0, behavior: "smooth" })

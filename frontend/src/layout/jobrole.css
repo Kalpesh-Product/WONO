@@ -7,7 +7,7 @@
     width: 5%;
     border-bottom: 3px solid orange;
 }
-.accordion-button:not(.collapsed) {
+/* .accordion-button:not(.collapsed) {
     color: var(--bs-accordion-active-color);
     background-color: white;
     box-shadow: none;
@@ -18,7 +18,7 @@
     outline: 0;
     box-shadow: none
     ;
-}
+} */
 
 i.fa.fa-cheveron-right {
     color: black;

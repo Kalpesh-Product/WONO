@@ -88,7 +88,7 @@
 }
 
 .cards-with-text p span {
-    color: antiquewhite;
+    color: white;
 }
 
 .capital-img {
@@ -266,11 +266,11 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 4rem 12rem;
+    padding: 4rem 7rem;
 }
 
 .frictionless-heading-with-btns h1 {
-    font-size: 70px;
+    font-size: 57px;
     font-family: popins-Regular;
     color: white;
     text-align: center;
