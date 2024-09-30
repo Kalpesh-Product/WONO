@@ -32,7 +32,7 @@ const allowedHeaders = [
 // "https://www.wono.co"
 
 app.use(cors({
-  origin: true , // Reflects the request origin, allowing all origins
+  origin: "https://www.wono.co" , // Reflects the request origin, allowing all origins
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   credentials: true, // Allow cookies to be sent
   allowedHeaders : allowedHeaders,
