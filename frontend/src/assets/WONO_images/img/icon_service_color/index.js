@@ -71,14 +71,16 @@
 // import WorkingCapital from "./WorkingCapital.png";
 
 // Coloured icons start
-import androidAppSaas from "./AndroidApp_SaaS.png";
+// import androidAppSaas from "./AndroidApp_SaaS.png";
+import androidAppSaas from "./ANDROID.png";
 import bookingsSaas from "./Bookings_SaaS.png";
 import chatSaas from "./Chat_SaaS.png";
 import customerProfile from "./CustomerProfile_SaaS.png";
 
 import customerService from "./CustomerService_SaaS.png";
 import events from "./Events_SaaS.png";
-import iosApp from "./iOSApp_SaaS.png";
+// import iosApp from "./iOSApp_SaaS.png";
+import iosApp from "./IOS.png";
 import mobileSite from "./MobileSite_SaaS.png";
 
 import notifications from "./Notifications_SaaS.png";

@@ -3,6 +3,75 @@
     padding: 0;
 }
 
+.itsFreeButton {
+    text-decoration: none;
+    color: black;
+    font-size: 1.7rem;
+    font-weight: bolder;
+}
+
+
+
+.hero__animationx {
+    fill: none;
+    stroke: rgb(80, 186, 232);
+    stroke-width: 4;
+    stroke-miterlimit: 0;
+    stroke-dasharray: 1650;
+    stroke-linecap: round;
+    animation: animateScribble 2s ease-out .5s forwards;
+    height: 100px;
+    left: 29.5rem;
+    opacity: 0;
+    position: absolute;
+    top: 36rem;
+    transform-origin: left;
+    z-index: -1;
+    padding-bottom: 18px;
+    padding-left: 40px;
+    /* transform: scaleX(1.8); */
+    /* Reduce the width by 20% */
+}
+
+/* .hero__animationx {
+    fill: none;
+    stroke: rgb(80, 186, 232);
+    stroke-width: 4;
+    stroke-miterlimit: 0;
+    stroke-dasharray: 500;
+  
+    stroke-linecap: round;
+    animation: animateScribble 2s ease-out .5s forwards;
+    height: 100px;
+    left: 19.5rem;
+    opacity: 0;
+    position: absolute;
+    top: 37.5rem;
+    transform-origin: left;
+    z-index: -1;
+    padding-bottom: 18px;
+    padding-left: 40px;
+} */
+
+.aSimpleNoCode {
+    font-size: 1.32rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+
+}
+
+.p1NomadCommerce {
+    font-size: 1.8rem;
+    margin-bottom: 0;
+
+}
+
+.p2WoNoCo {
+    font-size: 1.8rem;
+    margin-bottom: 0;
+
+}
+
 .master-container {
     background-color: white;
     height: 100%
@@ -54,25 +123,27 @@
     font-weight: bold;
     background: white;
     z-index: 1;
-    pointer-events: none; /* Prevent interaction with the placeholder */
+    pointer-events: none;
+    /* Prevent interaction with the placeholder */
 }
 
 .date-picker input {
     position: relative;
     z-index: 2;
     background: transparent;
-   
-    color:transparent;
-   
+
+    color: transparent;
+
 }
 
 .date-picker input:focus {
     color: #000;
-   
+
 }
+
 .date-picker input:active {
     color: #000;
-   
+
 }
 
 
@@ -128,6 +199,7 @@
     height: 100vh;
     position: relative;
     padding: 0.3rem 7.3rem;
+    font-family: Popins-Regular;
 }
 
 .background-div {
@@ -135,7 +207,8 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    /* height: 100%; */
+    height: 104.5%;
     z-index: 0;
 }
 
@@ -148,6 +221,10 @@
     top: -40px;
     left: 0;
     z-index: -1;
+
+    opacity: 0.5;
+    /* Adjust value between 0 (fully transparent) to 1 (fully opaque) */
+
 }
 
 .black-overlay {
@@ -190,7 +267,8 @@
     /* padding-left: 4.7rem; */
     width: 100%;
 }
-.home-section-register-button-space{
+
+.home-section-register-button-space {
     width: 100%;
 }
 
@@ -224,13 +302,15 @@
 
 .home-main-title {
     color: black;
-    font-size: 6rem;
+    font-size: 5.5rem;
     /* font-family: Mistral; */
-    font-family: Caveat;
+    /* font-family: Caveat; */
+    font-family: Popins-Regular;
     margin-top: 3rem;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     font-weight: 900;
     /* padding: 6rem 6rem 1rem 6rem; */
+    padding-top: 13rem;
 }
 
 
@@ -260,6 +340,7 @@
     font-size: x-large;
     font-family: Popins-Medium;
 }
+
 .form-card {
     background-color: rgba(255, 255, 255, 255);
     padding-left: 2rem;
@@ -295,7 +376,8 @@
         justify-content: center;
         /* padding-left: 1rem; */
     }
-    .home-section-register-button-space{
+
+    .home-section-register-button-space {
         width: 90%;
     }
 
@@ -336,7 +418,7 @@
         font-family: Popins-Medium;
         padding: 1rem;
         text-align: center;
-        font-size:0.9rem;
+        font-size: 0.9rem;
     }
 
     .home-desc span {
@@ -389,7 +471,8 @@
         justify-content: center;
         /* padding-left: 1rem; */
     }
-    .home-section-register-button-space{
+
+    .home-section-register-button-space {
         width: 90%;
     }
 
@@ -430,7 +513,7 @@
         font-family: Popins-Medium;
         padding: 1rem;
         text-align: center;
-        font-size:0.9rem;
+        font-size: 0.9rem;
     }
 
     .home-desc span {
@@ -547,6 +630,7 @@
         padding: 0rem 4rem;
         padding-right: 3rem;
     }
+
     .Globe-N-Commerce {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -1126,7 +1210,7 @@
         padding: 4rem;
         background-color: #f7f7f7;
         color: black;
-    
+
     }
 
     .website-panel-content {
@@ -1134,7 +1218,7 @@
         grid-template-columns: 50% 1fr;
         padding: 2rem 0;
         gap: 2rem;
-    
+
         margin-bottom: 20px;
     }
 
@@ -1146,7 +1230,7 @@
         height: 100%;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     }
-    
+
     .template-preview-container img {
         width: 100%;
         height: 100%;
@@ -1227,6 +1311,7 @@
         position: sticky;
         left: 0;
     }
+
     .website-panel-right .template-preview-container {
         display: flex;
         align-items: center;
@@ -1266,6 +1351,7 @@
         padding-right: 1.3rem;
     }
 }
+
 @media (max-width:1024px) {
     .testimonial-section {
         /* background-color: #cae4ff !important; */
