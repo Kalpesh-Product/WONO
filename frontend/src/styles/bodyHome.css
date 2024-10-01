@@ -295,11 +295,15 @@
 .home-desc {
     color: black;
     text-align: left;
-    font-family: Popins-Medium;
+    font-family: Popins-Regular;
     position: relative;
     width: 100%;
     font-size: 1.8rem;
-    font-weight: bold;
+    font-weight: 400;
+}
+.home-desc:hover{
+    font-family: Popins-Medium;
+    /* font-weight: bold; */
 }
 
 .home-desc img {
@@ -629,7 +633,7 @@
 }
 
 .N-Commerce p {
-    color: #0875e2;
+    color: #0AA9EF;
     align-self: center;
     font-size: 40px;
     width: fit-content;

@@ -13,15 +13,15 @@ import { Nav } from "react-bootstrap";
 // import WonoLogo from '../assets//WONO_images/img/WONO_LOGO_white _TP.png';
 // import WonoLogoBlack from '../assets//WONO_images/img/WONO_LOGO_Black_TP.png';
 import BiznestLogo from "../assets/BIZNest/biznest_logo.jpg";
-import CafeImage from "../assets/WONO_images/img/website-builder/new-layout/cafe.png";
-import CoWorkingImage from "../assets/WONO_images/img/website-builder/new-layout/co-working.png";
+import CafeImage from "../assets/WONO_images/img/website-builder/new-layout/cafe.webp";
+import CoWorkingImage from "../assets/WONO_images/img/website-builder/new-layout/co-working.webp";
 import Hostels from "../assets/WONO_images/img/website-builder/new-layout/hostels.png";
-import CoLivingImage from "../assets/WONO_images/img/website-builder/new-layout/co-living.png";
+import CoLivingImage from "../assets/WONO_images/img/website-builder/new-layout/co-living.webp";
 import CafeImageLong from "../assets/WONO_images/img/website-builder/new-layout/long/cafe-long.jpeg";
 import CoWorkingImageLong from "../assets/WONO_images/img/website-builder/new-layout/long/co-working-long.jpeg";
 import BoutiqueLong from "../assets/WONO_images/img/website-builder/new-layout/long/boutique-long.jpeg";
 import CoLivingImageLong from "../assets/WONO_images/img/website-builder/new-layout/long/co-living-long.jpeg";
-import Boutique from "../assets/WONO_images/img/website-builder/new-layout/boutique.png";
+import Boutique from "../assets/WONO_images/img/website-builder/new-layout/boutique.webp";
 import DashboardBooking from "./Dashboard-pages/DashboardBooking";
 import DashboardAsset from "./Dashboard-pages/DashboardAsset";
 import DashboardHR from "./Dashboard-pages/DashboardHR";
@@ -35,9 +35,10 @@ import FourCardsComponents from "../components/Four_cardsComponents";
 import WebsiteCafe from "./WebsiteBuilder/WebsiteCafe";
 import WebsiteWorkation from "./WebsiteBuilder/WebsiteWorkation";
 import "../styles/bodyPartners.css";
-import BiznestTestimonial from "../assets/testimonials/kashif-image.jpg";
 import greenUnderLine from '../assets/underline-bg/blue-line.png'
 import greenRound from '../assets/underline-bg/blue-circle.png'
+// import BiznestTestimonial from "../assets/testimonials/kashif-image.jpg";
+import BiznestTestimonial from "../assets/testimonials/kashif-image.webp";
 // import "../styles/bodyLastBanner.css";
 
 const Homepage = () => {
@@ -141,6 +142,9 @@ const Homepage = () => {
           <div className="background-div">
             <div>
               <img src={''} alt={`Slide`} className="background-image" />
+
+              {/* <img src={''} className="background-image" /> */}
+              <img src={''} className="background-image" />
             </div>
             <div className="black-overlay"></div>
           </div>
@@ -153,7 +157,7 @@ const Homepage = () => {
                 </div>
                 <div className="col-12 col-md-6 home-main-tagline">
                 <span>"Nomad Commerce"</span>
-                <span>WoNo.Co = <b style={{fontWeight:'800'}}>Wo</b>rld <b style={{fontWeight:'800'}}>No</b>mad <b style={{fontWeight:'800'}}>Co</b>mmerce</span>
+                <span><b style={{fontWeight:'800'}}>WoNo.Co</b> = <b style={{fontWeight:'800'}}>Wo</b>rld <b style={{fontWeight:'800'}}>No</b>mad <b style={{fontWeight:'800'}}>Co</b>mmerce</span>
                 </div>
               </div>
             </h2>
@@ -164,15 +168,6 @@ const Homepage = () => {
               <img src={greenRound}alt="" />
               IT'S FREE
             </span>
-            {/* <div className="home-section-buttons">
-              <div className="home-section-register-button-space">
-                <button
-                  className="home-section-register-button"
-                  onClick={handleRegister}>
-                  BUSINESS SIGN UP
-                </button>
-              </div>
-            </div> */}
           </div>
         </div>
 
@@ -385,8 +380,9 @@ const Homepage = () => {
 
                         </div> */}
               <div
-                className={`website-panel-right ${selectedId ? "modal-open" : ""
-                  }`}>
+                className={`website-panel-right ${
+                  selectedId ? "modal-open" : ""
+                }`}>
                 <div className="website-panel-content">
                   {webimages.map((image) => (
                     <div className="template-preview-container" key={image.id}>
