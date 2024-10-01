@@ -73,7 +73,7 @@ const Capital = () => {
             {/* Raise Frictionless fundressing for startup*/}
             <div className='big-end-image'>
                 <div className='frictionless-heading-with-btns'>
-                    <h1><span>Systematic</span> & seamless fundraising with accurate projections and cashflow trends.</h1>
+                    <h1><span>Systematic & seamless</span> fundraising with accurate projections and cashflow trends.</h1>
                     <div className='frictionless-btns'>
                         <Link to="/register"><button className='capital-start-for-free-btn btn1'>Start for free</button></Link>
                         <Link to="/register"><button className='capital-start-for-free-btn btn2'>Contact sales</button></Link>

@@ -121,7 +121,7 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
                 className={
                   (!isAuthPage && isthempage) && activeTab === "themes" ? "active" : ""
                 }>
-                Theme
+                Themes
               </Link>
               <Link
                 to="/leads"
