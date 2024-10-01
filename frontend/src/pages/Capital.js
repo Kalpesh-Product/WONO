@@ -93,5 +93,7 @@ const Capital = () => {
             </div>
 
         </div>
+    )
+}
 
 export default Capital;
