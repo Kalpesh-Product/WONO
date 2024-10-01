@@ -339,6 +339,14 @@
     width: 60%;
 }
 
+@media (max-width: 1440px) {
+    .home-main-desc-title {
+        font-size: 3.88rem;
+        position: relative;
+        display: inline-block;
+    }
+}
+
 /* Responsive styles for screens 1024px and below */
 @media (max-width: 1024px) {
     .home-page-container {
