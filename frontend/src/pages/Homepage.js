@@ -135,7 +135,7 @@ const Homepage = () => {
   return (
     <div className="master-container">
       <div className="home-section">
-        <div className="home-page-container">
+        {/* <div className="home-page-container">
           <div className="background-div">
             <div>
               <img src={''} className="background-image" />
@@ -213,6 +213,66 @@ const Homepage = () => {
                   BUSINESS SIGN UP
                 </button> */}
               </div>
+            </div>
+          </div>
+        </div> */}
+        <div className="home-page-container">
+          <div className="background-div">
+            <div>
+              {/* <img src={images[0]} alt={`Slide`} className="background-image" /> */}
+              <img src={""} className="background-image" />
+            </div>
+          </div>
+          <div className="first-section-grid-item-1">
+            <h2 className="home-main-title m-0">
+              <span>Introducing N-Commerce!</span>
+            </h2>
+            <div className="container">
+              <div className="row">
+                <div className="col-lg-6 col-md-6"></div>
+                <div className="col-lg-6 col-md-6">
+                  <p className="text-center p1NomadCommerce">
+                    "Nomad Commerce"
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="container">
+              <div className="row">
+                <div className="col-lg-6 col-md-6"></div>
+                <div className="col-lg-6 col-md-6">
+                  <p className="text-center p2WoNoCo">
+                    WoNo.Co = <span className="fw-bold">Wo</span>rld{" "}
+                    <span className="fw-bold">No</span>mad{" "}
+                    <span className="fw-bold">Co</span>
+                    mmerce
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <p className="aSimpleNoCode m-0">
+                A simple no code instant SaaS software platform that supports
+                businesses in remote and aspiring destinations! Provide services
+                to nomads across the world. (Example: Co-Working, Co-Living,
+                Hostels, Resorts, Cafes, Events etc)
+              </p>
+            </div>
+
+            <div>
+              <Link className="itsFreeButton " to="/login">
+                <span>
+                  ITS FREE{" "}
+                  <svg
+                    fill="none"
+                    // viewBox="0 0 390 97"
+                    viewBox="190 0 390 97"
+                    className="hero__animationx hero__animation--standard">
+                    <path d="M2,76.26c16.11,4.95,31.91,3.84,48.58,3.84,20.39,0,40.67,0,61,1,18,.87,36-1,53.94-1,15.79,0,31.51,1.81,47.31,1.21,24.51-.93,49.17-2.18,73.68-2.49,19.45-.25,39.4,1.59,58.76-.64,15-1.73,29-2.29,39.75-14.79C387.89,60.1,390.5,48.5,386.5,40c-5.69-12.09-12.63-18.68-23.67-25.17C341.68,2.4,314.67,1.82,291.09,2c-21.31.2-55.45,3.62-68.52,24.46C212.14,43.1,212,59.57,227.79,72.77c24.81,20.81,63.45,26.8,93.41,18.85"></path>
+                  </svg>
+                </span>
+              </Link>
             </div>
           </div>
         </div>
