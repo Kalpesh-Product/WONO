@@ -146,22 +146,14 @@ const Homepage = () => {
           </div>
           <div className="first-section-grid-item-1">
             <h2 className="home-main-title ">
-              {/* <span className="w"> W</span>
-              <span className="O">o</span>rld
-              <span className="n">N</span>
-              <span className="O">o</span>mads */}
-              <span style={{ display: 'flex', columnGap: '1rem', padding:'0rem 0 2rem ' }}>Introducing <div className="home-main-title-svg"> <img src={greenUnderLine} />N-Commerce! </div></span>
-              {/* <div style={{display:'flex', flexDirection:'column', textAlign:'end', paddingRight:'5rem'}}>
-              <span style={{ fontSize: '1rem' }}>"Nomad Commerce"</span>
-              <span style={{ fontSize: '1rem', marginLeft:"5rem", display:'flex', justifyContent:'end', width:'100%', fontWeight:'200' }}>WoNo.Co = <b>Wo</b>rld <b>No</b>mad <b>Co</b>mmerce</span>
-              </div> */}
+              <span className="home-main-intro">Introducing <div className="home-main-title-svg"> <img src={greenUnderLine} />N-Commerce! </div></span>
               <div className="row">
-                <div className="col-6">
-
+                <div className="col-md-6">
+                {/* Empty div */}
                 </div>
-                <div className="col-6" style={{display:'flex', flexDirection:'column', textAlign:'center'}}>
-                <span style={{ fontSize: '1.8rem', fontWeight:'200' }}>"Nomad Commerce"</span>
-                <span style={{ fontSize: '1.8rem', fontWeight:'200' }}>WoNo.Co = <b style={{fontWeight:'800'}}>Wo</b>rld <b style={{fontWeight:'800'}}>No</b>mad <b style={{fontWeight:'800'}}>Co</b>mmerce</span>
+                <div className="col-12 col-md-6 home-main-tagline">
+                <span>"Nomad Commerce"</span>
+                <span>WoNo.Co = <b style={{fontWeight:'800'}}>Wo</b>rld <b style={{fontWeight:'800'}}>No</b>mad <b style={{fontWeight:'800'}}>Co</b>mmerce</span>
                 </div>
               </div>
             </h2>

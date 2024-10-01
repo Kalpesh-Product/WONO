@@ -219,7 +219,10 @@ const ProductPage = () => {
               Build fast, sell more and grow more revenues immediately with WoNo
             </span>
             <div className="product-page-build-button-space">
-              <button className="product-page-button">It's FREE</button>
+              <button onClick={() => {
+                navigate("/register");
+                window.scrollTo({ top: 0, behavior: "instant" });
+              }} className="product-page-button">It's FREE</button>
             </div>
           </div>
         </div>

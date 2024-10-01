@@ -1077,7 +1077,7 @@ const Services = () => {
           </h1>
                 {/* <h1>Reports & Analytics</h1> */}
               </div>
-              <div className="business-grid">
+              <div style={{marginBottom:'4rem'}} className="business-grid">
                 {services_reportsAnalytics.map((service) => (
                   <div
                     className="business-service-card shadow"

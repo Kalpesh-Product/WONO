@@ -1,4 +1,5 @@
 // NavBar.js
+//Kindly make changes in the offCanvas as well while making changes in the main navbar
 import React, { useContext, useState, useEffect } from "react";
 import { UserContext } from '../contexts/UserContext';
 import { useNavigate, useLocation } from "react-router-dom";
@@ -222,7 +223,7 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
           </Link> */}
           <Link
             className="custom-offcanvas-link"
-            to="/services"
+            to="/saas"
             onClick={handleClose}>
             SaaS
           </Link>

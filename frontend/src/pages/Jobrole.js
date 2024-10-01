@@ -28,18 +28,18 @@ const Jobrole = () => {
 
               <div className='mob-down' style={{ display: "flex" }}>
                 <div className='col-lg-6'>
-                  <h5 style={{ fontSize: "1.5rem", margin: "10 0", color: "#000" }}>1.UI Designer</h5>
+                  <h5 classname="career-job-title" >1.UI Designer</h5>
 
                 </div>
                 <div className='col-lg-6' style={{ textAlign: "right" }}>
-                  <p style={{ fontWeight: "600", margin: "10px 0" }}>
+                   <p style={{ fontWeight: "600", margin : 0}}>
                     <span className='link-btn'>Full-Time | On-Site| Goa </span>
 
                     <Link onClick={() => {
                       window.scrollTo({
                         top: 0, behavior: 'instant'
                       })
-                    }} to={`/jobdetails/1/${encodeURIComponent('UI Designer')}`} ><i className='fa fa-cheveron-right'>&gt;</i></Link>
+                    }} to={`/jobdetails/1/${encodeURIComponent('UI Designer')}`} ><i className='fa fa-cheveron-right jobrole-arrow'>&gt;</i></Link>
                   </p>
                 </div>
               </div>
@@ -49,17 +49,17 @@ const Jobrole = () => {
             <Accordion.Body>
               <div className='mob-down' style={{ display: "flex" }}>
                 <div className='col-lg-6'>
-                  <h5 style={{ fontSize: "1.5rem", margin: "10 0", color: "#000" }}> 2. Marketing Analytics</h5>
+                  <h5 classname="career-job-title" > 2. Marketing Analytics</h5>
                   <span style={{ fontSize: "1rem" }}>(SEO/Google Analytics) </span>
                 </div>
                 <div className='col-lg-6' style={{ textAlign: "right" }}>
-                  <p style={{ fontWeight: "600", margin: "10px 0" }}>
+                   <p style={{ fontWeight: "600", margin : 0}}>
                     <span className='link-btn'>Full-Time | On-Site| Goa </span>
                     <Link onClick={() => {
                       window.scrollTo({
                         top: 0, behavior: 'instant'
                       })
-                    }} to={`/jobdetails/2/${encodeURIComponent('Marketing Analytics')}`}><i className='fa fa-cheveron-right' >&gt;</i></Link>
+                    }} to={`/jobdetails/2/${encodeURIComponent('Marketing Analytics')}`}><i className='fa fa-cheveron-right jobrole-arrow' >&gt;</i></Link>
                   </p>
                 </div>
               </div>
@@ -72,16 +72,16 @@ const Jobrole = () => {
             <Accordion.Body>
               <div className='mob-down' style={{ display: "flex" }}>
                 <div className='col-lg-6'>
-                  <h5 style={{ fontSize: "1.5rem", margin: "10 0", color: "#000" }}> 1. Jr. UI/UX Developer</h5>
+                  <h5 classname="career-job-title" > 1. Jr. UI/UX Developer</h5>
                 </div>
                 <div className='col-lg-6' style={{ textAlign: "right" }}>
-                  <p style={{ fontWeight: "600", margin: "10px 0" }}>
+                   <p style={{ fontWeight: "600", margin : 0}}>
                     <span className='link-btn'>Full-Time | On-Site| Goa </span>
                     <Link onClick={() => {
                       window.scrollTo({
                         top: 0, behavior: 'instant'
                       })
-                    }} to={`/jobdetails/2/${encodeURIComponent('Jr.UI/UX Developer')}`}><i className='fa fa-cheveron-right' >&gt;</i></Link>
+                    }} to={`/jobdetails/2/${encodeURIComponent('Jr.UI/UX Developer')}`}><i className='fa fa-cheveron-right jobrole-arrow'>&gt;</i></Link>
                   </p>
                 </div>
               </div>
@@ -93,16 +93,16 @@ const Jobrole = () => {
               <div className='mob-down' style={{ display: "flex" }}>
                 <div className='col-lg-6'>
 
-                  <h5 style={{ fontSize: "1.5rem", margin: "10 0", color: "#000" }}> 2. PHP Developer</h5>
+                  <h5 classname="career-job-title" > 2. PHP Developer</h5>
                 </div>
                 <div className='col-lg-6' style={{ textAlign: "right" }}>
-                  <p style={{ fontWeight: "600", margin: "10px 0" }}>
+                   <p style={{ fontWeight: "600", margin : 0}}>
                     <span className='link-btn'>Full-Time | On-Site| Goa </span>
                     <Link onClick={() => {
                       window.scrollTo({
                         top: 0, behavior: 'instant'
                       })
-                    }} to={`/jobdetails/2/${encodeURIComponent('PHP Developer')}`}><i className='fa fa-cheveron-right' >&gt;</i></Link>
+                    }} to={`/jobdetails/2/${encodeURIComponent('PHP Developer')}`}><i className='fa fa-cheveron-right jobrole-arrow' >&gt;</i></Link>
                   </p>
                 </div>
               </div>
@@ -111,16 +111,16 @@ const Jobrole = () => {
             <Accordion.Body>
               <div className='mob-down' style={{ display: "flex" }}>
                 <div className='col-lg-6'>
-                  <h5 style={{ fontSize: "1.5rem", margin: "10 0", color: "#000" }}> 3. Webs Developer Intern</h5>
+                  <h5 classname="career-job-title" > 3. Webs Developer Intern</h5>
                 </div>
                 <div className='col-lg-6' style={{ textAlign: "right" }}>
-                  <p style={{ fontWeight: "600", margin: "10px 0" }}>
+                   <p style={{ fontWeight: "600", margin : 0}}>
                     <span className='link-btn'>Full-Time | On-Site| Goa </span>
                     <Link onClick={() => {
                       window.scrollTo({
                         top: 0, behavior: 'instant'
                       })
-                    }} to={`/jobdetails/2/${encodeURIComponent('Web Developer Intern')}`}><i className='fa fa-cheveron-right' >&gt;</i></Link>
+                    }} to={`/jobdetails/2/${encodeURIComponent('Web Developer Intern')}`}><i className='fa fa-cheveron-right jobrole-arrow' >&gt;</i></Link>
                   </p>
                 </div>
               </div>
@@ -132,16 +132,16 @@ const Jobrole = () => {
             <Accordion.Body>
               <div className='mob-down' style={{ display: "flex" }}>
                 <div className='col-lg-6'>
-                  <h5 style={{ fontSize: "1.5rem", margin: "10 0", color: "#000" }}> 1. Finance Intern</h5>
+                  <h5 classname="career-job-title" > 1. Finance Intern</h5>
                 </div>
                 <div className='col-lg-6' style={{ textAlign: "right" }}>
-                  <p style={{ fontWeight: "600", margin: "10px 0" }}>
+                   <p style={{ fontWeight: "600", margin : 0}}>
                     <span className='link-btn'>Full-Time | On-Site| Goa </span>
                     <Link onClick={() => {
                       window.scrollTo({
                         top: 0, behavior: 'instant'
                       })
-                    }} to={`/jobdetails/2/${encodeURIComponent('Finance Intern')}`}><i className='fa fa-cheveron-right' >&gt;</i></Link>
+                    }} to={`/jobdetails/2/${encodeURIComponent('Finance Intern')}`}><i className='fa fa-cheveron-right jobrole-arrow' >&gt;</i></Link>
                   </p>
                 </div>
               </div>
@@ -154,16 +154,16 @@ const Jobrole = () => {
             <Accordion.Body>
               <div className='mob-down' style={{ display: "flex" }}>
                 <div className='col-lg-6'>
-                  <h5 style={{ fontSize: "1.5rem", margin: "10 0", color: "#000" }}> 1. HR Generalist</h5>
+                  <h5 classname="career-job-title" > 1. HR Generalist</h5>
                 </div>
                 <div className='col-lg-6' style={{ textAlign: "right" }}>
-                  <p style={{ fontWeight: "600", margin: "10px 0" }}>
+                   <p style={{ fontWeight: "600", margin : 0}}>
                     <span className='link-btn'>Full-Time | On-Site| Goa </span>
                     <Link onClick={() => {
                       window.scrollTo({
                         top: 0, behavior: 'instant'
                       })
-                    }} to={`/jobdetails/2/${encodeURIComponent('HR Generalist')}`}><i className='fa fa-cheveron-right' >&gt;</i></Link>
+                    }} to={`/jobdetails/2/${encodeURIComponent('HR Generalist')}`}><i className='fa fa-cheveron-right jobrole-arrow' >&gt;</i></Link>
                   </p>
                 </div>
               </div>
@@ -173,16 +173,16 @@ const Jobrole = () => {
             <Accordion.Body>
               <div className='mob-down' style={{ display: "flex" }}>
                 <div className='col-lg-6'>
-                  <h5 style={{ fontSize: "1.5rem", margin: "10 0", color: "#000" }}> 2. Executive Assistant to CEO</h5>
+                  <h5 classname="career-job-title" > 2. Executive Assistant to CEO</h5>
                 </div>
                 <div className='col-lg-6' style={{ textAlign: "right" }}>
-                  <p style={{ fontWeight: "600", margin: "10px 0" }}>
+                   <p style={{ fontWeight: "600", margin : 0}}>
                     <span className='link-btn'>Full-Time | On-Site| Goa </span>
                     <Link onClick={() => {
                       window.scrollTo({
                         top: 0, behavior: 'instant'
                       })
-                    }} to={`/jobdetails/2/${encodeURIComponent('Executive Assistant to CEO')}`}><i className='fa fa-cheveron-right' >&gt;</i></Link>
+                    }} to={`/jobdetails/2/${encodeURIComponent('Executive Assistant to CEO')}`}><i className='fa fa-cheveron-right jobrole-arrow' >&gt;</i></Link>
                   </p>
                 </div>
               </div>
@@ -194,16 +194,16 @@ const Jobrole = () => {
             <Accordion.Body>
               <div className='mob-down' style={{ display: "flex" }}>
                 <div className='col-lg-6'>
-                  <h5 style={{ fontSize: "1.5rem", margin: "10 0", color: "#000" }}> 1. Sr.Manager Sales & Bussiness Development </h5>
+                  <h5 classname="career-job-title" > 1. Sr.Manager Sales & Bussiness Development </h5>
                 </div>
                 <div className='col-lg-6' style={{ textAlign: "right" }}>
-                  <p style={{ fontWeight: "600", margin: "10px 0" }}>
+                   <p style={{ fontWeight: "600", margin : 0}}>
                     <span className='link-btn'>Full-Time | On-Site| Goa </span>
                     <Link onClick={() => {
                       window.scrollTo({
                         top: 0, behavior: 'instant'
                       })
-                    }} to={`/jobdetails/2/${encodeURIComponent('Sr.Manager Sales & Bussiness Development')}`}><i className='fa fa-cheveron-right' >&gt;</i></Link>
+                    }} to={`/jobdetails/2/${encodeURIComponent('Sr.Manager Sales & Bussiness Development')}`}><i className='fa fa-cheveron-right jobrole-arrow' >&gt;</i></Link>
                   </p>
                 </div>
               </div>
@@ -215,16 +215,16 @@ const Jobrole = () => {
             <Accordion.Body>
               <div className='mob-down' style={{ display: "flex" }}>
                 <div className='col-lg-6'>
-                  <h5 style={{ fontSize: "1.5rem", margin: "10 0", color: "#000" }}> 1. Social Media Executive</h5>
+                  <h5 classname="career-job-title" > 1. Social Media Executive</h5>
                 </div>
                 <div className='col-lg-6' style={{ textAlign: "right" }}>
-                  <p style={{ fontWeight: "600", margin: "10px 0" }}>
+                   <p style={{ fontWeight: "600", margin : 0}}>
                     <span className='link-btn'>Full-Time | On-Site| Goa </span>
                     <Link onClick={() => {
                       window.scrollTo({
                         top: 0, behavior: 'instant'
                       })
-                    }} to={`/jobdetails/2/${encodeURIComponent('Social Media Executive')}`}><i className='fa fa-cheveron-right' >&gt;</i></Link>
+                    }} to={`/jobdetails/2/${encodeURIComponent('Social Media Executive')}`}><i className='fa fa-cheveron-right jobrole-arrow' >&gt;</i></Link>
                   </p>
                 </div>
               </div>

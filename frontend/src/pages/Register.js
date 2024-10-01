@@ -405,7 +405,13 @@ const Register = () => {
                   <h2>Let's set up your free account</h2>
                 </div>
                 <div className="register-container">
-                  <Container maxWidth="md w-50">
+                  <Container maxWidth="md" sx={{
+                    width: {
+                      xs: '100%', // Full width on extra small screens (mobile)
+                      sm: '100%', // Full width on small screens
+                      md: '50%'   // 50% width on medium and larger screens
+                    },
+                  }}>
                     <Box
                       component="form"
                       sx={{ flexGrow: 1 }}
@@ -539,8 +545,8 @@ const Register = () => {
                             <span>
                               By clicking below you accept the terms and conditions
                             </span>
-                            <span style={{ display: 'block', marginTop: '10px' }}>
-                              Already have an account ? <Link onClick={() => {
+                            <span style={{ display: 'block', marginTop: '10px', textDecoration:'none' }}>
+                              Already have an account ? <Link style={{textDecoration:'none'}} onClick={() => {
                                 window.scrollTo({ top: 0, behavior: 'instant' })
                               }} to="/login">Log-in</Link>
                             </span>
@@ -892,7 +898,7 @@ const Register = () => {
             )}
           </form>
         </div>
-        {loading && <Spinners animation={'border'} variant={'dark'}/>} 
+        {loading && <Spinners animation={'border'} variant={'dark'} />}
       </section>
 
     </div>
