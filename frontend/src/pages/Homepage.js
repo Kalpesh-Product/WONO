@@ -36,6 +36,8 @@ import WebsiteCafe from "./WebsiteBuilder/WebsiteCafe";
 import WebsiteWorkation from "./WebsiteBuilder/WebsiteWorkation";
 import "../styles/bodyPartners.css";
 import BiznestTestimonial from "../assets/testimonials/kashif-image.jpg";
+import greenUnderLine from '../assets/underline-bg/blue-line.png'
+import greenRound from '../assets/underline-bg/blue-circle.png'
 // import "../styles/bodyLastBanner.css";
 
 const Homepage = () => {
@@ -135,29 +137,42 @@ const Homepage = () => {
   return (
     <div className="master-container">
       <div className="home-section">
-      <div className="home-page-container">
+        <div className="home-page-container">
           <div className="background-div">
             <div>
-              <img src={images[0]} alt={`Slide`} className="background-image" />
+              <img src={''} alt={`Slide`} className="background-image" />
             </div>
             <div className="black-overlay"></div>
           </div>
           <div className="first-section-grid-item-1">
             <h2 className="home-main-title ">
-              <span className="w"> W</span>
+              {/* <span className="w"> W</span>
               <span className="O">o</span>rld
               <span className="n">N</span>
-              <span className="O">o</span>mads
-              <br />
+              <span className="O">o</span>mads */}
+              <span style={{ display: 'flex', columnGap: '1rem', padding:'0rem 0 2rem ' }}>Introducing <div className="home-main-title-svg"> <img src={greenUnderLine} />N-Commerce! </div></span>
+              {/* <div style={{display:'flex', flexDirection:'column', textAlign:'end', paddingRight:'5rem'}}>
+              <span style={{ fontSize: '1rem' }}>"Nomad Commerce"</span>
+              <span style={{ fontSize: '1rem', marginLeft:"5rem", display:'flex', justifyContent:'end', width:'100%', fontWeight:'200' }}>WoNo.Co = <b>Wo</b>rld <b>No</b>mad <b>Co</b>mmerce</span>
+              </div> */}
+              <div className="row">
+                <div className="col-6">
+
+                </div>
+                <div className="col-6" style={{display:'flex', flexDirection:'column', textAlign:'center'}}>
+                <span style={{ fontSize: '1.8rem', fontWeight:'200' }}>"Nomad Commerce"</span>
+                <span style={{ fontSize: '1.8rem', fontWeight:'200' }}>WoNo.Co = <b style={{fontWeight:'800'}}>Wo</b>rld <b style={{fontWeight:'800'}}>No</b>mad <b style={{fontWeight:'800'}}>Co</b>mmerce</span>
+                </div>
+              </div>
             </h2>
+            <span className="home-main-title-desc">A simple no code instant SaaS software platform that supports businesses in remote and aspiring destinations!<br/>Provide services to nomads across the world. (Example: Co-Working, Co-Living, Hostels, Resorts, Cafes, Events etc)</span>
           </div>
-          <div className="first-section-grid-item-2">
+          <div style={{cursor:'pointer'}} onClick={()=> navigate('/register')} className="first-section-grid-item-2">
             <span className="home-desc">
-              <span>We support Nomad Businesses for FREE!</span> <br />
-              World’s Largest b2b SaaS platform which supports Nomad Lifestyle
-              across 25+ countries !
+              <img src={greenRound}alt="" />
+              IT'S FREE
             </span>
-            <div className="home-section-buttons">
+            {/* <div className="home-section-buttons">
               <div className="home-section-register-button-space">
                 <button
                   className="home-section-register-button"
@@ -165,9 +180,9 @@ const Homepage = () => {
                   BUSINESS SIGN UP
                 </button>
               </div>
-            </div>
+            </div> */}
           </div>
-          </div>
+        </div>
 
         <div className="Globe-N-Commerce">
           <div className="Globe" style={{ textAlign: "left" }}>

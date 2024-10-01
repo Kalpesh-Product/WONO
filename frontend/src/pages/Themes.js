@@ -234,7 +234,7 @@ const Themes = () => {
                   </p>
                   <span
                     onClick={() => {
-                      navigate("/services");
+                      navigate("/saas");
                       window.scrollTo({ top: 0, behavior: "smooth" });
                     }}>
                     Browse all services →

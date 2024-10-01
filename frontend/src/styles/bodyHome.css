@@ -125,9 +125,10 @@
     flex-direction: column;
     justify-content: space-between;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     position: relative;
-    padding: 0.3rem 7.3rem;
+    padding: 4rem 7.3rem;
+    background-color: #f7feec;
 }
 
 .background-div {
@@ -157,7 +158,7 @@
     width: 100%;
     height: 100%;
     /* background-color: rgba(0, 0, 0, 0.5); */
-    background: linear-gradient(to bottom, #ffffff00 56%, #ffffff00 56%, #0a0a0ac9 79%, #000000 100%);
+    /* background: linear-gradient(to bottom, #ffffff00 56%, #ffffff00 56%, #0a0a0ac9 79%, #000000 100%); */
     /* Semi-transparent black */
     z-index: 0;
 }
@@ -171,16 +172,17 @@
 }
 
 .first-section-grid-item-2 {
-    display: grid;
-    grid-template-columns: 1fr 30%;
+    /* display: grid;
+    grid-template-columns: 1fr 30%; */
     position: relative;
     z-index: 1;
     width: 100%;
     font-family: Popins-Regular;
     color: white;
-    margin-bottom: 2.5rem;
     padding: 1rem 0rem 2.5rem 0.3rem;
     align-items: center;
+    text-align: center;
+    color: black;
 }
 
 .home-section-buttons {
@@ -224,14 +226,31 @@
 
 .home-main-title {
     color: black;
-    font-size: 6rem;
+    font-size: 5.7rem;
     /* font-family: Mistral; */
-    font-family: Caveat;
+    font-family: Popins-Regular;
     margin-top: 3rem;
-    text-transform: uppercase;
     font-weight: 900;
     /* padding: 6rem 6rem 1rem 6rem; */
 }
+.home-main-title-svg{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.home-main-title-svg img{
+    position: absolute;
+    top: 77%;
+    left: 0%;
+    width: 100%;
+}
+
+.home-main-title-desc{
+    padding: 3rem 0;
+    font-size: 1.5rem;
+    text-align: center;
+};
 
 
 .O {
@@ -250,9 +269,19 @@
 }
 
 .home-desc {
-    color: white;
+    color: black;
     text-align: left;
     font-family: Popins-Medium;
+    position: relative;
+    width: 100%;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+.home-desc img {
+    position: absolute;
+    top: -70%;
+    left: -50%;
+    width: 200%;
 }
 
 .home-desc span {
