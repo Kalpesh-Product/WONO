@@ -141,8 +141,10 @@ const Homepage = () => {
         <div className="home-page-container">
           <div className="background-div">
             <div>
-              {/* <img src={''} alt={`Slide`} className="background-image" /> */}
-              <img src={images[0]} className="background-image" />
+              <img src={""} alt={`Slide`} className="background-image" />
+
+              {/* <img src={''} className="background-image" /> */}
+              <img src={""} className="background-image" />
             </div>
             <div className="black-overlay"></div>
           </div>

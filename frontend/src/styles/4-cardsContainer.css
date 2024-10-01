@@ -251,22 +251,16 @@ button.slick-next.slick-arrow::before {
   }
 
   .card_1 {
-    /* background-color: white;
-    padding: 30px 20px;
-    border-radius: 10px;
-    width: 250px !important;
-    margin:0.5rem 53px;
-    height: 330px; */
     background-color: #fff;
     border-radius: 10px;
     height: 362px;
-    margin: .5rem 30px;
+    margin: .5rem 10px;
     padding: 30px 20px;
-    width: 262px !important;
-  }
+    width: 245px !important;
+}
 
   button.slick-prev.slick-arrow {
-    left: -37px;
+    left: -50px;
     margin-left: 46px;
   }
 
