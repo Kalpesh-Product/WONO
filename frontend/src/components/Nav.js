@@ -18,7 +18,7 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
   const { username, loggedIn, setLoggedIn, setUsername } = useContext(UserContext);
   const location = useLocation();
   const isAuthPage =
-    location.pathname === "/login" || location.pathname === "/register";
+    location.pathname === "/login" && location.pathname === "/register";
   const isthempage = location.pathname === "/themes";
   const isservices = location.pathname === "/saas";
   const isleadspage = location.pathname === "/leads";
@@ -103,7 +103,7 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
               <Link
                 to="/saas"
                 className={
-                  (!isAuthPage && isservices) || activeTab === "Services" ? "active" : ""
+                  (!isAuthPage && isservices) && activeTab === "Services" ? "active" : ""
                 }
                 onClick={() => {
                   changeActiveTab("Services");
@@ -118,7 +118,7 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
                   window.scrollTo({ top: 0, behavior: "instant" });
                 }}
                 className={
-                  (!isAuthPage && isthempage) || activeTab === "themes" ? "active" : ""
+                  (!isAuthPage && isthempage) && activeTab === "themes" ? "active" : ""
                 }>
                 Theme
               </Link>
@@ -129,7 +129,7 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
                   window.scrollTo({ top: 0, behavior: "instant" });
                 }}
                 className={
-                  (!isAuthPage && !isservices && isleadspage) || activeTab === "leads"
+                  (!isAuthPage && !isservices && isleadspage) && activeTab === "leads"
                     ? "active"
                     : ""
                 }>
@@ -138,7 +138,7 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
               <Link
                 to="/capital"
                 className={
-                  (!isAuthPage && iscapitalpage && !isservices) || activeTab === "capital"
+                  (!isAuthPage && iscapitalpage && !isservices) && activeTab === "capital"
                     ? "active"
                     : ""
                 }
@@ -173,7 +173,7 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
                   alt={'ProfileImage'}
                   className="profile-image"
                 />
-                <span>{username || storedUsername || 'NewUser'}</span>
+                <span>{username && storedUsername && 'NewUser'}</span>
                 <div className={`dropdown-menu ${dropdownOpen ? "show" : ""}`}>
                   <button onClick={handleLogout}>Logout</button>
                 </div>
