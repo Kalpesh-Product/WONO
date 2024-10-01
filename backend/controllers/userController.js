@@ -137,7 +137,7 @@ exports.registerUser = async (req, res) => {
     }
   </style>
 </head>
-<body style="font-family: 'Poppins', sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; -webkit-text-size-adjust: none; -ms-text-size-adjust: none;">
+<body style="font-family: 'Poppins', sans-serif; margin: 0; padding: 0; background-color: #ffffff; -webkit-text-size-adjust: none; -ms-text-size-adjust: none;">
   <div style="width: 100%; max-width: 600px; background-color: #ffffff; margin: 20px auto; padding: 2rem; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
     <div style="padding: 1rem; text-align: center; border-radius: 1rem; background-color: #daf5fe">
       <h1 style="font-size: 2rem; text-align: center; margin: 0; padding-bottom: 20px;">
@@ -479,7 +479,7 @@ exports.submitEnquiry = async (req, res) => {
             <title>Thank You Email</title>
             <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
         </head>
-        <body style="font-family: 'Poppins', sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; -webkit-text-size-adjust: none; -ms-text-size-adjust: none;">
+        <body style="font-family: 'Poppins', sans-serif; margin: 0; padding: 0; background-color: #ffffff; -webkit-text-size-adjust: none; -ms-text-size-adjust: none;">
             <div style="width: 100%; max-width: 600px; background-color: #ffffff; margin: 20px auto; padding: 2rem; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
                 <div style="background-color: #daf5fe; padding: 1rem; text-align: center; border-radius: 1rem;">
                     <h1 style="font-size: 2rem; text-align: center; margin: 0; padding-bottom: 20px; color: black;">Thank You for Your Enquiry</h1>
@@ -503,7 +503,7 @@ exports.submitEnquiry = async (req, res) => {
             <title>New Enquiry Email</title>
             <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
         </head>
-        <body style="font-family: 'Poppins', sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; -webkit-text-size-adjust: none; -ms-text-size-adjust: none;">
+        <body style="font-family: 'Poppins', sans-serif; margin: 0; padding: 0; background-color: #ffffff; -webkit-text-size-adjust: none; -ms-text-size-adjust: none;">
             <div style="width: 100%; max-width: 600px; background-color: #ffffff; margin: 20px auto; padding: 2rem; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
                 <div style="background-color: #daf5fe; padding: 1rem; text-align: center; border-radius: 1rem;">
                   <h1 style="font-size: 2rem; text-align: center; margin: 0; padding-bottom: 20px; color: black;">
@@ -625,7 +625,7 @@ exports.createJobApplication = async (req, res) => {
     border: 1px solid;
   }
   </style></head>
-   <body style="font-family: 'Poppins', sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; -webkit-text-size-adjust: none; -ms-text-size-adjust: none;">
+   <body style="font-family: 'Poppins', sans-serif; margin: 0; padding: 0; background-color: #ffffff; -webkit-text-size-adjust: none; -ms-text-size-adjust: none;">
    
   <div style="width: 100%; max-width: 600px; background-color: #ffffff; margin: 20px auto; padding: 2rem; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
    <div style="padding: 1rem; text-align: center; border-radius: 1rem;background-color: #daf5fe">

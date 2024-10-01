@@ -54,7 +54,7 @@ const FourCardsComponents = () => {
     dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 3, // Adjust for how many cards to show at once
+    slidesToShow: 4, // Adjust for how many cards to show at once
     prevArrow: <PrevArrow />, // Custom previous arrow
     nextArrow: <NextArrow />, // Custom next arrow
     slidesToScroll: 1,
@@ -94,7 +94,7 @@ const FourCardsComponents = () => {
               <h5 className="card-title">{card.title}</h5>
               <div className="card-text">
                 {card.features.map((feature, i) => (
-                  <div className="Tickmark-text" key={i}>
+                  <div className="card-subtext" key={i}>
                     <img src={TickmarkImg} alt="tick-mark" />
                     {feature}
                   </div>

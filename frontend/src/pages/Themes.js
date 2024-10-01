@@ -65,7 +65,7 @@ const Themes = () => {
   const themeWebsiteGridData = [
     {
       title: "Faster loading",
-      description: "Wix is designed for performance so your site loads faster",
+      description: "WoNo is designed for performance so your site loads faster",
     },
     {
       title: "Built with SEO in mind",

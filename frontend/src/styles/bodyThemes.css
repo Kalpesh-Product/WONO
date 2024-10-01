@@ -29,7 +29,7 @@
 }
 
 .themePage-header p {
-    font-size: 1.2rem;
+    font-size: 1.61rem;
     font-weight: 400;
 }
 
@@ -52,10 +52,12 @@
 .themePage-content-header h3 {
     margin-bottom: 2rem;
     font-weight: 600;
+    font-size: 2.5rem;
 }
 
 .themePage-content-header span {
     padding-bottom: 2rem;
+    font-size: 2rem;
 }
 
 

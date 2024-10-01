@@ -18,7 +18,7 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
   const { username, loggedIn, setLoggedIn, setUsername } = useContext(UserContext);
   const location = useLocation();
   const isAuthPage =
-    location.pathname === "/login" || location.pathname === "/register";
+    location.pathname === "/login" && location.pathname === "/register";
   const isthempage = location.pathname === "/themes";
   const isservices = location.pathname === "/saas";
   const isleadspage = location.pathname === "/leads";
@@ -173,7 +173,7 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
                   alt={'ProfileImage'}
                   className="profile-image"
                 />
-                <span>{username || storedUsername || 'NewUser'}</span>
+                <span>{username && storedUsername && 'NewUser'}</span>
                 <div className={`dropdown-menu ${dropdownOpen ? "show" : ""}`}>
                   <button onClick={handleLogout}>Logout</button>
                 </div>
