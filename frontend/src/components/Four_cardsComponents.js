@@ -94,7 +94,7 @@ const FourCardsComponents = () => {
               <h5 className="card-title">{card.title}</h5>
               <div className="card-text">
                 {card.features.map((feature, i) => (
-                  <div className="Tickmark-text" key={i}>
+                  <div className="card-subtext" key={i}>
                     <img src={TickmarkImg} alt="tick-mark" />
                     {feature}
                   </div>
