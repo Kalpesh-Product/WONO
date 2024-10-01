@@ -897,7 +897,7 @@ const Services = () => {
             <span className="SaaS-featured-heading-container">
             FINANCE & ACCOUNTING
             <svg
-                className="SaaS-blue-underline-frontend"
+                className="SaaS-blue-underline-finance-accounting"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 100 100">
                 <path
@@ -939,7 +939,7 @@ const Services = () => {
             <span className="SaaS-featured-heading-container">
             Sales & Marketing
             <svg
-                className="SaaS-blue-underline-frontend"
+                className="SaaS-blue-underline-sales-marketing"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 100 100">
                 <path
@@ -981,7 +981,7 @@ const Services = () => {
             <span className="SaaS-featured-heading-container">
             HR Support
             <svg
-                className="SaaS-blue-underline-frontend"
+                className="SaaS-blue-underline-hrsupport"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 100 100">
                 <path
@@ -1023,7 +1023,7 @@ const Services = () => {
             <span className="SaaS-featured-heading-container">
             Customer Management Services
             <svg
-                className="SaaS-blue-underline-frontend"
+                className="SaaS-blue-underline-customer-management-services"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 100 100">
                 <path
@@ -1065,7 +1065,7 @@ const Services = () => {
             <span className="SaaS-featured-heading-container">
             Reports & Analytics
             <svg
-                className="SaaS-blue-underline-frontend"
+                className="SaaS-blue-underline-reports-analytics"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 100 100">
                 <path
