@@ -115,6 +115,46 @@
     left: -78px;
 
 }
+.SaaS-blue-underline-finance-accounting{
+    position: absolute;
+    width: 250px;
+    height: 75px;
+    top: -15px;
+    left: -78px;
+}
+.SaaS-blue-underline-sales-marketing{
+    position: absolute;
+    width: 250px;
+    height: 75px;
+    top: -15px;
+    left: -78px;
+
+}
+.SaaS-blue-underline-hrsupport{
+    position: absolute;
+    width: 250px;
+    height: 75px;
+    top: -15px;
+    left: -78px;
+
+
+}
+.SaaS-blue-underline-customer-management-services{
+    position: absolute;
+    width: 250px;
+    height: 75px;
+    top: -15px;
+    left: -78px;
+
+}
+.SaaS-blue-underline-reports-analytics{
+    position: absolute;
+    width: 250px;
+    height: 75px;
+    top: -15px;
+    left: -78px;
+
+}
 
 .SaaS-featured-grid {
     display: grid;
@@ -377,7 +417,7 @@
     }
 
     .services * {
-        font-family: Popins-Regular;
+        font-family: ComicSansMS;
     }
 
     .services:not(:last-child) {
@@ -734,9 +774,51 @@
         width: 100%;
         height: 50px;
         top: 2px;
-        left: -98px;
+        left: -40px;
 
     }
+    .SaaS-blue-underline-finance-accounting{
+        position: absolute;
+        width: 100%;
+        height: 50px;
+        top: 2px;
+        left: -120px;
+
+    }
+    .SaaS-blue-underline-customer-management-services{
+        position: absolute;
+        width: 100%;
+        height: 50px;
+        top: 30px;
+        left: -120px;
+
+
+    }
+    .SaaS-blue-underline-hrsupport{
+        position: absolute;
+        width: 100%;
+        height: 50px;
+        top: 2px;
+        left: -40px;
+
+    }
+    .SaaS-blue-underline-reports-analytics{
+        position: absolute;
+        width: 100%;
+        height: 50px;
+        top: 2px;
+        left: -110px;
+
+    }
+    .SaaS-blue-underline-sales-marketing{
+        position: absolute;
+        width: 100%;
+        height: 50px;
+        top: 2px;
+        left: -100px;
+
+    }
+   
 
     .SaaS-featured-grid {
         display: grid;
