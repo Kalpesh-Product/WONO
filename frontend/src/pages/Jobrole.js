@@ -26,12 +26,12 @@ const Jobrole = () => {
             <hr></hr>
             <Accordion.Body style={{ border: "none" }}>
 
-              <div className='mob-down' style={{ display: "flex" }}>
-                <div className='col-lg-6'>
+              <div className='mob-down' >
+                <div className='col-12 col-lg-12 col-sm-12 col-xs-12'>
                   <h5 classname="career-job-title" >1.UI Designer</h5>
 
                 </div>
-                <div className='col-lg-6' style={{ textAlign: "right" }}>
+                <div className='col-12 col-lg-12 col-sm-12 col-xs-12' style={{ textAlign: "right" }}>
                    <p style={{ fontWeight: "600", margin : 0}}>
                     <span className='link-btn'>Full-Time | On-Site| Goa </span>
 
@@ -47,12 +47,12 @@ const Jobrole = () => {
             </Accordion.Body>
 
             <Accordion.Body>
-              <div className='mob-down' style={{ display: "flex" }}>
-                <div className='col-lg-6'>
+              <div className='mob-down' >
+                <div className='col-12 col-lg-12 col-sm-12 col-xs-12'>
                   <h5 classname="career-job-title" > 2. Marketing Analytics</h5>
                   <span style={{ fontSize: "1rem" }}>(SEO/Google Analytics) </span>
                 </div>
-                <div className='col-lg-6' style={{ textAlign: "right" }}>
+                <div className='col-12 col-lg-12 col-sm-12 col-xs-12' style={{ textAlign: "right" }}>
                    <p style={{ fontWeight: "600", margin : 0}}>
                     <span className='link-btn'>Full-Time | On-Site| Goa </span>
                     <Link onClick={() => {
@@ -70,11 +70,11 @@ const Jobrole = () => {
             <Accordion.Header>II. Tech Development</Accordion.Header>
             <hr></hr>
             <Accordion.Body>
-              <div className='mob-down' style={{ display: "flex" }}>
-                <div className='col-lg-6'>
+              <div className='mob-down' >
+                <div className='col-12 col-lg-12 col-sm-12 col-xs-12'>
                   <h5 classname="career-job-title" > 1. Jr. UI/UX Developer</h5>
                 </div>
-                <div className='col-lg-6' style={{ textAlign: "right" }}>
+                <div className='col-12 col-lg-12 col-sm-12 col-xs-12' style={{ textAlign: "right" }}>
                    <p style={{ fontWeight: "600", margin : 0}}>
                     <span className='link-btn'>Full-Time | On-Site| Goa </span>
                     <Link onClick={() => {
@@ -90,12 +90,12 @@ const Jobrole = () => {
 
             <Accordion.Body>
 
-              <div className='mob-down' style={{ display: "flex" }}>
-                <div className='col-lg-6'>
+              <div className='mob-down' >
+                <div className='col-12 col-lg-12 col-sm-12 col-xs-12'>
 
                   <h5 classname="career-job-title" > 2. PHP Developer</h5>
                 </div>
-                <div className='col-lg-6' style={{ textAlign: "right" }}>
+                <div className='col-12 col-lg-12 col-sm-12 col-xs-12' style={{ textAlign: "right" }}>
                    <p style={{ fontWeight: "600", margin : 0}}>
                     <span className='link-btn'>Full-Time | On-Site| Goa </span>
                     <Link onClick={() => {
@@ -109,11 +109,11 @@ const Jobrole = () => {
               <hr></hr>
             </Accordion.Body>
             <Accordion.Body>
-              <div className='mob-down' style={{ display: "flex" }}>
-                <div className='col-lg-6'>
+              <div className='mob-down' >
+                <div className='col-12 col-lg-12 col-sm-12 col-xs-12'>
                   <h5 classname="career-job-title" > 3. Webs Developer Intern</h5>
                 </div>
-                <div className='col-lg-6' style={{ textAlign: "right" }}>
+                <div className='col-12 col-lg-12 col-sm-12 col-xs-12' style={{ textAlign: "right" }}>
                    <p style={{ fontWeight: "600", margin : 0}}>
                     <span className='link-btn'>Full-Time | On-Site| Goa </span>
                     <Link onClick={() => {
@@ -130,11 +130,11 @@ const Jobrole = () => {
             <Accordion.Header>III. Finance</Accordion.Header>
             <hr></hr>
             <Accordion.Body>
-              <div className='mob-down' style={{ display: "flex" }}>
-                <div className='col-lg-6'>
+              <div className='mob-down' >
+                <div className='col-12 col-lg-12 col-sm-12 col-xs-12'>
                   <h5 classname="career-job-title" > 1. Finance Intern</h5>
                 </div>
-                <div className='col-lg-6' style={{ textAlign: "right" }}>
+                <div className='col-12 col-lg-12 col-sm-12 col-xs-12' style={{ textAlign: "right" }}>
                    <p style={{ fontWeight: "600", margin : 0}}>
                     <span className='link-btn'>Full-Time | On-Site| Goa </span>
                     <Link onClick={() => {
@@ -152,11 +152,11 @@ const Jobrole = () => {
             <hr></hr>
 
             <Accordion.Body>
-              <div className='mob-down' style={{ display: "flex" }}>
-                <div className='col-lg-6'>
+              <div className='mob-down' >
+                <div className='col-12 col-lg-12 col-sm-12 col-xs-12'>
                   <h5 classname="career-job-title" > 1. HR Generalist</h5>
                 </div>
-                <div className='col-lg-6' style={{ textAlign: "right" }}>
+                <div className='col-12 col-lg-12 col-sm-12 col-xs-12' style={{ textAlign: "right" }}>
                    <p style={{ fontWeight: "600", margin : 0}}>
                     <span className='link-btn'>Full-Time | On-Site| Goa </span>
                     <Link onClick={() => {
@@ -171,11 +171,11 @@ const Jobrole = () => {
             </Accordion.Body>
 
             <Accordion.Body>
-              <div className='mob-down' style={{ display: "flex" }}>
-                <div className='col-lg-6'>
+              <div className='mob-down' >
+                <div className='col-12 col-lg-12 col-sm-12 col-xs-12'>
                   <h5 classname="career-job-title" > 2. Executive Assistant to CEO</h5>
                 </div>
-                <div className='col-lg-6' style={{ textAlign: "right" }}>
+                <div className='col-12 col-lg-12 col-sm-12 col-xs-12' style={{ textAlign: "right" }}>
                    <p style={{ fontWeight: "600", margin : 0}}>
                     <span className='link-btn'>Full-Time | On-Site| Goa </span>
                     <Link onClick={() => {
@@ -192,11 +192,11 @@ const Jobrole = () => {
             <Accordion.Header>V. Sales & Bussiness Development</Accordion.Header>
             <hr></hr>
             <Accordion.Body>
-              <div className='mob-down' style={{ display: "flex" }}>
-                <div className='col-lg-6'>
+              <div className='mob-down' >
+                <div className='col-12 col-lg-12 col-sm-12 col-xs-12'>
                   <h5 classname="career-job-title" > 1. Sr.Manager Sales & Bussiness Development </h5>
                 </div>
-                <div className='col-lg-6' style={{ textAlign: "right" }}>
+                <div className='col-12 col-lg-12 col-sm-12 col-xs-12' style={{ textAlign: "right" }}>
                    <p style={{ fontWeight: "600", margin : 0}}>
                     <span className='link-btn'>Full-Time | On-Site| Goa </span>
                     <Link onClick={() => {
@@ -213,11 +213,11 @@ const Jobrole = () => {
             <Accordion.Header>VI. Marketing</Accordion.Header>
             <hr></hr>
             <Accordion.Body>
-              <div className='mob-down' style={{ display: "flex" }}>
-                <div className='col-lg-6'>
+              <div className='mob-down' >
+                <div className='col-12 col-lg-12 col-sm-12 col-xs-12'>
                   <h5 classname="career-job-title" > 1. Social Media Executive</h5>
                 </div>
-                <div className='col-lg-6' style={{ textAlign: "right" }}>
+                <div className='col-12 col-lg-12 col-sm-12 col-xs-12' style={{ textAlign: "right" }}>
                    <p style={{ fontWeight: "600", margin : 0}}>
                     <span className='link-btn'>Full-Time | On-Site| Goa </span>
                     <Link onClick={() => {

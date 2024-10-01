@@ -600,6 +600,7 @@
 .Globe {
     /* flex: 0 0 40%; */
     min-width: 100%;
+    height: 300px;
 }
 
 /* .Globe > {
@@ -679,7 +680,7 @@
     .Globe-N-Commerce {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        height: 60vh;
+        height: 100%;
         background-color: black;
     }
 }
@@ -699,6 +700,7 @@
     .Globe {
         flex: 0 0 40%;
         /* padding: 2rem 0; */
+        height: 400px;
     }
 
     .Nomads-list-bussiness {
