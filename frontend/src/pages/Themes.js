@@ -139,8 +139,8 @@ const Themes = () => {
                 </div>
                 <div className="themePage-featured-content">
                   <ul>
-                    <li>Intuitive drag and drop website editor</li>
                     <li>1000's advanced web capabilities</li>
+                    <li>Intuitive drag and drop website editor</li>
                     <li>Powerful AI features for smart customization</li>
                     <li>Full-stack web dev tools for custom functionality</li>
                   </ul>
