@@ -13,15 +13,15 @@ import { Nav } from "react-bootstrap";
 // import WonoLogo from '../assets//WONO_images/img/WONO_LOGO_white _TP.png';
 // import WonoLogoBlack from '../assets//WONO_images/img/WONO_LOGO_Black_TP.png';
 import BiznestLogo from "../assets/BIZNest/biznest_logo.jpg";
-import CafeImage from "../assets/WONO_images/img/website-builder/new-layout/cafe.png";
-import CoWorkingImage from "../assets/WONO_images/img/website-builder/new-layout/co-working.png";
+import CafeImage from "../assets/WONO_images/img/website-builder/new-layout/cafe.webp";
+import CoWorkingImage from "../assets/WONO_images/img/website-builder/new-layout/co-working.webp";
 import Hostels from "../assets/WONO_images/img/website-builder/new-layout/hostels.png";
-import CoLivingImage from "../assets/WONO_images/img/website-builder/new-layout/co-living.png";
+import CoLivingImage from "../assets/WONO_images/img/website-builder/new-layout/co-living.webp";
 import CafeImageLong from "../assets/WONO_images/img/website-builder/new-layout/long/cafe-long.jpeg";
 import CoWorkingImageLong from "../assets/WONO_images/img/website-builder/new-layout/long/co-working-long.jpeg";
 import BoutiqueLong from "../assets/WONO_images/img/website-builder/new-layout/long/boutique-long.jpeg";
 import CoLivingImageLong from "../assets/WONO_images/img/website-builder/new-layout/long/co-living-long.jpeg";
-import Boutique from "../assets/WONO_images/img/website-builder/new-layout/boutique.png";
+import Boutique from "../assets/WONO_images/img/website-builder/new-layout/boutique.webp";
 import DashboardBooking from "./Dashboard-pages/DashboardBooking";
 import DashboardAsset from "./Dashboard-pages/DashboardAsset";
 import DashboardHR from "./Dashboard-pages/DashboardHR";
@@ -35,7 +35,8 @@ import FourCardsComponents from "../components/Four_cardsComponents";
 import WebsiteCafe from "./WebsiteBuilder/WebsiteCafe";
 import WebsiteWorkation from "./WebsiteBuilder/WebsiteWorkation";
 import "../styles/bodyPartners.css";
-import BiznestTestimonial from "../assets/testimonials/kashif-image.jpg";
+// import BiznestTestimonial from "../assets/testimonials/kashif-image.jpg";
+import BiznestTestimonial from "../assets/testimonials/kashif-image.webp";
 // import "../styles/bodyLastBanner.css";
 
 const Homepage = () => {
@@ -138,7 +139,8 @@ const Homepage = () => {
         <div className="home-page-container">
           <div className="background-div">
             <div>
-              <img src={''} className="background-image" />
+              {/* <img src={''} className="background-image" /> */}
+              <img src={images[0]} className="background-image" />
             </div>
             <div></div>
           </div>
@@ -147,7 +149,8 @@ const Homepage = () => {
               <div className="home-main-desc-section">
                 <div className="home-main-desc-title-svg">
                   <span className="home-main-desc-title">
-                    Introducing <span className="home-main-desc-title-svg-container">
+                    Introducing{" "}
+                    <span className="home-main-desc-title-svg-container">
                       <span className="home-main-desc-title-svg">
                         N-Commerce!
                       </span>
@@ -167,10 +170,7 @@ const Homepage = () => {
                         />
                       </svg>
                     </span>
-
                   </span>
-
-
                 </div>
                 <div className="home-main-desc">
                   <span>"Nomad Commerce"</span>
@@ -178,8 +178,13 @@ const Homepage = () => {
                 </div>
 
                 <div className="home-main-desc-tagline">
-                  <span>A simple no code instant SaaS software platform that supports businesses in remote and aspiring destinations!<br />
-                    Provide services to nomads across the world. (Example: Co-Working, Co-Living, Hostels, Resorts, Cafes, Events etc)</span>
+                  <span>
+                    A simple no code instant SaaS software platform that
+                    supports businesses in remote and aspiring destinations!
+                    <br />
+                    Provide services to nomads across the world. (Example:
+                    Co-Working, Co-Living, Hostels, Resorts, Cafes, Events etc)
+                  </span>
                 </div>
               </div>
               <br />
@@ -193,19 +198,27 @@ const Homepage = () => {
             </span> */}
             <div className="home-section-buttons">
               <div className="home-section-register-button-space">
-                <div style={{cursor:'pointer'}} onClick={() => { navigate('/register')
-                   window.scrollTo({top:0,behavior:'instant'}) }} className="its-free-container">
+                <div
+                  style={{ cursor: "pointer" }}
+                  onClick={() => {
+                    navigate("/register");
+                    window.scrollTo({ top: 0, behavior: "instant" });
+                  }}
+                  className="its-free-container">
                   <svg
                     fill="none"
                     // viewBox="0 0 390 97"
                     className="its-free-svg"
                     viewBox="190 -5 400 120">
-                    <path stroke-width="10" width="800"
+                    <path
+                      stroke-width="10"
+                      width="800"
                       height="40"
-                      stroke="#28a745" d="M2,76.26c16.11,4.95,31.91,3.84,48.58,3.84,20.39,0,40.67,0,61,1,18,.87,36-1,53.94-1,15.79,0,31.51,1.81,47.31,1.21,24.51-.93,49.17-2.18,73.68-2.49,19.45-.25,39.4,1.59,58.76-.64,15-1.73,29-2.29,39.75-14.79C387.89,60.1,390.5,48.5,386.5,40c-5.69-12.09-12.63-18.68-23.67-25.17C341.68,2.4,314.67,1.82,291.09,2c-21.31.2-55.45,3.62-68.52,24.46C212.14,43.1,212,59.57,227.79,72.77c24.81,20.81,63.45,26.8,93.41,18.85"></path>
+                      stroke="#28a745"
+                      d="M2,76.26c16.11,4.95,31.91,3.84,48.58,3.84,20.39,0,40.67,0,61,1,18,.87,36-1,53.94-1,15.79,0,31.51,1.81,47.31,1.21,24.51-.93,49.17-2.18,73.68-2.49,19.45-.25,39.4,1.59,58.76-.64,15-1.73,29-2.29,39.75-14.79C387.89,60.1,390.5,48.5,386.5,40c-5.69-12.09-12.63-18.68-23.67-25.17C341.68,2.4,314.67,1.82,291.09,2c-21.31.2-55.45,3.62-68.52,24.46C212.14,43.1,212,59.57,227.79,72.77c24.81,20.81,63.45,26.8,93.41,18.85"></path>
                   </svg>
 
-                  <span style={{zIndex:10}} >it's free</span>
+                  <span style={{ zIndex: 10 }}>it's free</span>
                 </div>
                 {/* <button
                   className="home-section-register-button"
@@ -426,8 +439,9 @@ const Homepage = () => {
 
                         </div> */}
               <div
-                className={`website-panel-right ${selectedId ? "modal-open" : ""
-                  }`}>
+                className={`website-panel-right ${
+                  selectedId ? "modal-open" : ""
+                }`}>
                 <div className="website-panel-content">
                   {webimages.map((image) => (
                     <div className="template-preview-container" key={image.id}>

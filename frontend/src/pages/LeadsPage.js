@@ -37,9 +37,9 @@ import WebsiteWorkation from "./WebsiteBuilder/WebsiteWorkation";
 import "../styles/bodyPartners.css";
 import BiznestTestimonial from "../assets/testimonials/BIZ Nest Testimonial.png";
 import LeadsImage from "../assets/leads_images/leads-section-image.webp";
-import LeadsImagepng from "../assets/leads_images/leads-section-image.png";
+import LeadsImagepng from "../assets/leads_images/leads-section-image-webp.webp";
 import GoogleSheetsImage from "../assets/leads_images/google-sheets-image.webp";
-import GoogleSheetsImagepng from "../assets/leads_images/google-sheets-image.png";
+import GoogleSheetsImagepng from "../assets/leads_images/google-sheets-image-webp.webp";
 // import "../styles/bodyLastBanner.css";
 
 import TickmarkImg from "../assets/check.png";
@@ -48,21 +48,24 @@ import GoogleMyBusinessImage from "../assets/leads_images/google-my-business-ima
 import GoogleMapsImage from "../assets/leads_images/google-maps-logo.png";
 import GoogleReviewsImage from "../assets/leads_images/google-reviews-logo.png";
 
-import GoogleSeoImage from "../assets/leads_images/google-seo-logo.png";
-import WebsiteImage from "../assets/leads_images/website-logo.png";
+import GoogleSeoImage from "../assets/leads_images/google-seo-logo.webp";
+// import WebsiteImage from "../assets/leads_images/website-logo.png";
+import WebsiteImage from "../assets/leads_images/website-logo.webp";
 import LinkedinImage from "../assets/leads_images/linkedin-logo.png";
 
-import FacebookImage from "../assets/leads_images/facebook-logo.png";
-import InstagramImage from "../assets/leads_images/instagram-logo.png";
+// import FacebookImage from "../assets/leads_images/facebook-logo.png";
+import FacebookImage from "../assets/leads_images/facebook-logo.webp";
+// import InstagramImage from "../assets/leads_images/instagram-logo.png";
+import InstagramImage from "../assets/leads_images/instagram-logo.webp";
 import FreeIntegrationsImage from "../assets/leads_images/free-integrations-icon.png";
 
 import CrossPromotionsImage from "../assets/leads_images/cross-promotions-logo.png";
 import DatabaseImage from "../assets/leads_images/database-icon.png";
 import WhatsappImage from "../assets/leads_images/whatsapp-icon.png";
 
-import RoiImage from "../assets/leads_images/roi.jpg";
-import CompleteViewImage from "../assets/leads_images/complete-view-image.jpg";
-import FinerPointsImage from "../assets/leads_images/finer-points-image.jpg";
+import RoiImage from "../assets/leads_images/roi.webp";
+import CompleteViewImage from "../assets/leads_images/complete-view-image.webp";
+import FinerPointsImage from "../assets/leads_images/finer-points-image.webp";
 
 import "../styles/specialClasses.css";
 import "../styles/leadsPage.css";

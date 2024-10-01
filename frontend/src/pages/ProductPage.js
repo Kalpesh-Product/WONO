@@ -1,21 +1,21 @@
 import React, { useState } from "react";
 import CafeImage from "../assets/WONO_images/img/website-builder/new-layout/cafe.png";
-import BiznestImage from "../assets/WONO_images/img/products-images/biznestImage.png";
-import BiznestImageMockup from "../assets/WONO_images/img/website-builder/new-layout/mobile/mockups/biznest-mockup.png";
+import BiznestImage from "../assets/WONO_images/img/products-images/biznestImage.webp";
+import BiznestImageMockup from "../assets/WONO_images/img/website-builder/new-layout/mobile/mockups/biznest-mockup.webp";
 import BiznestImageOverlay from "../assets/WONO_images/img/products-images/biznestImage-overlay.png";
-import Cafe_2 from "../assets/WONO_images/img/website-builder/new-layout/cafe-2.png";
-import Cafe_3 from "../assets/WONO_images/img/website-builder/new-layout/cafe-3.png";
-import CoWorkingImage from "../assets/WONO_images/img/website-builder/new-layout/co-working.png";
-import CoWorkingImageMockup from "../assets/WONO_images/img/website-builder/new-layout/mobile/mockups/co-working-mockup-bg.png";
-import CoLivingImage from "../assets/WONO_images/img/website-builder/new-layout/co-living.png";
-import CoLivingImageMockup from "../assets/WONO_images/img/website-builder/new-layout/mobile/mockups/co-living-mockup.png";
-import CoWorkingImage_2 from "../assets/WONO_images/img/website-builder/new-layout/co-working-2.png";
-import CoWorkingImage_3 from "../assets/WONO_images/img/website-builder/new-layout/co-working-3.png";
+import Cafe_2 from "../assets/WONO_images/img/website-builder/new-layout/cafe-2.webp";
+import Cafe_3 from "../assets/WONO_images/img/website-builder/new-layout/cafe-3.webp";
+import CoWorkingImage from "../assets/WONO_images/img/website-builder/new-layout/co-working.webp";
+import CoWorkingImageMockup from "../assets/WONO_images/img/website-builder/new-layout/mobile/mockups/co-working-mockup-bg.webp";
+import CoLivingImage from "../assets/WONO_images/img/website-builder/new-layout/co-living.webp";
+import CoLivingImageMockup from "../assets/WONO_images/img/website-builder/new-layout/mobile/mockups/co-living-mockup.webp";
+import CoWorkingImage_2 from "../assets/WONO_images/img/website-builder/new-layout/co-working-2.webp";
+import CoWorkingImage_3 from "../assets/WONO_images/img/website-builder/new-layout/co-working-3.webp";
 import Featured from "../assets/WONO_images/img/website-builder/new-layout/featured/featured-1.png";
-import Boutique from "../assets/WONO_images/img/website-builder/new-layout/boutique.png";
-import BoutiqueMockup from "../assets/WONO_images/img/website-builder/new-layout/mobile/mockups/boutique-mockup.png";
-import CoWorkingMewo from "../assets/WONO_images/img/website-builder/new-layout/co-working-mewo.png";
-import CoWorkingMewoMockup from "../assets/WONO_images/img/website-builder/new-layout/mobile/mockups/co-working-mewo-mockup.png";
+import Boutique from "../assets/WONO_images/img/website-builder/new-layout/boutique.webp";
+import BoutiqueMockup from "../assets/WONO_images/img/website-builder/new-layout/mobile/mockups/boutique-mockup.webp";
+import CoWorkingMewo from "../assets/WONO_images/img/website-builder/new-layout/co-working-mewo.webp";
+import CoWorkingMewoMockup from "../assets/WONO_images/img/website-builder/new-layout/mobile/mockups/co-working-mewo-mockup.webp";
 import Hostels from "../assets/WONO_images/img/website-builder/new-layout/hostels.png";
 import TickmarkImg from "../assets/check.png";
 import blueTickmarkImg from "../assets/blue-tick-no-bg-15.png";
@@ -23,7 +23,6 @@ import "../styles/bodyProduct.css";
 import { useNavigate, useLocation } from "react-router-dom";
 
 const ProductPage = () => {
-
   const [showAll, setShowAll] = useState(false);
   const perks = [
     {
@@ -72,11 +71,36 @@ const ProductPage = () => {
     "No code & Self-serve",
   ];
   const recommendations = [
-    { src: BiznestImage, mockup: BiznestImageMockup, alt: "BiznestImage", tag: "co-working" },
-    { src: CoWorkingImage, mockup: CoWorkingImageMockup, alt: "Co-Working Image", tag: "co-working" },
-    { src: CoLivingImage, mockup: CoLivingImageMockup, alt: "Co-Living Image", tag: "co-living" },
-    { src: CoWorkingMewo, mockup: CoWorkingMewoMockup, alt: "CoWorkingMewo", tag: "co-working" },
-    { src: Boutique, mockup: BoutiqueMockup, alt: "Boutique Image", tag: "boutique" },
+    {
+      src: BiznestImage,
+      mockup: BiznestImageMockup,
+      alt: "BiznestImage",
+      tag: "co-working",
+    },
+    {
+      src: CoWorkingImage,
+      mockup: CoWorkingImageMockup,
+      alt: "Co-Working Image",
+      tag: "co-working",
+    },
+    {
+      src: CoLivingImage,
+      mockup: CoLivingImageMockup,
+      alt: "Co-Living Image",
+      tag: "co-living",
+    },
+    {
+      src: CoWorkingMewo,
+      mockup: CoWorkingMewoMockup,
+      alt: "CoWorkingMewo",
+      tag: "co-working",
+    },
+    {
+      src: Boutique,
+      mockup: BoutiqueMockup,
+      alt: "Boutique Image",
+      tag: "boutique",
+    },
     { src: CoWorkingImage_2, alt: "CoLivingImage_2", tag: "co-working" },
     { src: CoWorkingImage_3, alt: "CoLivingImage_3", tag: "co-working" },
     { src: Cafe_2, alt: "Cafe_2", tag: "cafe" },
@@ -193,15 +217,16 @@ const ProductPage = () => {
               <h2>Few more suggestions for you</h2>
             </div>
             <div className="product-page-reccomendations-grid">
-              {filteredRecommendations.slice(0, showAll ? filteredRecommendations.length : 4).map((rec, index) => (
-                <div
-                  key={index}
-                  className="product-page-reccomendations-grid-image"
-                  onClick={() => handleImageClick(rec)}>
-                  <img src={rec.src} alt={rec.alt} />
-                </div>
-              ))}
-
+              {filteredRecommendations
+                .slice(0, showAll ? filteredRecommendations.length : 4)
+                .map((rec, index) => (
+                  <div
+                    key={index}
+                    className="product-page-reccomendations-grid-image"
+                    onClick={() => handleImageClick(rec)}>
+                    <img src={rec.src} alt={rec.alt} />
+                  </div>
+                ))}
             </div>
             <div className="themes-view-button">
               {filteredRecommendations.length > 4 && !showAll && (
