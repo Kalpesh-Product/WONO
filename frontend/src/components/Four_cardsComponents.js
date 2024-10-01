@@ -54,7 +54,7 @@ const FourCardsComponents = () => {
     dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 3, // Adjust for how many cards to show at once
+    slidesToShow: 4, // Adjust for how many cards to show at once
     prevArrow: <PrevArrow />, // Custom previous arrow
     nextArrow: <NextArrow />, // Custom next arrow
     slidesToScroll: 1,

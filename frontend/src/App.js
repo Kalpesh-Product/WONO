@@ -66,7 +66,7 @@ function App({useHideUnimportantErrors}) {
               <Homepage />
             </PublicRoute>
           } />
-          <Route path="/services" element={
+          <Route path="/saas" element={
             <PublicRoute>
               <Services />
             </PublicRoute>
