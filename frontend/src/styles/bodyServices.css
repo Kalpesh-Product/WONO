@@ -418,10 +418,6 @@
         align-items: stretch;
         justify-content: center;
     }
-
-    .services * {
-        font-family: ComicSansMS;
-    }
  
 
     .services:not(:last-child) {
