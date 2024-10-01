@@ -62,9 +62,10 @@
   margin-bottom: 20px;
   font-weight: bold;
   font-family: Popins-Semibold;
+  font-size: 1.1rem;
 }
 
-.Tickmark-text {
+.card-subtext {
   display: flex;
   align-items: center;
   margin-bottom: 6px;
@@ -73,7 +74,7 @@
   font-family: Popins-Regular;
 }
 
-.Tickmark-text img {
+.card-subtext img {
   width: 16px;
   margin-right: 10px;
 }
@@ -170,9 +171,9 @@ button.slick-next.slick-arrow::before {
     background-color: #fff;
     border-radius: 10px;
     height: 22.125rem;
-    margin: 0.5rem 53px;
+    margin: 0.5rem 12px;
     padding: 30px 20px;
-    width: 316px !important;
+    width: 284px !important;
   }
 }
 
@@ -184,10 +185,10 @@ button.slick-next.slick-arrow::before {
   .card_1 {
     background-color: #fff;
     border-radius: 10px;
-    height: 24.695rem;
-    margin: 0.5rem 40px;
+    /* height: 24.695rem; */
+    margin: 0.5rem 20px;
     padding: 30px 20px;
-    width: 305px !important;
+    width: 248px !important;
   }
 
   .four-cards-header span {
