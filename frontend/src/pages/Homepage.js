@@ -154,12 +154,7 @@ const Homepage = () => {
               <span className="O">o</span>rld
               <span className="n">N</span>
               <span className="O">o</span>mads */}
-              <span
-                style={{
-                  display: "flex",
-                  columnGap: "1rem",
-                  padding: "0rem 0 2rem ",
-                }}>
+              <span className="home-main-intro">
                 Introducing{" "}
                 <div className="home-main-title-svg">
                   {" "}
@@ -281,7 +276,7 @@ const Homepage = () => {
             {/* First div (1/2) */}
             <div className="">
               <div className="customMargin_top">
-                <div>
+                <div className="one-platform-section">
                   <h2>One Partner Platform,</h2>
                   <h2>Infinite possibilities and opportunities!</h2>
                 </div>
@@ -505,7 +500,7 @@ const Homepage = () => {
         </div>
 
         <div className="last-section  w-100 ">
-          <div className="pt-5 customMargin pb-5">
+          <div className="home-last-banner">
             <div className="grow-your-business-color">
               <h2>
                 <b>GROW YOUR BUSINESS WITH US</b>
