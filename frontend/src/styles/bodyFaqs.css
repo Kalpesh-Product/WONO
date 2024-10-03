@@ -12,16 +12,9 @@
     font-family: ComicSansMS;
 }
 
-.blue-italics {
-    font-style: italic;
-    color: blue;
-}
-
 .privacy-container {
     font-family: Popins-Semibold;
-    /* padding: 5rem; */
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+    padding: 3rem;
 }
 
 .privacy-section>ul>li b {
@@ -40,8 +33,7 @@
 
 @media (max-width:768px) {
     .privacy-container {
-        /* padding: 4rem 0.8rem 4rem 0.8rem; */
-        padding: 0 0.8rem 0 0.8rem;
+        padding: 0.8rem;
     }
 }
 

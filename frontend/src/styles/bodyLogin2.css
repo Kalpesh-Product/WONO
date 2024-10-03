@@ -294,13 +294,14 @@
 
     .loginBottomPadding {
         padding-bottom: 4rem;
-        height: 67.2vh;
+        /* height: 67.2vh; */
+        height: 100%;
     }
 }
 
-@media (max-width:768px) {
+/* @media (max-width:768px) {
     .loginBottomPadding {
         padding-bottom: 4rem;
         height: 100%;
     }
-}
+} */

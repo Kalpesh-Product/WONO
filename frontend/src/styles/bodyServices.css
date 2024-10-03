@@ -47,7 +47,8 @@
     font-family: ComicSansMS;
     width: 100%;
 }
-.services-animation-container img{
+
+.services-animation-container img {
     position: absolute;
     top: 99%;
     left: -8%;
@@ -75,7 +76,8 @@
 .SaaS-main-heading h4 {
     padding-bottom: 2rem;
 }
-.SaaS-main-tagline{
+
+.SaaS-main-tagline {
     font-size: 1.3rem;
 }
 
@@ -92,6 +94,7 @@
     width: 100%;
     padding-top: 2.5rem;
 }
+
 .services-footer-button-space {
     display: flex;
     align-items: center;
@@ -116,17 +119,20 @@
     width: 100%;
 
 }
-.SaaS-featured-heading-container img{
+
+.SaaS-featured-heading-container img {
     position: absolute;
     top: 85%;
     left: 2%;
     width: 41%;
 }
-.SaaS-features-heading{
+
+.SaaS-features-heading {
     position: relative;
     width: 100%;
 }
-.SaaS-features-heading img{
+
+.SaaS-features-heading img {
     position: absolute;
     top: 88%;
     left: 0%;
@@ -140,10 +146,11 @@
     top: 3px;
     left: -142px;
 } */
- .SaaS-features-frontend{
+.SaaS-features-frontend {
     position: relative;
     width: 100%;
- }
+}
+
 .SaaS-features-frontend img {
     position: absolute;
     width: 100%;
@@ -151,11 +158,13 @@
     top: 78%;
     left: -1%;
 }
-.SaaS-features-finance{
+
+.SaaS-features-finance {
     position: relative;
     width: 100%;
 }
-.SaaS-features-finance img{
+
+.SaaS-features-finance img {
     position: absolute;
     top: 79%;
     left: -1%;
@@ -163,44 +172,51 @@
     height: 69%;
 }
 
-.SaaS-features-sales{
+.SaaS-features-sales {
     position: relative;
     width: 100%;
 }
-.SaaS-features-sales img{
+
+.SaaS-features-sales img {
     position: absolute;
     top: 79%;
     left: -1%;
     width: 100%;
     height: 69%;
 }
-.SaaS-features-hr{
+
+.SaaS-features-hr {
     position: relative;
     width: 100%;
 }
-.SaaS-features-hr img{
+
+.SaaS-features-hr img {
     position: absolute;
     top: 79%;
     left: -2%;
     width: 100%;
     height: 56%;
 }
-.SaaS-features-cms{
+
+.SaaS-features-cms {
     position: relative;
     width: 100%;
 }
-.SaaS-features-cms img{
+
+.SaaS-features-cms img {
     position: absolute;
     top: 79%;
     left: -2%;
     width: 100%;
     height: 56%;
 }
-.SaaS-features-reports{
+
+.SaaS-features-reports {
     position: relative;
     width: 100%;
 }
-.SaaS-features-reports img{
+
+.SaaS-features-reports img {
     position: absolute;
     top: 79%;
     left: -2%;
@@ -272,7 +288,8 @@
     font-family: ComicSansMS;
     width: 100%;
 }
-.SaaS-grid-underline-container img{
+
+.SaaS-grid-underline-container img {
     position: absolute;
     top: 75%;
     left: 0%;
@@ -325,7 +342,7 @@
     font-family: ComicSansMS;
     color: black;
     text-transform: uppercase;
-   
+
 }
 
 .businesses>div>hr {
@@ -410,7 +427,7 @@
     justify-content: center;
     padding: 4rem 0;
     background-color: #0093E9;
-    background-image: linear-gradient(0deg, #106df6, #aae5ff );
+    background-image: linear-gradient(0deg, #106df6, #aae5ff);
     width: calc(100% + 15rem);
     margin: 0 -7.5rem;
     text-align: center;
@@ -427,6 +444,7 @@
     width: 50px;
     margin-bottom: 0.8rem;
 }
+
 .services-header-button-space {
     display: flex;
     align-items: center;
@@ -467,6 +485,7 @@
         font-family: Popins-Semibold;
         font-size: 4.55rem;
     }
+
     .services-footer-button-space {
         display: flex;
         align-items: center;
@@ -481,7 +500,7 @@
         font-family: Popins-Semibold;
         font-size: 4.155crem;
     }
-    
+
 }
 
 @media (max-width: 1024px) {
@@ -491,12 +510,13 @@
         align-items: stretch;
         justify-content: center;
     }
- 
+
 
     .services:not(:last-child) {
         padding: 0 4rem;
     }
-    .SaaS-grid-underline-container img{
+
+    .SaaS-grid-underline-container img {
         position: absolute;
         top: 75%;
         left: 0%;
@@ -504,7 +524,8 @@
         height: 22%;
         display: none;
     }
-    .SaaS-features-cms img{
+
+    .SaaS-features-cms img {
         position: absolute;
         top: 79%;
         left: -2%;
@@ -547,6 +568,7 @@
         margin: 0px -4rem;
         text-align: center;
     }
+
     .services-footer-button-space {
         display: flex;
         align-items: center;
@@ -573,7 +595,8 @@
         padding: 4rem 0 2rem 0;
 
     }
-    .SaaS-grid-underline-container img{
+
+    .SaaS-grid-underline-container img {
         position: absolute;
         top: 75%;
         left: 0%;
@@ -581,7 +604,8 @@
         height: 22%;
         display: none;
     }
-    .SaaS-features-cms img{
+
+    .SaaS-features-cms img {
         position: absolute;
         top: 79%;
         left: -2%;
@@ -594,7 +618,7 @@
         position: relative;
         font-family: ComicSansMS;
     }
-    
+
     .services-blue-underline {
         position: absolute;
         top: 5px;
@@ -620,6 +644,7 @@
         width: 100%;
         padding-top: 2rem;
     }
+
     .services-footer-button-space {
         display: flex;
         align-items: center;
@@ -645,6 +670,7 @@
         left: -98px;
 
     }
+
     .SaaS-blue-underline-frontend {
         position: absolute;
         width: 100%;
@@ -838,7 +864,7 @@
     }
 
 
-    .SaaS-grid-underline-container img{
+    .SaaS-grid-underline-container img {
         position: absolute;
         top: 75%;
         left: 0%;
@@ -846,7 +872,8 @@
         height: 22%;
         display: none;
     }
-    .SaaS-features-cms img{
+
+    .SaaS-features-cms img {
         position: absolute;
         top: 79%;
         left: -2%;
@@ -881,6 +908,7 @@
         width: 100%;
         padding-top: 2rem;
     }
+
     .services-footer-button-space {
         display: flex;
         align-items: center;
@@ -906,6 +934,7 @@
         left: -98px;
 
     }
+
     .SaaS-blue-underline-frontend {
         position: absolute;
         width: 100%;
@@ -914,7 +943,8 @@
         left: -40px;
 
     }
-    .SaaS-blue-underline-finance-accounting{
+
+    .SaaS-blue-underline-finance-accounting {
         position: absolute;
         width: 100%;
         height: 50px;
@@ -922,7 +952,8 @@
         left: -120px;
 
     }
-    .SaaS-blue-underline-customer-management-services{
+
+    .SaaS-blue-underline-customer-management-services {
         position: absolute;
         width: 100%;
         height: 50px;
@@ -931,7 +962,8 @@
 
 
     }
-    .SaaS-blue-underline-hrsupport{
+
+    .SaaS-blue-underline-hrsupport {
         position: absolute;
         width: 100%;
         height: 50px;
@@ -939,7 +971,8 @@
         left: -40px;
 
     }
-    .SaaS-blue-underline-reports-analytics{
+
+    .SaaS-blue-underline-reports-analytics {
         position: absolute;
         width: 100%;
         height: 50px;
@@ -947,7 +980,8 @@
         left: -110px;
 
     }
-    .SaaS-blue-underline-sales-marketing{
+
+    .SaaS-blue-underline-sales-marketing {
         position: absolute;
         width: 100%;
         height: 50px;
@@ -955,7 +989,7 @@
         left: -100px;
 
     }
-   
+
 
     .SaaS-featured-grid {
         display: grid;
