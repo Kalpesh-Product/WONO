@@ -68,9 +68,12 @@
 .SaaS-main-heading h4 {
     padding-bottom: 2rem;
 }
+.SaaS-main-tagline{
+    font-size: 1.3rem;
+}
 
 .plus-sign {
-    color: rgb(13, 110, 253);
+    color: #0AA9EF;
     font-weight: 900;
 }
 
@@ -415,10 +418,7 @@
         align-items: stretch;
         justify-content: center;
     }
-
-    .services * {
-        font-family: ComicSansMS;
-    }
+ 
 
     .services:not(:last-child) {
         padding: 0 4rem;

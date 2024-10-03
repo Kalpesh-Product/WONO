@@ -768,7 +768,7 @@ const Services = () => {
             <span className="plus-sign">+</span> Customer & Client Management{" "}
             <span className="plus-sign">+</span> Marketing and more.
           </h4>
-          <span>
+          <span className="SaaS-main-tagline">
             Everything that your business needs in one single platform which is
             seamless and easy to use.
           </span>
