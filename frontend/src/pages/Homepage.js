@@ -154,12 +154,7 @@ const Homepage = () => {
               <span className="O">o</span>rld
               <span className="n">N</span>
               <span className="O">o</span>mads */}
-              <span
-                style={{
-                  display: "flex",
-                  columnGap: "1rem",
-                  padding: "0rem 0 2rem ",
-                }}>
+              <span className="home-main-intro">
                 Introducing{" "}
                 <div className="home-main-title-svg">
                   {" "}
