@@ -666,7 +666,7 @@
 
 @media (max-width:1024px) {
     .N-Commerce {
-        flex: 0 0 53%;
+        flex: 0 0 50%;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -674,12 +674,13 @@
         font-family: Bebas-Regular;
         padding: 0rem 4rem;
         padding-right: 3rem;
+        font-size: 5rem;
     }
 
     .Globe-N-Commerce {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        height: 60vh;
+        /* height: 60vh; */
         background-color: black;
     }
 }
@@ -698,7 +699,11 @@
 
     .Globe {
         flex: 0 0 40%;
+        
         /* padding: 2rem 0; */
+    }
+    .canvas{
+        height: 300px !important;
     }
 
     .Nomads-list-bussiness {
