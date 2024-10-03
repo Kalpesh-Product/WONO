@@ -155,7 +155,7 @@ const Homepage = () => {
                 <div className="col-md-6">
                 {/* Empty div */}
                 </div>
-                <div className="col-12 col-md-6 home-main-tagline">
+                <div className="col-12 col-lg-6 col-md-12 col-sm-12 home-main-tagline">
                 <span>"Nomad Commerce"</span>
                 <span><b style={{fontWeight:'800'}}>WoNo.Co</b> = <b style={{fontWeight:'800'}}>Wo</b>rld <b style={{fontWeight:'800'}}>No</b>mad <b style={{fontWeight:'800'}}>Co</b>mmerce</span>
                 </div>
@@ -446,7 +446,7 @@ const Homepage = () => {
 
         <div className="last-section  w-100 ">
           <div className="pt-5 customMargin pb-5">
-            <div className="grow-your-business-color p-3">
+            <div className="grow-your-business-color">
               <h2>
                 <b>GROW YOUR BUSINESS WITH US</b>
               </h2>
