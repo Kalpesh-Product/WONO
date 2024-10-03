@@ -1,0 +1,45 @@
+@font-face {
+    font-family: ComicSansMS;
+    src: url('../assets/WONO_images/img/fonts/ComicSansMS.ttf');
+}
+
+.terms-title{
+    font-family: ComicSansMS;
+    position: relative;
+    width: 100%;
+}
+.terms-title img{
+    position: absolute;
+    top: 50%;
+    left: 31%;
+    width: 36%;
+    height: 23%;
+}
+
+@media (max-width:1024px) {
+    .terms-title img{
+        position: absolute;
+        top: 50%;
+        left: 26%;
+        width: 47%;
+        height: 23%;
+    } 
+}
+@media (max-width:768px) {
+    .terms-title img{
+        position: absolute;
+        top: 50%;
+        left: 14%;
+        width: 70%;
+        height: 23%;
+    } 
+}
+@media (max-width:426px) {
+    .terms-title img{
+        position: absolute;
+        top: 56%;
+        left: 14%;
+        width: 70%;
+        height: 20%;
+    } 
+}

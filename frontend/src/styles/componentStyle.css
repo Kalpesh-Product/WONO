@@ -13,6 +13,16 @@
   font-size: 3rem;
   margin-bottom: 1rem;
   font-weight: bold;
+  text-align: center;
+}
+@media (max-width:426px) {
+  .Title-font {
+    font-size: 1.9rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 2rem 0;
+  }
 }
 .spinner-container {
   position: fixed;

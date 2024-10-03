@@ -331,6 +331,18 @@
     width: 60%;
 }
 
+.home-last-banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #0093E9;
+    background-image: linear-gradient(0deg, #106df6, #aae5ff );
+    width: 100%;
+    text-align: center;
+    padding: 4rem 7rem;
+}
+
 /* Responsive styles for screens 1024px and below */
 @media (max-width: 1024px) {
     .home-page-container {
@@ -458,6 +470,17 @@
 
     .c {
         margin-left: 1px;
+    }
+    .home-last-banner {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background-color: #0093E9;
+        background-image: linear-gradient(0deg, #106df6, #aae5ff );
+        width: 100%;
+        text-align: center;
+        padding: 5rem 2rem;
     }
 
 }
@@ -710,6 +733,17 @@
     .c {
         margin-left: 1px;
     }
+    .home-last-banner {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background-color: #0093E9;
+        background-image: linear-gradient(0deg, #106df6, #aae5ff );
+        width: 100%;
+        text-align: center;
+        padding: 2rem 1.7rem;
+    }
 
 }
 
@@ -830,7 +864,7 @@
     .Globe-N-Commerce {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        /* height: 60vh; */
+        height: 50vh;
         background-color: black;
     }
 }
@@ -954,6 +988,26 @@
     }
 
 
+}
+
+.one-platform-section *{
+    font-size: 2.5rem !important;
+}
+
+@media (max-width:1024px) {
+    .one-platform-section *{
+        font-size: 2.5rem !important;
+    }  
+}
+@media (max-width:768px) {
+    .one-platform-section *{
+        font-size: 2rem !important;
+    }  
+}
+@media (max-width:426px) {
+    .one-platform-section *{
+        font-size: 1.7rem !important;
+    }  
 }
 
 
