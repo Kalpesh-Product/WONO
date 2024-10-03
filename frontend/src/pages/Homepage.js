@@ -35,9 +35,9 @@ import FourCardsComponents from "../components/Four_cardsComponents";
 import WebsiteCafe from "./WebsiteBuilder/WebsiteCafe";
 import WebsiteWorkation from "./WebsiteBuilder/WebsiteWorkation";
 import "../styles/bodyPartners.css";
-import greenUnderLine from '../assets/underline-bg/blue-line.png'
-import greenRound from '../assets/underline-bg/blue-circle.png'
 // import BiznestTestimonial from "../assets/testimonials/kashif-image.jpg";
+import greenUnderLine from "../assets/underline-bg/blue-line.png";
+import greenRound from "../assets/underline-bg/blue-circle.png";
 import BiznestTestimonial from "../assets/testimonials/kashif-image.webp";
 // import "../styles/bodyLastBanner.css";
 
@@ -141,16 +141,36 @@ const Homepage = () => {
         <div className="home-page-container">
           <div className="background-div">
             <div>
-              <img src={''} alt={`Slide`} className="background-image" />
+              <img src={""} alt={`Slide`} className="background-image" />
 
               {/* <img src={''} className="background-image" /> */}
-              <img src={''} className="background-image" />
+              <img src={""} className="background-image" />
             </div>
             <div className="black-overlay"></div>
           </div>
           <div className="first-section-grid-item-1">
             <h2 className="home-main-title ">
-              <span className="home-main-intro">Introducing <div className="home-main-title-svg"> <img src={greenUnderLine} />N-Commerce! </div></span>
+              {/* <span className="w"> W</span>
+              <span className="O">o</span>rld
+              <span className="n">N</span>
+              <span className="O">o</span>mads */}
+              <span
+                style={{
+                  display: "flex",
+                  columnGap: "1rem",
+                  padding: "0rem 0 2rem ",
+                }}>
+                Introducing{" "}
+                <div className="home-main-title-svg">
+                  {" "}
+                  <img src={greenUnderLine} />
+                  N-Commerce!{" "}
+                </div>
+              </span>
+              {/* <div style={{display:'flex', flexDirection:'column', textAlign:'end', paddingRight:'5rem'}}>
+              <span style={{ fontSize: '1rem' }}>"Nomad Commerce"</span>
+              <span style={{ fontSize: '1rem', marginLeft:"5rem", display:'flex', justifyContent:'end', width:'100%', fontWeight:'200' }}>WoNo.Co = <b>Wo</b>rld <b>No</b>mad <b>Co</b>mmerce</span>
+              </div> */}
               <div className="row">
                 <div className="col-md-6">
                 {/* Empty div */}
@@ -161,13 +181,53 @@ const Homepage = () => {
                 </div>
               </div>
             </h2>
-            <span className="home-main-title-desc">A simple no code instant SaaS software platform that supports businesses in remote and aspiring destinations!<br/>Provide services to nomads across the world. (Example: Co-Working, Co-Living, Hostels, Resorts, Cafes, Events etc)</span>
+            <span className="home-main-title-desc">
+              A simple no code instant SaaS software platform that supports
+              businesses in remote and aspiring destinations!
+              <br />
+              Provide services to nomads across the world. (Example: Co-Working,
+              Co-Living, Hostels, Resorts, Cafes, Events etc)
+            </span>
           </div>
-          <div style={{cursor:'pointer'}} onClick={()=> navigate('/register')} className="first-section-grid-item-2">
+          <div
+            style={{ cursor: "pointer" }}
+            onClick={() => navigate("/register")}
+            className="first-section-grid-item-2">
             <span className="home-desc">
-              <img src={greenRound}alt="" />
+              <img src={greenRound} alt="" />
               IT'S FREE
             </span>
+            {/* <div className="home-section-buttons">
+              <div className="home-section-register-button-space">
+                <div
+                  style={{ cursor: "pointer" }}
+                  onClick={() => {
+                    navigate("/register");
+                    window.scrollTo({ top: 0, behavior: "instant" });
+                  }}
+                  className="its-free-container">
+                  <svg
+                    fill="none"
+                    // viewBox="0 0 390 97"
+                    className="its-free-svg"
+                    viewBox="190 -5 400 120">
+                    <path
+                      stroke-width="10"
+                      width="800"
+                      height="40"
+                      stroke="#28a745"
+                      d="M2,76.26c16.11,4.95,31.91,3.84,48.58,3.84,20.39,0,40.67,0,61,1,18,.87,36-1,53.94-1,15.79,0,31.51,1.81,47.31,1.21,24.51-.93,49.17-2.18,73.68-2.49,19.45-.25,39.4,1.59,58.76-.64,15-1.73,29-2.29,39.75-14.79C387.89,60.1,390.5,48.5,386.5,40c-5.69-12.09-12.63-18.68-23.67-25.17C341.68,2.4,314.67,1.82,291.09,2c-21.31.2-55.45,3.62-68.52,24.46C212.14,43.1,212,59.57,227.79,72.77c24.81,20.81,63.45,26.8,93.41,18.85"></path>
+                  </svg>
+
+                  <span style={{ zIndex: 10 }}>it's free</span>
+                </div>
+                {/* <button
+                  className="home-section-register-button"
+                  onClick={handleRegister}>
+                  BUSINESS SIGN UP
+                </button>
+              </div>
+            </div> */}
           </div>
         </div>
 

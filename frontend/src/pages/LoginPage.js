@@ -8,15 +8,16 @@ import { jwtDecode } from "jwt-decode";
 import { UserContext } from "../contexts/UserContext";
 import Modals from "../components/Modals";
 import axios from "axios";
-import { Container, Box, Grid, TextField, Button } from '@mui/material';
+import { Container, Box, Grid, TextField, Button } from "@mui/material";
 import LoginWithGoogleImage from "../assets/WONO_images/img/login_images/google-icon2.png";
 import LoginWithFacebookImage from "../assets/WONO_images/img/login_images/login-with-facebook-icon.png";
 import LoginWithEmailImage from "../assets/WONO_images/img/login_images/email-icon.png";
-import Spinners from '../components/Spinner'
+import Spinners from "../components/Spinner";
 
 const LoginPage = () => {
   const navigate = useNavigate();
-  const { setUsername, setLoggedIn, loggedIn, username } = useContext(UserContext);
+  const { setUsername, setLoggedIn, loggedIn, username } =
+    useContext(UserContext);
   const [error, setError] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -24,21 +25,17 @@ const LoginPage = () => {
   const [showModal, setShowModal] = useState(false); // Control modal visibility
   const [modalTitle, setModalTitle] = useState("Error"); // Modal title
   const [modalMessage, setModalMessage] = useState("");
-  const [token, setToken] = useState('');
-  const [loading, setLoading] = useState(false)
+  const [token, setToken] = useState("");
+  const [loading, setLoading] = useState(false);
   const [loginForm, setLoginForm] = useState({
     email: "",
-    password: ""
-  })
-
-
+    password: "",
+  });
 
   // axios.defaults.withCredentials = true;
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-
-
 
     // Username validation using regex
     const usernameRegex = /^.{2,}$/; // At least 2 characters long
@@ -51,43 +48,44 @@ const LoginPage = () => {
     }
 
     try {
-      setLoading(true)
-      const response = await axios.post("/login", {
-        email,
-        password,
-      }, {
-        withCredentials: true
-      });
+      setLoading(true);
+      const response = await axios.post(
+        "/login",
+        {
+          email,
+          password,
+        },
+        {
+          withCredentials: true,
+        }
+      );
 
       const data = response.data;
       localStorage.setItem("username", data.user.name); // Save username in localStorage
       localStorage.setItem("token", data.token); // Save token in localStorage
       setUsername(data.user.name); // Set the username state
       setLoggedIn(true); // Set the loggedIn state to true
-
     } catch (error) {
       setModalTitle("Login Failed");
       setModalMessage("Invalid email or password");
       setShowModal(true); // Show the modal for the error
       console.error("Login Failed:", error);
-    } finally{
-      setLoading(false)
+    } finally {
+      setLoading(false);
     }
-
-  
   };
   useEffect(() => {
-    console.log('Effect running');
-  
+    console.log("Effect running");
+
     // Check if token exists in localStorage
     const token = localStorage.getItem("token");
-    console.log('Token:', token);
-  
+    console.log("Token:", token);
+
     if (token) {
       // Token exists, so the user is already logged in
       const storedUsername = localStorage.getItem("username");
-      console.log('Stored Username:', storedUsername);
-  
+      console.log("Stored Username:", storedUsername);
+
       if (storedUsername) {
         setUsername(storedUsername); // Set the username from localStorage
       }
@@ -96,17 +94,13 @@ const LoginPage = () => {
       setLoggedIn(false); // Ensure loggedIn is false if no token
     }
   }, [navigate]);
-  
+
   useEffect(() => {
     if (loggedIn) {
-      console.log('Navigating to dashboard');
+      console.log("Navigating to dashboard");
       navigate("/dashboard");
     }
   }, [loggedIn, navigate]);
-  
-  
-  
-
 
   const handleLoginResolve = ({ provider, data }) => {
     console.log("Provider:", provider);
@@ -143,7 +137,6 @@ const LoginPage = () => {
       setUserNameError(""); // Clear error if the email is valid
     }
   };
-
 
   const handleLoginError = () => {
     console.log("Login Failed");
@@ -185,7 +178,6 @@ const LoginPage = () => {
                       helperText={userNameError}
                       required
                       fullWidth
-
                     />
                   </Grid>
 
@@ -306,7 +298,7 @@ const LoginPage = () => {
         closeText={"Close"}>
         {modalMessage}
       </Modals>
-      {loading && <Spinners animation={'border'} variant={'dark'}/>} 
+      {loading && <Spinners animation={"border"} variant={"dark"} />}
     </>
   );
 };

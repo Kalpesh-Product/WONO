@@ -547,7 +547,7 @@ const LeadsPage = () => {
                     </div>
                     <div className="col-lg-4"></div>
                     {/* <div className="col-lg-4 bg-danger"> */}
-                    <div className="col-lg-4 d-flex justify-content-lg-end justify-content-md-end justify-content-center justify-content-sm-center align-items-center pe-0">
+                    <div className="col-lg-4 d-flex justify-content-lg-end justify-content-md-center justify-content-center justify-content-sm-center align-items-center pe-0">
                       {/* <div className="">
                         <button
                           className="get-started-submit-button "

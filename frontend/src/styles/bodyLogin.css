@@ -195,6 +195,7 @@ h2 {
     margin: 0;
     width: 50%;
 }
+
 @media (max-width:1024px) {
 
     .forgot-password-container {
@@ -205,6 +206,7 @@ h2 {
         width: 100%;
         font-family: Popins-Regular;
     }
+
     .forgot-password-left-container h2 {
         font-family: Popins-Regular;
         font-size: 3.5rem;
