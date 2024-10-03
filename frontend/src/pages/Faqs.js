@@ -2,16 +2,13 @@ import React from "react";
 import "../styles/bodyFaqs.css";
 import "../styles/componentStyle.css";
 import { Link } from "react-router-dom";
+import greenUnderLine from '../assets/underline-bg/blue-line.png'
 
 const Faqs = () => {
   return (
     <>
-      <div className="privacy-container wono-text-spacing fontPoppinsRegular">
-        <br />
-        <br />
-        <h3 className="Title-font text-center ComicFont">FAQs</h3>
-        <br />
-        <br />
+      <div className="privacy-container wono-text-spacing pb-5 faq-title fontPoppinsRegular">
+        <h3 className="Title-font text-center faq-title ComicFont"> <img src={greenUnderLine} alt="" />FAQs</h3>
         {/* <div className="privacy-section"></div> */}
         <div className="privacy-section">
           <h4>1. What is SaaS?</h4>
@@ -21,7 +18,7 @@ const Faqs = () => {
             the internet, typically on a subscription basis.
           </p>
         </div>
-        <br />
+ 
         <div className="privacy-section">
           <h4>2. What is N-Commerce?</h4>
           <p>
@@ -34,7 +31,7 @@ const Faqs = () => {
             growth and who especially do not have the budget to build such tech.
           </p>
         </div>
-        <br />
+       
         <div className="privacy-section">
           <h4>3. What is N-Commerce SaaS?</h4>
           <p>
@@ -44,7 +41,7 @@ const Faqs = () => {
             business operations, all hosted in the cloud.
           </p>
         </div>
-        <br />
+    
         <div className="privacy-section">
           <h4>4. How is SaaS different from traditional software?</h4>
           <p>
@@ -54,7 +51,7 @@ const Faqs = () => {
             follows a subscription model.
           </p>
         </div>
-        <br />
+   
         <div className="privacy-section">
           <h4>5. Is WoNo SaaS really for FREE?</h4>
           <p>
@@ -63,7 +60,7 @@ const Faqs = () => {
             business initially. It’s totally FREE for now.
           </p>
         </div>
-        <br />
+  
         <div className="privacy-section">
           <h4>6. How secure is my data?</h4>
           <p>
@@ -71,7 +68,7 @@ const Faqs = () => {
             regular security audits to protect user data.
           </p>
         </div>
-        <br />
+   
         <div className="privacy-section">
           <h4>7. Can I customize the software?</h4>
           <p>
@@ -81,7 +78,7 @@ const Faqs = () => {
             feedback for further customization.
           </p>
         </div>
-        <br />
+ 
         <div className="privacy-section">
           <h4>8. What happens if I cancel my subscription?</h4>
           <p>
@@ -90,7 +87,7 @@ const Faqs = () => {
             cancellation, allowing you to export it before permanent deletion.
           </p>
         </div>
-        <br />
+ 
         <div className="privacy-section">
           <h4>9. How often is the software updated?</h4>
           <p>
@@ -100,7 +97,7 @@ const Faqs = () => {
             updates.
           </p>
         </div>
-        <br />
+ 
         <div className="privacy-section">
           <h4>10. Do you offer customer support?</h4>
           <p>
@@ -109,7 +106,7 @@ const Faqs = () => {
             support with faster response time soon.
           </p>
         </div>
-        <br />
+ 
         <div className="privacy-section">
           <h4>11. Is the software mobile-friendly?</h4>
           <p>
@@ -118,7 +115,7 @@ const Faqs = () => {
             tablets.
           </p>
         </div>
-        <br />
+ 
         <div className="privacy-section">
           <h4>12. What is uptime and how reliable is your service?</h4>
           <p>
@@ -126,7 +123,7 @@ const Faqs = () => {
             (SLA). Typical guarantees are 99.9% uptime.
           </p>
         </div>
-        <br />
+ 
         <div className="privacy-section">
           <h4>13. Can I integrate with other tools?</h4>
           <p>
@@ -136,7 +133,7 @@ const Faqs = () => {
             and offering API access for custom integrations.
           </p>
         </div>
-        <br />
+ 
         <div className="privacy-section">
           <h4>14. How do you handle backups and data recovery?</h4>
           <p>
@@ -145,12 +142,12 @@ const Faqs = () => {
             services.
           </p>
         </div>
-        <br />
+ 
         <div className="privacy-section">
           <h4>15. Is there a limit on the number of users?</h4>
           <p>As of now there are no user limitation on our platform.</p>
         </div>
-        <br />
+ 
         <div className="privacy-section">
           <h4>16. Do you support CRM functionality?</h4>
           <p>
@@ -159,7 +156,7 @@ const Faqs = () => {
             with clients, and manage follow-ups efficiently.
           </p>
         </div>
-        <br />
+ 
         <div className="privacy-section">
           <h4>
             17. Can I manage multiple properties or agents from one account?
@@ -170,7 +167,7 @@ const Faqs = () => {
             permissions to team members and track their performance.
           </p>
         </div>
-        <br />
+ 
         <div className="privacy-section">
           <h4>18. What types of reports can I generate?</h4>
           <p>
@@ -180,7 +177,7 @@ const Faqs = () => {
             multiple formats (PDF, Excel, etc.).
           </p>
         </div>
-        <br />
+ 
         <div className="privacy-section">
           <h4>19. Do you offer training and support?</h4>
           <p>
@@ -189,7 +186,7 @@ const Faqs = () => {
             email, and phone. We also provide a comprehensive knowledge base.
           </p>
         </div>
-        <br />
+ 
         <div className="privacy-section">
           <h4>
             20. Can I ask the support team any questions or request any
@@ -201,20 +198,20 @@ const Faqs = () => {
             post our discussion.
           </p>
         </div>
-        <br />
+ 
         <div className="privacy-section">
           <h4>21. Where can I contact you? </h4>
           <p>
-            Write to us at response@won.co and we shall try and get back to you
+            Write to us at <a href="mailto:response@wono.co">response@wono.co</a> and we shall try and get back to you
             asap.
           </p>
         </div>
-        <br />
+ 
         <div className="privacy-section">
           <h4>22. Are there any hidden charges?</h4>
           <p>No, our SaaS is absolutely free for now.</p>
         </div>
-        <br />
+ 
         <div className="privacy-section">
           <h4>23. In which countries does WoNo provide its SaaS & Support? </h4>
           <p>
@@ -222,7 +219,7 @@ const Faqs = () => {
             world.
           </p>
         </div>
-        <br />
+ 
         <div className="privacy-section">
           <h4>
             24. Can I apply to work or contribute at WoNo and join the
@@ -230,11 +227,10 @@ const Faqs = () => {
           </h4>
           <p>
             Yes, we are more than happy to welcome all friends who want to join
-            our company or contribute as freelancers. You can reach us at
-            hr@wono.co or apply from our careers age.
+            our company or contribute as freelancers. You can reach us at <a href="mailto:hr@wono.co">hr@wono.co</a> or apply from our careers age.
           </p>
         </div>
-        <br />
+ 
         <div className="privacy-section">
           <h4>25. Can I connect with the Founders of the company?</h4>
           <p>
@@ -244,7 +240,7 @@ const Faqs = () => {
             meeting with you.
           </p>
 
-          <br />
+   
           <p>
             Can find the answer to any of your questions here? Please connect
             with us via our{" "}

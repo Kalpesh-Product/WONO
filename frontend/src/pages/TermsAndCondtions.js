@@ -10,13 +10,13 @@ const TermsAndCondtions = () => {
   return (
     <>
       <div className="privacy-container wono-text-spacing fontPoppinsRegular">
-        <h3 className="Title-font terms-title pb-5"><img src={greenUnderLine} alt="" /> Terms and Conditions</h3>
+        <h3 className="Title-font terms-title pb-5"><img src={greenUnderLine} alt="" /> TERMS AND CONDITIONS</h3>
         <div className="privacy-section">
           <h4>1.Introduction</h4>
           <span>
             Welcome to WONOCO PRIVATE LIMITED (SINGAPORE COMPANY) (&quot;Company&quot;,
             &quot;we&quot;, &quot;our&quot;, or &quot;us&quot;). These Terms and Conditions (&quot;Terms&quot;) govern your use of our SaaS
-            platform, located at www.wo.co, and any services, features, or content provided by the
+            platform, located at <span onClick={()=> navigate('/home')}>www.wono.co</span> , and any services, features, or content provided by the
             platform (collectively, the &quot;Service&quot;).
           </span>
           <br />
@@ -34,8 +34,6 @@ const TermsAndCondtions = () => {
             jurisdiction. By using the Service, you represent that you are of legal age and have the legal
             capacity to enter into a binding agreement.
           </span>
-          <br />
-          <br />
         </div>
         <div className="privacy-section">
           <h4>3. Account Registration</h4>
@@ -94,8 +92,6 @@ const TermsAndCondtions = () => {
             property laws. You may not copy, modify, distribute, or use any of these materials without
             prior written consent from the Company.
           </span>
-          <br />
-          <br />
         </div>
         <div className="privacy-section">
           <h4>7. Data Protection and Privacy</h4>
@@ -111,8 +107,6 @@ const TermsAndCondtions = () => {
             availability, accuracy, or content of any third-party services or platforms. Your use of third-
             party integrations is subject to the terms and conditions of the respective third parties.
           </span>
-          <br />
-          <br />
         </div>
         <div className="privacy-section">
           <h4>9. Service Availability</h4>
@@ -122,8 +116,6 @@ const TermsAndCondtions = () => {
             updates, or technical reasons. We are not liable for any loss or damage resulting from
             interruptions in service.
           </span>
-          <br />
-          <br />
         </div>
         <div className="privacy-section">
           <h4>10. Modifications to the Service and Terms</h4>
@@ -133,8 +125,6 @@ const TermsAndCondtions = () => {
             sending you a notification. Continued use of the Service after changes are made constitutes
             your acceptance of the new Terms.
           </span>
-          <br />
-          <br />
         </div>
         <div className="privacy-section">
           <h4>11. Termination</h4>
@@ -143,8 +133,6 @@ const TermsAndCondtions = () => {
             settings. We reserve the right to suspend or terminate your account or access to the Service at
             our discretion, especially if you breach these Terms.
           </span>
-          <br />
-          <br />
           <span>
             Upon termination, you will lose access to the Service, and any data associated with your
             account may be deleted.
@@ -158,15 +146,10 @@ const TermsAndCondtions = () => {
             arising from your use of the Service, including but not limited to loss of profits, data, or
             business opportunities.
           </span>
-          <br />
-          <br />
           <span>
             In no event shall our total liability exceed the amount you paid to the Company for your use
             of the Service in the twelve (12) months preceding the claim.
           </span>
-          <br />
-          <br />
-
         </div>
         <div className="privacy-section">
           <h4>13. Indemnification</h4>
@@ -176,8 +159,6 @@ const TermsAndCondtions = () => {
             Service, your violation of these Terms, or your infringement of any intellectual property or
             other rights of a third party.
           </span>
-          <br />
-          <br />
         </div>
         <div className="privacy-section">
           <h4>14. Governing Law and Dispute Resolution</h4>
@@ -188,8 +169,6 @@ const TermsAndCondtions = () => {
             judgment on the award rendered by the arbitrator may be entered in any court having
             jurisdiction.
           </span>
-          <br />
-          <br />
         </div>
         <div className="privacy-section">
           <h4>15. Force Majeure</h4>
@@ -198,8 +177,6 @@ const TermsAndCondtions = () => {
             events beyond our reasonable control, including but not limited to natural disasters, war,
             terrorism, cyber-attacks, strikes, or governmental actions.
           </span>
-          <br />
-          <br />
         </div>
         <div className="privacy-section">
           <h4>16. Severability</h4>
@@ -207,8 +184,6 @@ const TermsAndCondtions = () => {
             If any provision of these Terms is found to be invalid or unenforceable, the remaining
             provisions will remain in full force and effect.
           </span>
-          <br />
-          <br />
         </div>
         <div className="privacy-section">
           <h4>17. Entire Agreement</h4>
@@ -217,8 +192,6 @@ const TermsAndCondtions = () => {
             agree to when using the Service, constitute the entire agreement between you and the
             Company regarding the Service and supersede any prior agreements.
           </span>
-          <br />
-          <br />
         </div>
         <div className="privacy-section">
           <h4>18. Contact Information</h4>
@@ -231,8 +204,10 @@ const TermsAndCondtions = () => {
           <span>WONOCO PRIVATE LIMITED</span>
           <span>10 ANSON ROAD #33-10 INTERNATIONAL PLAZA</span>
           <span>SINGAPORE - 079903</span>
+          <div className="d-flex flex-column fw-regular">
           <Link to={'mailto:response@wono.co'}>response@wono.co</Link>
           <Link to={'/contact'}>Contact us</Link>
+          </div>   
           </div>
         </div>
       </div>

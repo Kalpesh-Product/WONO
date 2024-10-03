@@ -70,7 +70,7 @@
   align-items: center;
   margin-bottom: 6px;
   color: #363636;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   font-family: Popins-Regular;
 }
 
@@ -170,7 +170,7 @@ button.slick-next.slick-arrow::before {
   .card_1 {
     background-color: #fff;
     border-radius: 10px;
-    height: 22.125rem;
+    height: 20.125rem;
     margin: 0.5rem 12px;
     padding: 30px 20px;
     width: 284px !important;
