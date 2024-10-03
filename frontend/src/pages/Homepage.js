@@ -243,7 +243,7 @@ const Homepage = () => {
 
         <div className="Globe-N-Commerce">
           <div className="Globe" style={{ textAlign: "left" }}>
-            <Canvas
+            <Canvas 
               camera={{
                 position: [0, 0, ismobile ? 15 : 25],
                 fov: ismobile ? 40 : isTablet ? 60 : 30,

@@ -106,7 +106,7 @@
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: #007bff;
+  background-color: #0AA9EF;
   /* Color of the underline */
   visibility: hidden;
   transition: all 0.3s ease-in-out;
@@ -130,7 +130,7 @@
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: #007bff;
+  background-color: #0AA9EF;
   /* Color of the underline */
 }
 
@@ -404,7 +404,7 @@
 }
 
 .register-button {
-  background-color: rgb(13, 110, 253);
+  background-color: #0AA9EF;
   padding: 0.5rem 2rem 0.5rem 2rem;
   color: black;
   border-radius: 5px;

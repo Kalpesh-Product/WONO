@@ -121,7 +121,7 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
                 className={
                   (!isAuthPage && isthempage) && activeTab === "themes" ? "active" : ""
                 }>
-                Theme
+                Themes
               </Link>
               <Link
                 to="/leads"
@@ -229,12 +229,6 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
           </Link>
           <Link
             className="custom-offcanvas-link"
-            to="/capital"
-            onClick={handleClose}>
-            Capital
-          </Link>
-          <Link
-            className="custom-offcanvas-link"
             to="/themes"
             onClick={handleClose}>
             Themes
@@ -245,6 +239,14 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
             onClick={handleClose}>
             Leads
           </Link>
+          <Link
+            className="custom-offcanvas-link"
+            to="/capital"
+            onClick={handleClose}>
+            Capital
+          </Link>
+
+          
           <Link
             className="custom-offcanvas-link"
             to="/career"
