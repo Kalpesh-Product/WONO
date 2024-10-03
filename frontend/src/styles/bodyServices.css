@@ -531,7 +531,6 @@
         left: -2%;
         width: 100%;
         height: 56%;
-        display: none;
     }
 
     .business-grid {
@@ -611,7 +610,6 @@
         left: -2%;
         width: 100%;
         height: 56%;
-        display: none;
     }
 
     .services-animation-container {
@@ -879,7 +877,6 @@
         left: -2%;
         width: 100%;
         height: 56%;
-        display: none;
     }
 
 
@@ -1095,7 +1092,7 @@
 
     .businesses>div>h1 {
         text-align: start;
-        font-size: 1.5rem;
+        font-size: 1.1rem;
         font-weight: 700;
         font-family: Popins-SemiBold;
         color: black;
