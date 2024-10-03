@@ -8,6 +8,10 @@
     src: url('../assets/WONO_images/img/fonts/ComicSansMS.ttf');
 }
 
+.WONOBLUE {
+    color: #0AA9EF;
+}
+
 .ComicFont {
     font-family: ComicSansMS;
 }
