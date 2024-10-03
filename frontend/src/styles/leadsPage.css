@@ -523,7 +523,7 @@
         }
 
         .last-section h2 {
-            font-size: 2rem;
+            font-size: 2.9rem;
         }
 
         .last-section p {
@@ -562,4 +562,9 @@
             padding-left: 0;
         }
 
+    }
+    @media (max-width:426px) {
+        .last-section h2 {
+            font-size: 2rem;
+        }
     }
