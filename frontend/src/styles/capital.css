@@ -191,8 +191,8 @@
 } */
 .capital-last-button-section {
     position: relative;
-        background-color: #0093E9;
-    background-image: linear-gradient(0deg, #106df6, #aae5ff );
+    background-color: #0093E9;
+    background-image: linear-gradient(0deg, #106df6, #aae5ff);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -358,6 +358,12 @@
         /* padding: 5% 4rem 5% 4rem; */
         padding: 4rem 3rem;
 
+
+    }
+
+    .capital-big-text h1 {
+        font-size: 2rem;
+
     }
 
     .frictionless-heading-with-btns {
@@ -374,8 +380,8 @@
 
     .capital-last-button-section {
         position: relative;
-    background-color: #0093E9;
-    background-image: linear-gradient(0deg, #106df6, #aae5ff );
+        background-color: #0093E9;
+        background-image: linear-gradient(0deg, #106df6, #aae5ff);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -552,8 +558,8 @@
 
     .capital-last-button-section {
         position: relative;
-    background-color: #0093E9;
-    background-image: linear-gradient(0deg, #106df6, #aae5ff );
+        background-color: #0093E9;
+        background-image: linear-gradient(0deg, #106df6, #aae5ff);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -722,8 +728,8 @@
 
     .capital-last-button-section {
         position: relative;
-    background-color: #0093E9;
-    background-image: linear-gradient(0deg, #106df6, #aae5ff );
+        background-color: #0093E9;
+        background-image: linear-gradient(0deg, #106df6, #aae5ff);
         display: flex;
         align-items: center;
         justify-content: center;
