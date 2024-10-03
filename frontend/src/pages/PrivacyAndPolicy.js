@@ -1,294 +1,260 @@
 import React from "react";
 import "../styles/bodyPrivacyAndPolicy.css";
 import "../styles/componentStyle.css";
+import greenUnderLine from '../assets/underline-bg/blue-line.png'
+
+// import { Link } from "react-router-dom";
 
 const PrivacyAndPolicy = () => {
   return (
     <>
       <div className="privacy-container wono-text-spacing fontPoppinsRegular">
-        <h3 className="Title-font">Privacy Policy</h3>
-        <div className="privacy-section">
-          About this policy WoNo.Co is committed to protecting your privacy and
-          ensuring that your personal information is handled in a safe and
-          responsible way. This Privacy Policy sets out details of the
-          information that we may collect from you and how we may use that
-          information. Please take your time to read this Privacy Policy
-          carefully. When using our website, this Privacy Policy should be read
-          alongside the website terms and conditions.
-        </div>
-        <div className="privacy-section">
-          <h4>1. ABOUT US</h4>
-          <span>
-            This Privacy Policy describes how WoNo.Co , trading as WoNo.Co Cafe
-            ("we" or "us" or "our") collect and process data about individuals.
-          </span>
-          <br />
-          <br />
-          <span>
-            For the purpose of the Data Protection Act 2018 (the “Legislation”)
-            and in adherence of , the data controller is WoNo.Co , located at
-            Sunteck Kanaka Corporate Park, 501 B (A),Patto Centre, Panaji,Goa
-            403001
-          </span>
-          <br />
-          <br />
-          <span>
-            Our Data Protection Officer can be contacted by emailing
-            response@wono.co , as further detailed below.
-          </span>
-        </div>
-        <div className="privacy-section">
-          <h4>2. PERSONAL INFORMATION</h4>
-          <span>
-            As part of the registration process on the Site, WoNo.Co may collect
-            the following personally identifiable information about you: Name
-            including first and last name, alternate email address, mobile phone
-            number and contact details, Postal code, Demographic profile (like
-            your age, gender, occupation, education, address etc.) and
-            information about the pages on the site you visit/access, the links
-            you click on the site, the number of times you access the page and
-            any such browsing information.
-          </span>
-          <br />
-          <br />
-        </div>
-        <div className="privacy-section">
-          <h4>3. HOW WE USE YOUR INFORMATION :</h4>
-          <span>We use information held about you in the following ways:</span>
-          <br />
-          <br />
 
-          <ul>
-            <li>
-              <span>
-                To provide you with the information, products and services that
-                you request from us;
-              </span>
-              <br />
-            </li>
-            <li>
-              To provide you with the information, products, and services that
-              you request from us;
-            </li>
-            <li>
-              To provide you with information about other goods and services we
-              offer that are similar to those that you have already purchased or
-              enquired about;
-            </li>
-            <li>
-              To provide you with information about goods or services we feel
-              may interest you, where you have consented to us contacting you
-              for the purposes of marketing or other promotional purposes. If
-              you are an existing customer, we will only contact you or share
-              information with you by electronic means (e-mail, social media or
-              SMS) with information about goods and services similar to those
-              which were the subject of a previous sale or negotiations of a
-              sale to you. If you do not want us to use your data in this way,
-              please tick the relevant box situated on the form on which we
-              collect your data;
-            </li>
-            <li>To validate discounts and verify your identity;</li>
-            <li>
-              To measure or understand the effectiveness of advertising we serve
-              to you and others, and to deliver relevant advertising to you and
-              others;
-            </li>
-            <li>To notify you about changes to our service;</li>
-            <li>
-              To ensure that content from our site is presented in the most
-              effective manner for you and for your computer.
-            </li>
-          </ul>
-        </div>
-        <div className="privacy-section">
-          <h4>
-            4. YOU MAY NOT USE THE SITE FOR ANY OF THE FOLLOWING PURPOSES:
-          </h4>
-          <ol>
-            <li>
-              Disseminating any unlawful, harassing, libellous, abusive,
-              threatening, harmful, vulgar, obscene, or otherwise objectionable
-              material.
-            </li>
-            <li>
-              Transmitting material that encourages conduct that constitutes a
-              criminal offence or results in civil liability or otherwise
-              breaches any relevant laws, regulations or code of practice.
-            </li>
-            <li>Gaining unauthorized access to other computer systems.</li>
-            <li>
-              Interfering with any other person's use or enjoyment of the Site.
-            </li>
-            <li>Breaching any applicable laws.</li>
-            <li>
-              Interfering or disrupting networks or websites connected to the
-              Site.
-            </li>
-            <li>
-              Making, transmitting or storing electronic copies of materials
-              protected by copyright without the permission of the owner.
-            </li>
-          </ol>
-        </div>
-        <div className="privacy-section">
-          <h4>5. GOVERNING LAW AND JURISDICTION</h4>
-          <span>
-            This User Agreement shall be construed in accordance with the
-            applicable laws of India. The Courts at Goa shall have exclusive
-            jurisdiction in any proceedings arising out of this agreement. Any
-            dispute or difference either in interpretation or otherwise, of any
-            terms of this User Agreement between the parties hereto, the same
-            shall be referred to an independent arbitrator who will be appointed
-            by WoNo.Co and his decision shall be final and binding on the
-            parties hereto. The above arbitration shall be in accordance with
-            the Arbitration and Conciliation Act, 1996 as amended from time to
-            time. The arbitration shall be held in Goa. The High Court of
-            judicature at Goa alone shall have the jurisdiction and the Laws of
-            India shall apply.
-          </span>
-          <br />
-          <br />
-        </div>
-        <div className="privacy-section">
-          <h4>6. ACCOUNT & REGISTRATION OBLIGATIONS</h4>
-          <span>
-            All Customers have to register and login for placing techniques to
-            enclose any trademark, logo, or other proprietary information
-            (including images, text, page layout, or form) of the Site or of
-            WoNo.Co its affiliates without express written consent. You may not
-            use any meta tags or any other "hidden text" utilizing the Site’s or
-            WoNo.Co ’s name or trademarks without the express written consent of
-            WoNo.Co . Any unauthorized use terminates the permission or license
-            granted by WoNo.Co orders on the Site. You have to keep your account
-            and registration details current and correct for communications
-            related to your purchases from the site. By agreeing to the terms
-            and conditions, the shopper agrees to receive promotional
-            communication and newsletters upon registration.
-          </span>
-        </div>
-        <div className="privacy-section">
-          <h4>7. SUBSCRIPTION</h4>
-          <span>
-            If you choose to subscribe to any of the subscriptions or the
-            products listed on the header of WoNo.Co website, then you will be
-            requested to provide certain basic information (name, email address,
-            contact detail, number of desks and start date). We use this
-            information to contact you about the services on our website in
-            which you have expressed interest.
-          </span>
-          <br />
-          <br />
-          <span>
-            Once you subscribe as per your needs and interest, we will send you
-            a welcoming email on the email id provided by you confirming that
-            the team has received your enquiry request and shall revert back
-            shortly. We will also respond to your inquiries, provide services
-            you request. We will communicate with you by email or telephone and
-            will make every effort to honour your preference.
-          </span>
-          <br />
-          <br />
-          <span>
-            We may also use your contact information to send you information
-            about other products and services, such as meeting rooms, virtual
-            offices, co-working etc subject to us having obtained your consent
-            in accordance with applicable law. If you do not want to receive
-            these promotional announcements on an on-going basis you can notify
-            us to update your preferences.
-          </span>
-        </div>
-        <div className="privacy-section">
-          <h4>8. OBJECTIONABLE MATERIAL</h4>
-          <span>
-            You understand that by using this Site or any services provided on
-            the Site, you may encounter Content that may be deemed by some to be
-            offensive, indecent, or objectionable, which Content may or may not
-            be identified as such. You agree to use the Site and any service at
-            your sole risk and that to the fullest extent permitted under
-            applicable law, WoNo.Co and its affiliates shall have no liability
-            to you for Content that may be deemed offensive, indecent, or
-            objectionable to you.
-          </span>
-          <br />
-          <br />
-          <ul>
-            <li>
-              <b>Indemnity</b>
-              <br />
-              You agree to defend, indemnify and hold harmless WoNo.Co , its
-              employees, directors, officers, agents and their successors and
-              assigns from and against any and all claims, liabilities, damages,
-              losses, costs and expenses, including attorney's fees, caused by
-              or arising out of claims based upon your actions or inactions,
-              which may result in any loss or liability to WoNo.Co Café or any
-              third party including but not limited to breach of any warranties,
-              representations or undertakings or in relation to the
-              non-fulfilment of any of your obligations under this User
-              Agreement or arising out of the your violation of any applicable
-              laws, regulations including but not limited to Intellectual
-              Property Rights, payment of statutory dues and taxes, claim of
-              libel, defamation, violation of rights of privacy or publicity,
-              loss of service by other subscribers and infringement of
-              intellectual property or other rights. This clause shall survive
-              the expiry or termination of this User Agreement.
-            </li>
-            <li>
-              <b>Termination</b>
-              <br />
-              This User Agreement is effective unless and until terminated by
-              either you or WoNo.Co . You may terminate this User Agreement at
-              any time, provided that you discontinue any further use of this
-              Site. WoNo.Co may terminate this User Agreement at any time and
-              may do so immediately without notice, and accordingly deny you
-              access to the Site, Such termination will be without any liability
-              to WoNo.Co . Upon any termination of the User Agreement by either
-              you or WoNo.Co , you must promptly destroy all materials
-              downloaded or otherwise obtained from this Site, as well as all
-              copies of such materials, whether made under the User Agreement or
-              otherwise. WoNo.Co 's right to any Comments shall survive any
-              termination of this User Agreement. Any such termination of the
-              User Agreement shall not cancel your obligation to pay for the
-              product already ordered from the Website or affect any liability
-              that may have arisen under the User Agreement.
-            </li>
-          </ul>
-          <span>
-            Complaints and Regulatory and Customer Grievance Redressal
-          </span>
-          <br />
-          <br />
+        <h3 className="Title-font text-center pb-5 ComicFont privacy-title"><img src={greenUnderLine} alt="" /> Privacy Policy</h3>
 
-          <span>
-            For general queries with respect to our offerings you may reach out
-            to our Customer care service at response@wono.co
-          </span>
-          <br />
-          <br />
-          <span>
-            Any complaints or concerns with regards to content of this platform
-            or comment or breach of these terms of use or any intellectual
-            property of any user, instances of customer grievances, regulatory
-            queries and clarifications shall be informed/ communicated to the
-            Grievance Cum Nodal Officer at the coordinates mentioned below in
-            writing. We shall look into the same and get back to you.
-          </span>
-          <br />
-          <br />
-          <span>Grievance cum Nodal officer</span>
-          <br />
-          <span>
-            In accordance with Information Technology Act, 2000 and rules made
-            there under and also required under Consumer Protection (E-
-            Commerce) Rules, 2020, the name and contact details of the Grievance
-            Officer/ Nodal Officer are provided below:
-          </span>
-          <br />
-          <br />
-          <span>
-            <b>WoNo.Co</b>
+        <div className="privacy-section">
+          <h4>Last Updated: 2nd October 2024</h4>
+          <p>
+            Welcome to WONOCO PRIVATE LIMITED (SINGAPORE COMPANY) ("Company",
+            "we", "our", or "us") is committed to protecting your privacy. This
+            Privacy Policy explains how we collect, use, disclose, and protect
+            your personal information when you use our SaaS platform (the
+            "Service"), located at <u className="text-primary">www.wono.co</u>,
+            as well as your rights in relation to your personal data.
             <br />
-            Email : response@wono.co
-          </span>
+            <br />
+            By accessing or using the Service, you agree to the terms of this
+            Privacy Policy. If you do not agree with our practices, please do
+            not use the Service.
+          </p>
+        </div>
+        <div className="privacy-section">
+          <h4>1. Information We Collect</h4>
+          <p>
+            We collect the following types of information when you use our
+            platform:
+          </p>
+
+          <p className="blue-italics">1.1 Personal Information</p>
+          <p>
+            This refers to any information that identifies you personally,
+            including but not limited to:
+          </p>
+          <ul>
+            <li>Name</li>
+            <li>Email address</li>
+            <li>Phone number</li>
+            <li>Company name</li>
+            <li>Billing and payment details</li>
+            <li>Job title</li>
+          </ul>
+
+          <p className="blue-italics">1.2 Usage Data</p>
+          <p>
+            We may automatically collect information about how you use our
+            Service, including:
+          </p>
+
+          <ul>
+            <li>IP address</li>
+            <li>Browser type and version</li>
+            <li>Device type and operating system</li>
+            <li>Pages viewed and actions taken on our platform</li>
+            <li>Time and date of usage</li>
+            <li>Referring website addresses (URLs)</li>
+          </ul>
+
+          <p className="blue-italics">1.3 Cookies and Tracking Technologies</p>
+
+          <p>
+            We use cookies, web beacons, and similar technologies to enhance
+            user experience, analyze site traffic, and improve our Service. You
+            can control the use of cookies at the individual browser level. If
+            you reject cookies, some features of the Service may not function
+            properly.
+          </p>
+        </div>
+        <div className="privacy-section">
+          <h4>2. How We Use Your Information</h4>
+          <p>We use the information we collect for the following purposes:</p>
+
+          <ul>
+            <li>
+              <span className="fw-bold">To Provide the Service:</span> We use
+              your personal information to manage your account, process
+              payments, and provide access to the platform.
+            </li>
+            <li>
+              <span className="fw-bold">To Improve the Service:</span> We
+              analyze usage data to enhance the functionality, performance, and
+              security of the platform.
+            </li>
+            <li>
+              <span className="fw-bold">To Communicate with You:</span> We may
+              send you important updates, notifications, or promotional
+              materials rimport from 'react-router-dom'; elated to our
+              Service.import from 'react-router-dom'; You can opt out of
+              marketing communications at any time.
+            </li>
+            <li>
+              <span className="fw-bold">To Comply with Legal Obligations:</span>{" "}
+              We may use your information to comply with legal obligations,
+              resolve disputes, or enforce our agreements.
+            </li>
+          </ul>
+        </div>
+        <div className="privacy-section">
+          <h4>3. How We Share Your Information</h4>
+          <p>
+            We do not sell, rent, or trade your personal information to third
+            parties. However, we may share your information in the following
+            circumstances:
+          </p>
+          <p className="blue-italics">3.1 Service Providers</p>
+
+          <p>
+            We may share your information with trusted third-party service
+            providers that assist us in delivering the Service, such as payment
+            processors, hosting providers, customer support platforms, and
+            analytics services. These providers are bound by confidentiality
+            obligations and may not use your information for any other purposes.
+          </p>
+
+          <p className="blue-italics">3.2 Legal Obligations</p>
+          <p>
+            We may disclose your information if required by law, court order, or
+            other legal processes, or if we believe it is necessary to protect
+            our rights, property, or the safety of our users or others.
+          </p>
+
+          <p className="blue-italics">3.3 Business Transfers</p>
+          <p>
+            In the event of a merger, acquisition, sale of assets, or
+            bankruptcy, your personal information may be transferred to a new
+            entity. You will be notified if such a transfer occurs and informed
+            of any changes in this Privacy Policy.
+          </p>
+        </div>
+        <div className="privacy-section">
+          <h4>4. Data Security</h4>
+
+          <p>
+            We implement industry-standard security measures to protect your
+            information from unauthorized access, loss, misuse, or alteration.
+            These include encryption, firewalls, secure socket layer (SSL)
+            technology, and access controls. While we strive to protect your
+            personal information, no method of transmission over the internet or
+            electronic storage is 100% secure. Therefore, we cannot guarantee
+            absolute security.
+          </p>
+        </div>
+
+        <div className="privacy-section">
+          <h4>5. Data Retention</h4>
+          <p>
+            We retain your personal information for as long as necessary to
+            fulfill the purposes outlined in this Privacy Policy, unless a
+            longer retention period is required or permitted by law. Once your
+            data is no longer needed, we will delete or anonymize it.
+          </p>
+        </div>
+        <div className="privacy-section">
+          <h4>6. Your Data Protection Rights</h4>
+          <p>
+            Depending on your location, you may have the following rights
+            regarding your personal information:
+          </p>
+
+          <ul>
+            <li>
+              <span className="fw-bold">Right to Access:</span> You have the
+              right to request access to the personal information we hold about
+              you.
+            </li>
+            <li>
+              <span className="fw-bold">Right to Rectification:</span> You can
+              request corrections to any inaccurate or incomplete personal
+              information.
+            </li>
+            <li>
+              <span className="fw-bold">Right to Erasure:</span> You can request
+              that we delete your personal information under certain
+              circumstances.
+            </li>
+            <li>
+              <span className="fw-bold">Right to Restrict Processing:</span> You
+              may request that we limit the processing of your personal
+              information.
+            </li>
+            <li>
+              <span className="fw-bold">Right to Data Portability:</span> You
+              can request a copy of your personal information in a structured,
+              commonly used, and machine-readable format.
+            </li>
+            <li>
+              <span className="fw-bold">Right to Object:</span> You have the
+              right to object to our processing of your personal information
+              based on legitimate interests, including marketing activities.
+            </li>
+          </ul>
+
+          <p>
+            To exercise any of these rights, please contact us at [Email
+            Address]. We may request specific information to verify your
+            identity before fulfilling your request.
+          </p>
+        </div>
+        <div className="privacy-section">
+          <h4>7. International Data Transfers</h4>
+          <p>
+            We may transfer your personal information to countries outside of
+            your jurisdiction, including to servers and service providers
+            located in other countries. When we do so, we take appropriate steps
+            to ensure that your data is handled securely and in accordance with
+            this Privacy Policy and applicable data protection laws.
+          </p>
+        </div>
+        <div className="privacy-section">
+          <h4>8. Children's Privacy</h4>
+          <p>
+            Our Service is not intended for individuals under the age of 18. We
+            do not knowingly collect personal information from children. If you
+            believe we have collected personal data from a child, please contact
+            us at [Email Address], and we will take appropriate steps to delete
+            that information.
+          </p>
+        </div>
+        <div className="privacy-section">
+          <h4>9. Changes to This Privacy Policy</h4>
+          <p>
+            We may update this Privacy Policy from time to time to reflect
+            changes in our practices, legal requirements, or Service offerings.
+            We will notify you of any significant changes by posting the updated
+            Privacy Policy on our platform or by sending you an email
+            notification. Your continued use of the Service after the changes
+            are made will constitute acceptance of the revised policy.
+          </p>
+        </div>
+        <div className="privacy-section">
+          <h4>10. Contact Information</h4>
+          <p>
+            If you have any questions or concerns about this Privacy Policy or
+            how we handle your personal information, please contact us at:
+          </p>
+          <br />
+          <p>
+            WONOCO PRIVATE LIMITED
+            <br />
+            10 ANSON ROAD #33-10 INTERNATIONAL PLAZA
+            <br />
+            SINGAPORE - 079903
+            <br />
+            <u className="text-primary">response@wono.co</u>
+            <br />
+            <u className="text-primary">Contact us</u>
+          </p>
+          {/* <Link to="/contact">Contact us</Link> */}
+          {/* <Link to="/contact">Contact us</Link> */}
         </div>
       </div>
     </>

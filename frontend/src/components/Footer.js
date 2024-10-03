@@ -103,15 +103,27 @@ const Footer = ({ changeActiveTab }) => {
               </Link>
             </div>
             <div className="footer-section-3">
-              <h5><Link to="#">FAQs</Link></h5>
+              <h5>
+                <Link
+                  to={"/faqs"}
+                  onClick={() =>
+                    window.scrollTo({ top: 0, behavior: "instant" })
+                  }>
+                  FAQs
+                </Link>
+              </h5>
               <Link
                 to={"/privacy"}
-                onClick={() => window.scrollTo({ top: 0, behavior: "instant" })}>
+                onClick={() =>
+                  window.scrollTo({ top: 0, behavior: "instant" })
+                }>
                 Privacy
               </Link>
               <Link
                 to={"/termsandconditions"}
-                onClick={() => window.scrollTo({ top: 0, behavior: "instant" })}>
+                onClick={() =>
+                  window.scrollTo({ top: 0, behavior: "instant" })
+                }>
                 T&C
               </Link>
             </div>
