@@ -95,6 +95,14 @@ const RotatingGlobe = () => {
     return [0, -500, 0];
   };
 
+  const getLabelRotationphilipines = (lat,lon) =>{
+    return [0, -506, 0];
+  }
+
+  const getLabelRotationsingapore = (lat,lon) =>{
+    return [0, -500, 0];
+  }
+
   const indiaLabelRotation = getLabelRotation(1.5937, 110.9629);
 
   //position for Sri Lanka
@@ -150,12 +158,21 @@ const RotatingGlobe = () => {
   const estoniaLabelPosition = getLabelRotationestonia(45.437, 160.7536);
 
   //position of Bali
-  const baliPosition = latLonToPosition(-18.9271, 90.8612, 5);
-  const baliLabelPosition = getLabelRotationbali(-18.9271, 90.8612);
+  const baliPosition = latLonToPosition(-15.9271, 90.8612, 5);
+  const baliLabelPosition = getLabelRotationbali(-15.9271, 90.8612);
 
   //position of bankok
   const bankokPosition = latLonToPosition(-3.7563, 95.5018, 5);
   const bankokLabelPosition = getLabelRotationbankok(-3.7563, 95.5018);
+
+  //position of Philipines
+  const philipinesPosition = latLonToPosition(-10.9271, 70.8612, 5);
+  const philipinesLabelPosition = getLabelRotationphilipines(-10.9271, 70.8612);
+
+  //position of Singapore
+  const singaporePosition = latLonToPosition(-21.9271, 88.8612, 5);
+  const singaporeLabelPosition = getLabelRotationsingapore(-21.9271, 88.8612);
+
 
   return (
     <>
@@ -388,7 +405,7 @@ const RotatingGlobe = () => {
 
         <Text
           position={baliPosition.map((coord, index) =>
-            index === 1 ? coord * 1.2 + 0.2 : coord * 1.2
+            index === 1 ? coord * 1.2 + 0.3 : coord * 1.2
           )}
           fontSize={0.3}
           color="black"
@@ -432,6 +449,40 @@ const RotatingGlobe = () => {
           fontWeight="bold">
           BANGKOK
         </Text>
+        <mesh position={philipinesPosition}>
+          <sphereGeometry args={[0.1, 32, 32]} />
+          <meshBasicMaterial color="red" />
+        </mesh>
+        <Text
+          position={philipinesPosition.map((coord, index) =>
+            index === 1 ? coord * 1.2 + 0.3 : coord * 1.2
+          )}
+          fontSize={0.3}
+          color="black"
+          anchorX="center"
+          anchorY="middle"
+          rotation={philipinesLabelPosition}
+          fontWeight="bold">
+          PHILLIPINES
+        </Text>
+        <mesh position={singaporePosition}>
+          <sphereGeometry args={[0.1, 32, 32]} />
+          <meshBasicMaterial color="red" />
+        </mesh>
+        <Text
+          position={singaporePosition.map((coord, index) =>
+            index === 1 ? coord * 1.2 + 0.3 : coord * 1.3
+          )}
+          fontSize={0.3}
+          color="black"
+          anchorX="center"
+          anchorY="middle"
+          rotation={singaporeLabelPosition}
+          fontWeight="bold">
+          SINGAPORE
+        </Text>
+
+
       </mesh>
     </>
   );
