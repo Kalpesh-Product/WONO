@@ -2,22 +2,22 @@ import React from "react";
 import "../styles/bodyThemes.css";
 import "../styles/specialClasses.css";
 import CafeImage from "../assets/WONO_images/img/website-builder/new-layout/cafe.png";
-import BiznestImage from "../assets/WONO_images/img/products-images/biznestImage.png";
-import BiznestImageMockup from "../assets/WONO_images/img/website-builder/new-layout/mobile/mockups/biznest-mockup.png";
-import Cafe_2 from "../assets/WONO_images/img/website-builder/new-layout/cafe-2.png";
-import Cafe_3 from "../assets/WONO_images/img/website-builder/new-layout/cafe-3.png";
-import CoWorkingImage from "../assets/WONO_images/img/website-builder/new-layout/co-working.png";
-import CoWorkingImageMockup from "../assets/WONO_images/img/website-builder/new-layout/mobile/mockups/co-working-mockup-bg.png";
-import CoLivingImage from "../assets/WONO_images/img/website-builder/new-layout/co-living.png";
-import CoLivingImageMockup from "../assets/WONO_images/img/website-builder/new-layout/mobile/mockups/co-living-mockup.png";
-import CoWorkingImage_2 from "../assets/WONO_images/img/website-builder/new-layout/co-working-2.png";
-import CoWorkingImage_3 from "../assets/WONO_images/img/website-builder/new-layout/co-working-3.png";
+import BiznestImage from "../assets/WONO_images/img/products-images/biznestImage.webp";
+import BiznestImageMockup from "../assets/WONO_images/img/website-builder/new-layout/mobile/mockups/biznest-mockup.webp";
+import Cafe_2 from "../assets/WONO_images/img/website-builder/new-layout/cafe-2.webp";
+import Cafe_3 from "../assets/WONO_images/img/website-builder/new-layout/cafe-3.webp";
+import CoWorkingImage from "../assets/WONO_images/img/website-builder/new-layout/co-working.webp";
+import CoWorkingImageMockup from "../assets/WONO_images/img/website-builder/new-layout/mobile/mockups/co-working-mockup-bg.webp";
+import CoLivingImage from "../assets/WONO_images/img/website-builder/new-layout/co-living.webp";
+import CoLivingImageMockup from "../assets/WONO_images/img/website-builder/new-layout/mobile/mockups/co-living-mockup.webp";
+import CoWorkingImage_2 from "../assets/WONO_images/img/website-builder/new-layout/co-working-2.webp";
+import CoWorkingImage_3 from "../assets/WONO_images/img/website-builder/new-layout/co-working-3.webp";
 import Featured from "../assets/WONO_images/img/website-builder/new-layout/featured/featured-1.png";
-import Boutique from "../assets/WONO_images/img/website-builder/new-layout/boutique.png";
-import BoutiqueMockup from "../assets/WONO_images/img/website-builder/new-layout/mobile/mockups/boutique-mockup.png";
-import CoWorkingMewo from "../assets/WONO_images/img/website-builder/new-layout/co-working-mewo.png";
-import CoWorkingMewoMockup from "../assets/WONO_images/img/website-builder/new-layout/mobile/mockups/co-working-mewo-mockup.png";
-import BizNestMockup from "../assets/WONO_images/img/website-builder/new-layout/Macbook-mockup.png";
+import Boutique from "../assets/WONO_images/img/website-builder/new-layout/boutique.webp";
+import BoutiqueMockup from "../assets/WONO_images/img/website-builder/new-layout/mobile/mockups/boutique-mockup.webp";
+import CoWorkingMewo from "../assets/WONO_images/img/website-builder/new-layout/co-working-mewo.webp";
+import CoWorkingMewoMockup from "../assets/WONO_images/img/website-builder/new-layout/mobile/mockups/co-working-mewo-mockup.webp";
+import BizNestMockup from "../assets/WONO_images/img/website-builder/new-layout/Macbook-mockup.webp";
 import Hostels from "../assets/WONO_images/img/website-builder/new-layout/hostels.png";
 import { useNavigate } from "react-router-dom";
 
@@ -25,11 +25,36 @@ const Themes = () => {
   const navigate = useNavigate();
 
   const themeImages = [
-    { src: BiznestImage, mockup: BiznestImageMockup, alt: "BiznestImage", tag: "co-working" },
-    { src: CoWorkingMewo,mockup: CoWorkingMewoMockup, alt: "CoWorkingMewo", tag: "co-working" },
-    { src: CoWorkingImage, mockup: CoWorkingImageMockup, alt: "Co-Working Image", tag: "co-working" },
-    { src: Boutique, mockup: BoutiqueMockup, alt: "Boutique Image", tag: "boutique" },
-    { src: CoLivingImage, mockup: CoLivingImageMockup, alt: "Co-Living Image", tag: "co-living" },
+    {
+      src: BiznestImage,
+      mockup: BiznestImageMockup,
+      alt: "BiznestImage",
+      tag: "co-working",
+    },
+    {
+      src: CoWorkingMewo,
+      mockup: CoWorkingMewoMockup,
+      alt: "CoWorkingMewo",
+      tag: "co-working",
+    },
+    {
+      src: CoWorkingImage,
+      mockup: CoWorkingImageMockup,
+      alt: "Co-Working Image",
+      tag: "co-working",
+    },
+    {
+      src: Boutique,
+      mockup: BoutiqueMockup,
+      alt: "Boutique Image",
+      tag: "boutique",
+    },
+    {
+      src: CoLivingImage,
+      mockup: CoLivingImageMockup,
+      alt: "Co-Living Image",
+      tag: "co-living",
+    },
     { src: CoWorkingImage_2, alt: "CoLivingImage_2", tag: "co-working" },
     { src: CoWorkingImage_3, alt: "CoLivingImage_3", tag: "co-working" },
     { src: Cafe_2, alt: "Cafe_2", tag: "cafe" },
@@ -40,7 +65,7 @@ const Themes = () => {
   const themeWebsiteGridData = [
     {
       title: "Faster loading",
-      description: "Wix is designed for performance so your site loads faster",
+      description: "WoNo is designed for performance so your site loads faster",
     },
     {
       title: "Built with SEO in mind",
@@ -67,7 +92,6 @@ const Themes = () => {
         "Personalize your website effortlessly by using  customizable templates.",
     },
   ];
-
 
   return (
     <div>
@@ -115,8 +139,8 @@ const Themes = () => {
                 </div>
                 <div className="themePage-featured-content">
                   <ul>
-                    <li>Intuitive drag and drop website editor</li>
                     <li>1000's advanced web capabilities</li>
+                    <li>Intuitive drag and drop website editor</li>
                     <li>Powerful AI features for smart customization</li>
                     <li>Full-stack web dev tools for custom functionality</li>
                   </ul>
@@ -193,10 +217,13 @@ const Themes = () => {
                     Get support by chat or schedule a call with a Customer Care
                     Expert
                   </p>
-                  <span onClick={() => {
-                    navigate('/contact')
-                    window.scrollTo({ top: 0, behavior: "smooth" });
-                  }}>Connect With us →</span>
+                  <span
+                    onClick={() => {
+                      navigate("/contact");
+                      window.scrollTo({ top: 0, behavior: "smooth" });
+                    }}>
+                    Connect With us →
+                  </span>
                 </div>
                 <div className="themePage-website-support-grid-1">
                   <h2>
@@ -205,10 +232,13 @@ const Themes = () => {
                   <p>
                     Get help at any stage -- from site creation to online growth
                   </p>
-                  <span onClick={() => {
-                    navigate('/services')
-                    window.scrollTo({ top: 0, behavior: "smooth" });
-                  }}>Browse all services →</span>
+                  <span
+                    onClick={() => {
+                      navigate("/saas");
+                      window.scrollTo({ top: 0, behavior: "smooth" });
+                    }}>
+                    Browse all services →
+                  </span>
                 </div>
               </div>
             </div>

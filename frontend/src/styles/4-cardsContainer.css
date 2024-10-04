@@ -3,9 +3,10 @@
   src: url('../assets/WONO_images/img/fonts/Poppins-Regular.ttf');
 }
 
-.four-cards-parent *{
+.four-cards-parent * {
   font-family: Popins-Regular;
 }
+
 .four-cards-parent {
   margin: 0;
   padding: 4rem 7rem;
@@ -15,15 +16,18 @@
   position: relative;
   width: 100%;
 }
-.four-cards-header{
+
+.four-cards-header {
   text-align: center;
 }
-.four-cards-header span{
+
+.four-cards-header span {
   text-align: center;
   font-size: 4.9rem;
   font-weight: 700;
   /* white-space: nowrap; */
 }
+
 .four-cards-wrapper {
   padding: 2rem 2rem;
   display: flex;
@@ -31,17 +35,18 @@
   justify-content: center;
 }
 
-.card-body{
+.card-body {
   width: 100% !important;
 }
-.card_1 {
-background-color: #fff;
-    border-radius: 10px;
-    height: 22.125rem;
-    margin: 0.5rem 19px;
-    padding: 30px 20px;
-    width: 270px !important;
-}
+
+/* .card_1 {
+  background-color: #fff;
+  border-radius: 10px;
+  height: 22.125rem;
+  margin: 0.5rem 19px;
+  padding: 30px 20px;
+  width: 270px !important;
+} */
 
 .card-icon {
   width: 45px;
@@ -57,18 +62,19 @@ background-color: #fff;
   margin-bottom: 20px;
   font-weight: bold;
   font-family: Popins-Semibold;
+  font-size: 1rem;
 }
 
-.Tickmark-text {
+.card-subtext {
   display: flex;
   align-items: center;
   margin-bottom: 6px;
   color: #363636;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   font-family: Popins-Regular;
 }
 
-.Tickmark-text img {
+.card-subtext img {
   width: 16px;
   margin-right: 10px;
 }
@@ -89,61 +95,103 @@ background-color: #fff;
   text-decoration: underline;
   color: blue;
 }
+
 .slick-prev,
 .slick-next {
-  background-color: black; /* Background color for arrows */
+  background-color: black;
+  /* Background color for arrows */
   border: none;
   border-radius: 50%;
-  width: 30px; /* Arrow size */
-  height: 30px; /* Arrow size */
+  width: 30px;
+  /* Arrow size */
+  height: 30px;
+  /* Arrow size */
   line-height: 30px;
   text-align: center;
-  font-size: 18px; /* Arrow symbol size */
+  font-size: 18px;
+  /* Arrow symbol size */
   cursor: pointer;
-  z-index: 1; /* Ensure arrows are above the slider */
+  z-index: 1;
+  /* Ensure arrows are above the slider */
 }
 
 .slick-prev {
-  left: 70px; /* Distance from the left edge */
+  left: 70px;
+  /* Distance from the left edge */
 }
 
 .slick-next {
-  right: 10px; /* Distance from the right edge */
+  right: 10px;
+  /* Distance from the right edge */
 }
 
 .slick-prev:before,
 .slick-next:before {
-  content: ''; /* Override default content */
+  content: '';
+  /* Override default content */
   display: block;
 }
 
-button.slick-prev.slick-arrow{
+button.slick-prev.slick-arrow {
   left: -42px;
   margin-left: 46px;
 }
-button.slick-prev.slick-arrow::before{
+
+button.slick-prev.slick-arrow::before {
   color: black;
   font-size: 2rem;
 }
-button.slick-next.slick-arrow{
+
+button.slick-next.slick-arrow {
   margin-right: 43px;
 }
 
-button.slick-next.slick-arrow::before{
+button.slick-next.slick-arrow::before {
   color: black;
   font-size: 2rem;
 }
-@media (max-width:1440px) {
-  
+
+
+/* for 4k screen */
+@media (min-width: 2550px) {
   .card_1 {
     background-color: #fff;
     border-radius: 10px;
-    height: 22.695rem;
-    margin: 0.5rem 10px;
+    height: 22.125rem;
+    margin: 0.5rem 143px;
     padding: 30px 20px;
-    width: 257px !important;
+    width: 270px !important;
   }
-  .four-cards-header span{
+}
+
+/* below 4k screen  */
+
+@media (max-width: 2548px) {
+  .card_1 {
+    background-color: #fff;
+    border-radius: 10px;
+    height: 20.125rem;
+    margin: 0.5rem 12px;
+    padding: 30px 20px;
+    width: 284px !important;
+  }
+}
+
+/* for sir's screen */
+
+
+@media (max-width:1440px) {
+
+  .card_1 {
+    background-color: #fff;
+    border-radius: 10px;
+    /* height: 24.695rem; */
+    margin: 0.5rem 20px;
+    padding: 30px 20px;
+    width: 248px !important;
+  }
+
+  .four-cards-header span {
     text-align: center;
     font-size: 4.6rem;
     font-weight: 700;
@@ -161,24 +209,27 @@ button.slick-next.slick-arrow::before{
     position: relative;
     width: 100%;
   }
-  .four-cards-header span{
+
+  .four-cards-header span {
     text-align: center;
     font-size: 2.5rem;
   }
 
   .card_1 {
     background-color: #fff;
-      border-radius: 10px;
-      height: 362px;
-      margin: .5rem 29px;
-      padding: 30px 20px;
-      width: 262px !important;
+    border-radius: 10px;
+    height: 362px;
+    margin: .5rem 29px;
+    padding: 30px 20px;
+    width: 262px !important;
   }
-  button.slick-prev.slick-arrow{
+
+  button.slick-prev.slick-arrow {
     left: -37px;
     margin-left: 46px;
   }
-  button.slick-next.slick-arrow{
+
+  button.slick-next.slick-arrow {
     margin-right: 43px;
   }
 }
@@ -193,36 +244,62 @@ button.slick-next.slick-arrow::before{
     position: relative;
     width: 100%;
   }
-  .four-cards-header span{
+
+  .four-cards-header span {
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 2.6rem;
   }
 
   .card_1 {
-    /* background-color: white;
-    padding: 30px 20px;
-    border-radius: 10px;
-    width: 250px !important;
-    margin:0.5rem 53px;
-    height: 330px; */
     background-color: #fff;
-      border-radius: 10px;
-      height: 362px;
-      margin: .5rem 30px;
-      padding: 30px 20px;
-      width: 262px !important;
+    border-radius: 10px;
+    height: 362px;
+    margin: .5rem 35px;
+    padding: 30px 20px;
+    width: 245px !important;
   }
-  button.slick-prev.slick-arrow{
-    left: -37px;
+
+  button.slick-prev.slick-arrow {
+    left: -50px;
     margin-left: 46px;
   }
-  button.slick-next.slick-arrow{
+
+  button.slick-next.slick-arrow {
     margin-right: 43px;
   }
 }
 
+@media (max-width:376px) {
+  .four-cards-parent {
+    margin: 0;
+    padding: 2rem 1rem;
+    background-color: #fdfdfd;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+  }
 
+  .four-cards-header span {
+    text-align: center;
+    font-size: 2.6rem;
+  }
 
+  .card_1 {
+    background-color: #fff;
+    border-radius: 10px;
+    height: 362px;
+    margin: .5rem 17px;
+    padding: 30px 20px;
+    width: 245px !important;
+  }
 
+  button.slick-prev.slick-arrow {
+    left: -50px;
+    margin-left: 46px;
+  }
 
-
+  button.slick-next.slick-arrow {
+    margin-right: 43px;
+  }
+}

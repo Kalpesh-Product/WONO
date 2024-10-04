@@ -1,6 +1,7 @@
 // NavBar.js
-import React, { useContext, useState } from "react";
-import { UserContext } from "./UserContext";
+//Kindly make changes in the offCanvas as well while making changes in the main navbar
+import React, { useContext, useState, useEffect } from "react";
+import { UserContext } from '../contexts/UserContext';
 import { useNavigate, useLocation } from "react-router-dom";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import { Link } from "react-router-dom";
@@ -9,48 +10,75 @@ import "../styles/componentStyle.css";
 import WonoLogo from "../assets/WONO_images/img/WONO_LOGO_white _TP.png";
 // import ProfileImage from "../assets/WONO_images/img/profile-image-wono.png";
 // import ProfileImage from "../assets/WONO_images/img/user-profile.webp";
-import ProfileImage from "../assets/WONO_images/img/wono-img-profile.png";
+// import ProfileImage from "../assets/WONO_images/img/wono-img-profile.png";
+import ProfileImage from "../assets/WONO_images/img/User-default.png";
+import Spinners from "./Spinner";
 
 const NavBar = ({ activeTab, changeActiveTab }) => {
   const navigate = useNavigate();
-
+  const { username, loggedIn, setLoggedIn, setUsername } = useContext(UserContext);
   const location = useLocation();
   const isAuthPage =
-    location.pathname === "/login" || location.pathname === "/register";
+    location.pathname === "/login" && location.pathname === "/register";
   const isthempage = location.pathname === "/themes";
-  const isservices = location.pathname === "/services";
+  const isservices = location.pathname === "/saas";
   const isleadspage = location.pathname === "/leads";
   const iscareerpage = location.pathname === "/career";
   const iscapitalpage = location.pathname === "/capital";
-  const { user, setUser } = useContext(UserContext);
   const [show, setShow] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [loading, setLoading] = useState(false)
   // const [activeTab, setActiveTab] = useState("Home");
 
   // const changeActiveTab = (activeTab) => {
   //   setActiveTab(activeTab);
   // };
 
+  // If username is not set, check localStorage
+  const storedUsername = localStorage.getItem('username');
+
+
   const handleLogout = async () => {
     try {
-      await axios.post(
-        "/logout",
-        {},
-        { withCredentials: true }
-      );
-      setUser(null); // Clear the user state
-      navigate("/home");
+      setLoading(true)
+      const response = await axios.get("/logout", { withCredentials: true });
+  
+      if (response.status === 200) {
+        // Clear the local storage for username
+        localStorage.removeItem('token');
+        localStorage.removeItem('username');
+  
+        // Clear user context state
+        setLoggedIn(false); // Set loggedIn to false
+        setUsername(''); // Clear the username from context state
+  
+        console.log("Logged out, username cleared");
+        navigate("/login"); // Redirect to login
+      } else {
+        console.error("Error logging out:", response);
+      }
     } catch (error) {
       console.error("Error logging out:", error);
+    } finally{
+      setLoading(false)
     }
   };
+
+
+  useEffect(() => {
+    console.log("LoggedIn state changed: ", loggedIn);
+  }, [loggedIn]);
+
 
   const handleRegister = () => {
     navigate("/register");
     setShow(false);
   };
 
-  const handleClose = () => setShow(false);
+  const handleClose = () => {
+    setShow(false)
+    window.scrollTo({ top: 0, behavior: "instant" })
+  };
   const handleShow = () => setShow(true);
 
   return (
@@ -69,14 +97,17 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
           />
         </div>
         <div className="custom-navbar-menu nav-tabss">
-          {!user ? (
+          {loggedIn ? (
+            <Link to={"/dashboard"} className="active">
+              {/* Dashboard */}
+              Activating Soon
+            </Link>
+          ) : (
             <>
               <Link
-                to="/services"
+                to="/saas"
                 className={
-                  (!isAuthPage && isservices) || activeTab === "Services"
-                    ? "active"
-                    : ""
+                  (!isAuthPage && isservices) && activeTab === "Services" ? "active" : ""
                 }
                 onClick={() => {
                   changeActiveTab("Services");
@@ -85,10 +116,33 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
                 SaaS
               </Link>
               <Link
+                to="/themes"
+                onClick={() => {
+                  changeActiveTab("themes");
+                  window.scrollTo({ top: 0, behavior: "instant" });
+                }}
+                className={
+                  (!isAuthPage && isthempage) && activeTab === "themes" ? "active" : ""
+                }>
+                Themes
+              </Link>
+              <Link
+                to="/leads"
+                onClick={() => {
+                  changeActiveTab("leads");
+                  window.scrollTo({ top: 0, behavior: "instant" });
+                }}
+                className={
+                  (!isAuthPage && !isservices && isleadspage) && activeTab === "leads"
+                    ? "active"
+                    : ""
+                }>
+                Leads
+              </Link>
+              <Link
                 to="/capital"
                 className={
-                  (!isAuthPage && iscapitalpage && !isservices) ||
-                  activeTab === "capital"
+                  (!isAuthPage && iscapitalpage && !isservices) && activeTab === "capital"
                     ? "active"
                     : ""
                 }
@@ -99,37 +153,8 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
                 Capital
               </Link>
               <Link
-                to="/themes"
-                onClick={() => {
-                  changeActiveTab("themes");
-                  window.scrollTo({ top: 0, behavior: "instant" });
-                }}
-                className={
-                  (!isAuthPage && isthempage) || activeTab === "themes"
-                    ? "active"
-                    : ""
-                }>
-                Theme
-              </Link>
-              <Link
-                to="/leads"
-                onClick={() => {
-                  changeActiveTab("leads");
-                  window.scrollTo({ top: 0, behavior: "instant" });
-                }}
-                className={
-                  (!isAuthPage && !isservices && isleadspage) ||
-                  activeTab === "leads"
-                    ? "active"
-                    : ""
-                }>
-                Leads
-              </Link>
-              <Link
                 to="/career"
-                className={
-                  !isAuthPage && activeTab === "Career" ? "active" : ""
-                }
+                className={!isAuthPage && activeTab === "Career" ? "active" : ""}
                 onClick={() => {
                   changeActiveTab("Career");
                   window.scrollTo({ top: 0, behavior: "instant" });
@@ -137,28 +162,22 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
                 Career
               </Link>
             </>
-          ) : null}
-
-          {user ? (
-            <Link to={"/dashboard"} className="active">
-              {/* Dashboard */}
-              Activating Soon
-            </Link>
-          ) : null}
+          )}
         </div>
+
         <div className="custom-navbar-menu">
-          {user ? (
-            <div className="user-profile">
+          {loggedIn ? (
+            <div className="user-profile custom-navbar-buttons">
               <div
                 className="profile-container"
                 onClick={() => setDropdownOpen(!dropdownOpen)}>
                 <img
                   // src={user.picture}
                   src={ProfileImage}
-                  alt={user.name}
+                  alt={'ProfileImage'}
                   className="profile-image"
                 />
-                <span>{user.name ? user.name : user.email}</span>
+                <span>{username && storedUsername && 'NewUser'}</span>
                 <div className={`dropdown-menu ${dropdownOpen ? "show" : ""}`}>
                   <button onClick={handleLogout}>Logout</button>
                 </div>
@@ -167,13 +186,19 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
           ) : (
             <div className="custom-navbar-buttons">
               <Link
-                onClick={() =>{changeActiveTab(null); window.scrollTo({ top: 0, behavior: "instant" })}}
+                onClick={() => {
+                  changeActiveTab(null);
+                  window.scrollTo({ top: 0, behavior: "instant" });
+                }}
                 to="/login"
                 className="login-button">
                 SIGN IN
               </Link>
               <Link
-                onClick={() =>{changeActiveTab(null); window.scrollTo({ top: 0, behavior: "instant" })}}
+                onClick={() => {
+                  changeActiveTab(null);
+                  window.scrollTo({ top: 0, behavior: "instant" });
+                }}
                 className="register-button"
                 to="/register">
                 SIGN UP
@@ -201,15 +226,9 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
           </Link> */}
           <Link
             className="custom-offcanvas-link"
-            to="/services"
+            to="/saas"
             onClick={handleClose}>
             SaaS
-          </Link>
-          <Link
-            className="custom-offcanvas-link"
-            to="/capital"
-            onClick={handleClose}>
-            Capital
           </Link>
           <Link
             className="custom-offcanvas-link"
@@ -225,6 +244,14 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
           </Link>
           <Link
             className="custom-offcanvas-link"
+            to="/capital"
+            onClick={handleClose}>
+            Capital
+          </Link>
+
+          
+          <Link
+            className="custom-offcanvas-link"
             to="/career"
             onClick={handleClose}>
             Career
@@ -235,22 +262,22 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
             onClick={handleClose}>
             Contact
           </Link> */}
-          {user ? (
+          {loggedIn ? (
             <Link className="custom-offcanvas-link" to={"/dashboard"}>
               Dashboard
             </Link>
           ) : null}
-          {user ? (
+          {loggedIn ? (
             <div className="user-profile">
               <div
                 className="profile-container"
                 onClick={() => setDropdownOpen(!dropdownOpen)}>
                 <img
-                  src={user.picture}
-                  alt={user.name}
+                  src={ProfileImage}
+                  alt={'ProfileImage'}
                   className="profile-image"
                 />
-                <span>{user.name}</span>
+                <span>{username}</span>
                 <div className={`dropdown-menu ${dropdownOpen ? "show" : ""}`}>
                   <button onClick={handleLogout}>Logout</button>
                 </div>
@@ -268,6 +295,8 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
           )}
         </Offcanvas.Body>
       </Offcanvas>
+
+      {loading && <Spinners animation={'border'} variant={'dark'}/>} 
     </>
   );
 };

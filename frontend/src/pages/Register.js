@@ -1,15 +1,15 @@
-import React, { useContext, useState, useRef } from "react";
+import React, { useContext, useState, useRef, useEffect } from "react";
 import "../styles/bodyRegister.css";
 import { GoogleLogin } from "@react-oauth/google";
 // import { Form, FloatingLabel } from 'react-bootstrap';
 import { TextField, MenuItem, Button, Box, Grid, Container } from '@mui/material';
 import axios from "axios";
 import { jwtDecode } from "jwt-decode";
-import { UserContext } from "../components/UserContext";
 import { useNavigate } from "react-router-dom";
 import emailSend from "../assets/WONO_images/img/emailSend.gif";
 import { Link } from "react-router-dom";
 import { Stepper, Step } from "react-form-stepper";
+import { Country, State, City } from 'country-state-city';
 import {
   TransactionalWebsite,
   BookingEngine,
@@ -18,11 +18,11 @@ import {
 } from "../assets/WONO_images/img/icon_service";
 import gmailLogo from "../assets/WONO_images/img/services/gmailLogo.jpg";
 import outlookLogo from "../assets/WONO_images/img/services/outlookLogo.png";
+import Spinners from "../components/Spinner";
 
 const Register = () => {
   const [currentStep, setCurrentStep] = useState(0);
   const navigate = useNavigate();
-  const { setUser } = useContext(UserContext);
   const [isLoading, setIsLoading] = useState(false);
   const [modalMessage, setModalMessage] = useState("");
   const [formData, setFormData] = useState({
@@ -47,7 +47,51 @@ const Register = () => {
       service4: false,
     },
   });
+
+  const [states, setStates] = useState([]);
+  const [cities, setCities] = useState([]);
+  const [companyStates, setCompanyStates] = useState([]);
+  const [companyCities, setCompanyCities] = useState([]);
   const [errors, setErrors] = useState({});
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    if (formData.country) {
+      const countryStates = State.getStatesOfCountry(formData.country);
+      setStates(countryStates);
+      setFormData(prev => ({ ...prev, state: '', city: '' }));
+      setCities([]);
+    }
+  }, [formData.country]);
+
+  // Fetch cities when a state is selected
+  useEffect(() => {
+    if (formData.state) {
+      const stateCities = City.getCitiesOfState(formData.country, formData.state);
+      setCities(stateCities);
+      setFormData(prev => ({ ...prev, city: '' }));
+    }
+  }, [formData.state]);
+
+
+  useEffect(() => {
+    const countryStates = State.getStatesOfCountry('IN'); // Fetch states of India
+    setCompanyStates(countryStates);
+    // Reset state and city on load
+    setFormData((prev) => ({ ...prev, companyState: '', companyCity: '' }));
+  }, []);
+
+  useEffect(() => {
+    if (formData.companyState) {
+      const stateCities = City.getCitiesOfState('IN', formData.companyState); // Fetch cities for the selected state
+      setCompanyCities(stateCities);
+      setFormData((prev) => ({ ...prev, companyCity: '' })); // Reset city when state changes
+    } else {
+      setCompanyCities([]); // Clear cities if no state is selected
+    }
+  }, [formData.companyState]);
+
+
   //checkbox
   const handleCheckboxChange = (service) => {
     setFormData((prevState) => ({
@@ -67,16 +111,10 @@ const Register = () => {
 
   const checkEmailDuplicate = async (email) => {
     try {
-      const response = await axios.get(
-        `/check-email`,
-        { params: { email: encodeURIComponent(email) } }
-      );
-
-      console.log("Response status:", response.status);
+      const response = await axios.get(`/check-email`, { params: { email } });
 
       if (response.status === 200) {
-        const result = response.data; // Axios automatically parses JSON
-        console.log("Duplicate check result:", result);
+        const result = response.data;
         return result.isDuplicate;
       }
 
@@ -88,31 +126,32 @@ const Register = () => {
   };
 
 
+
   const handleNext = async (e) => {
     e.preventDefault();
     const validationErrors = validateCurrentStep();
 
     if (Object.keys(validationErrors).length === 0) {
       try {
+        setLoading(true); // Show the spinner
+
         let sectionData = {};
         let sectionName = '';
 
-        // Extract the email from formData for duplicate check
         const { email } = formData;
 
-        // Check for duplicate email in the database
         if (currentStep === 0 && email) {
-          const isDuplicate = await checkEmailDuplicate(formData.email);
+          const isDuplicate = await checkEmailDuplicate(email);
           if (isDuplicate) {
             setErrors((prevErrors) => ({
               ...prevErrors,
               email: 'This email is already in use.',
             }));
+            setLoading(false); // Hide spinner on error
             return;
           }
         }
 
-        // Set section data based on the current step (excluding selectedServices)
         switch (currentStep) {
           case 0:
             sectionData = {
@@ -138,39 +177,40 @@ const Register = () => {
             };
             sectionName = 'company';
             break;
-          // case 2 (selectedServices) is no longer here, as this will be handled in the submit
           default:
+            setLoading(false); // Hide spinner if no valid step
             return;
         }
 
-        // Send section data to the backend
         const response = await axios.post(
-          "/register/section",
+          '/register/section',
           {
             section: sectionName,
             data: sectionData,
           },
           {
             headers: {
-              "Content-Type": "application/json",
+              'Content-Type': 'application/json',
             }
           }
         );
 
-        // Axios automatically throws an error for non-2xx status codes
         if (response.status !== 200) {
-          throw new Error("Network response was not ok");
+          throw new Error('Network response was not ok');
         }
 
-        console.log(response.data); // Axios parses the response JSON automatically
+        console.log(response.data);
 
-        // Move to the next step
-        setCurrentStep((prev) => prev + 1);
+        setCurrentStep((prev) => prev + 1); // Move to the next step
       } catch (error) {
-        console.error("There was a problem with the fetch operation:", error);
+        console.error('There was a problem with the fetch operation:', error);
+      } finally {
+        setLoading(false); // Always hide spinner when the request finishes
       }
     }
   };
+
+
 
 
 
@@ -192,12 +232,6 @@ const Register = () => {
     setCurrentStep((prev) => prev - 1);
   };
 
-  const handleLoginSuccess = (credentialResponse) => {
-    const decoded = jwtDecode(credentialResponse?.credential);
-    setUser(decoded); // Set the user's profile information
-    console.log(decoded);
-    navigate("/dashboard"); // Redirect after successful login
-  };
 
   const handleLoginError = () => {
     console.log("Login Failed");
@@ -259,15 +293,11 @@ const Register = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    console.log("handleSubmit");
+    console.log("Sending email...");
 
-    // Show "Sending details" modal
-    setModalMessage(
-      <img src={emailSend} style={{ width: 100 }} alt="emailSend" />
-    );
-    setIsLoading(true);
 
     try {
+      setLoading(true)
       const dataToSubmit = {
         ...formData,
         selectedServices: formData.selectedServices, // Ensure selected services are submitted here
@@ -297,12 +327,12 @@ const Register = () => {
       console.error("There was a problem with the submission:", error);
       console.log("Failed to send registration details");
     } finally {
-      setIsLoading(false);
+      setLoading(false);
 
       // Clear modal message after some time
-      setTimeout(() => {
-        setModalMessage("");
-      }, 3000);
+      // setTimeout(() => {
+      //   setModalMessage("");
+      // }, 3000);
     }
   };
 
@@ -314,9 +344,8 @@ const Register = () => {
       <section id="contact" className="register">
         <div
           className="card flex justify-content-center "
-          style={{ backgroundColor: "white", padding: 0, border: 'none', fontFamily: 'inherit' }}>
+          style={{ backgroundColor: "white", border: 'none', fontFamily: 'inherit' }}>
           <div className="stepper-container">
-
             <Stepper
               connectorStateColors={true}
               styleConfig={{
@@ -376,7 +405,13 @@ const Register = () => {
                   <h2>Let's set up your free account</h2>
                 </div>
                 <div className="register-container">
-                  <Container maxWidth="sm">
+                  <Container maxWidth="md" sx={{
+                    width: {
+                      xs: '100%', // Full width on extra small screens (mobile)
+                      sm: '100%', // Full width on small screens
+                      md: '50%'   // 50% width on medium and larger screens
+                    },
+                  }}>
                     <Box
                       component="form"
                       sx={{ flexGrow: 1 }}
@@ -431,24 +466,26 @@ const Register = () => {
 
                         <Grid item xs={12} sm={6}>
                           <TextField
-                            label="City"
+                            label="Country"
                             variant="outlined"
-                            name="city"
-                            value={formData.city}
+                            name="country"
+                            value={formData.country}
                             onChange={handleChange}
-                            error={!!errors.city}
-                            helperText={errors.city}
+                            error={!!errors.country}
+                            helperText={errors.country}
                             select
                             required
                             fullWidth
                           >
-                            <MenuItem value="Mumbai">Mumbai</MenuItem>
-                            <MenuItem value="Delhi">Delhi</MenuItem>
-                            <MenuItem value="Bangalore">Bangalore</MenuItem>
-                            <MenuItem value="Chennai">Chennai</MenuItem>
-                            <MenuItem value="Kolkata">Kolkata</MenuItem>
+                            {Country.getAllCountries().map((country) => (
+                              <MenuItem key={country.isoCode} value={country.isoCode}>
+                                {country.name}
+                              </MenuItem>
+                            ))}
                           </TextField>
                         </Grid>
+
+
 
                         <Grid item xs={12} sm={6}>
                           <TextField
@@ -463,32 +500,31 @@ const Register = () => {
                             required
                             fullWidth
                           >
-                            <MenuItem value="Maharashtra">Maharashtra</MenuItem>
-                            <MenuItem value="Delhi">Delhi</MenuItem>
-                            <MenuItem value="Karnataka">Karnataka</MenuItem>
-                            <MenuItem value="Tamil Nadu">Tamil Nadu</MenuItem>
-                            <MenuItem value="West Bengal">West Bengal</MenuItem>
+                            {states.map((state) => (
+                              <MenuItem key={state.isoCode} value={state.isoCode}>
+                                {state.name}
+                              </MenuItem>
+                            ))}
                           </TextField>
                         </Grid>
-
                         <Grid item xs={12} sm={6}>
                           <TextField
-                            label="Country"
+                            label="City"
                             variant="outlined"
-                            name="country"
-                            value={formData.country}
+                            name="city"
+                            value={formData.city}
                             onChange={handleChange}
-                            error={!!errors.country}
-                            helperText={errors.country}
+                            error={!!errors.city}
+                            helperText={errors.city}
                             select
                             required
                             fullWidth
                           >
-                            <MenuItem value="India">India</MenuItem>
-                            <MenuItem value="United States">United States</MenuItem>
-                            <MenuItem value="United Kingdom">United Kingdom</MenuItem>
-                            <MenuItem value="Canada">Canada</MenuItem>
-                            <MenuItem value="Australia">Australia</MenuItem>
+                            {cities.map((city) => (
+                              <MenuItem key={city.name} value={city.name}>
+                                {city.name}
+                              </MenuItem>
+                            ))}
                           </TextField>
                         </Grid>
 
@@ -509,8 +545,8 @@ const Register = () => {
                             <span>
                               By clicking below you accept the terms and conditions
                             </span>
-                            <span style={{ display: 'block', marginTop: '10px' }}>
-                              Already have an account ? <Link onClick={() => {
+                            <span style={{ display: 'block', marginTop: '10px', textDecoration:'none' }}>
+                              Already have an account ? <Link style={{textDecoration:'none'}} onClick={() => {
                                 window.scrollTo({ top: 0, behavior: 'instant' })
                               }} to="/login">Log-in</Link>
                             </span>
@@ -529,7 +565,7 @@ const Register = () => {
                   <h2>Create company profile</h2>
                 </div>
                 <div className="register-container">
-                  <Container maxWidth="sm">
+                  <Container maxWidth="md w-50">
                     <Box component="form" sx={{ flexGrow: 1 }} noValidate autoComplete="off">
                       <Grid container spacing={2}>
 
@@ -608,26 +644,7 @@ const Register = () => {
                           </TextField>
                         </Grid>
 
-                        <Grid item xs={12} sm={6}>
-                          <TextField
-                            label="City"
-                            variant="outlined"
-                            name="companyCity"
-                            select
-                            value={formData.companyCity}
-                            onChange={handleChange}
-                            error={!!errors.companyCity}
-                            helperText={errors.companyCity}
-                            required
-                            fullWidth
-                          >
-                            <MenuItem value="Mumbai">Mumbai</MenuItem>
-                            <MenuItem value="Delhi">Delhi</MenuItem>
-                            <MenuItem value="Bangalore">Bangalore</MenuItem>
-                            <MenuItem value="Chennai">Chennai</MenuItem>
-                            <MenuItem value="Kolkata">Kolkata</MenuItem>
-                          </TextField>
-                        </Grid>
+
 
                         <Grid item xs={12} sm={6}>
                           <TextField
@@ -642,11 +659,32 @@ const Register = () => {
                             required
                             fullWidth
                           >
-                            <MenuItem value="Maharashtra">Maharashtra</MenuItem>
-                            <MenuItem value="Delhi">Delhi</MenuItem>
-                            <MenuItem value="Karnataka">Karnataka</MenuItem>
-                            <MenuItem value="Tamil Nadu">Tamil Nadu</MenuItem>
-                            <MenuItem value="West Bengal">West Bengal</MenuItem>
+                            {companyStates.map((state) => (
+                              <MenuItem key={state.isoCode} value={state.isoCode}>
+                                {state.name}
+                              </MenuItem>
+                            ))}
+                          </TextField>
+                        </Grid>
+
+                        <Grid item xs={12} sm={6}>
+                          <TextField
+                            label="City"
+                            variant="outlined"
+                            name="companyCity"
+                            select
+                            value={formData.companyCity}
+                            onChange={handleChange}
+                            error={!!errors.companyCity}
+                            helperText={errors.companyCity}
+                            required
+                            fullWidth
+                          >
+                            {companyCities.map((city) => (
+                              <MenuItem key={city.name} value={city.name}>
+                                {city.name}
+                              </MenuItem>
+                            ))}
                           </TextField>
                         </Grid>
 
@@ -818,7 +856,7 @@ const Register = () => {
                           <div className="mail-client-image">
                             <img src={gmailLogo} alt="Website" />
                           </div>
-                          <div className="mail-client-text">
+                          <div className="mail-client-text" onClick={() => window.open('https://mail.google.com', '_blank')}>
                             <span>Open G-mail</span>
                           </div>
                         </div>
@@ -826,9 +864,10 @@ const Register = () => {
                           <div className="mail-client-image">
                             <img src={outlookLogo} alt="Outlook" />
                           </div>
-                          <div className="mail-client-text">
+                          <div className="mail-client-text" onClick={() => window.open('https://outlook.live.com/mail/inbox', '_blank')}>
                             <span>Open Outlook</span>
                           </div>
+
                         </div>
                       </div>
                     </div>
@@ -838,7 +877,7 @@ const Register = () => {
                         folder..!!
                         <br />
                         <br />
-                        Resend and try again
+                        {/* Resend and try again */}
                       </span>
                     </div>
                     <div className="register-page-button-space">
@@ -859,7 +898,9 @@ const Register = () => {
             )}
           </form>
         </div>
+        {loading && <Spinners animation={'border'} variant={'dark'} />}
       </section>
+
     </div>
   );
 };

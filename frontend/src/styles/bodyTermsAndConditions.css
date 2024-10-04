@@ -3,6 +3,10 @@
     src: url('../assets/WONO_images/img/fonts/Poppins-SemiBold.ttf');
 }
 
+.WONOBLUE {
+    color: #0AA9EF;
+}
+
 .privacy-container {
     font-family: Popins-Semibold;
     padding: 3rem;

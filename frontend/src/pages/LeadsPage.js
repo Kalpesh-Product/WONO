@@ -37,9 +37,9 @@ import WebsiteWorkation from "./WebsiteBuilder/WebsiteWorkation";
 import "../styles/bodyPartners.css";
 import BiznestTestimonial from "../assets/testimonials/BIZ Nest Testimonial.png";
 import LeadsImage from "../assets/leads_images/leads-section-image.webp";
-import LeadsImagepng from "../assets/leads_images/leads-section-image.png";
+import LeadsImagepng from "../assets/leads_images/leads-section-image-webp.webp";
 import GoogleSheetsImage from "../assets/leads_images/google-sheets-image.webp";
-import GoogleSheetsImagepng from "../assets/leads_images/google-sheets-image.png";
+import GoogleSheetsImagepng from "../assets/leads_images/google-sheets-image-webp.webp";
 // import "../styles/bodyLastBanner.css";
 
 import TickmarkImg from "../assets/check.png";
@@ -48,21 +48,24 @@ import GoogleMyBusinessImage from "../assets/leads_images/google-my-business-ima
 import GoogleMapsImage from "../assets/leads_images/google-maps-logo.png";
 import GoogleReviewsImage from "../assets/leads_images/google-reviews-logo.png";
 
-import GoogleSeoImage from "../assets/leads_images/google-seo-logo.png";
-import WebsiteImage from "../assets/leads_images/website-logo.png";
+import GoogleSeoImage from "../assets/leads_images/google-seo-logo.webp";
+// import WebsiteImage from "../assets/leads_images/website-logo.png";
+import WebsiteImage from "../assets/leads_images/website-logo.webp";
 import LinkedinImage from "../assets/leads_images/linkedin-logo.png";
 
-import FacebookImage from "../assets/leads_images/facebook-logo.png";
-import InstagramImage from "../assets/leads_images/instagram-logo.png";
+// import FacebookImage from "../assets/leads_images/facebook-logo.png";
+import FacebookImage from "../assets/leads_images/facebook-logo.webp";
+// import InstagramImage from "../assets/leads_images/instagram-logo.png";
+import InstagramImage from "../assets/leads_images/instagram-logo.webp";
 import FreeIntegrationsImage from "../assets/leads_images/free-integrations-icon.png";
 
 import CrossPromotionsImage from "../assets/leads_images/cross-promotions-logo.png";
 import DatabaseImage from "../assets/leads_images/database-icon.png";
 import WhatsappImage from "../assets/leads_images/whatsapp-icon.png";
 
-import RoiImage from "../assets/leads_images/roi.jpg";
-import CompleteViewImage from "../assets/leads_images/complete-view-image.jpg";
-import FinerPointsImage from "../assets/leads_images/finer-points-image.jpg";
+import RoiImage from "../assets/leads_images/roi.webp";
+import CompleteViewImage from "../assets/leads_images/complete-view-image.webp";
+import FinerPointsImage from "../assets/leads_images/finer-points-image.webp";
 
 import "../styles/specialClasses.css";
 import "../styles/leadsPage.css";
@@ -283,8 +286,8 @@ const LeadsPage = () => {
           <div>
             <div className="container p-0">
               {/* <div className="row  border-bottom border-dark border-3 pb-5 bg-primary"> */}
-              <div className="row ">
-                <div className="col-lg-9 ps-0">
+              <div className="row w-100 theSpecialRow">
+                <div className="col-lg-10 ps-0">
                   <p className="automatedPlatformFontSize automatedPlatformPadding mb-0">
                     Automated platform and our resources are FREE .. you pay
                     only if you start paid ads!
@@ -292,7 +295,7 @@ const LeadsPage = () => {
                 </div>
                 {/* <div className="col-lg-4"></div> */}
                 {/* <div className="col-lg-4 bg-danger"> */}
-                <div className="col-lg-3  d-flex justify-content-lg-end justify-content-md-end justify-content-center justify-content-sm-center align-items-center pe-0">
+                <div className="col-lg-2  d-flex justify-content-lg-end justify-content-md-end justify-content-center justify-content-sm-center align-items-center SpecialPaddingX pe-0">
                   {/* <div className=""> */}
                   <button
                     // className="get-started-submit-button mb-0"
@@ -544,7 +547,7 @@ const LeadsPage = () => {
                     </div>
                     <div className="col-lg-4"></div>
                     {/* <div className="col-lg-4 bg-danger"> */}
-                    <div className="col-lg-4 d-flex justify-content-lg-end justify-content-md-end justify-content-center justify-content-sm-center align-items-center pe-0">
+                    <div className="col-lg-4 d-flex justify-content-lg-end justify-content-md-center justify-content-center justify-content-sm-center align-items-center pe-0">
                       {/* <div className="">
                         <button
                           className="get-started-submit-button "
@@ -658,7 +661,7 @@ const LeadsPage = () => {
                 </div>
                 <div className="">
                   {/* <div className=""> */}
-                  <p className="topPaddingInsideSections">
+                  <p className="topPaddingInsideSections pFontAdjustment">
                     Discover all the ways that Analytics surfaces helpful
                     insights for a complete understanding of your customers —
                     from built-in automation and customized reporting, to
@@ -688,7 +691,7 @@ const LeadsPage = () => {
                 </div>
                 <div className="">
                   {/* <div className=""> */}
-                  <p className="topPaddingInsideSections">
+                  <p className="topPaddingInsideSections pFontAdjustment">
                     Analytics helps you get a more complete understanding of how
                     your customers engage with your business so you can deliver
                     better experiences and drive results.
@@ -723,7 +726,7 @@ const LeadsPage = () => {
                 </div>
                 <div className="">
                   {/* <div className=""> */}
-                  <p className="topPaddingInsideSections">
+                  <p className="topPaddingInsideSections pFontAdjustment">
                     Analytics helps you understand how people use your sites and
                     apps, so you can take action to improve their experience.
                     Discover what Google Analytics can do by checking out the
@@ -861,12 +864,12 @@ const LeadsPage = () => {
 
         <div className="last-section  w-100 fontPoppinsRegular">
           <div className="pt-5 customMargin pb-5">
-            <div className="grow-your-business-color">
-              <h2 className="m-0 fw-bold">
+            <div className="grow-your-business-color w-100">
+              <h2 className="m-0 fw-bold grow-your-business-text">
                 {/* <b className="leadsCtafontSize">
                   Now that’s how we generate continues leads for you!
                 </b> */}
-                Now that’s how we generate continuos leads for you!
+                Now that’s how we generate continuous leads for you!
               </h2>
               {/* <br /> */}
 

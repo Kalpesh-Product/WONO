@@ -154,7 +154,6 @@ h2 {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
     font-family: Popins-Regular;
 }
 
@@ -183,7 +182,7 @@ h2 {
     align-items: center;
     justify-content: center;
     width: 100%;
-    padding: 1rem;
+    padding: 2.625rem 1rem;
 }
 
 .forgot-password-button button {
@@ -194,8 +193,9 @@ h2 {
     padding: 0.50rem;
     font-family: Popins-Semibold;
     margin: 0;
-    width: 100%;
+    width: 50%;
 }
+
 @media (max-width:1024px) {
 
     .forgot-password-container {
@@ -206,6 +206,7 @@ h2 {
         width: 100%;
         font-family: Popins-Regular;
     }
+
     .forgot-password-left-container h2 {
         font-family: Popins-Regular;
         font-size: 3.5rem;
@@ -216,13 +217,18 @@ h2 {
     .forgot-password-container {
         display: flex;
         flex-direction: column;
-        height: 100vh;
+        height: 75vh;
     }
 
     .forgot-password-left-container {
-        padding: 0;
+        padding: 2rem;
         margin-top: 2rem;
         border-radius: 20px;
+    }
+
+    .forgot-password-left-container h2 {
+        font-family: Popins-Regular;
+        font-size: 2.4rem;
     }
 }
 

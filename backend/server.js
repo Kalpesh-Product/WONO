@@ -17,10 +17,51 @@ const cookieParser = require("cookie-parser");
 const crypto = require("crypto");
 const mongoose = require("mongoose");
 const { parse, format } = require("date-fns");
+const jwt = require("jsonwebtoken");
+const userRoutes = require("./routes/userRoutes");
+const {
+  User,
+  UserService,
+  Enquiry,
+  JobApplication,
+} = require("../backend/models/user");
 
 const app = express();
-app.use(cors());
+
+const allowedHeaders = [
+  "Content-Type", // Allowing both types of content: multipart/form-data and application/json
+  "Authorization", // Add other headers you need here
+];
+// "https://www.wono.co"
+
+app.use(
+  cors({
+    origin: "https://www.wono.co", // Reflects the request origin, allowing all origins
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    credentials: true, // Allow cookies to be sent
+    allowedHeaders: allowedHeaders,
+  })
+);
+
+// Preflight (OPTIONS) route handler
+app.options(
+  "*",
+  cors({
+    origin: (origin, callback) => {
+      if (origin) {
+        callback(null, true);
+      } else {
+        callback(null, false);
+      }
+    },
+    methods: ["OPTIONS"],
+    credentials: true,
+    allowedHeaders: allowedHeaders, // Ensure 'Content-Type' is included for file uploads
+  })
+);
+
 const port = process.env.PORT;
+app.use("/tmp", express.static(path.join(__dirname, "tmp")));
 
 // Middleware to parse JSON data
 app.use(express.json());
@@ -54,8 +95,25 @@ const transport = nodemailer.createTransport({
   auth: {
     user: "anushri.bhagat263@gmail.com", // Your email
     pass: "xwhn rrhx ldba vvfx", // Your email password or app password
+app.use(session({
+  key: 'wono_session', // Unique cookie name
+  secret: 'your-secret-key', // Replace with a strong secret
+  resave: false,
+  saveUninitialized: false,
+  cookie: {
+    // secure: process.env.NODE_ENV === 'production',
+    secure: true,
+    httpOnly: true, // Prevents client-side JS from accessing the cookie
+    sameSite: 'lax', // Helps protect against CSRF attacks
+    maxAge: 1000 * 60 * 60 * 2, // Session expiration time (2 hours)
   },
 });
+}));
+
+
+
+
+
 
 // Test route
 app.get("/", (req, res) => {
@@ -257,6 +315,12 @@ app.post("/send-email", async (req, res) => {
   }
 });
 
+
+app.use("", userRoutes);
+
+
+
+
 // Route to download the CSV file
 app.get("/download-csv", (req, res) => {
   const filePath = path.join(__dirname, "form_data.csv");
@@ -269,7 +333,6 @@ app.get("/download-csv", (req, res) => {
   }
 });
 
-// app.post('/submit-form', (req, res) => {
 //   const { jobTitle, name, email, date, number, location, experience, linkedInProfile, resume, monthlySalary, expectedSalary,
 //     daysToJoin, relocateGoa, personality, skills, specialexperience, willing, message } = req.body;
 

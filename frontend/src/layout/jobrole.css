@@ -7,6 +7,42 @@
     width: 5%;
     border-bottom: 3px solid orange;
 }
+.jobrole-arrow{
+    margin: 0 0 0 20px;
+    font-weight: 600;
+    color: #52565e;
+    border: 2px solid #52565e;
+    padding: 8px;
+    border-radius: 7px;
+    transition: background-color ease 0.2s;
+}
+.jobrole-arrow:hover{
+    margin: 0 0 0 20px;
+    font-weight: 600;
+    color: white;
+    border: 2px solid white;
+    padding: 8px;
+    border-radius: 7px;
+    background-color: black;
+}
+
+.career-job-title{
+   font-size: 1.5rem;
+   margin: 10 0;
+   color: #000;
+   margin: 0;
+}
+/* .accordion-button:not(.collapsed) {
+    color: var(--bs-accordion-active-color);
+    background-color: white;
+    box-shadow: none;
+}
+
+.accordion-button:focus {
+    z-index: 3;
+    outline: 0;
+    box-shadow: none;
+}
 
 i.fa.fa-cheveron-right {
     color: black;
@@ -23,3 +59,4 @@ i.fa.fa-cheveron-right:hover {
 background-color: black;
 color: white;
 }
+*/

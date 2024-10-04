@@ -13,15 +13,15 @@ import { Nav } from "react-bootstrap";
 // import WonoLogo from '../assets//WONO_images/img/WONO_LOGO_white _TP.png';
 // import WonoLogoBlack from '../assets//WONO_images/img/WONO_LOGO_Black_TP.png';
 import BiznestLogo from "../assets/BIZNest/biznest_logo.jpg";
-import CafeImage from "../assets/WONO_images/img/website-builder/new-layout/cafe.png";
-import CoWorkingImage from "../assets/WONO_images/img/website-builder/new-layout/co-working.png";
+import CafeImage from "../assets/WONO_images/img/website-builder/new-layout/cafe.webp";
+import CoWorkingImage from "../assets/WONO_images/img/website-builder/new-layout/co-working.webp";
 import Hostels from "../assets/WONO_images/img/website-builder/new-layout/hostels.png";
-import CoLivingImage from "../assets/WONO_images/img/website-builder/new-layout/co-living.png";
+import CoLivingImage from "../assets/WONO_images/img/website-builder/new-layout/co-living.webp";
 import CafeImageLong from "../assets/WONO_images/img/website-builder/new-layout/long/cafe-long.jpeg";
 import CoWorkingImageLong from "../assets/WONO_images/img/website-builder/new-layout/long/co-working-long.jpeg";
 import BoutiqueLong from "../assets/WONO_images/img/website-builder/new-layout/long/boutique-long.jpeg";
 import CoLivingImageLong from "../assets/WONO_images/img/website-builder/new-layout/long/co-living-long.jpeg";
-import Boutique from "../assets/WONO_images/img/website-builder/new-layout/boutique.png";
+import Boutique from "../assets/WONO_images/img/website-builder/new-layout/boutique.webp";
 import DashboardBooking from "./Dashboard-pages/DashboardBooking";
 import DashboardAsset from "./Dashboard-pages/DashboardAsset";
 import DashboardHR from "./Dashboard-pages/DashboardHR";
@@ -35,7 +35,10 @@ import FourCardsComponents from "../components/Four_cardsComponents";
 import WebsiteCafe from "./WebsiteBuilder/WebsiteCafe";
 import WebsiteWorkation from "./WebsiteBuilder/WebsiteWorkation";
 import "../styles/bodyPartners.css";
-import BiznestTestimonial from "../assets/testimonials/BIZ Nest Testimonial.png";
+// import BiznestTestimonial from "../assets/testimonials/kashif-image.jpg";
+import greenUnderLine from "../assets/underline-bg/blue-line.png";
+import greenRound from "../assets/underline-bg/blue-circle.png";
+import BiznestTestimonial from "../assets/testimonials/kashif-image.webp";
 // import "../styles/bodyLastBanner.css";
 
 const Homepage = () => {
@@ -138,43 +141,97 @@ const Homepage = () => {
         <div className="home-page-container">
           <div className="background-div">
             <div>
-              <img src={images[0]} alt={`Slide`} className="background-image" />
+              <img src={""} alt={`Slide`} className="background-image" />
+
+              {/* <img src={''} className="background-image" /> */}
+              <img src={""} className="background-image" />
             </div>
             <div className="black-overlay"></div>
           </div>
           <div className="first-section-grid-item-1">
             <h2 className="home-main-title ">
-              <span className="w"> W</span>
+              {/* <span className="w"> W</span>
               <span className="O">o</span>rld
               <span className="n">N</span>
-              <span className="O">o</span>mads
-              <br />
+              <span className="O">o</span>mads */}
+              <span className="home-main-intro">
+                Introducing{" "}
+                <div className="home-main-title-svg">
+                  {" "}
+                  <img src={greenUnderLine} />
+                  N-Commerce!{" "}
+                </div>
+              </span>
+              {/* <div style={{display:'flex', flexDirection:'column', textAlign:'end', paddingRight:'5rem'}}>
+              <span style={{ fontSize: '1rem' }}>"Nomad Commerce"</span>
+              <span style={{ fontSize: '1rem', marginLeft:"5rem", display:'flex', justifyContent:'end', width:'100%', fontWeight:'200' }}>WoNo.Co = <b>Wo</b>rld <b>No</b>mad <b>Co</b>mmerce</span>
+              </div> */}
+              <div className="row">
+                <div className="col-md-6">
+                  {/* Empty div */}
+                </div>
+                <div className="col-12 col-lg-6 col-md-12 col-sm-12 home-main-tagline">
+                  <span>"Nomad Commerce"</span>
+                  <span><b style={{ fontWeight: '800' }}>WoNo.Co</b> = <b style={{ fontWeight: '800' }}>Wo</b>rld <b style={{ fontWeight: '800' }}>No</b>mad <b style={{ fontWeight: '800' }}>Co</b>mmerce</span>
+                </div>
+              </div>
             </h2>
-          </div>
-          <div className="first-section-grid-item-2">
-            <span className="home-desc">
-              <span>We support Nomad Businesses for FREE!</span> <br />
-              World’s Largest b2b SaaS platform which supports Nomad Lifestyle
-              across 25+ countries !
+            <span className="home-main-title-desc">
+              A simple no code instant SaaS software platform that supports
+              businesses in remote and aspiring destinations!
+              <br />
+              Providing SaaS Tech to nomads businesses across the world. (E.g.: Co-Working, Co-Living, Hostels, Workations, Resorts, Cafes, Events etc)
+
             </span>
-            <div className="home-section-buttons">
+          </div>
+          <div
+            style={{ cursor: "pointer" }}
+            onClick={() => navigate("/register")}
+            className="first-section-grid-item-2">
+            <span className="home-desc">
+              <img src={greenRound} alt="" />
+              IT'S FREE
+            </span>
+            {/* <div className="home-section-buttons">
               <div className="home-section-register-button-space">
-                <button
+                <div
+                  style={{ cursor: "pointer" }}
+                  onClick={() => {
+                    navigate("/register");
+                    window.scrollTo({ top: 0, behavior: "instant" });
+                  }}
+                  className="its-free-container">
+                  <svg
+                    fill="none"
+                    // viewBox="0 0 390 97"
+                    className="its-free-svg"
+                    viewBox="190 -5 400 120">
+                    <path
+                      stroke-width="10"
+                      width="800"
+                      height="40"
+                      stroke="#28a745"
+                      d="M2,76.26c16.11,4.95,31.91,3.84,48.58,3.84,20.39,0,40.67,0,61,1,18,.87,36-1,53.94-1,15.79,0,31.51,1.81,47.31,1.21,24.51-.93,49.17-2.18,73.68-2.49,19.45-.25,39.4,1.59,58.76-.64,15-1.73,29-2.29,39.75-14.79C387.89,60.1,390.5,48.5,386.5,40c-5.69-12.09-12.63-18.68-23.67-25.17C341.68,2.4,314.67,1.82,291.09,2c-21.31.2-55.45,3.62-68.52,24.46C212.14,43.1,212,59.57,227.79,72.77c24.81,20.81,63.45,26.8,93.41,18.85"></path>
+                  </svg>
+
+                  <span style={{ zIndex: 10 }}>it's free</span>
+                </div>
+                {/* <button
                   className="home-section-register-button"
                   onClick={handleRegister}>
                   BUSINESS SIGN UP
                 </button>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
 
         <div className="Globe-N-Commerce">
           <div className="Globe" style={{ textAlign: "left" }}>
-            <Canvas
+            <Canvas className="canvas"
               camera={{
                 position: [0, 0, ismobile ? 15 : 25],
-                fov: ismobile ? 40 : isTablet ? 60 : 30,
+                fov: ismobile ? 40 : isTablet ? 50 : 30,
               }}>
               <ambientLight intensity={0.5} />
               <pointLight position={[10, 10, 10]} />
@@ -219,7 +276,7 @@ const Homepage = () => {
             {/* First div (1/2) */}
             <div className="">
               <div className="customMargin_top">
-                <div>
+                <div className="one-platform-section">
                   <h2>One Partner Platform,</h2>
                   <h2>Infinite possibilities and opportunities!</h2>
                 </div>
@@ -276,8 +333,7 @@ const Homepage = () => {
                         <div className="">
                           <button
                             className="get-started-submit-button m-0"
-                            onClick={handleRegister}
->
+                            onClick={handleRegister}>
                             Get Started
                           </button>
                         </div>
@@ -379,9 +435,8 @@ const Homepage = () => {
 
                         </div> */}
               <div
-                className={`website-panel-right ${
-                  selectedId ? "modal-open" : ""
-                }`}>
+                className={`website-panel-right ${selectedId ? "modal-open" : ""
+                  }`}>
                 <div className="website-panel-content">
                   {webimages.map((image) => (
                     <div className="template-preview-container" key={image.id}>
@@ -406,7 +461,7 @@ const Homepage = () => {
             {/* <div className="container border-top border-dark border-2"> */}
             <div className="container p-0 ">
               <div className="row ">
-                <div className="col-lg-7 d-flex flex-column justify-content-between p-0 ms-0">
+                <div className="col-lg-7 d-flex flex-column  p-0 ms-0">
                   <div className=" ">
                     {/* <h4 className="bg-danger testimonial-right-spacing"> */}
                     <h3 className="testimonial-right-spacing">
@@ -444,8 +499,8 @@ const Homepage = () => {
         </div>
 
         <div className="last-section  w-100 ">
-          <div className="pt-5 customMargin pb-5">
-            <div className="grow-your-business-color p-3">
+          <div className="home-last-banner">
+            <div className="grow-your-business-color">
               <h2>
                 <b>GROW YOUR BUSINESS WITH US</b>
               </h2>

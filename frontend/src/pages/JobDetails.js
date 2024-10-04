@@ -2,19 +2,12 @@ import React, { useEffect } from "react";
 import "../layout/jobdetails.css";
 import { useParams } from "react-router-dom";
 import Jobapply from "../components/jobroles/Jobapply.js";
-import ExecutiveAssistanceToCEO from "../components/jobroles/Human_Resource&EA/ExecutiveAssistanceToCEO.js";
-import HrGeneralist from "../components/jobroles/Human_Resource&EA/HrGeneralist.js";
-import FinanceIntern from "../components/jobroles/Finance/FinanceIntern.js";
-import PHPdeveloper from "../components/jobroles/TechDevelopment/PHPdeveloper.js";
-import WebdeveloperIntern from "../components/jobroles/TechDevelopment/WebdeveloperIntern.js";
-import MarketingAnalytics from "../components/jobroles/ProductManagement/MarketingAnalytics.js";
-import UiDesignerComp from "../components/jobroles/ProductManagement/UiDesignerComp.js";
 import Jobdescription from "../components/jobroles/Jobdescription.js";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { Link } from "react-router-dom";
 
-const JobDetails = () => {
+const JobDetails = ({changeActiveTab}) => {
   const { title } = useParams();
   const decodedTitle = decodeURIComponent(title);
 
@@ -88,7 +81,7 @@ const JobDetails = () => {
                 <div className="row">
                   <div className="col-lg-2"></div>
                   <div className="col-lg-8 d-flex flex-column justify-content-center">
-                    <Jobapply jobTitle={title}></Jobapply>
+                    <Jobapply jobTitle={title} changeActiveTab={changeActiveTab}></Jobapply>
                   </div>
                 </div>
               </div>

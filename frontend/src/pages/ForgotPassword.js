@@ -196,7 +196,7 @@ const ForgotPassword = () => {
     };
 
     return (
-        <div className="forgot-password-container">
+        <div className="forgot-password-container loginTopPadding loginBottomPadding">
             <div className="forgot-password-left-container">
                 <h2 className="text-center mb-4">Password Reset</h2>
 
@@ -298,7 +298,7 @@ const ForgotPassword = () => {
                     </form>
                 )}
 
-                <div className="text-center mt-3">
+                <div className="text-center">
                     <span>Remembered your password ? <Link to="/login" className="">Login</Link></span>
                 </div>
             </div>
@@ -340,7 +340,7 @@ const ForgotPassword = () => {
             {overlayVisible && (
                 <div className="overlay">
                     <div className="overlay-content">
-                        <p>Sendings</p>
+                        <p>Please wait...</p>
                     </div>
                 </div>
             )}
