@@ -507,7 +507,7 @@ const LeadsPage = () => {
                 Never miss any leads generated from our platform.
               </h2>
             </div>
-            <div className="organic-leads-images-section  topSpaceBetweenSections">
+            <div className="organic-leads-images-section OOOO  topSpaceBetweenSections">
               <img
                 src={GoogleSheetsImagepng}
                 alt=""
