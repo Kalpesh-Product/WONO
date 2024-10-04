@@ -23,10 +23,10 @@ const Jobrole = () => {
             <Accordion.Header style={{
 
             }}>I. Product  Management</Accordion.Header>
-            <hr></hr>
+            <hr style={{paddingTop:"2px"}}></hr>
             <Accordion.Body style={{ border: "none" }}>
 
-              <div className='mob-down' style={{display:"flex"}} >
+              <div className='mob-down' style={{display:"flex",paddingTop:"20px",paddingBottom:"20px"}} >
                 <div className='col-lg-6 col-sm-6'>
                   <h5 classname="career-job-title" >1.UI Designer</h5>
 
@@ -43,16 +43,16 @@ const Jobrole = () => {
                   </p>
                 </div>
               </div>
-              <hr></hr>
+              <hr style={{marginBottom:"4px"}}></hr>
             </Accordion.Body>
 
             <Accordion.Body>
-              <div className='mob-down'style={{display:'flex'}}>
-                <div className='col-lg-6 col-sm-6'>
+              <div className='mob-down'style={{display:'flex',paddingTop:"20px",paddingBottom:"20px"}}>
+                <div className='col-lg-6 col-sm-12'>
                   <h5 classname="career-job-title" > 2. Marketing Analytics</h5>
                   <span style={{ fontSize: "1rem" }}>(SEO/Google Analytics) </span>
                 </div>
-                <div className='col-lg-6 col-sm-6' style={{ textAlign: "right" }}>
+                <div className='col-lg-6 col-sm-12' style={{ textAlign: "right" }}>
                    <p style={{ fontWeight: "600", margin : 0}}>
                     <span className='link-btn'>Full-Time | On-Site| Goa </span>
                     <Link onClick={() => {
@@ -70,7 +70,7 @@ const Jobrole = () => {
             <Accordion.Header>II. Tech Development</Accordion.Header>
             <hr></hr>
             <Accordion.Body>
-              <div className='mob-down' style={{display:"flex"}} >
+              <div className='mob-down' style={{display:"flex",paddingBottom:"20px",paddingTop:"20px"}} >
                 <div className='col-lg-6 col-sm-12 col-xs-12'>
                   <h5 classname="career-job-title" > 1. Jr. UI/UX Developer</h5>
                 </div>
@@ -90,7 +90,7 @@ const Jobrole = () => {
 
             <Accordion.Body>
 
-              <div className='mob-down' style={{display:"flex"}}>
+              <div className='mob-down' style={{display:"flex",paddingBottom:"20px"}}>
                 <div className='col-lg-6 col-sm-6'>
 
                   <h5 classname="career-job-title" > 2. PHP Developer</h5>
@@ -106,10 +106,10 @@ const Jobrole = () => {
                   </p>
                 </div>
               </div>
-              <hr></hr>
+              <hr style={{marginBottom:"6px"}}></hr>
             </Accordion.Body>
             <Accordion.Body>
-              <div className='mob-down' style={{display:"flex"}} >
+              <div className='mob-down' style={{display:"flex",paddingTop:"20px"}} >
                 <div className='col-lg-6 col-sm-6'>
                   <h5 classname="career-job-title" > 3. Webs Developer Intern</h5>
                 </div>
@@ -130,7 +130,7 @@ const Jobrole = () => {
             <Accordion.Header>III. Finance</Accordion.Header>
             <hr></hr>
             <Accordion.Body>
-              <div className='mob-down' style={{display:"flex"}} >
+              <div className='mob-down' style={{display:"flex",paddingTop:"20px"}} >
                 <div className='col-lg-6 col-sm-6'>
                   <h5 classname="career-job-title" > 1. Finance Intern</h5>
                 </div>
@@ -152,7 +152,7 @@ const Jobrole = () => {
             <hr></hr>
 
             <Accordion.Body>
-              <div className='mob-down' style={{display:"flex"}} >
+              <div className='mob-down' style={{display:"flex",paddingTop:"20px",paddingBottom:"20px"}} >
                 <div className='col-lg-6 col-sm-6'>
                   <h5 classname="career-job-title" > 1. HR Generalist</h5>
                 </div>
@@ -192,7 +192,7 @@ const Jobrole = () => {
             <Accordion.Header>V. Sales & Bussiness Development</Accordion.Header>
             <hr></hr>
             <Accordion.Body>
-              <div className='mob-down' style={{display:"flex"}} >
+              <div className='mob-down' style={{display:"flex",paddingTop:"20px"}} >
                 <div className='col-lg-6 col-sm-6'>
                   <h5 classname="career-job-title" > 1. Sr.Manager Sales & Bussiness Development </h5>
                 </div>
@@ -214,10 +214,10 @@ const Jobrole = () => {
             <hr></hr>
             <Accordion.Body>
               <div className='mob-down' style={{display:"flex"}}>
-                <div className='col-lg-6 col-sm-6'>
+                <div className='col-lg-6 '>
                   <h5 classname="career-job-title" > 1. Social Media Executive</h5>
                 </div>
-                <div className='col-lg-6 col-sm-6' style={{ textAlign: "right" }}>
+                <div className='col-lg-6 ' style={{ textAlign: "right" }}>
                    <p style={{ fontWeight: "600", margin : 0}}>
                     <span className='link-btn'>Full-Time | On-Site| Goa </span>
                     <Link onClick={() => {
