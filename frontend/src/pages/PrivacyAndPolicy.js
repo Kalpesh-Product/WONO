@@ -1,16 +1,17 @@
 import React from "react";
 import "../styles/bodyPrivacyAndPolicy.css";
 import "../styles/componentStyle.css";
-import greenUnderLine from '../assets/underline-bg/blue-line.png'
+import greenUnderLine from "../assets/underline-bg/blue-line.png";
 
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const PrivacyAndPolicy = () => {
   return (
     <>
       <div className="privacy-container wono-text-spacing fontPoppinsRegular">
-
-        <h3 className="Title-font text-center pb-5 ComicFont privacy-title"><img src={greenUnderLine} alt="" /> PRIVACY POLICY</h3>
+        <h3 className="Title-font text-center pb-5 ComicFont privacy-title">
+          <img src={greenUnderLine} alt="" /> PRIVACY POLICY
+        </h3>
 
         <div className="privacy-section">
           <h4>Last Updated: 2nd October 2024</h4>
@@ -19,8 +20,13 @@ const PrivacyAndPolicy = () => {
             "we", "our", or "us") is committed to protecting your privacy. This
             Privacy Policy explains how we collect, use, disclose, and protect
             your personal information when you use our SaaS platform (the
-            "Service"), located at <u className="text-primary">www.wono.co</u>,
-            as well as your rights in relation to your personal data.
+            "Service"), located at{" "}
+            <u className="WONOBLUE text-decoration-none">
+              <Link className="WONOBLUE text-decoration-none" to={"/home"}>
+                www.wono.co
+              </Link>
+            </u>
+            , as well as your rights in relation to your personal data.
             <br />
             <br />
             By accessing or using the Service, you agree to the terms of this
@@ -249,9 +255,18 @@ const PrivacyAndPolicy = () => {
             <br />
             SINGAPORE - 079903
             <br />
-            <u className="text-primary">response@wono.co</u>
+            {/* <u className="text-primary">response@wono.co</u>
             <br />
-            <u className="text-primary">Contact us</u>
+            <u className="text-primary">Contact us</u> */}
+            <Link
+              className="WONOBLUE text-decoration-none"
+              to={"mailto:response@wono.co"}>
+              response@wono.co
+            </Link>
+            <br />
+            <Link className="WONOBLUE text-decoration-none" to={"/contact"}>
+              Contact us
+            </Link>
           </p>
           {/* <Link to="/contact">Contact us</Link> */}
           {/* <Link to="/contact">Contact us</Link> */}
