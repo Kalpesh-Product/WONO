@@ -644,7 +644,7 @@ const LeadsPage = () => {
           <hr className="hrStyling zeroHeight" />
         </div>
 
-        <div className="better-roi-section  wono-text-spacing fontPoppinsRegular topPaddingInsideSections bottomPaddingForSections ">
+        <div className="better-roi-section PPPP  wono-text-spacing fontPoppinsRegular topPaddingInsideSections bottomPaddingForSections ">
           {/* <div className="better-roi h-5  wono-text-spacing "> */}
           <div className="container paddingRight0">
             <div className="row ">
@@ -677,7 +677,7 @@ const LeadsPage = () => {
           <hr className="hrStyling zeroHeight" />
         </div>
 
-        <div className="complete-view-section h-5 wono-text-spacing fontPoppinsRegular topPaddingForSections bottomPaddingForSections">
+        <div className="complete-view-section PPPP h-5 wono-text-spacing fontPoppinsRegular topPaddingForSections bottomPaddingForSections">
           {" "}
           <div className="container pe-0">
             <div className="row invertDivs">
