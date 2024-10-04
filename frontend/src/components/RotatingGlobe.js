@@ -176,7 +176,7 @@ const RotatingGlobe = () => {
 
   return (
     <>
-      <mesh ref={globeRef} rotation={[100.6, 90, 0]}>
+      <mesh ref={globeRef} rotation={[100.6, 91, 0]}>
         <sphereGeometry args={[5, 50, 50]} />
         <meshBasicMaterial map={texture} />
 
