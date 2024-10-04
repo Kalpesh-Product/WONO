@@ -12,7 +12,7 @@ const Faqs = () => {
         <h3 className="Title-font text-center ComicFont">FAQs</h3>
         <br />
         <br />
-        {/* <div className="privacy-section"></div> */}
+
         <div className="privacy-section">
           <h4>1. What is SaaS?</h4>
           <p>
