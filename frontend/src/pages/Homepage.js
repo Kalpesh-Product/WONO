@@ -154,12 +154,7 @@ const Homepage = () => {
               <span className="O">o</span>rld
               <span className="n">N</span>
               <span className="O">o</span>mads */}
-              <span
-                style={{
-                  display: "flex",
-                  columnGap: "1rem",
-                  padding: "0rem 0 2rem ",
-                }}>
+              <span className="home-main-intro">
                 Introducing{" "}
                 <div className="home-main-title-svg">
                   {" "}
@@ -173,11 +168,11 @@ const Homepage = () => {
               </div> */}
               <div className="row">
                 <div className="col-md-6">
-                {/* Empty div */}
+                  {/* Empty div */}
                 </div>
                 <div className="col-12 col-lg-6 col-md-12 col-sm-12 home-main-tagline">
-                <span>"Nomad Commerce"</span>
-                <span><b style={{fontWeight:'800'}}>WoNo.Co</b> = <b style={{fontWeight:'800'}}>Wo</b>rld <b style={{fontWeight:'800'}}>No</b>mad <b style={{fontWeight:'800'}}>Co</b>mmerce</span>
+                  <span>"Nomad Commerce"</span>
+                  <span><b style={{ fontWeight: '800' }}>WoNo.Co</b> = <b style={{ fontWeight: '800' }}>Wo</b>rld <b style={{ fontWeight: '800' }}>No</b>mad <b style={{ fontWeight: '800' }}>Co</b>mmerce</span>
                 </div>
               </div>
             </h2>
@@ -185,8 +180,8 @@ const Homepage = () => {
               A simple no code instant SaaS software platform that supports
               businesses in remote and aspiring destinations!
               <br />
-              Provide services to nomads across the world. (Example: Co-Working,
-              Co-Living, Hostels, Resorts, Cafes, Events etc)
+              Providing SaaS Tech to nomads businesses across the world. (E.g.: Co-Working, Co-Living, Hostels, Workations, Resorts, Cafes, Events etc)
+
             </span>
           </div>
           <div
@@ -281,7 +276,7 @@ const Homepage = () => {
             {/* First div (1/2) */}
             <div className="">
               <div className="customMargin_top">
-                <div>
+                <div className="one-platform-section">
                   <h2>One Partner Platform,</h2>
                   <h2>Infinite possibilities and opportunities!</h2>
                 </div>
@@ -440,9 +435,8 @@ const Homepage = () => {
 
                         </div> */}
               <div
-                className={`website-panel-right ${
-                  selectedId ? "modal-open" : ""
-                }`}>
+                className={`website-panel-right ${selectedId ? "modal-open" : ""
+                  }`}>
                 <div className="website-panel-content">
                   {webimages.map((image) => (
                     <div className="template-preview-container" key={image.id}>
@@ -505,7 +499,7 @@ const Homepage = () => {
         </div>
 
         <div className="last-section  w-100 ">
-          <div className="pt-5 customMargin pb-5">
+          <div className="home-last-banner">
             <div className="grow-your-business-color">
               <h2>
                 <b>GROW YOUR BUSINESS WITH US</b>

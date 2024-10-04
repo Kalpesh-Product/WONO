@@ -15,8 +15,8 @@ const Jobdescription = ({ decodedTitle }) => {
                             <div key={index}>
                                 <br></br>
                                 <h1  className="m-b-2">{job.subtitle}</h1>
-                                <br />
-                                <br></br>
+                                
+                                
                                 {typeof job.description === "string" ? (
                                     <>
                                         <p>{job.description}</p>
@@ -27,7 +27,7 @@ const Jobdescription = ({ decodedTitle }) => {
                                     {job.description?.list.map((item, itemIndex) => (
                                         <>
                                         <li key={itemIndex}>{item || ""}</li>
-                                        <br></br>
+                                        
                                         </>
 
                                     ))}

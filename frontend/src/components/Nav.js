@@ -75,7 +75,10 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
     setShow(false);
   };
 
-  const handleClose = () => setShow(false);
+  const handleClose = () => {
+    setShow(false)
+    window.scrollTo({ top: 0, behavior: "instant" })
+  };
   const handleShow = () => setShow(true);
 
   return (
