@@ -31,6 +31,34 @@
     color: #364D59;
 }
 
+@media (min-width: 1025px) {
+
+    .paddingForTab {
+        padding-left: 7rem !important;
+        padding-right: 7rem !important;
+    }
+
+
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .paddingForTab {
+        padding-left: 3rem !important;
+        padding-right: 3rem !important;
+    }
+
+    /* .wono-text-spacing {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    } */
+
+    /* .privacy-container {
+        padding: 1.2rem;
+    } */
+}
+
 @media (max-width:768px) {
     .privacy-container {
         padding: 0.8rem;
@@ -46,8 +74,10 @@
     } */
 
     .wono-text-spacing {
-        padding-left: 7rem;
-        padding-right: 7rem;
+        /* padding-left: 7rem;
+        padding-right: 7rem; */
+        padding-left: 3rem !important;
+        padding-right: 3rem !important;
     }
 }
 
@@ -61,5 +91,9 @@
     .wono-text-spacing {
         padding-left: 1rem;
         padding-right: 1rem;
+    }
+
+    .terms-title {
+        font-size: 1.6rem;
     }
 }
