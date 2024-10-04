@@ -8,6 +8,11 @@
     src: url('../assets/WONO_images/img/fonts/ComicSansMS.ttf');
 }
 
+@font-face {
+    font-family: Popins-Regular;
+    src: url('../assets/WONO_images/img/fonts/Poppins-Regular.ttf');
+}
+
 .WONOBLUE {
     color: #0AA9EF;
 }

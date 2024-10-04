@@ -255,16 +255,15 @@ const Faqs = () => {
             could be mutually organised once the support team does the initial
             meeting with you.
           </p>
-
-          <p>
-            Can find the answer to any of your questions here? Please connect
-            with us via our{" "}
-            <Link className="WONOBLUE text-decoration-none" to="/contact">
-              Contact us
-            </Link>{" "}
-            page.{" "}
-          </p>
         </div>
+        <p>
+          Can find the answer to any of your questions here? Please connect with
+          us via our{" "}
+          <Link className="WONOBLUE text-decoration-none" to="/contact">
+            Contact us
+          </Link>{" "}
+          page.{" "}
+        </p>
       </div>
     </>
   );

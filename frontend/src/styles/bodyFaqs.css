@@ -8,12 +8,30 @@
     src: url('../assets/WONO_images/img/fonts/ComicSansMS.ttf');
 }
 
+@font-face {
+    font-family: Popins-Regular;
+    src: url('../assets/WONO_images/img/fonts/Poppins-Regular.ttf');
+}
+
 .privacy-section {
     /* padding-bottom: 2rem; */
 }
 
 .privSect2 {
-    padding-bottom: 1rem;
+    /* padding-bottom: 1rem; */
+    padding-bottom: 0;
+    font-family: Popins-Regular;
+}
+
+.privSect2 h4 {
+    margin-bottom: 0;
+    font-family: Popins-Regular;
+}
+
+.privSect2 p {
+    font-size: 1.3rem;
+    margin-bottom: 1.8rem;
+    font-family: Popins-Regular;
 }
 
 .WONOBLUE {
