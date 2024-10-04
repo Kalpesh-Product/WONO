@@ -112,7 +112,7 @@ const Jobrole = () => {
             <Accordion.Body >
               <div className='mob-down row' style={{display:"flex"}} >
                 <div className='col-lg-6 col-sm-6'>
-                  <h5 classname="career-job-title" > 3. Webs Developer Intern</h5>
+                  <h5 classname="career-job-title" > 3. Web Developer Intern</h5>
                 </div>
                 <div className='col-lg-6 col-sm-6 text-button' style={{ textAlign: "right" }}>
                    <p style={{ fontWeight: "600", margin : 0}}>
@@ -125,6 +125,7 @@ const Jobrole = () => {
                   </p>
                 </div>
               </div>
+              <hr></hr>
             </Accordion.Body>
           </Accordion.Item>
           <Accordion.Item eventKey="2" style={{ border: "none" }}>
@@ -146,6 +147,7 @@ const Jobrole = () => {
                   </p>
                 </div>
               </div>
+              <hr></hr>
             </Accordion.Body>
           </Accordion.Item>
           <Accordion.Item eventKey="3" style={{ border: "none" }}>
@@ -187,6 +189,7 @@ const Jobrole = () => {
                   </p>
                 </div>
               </div>
+              <hr></hr>
             </Accordion.Body>
           </Accordion.Item>
           <Accordion.Item eventKey="4" style={{ border: "none" }}>
@@ -208,6 +211,7 @@ const Jobrole = () => {
                   </p>
                 </div>
               </div>
+              <hr></hr>
             </Accordion.Body>
           </Accordion.Item>
           <Accordion.Item eventKey="5" style={{ border: "none" }}>
@@ -229,6 +233,7 @@ const Jobrole = () => {
                   </p>
                 </div>
               </div>
+              <hr></hr>
             </Accordion.Body>
           </Accordion.Item>
         </Accordion>
