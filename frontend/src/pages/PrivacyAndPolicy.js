@@ -13,7 +13,7 @@ const PrivacyAndPolicy = () => {
           <img src={greenUnderLine} alt="" /> PRIVACY POLICY
         </h3>
 
-        <div className="privacy-section">
+        <div className="privacy-section privSect2">
           <h4>Last Updated: 2nd October 2024</h4>
           <p>
             Welcome to WONOCO PRIVATE LIMITED (SINGAPORE COMPANY) ("Company",
@@ -34,7 +34,7 @@ const PrivacyAndPolicy = () => {
             not use the Service.
           </p>
         </div>
-        <div className="privacy-section">
+        <div className="privacy-section privSect2">
           <h4>1. Information We Collect</h4>
           <p>
             We collect the following types of information when you use our
@@ -80,7 +80,7 @@ const PrivacyAndPolicy = () => {
             properly.
           </p>
         </div>
-        <div className="privacy-section">
+        <div className="privacy-section privSect2">
           <h4>2. How We Use Your Information</h4>
           <p>We use the information we collect for the following purposes:</p>
 
@@ -109,7 +109,7 @@ const PrivacyAndPolicy = () => {
             </li>
           </ul>
         </div>
-        <div className="privacy-section">
+        <div className="privacy-section privSect2">
           <h4>3. How We Share Your Information</h4>
           <p>
             We do not sell, rent, or trade your personal information to third
@@ -141,7 +141,7 @@ const PrivacyAndPolicy = () => {
             of any changes in this Privacy Policy.
           </p>
         </div>
-        <div className="privacy-section">
+        <div className="privacy-section privSect2">
           <h4>4. Data Security</h4>
 
           <p>
@@ -155,7 +155,7 @@ const PrivacyAndPolicy = () => {
           </p>
         </div>
 
-        <div className="privacy-section">
+        <div className="privacy-section privSect2">
           <h4>5. Data Retention</h4>
           <p>
             We retain your personal information for as long as necessary to
@@ -164,7 +164,7 @@ const PrivacyAndPolicy = () => {
             data is no longer needed, we will delete or anonymize it.
           </p>
         </div>
-        <div className="privacy-section">
+        <div className="privacy-section privSect2">
           <h4>6. Your Data Protection Rights</h4>
           <p>
             Depending on your location, you may have the following rights
@@ -210,7 +210,7 @@ const PrivacyAndPolicy = () => {
             identity before fulfilling your request.
           </p>
         </div>
-        <div className="privacy-section">
+        <div className="privacy-section privSect2">
           <h4>7. International Data Transfers</h4>
           <p>
             We may transfer your personal information to countries outside of
@@ -220,7 +220,7 @@ const PrivacyAndPolicy = () => {
             this Privacy Policy and applicable data protection laws.
           </p>
         </div>
-        <div className="privacy-section">
+        <div className="privacy-section privSect2">
           <h4>8. Children's Privacy</h4>
           <p>
             Our Service is not intended for individuals under the age of 18. We
@@ -230,7 +230,7 @@ const PrivacyAndPolicy = () => {
             that information.
           </p>
         </div>
-        <div className="privacy-section">
+        <div className="privacy-section privSect2">
           <h4>9. Changes to This Privacy Policy</h4>
           <p>
             We may update this Privacy Policy from time to time to reflect
@@ -241,7 +241,7 @@ const PrivacyAndPolicy = () => {
             are made will constitute acceptance of the revised policy.
           </p>
         </div>
-        <div className="privacy-section">
+        <div className="privacy-section privSect2">
           <h4>10. Contact Information</h4>
           <p>
             If you have any questions or concerns about this Privacy Policy or

@@ -365,10 +365,16 @@
 
         .individual-card {
             width: 100%;
+            margin-bottom: 0;
+        }
+
+        .individual-card p {
+            margin-bottom: 0;
         }
 
         .flexForCards {
             justify-content: center;
+            gap: 0.5rem;
         }
 
         .fontSizeCompleteView {
