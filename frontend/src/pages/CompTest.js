@@ -133,7 +133,7 @@ function Example() {
           <CompOffCanvas />
         </div> */}
 
-        <h1 style={{ marginBottom: "50px" }}>JOIN OUR TEAM</h1>
+        <h1 style={{ marginBottom: "15px" }}>JOIN OUR TEAM</h1>
         <div className='accrodion'>
 
           <h2 style={{ fontSize: "30px", fontWeight: "bold", display: "flex", alignItems: "start" }}>OPEN POSITIONS</h2>

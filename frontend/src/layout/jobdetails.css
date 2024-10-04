@@ -81,6 +81,9 @@ form .apply-form-btn {
    height: 100%;
    z-index: -1;
 }
+ul{
+  padding-left: 0;
+}
 
 @media (max-width:768px) {
   .container-jobDetails {
