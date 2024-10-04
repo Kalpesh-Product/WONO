@@ -29,7 +29,7 @@
 
 @media (max-width: 768px) {
     .jobrole-arrow{
-        margin: 0 0 0 5rem;
+        margin: 0 0 0 4rem;
         font-weight: 600;
         color: #52565e;
         border: 2px solid #52565e;
@@ -38,7 +38,7 @@
         transition: background-color ease 0.2s;
     }
     .jobrole-arrow:hover{
-        margin: 0 0 0 5rem;
+        margin: 0 0 0 4rem;
         font-weight: 600;
         color: white;
         border: 2px solid white;
@@ -46,7 +46,23 @@
         border-radius: 7px;
         background-color: black;
     }
+
+
 }
+/* @media (max-width: 425px)
+{
+    .jobrole-arrow{
+        margin: 0 0 0 10rem;
+        font-weight: 600;
+        color: #52565e;
+        border: 2px solid #52565e;
+        padding: 8px;
+        border-radius: 7px;
+        transition: background-color ease 0.2s;
+    }
+
+} */
+
 
 .career-job-title{
    font-size: 1.5rem;
