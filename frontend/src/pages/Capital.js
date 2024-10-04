@@ -29,7 +29,7 @@ const Capital = () => {
                 </div>
 
                 <div className='cards-with-text'>
-                    <h3>Financial Service</h3>
+                    <h3>Financial Service </h3>
                     <div className='capital-img'>
                         <img src='https://cdn.sanity.io/images/q8bht0jl/production/231a71aafbef445f1f288a4af09ab3478ce36adf-864x1151.jpg?auto=format&fit=max&q=100&w=432' alt='capital-img-2'>
                         </img>
