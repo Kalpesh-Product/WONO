@@ -1,6 +1,7 @@
 import React from "react";
 import "../styles/bodyPrivacyAndPolicy.css";
 import "../styles/componentStyle.css";
+import greenUnderLine from '../assets/underline-bg/blue-line.png'
 
 // import { Link } from "react-router-dom";
 
@@ -8,11 +9,9 @@ const PrivacyAndPolicy = () => {
   return (
     <>
       <div className="privacy-container wono-text-spacing fontPoppinsRegular">
-        <br />
-        <br />
-        <h3 className="Title-font text-center ComicFont">Privacy Policy</h3>
-        <br />
-        <br />
+
+        <h3 className="Title-font text-center pb-5 ComicFont privacy-title"><img src={greenUnderLine} alt="" /> PRIVACY POLICY</h3>
+
         <div className="privacy-section">
           <h4>Last Updated: 2nd October 2024</h4>
           <p>

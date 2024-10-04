@@ -50,7 +50,7 @@
 }
 
 .themePage-content-header h3 {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     font-weight: 600;
     font-size: 2.5rem;
 }
@@ -202,8 +202,8 @@
 }
 
 .themes-view-button button {
-    width: 20% !important;
-    padding: 1rem 2rem;
+    width: 13% !important;
+    padding: 0.5rem 1rem;
 }
 
 
@@ -530,6 +530,10 @@
         font-size: 4rem;
         font-weight: bold;
         text-align: center;
+    }
+    .themes-view-button button {
+        width: 20% !important;
+        padding: 0.5rem 1rem;
     }
 }
 
