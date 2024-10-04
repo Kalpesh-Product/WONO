@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 const PrivacyAndPolicy = () => {
   return (
     <>
-      <div className="privacy-container wono-text-spacing fontPoppinsRegular">
+      <div className="privacy-container wono-text-spacing fontPoppinsRegular paddingForTab">
         <h3 className="Title-font text-center pb-5 ComicFont privacy-title">
           <img src={greenUnderLine} alt="" /> PRIVACY POLICY
         </h3>

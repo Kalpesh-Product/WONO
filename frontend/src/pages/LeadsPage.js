@@ -287,7 +287,7 @@ const LeadsPage = () => {
             <div className="container p-0">
               {/* <div className="row  border-bottom border-dark border-3 pb-5 bg-primary"> */}
               <div className="row w-100 theSpecialRow">
-                <div className="col-lg-10 ps-0">
+                <div className="col-lg-9 col-md-9 ps-0">
                   <p className="automatedPlatformFontSize automatedPlatformPadding mb-0">
                     Automated platform and our resources are FREE .. you pay
                     only if you start paid ads!
@@ -295,7 +295,7 @@ const LeadsPage = () => {
                 </div>
                 {/* <div className="col-lg-4"></div> */}
                 {/* <div className="col-lg-4 bg-danger"> */}
-                <div className="col-lg-2  d-flex justify-content-lg-end justify-content-md-end justify-content-center justify-content-sm-center align-items-center SpecialPaddingX pe-0">
+                <div className="col-lg-3 col-md-3  d-flex justify-content-lg-end justify-content-md-end justify-content-center justify-content-sm-center align-items-center SpecialPaddingX pe-0">
                   {/* <div className=""> */}
                   <button
                     // className="get-started-submit-button mb-0"

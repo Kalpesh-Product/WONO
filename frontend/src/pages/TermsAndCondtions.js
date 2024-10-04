@@ -9,7 +9,7 @@ const TermsAndCondtions = () => {
   const navigate = useNavigate();
   return (
     <>
-      <div className="privacy-container wono-text-spacing fontPoppinsRegular">
+      <div className="privacy-container wono-text-spacing fontPoppinsRegular paddingForTab">
         <h3 className="Title-font terms-title pb-5">
           <img src={greenUnderLine} alt="" /> TERMS AND CONDITIONS
         </h3>

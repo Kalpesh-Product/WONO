@@ -8,7 +8,7 @@ const Faqs = () => {
   return (
     <>
       {/* <div className="privacy-container wono-text-spacing pb-5 faq-title fontPoppinsRegular"> */}
-      <div className="privacy-container wono-text-spacing fontPoppinsRegular">
+      <div className="privacy-container wono-text-spacing FAQSpacing fontPoppinsRegular paddingForTab">
         {/* <h3 className="Title-font text-center faq-title ComicFont pb-5"> */}
         <h3 className="Title-font text-center pb-5 ComicFont faq-title">
           <img src={greenUnderLine} alt="" />

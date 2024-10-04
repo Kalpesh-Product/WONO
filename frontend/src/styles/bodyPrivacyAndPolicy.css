@@ -13,6 +13,33 @@
     src: url('../assets/WONO_images/img/fonts/Poppins-Regular.ttf');
 }
 
+@media (min-width: 1025px) {
+
+    .paddingForTab {
+        padding-left: 7rem !important;
+        padding-right: 7rem !important;
+    }
+
+
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .paddingForTab {
+        padding-left: 3rem !important;
+        padding-right: 3rem !important;
+    }
+
+    /* .wono-text-spacing {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    } */
+
+    /* .privacy-container {
+        padding: 1.2rem;
+    } */
+}
+
 .WONOBLUE {
     color: #0AA9EF;
 }
@@ -113,6 +140,10 @@
     .wono-text-spacing {
         padding-left: 2rem;
         padding-right: 2rem;
+    }
+
+    .privacy-title {
+        font-size: 1.6rem;
     }
 }
 

@@ -115,7 +115,7 @@
 
     .automatedPlatformFontSize {
         /* font-size: 1.125rem; */
-        font-size: 1.37rem;
+        font-size: 1.28rem;
         /* 18px / 16 */
     }
 
@@ -563,6 +563,7 @@
         }
 
     }
+
     @media (max-width:426px) {
         .last-section h2 {
             font-size: 2rem;

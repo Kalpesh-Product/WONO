@@ -90,9 +90,9 @@ section {
 
 @media (max-width:1024px) {
   .register-master {
-    padding: 4rem 0;
+    padding: 9rem 0 13.2rem;
     border: none;
-    height: 67.2vh;
+    height: 100%;
 }
 }
 
@@ -110,6 +110,14 @@ section {
     font-size: 0.8rem;
   }
 }
+@media (max-width:426px) {
+  .register-master {
+    padding: 2rem 0;
+    border: none;
+    height: 100%;
+}
+}
+
 
 .modal {
   position: fixed;
