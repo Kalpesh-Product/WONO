@@ -231,6 +231,14 @@
         padding-bottom: 2rem;
     }
 
+    .bannerTopPadding {
+        padding-top: 4rem;
+    }
+
+    .bannerBottomPadding {
+        padding-bottom: 4rem;
+    }
+
     @media (min-width: 1025px) {
         .FFFF {
             font-size: 2.6rem !important;
@@ -482,7 +490,8 @@
         }
 
         .marketing-body {
-            text-align: center;
+            /* text-align: center; */
+            text-align: left;
         }
 
         .better-roi-section,
@@ -514,7 +523,8 @@
         .better-roi-section .col-lg-6.text-start p,
         .complete-view-section .col-lg-6.text-start p,
         .finer-points-section .col-lg-6.text-start p {
-            padding-left: 1rem;
+            /* padding-left: 1rem; */
+            padding-left: 0;
             padding-right: 1rem;
         }
 
@@ -566,6 +576,15 @@
 
     @media (max-width:426px) {
         .last-section h2 {
-            font-size: 2rem;
+            /* font-size: 2rem; */
+            font-size: 1.8rem;
+        }
+
+        .bannerTopPadding {
+            padding-top: 2rem;
+        }
+
+        .bannerBottomPadding {
+            padding-bottom: 2rem;
         }
     }
