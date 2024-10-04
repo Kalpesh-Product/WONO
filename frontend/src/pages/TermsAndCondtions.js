@@ -72,25 +72,28 @@ const TermsAndCondtions = () => {
           </span>
           <br />
           <br />
-          <ul>
-            <li>
-              <b>Billing Cycle:</b> Subscriptions are billed on a monthly or
-              annual basis, depending on your plan.
-            </li>
-            <li>
-              <b>Automatic Renewal:</b> Subscriptions automatically renew at the
-              end of each billing cycle unless you cancel your subscription.
-            </li>
-            <li>
-              <b>Payment Methods:</b> We accept [list payment methods]. You
-              authorize us to charge your selected payment method for all
-              subscription fees.
-            </li>
-            <li>
-              <b>Refunds:</b>All fees are non-refundable, except where required
-              by law.
-            </li>
-          </ul>
+          <div className="oneRemPaddingLeft">
+            <ul>
+              <li>
+                <b>Billing Cycle:</b> Subscriptions are billed on a monthly or
+                annual basis, depending on your plan.
+              </li>
+              <li>
+                <b>Automatic Renewal:</b> Subscriptions automatically renew at
+                the end of each billing cycle unless you cancel your
+                subscription.
+              </li>
+              <li>
+                <b>Payment Methods:</b> We accept [list payment methods]. You
+                authorize us to charge your selected payment method for all
+                subscription fees.
+              </li>
+              <li>
+                <b>Refunds:</b>All fees are non-refundable, except where
+                required by law.
+              </li>
+            </ul>
+          </div>
         </div>
         <div className="privacy-section privSect2">
           <h4>5. License and Usage</h4>
@@ -101,17 +104,19 @@ const TermsAndCondtions = () => {
           </span>
           <br />
           <br />
-          <ul>
-            <li>
-              Reverse engineer, decompile, or disassemble any part of the
-              Service.
-            </li>
-            <li>Use the Service to build a competing product.</li>
-            <li>
-              Misuse the Service, such as by introducing malware, spamming, or
-              disrupting the platform.
-            </li>
-          </ul>
+          <div className="oneRemPaddingLeft">
+            <ul>
+              <li>
+                Reverse engineer, decompile, or disassemble any part of the
+                Service.
+              </li>
+              <li>Use the Service to build a competing product.</li>
+              <li>
+                Misuse the Service, such as by introducing malware, spamming, or
+                disrupting the platform.
+              </li>
+            </ul>
+          </div>
           <br />
           <span>
             We reserve the right to terminate or restrict your access to the

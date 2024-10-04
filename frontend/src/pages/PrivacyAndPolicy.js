@@ -46,29 +46,32 @@ const PrivacyAndPolicy = () => {
             This refers to any information that identifies you personally,
             including but not limited to:
           </p>
-          <ul>
-            <li>Name</li>
-            <li>Email address</li>
-            <li>Phone number</li>
-            <li>Company name</li>
-            <li>Billing and payment details</li>
-            <li>Job title</li>
-          </ul>
+          <div className="oneRemPaddingLeft">
+            <ul>
+              <li>Name</li>
+              <li>Email address</li>
+              <li>Phone number</li>
+              <li>Company name</li>
+              <li>Billing and payment details</li>
+              <li>Job title</li>
+            </ul>
+          </div>
 
           <p className="blue-italics">1.2 Usage Data</p>
           <p>
             We may automatically collect information about how you use our
             Service, including:
           </p>
-
-          <ul>
-            <li>IP address</li>
-            <li>Browser type and version</li>
-            <li>Device type and operating system</li>
-            <li>Pages viewed and actions taken on our platform</li>
-            <li>Time and date of usage</li>
-            <li>Referring website addresses (URLs)</li>
-          </ul>
+          <div className="oneRemPaddingLeft">
+            <ul>
+              <li>IP address</li>
+              <li>Browser type and version</li>
+              <li>Device type and operating system</li>
+              <li>Pages viewed and actions taken on our platform</li>
+              <li>Time and date of usage</li>
+              <li>Referring website addresses (URLs)</li>
+            </ul>
+          </div>
 
           <p className="blue-italics">1.3 Cookies and Tracking Technologies</p>
 
@@ -83,31 +86,34 @@ const PrivacyAndPolicy = () => {
         <div className="privacy-section privSect2">
           <h4>2. How We Use Your Information</h4>
           <p>We use the information we collect for the following purposes:</p>
-
-          <ul>
-            <li>
-              <span className="fw-bold">To Provide the Service:</span> We use
-              your personal information to manage your account, process
-              payments, and provide access to the platform.
-            </li>
-            <li>
-              <span className="fw-bold">To Improve the Service:</span> We
-              analyze usage data to enhance the functionality, performance, and
-              security of the platform.
-            </li>
-            <li>
-              <span className="fw-bold">To Communicate with You:</span> We may
-              send you important updates, notifications, or promotional
-              materials rimport from 'react-router-dom'; elated to our
-              Service.import from 'react-router-dom'; You can opt out of
-              marketing communications at any time.
-            </li>
-            <li>
-              <span className="fw-bold">To Comply with Legal Obligations:</span>{" "}
-              We may use your information to comply with legal obligations,
-              resolve disputes, or enforce our agreements.
-            </li>
-          </ul>
+          <div className="oneRemPaddingLeft">
+            <ul>
+              <li>
+                <span className="fw-bold">To Provide the Service:</span> We use
+                your personal information to manage your account, process
+                payments, and provide access to the platform.
+              </li>
+              <li>
+                <span className="fw-bold">To Improve the Service:</span> We
+                analyze usage data to enhance the functionality, performance,
+                and security of the platform.
+              </li>
+              <li>
+                <span className="fw-bold">To Communicate with You:</span> We may
+                send you important updates, notifications, or promotional
+                materials rimport from 'react-router-dom'; elated to our
+                Service.import from 'react-router-dom'; You can opt out of
+                marketing communications at any time.
+              </li>
+              <li>
+                <span className="fw-bold">
+                  To Comply with Legal Obligations:
+                </span>{" "}
+                We may use your information to comply with legal obligations,
+                resolve disputes, or enforce our agreements.
+              </li>
+            </ul>
+          </div>
         </div>
         <div className="privacy-section privSect2">
           <h4>3. How We Share Your Information</h4>

@@ -13,6 +13,10 @@
     src: url('../assets/WONO_images/img/fonts/Poppins-Regular.ttf');
 }
 
+.oneRemPaddingLeft {
+    padding-left: 1rem;
+}
+
 .privSect2 {
     /* padding-bottom: 1rem; */
     padding-bottom: 0;
