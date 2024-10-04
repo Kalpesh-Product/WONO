@@ -261,7 +261,7 @@ const Homepage = () => {
                   navigate("/register");
                   window.scrollTo({ top: 0, behavior: "smooth" });
                 }}>
-                PARTNER NOW
+                CONNECT
               </button>
             </div>
           </div>
