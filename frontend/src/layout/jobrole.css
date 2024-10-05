@@ -101,6 +101,12 @@
     }
 
 }
+@media (max-width:1024px)
+{
+    .text-button{
+        text-align: right !important;
+    }
+}
 /*
 i.fa.fa-cheveron-right {
     color: black;
