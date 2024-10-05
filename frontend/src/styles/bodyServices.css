@@ -547,7 +547,8 @@
     .business-service-card {
         display: grid;
         grid-template-columns: 26% 1fr;
-        background-color: rgb(247, 247, 247);
+        /* background-color: rgb(247, 247, 247); */
+        background-color: #FFF;
         padding: 1rem;
     }
 

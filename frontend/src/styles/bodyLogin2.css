@@ -8,6 +8,14 @@
     src: url('../assets/WONO_images/img/fonts/Poppins-Regular.ttf');
 }
 
+/* .login-section {
+    height: 60vh;
+} */
+
+/* .outer-login {
+    height: 60vh;
+} */
+
 .no-border {
     border: none;
     outline: none;
@@ -28,15 +36,8 @@
 }
 
 
-.loginTopPadding {
-    /* padding-top: 8rem; */
-    padding-top: 4rem;
-}
 
-.loginBottomPadding {
-    /* padding-bottom: 8rem; */
-    padding-bottom: 4rem;
-}
+
 
 
 .divideFiftyPercent {
@@ -290,15 +291,14 @@
         justify-content: center;
     }
 
-    .loginTopPadding {
+    /* .loginTopPadding {
         padding-top: 4rem;
     }
 
     .loginBottomPadding {
         padding-bottom: 4rem;
-        /* height: 67.2vh; */
-        height: 100%;
-    }
+     
+    } */
 }
 
 /* @media (max-width:768px) {
@@ -307,3 +307,45 @@
         height: 100%;
     }
 } */
+
+
+
+/* MEDIA QUERIES FOR HEIGHT */
+/* Screen height greater than 800px */
+@media (min-height: 1900px) {
+    .loginTopPadding {
+        /* padding-top: 8rem; */
+        padding-top: 36rem;
+    }
+
+    .loginBottomPadding {
+        /* padding-bottom: 8rem; */
+        padding-bottom: 36rem;
+    }
+}
+
+/* Screen height between 600px and 800px */
+@media (min-height: 900px) and (max-height: 1900px) {
+    .loginTopPadding {
+        /* padding-top: 8rem; */
+        padding-top: 19rem;
+    }
+
+    .loginBottomPadding {
+        /* padding-bottom: 8rem; */
+        padding-bottom: 19rem;
+    }
+}
+
+/* Screen height less than 600px */
+@media (max-height: 900px) {
+    .loginTopPadding {
+        /* padding-top: 8rem; */
+        padding-top: 4rem;
+    }
+
+    .loginBottomPadding {
+        /* padding-bottom: 8rem; */
+        padding-bottom: 4rem;
+    }
+}
