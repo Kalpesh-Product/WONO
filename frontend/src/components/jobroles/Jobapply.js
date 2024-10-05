@@ -144,11 +144,7 @@ const Jobapply = ({ jobTitle, changeActiveTab }) => {
       setShowModal(true);
       return;
     }
-    if (formvalues.daysToJoin === "") {
-      setShowMessage("Days to join are required");
-      setShowModal(true);
-      return;
-    }
+   
     if (formvalues.location === ""){
       setShowMessage("State is required");
       setShowModal(true);
