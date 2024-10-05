@@ -610,7 +610,7 @@
     }
 
 }
-@media (max-width: 426px) {
+@media (max-width: 450px) {
     .home-page-container {
         grid-template-columns: 1fr;
         /* Stack columns vertically */
@@ -931,6 +931,64 @@
 
 
 }
+@media (max-width: 440px) {
+
+    .N-Commerce {
+        padding: 0rem;
+    }
+
+    .N-Commerce>h3>strong {
+        font-size: 5.6rem;
+        color: #fff;
+        padding: 1rem;
+    }
+
+    .Globe {
+        flex: 0 0 40%;
+        /* padding: 2rem 0; */
+    }
+
+    .Nomads-list-bussiness {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .Nomad-List-Your-Bussiness {
+        font-size: 20px;
+        font-weight: 100px;
+        padding: 0;
+        display: flex;
+        flex: 1;
+        margin: 0;
+        border: none;
+        color: white;
+
+    }
+
+    .Globe-N-Commerce {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        padding: 2rem 0;
+    }
+
+    .Globe img {
+        width: 100%;
+    }
+
+    .N-Commerce h3 {
+        font-family: BebasNeue-Regular;
+        font-size: 40px;
+        color: #fff;
+        font-weight: 200;
+        position: relative;
+        text-align: center;
+        letter-spacing: -2px;
+    }
+
+
+}
 @media (max-width: 426px) {
 
     .N-Commerce {
@@ -938,7 +996,7 @@
     }
 
     .N-Commerce>h3>strong {
-        font-size: 5.3rem;
+        font-size: 5.2rem;
         color: #fff;
         padding: 1rem;
     }
