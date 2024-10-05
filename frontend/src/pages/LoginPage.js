@@ -148,7 +148,7 @@ const LoginPage = () => {
 
   return (
     <>
-      <div className="login-section loginTopPadding loginBottomPadding poppinsRegular">
+      <div className="login-section loginTopPadding loginBottomPadding poppinsRegular heightPadding">
         <h1 className="text-center fw-bold">Log In</h1>
         <p className="text-center">
           {/* Don't have an account? <span className="wono-blue-text">Sign Up</span> */}

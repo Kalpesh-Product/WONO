@@ -20,18 +20,19 @@
 .privSect2 {
     /* padding-bottom: 1rem; */
     padding-bottom: 0;
-    font-family: Popins-Regular;
+    font-family: Popins-Regular !important;
 }
 
 .privSect2 h4 {
     margin-bottom: 0;
-    font-family: Popins-Regular;
+    font-family: Popins-Regular !important;
+    font-size: 1.3rem;
 }
 
 .privSect2 p {
     font-size: 1rem;
     margin-bottom: 1.8rem;
-    font-family: Popins-Regular;
+    font-family: Popins-Regular !important;
 }
 
 @media (min-width: 1025px) {

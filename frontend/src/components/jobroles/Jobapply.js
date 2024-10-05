@@ -410,16 +410,14 @@ const Jobapply = ({ jobTitle, changeActiveTab }) => {
               name="resume"
               style={{display:"none"}}
               id="resume-upload"
-              
-
               onChange={handleGlobalChange}
             />
-             <label htmlFor="resume-upload">
+             <label htmlFor="resume-upload" style={{ width: "100%" }}>
     <Button
       variant="outlined"
       component="span"
       fullWidth
-      style={{ textAlign: 'left',color:"black" }} // Align text to the left
+      style={{textAlign:"left",color:"#545454",padding:"15px",borderColor:"#bebebe",justifyContent: 'flex-start'}} // Align text to the left
     >
       {formvalues.resume ? formvalues.resume.name : 'Upload a Resume / CV'}
     </Button>
