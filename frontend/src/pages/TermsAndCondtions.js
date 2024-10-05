@@ -9,11 +9,11 @@ const TermsAndCondtions = () => {
   const navigate = useNavigate();
   return (
     <>
-      <div className="privacy-container wono-text-spacing fontPoppinsRegular">
+      <div className="privacy-container wono-text-spacing fontPoppinsRegular paddingForTab">
         <h3 className="Title-font terms-title pb-5">
           <img src={greenUnderLine} alt="" /> TERMS AND CONDITIONS
         </h3>
-        <div className="privacy-section">
+        <div className="privacy-section privSect2">
           <h4>1.Introduction</h4>
           <span>
             Welcome to WONOCO PRIVATE LIMITED (SINGAPORE COMPANY)
@@ -37,7 +37,7 @@ const TermsAndCondtions = () => {
             Terms, you must discontinue using the Service immediately.
           </span>
         </div>
-        <div className="privacy-section">
+        <div className="privacy-section privSect2">
           <h4>2. Eligibility</h4>
           <span>
             To use the Service, you must be at least 18 years of age or have
@@ -46,7 +46,7 @@ const TermsAndCondtions = () => {
             to enter into a binding agreement.
           </span>
         </div>
-        <div className="privacy-section">
+        <div className="privacy-section privSect2">
           <h4>3. Account Registration</h4>
           <span>
             To access certain features of the Service, you must create an
@@ -63,7 +63,7 @@ const TermsAndCondtions = () => {
             suspect unauthorized activity or if you breach these Terms.
           </span>
         </div>
-        <div className="privacy-section">
+        <div className="privacy-section privSect2">
           <h4>4. Subscription and Payment</h4>
           <span>
             The Service is available on a subscription basis. By subscribing,
@@ -72,27 +72,30 @@ const TermsAndCondtions = () => {
           </span>
           <br />
           <br />
-          <ul>
-            <li>
-              <b>Billing Cycle:</b> Subscriptions are billed on a monthly or
-              annual basis, depending on your plan.
-            </li>
-            <li>
-              <b>Automatic Renewal:</b> Subscriptions automatically renew at the
-              end of each billing cycle unless you cancel your subscription.
-            </li>
-            <li>
-              <b>Payment Methods:</b> We accept [list payment methods]. You
-              authorize us to charge your selected payment method for all
-              subscription fees.
-            </li>
-            <li>
-              <b>Refunds:</b>All fees are non-refundable, except where required
-              by law.
-            </li>
-          </ul>
+          <div className="oneRemPaddingLeft">
+            <ul>
+              <li>
+                <b>Billing Cycle:</b> Subscriptions are billed on a monthly or
+                annual basis, depending on your plan.
+              </li>
+              <li>
+                <b>Automatic Renewal:</b> Subscriptions automatically renew at
+                the end of each billing cycle unless you cancel your
+                subscription.
+              </li>
+              <li>
+                <b>Payment Methods:</b> We accept [list payment methods]. You
+                authorize us to charge your selected payment method for all
+                subscription fees.
+              </li>
+              <li>
+                <b>Refunds:</b>All fees are non-refundable, except where
+                required by law.
+              </li>
+            </ul>
+          </div>
         </div>
-        <div className="privacy-section">
+        <div className="privacy-section privSect2">
           <h4>5. License and Usage</h4>
           <span>
             We grant you a limited, non-exclusive, non-transferable, and
@@ -101,24 +104,26 @@ const TermsAndCondtions = () => {
           </span>
           <br />
           <br />
-          <ul>
-            <li>
-              Reverse engineer, decompile, or disassemble any part of the
-              Service.
-            </li>
-            <li>Use the Service to build a competing product.</li>
-            <li>
-              Misuse the Service, such as by introducing malware, spamming, or
-              disrupting the platform.
-            </li>
-          </ul>
+          <div className="oneRemPaddingLeft">
+            <ul>
+              <li>
+                Reverse engineer, decompile, or disassemble any part of the
+                Service.
+              </li>
+              <li>Use the Service to build a competing product.</li>
+              <li>
+                Misuse the Service, such as by introducing malware, spamming, or
+                disrupting the platform.
+              </li>
+            </ul>
+          </div>
           <br />
           <span>
             We reserve the right to terminate or restrict your access to the
             Service if we believe you have violated these Terms.
           </span>
         </div>
-        <div className="privacy-section">
+        <div className="privacy-section privSect2">
           <h4>6. Intellectual Property</h4>
           <span>
             All content, materials, trademarks, and technology on the platform,
@@ -128,7 +133,7 @@ const TermsAndCondtions = () => {
             prior written consent from the Company.
           </span>
         </div>
-        <div className="privacy-section">
+        <div className="privacy-section privSect2">
           <h4>7. Data Protection and Privacy</h4>
           <span>
             We value your privacy. Our collection, use, and storage of your data
@@ -144,7 +149,7 @@ const TermsAndCondtions = () => {
             your information as described in the Privacy Policy.
           </span>
         </div>
-        <div className="privacy-section">
+        <div className="privacy-section privSect2">
           <h4>8. Third-Party Integrations</h4>
           <span>
             Our platform may integrate with third-party services. We are not
@@ -154,7 +159,7 @@ const TermsAndCondtions = () => {
             respective third parties.
           </span>
         </div>
-        <div className="privacy-section">
+        <div className="privacy-section privSect2">
           <h4>9. Service Availability</h4>
           <span>
             We strive to provide continuous access to the Service, but we do not
@@ -164,7 +169,7 @@ const TermsAndCondtions = () => {
             interruptions in service.
           </span>
         </div>
-        <div className="privacy-section">
+        <div className="privacy-section privSect2">
           <h4>10. Modifications to the Service and Terms</h4>
           <span>
             We may modify or update the Service, these Terms, or our pricing at
@@ -174,7 +179,7 @@ const TermsAndCondtions = () => {
             acceptance of the new Terms.
           </span>
         </div>
-        <div className="privacy-section">
+        <div className="privacy-section privSect2">
           <h4>11. Termination</h4>
           <span>
             You may terminate your account at any time by contacting us or
@@ -187,7 +192,7 @@ const TermsAndCondtions = () => {
             associated with your account may be deleted.
           </span>
         </div>
-        <div className="privacy-section">
+        <div className="privacy-section privSect2">
           <h4>12. Limitation of Liability</h4>
           <span>
             To the fullest extent permitted by law, the Company and its
@@ -202,7 +207,7 @@ const TermsAndCondtions = () => {
             preceding the claim.
           </span>
         </div>
-        <div className="privacy-section">
+        <div className="privacy-section privSect2">
           <h4>13. Indemnification</h4>
           <span>
             You agree to indemnify and hold harmless the Company, its
@@ -212,7 +217,7 @@ const TermsAndCondtions = () => {
             intellectual property or other rights of a third party.
           </span>
         </div>
-        <div className="privacy-section">
+        <div className="privacy-section privSect2">
           <h4>14. Governing Law and Dispute Resolution</h4>
           <span>
             These Terms are governed by the laws of Singapore, without regard to
@@ -223,7 +228,7 @@ const TermsAndCondtions = () => {
             may be entered in any court having jurisdiction.
           </span>
         </div>
-        <div className="privacy-section">
+        <div className="privacy-section privSect2">
           <h4>15. Force Majeure</h4>
           <span>
             We will not be liable for any failure or delay in the performance of
@@ -232,7 +237,7 @@ const TermsAndCondtions = () => {
             cyber-attacks, strikes, or governmental actions.
           </span>
         </div>
-        <div className="privacy-section">
+        <div className="privacy-section privSect2">
           <h4>16. Severability</h4>
           <span>
             If any provision of these Terms is found to be invalid or
@@ -240,7 +245,7 @@ const TermsAndCondtions = () => {
             and effect.
           </span>
         </div>
-        <div className="privacy-section">
+        <div className="privacy-section privSect2">
           <h4>17. Entire Agreement</h4>
           <span>
             These Terms, along with our Privacy Policy and any additional
@@ -249,7 +254,7 @@ const TermsAndCondtions = () => {
             Service and supersede any prior agreements.
           </span>
         </div>
-        <div className="privacy-section">
+        <div className="privacy-section privSect2">
           <h4>18. Contact Information</h4>
           <span>
             If you have any questions or concerns about these Terms, please

@@ -8,12 +8,30 @@
     src: url('../assets/WONO_images/img/fonts/ComicSansMS.ttf');
 }
 
+@font-face {
+    font-family: Popins-Regular;
+    src: url('../assets/WONO_images/img/fonts/Poppins-Regular.ttf');
+}
+
 .privacy-section {
     /* padding-bottom: 2rem; */
 }
 
 .privSect2 {
-    padding-bottom: 1rem;
+    /* padding-bottom: 1rem; */
+    padding-bottom: 0;
+    font-family: Popins-Regular;
+}
+
+.privSect2 h4 {
+    margin-bottom: 0;
+    font-family: Popins-Regular;
+}
+
+.privSect2 p {
+    font-size: 1rem;
+    margin-bottom: 1.8rem;
+    font-family: Popins-Regular;
 }
 
 .WONOBLUE {
@@ -64,6 +82,33 @@
         height: 23%; */
 }
 
+@media (min-width: 1025px) {
+
+    .paddingForTab {
+        padding-left: 7rem !important;
+        padding-right: 7rem !important;
+    }
+
+
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .paddingForTab {
+        padding-left: 3rem !important;
+        padding-right: 3rem !important;
+    }
+
+    /* .wono-text-spacing {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    } */
+
+    /* .privacy-container {
+        padding: 1.2rem;
+    } */
+}
+
 @media (max-width:768px) {
     .privacy-container {
         padding: 0.8rem;
@@ -94,5 +139,20 @@
     .wono-text-spacing {
         padding-left: 1rem;
         padding-right: 1rem;
+    }
+
+    .faq-title img {
+        position: absolute;
+        /* top: 105%; */
+        top: 64%;
+        left: 38.5%;
+        width: 20%;
+        height: 23%;
+
+        /* position: absolute;
+            top: 54%;
+            left: 36%;
+            width: 26%;
+            height: 23%; */
     }
 }

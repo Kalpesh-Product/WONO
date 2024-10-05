@@ -287,7 +287,7 @@ const LeadsPage = () => {
             <div className="container p-0">
               {/* <div className="row  border-bottom border-dark border-3 pb-5 bg-primary"> */}
               <div className="row w-100 theSpecialRow">
-                <div className="col-lg-10 ps-0">
+                <div className="col-lg-9 col-md-9 ps-0">
                   <p className="automatedPlatformFontSize automatedPlatformPadding mb-0">
                     Automated platform and our resources are FREE .. you pay
                     only if you start paid ads!
@@ -295,7 +295,7 @@ const LeadsPage = () => {
                 </div>
                 {/* <div className="col-lg-4"></div> */}
                 {/* <div className="col-lg-4 bg-danger"> */}
-                <div className="col-lg-2  d-flex justify-content-lg-end justify-content-md-end justify-content-center justify-content-sm-center align-items-center SpecialPaddingX pe-0">
+                <div className="col-lg-3 col-md-3  d-flex justify-content-lg-end justify-content-md-end justify-content-center justify-content-sm-center align-items-center SpecialPaddingX pe-0">
                   {/* <div className=""> */}
                   <button
                     // className="get-started-submit-button mb-0"
@@ -507,7 +507,7 @@ const LeadsPage = () => {
                 Never miss any leads generated from our platform.
               </h2>
             </div>
-            <div className="organic-leads-images-section  topSpaceBetweenSections">
+            <div className="organic-leads-images-section OOOO  topSpaceBetweenSections">
               <img
                 src={GoogleSheetsImagepng}
                 alt=""
@@ -644,7 +644,7 @@ const LeadsPage = () => {
           <hr className="hrStyling zeroHeight" />
         </div>
 
-        <div className="better-roi-section  wono-text-spacing fontPoppinsRegular topPaddingInsideSections bottomPaddingForSections ">
+        <div className="better-roi-section PPPP  wono-text-spacing fontPoppinsRegular topPaddingInsideSections bottomPaddingForSections ">
           {/* <div className="better-roi h-5  wono-text-spacing "> */}
           <div className="container paddingRight0">
             <div className="row ">
@@ -677,7 +677,7 @@ const LeadsPage = () => {
           <hr className="hrStyling zeroHeight" />
         </div>
 
-        <div className="complete-view-section h-5 wono-text-spacing fontPoppinsRegular topPaddingForSections bottomPaddingForSections">
+        <div className="complete-view-section PPPP h-5 wono-text-spacing fontPoppinsRegular topPaddingForSections bottomPaddingForSections">
           {" "}
           <div className="container pe-0">
             <div className="row invertDivs">
@@ -862,8 +862,9 @@ const LeadsPage = () => {
           </div>
         </div> */}
 
-        <div className="last-section  w-100 fontPoppinsRegular">
-          <div className="pt-5 customMargin pb-5">
+        <div className="last-section w-100 fontPoppinsRegular">
+          {/* <div className="pt-5 customMargin pb-5"> */}
+          <div className="bannerTopPadding customMargin bannerBottomPadding">
             <div className="grow-your-business-color w-100">
               <h2 className="m-0 fw-bold grow-your-business-text">
                 {/* <b className="leadsCtafontSize">

@@ -353,6 +353,20 @@
 /* Responsiveness of cards section */
 
 @media (max-width:1024px) {
+    .headingContainer{
+        height: 300px;
+        padding-right: 3rem;
+        padding-left: 3rem;
+        position: relative;
+    }
+    .connect-with-us-btn{
+        position: absolute;
+        right: 2rem;
+    }
+    .capital-cards-section{
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
     .capital-big-text {
         font-family: Popins-Regular;
         /* padding: 5% 4rem 5% 4rem; */
@@ -401,6 +415,9 @@
 
 
 
+    }
+    .cards-with-text h3{
+        font-size: 24px;
     }
 
 }
@@ -571,6 +588,24 @@
     }
 }
 
+@media (max-width:769px){
+    .headingContainer {
+        /* height: 350px; */
+        height: 300px;
+        position: relative;
+        padding: 4rem 0rem;
+
+
+    }
+
+    .connect-with-us-btn {
+        right: 50%;
+        align-items: flex-start;
+
+    }
+
+}
+
 @media (max-width:768px) {
     .capital-cards-section {
         overflow-x: auto;
@@ -593,6 +628,7 @@
         padding-left: 1rem;
         padding-right: 1rem; */
     }
+    
 
     .cards-with-text h3 {
         font-size: 15px;
@@ -601,6 +637,14 @@
     .connect-with-us-btn {
         right: 20%;
         align-items: flex-start;
+        /* position: absolute; /* Or relative depending on the container */
+    /* left: 0;
+    right: 0;
+   
+    
+    top: 50%; 
+     transform: translateY(-50%); 
+    width: 300px; */ 
 
     }
 
@@ -649,9 +693,14 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 300px;
+        width: 250px;
         font-size: 15px;
     }
+    .capital-start-for-free-btn
+    {
+        width: 150px;
+    }
+
 
     .big-end-dashboard-img {
         height: 16rem;
@@ -735,8 +784,11 @@
         justify-content: center;
         flex-direction: column;
         width: 100%;
-        padding: 4rem 1rem;
+        padding: 2rem 1rem;
         border-bottom: 1px solid rgba(13, 110, 253);
+
+    }
+    .frictionless-btns{
 
     }
 }
@@ -744,6 +796,6 @@
 @media (min-width: 2560px) {
     .capital-img {
         max-width: calc((100vw - 14rem) / 3);
-        /* Adjust this value based on how many images are displayed in a row */
+        
     }
 }

@@ -8,7 +8,7 @@ const Faqs = () => {
   return (
     <>
       {/* <div className="privacy-container wono-text-spacing pb-5 faq-title fontPoppinsRegular"> */}
-      <div className="privacy-container wono-text-spacing fontPoppinsRegular">
+      <div className="privacy-container wono-text-spacing FAQSpacing fontPoppinsRegular paddingForTab">
         {/* <h3 className="Title-font text-center faq-title ComicFont pb-5"> */}
         <h3 className="Title-font text-center pb-5 ComicFont faq-title">
           <img src={greenUnderLine} alt="" />
@@ -255,16 +255,15 @@ const Faqs = () => {
             could be mutually organised once the support team does the initial
             meeting with you.
           </p>
-
-          <p>
-            Can find the answer to any of your questions here? Please connect
-            with us via our{" "}
-            <Link className="WONOBLUE text-decoration-none" to="/contact">
-              Contact us
-            </Link>{" "}
-            page.{" "}
-          </p>
         </div>
+        <p>
+          Can find the answer to any of your questions here? Please connect with
+          us via our{" "}
+          <Link className="WONOBLUE text-decoration-none" to="/contact">
+            Contact us
+          </Link>{" "}
+          page.{" "}
+        </p>
       </div>
     </>
   );

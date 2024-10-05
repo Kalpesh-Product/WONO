@@ -13,7 +13,7 @@ const Jobdescription = ({ decodedTitle }) => {
                     <div>
                         {jobs.content.map((job, index) => (
                             <div key={index}>
-                                <br></br>
+                                
                                 <h1  className="m-b-2">{job.subtitle}</h1>
                                 
                                 
@@ -44,7 +44,7 @@ const Jobdescription = ({ decodedTitle }) => {
                 )
             }
             <hr style={{ marginTop: "20px" }}></hr>
-            <p style={{ marginBottom: "50px" }}>Please send in your Resume to <strong>Email : <Link to="mailto:hr@wono.co"> hr@wono.co </Link></strong>
+            <p >Please send in your Resume to <strong>Email : <Link to="mailto:hr@wono.co" style={{textDecoration:"none"}}> hr@wono.co </Link></strong>
                 if unable to apply now</p>
         </div>
     )

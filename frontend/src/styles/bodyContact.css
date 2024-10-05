@@ -36,6 +36,32 @@
 
 }
 
+@media (max-width: 1024px) {
+    div.map-container.wono-text-spacing {
+        padding-left: 3rem;
+        padding-right: 3rem;
+
+    }
+
+    .map-container {
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .wono-text-spacing {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+
+    section#contact.contact.wono-text-spacing {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+
+}
+
+
 .wono-text-spacing {
     padding-left: 7rem;
     padding-right: 7rem;

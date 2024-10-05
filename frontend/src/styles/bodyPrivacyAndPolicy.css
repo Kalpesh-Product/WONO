@@ -8,6 +8,59 @@
     src: url('../assets/WONO_images/img/fonts/ComicSansMS.ttf');
 }
 
+@font-face {
+    font-family: Popins-Regular;
+    src: url('../assets/WONO_images/img/fonts/Poppins-Regular.ttf');
+}
+
+.oneRemPaddingLeft {
+    padding-left: 1rem;
+}
+
+.privSect2 {
+    /* padding-bottom: 1rem; */
+    padding-bottom: 0;
+    font-family: Popins-Regular;
+}
+
+.privSect2 h4 {
+    margin-bottom: 0;
+    font-family: Popins-Regular;
+}
+
+.privSect2 p {
+    font-size: 1rem;
+    margin-bottom: 1.8rem;
+    font-family: Popins-Regular;
+}
+
+@media (min-width: 1025px) {
+
+    .paddingForTab {
+        padding-left: 7rem !important;
+        padding-right: 7rem !important;
+    }
+
+
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .paddingForTab {
+        padding-left: 3rem !important;
+        padding-right: 3rem !important;
+    }
+
+    /* .wono-text-spacing {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    } */
+
+    /* .privacy-container {
+        padding: 1.2rem;
+    } */
+}
+
 .WONOBLUE {
     color: #0AA9EF;
 }
@@ -108,6 +161,10 @@
     .wono-text-spacing {
         padding-left: 2rem;
         padding-right: 2rem;
+    }
+
+    .privacy-title {
+        font-size: 1.6rem;
     }
 }
 
