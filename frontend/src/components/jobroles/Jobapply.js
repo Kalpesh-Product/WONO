@@ -471,7 +471,7 @@ const Jobapply = ({ jobTitle, changeActiveTab }) => {
             </FormControl>
           </Grid>
 
-          <Grid item xs={12} sm={6}>
+          <Grid item xs={12} sm={12} md={6}>
             <TextField
               label="Relocate to Goa"
               variant="outlined"

@@ -27,11 +27,11 @@ const Jobrole = () => {
             <Accordion.Body style={{ border: "none" ,paddingBottom:"5px",paddingTop:"5px"}}>
 
               <div className='mob-down row' style={{display:"flex"}} >
-                <div className='col-lg-6 '>
+                <div className='col-lg-6 col-sm-6'>
                   <h5 classname="career-job-title" >1.UI Designer</h5>
 
                 </div>
-                <div className='col-lg-6 col-sm-12 text-button' style={{ textAlign: "right" }}>
+                <div className='col-lg-6 col-sm-6 text-button' style={{ textAlign: "right" }}>
                    <p style={{ fontWeight: "600", margin : 0}}>
                     <span className='link-btn'>Full-Time | On-Site| Goa </span>
 
@@ -48,11 +48,11 @@ const Jobrole = () => {
 
             <Accordion.Body style={{paddingTop:"5px"}}>
               <div className='mob-down row'style={{display:'flex'}}>
-                <div className='col-lg-6 '>
+                <div className='col-lg-6 col-sm-6'>
                   <h5 classname="career-job-title" > 2. Marketing Analytics</h5>
                   <span style={{ fontSize: "1rem" }}>(SEO/Google Analytics) </span>
                 </div>
-                <div className='col-lg-6 text-button 'style={{ textAlign: "right" }} >
+                <div className='col-lg-6 col-sm-6 text-button 'style={{ textAlign: "right" }} >
                    <p style={{ fontWeight: "600", margin : 0,paddingTop:"5px"}}>
                     <span className='link-btn'>Full-Time | On-Site| Goa </span>
                     <Link onClick={() => {
@@ -219,7 +219,7 @@ const Jobrole = () => {
             <hr></hr>
             <Accordion.Body>
               <div className='mob-down row' style={{display:"flex"}}>
-                <div className='col-lg-6 '>
+                <div className='col-lg-6 col-sm-6'>
                   <h5 classname="career-job-title" > 1. Social Media Executive</h5>
                 </div>
                 <div className='col-lg-6 col-sm-6  text-button' style={{ textAlign: "right" }}>
