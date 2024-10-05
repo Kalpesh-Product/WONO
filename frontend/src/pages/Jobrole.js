@@ -222,9 +222,9 @@ const Jobrole = () => {
                 <div className='col-lg-6 '>
                   <h5 classname="career-job-title" > 1. Social Media Executive</h5>
                 </div>
-                <div className='col-lg-6 text-button' style={{ textAlign: "right" }}>
-                   <p style={{ fontWeight: "600", margin : 0}}>
-                    <span className='link-btn'>Full-Time | On-Site| Goa </span>
+                <div className='col-lg-6 col-sm-6  text-button' style={{ textAlign: "right" }}>
+                   <p style={{ fontWeight: "500", margin : 0}} >
+                    <span className='link-btn '>Full-Time | On-Site| Goa </span>
                     <Link onClick={() => {
                       window.scrollTo({
                         top: 0, behavior: 'instant'

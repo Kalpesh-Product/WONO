@@ -134,7 +134,13 @@ const Jobapply = ({ jobTitle, changeActiveTab }) => {
       return;
     }
     if (formvalues.date === "") {
-      setShowMessage("Date is required");
+      setShowMessage("Date  of Birth is required");
+      setShowModal(true);
+      return;
+    }
+    if (formvalues.number === "")
+    {
+      setShowMessage("Mobile number is required");
       setShowModal(true);
       return;
     }
@@ -143,8 +149,8 @@ const Jobapply = ({ jobTitle, changeActiveTab }) => {
       setShowModal(true);
       return;
     }
-    if (formvalues.expectedSalary === "") {
-      setShowMessage("Expected salary is required");
+    if (formvalues.location === ""){
+      setShowMessage("State is required");
       setShowModal(true);
       return;
     }
@@ -153,13 +159,32 @@ const Jobapply = ({ jobTitle, changeActiveTab }) => {
       setShowModal(true);
       return;
     }
+    if(formvalues.linkedInProfile === ""){
+      setShowMessage("Linkedin Profile is required");
+      setShowModal(true);
+      return;
+    }
+
+    
     if (formvalues.monthlySalary === "") {
       setShowMessage("Monthly salary is required");
       setShowModal(true);
       return;
     }
-    if (formvalues.number === "") {
-      setShowMessage("Phone number is required");
+    if (formvalues.expectedSalary === "") {
+      setShowMessage(" Expected Monthly salary is required");
+      setShowModal(true);
+      return;
+    }
+    if (formvalues.daysToJoin === ""){
+      setShowMessage("Number of days to join is required");
+      setShowModal(true);
+      return;
+    }
+    
+    
+    if (formvalues.relocateGoa === "") {
+      setShowMessage("Relocation preference is required");
       setShowModal(true);
       return;
     }
@@ -168,21 +193,8 @@ const Jobapply = ({ jobTitle, changeActiveTab }) => {
       setShowModal(true);
       return;
     }
-    if (formvalues.relocateGoa === "") {
-      setShowMessage("Relocation preference is required");
-      setShowModal(true);
-      return;
-    }
-    if (formvalues.location === "") {
-      setShowMessage("Location is required");
-      setShowModal(true);
-      return;
-    }
-    if (!formvalues.resume || typeof formvalues.resume === "string") {  // Check if file input is missing or not properly formatted
-      setShowMessage("Resume file is required");
-      setShowModal(true);
-      return;
-    }
+   
+   
     if (formvalues.skills === "") {
       setShowMessage("Skills are required");
       setShowModal(true);
@@ -195,6 +207,16 @@ const Jobapply = ({ jobTitle, changeActiveTab }) => {
     }
     if (formvalues.willing === "") {
       setShowMessage("Willingness to relocate is required");
+      setShowModal(true);
+      return;
+    }
+    if (formvalues.message === "") {
+      setShowMessage("Willingness to relocate is required");
+      setShowModal(true);
+      return;
+    }
+    if (!formvalues.resume || typeof formvalues.resume === "string") {  // Check if file input is missing or not properly formatted
+      setShowMessage("Resume file is required");
       setShowModal(true);
       return;
     }
@@ -387,15 +409,25 @@ const Jobapply = ({ jobTitle, changeActiveTab }) => {
           </Grid>
 
           <Grid item md={6} xs={12}>
-            <TextField
+            <input
               type="file"
               name="resume"
-              inputProps={{ title: "Upload a Resume / CV" }}
-              variant="outlined"
-              fullWidth
+              style={{display:"none"}}
+              id="resume-upload"
+              
 
               onChange={handleGlobalChange}
             />
+             <label htmlFor="resume-upload">
+    <Button
+      variant="outlined"
+      component="span"
+      fullWidth
+      style={{ textAlign: 'left',color:"black" }} // Align text to the left
+    >
+      {formvalues.resume ? formvalues.resume.name : 'Upload a Resume / CV'}
+    </Button>
+  </label>
           </Grid>
 
           <Grid item md={6} xs={12}>
