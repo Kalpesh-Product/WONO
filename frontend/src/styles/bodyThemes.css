@@ -116,6 +116,7 @@
 .themePage-featured-content {
     width: 100%;
     margin-bottom: 2rem;
+    padding-left: 3rem;
 }
 
 .themePage-featured-content ul {
@@ -443,7 +444,7 @@
         display: flex;
         align-items: start;
         justify-content: center;
-        padding: 4rem;
+        padding: 4rem 3rem;
     }
 
     .themePage-featured-grid-1 {
@@ -451,11 +452,14 @@
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        padding-left: 6.5rem;
+        /* padding-left: 6.5rem; */
     }
 
     .themePage-featured-header {
         width: 100%;
+    }
+    .themePage-featured-content{
+        padding-left: 3rem;
     }
 
     .themePage-featured-header h1 {
@@ -644,7 +648,7 @@
 
     .themePage-featured-content {
         width: 100%;
-        /* padding-left: 3rem; */
+        padding-left: 3rem;
     }
 
     .themePage-featured-button {
@@ -898,7 +902,7 @@
 
     .themePage-featured-content {
         width: 100%;
-        /* padding-left: 3rem; */
+        padding-left: 2rem;
     }
 
     .themePage-featured-button {
