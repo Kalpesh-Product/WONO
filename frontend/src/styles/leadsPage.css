@@ -357,6 +357,10 @@
         .complete-view-section {
             padding: 3rem 4rem;
         }
+
+        .bannerPaddingSmall {
+            padding: 2rem 3rem !important;
+        }
     }
 
     /* MOBILE VIEW */
