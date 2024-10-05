@@ -176,39 +176,40 @@ const PrivacyAndPolicy = () => {
             Depending on your location, you may have the following rights
             regarding your personal information:
           </p>
-
-          <ul>
-            <li>
-              <span className="fw-bold">Right to Access:</span> You have the
-              right to request access to the personal information we hold about
-              you.
-            </li>
-            <li>
-              <span className="fw-bold">Right to Rectification:</span> You can
-              request corrections to any inaccurate or incomplete personal
-              information.
-            </li>
-            <li>
-              <span className="fw-bold">Right to Erasure:</span> You can request
-              that we delete your personal information under certain
-              circumstances.
-            </li>
-            <li>
-              <span className="fw-bold">Right to Restrict Processing:</span> You
-              may request that we limit the processing of your personal
-              information.
-            </li>
-            <li>
-              <span className="fw-bold">Right to Data Portability:</span> You
-              can request a copy of your personal information in a structured,
-              commonly used, and machine-readable format.
-            </li>
-            <li>
-              <span className="fw-bold">Right to Object:</span> You have the
-              right to object to our processing of your personal information
-              based on legitimate interests, including marketing activities.
-            </li>
-          </ul>
+          <div className="oneRemPaddingLeft">
+            <ul>
+              <li>
+                <span className="fw-bold">Right to Access:</span> You have the
+                right to request access to the personal information we hold
+                about you.
+              </li>
+              <li>
+                <span className="fw-bold">Right to Rectification:</span> You can
+                request corrections to any inaccurate or incomplete personal
+                information.
+              </li>
+              <li>
+                <span className="fw-bold">Right to Erasure:</span> You can
+                request that we delete your personal information under certain
+                circumstances.
+              </li>
+              <li>
+                <span className="fw-bold">Right to Restrict Processing:</span>{" "}
+                You may request that we limit the processing of your personal
+                information.
+              </li>
+              <li>
+                <span className="fw-bold">Right to Data Portability:</span> You
+                can request a copy of your personal information in a structured,
+                commonly used, and machine-readable format.
+              </li>
+              <li>
+                <span className="fw-bold">Right to Object:</span> You have the
+                right to object to our processing of your personal information
+                based on legitimate interests, including marketing activities.
+              </li>
+            </ul>
+          </div>
 
           <p>
             To exercise any of these rights, please contact us at [Email
