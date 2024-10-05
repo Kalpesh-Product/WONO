@@ -417,7 +417,7 @@
     }
 
     .product-page-build {
-        padding: 4rem;
+        padding: 2rem 3rem;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -466,7 +466,7 @@
 
     .product-page-grid {
         display: flex;
-        flex-direction: column-reverse;
+        flex-direction: column;
         gap: 2rem;
     }
 
@@ -684,6 +684,261 @@
 }
 
 @media (max-width:768px) {
+    .product-page-section {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: black;
+        padding: 0rem 0rem;
+    }
+
+    .product-page-master * {
+        font-family: Popins-Regular;
+    }
+
+    .product-page {
+        background-color: black;
+        color: white;
+        padding: 2rem 1rem;
+    }
+
+    .product-page * {
+        color: white;
+        font-family: Popins-Regular;
+    }
+
+    .product-page-grid {
+        display: grid;
+        grid-template-columns:1fr;
+        gap: 2rem;
+    }
+
+    .product-page-grid-item {
+        padding-left: 0.6rem;
+    }
+
+    .product-page-grid-item h1 {
+        text-transform: uppercase;
+        margin-bottom: 2rem;
+        font-weight: bold;
+        text-align: start;
+        font-size: 1.5rem;
+    }
+
+    .product-page-feature {
+        margin: 1rem 0 1rem 0;
+    }
+
+    .product-page-feature div {
+        margin: 1rem 0 1rem 0;
+
+    }
+
+    .product-page-features img {
+        padding-right: 1rem;
+    }
+
+    .product-page-image-mobile {
+        display: contents;
+    }
+
+    .product-page-features span {
+        font-size: 1rem;
+    }
+
+    .product-page-image-container {
+        width: 100%;
+        overflow: hidden;
+        padding: 0 1rem;
+    }
+
+    .product-page-image-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .product-page-update-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: rgb(129, 129, 129);
+        padding-right: 2rem;
+        text-align: center;
+    }
+
+    .product-page-update-text * {
+        color: rgb(129, 129, 129);
+        font-size: 0.7rem;
+    }
+
+    .product-page-button-space {
+        width: 100%;
+        text-align: center;
+    }
+
+    .product-page-button {
+        padding: 0.7rem 2rem;
+        background-color: white;
+        color: black;
+        border-radius: 30px;
+        width: 60%;
+        justify-content: space-around;
+        margin-bottom: 2rem;
+        margin-left: 2rem;
+    }
+
+
+
+    /* perks */
+    .product-page-perks-section {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .product-page-perks {
+        padding: 2rem 1.7rem;
+    }
+
+    .product-page-perks-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .product-page-perks-grid-1 {
+        display: flex;
+        align-items: start;
+        justify-content: start;
+    }
+
+    .product-page-perks-grid-1 span {
+        font-weight: bold;
+        font-size: 1.7rem;
+        padding-bottom: 2rem;
+    }
+
+    .product-page-perks-grid-2 {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .product-page-perks-grid-2-item-layout {
+        display: grid;
+        grid-template-columns: 10% 1fr;
+    }
+
+    .product-page-perks-grid-2-item-layout i {
+        height: 100%;
+        padding: 0.3rem 0rem 0 0rem;
+    }
+
+    .product-page-perks-description h4 {
+        margin-bottom: 1rem;
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+
+    .product-page-perks-description span {
+        font-size: 1rem;
+    }
+
+    .product-page-perks-description {
+        margin-bottom: 1rem;
+    }
+
+    .product-page-reccomendations-section {
+        background-color: rgb(233, 249, 255);
+    }
+
+    .product-page-reccomendations {
+        padding: 2rem 1.7rem;
+    }
+
+    .product-page-reccomendations-header h2 {
+        margin: 0;
+        font-weight: 600;
+        font-size: 1.8rem;
+    }
+
+    .product-page-reccomendations-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .product-page-reccomendations-grid-image {
+        width: 100%;
+        height: auto;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        overflow: hidden;
+    }
+
+    .product-page-reccomendations-grid-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: all 0.2s ease;
+    }
+
+    .product-page-reccomendations-grid-image img:hover {
+        transform: scale(1.2);
+    }
+
+    .product-page-reccomendations-header {
+        margin-bottom: 4rem;
+    }
+
+    .themes-view-button button {
+        width: 25% !important;
+        padding: 0.7rem 2rem;
+    }
+
+    .product-page-build-section {
+        background-color: #0093E9;
+    background-image: linear-gradient(0deg, #106df6, #aae5ff );
+    }
+
+    .product-page-build-section * {
+        color: black;
+    }
+
+    .product-page-build {
+        padding: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .product-page-build span {
+        font-size: 2rem;
+        padding: 0rem 0rem 2rem 0rem;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .product-page-build-button-space {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .product-page-build-button-space button {
+        background-color: black;
+        color: white;
+        border: none;
+        margin: 0 16px;
+        width: 25%;
+    }
+}
+@media (max-width:450px) {
     .product-page-section {
         height: 100%;
         display: flex;

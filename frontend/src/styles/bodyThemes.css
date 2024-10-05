@@ -276,7 +276,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 4rem 7rem;
+    padding: 2rem 3rem;
     background-color: #0093E9;
     background-image: linear-gradient(0deg, #106df6, #aae5ff );
 }
@@ -540,6 +540,81 @@
         padding: 0.5rem 1rem;
     }
 }
+@media (max-width:820px) {
+    .themePage-header {
+        padding: 2rem 2rem;
+    }
+    .themePage-content-header {
+        text-align: left;
+        padding: 4rem 2rem 0 2rem;
+        background-color: rgb(240, 240, 240);
+    }
+    .themePage-header h1 {
+        font-weight: bold;
+        font-size: 3rem;
+        margin-bottom: 2rem;
+    }
+    .themePage-content-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 2rem 2rem 4rem 2rem;
+        background-color: rgb(240, 240, 240);
+    }
+    .themePage-website-support-grid-1 span {
+        font-weight: bold;
+        border-bottom: 2px solid black;
+        transition: border 0.3s ease;
+        font-size: 1.4rem;
+    }
+    .themePage-website-features h1 {
+        font-size: 3.7rem;
+        margin-bottom: 4rem;
+    }
+    .themePage-website-features-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 4rem;
+        text-align: left;
+        /* margin-bottom: 4rem; */
+        margin-bottom: 2rem !important;
+    }
+    .themePage-website-support-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        vertical-align: middle;
+    }
+    .themePage-website-success h2 {
+        margin: 0;
+        font-size: 3rem;
+        font-weight: bold;
+        text-align: center;
+    }
+    .themePage-featured {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: start;
+        justify-content: center;
+        padding: 4rem 2rem;
+    }
+    .themePage-website-features {
+        display: flex;
+        align-items: start;
+        justify-content: center;
+        flex-direction: column;
+        padding: 4rem 2rem;
+        height: 100%;
+    }
+    .themePage-website-support-section {
+        padding: 4rem 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(233, 249, 255);
+    }
+}
 
 @media (max-width:768px) {
     .themePage-header {
@@ -653,7 +728,8 @@
 
     .themePage-featured-button {
         display: flex;
-        justify-content: center;
+        justify-content: start;
+        padding-left: 2rem;
     }
 
     .themePage-featured-grid-2 {
