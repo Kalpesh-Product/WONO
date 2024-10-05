@@ -11,6 +11,7 @@
   src: url('../assets/WONO_images/img/fonts/Poppins-SemiBold.ttf');
 }
 
+
 section {
   padding: 0;
   border: none;
@@ -110,7 +111,7 @@ section {
     font-size: 0.8rem;
   }
 }
-@media (max-width:426px) {
+@media (max-width:450px) {
   .register-master {
     padding: 2rem 0;
     border: none;

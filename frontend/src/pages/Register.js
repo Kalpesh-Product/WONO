@@ -565,7 +565,13 @@ const Register = () => {
                   <h2>Create company profile</h2>
                 </div>
                 <div className="register-container">
-                  <Container maxWidth="md w-50">
+                  <Container maxWidth="md"  sx={{
+                    width: {
+                      xs: '100%', // Full width on extra small screens (mobile)
+                      sm: '100%', // Full width on small screens
+                      md: '50%',   // 50% width on medium and larger screens
+                    },
+                  }}>
                     <Box component="form" sx={{ flexGrow: 1 }} noValidate autoComplete="off">
                       <Grid container spacing={2}>
 
