@@ -517,7 +517,7 @@ const LeadsPage = () => {
           </div>
         </div>
 
-        <div className="marketing-section  fontPoppinsRegular  topPaddingForSections bottomPaddingForSections">
+        <div className="marketing-section PPPP  fontPoppinsRegular  topPaddingForSections bottomPaddingForSections">
           <div className="marketing-header  ">
             {/* <div>
               <p className="mb-0">RUN & SCALE YOUR BUSINESS</p>
