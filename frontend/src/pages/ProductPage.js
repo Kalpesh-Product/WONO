@@ -4,19 +4,24 @@ import BiznestImage from "../assets/WONO_images/img/products-images/biznestImage
 import BiznestImageMockup from "../assets/WONO_images/img/website-builder/new-layout/mobile/mockups/biznest-mockup.webp";
 import BiznestImageOverlay from "../assets/WONO_images/img/products-images/biznestImage-overlay.png";
 import Cafe_2 from "../assets/WONO_images/img/website-builder/new-layout/cafe-2.webp";
+import Cafe2Mockup from "../assets/WONO_images/img/website-builder/new-layout/mobile/mockups/cafe-mockup-2.png";
 import Cafe_3 from "../assets/WONO_images/img/website-builder/new-layout/cafe-3.webp";
+import Cafe3Mockup from "../assets/WONO_images/img/website-builder/new-layout/mobile/mockups/cafe-mockup-3.png";
 import CoWorkingImage from "../assets/WONO_images/img/website-builder/new-layout/co-working.webp";
 import CoWorkingImageMockup from "../assets/WONO_images/img/website-builder/new-layout/mobile/mockups/co-working-mockup-bg.webp";
 import CoLivingImage from "../assets/WONO_images/img/website-builder/new-layout/co-living.webp";
 import CoLivingImageMockup from "../assets/WONO_images/img/website-builder/new-layout/mobile/mockups/co-living-mockup.webp";
 import CoWorkingImage_2 from "../assets/WONO_images/img/website-builder/new-layout/co-working-2.webp";
+import CoWorkingNomad from "../assets/WONO_images/img/website-builder/new-layout/mobile/mockups/co-living-nomad.png";
 import CoWorkingImage_3 from "../assets/WONO_images/img/website-builder/new-layout/co-working-3.webp";
+import CoWorkingImage_3_Mockup from "../assets/WONO_images/img/website-builder/new-layout/mobile/mockups/co-working-3.png";
 import Featured from "../assets/WONO_images/img/website-builder/new-layout/featured/featured-1.png";
 import Boutique from "../assets/WONO_images/img/website-builder/new-layout/boutique.webp";
 import BoutiqueMockup from "../assets/WONO_images/img/website-builder/new-layout/mobile/mockups/boutique-mockup.webp";
 import CoWorkingMewo from "../assets/WONO_images/img/website-builder/new-layout/co-working-mewo.webp";
 import CoWorkingMewoMockup from "../assets/WONO_images/img/website-builder/new-layout/mobile/mockups/co-working-mewo-mockup.webp";
 import Hostels from "../assets/WONO_images/img/website-builder/new-layout/hostels.png";
+import Hostels_mockup from "../assets/WONO_images/img/website-builder/new-layout/mobile/mockups/hostels.png";
 import TickmarkImg from "../assets/check.png";
 import blueTickmarkImg from "../assets/blue-tick-no-bg-15.png";
 import "../styles/bodyProduct.css";
@@ -101,11 +106,11 @@ const ProductPage = () => {
       alt: "Boutique Image",
       tag: "boutique",
     },
-    { src: CoWorkingImage_2, alt: "CoLivingImage_2", tag: "co-working" },
-    { src: CoWorkingImage_3, alt: "CoLivingImage_3", tag: "co-working" },
-    { src: Cafe_2, alt: "Cafe_2", tag: "cafe" },
-    { src: Cafe_3, alt: "Cafe_3", tag: "cafe" },
-    { src: Hostels, alt: "Hostels", tag: "hostels" },
+    { src: CoWorkingImage_2,mockup:CoWorkingNomad, alt: "CoLivingImage_2", tag: "co-working" },
+    { src: CoWorkingImage_3,mockup:CoWorkingImage_3_Mockup, alt: "CoLivingImage_3", tag: "co-working" },
+    { src: Cafe_2,mockup:Cafe2Mockup, alt: "Cafe_2", tag: "cafe" },
+    { src: Cafe_3,mockup: Cafe3Mockup, alt: "Cafe_3", tag: "cafe" },
+    { src: Hostels,mockup: Hostels_mockup, alt: "Hostels", tag: "hostels" },
   ];
 
   const navigate = useNavigate();

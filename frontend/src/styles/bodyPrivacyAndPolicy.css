@@ -13,6 +13,27 @@
     src: url('../assets/WONO_images/img/fonts/Poppins-Regular.ttf');
 }
 
+.oneRemPaddingLeft {
+    padding-left: 1rem;
+}
+
+.privSect2 {
+    /* padding-bottom: 1rem; */
+    padding-bottom: 0;
+    font-family: Popins-Regular;
+}
+
+.privSect2 h4 {
+    margin-bottom: 0;
+    font-family: Popins-Regular;
+}
+
+.privSect2 p {
+    font-size: 1rem;
+    margin-bottom: 1.8rem;
+    font-family: Popins-Regular;
+}
+
 @media (min-width: 1025px) {
 
     .paddingForTab {

@@ -368,7 +368,8 @@
     grid-template-columns: 27% 1fr;
     padding: 1rem;
     border-radius: 5px;
-    background-color: rgb(255, 255, 255);
+    /* background-color: rgb(255, 255, 255); */
+    background-color: #FFF;
     column-gap: 0.3rem;
 }
 

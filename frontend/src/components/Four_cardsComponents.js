@@ -85,12 +85,19 @@ const FourCardsComponents = () => {
         }
       },
       {
-        breakpoint: 425,
+        breakpoint: 450,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1
         }
-      }
+      },
+      {
+        breakpoint: 426,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      },
     ]
   };
 

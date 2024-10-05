@@ -791,7 +791,7 @@
         font-weight: bold;
     }
 }
-@media (max-width:426px) {
+@media (max-width:450px) {
     .themePage-header {
         margin-bottom: 2rem;
         padding: 2rem 1.7rem;
