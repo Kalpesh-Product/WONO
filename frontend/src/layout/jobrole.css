@@ -17,12 +17,11 @@
     transition: background-color ease 0.2s;
 }
 .jobrole-arrow:hover{
-    margin: 0 0 0 1rem;
-    font-weight: 600;
+    
     color: white;
     border: 2px solid white;
     padding: 8px;
-    border-radius: 7px;
+   
     background-color: black;
 }
 
@@ -38,12 +37,10 @@
         transition: background-color ease 0.2s;
     }
     .jobrole-arrow:hover{
-        margin: 0 0 0 4rem;
-        font-weight: 600;
+        
         color: white;
         border: 2px solid white;
-        padding: 8px;
-        border-radius: 7px;
+        
         background-color: black;
     }
 

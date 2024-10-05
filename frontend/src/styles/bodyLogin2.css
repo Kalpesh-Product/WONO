@@ -245,7 +245,7 @@
 /* TAB & MOBILE VIEW */
 /* Media query for phone view (max-width: 768px or smaller) */
 /* @media (max-width: 768px) { */
-@media (max-width: 1024px) {
+@media (max-width: 1020px) {
 
     /* img,
         div,
@@ -325,7 +325,7 @@
 }
 
 /* Screen height between 600px and 800px */
-@media (min-height: 900px) and (max-height: 1900px) {
+@media (min-height: 1365px) and (max-height: 1900px) {
     .loginTopPadding {
         /* padding-top: 8rem; */
         padding-top: 19rem;
@@ -334,6 +334,19 @@
     .loginBottomPadding {
         /* padding-bottom: 8rem; */
         padding-bottom: 19rem;
+    }
+}
+
+/* Screen height between 600px and 800px */
+@media (min-height: 900px) and (max-height: 1365px) {
+    .loginTopPadding {
+        /* padding-top: 8rem; */
+        padding-top: 10rem;
+    }
+
+    .loginBottomPadding {
+        /* padding-bottom: 8rem; */
+        padding-bottom: 10rem;
     }
 }
 
