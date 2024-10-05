@@ -21,6 +21,7 @@
 .privSect2 h4 {
     margin-bottom: 0;
     font-family: Popins-Regular;
+    font-weight: bold;
 }
 
 .privSect2 p {
@@ -117,4 +118,14 @@
     .terms-title {
         font-size: 1.6rem;
     }
+
+    .terms-title img {
+        position: absolute;
+        top: 62%;
+        left: 14%;
+        width: 70%;
+        height: 20%;
+    }
+
+
 }
