@@ -651,6 +651,7 @@
 
     .capital-big-text h1 {
         font-size: 25px;
+        text-align: justify;
 
     }
 
@@ -826,11 +827,9 @@
 @media (max-width:376px){
     .headingContainer {
         /* height: 350px; */
-        height: 300px;
+        height: 263px;
         position: relative;
-        padding: 4rem 0rem;
-
-
+        padding: 4rem 0rem 2rem;
     }
     .connect-with-us-btn {
         right: 18%;

@@ -136,6 +136,7 @@
     justify-content: start;
     align-items: start;
     width: 100%;
+    
 }
 
 .themePage-featured-button button {
@@ -144,6 +145,7 @@
     align-items: center;
     /* width: 100%; */
     margin-left: 0;
+
 }
 
 .themePage-featured-grid-2 {
@@ -991,6 +993,15 @@
     .themePage-featured-button {
         display: flex;
         justify-content: center;
+        padding : 2rem 0 0rem 0
+    }
+    .themePage-featured-button button{
+       
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* width: 100%; */
+        margin-left: 0;
     }
 
     .themePage-featured-grid-2 {

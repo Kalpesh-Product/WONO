@@ -25,16 +25,7 @@
     font-family: Popins-Regular;
 }
 
-@media (max-width: 768px) {
-    .map-container {
-        grid-template-columns: 1fr;
-    }
 
-    .address {
-        padding: 1rem 1rem 1rem 1rem;
-    }
-
-}
 
 @media (max-width: 1024px) {
     div.map-container.wono-text-spacing {
@@ -80,6 +71,38 @@
         padding-left: 7rem;
         padding-right: 7rem;
     }
+}
+
+@media (max-width: 768px) {
+    .map-container {
+        grid-template-columns: 1fr;
+    }
+
+    .address {
+        padding: 1rem 1rem 1rem 1rem;
+    }
+    div.map-container.wono-text-spacing {
+        padding-left: 1rem;
+        padding-right: 1rem;
+
+    }
+
+    .map-container {
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .wono-text-spacing {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    section#contact.contact.wono-text-spacing {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
 }
 
 /* Display mobile layout on smaller screens */

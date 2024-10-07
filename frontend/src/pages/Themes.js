@@ -127,7 +127,7 @@ const Themes = () => {
                 <img
                   onClick={() => {
                     navigate("/themes/products", { state: { image } });
-                    window.scrollTo({ top: 0, behavior: "smooth" });
+                    window.scrollTo({ top: 0, behavior: "instant" });
                   }}
                   src={image.src}
                   alt={image.alt}
@@ -155,7 +155,7 @@ const Themes = () => {
                     className="get-started-main-button"
                     onClick={() => {
                       navigate("/register");
-                      window.scrollTo({ top: 0, behavior: "smooth" });
+                      window.scrollTo({ top: 0, behavior: "instant" });
                     }}>
                     Get started
                   </button>
@@ -190,7 +190,7 @@ const Themes = () => {
                   className="get-started-main-button"
                   onClick={() => {
                     navigate("/register");
-                    window.scrollTo({ top: 0, behavior: "smooth" });
+                    window.scrollTo({ top: 0, behavior: "instant" });
                   }}>
                   Get started
                 </button>
@@ -225,7 +225,7 @@ const Themes = () => {
                   <span
                     onClick={() => {
                       navigate("/contact");
-                      window.scrollTo({ top: 0, behavior: "smooth" });
+                      window.scrollTo({ top: 0, behavior: "instant" });
                     }}>
                     Connect With us →
                   </span>
@@ -240,7 +240,7 @@ const Themes = () => {
                   <span
                     onClick={() => {
                       navigate("/saas");
-                      window.scrollTo({ top: 0, behavior: "smooth" });
+                      window.scrollTo({ top: 0, behavior: "instant" });
                     }}>
                     Browse all services →
                   </span>
@@ -253,12 +253,6 @@ const Themes = () => {
             <div className="themePage-website-success ">
               <h2>Tomorrow's success starts today</h2>
               <div
-                style={{
-                  padding: "2rem 0 0 0",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  width: "45%",
-                }}
                 className="themePage-featured-button">
                 <button
                   className="get-started-main-button"

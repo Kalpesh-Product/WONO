@@ -917,4 +917,8 @@
             padding-left: 2rem !important;
             padding-right: 2rem !important;
         }
+        .pFontAdjustment {
+            font-size: 1.2rem;
+            text-align: justify;
+        }
     }
