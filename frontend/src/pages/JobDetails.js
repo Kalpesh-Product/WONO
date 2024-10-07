@@ -26,8 +26,7 @@ const JobDetails = ({changeActiveTab}) => {
       <main id="main">
         <section
           id="get-started"
-          className="get-started section features section"
-          style={{ padding: "40px 0" }}>
+          className="get-started section features section job-details-main">
           <div className="container-jobDetails">
             <h1 style={{ fontWeight: "500", textAlign: "center" }}>
               {decodedTitle}

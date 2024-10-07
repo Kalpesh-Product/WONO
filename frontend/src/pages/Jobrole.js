@@ -26,20 +26,22 @@ const Jobrole = () => {
             <hr ></hr>
             <Accordion.Body style={{ border: "none" ,paddingBottom:"5px",paddingTop:"5px"}}>
 
-              <div className='mob-down row' style={{display:"flex"}} >
+              <div className='mob-down row' style={{display:"flex" , justifyContent:'space-between  '}} >
                 <div className='col-lg-6 col-sm-6'>
                   <h5 classname="career-job-title" >1.UI Designer</h5>
 
                 </div>
-                <div className='col-lg-6 col-sm-6 text-button' style={{ textAlign: "right" }}>
-                   <p style={{ fontWeight: "600", margin : 0}}>
-                    <span className='link-btn'>Full-Time | On-Site| Goa </span>
+                <div className='col-lg-6 col-sm-6 text-button' style={{display:"flex" , justifyContent:'space-between', textAlign: "right" }}>
+                   <p style={{ fontWeight: "600", margin : 0 ,display:"flex" , justifyContent:'flex-end',width:'100%'}}>
+                    <span style={{fontSize:'0.9rem'}} className='link-btn'>Full-Time | On-Site| Goa </span>
+                    <div style={{display:"flex" , justifyContent:'space-between', flexDirection:'row' }}>
 
                     <Link onClick={() => {
                       window.scrollTo({
                         top: 0, behavior: 'instant'
                       })
                     }} to={`/jobdetails/1/${encodeURIComponent('UI Designer')}`} ><i className='fa fa-cheveron-right jobrole-arrow'>&gt;</i></Link>
+                    </div>
                   </p>
                 </div>
               </div>
@@ -50,10 +52,10 @@ const Jobrole = () => {
               <div className='mob-down row'style={{display:'flex'}}>
                 <div className='col-lg-6 col-sm-6'>
                   <h5 classname="career-job-title" > 2. Marketing Analytics</h5>
-                  <span style={{ fontSize: "1rem" }}>(SEO/Google Analytics) </span>
+                  <span style={{ fontSize: "0.9rem" }}>(SEO/Google Analytics) </span>
                 </div>
-                <div className='col-lg-6 col-sm-6 text-button 'style={{ textAlign: "right" }} >
-                   <p style={{ fontWeight: "600", margin : 0,paddingTop:"5px"}}>
+                <div className='col-lg-6 col-sm-6 text-button' style={{ textAlign: "right",display:"flex" , justifyContent:'space-between',}} >
+                   <p style={{ fontWeight: "600", margin : 0,paddingTop:"5px",display:"flex" , justifyContent:'flex-end',width:'100%'}}>
                     <span className='link-btn'>Full-Time | On-Site| Goa </span>
                     <Link onClick={() => {
                       window.scrollTo({
@@ -74,8 +76,8 @@ const Jobrole = () => {
                 <div className='col-lg-6 col-sm-6 '>
                   <h5 classname="career-job-title" > 1. Jr. UI/UX Developer</h5>
                 </div>
-                <div className='col-lg-6 col-sm-6 text-button' style={{ textAlign: "right" }}>
-                   <p style={{ fontWeight: "600", margin : 0}}>
+                <div className='col-lg-6 col-sm-6 text-button' style={{ textAlign: "right" ,display:"flex" , justifyContent:'space-between',}}>
+                   <p style={{ fontWeight: "600", margin : 0,display:"flex" , justifyContent:'flex-end',width:'100%'}}>
                     <span className='link-btn'>Full-Time | On-Site| Goa </span>
                     <Link onClick={() => {
                       window.scrollTo({
@@ -91,13 +93,13 @@ const Jobrole = () => {
             
             <Accordion.Body style={{paddingTop:"15px"}}>
 
-              <div className='mob-down row' style={{display:"flex"}}>
+              <div className='mob-down row' style={{display:"flex",}}>
                 <div className='col-lg-6 col-sm-6'>
 
                   <h5 classname="career-job-title" > 2. PHP Developer</h5>
                 </div>
-                <div className='col-lg-6 col-sm-6 text-button' style={{ textAlign: "right" }}>
-                   <p style={{ fontWeight: "600", margin : 0}}>
+                <div className='col-lg-6 col-sm-6 text-button' style={{ textAlign: "right",display:"flex" , justifyContent:'space-between', }}>
+                   <p style={{ fontWeight: "600", margin : 0,display:"flex" , justifyContent:'flex-end',width:'100%'}}>
                     <span className='link-btn'>Full-Time | On-Site| Goa </span>
                     <Link onClick={() => {
                       window.scrollTo({
@@ -114,8 +116,8 @@ const Jobrole = () => {
                 <div className='col-lg-6 col-sm-6'>
                   <h5 classname="career-job-title" > 3. Web Developer Intern</h5>
                 </div>
-                <div className='col-lg-6 col-sm-6 text-button' style={{ textAlign: "right" }}>
-                   <p style={{ fontWeight: "600", margin : 0}}>
+                <div className='col-lg-6 col-sm-6 text-button' style={{ textAlign: "right",display:"flex" , justifyContent:'space-between' }}>
+                   <p style={{ fontWeight: "600", margin : 0,display:"flex" , justifyContent:'flex-end',width:'100%'}}>
                     <span className='link-btn'>Full-Time | On-Site| Goa </span>
                     <Link onClick={() => {
                       window.scrollTo({
@@ -136,8 +138,8 @@ const Jobrole = () => {
                 <div className='col-lg-6 col-sm-6'>
                   <h5 classname="career-job-title" > 1. Finance Intern</h5>
                 </div>
-                <div className='col-lg-6 col-sm-6 text-button' style={{ textAlign: "right" }}>
-                   <p style={{ fontWeight: "600", margin : 0}}>
+                <div className='col-lg-6 col-sm-6 text-button' style={{ textAlign: "right" ,display:"flex" , justifyContent:'space-between'}}>
+                   <p style={{ fontWeight: "600", margin : 0,display:"flex" , justifyContent:'flex-end',width:'100%'}}>
                     <span className='link-btn'>Full-Time | On-Site| Goa </span>
                     <Link onClick={() => {
                       window.scrollTo({
@@ -159,8 +161,8 @@ const Jobrole = () => {
                 <div className='col-lg-6 col-sm-6'>
                   <h5 classname="career-job-title" > 1. HR Generalist</h5>
                 </div>
-                <div className='col-lg-6 col-sm-6 text-button' style={{ textAlign: "right" }}>
-                   <p style={{ fontWeight: "600", margin : 0}}>
+                <div className='col-lg-6 col-sm-6 text-button' style={{ textAlign: "right",display:"flex" , justifyContent:'space-between' }}>
+                   <p style={{ fontWeight: "600", margin : 0,display:"flex" , justifyContent:'flex-end',width:'100%'}}>
                     <span className='link-btn'>Full-Time | On-Site| Goa </span>
                     <Link onClick={() => {
                       window.scrollTo({
@@ -178,8 +180,8 @@ const Jobrole = () => {
                 <div className='col-lg-6 col-sm-6'>
                   <h5 classname="career-job-title" > 2. Executive Assistant to CEO</h5>
                 </div>
-                <div className='col-lg-6 col-sm-6 text-button' style={{ textAlign: "right" }}>
-                   <p style={{ fontWeight: "600", margin : 0}}>
+                <div className='col-lg-6 col-sm-6 text-button' style={{ textAlign: "right",display:"flex" , justifyContent:'space-between' }}>
+                   <p style={{ fontWeight: "600", margin : 0,display:"flex" , justifyContent:'flex-end',width:'100%'}}>
                     <span className='link-btn'>Full-Time | On-Site| Goa </span>
                     <Link onClick={() => {
                       window.scrollTo({
@@ -200,8 +202,8 @@ const Jobrole = () => {
                 <div className='col-lg-6 col-sm-6'>
                   <h5 classname="career-job-title" > 1. Sr.Manager Sales & Bussiness Development </h5>
                 </div>
-                <div className='col-lg-6 col-sm-6 text-button' style={{ textAlign: "right" }}>
-                   <p style={{ fontWeight: "600", margin : 0}}>
+                <div className='col-lg-6 col-sm-6 text-button' style={{ textAlign: "right",display:"flex" , justifyContent:'space-between' }}>
+                   <p style={{ fontWeight: "600", margin : 0,display:"flex" , justifyContent:'flex-end',width:'100%'}}>
                     <span className='link-btn'>Full-Time | On-Site| Goa </span>
                     <Link onClick={() => {
                       window.scrollTo({
@@ -222,8 +224,8 @@ const Jobrole = () => {
                 <div className='col-lg-6 col-sm-6'>
                   <h5 classname="career-job-title" > 1. Social Media Executive</h5>
                 </div>
-                <div className='col-lg-6 col-sm-6  text-button' style={{ textAlign: "right" }}>
-                   <p style={{ fontWeight: "500", margin : 0}} >
+                <div className='col-lg-6 col-sm-6  text-button' style={{ textAlign: "right" ,display:"flex" , justifyContent:'space-between'}}>
+                   <p style={{ fontWeight: "500", margin : 0,display:"flex" , justifyContent:'flex-end',width:'100%'}} >
                     <span className='link-btn '>Full-Time | On-Site| Goa </span>
                     <Link onClick={() => {
                       window.scrollTo({

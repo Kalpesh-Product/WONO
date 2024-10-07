@@ -2,6 +2,11 @@ section {
   overflow: hidden;
 }
 
+
+.job-details-main{
+  padding: 40px 0;
+}
+
 .features .nav-tabs {
   border: 0;
 }
@@ -83,6 +88,12 @@ form .apply-form-btn {
 }
 ul{
   padding-left: 0;
+}
+
+@media (min-width:2550px) {
+  .job-details-main{
+    padding: 9rem 0 14rem;
+  }
 }
 
 @media (max-width:768px) {

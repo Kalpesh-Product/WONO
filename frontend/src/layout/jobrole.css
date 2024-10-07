@@ -24,6 +24,9 @@
    
     background-color: black;
 }
+.link-btn{
+    font-size: 0.9rem;
+}
 
 
 @media (max-width: 768px) {
@@ -96,6 +99,10 @@
 }
 @media (max-width:768px) and (min-width:414px)
 {
+    .text-button > p{
+        display: flex;
+        justify-content: space-between !important;
+    }
     /* .text-button{
         text-align: left !important;
     } */
@@ -104,6 +111,10 @@
 }
 @media only screen and (max-width:920px) and (min-width:768px)
 {
+    .text-button > p{
+        display: flex;
+        justify-content: flex-end !important;
+    }
     /* .text-button{
         text-align: left !important;
     }
@@ -118,6 +129,10 @@
     .text-button{
         text-align: right !important;
     }
+    .text-button > p{
+        display: flex;
+        justify-content: flex-end !important;
+    }
     .link-btn{
         text-align: left !important;
     }
@@ -125,6 +140,10 @@
 }
 @media (max-width:414px)
 {
+    .text-button > p{
+        display: flex;
+        justify-content: space-between !important;
+    }
     /* .text-button{
         text-align: right !important;
     } */
@@ -135,6 +154,10 @@
 }
 
 @media only screen and (min-device-width: 414px) and (max-device-width: 425px){
+    .text-button > p{
+        display: flex;
+        justify-content: space-between !important;
+    }
     .link-btn{
         text-align: left !important;
     }
@@ -149,11 +172,19 @@
     }
 }
 @media only screen and (min-device-width: 374px) and (max-device-width: 413px){
+    .text-button > p{
+        display: flex;
+        justify-content: space-between !important;
+    }
+    
+
     .link-btn{
         text-align: left !important;
+        align-items: center;
+        display: flex;
     }
     .jobrole-arrow{
-        margin: 0 0 0 2rem;
+        margin: 0 0 0 0rem;
         font-weight: 600;
         color: #52565e;
         border: 2px solid #52565e;

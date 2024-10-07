@@ -54,11 +54,29 @@ const FourCardsComponents = () => {
     dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 4, // Adjust for how many cards to show at once
+    slidesToShow: 5, // Adjust for how many cards to show at once
     prevArrow: <PrevArrow />, // Custom previous arrow
     nextArrow: <NextArrow />, // Custom next arrow
     slidesToScroll: 1,
     responsive: [
+      {
+        breakpoint: 2600,
+        settings: {
+          slidesToShow: 5,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 1920,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true
+        }
+      },
       {
         breakpoint: 1440,
         settings: {
@@ -139,8 +157,8 @@ const FourCardsComponents = () => {
         <span
           style={{ cursor: "pointer" }}
           onClick={() => {
-            navigate("/services");
-            window.scrollTo({ top: 0, behavior: "smooth" });
+            navigate("/saas");
+            window.scrollTo({ top: 0, behavior: "instant" });
           }}
           className="key-features-link">
           View more

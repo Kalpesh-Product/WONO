@@ -153,27 +153,27 @@ button.slick-next.slick-arrow::before {
 
 
 /* for 4k screen */
-@media (min-width: 2550px) {
+@media (min-width: 2500px) {
   .card_1 {
     background-color: #fff;
     border-radius: 10px;
     height: 22.125rem;
-    margin: 0.5rem 143px;
+    margin: 0.5rem 91px;
     padding: 30px 20px;
-    width: 270px !important;
+    width: 288px !important;
   }
 }
 
 /* below 4k screen  */
 
-@media (max-width: 2548px) {
+@media (max-width: 2499px) {
   .card_1 {
     background-color: #fff;
     border-radius: 10px;
-    height: 20.125rem;
-    margin: 0.5rem 12px;
+    height: 321px;
+    margin: 0.5rem 23px;
     padding: 30px 20px;
-    width: 284px !important;
+    width: 266px !important;
   }
 }
 
@@ -271,7 +271,7 @@ button.slick-next.slick-arrow::before {
 @media (max-width:768px) {
   .four-cards-parent {
     margin: 0;
-    padding: 2rem 1rem;
+    padding: 2rem 2rem;
     background-color: #fdfdfd;
     height: 100%;
     overflow: hidden;
@@ -337,7 +337,7 @@ button.slick-next.slick-arrow::before {
     margin-right: 43px;
   }
 }
-@media (max-width:426px) {
+@media (max-width:376px) {
   .four-cards-parent {
     margin: 0;
     padding: 2rem 1rem;
