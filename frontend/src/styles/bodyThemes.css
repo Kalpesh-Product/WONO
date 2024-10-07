@@ -276,7 +276,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 2rem 3rem;
+    padding: 4rem 3rem;
     background-color: #0093E9;
     background-image: linear-gradient(0deg, #106df6, #aae5ff );
 }
@@ -338,8 +338,9 @@
 
     .themePage-website-success h2 {
         margin: 0;
-        font-size: 8.9rem;
+        font-size: 7.6rem;
         font-weight: bold;
+        text-transform: uppercase;
     }
 
     .themePage-website-features h1 {
@@ -425,7 +426,7 @@
 
     .themePage-content-grid {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
         gap: 2rem;
         padding: 2rem 4rem 4rem 4rem;
         background-color: rgb(240, 240, 240);
@@ -466,7 +467,7 @@
         font-size: 4rem;
         text-align: left;
         padding-right: 0rem;
-        margin: 2rem 0;
+        margin: 0rem 0;
     }
 
     .themePage-featured-grid-2 img {
@@ -493,11 +494,17 @@
 
     .themePage-website-features-grid {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         column-gap: 4rem;
+        row-gap: 2rem;
         text-align: left;
         /* margin-bottom: 4rem; */
         margin-bottom: 2rem !important;
+    }
+    .themePage-website-support-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 2 items per row */
+        gap: 2rem;
     }
 
     .themePage-website-support-grid-1 h2 {
@@ -587,7 +594,7 @@
     }
     .themePage-website-success h2 {
         margin: 0;
-        font-size: 3rem;
+        font-size: 2.5rem;
         font-weight: bold;
         text-align: center;
     }
@@ -759,7 +766,7 @@
 
     .themePage-website-features-grid {
         display: grid;
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
         gap: 1rem;
         text-align: start;
         margin-bottom: 0 !important;
@@ -867,7 +874,7 @@
 
     .themePage-website-success h2 {
         margin: 0;
-        font-size: 2rem;
+        font-size: 2.3rem;
         font-weight: bold;
     }
 }

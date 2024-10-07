@@ -87,6 +87,13 @@ section {
   padding-left: 1rem;
 }
 
+@media (min-width:2550px) {
+  .register-master {
+    padding: 16rem 0 20rem;
+    border: none;
+   }
+}
+
 
 
 @media (max-width:1024px) {

@@ -565,7 +565,7 @@
     }
 
     .capital-last-button-section h2 {
-        font-size: 25px;
+        font-size: 3.6rem;
         padding-bottom: 0;
         margin-bottom: 1rem;
     }
@@ -760,7 +760,7 @@
     }
 
     .capital-last-button-section h2 {
-        font-size: 2rem;
+        font-size: 3.4rem;
         padding-bottom: 0;
         /* margin-bottom: 1rem; */
     }
@@ -801,6 +801,25 @@
         right: 20%;
         align-items: flex-start;
         
+    }
+    
+    .capital-last-button-section {
+        position: relative;
+        background-color: #0093E9;
+        background-image: linear-gradient(0deg, #106df6, #aae5ff);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        padding: 2rem 1rem;
+        border-bottom: 1px solid rgba(13, 110, 253);
+
+    }
+    .capital-last-button-section h2 {
+        font-size: 2rem;
+        padding-bottom: 0;
+        /* margin-bottom: 1rem; */
     }
 }
 

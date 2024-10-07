@@ -814,7 +814,7 @@
 .N-Commerce>h3>strong {
     display: flex;
     font-family: Bebas-Regular;
-    font-size: 8.5rem;
+    font-size: 9.6rem;
     color: #fff;
     font-weight: 600;
     width: 100%;
@@ -853,6 +853,19 @@
     color: #0875e2;
     transition: 1s;
 
+}
+@media (max-width:1440px) {
+    .N-Commerce>h3>strong {
+        display: flex;
+        font-family: Bebas-Regular;
+        font-size: 8rem;
+        color: #fff;
+        font-weight: 600;
+        width: 100%;
+        margin-top: 0;
+        text-align: center;
+        line-height: 90%;
+    }
 }
 
 
@@ -1654,7 +1667,7 @@
 
     .website-panel-content {
         display: grid;
-        grid-template-columns: 50% 1fr;
+        grid-template-columns:1fr;
         padding: 2rem 0;
         gap: 2rem;
 

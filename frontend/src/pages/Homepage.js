@@ -245,7 +245,7 @@ const Homepage = () => {
           </div>
           <div className="N-Commerce">
             <h3>
-              <strong>INTRODUCING N-COMMERCE</strong>
+              <strong>INTRODUCING<br/>N-COMMERCE</strong>
             </h3>
             <p> ( “NOMAD COMMERCE” ) </p>
             <div
@@ -461,7 +461,7 @@ const Homepage = () => {
             {/* <div className="container border-top border-dark border-2"> */}
             <div className="container p-0 ">
               <div className="row ">
-                <div className="col-lg-7 d-flex flex-column  p-0 ms-0">
+                <div className="col-lg-7 d-flex flex-column justify-content-between  p-0 ms-0">
                   <div className=" ">
                     {/* <h4 className="bg-danger testimonial-right-spacing"> */}
                     <h3 className="testimonial-right-spacing">

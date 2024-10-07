@@ -246,7 +246,7 @@ const ProductPage = () => {
         <div className="product-page-build-section">
           <div className="product-page-build">
             <span>
-              Build fast, sell more and grow more revenues immediately with WoNo
+              BUILD FAST, SELL MORE AND GROW MORE REVENUES IMMEDIATELY WITH WoNo
             </span>
             <div className="product-page-build-button-space">
               <button onClick={() => {

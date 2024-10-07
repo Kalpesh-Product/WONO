@@ -364,21 +364,21 @@
 } */
 
 .business-service-card {
-    display: grid;
-    grid-template-columns: 27% 1fr;
+    display: flex;
+    align-items: center; /* Vertically center the content */
     padding: 1rem;
     border-radius: 5px;
-    /* background-color: rgb(255, 255, 255); */
     background-color: #FFF;
-    column-gap: 0.3rem;
+    column-gap: 1.5rem; /* Space between the image and content */
 }
 
 
+.business-service-card-image {
+    flex: 0 0 15%; /* Fixed width for the image section, 27% of the card width */
+}
+
 .business-service-card-content {
-    display: flex;
-    align-items: start;
-    justify-content: center;
-    flex-direction: column;
+    flex: 1; /* The content section takes up the remaining space */
 }
 
 .business-service-card-content h4 {
@@ -456,30 +456,41 @@
 
 @media (min-width: 2550px) {
     .business-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
         width: 100%;
-        margin: 4rem 0 4rem 0;
+        margin: 2rem 0;
         padding: 0;
-        column-gap: 40rem;
-        row-gap: 3rem;
+        column-gap: 5rem;
+    }
+    .business-grid > div {
+        flex: 1 1 calc(33.33% - 4rem); /* Each item takes up 33.33% of the width with spacing */
+        margin-bottom: 2rem; /* To add space between rows */
+    }
+    .business-service-card-image {
+        flex: 0 0 11%; /* Fixed width for the image section, 27% of the card width */
     }
 
     .SaaS-last-banner h2 {
         font-family: Popins-Semibold;
-        font-size: 9.5rem;
+        font-size: 8rem;
     }
 }
 
 @media (max-width: 2548px) {
     .business-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
         width: 100%;
-        margin: 2rem 0 2rem 0;
+        margin: 2rem 0;
         padding: 0;
-        column-gap: 4rem;
-        row-gap: 2rem;
+        column-gap: 2rem;
+    }
+    .business-grid > div {
+        flex: 1 1 calc(33.33% - 4rem); /* Each item takes up 33.33% of the width with spacing */
+        margin-bottom: 2rem; /* To add space between rows */
     }
 
     .SaaS-last-banner h2 {
@@ -536,17 +547,17 @@
 
     .business-grid {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         width: 100%;
         margin: 4rem 0 4rem 0;
         padding: 0;
-        column-gap: 2rem;
+        column-gap: 8rem;
         row-gap: 3rem;
     }
 
     .business-service-card {
         display: grid;
-        grid-template-columns: 26% 1fr;
+        grid-template-columns: 18% 1fr;
         /* background-color: rgb(247, 247, 247); */
         background-color: #FFF;
         padding: 1rem;
@@ -584,7 +595,7 @@
         padding: 2rem 0;
         background-color: #0093E9;
         background-image: linear-gradient(0deg, #106df6, #aae5ff);
-        width: calc(100% + 15rem);
+        width: calc(100% + 11.5rem);
         margin: 0 -7.5rem;
         text-align: center;
         text-transform: uppercase;
@@ -842,7 +853,7 @@
 
     .SaaS-last-banner h2 {
         font-family: Popins-Semibold;
-        font-size: 2rem;
+        font-size: 2.4rem;
     }
 
 
@@ -1159,7 +1170,7 @@
 
     .SaaS-last-banner h2 {
         font-family: Popins-Semibold;
-        font-size: 2rem;
+        font-size: 2.4rem;
     }
 
 
