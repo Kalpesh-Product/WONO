@@ -70,7 +70,7 @@
     justify-content: center;
     flex-direction: column;
     background-color: #0093E9;
-    background-image: linear-gradient(0deg, #106df6, #aae5ff );
+    background-image: linear-gradient(0deg, #106df6, #aae5ff);
     width: 100%;
     text-align: center;
     padding: 5rem;
@@ -93,6 +93,7 @@
     padding: 4rem 4.7rem 4rem 6.8rem;
     width: 100%;
 }
+
 .testimonial-right-spacing {
     padding-right: 4rem;
     padding-bottom: 10rem;
@@ -141,6 +142,7 @@
     .body-partners-master {
         background-color: rgb(255, 255, 255);
         padding-left: 4.5rem;
+        /* padding-left: 1.5rem; */
     }
 
     .grow-your-business-color h2 {
@@ -157,6 +159,12 @@
         width: 100%;
         height: 75%;
         object-fit: cover;
+    }
+
+    .body-partners-master {
+        background-color: rgb(255, 255, 255);
+        /* padding-left: 4.5rem; */
+        padding-left: 1.5rem;
     }
     .grow-your-business-color h2 {
         font-size: 4rem;
@@ -260,11 +268,13 @@
 .full-width-image {
     width: 100%;
 }
+
 .custom-image-biznest-container {
     height: 100%;
 
 }
-.custom-image-biznest-container img{
+
+.custom-image-biznest-container img {
     width: 75%;
     height: 75%;
     object-fit: cover;
@@ -282,11 +292,24 @@
         object-fit: cover;
         object-position: left;
     }
-    .custom-image-biznest-container img{
+
+    .custom-image-biznest-container img {
         width: 100%;
         height: 75%;
         object-fit: cover;
-    
+
+    }
+
+
+}
+
+@media (min-width: 769px) and (max-width: 821px) {
+    .customMargin_top {
+        padding: 2rem 1rem;
+    }
+
+    .customMargin_bottom {
+        padding: 2rem 1rem;
     }
     .testimonial-right-spacing {
         padding-right: 0rem;
@@ -327,10 +350,12 @@
         background-color: rgb(255, 255, 255);
         padding-left: 2rem;
     }
+
     .testimonial-right-spacing {
         padding-right: 0rem;
         padding-bottom: 4rem;
     }
+
     .custom-image-biznest {
         width: 100%;
         /* Image will take up the full width of its container */
@@ -339,14 +364,16 @@
         /* Maintains the image's aspect ratio */
         border-radius: 10px;
     }
-    .custom-image-biznest-container img{
+
+    .custom-image-biznest-container img {
         width: 100%;
         height: 75%;
         object-fit: cover;
-    
+
     }
 
 }
+
 @media (max-width:425px) {
     .custom-image-biznest {
         width: 100%;
@@ -356,15 +383,16 @@
         /* Maintains the image's aspect ratio */
         border-radius: 10px;
     }
-    .custom-image-biznest-container img{
+
+    .custom-image-biznest-container img {
         width: 100%;
         height: 75%;
         object-fit: cover;
-    
+
     }
+
     .testimonial-right-spacing {
         padding-right: 0rem;
         padding-bottom: 2rem;
     }
 }
-
