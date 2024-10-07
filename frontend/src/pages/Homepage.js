@@ -480,7 +480,7 @@ const Homepage = () => {
                       a div
                     </div>
                   </div> */}
-                  <div className="">
+                  <div className="testimonial-contact">
                     <h4 className="my-2">Kashif Shaikh</h4>
                     <p className="m-0">Co-founder & COO</p>
                     <p>BIZ Nest, Goa India </p>
@@ -499,9 +499,9 @@ const Homepage = () => {
           </div>
         </div>
 
-        <div className="last-section  w-100 ">
+        <div className="last-section   w-100 ">
           <div className="home-last-banner">
-            <div className="grow-your-business-color">
+            <div className="grow-your-business-color grow-your-business-section">
               <h2>
                 <b>GROW YOUR BUSINESS WITH US</b>
               </h2>

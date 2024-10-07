@@ -109,6 +109,13 @@
     .testimonial-right-spacing {
         padding-right: 4rem;
         padding-bottom: 10rem;
+        font-size: 3rem;
+    }
+    .testimonial-contact h4{
+        font-size: 3rem;
+    }
+    .testimonial-contact{
+        font-size: 2rem;
     }
 }
 
@@ -145,12 +152,8 @@
         /* padding-left: 1.5rem; */
     }
 
-    .grow-your-business-color h2 {
-        font-size: 4.9rem;
-    }
-
-    .grow-your-business-color p {
-        font-size: 1.75rem;
+    .grow-your-business-section h2{
+        font-size: 3.8rem !important;
     }
 }
 
@@ -185,6 +188,7 @@
     .testimonial-right-spacing {
         padding-right: 4rem;
     }
+
 
 }
 
@@ -299,11 +303,14 @@
         object-fit: cover;
 
     }
+    .grow-your-business-section h2{
+        font-size: 3.8rem !important;
+    }
 
 
 }
 
-@media (min-width: 769px) and (max-width: 821px) {
+@media  (max-width: 821px) {
     .customMargin_top {
         padding: 2rem 1rem;
     }
@@ -315,6 +322,10 @@
         padding-right: 0rem;
         padding-bottom: 8rem;
     }
+    .grow-your-business-section h2 {
+        font-size: 3.1rem !important;
+    }
+
 }
 
 
@@ -371,6 +382,11 @@
         object-fit: cover;
 
     }
+
+    .grow-your-business-section h2 {
+        font-size: 2.9rem !important;
+    }
+    
 
 }
 

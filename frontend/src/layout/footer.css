@@ -11,6 +11,7 @@ footer {
   display: flex;
   justify-content: space-between;
   padding: 0 7rem;
+  column-gap: 2rem;
 }
 
 .footer-container a {

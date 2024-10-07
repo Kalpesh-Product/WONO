@@ -78,8 +78,7 @@ const JobDetails = ({changeActiveTab}) => {
               {/* Apply Form */}
               <div className="tab-pane" id="tab-2" role="tabpanel">
                 <div className="row">
-                  <div className="col-lg-2"></div>
-                  <div className="col-lg-8 d-flex flex-column justify-content-center">
+                  <div className="col-lg-12 d-flex flex-column justify-content-center">
                     <Jobapply jobTitle={title} changeActiveTab={changeActiveTab}></Jobapply>
                   </div>
                 </div>

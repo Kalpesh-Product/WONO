@@ -262,7 +262,7 @@ const TermsAndCondtions = () => {
           </span>
           <br />
           <br />
-          <div className="d-flex flex-column fw-semibold">
+          <div className="d-flex flex-column fw-normal">
             <span>WONOCO PRIVATE LIMITED</span>
             <span>10 ANSON ROAD #33-10 INTERNATIONAL PLAZA</span>
             <span>SINGAPORE - 079903</span>
