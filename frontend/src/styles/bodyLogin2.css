@@ -325,7 +325,20 @@
 }
 
 /* Screen height between 600px and 800px */
-@media (min-height: 1365px) and (max-height: 1900px) {
+@media (min-height: 1576px) and (max-height: 1900px) {
+    .loginTopPadding {
+        /* padding-top: 8rem; */
+        padding-top: 26rem;
+    }
+
+    .loginBottomPadding {
+        /* padding-bottom: 8rem; */
+        padding-bottom: 26rem;
+    }
+}
+
+/* Screen height between 600px and 800px */
+@media (min-height: 1365px) and (max-height: 1575px) {
     .loginTopPadding {
         /* padding-top: 8rem; */
         padding-top: 19rem;
