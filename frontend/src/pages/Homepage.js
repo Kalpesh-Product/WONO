@@ -134,6 +134,7 @@ const Homepage = () => {
   // mobile screen for globe responsiveness
   const ismobile = window.innerWidth < 769;
   const isTablet = window.innerWidth < 1025;
+  
 
   return (
     <div className="master-container">

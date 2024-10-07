@@ -49,7 +49,7 @@
 
 @media (min-width: 768px){
     .jobrole-arrow{
-        margin: 0 0 0 2rem;
+        margin: 0 0 0 3rem;
         font-weight: 600;
         color: #52565e;
         border: 2px solid #52565e;
@@ -94,19 +94,76 @@
     outline: 0;
     box-shadow: none;
 }
-@media (max-width:768px)
+@media (max-width:768px) and (min-width:414px)
 {
-    .text-button{
+    /* .text-button{
         text-align: left !important;
-    }
+    } */
+
 
 }
-@media (max-width:1024px)
+@media only screen and (max-width:920px) and (min-width:768px)
+{
+    /* .text-button{
+        text-align: left !important;
+    }
+    .link-btn{
+        text-align: left !important;
+    } */
+
+}
+
+@media (max-width:1024px) and (min-width:920px)
 {
     .text-button{
         text-align: right !important;
     }
+    .link-btn{
+        text-align: left !important;
+    }
+    
 }
+@media (max-width:414px)
+{
+    /* .text-button{
+        text-align: right !important;
+    } */
+    .link-btn{
+        text-align: left !important;
+    }
+    
+}
+
+@media only screen and (min-device-width: 414px) and (max-device-width: 425px){
+    .link-btn{
+        text-align: left !important;
+    }
+    .jobrole-arrow{
+        margin: 0 0 0 5rem;
+        font-weight: 600;
+        color: #52565e;
+        border: 2px solid #52565e;
+        padding: 8px;
+        border-radius: 7px;
+        transition: background-color ease 0.2s;
+    }
+}
+@media only screen and (min-device-width: 374px) and (max-device-width: 413px){
+    .link-btn{
+        text-align: left !important;
+    }
+    .jobrole-arrow{
+        margin: 0 0 0 2rem;
+        font-weight: 600;
+        color: #52565e;
+        border: 2px solid #52565e;
+        padding: 8px;
+        border-radius: 7px;
+        transition: background-color ease 0.2s;
+    }
+}
+
+
 /*
 i.fa.fa-cheveron-right {
     color: black;

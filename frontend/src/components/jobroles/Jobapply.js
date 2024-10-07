@@ -301,7 +301,7 @@ const Jobapply = ({ jobTitle, changeActiveTab }) => {
           APPLICATION FORM
         </h2>
         <Grid container spacing={2}>
-          <Grid item md={6} xs={12}>
+          <Grid item md={6} xs={12} sm={6}>
             <TextField
               type="text"
               name="name"
@@ -314,7 +314,7 @@ const Jobapply = ({ jobTitle, changeActiveTab }) => {
             />
           </Grid>
 
-          <Grid item md={6} xs={12}>
+          <Grid item md={6} xs={12} sm={6}>
             <TextField
               type="email"
               name="email"
@@ -327,7 +327,7 @@ const Jobapply = ({ jobTitle, changeActiveTab }) => {
             />
           </Grid>
 
-          <Grid item md={6} xs={12}>
+          <Grid item md={6} xs={12} sm={6}>
             <LocalizationProvider dateAdapter={AdapterDateFns}>
               <DatePicker
                 label="Date of Birth"
@@ -347,7 +347,7 @@ const Jobapply = ({ jobTitle, changeActiveTab }) => {
             </LocalizationProvider>
           </Grid>
 
-          <Grid item md={6} xs={12}>
+          <Grid item md={6} xs={12} sm={6}>
             <TextField
               type="tel"
               name="number"
@@ -361,7 +361,7 @@ const Jobapply = ({ jobTitle, changeActiveTab }) => {
             />
           </Grid>
 
-          <Grid item md={6} xs={12}>
+          <Grid item md={6} xs={12} sm={6}>
             <FormControl fullWidth>
               <InputLabel>State</InputLabel>
               <Select
@@ -379,7 +379,7 @@ const Jobapply = ({ jobTitle, changeActiveTab }) => {
           </Grid>
 
 
-          <Grid item md={6} xs={12}>
+          <Grid item md={6} xs={12} sm={6}>
             <TextField
               type="number"
               name="experience"
@@ -392,7 +392,7 @@ const Jobapply = ({ jobTitle, changeActiveTab }) => {
             />
           </Grid>
 
-          <Grid item md={6} xs={12}>
+          <Grid item md={6} xs={12} sm={6}>
             <TextField
               type="text"
               name="linkedInProfile"
@@ -404,7 +404,7 @@ const Jobapply = ({ jobTitle, changeActiveTab }) => {
             />
           </Grid>
 
-          <Grid item md={6} xs={12}>
+          <Grid item md={6} xs={12} sm={6}>
             <input
               type="file"
               name="resume"
@@ -424,7 +424,7 @@ const Jobapply = ({ jobTitle, changeActiveTab }) => {
   </label>
           </Grid>
 
-          <Grid item md={6} xs={12}>
+          <Grid item md={6} xs={12} sm={6}>
             <TextField
               type="number"
               name="monthlySalary"
@@ -438,7 +438,7 @@ const Jobapply = ({ jobTitle, changeActiveTab }) => {
             />
           </Grid>
 
-          <Grid item md={6} xs={12}>
+          <Grid item md={6} xs={12} sm={6}>
             <TextField
               type="number"
               name="expectedSalary"
@@ -451,7 +451,7 @@ const Jobapply = ({ jobTitle, changeActiveTab }) => {
             />
           </Grid>
 
-          <Grid item md={6} xs={12}>
+          <Grid item md={6} xs={12} sm={6}>
             <FormControl fullWidth >
               <InputLabel
                 slotProps={{ textField: { fullWidth: true } }}>How Soon You Can Join?</InputLabel>
@@ -471,7 +471,7 @@ const Jobapply = ({ jobTitle, changeActiveTab }) => {
             </FormControl>
           </Grid>
 
-          <Grid item xs={12} sm={12} md={6}>
+          <Grid item xs={12} sm={6} md={6}>
             <TextField
               label="Relocate to Goa"
               variant="outlined"
