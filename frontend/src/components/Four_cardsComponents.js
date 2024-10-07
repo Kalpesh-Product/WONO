@@ -157,8 +157,8 @@ const FourCardsComponents = () => {
         <span
           style={{ cursor: "pointer" }}
           onClick={() => {
-            navigate("/services");
-            window.scrollTo({ top: 0, behavior: "smooth" });
+            navigate("/saas");
+            window.scrollTo({ top: 0, behavior: "instant" });
           }}
           className="key-features-link">
           View more

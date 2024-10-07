@@ -151,9 +151,11 @@
 @media only screen and (min-device-width: 374px) and (max-device-width: 413px){
     .link-btn{
         text-align: left !important;
+        align-items: center;
+        display: flex;
     }
     .jobrole-arrow{
-        margin: 0 0 0 2rem;
+        margin: 0 0 0 0rem;
         font-weight: 600;
         color: #52565e;
         border: 2px solid #52565e;
