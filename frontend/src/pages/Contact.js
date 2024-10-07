@@ -77,7 +77,7 @@ const Contact = () => {
                   fontSize: "30px",
                   textAlign: "left",
                   textTransform: "uppercase",
-                  margin: "3rem 0 2rem 0",
+                  margin: "2rem 0 2rem 0",
                   fontWeight: "bold",
                 }}>
                 About Us
