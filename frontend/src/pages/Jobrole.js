@@ -32,7 +32,7 @@ const Jobrole = () => {
 
                 </div>
                 <div className='col-lg-6 col-sm-6 text-button' style={{display:"flex" , justifyContent:'space-between', textAlign: "right" }}>
-                   <p style={{ fontWeight: "600", margin : 0 ,display:"flex" , justifyContent:'flex-end',width:'100%'}}>
+                   <p  className='career-jobtitle'>
                     <span style={{fontSize:'0.9rem'}} className='link-btn'>Full-Time | On-Site| Goa </span>
                     <div style={{display:"flex" , justifyContent:'space-between', flexDirection:'row' }}>
 
@@ -77,7 +77,7 @@ const Jobrole = () => {
                   <h5 classname="career-job-title" > 1. Jr. UI/UX Developer</h5>
                 </div>
                 <div className='col-lg-6 col-sm-6 text-button' style={{ textAlign: "right" ,display:"flex" , justifyContent:'space-between',}}>
-                   <p style={{ fontWeight: "600", margin : 0,display:"flex" , justifyContent:'flex-end',width:'100%'}}>
+                  <p  className='career-jobtitle'>
                     <span className='link-btn'>Full-Time | On-Site| Goa </span>
                     <Link onClick={() => {
                       window.scrollTo({
@@ -99,7 +99,7 @@ const Jobrole = () => {
                   <h5 classname="career-job-title" > 2. PHP Developer</h5>
                 </div>
                 <div className='col-lg-6 col-sm-6 text-button' style={{ textAlign: "right",display:"flex" , justifyContent:'space-between', }}>
-                   <p style={{ fontWeight: "600", margin : 0,display:"flex" , justifyContent:'flex-end',width:'100%'}}>
+                  <p  className='career-jobtitle'>
                     <span className='link-btn'>Full-Time | On-Site| Goa </span>
                     <Link onClick={() => {
                       window.scrollTo({
@@ -117,7 +117,7 @@ const Jobrole = () => {
                   <h5 classname="career-job-title" > 3. Web Developer Intern</h5>
                 </div>
                 <div className='col-lg-6 col-sm-6 text-button' style={{ textAlign: "right",display:"flex" , justifyContent:'space-between' }}>
-                   <p style={{ fontWeight: "600", margin : 0,display:"flex" , justifyContent:'flex-end',width:'100%'}}>
+                  <p  className='career-jobtitle'>
                     <span className='link-btn'>Full-Time | On-Site| Goa </span>
                     <Link onClick={() => {
                       window.scrollTo({
@@ -139,7 +139,7 @@ const Jobrole = () => {
                   <h5 classname="career-job-title" > 1. Finance Intern</h5>
                 </div>
                 <div className='col-lg-6 col-sm-6 text-button' style={{ textAlign: "right" ,display:"flex" , justifyContent:'space-between'}}>
-                   <p style={{ fontWeight: "600", margin : 0,display:"flex" , justifyContent:'flex-end',width:'100%'}}>
+                  <p  className='career-jobtitle'>
                     <span className='link-btn'>Full-Time | On-Site| Goa </span>
                     <Link onClick={() => {
                       window.scrollTo({
@@ -162,7 +162,7 @@ const Jobrole = () => {
                   <h5 classname="career-job-title" > 1. HR Generalist</h5>
                 </div>
                 <div className='col-lg-6 col-sm-6 text-button' style={{ textAlign: "right",display:"flex" , justifyContent:'space-between' }}>
-                   <p style={{ fontWeight: "600", margin : 0,display:"flex" , justifyContent:'flex-end',width:'100%'}}>
+                  <p  className='career-jobtitle'>
                     <span className='link-btn'>Full-Time | On-Site| Goa </span>
                     <Link onClick={() => {
                       window.scrollTo({
@@ -181,7 +181,7 @@ const Jobrole = () => {
                   <h5 classname="career-job-title" > 2. Executive Assistant to CEO</h5>
                 </div>
                 <div className='col-lg-6 col-sm-6 text-button' style={{ textAlign: "right",display:"flex" , justifyContent:'space-between' }}>
-                   <p style={{ fontWeight: "600", margin : 0,display:"flex" , justifyContent:'flex-end',width:'100%'}}>
+                  <p  className='career-jobtitle'>
                     <span className='link-btn'>Full-Time | On-Site| Goa </span>
                     <Link onClick={() => {
                       window.scrollTo({
@@ -203,7 +203,7 @@ const Jobrole = () => {
                   <h5 classname="career-job-title" > 1. Sr.Manager Sales & Bussiness Development </h5>
                 </div>
                 <div className='col-lg-6 col-sm-6 text-button' style={{ textAlign: "right",display:"flex" , justifyContent:'space-between' }}>
-                   <p style={{ fontWeight: "600", margin : 0,display:"flex" , justifyContent:'flex-end',width:'100%'}}>
+                  <p  className='career-jobtitle'>
                     <span className='link-btn'>Full-Time | On-Site| Goa </span>
                     <Link onClick={() => {
                       window.scrollTo({

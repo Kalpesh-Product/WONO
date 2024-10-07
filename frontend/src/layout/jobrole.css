@@ -7,7 +7,8 @@
     width: 5%;
     border-bottom: 3px solid orange;
 }
-.jobrole-arrow{
+
+.jobrole-arrow {
     margin: 0 0 0 1rem;
     font-weight: 600;
     color: #52565e;
@@ -16,21 +17,32 @@
     border-radius: 7px;
     transition: background-color ease 0.2s;
 }
-.jobrole-arrow:hover{
-    
+
+.jobrole-arrow:hover {
+
     color: white;
     border: 2px solid white;
     padding: 8px;
-   
+
     background-color: black;
 }
-.link-btn{
+
+.link-btn {
     font-size: 0.9rem;
+}
+
+.career-jobtitle {
+    font-weight: 600;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    align-items: baseline;
 }
 
 
 @media (max-width: 768px) {
-    .jobrole-arrow{
+    .jobrole-arrow {
         margin: 0 0 0 2rem;
         font-weight: 600;
         color: #52565e;
@@ -39,19 +51,20 @@
         border-radius: 7px;
         transition: background-color ease 0.2s;
     }
-    .jobrole-arrow:hover{
-        
+
+    .jobrole-arrow:hover {
+
         color: white;
         border: 2px solid white;
-        
+
         background-color: black;
     }
 
 
 }
 
-@media (min-width: 768px){
-    .jobrole-arrow{
+@media (min-width: 768px) {
+    .jobrole-arrow {
         margin: 0 0 0 3rem;
         font-weight: 600;
         color: #52565e;
@@ -79,14 +92,14 @@
 } */
 
 
-.career-job-title{
-   font-size: 1.5rem;
-   margin: 10 0;
-   color: #000;
-   margin: 0;
+.career-job-title {
+    font-size: 1.5rem;
+    margin: 10 0;
+    color: #000;
+    margin: 0;
 }
 
- .accordion-button:not(.collapsed) {
+.accordion-button:not(.collapsed) {
     color: var(--bs-accordion-active-color);
     background-color: white;
     box-shadow: none;
@@ -97,24 +110,26 @@
     outline: 0;
     box-shadow: none;
 }
-@media (max-width:768px) and (min-width:414px)
-{
-    .text-button > p{
+
+@media (max-width:768px) and (min-width:414px) {
+    .text-button>p {
         display: flex;
         justify-content: space-between !important;
     }
+
     /* .text-button{
         text-align: left !important;
     } */
 
 
 }
-@media only screen and (max-width:920px) and (min-width:768px)
-{
-    .text-button > p{
+
+@media only screen and (max-width:920px) and (min-width:768px) {
+    .text-button>p {
         display: flex;
         justify-content: flex-end !important;
     }
+
     /* .text-button{
         text-align: left !important;
     }
@@ -124,44 +139,48 @@
 
 }
 
-@media (max-width:1024px) and (min-width:920px)
-{
-    .text-button{
+@media (max-width:1024px) and (min-width:920px) {
+    .text-button {
         text-align: right !important;
     }
-    .text-button > p{
+
+    .text-button>p {
         display: flex;
         justify-content: flex-end !important;
     }
-    .link-btn{
+
+    .link-btn {
         text-align: left !important;
     }
-    
+
 }
-@media (max-width:414px)
-{
-    .text-button > p{
+
+@media (max-width:414px) {
+    .text-button>p {
         display: flex;
         justify-content: space-between !important;
     }
+
     /* .text-button{
         text-align: right !important;
     } */
-    .link-btn{
+    .link-btn {
         text-align: left !important;
     }
-    
+
 }
 
-@media only screen and (min-device-width: 414px) and (max-device-width: 425px){
-    .text-button > p{
+@media only screen and (min-device-width: 414px) and (max-device-width: 425px) {
+    .text-button>p {
         display: flex;
         justify-content: space-between !important;
     }
-    .link-btn{
+
+    .link-btn {
         text-align: left !important;
     }
-    .jobrole-arrow{
+
+    .jobrole-arrow {
         margin: 0 0 0 5rem;
         font-weight: 600;
         color: #52565e;
@@ -171,19 +190,21 @@
         transition: background-color ease 0.2s;
     }
 }
-@media only screen and (min-device-width: 374px) and (max-device-width: 413px){
-    .text-button > p{
+
+@media only screen and (min-device-width: 374px) and (max-device-width: 413px) {
+    .text-button>p {
         display: flex;
         justify-content: space-between !important;
     }
-    
 
-    .link-btn{
+
+    .link-btn {
         text-align: left !important;
         align-items: center;
         display: flex;
     }
-    .jobrole-arrow{
+
+    .jobrole-arrow {
         margin: 0 0 0 0rem;
         font-weight: 600;
         color: #52565e;

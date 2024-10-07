@@ -212,7 +212,7 @@
     padding: 4rem 7rem;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
     background-color: rgb(233, 249, 255);
 }
 

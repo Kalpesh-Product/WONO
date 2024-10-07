@@ -359,6 +359,29 @@
 }
 
 /* Responsive styles for screens 1024px and below */
+@media (min-width:2560px) {
+    .home-main-title {
+        color: black;
+        font-size: 10.7rem;
+        /* font-family: Mistral; */
+        font-family: Popins-Regular;
+        margin-top: 3rem;
+        font-weight: 900;
+        /* padding: 6rem 6rem 1rem 6rem; */
+    }
+
+    .home-main-tagline span {
+        font-size: 2.5rem;
+        font-weight: 200;
+    }
+
+    .home-main-title-desc {
+        padding: 3rem 0;
+        font-size: 2.2rem;
+        text-align: center;
+    }
+}
+
 @media (max-width: 1024px) {
     .home-page-container {
         grid-template-columns: 1fr;
@@ -536,7 +559,7 @@
         background-image: linear-gradient(0deg, #106df6, #aae5ff);
         width: 100%;
         text-align: center;
-        padding: 2rem 3rem;
+        padding: 2rem 2rem;
     }
 }
 
@@ -885,6 +908,7 @@
     transition: 1s;
 
 }
+
 @media (max-width:1440px) {
     .N-Commerce>h3>strong {
         display: flex;
@@ -1708,7 +1732,7 @@
 
     .website-panel-content {
         display: grid;
-        grid-template-columns:1fr;
+        grid-template-columns: 1fr;
         padding: 2rem 0;
         gap: 2rem;
 
@@ -1987,6 +2011,9 @@
         padding: 0 1.6rem 0 1.3rem;
     }
 }
+
+
+
 
 
 /* slider */
