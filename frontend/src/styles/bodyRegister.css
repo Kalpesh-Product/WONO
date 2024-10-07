@@ -2,10 +2,12 @@
   font-family: Popins-Regular;
   src: url('../assets/WONO_images/img/fonts/Poppins-Regular.ttf');
 }
+
 @font-face {
   font-family: Popins-Black;
   src: url('../assets/WONO_images/img/fonts/Poppins-Black.ttf');
 }
+
 @font-face {
   font-family: Popins-Semibold;
   src: url('../assets/WONO_images/img/fonts/Poppins-SemiBold.ttf');
@@ -18,22 +20,23 @@ section {
 }
 
 .register-master {
- padding: 4rem 0;
- border: none;
+  padding: 4rem 0;
+  border: none;
 }
 
 .next-button-width {
   width: 200px !important;
 }
 
-.register-container *{
+.register-container * {
   /* padding: 2rem; */
   font-family: Popins-Regular !important;
 }
 
-.stepper-container *{
+.stepper-container * {
   font-family: Popins-Semibold !important;
 }
+
 .register-page-button-space {
   display: flex;
   flex-direction: column;
@@ -91,7 +94,7 @@ section {
   .register-master {
     padding: 16rem 0 20rem;
     border: none;
-   }
+  }
 }
 
 
@@ -101,7 +104,15 @@ section {
     padding: 9rem 0 13.2rem;
     border: none;
     height: 100%;
+  }
 }
+
+@media (min-width: 899px) and (max-width: 1025px) {
+  .css-1ufs9dr-MuiContainer-root {
+    width: 87% !important;
+    /* margin: 0; */
+    padding: 0 !important;
+  }
 }
 
 @media (max-width: 768px) {
@@ -111,19 +122,28 @@ section {
   }
 
   .register-container {
-    padding: 2rem;
+    padding: 2rem 0.5rem;
   }
-  .stepper-container *{
+
+  .stepper-container * {
     font-family: Popins-Semibold !important;
     font-size: 0.8rem;
   }
 }
+
+@media (min-width: 599px) and (max-width: 821px) {
+  .css-1ufs9dr-MuiContainer-root {
+    width: 94% !important;
+    /* padding: 0 !important; */
+  }
+}
+
 @media (max-width:450px) {
   .register-master {
     padding: 2rem 0;
     border: none;
     height: 100%;
-}
+  }
 }
 
 
@@ -300,23 +320,25 @@ button {
   padding: 0.5rem 1rem !important;
 }
 
-.mail-client-image{
+.mail-client-image {
   width: 50px;
 }
-.mail-client-text{
+
+.mail-client-text {
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   text-decoration: underline;
 }
-.mail-client-text :hover{
- color: rgb(13,110,253);
+
+.mail-client-text :hover {
+  color: rgb(13, 110, 253);
 }
-.mail-client-image img{
+
+.mail-client-image img {
   width: 100%;
   height: 100%;
   object-fit: contain;
 
 }
-
