@@ -646,7 +646,7 @@ const LeadsPage = () => {
 
         <div className="better-roi-section PPPP  wono-text-spacing fontPoppinsRegular topPaddingInsideSections bottomPaddingForSections ">
           {/* <div className="better-roi h-5  wono-text-spacing "> */}
-          <div className="container paddingRight0">
+          <div className="container paddingRight0 paddingLeft0">
             <div className="row ">
               <div className="col-lg-6 ">
                 <img src={RoiImage} alt="" className="w-100" />
@@ -679,7 +679,7 @@ const LeadsPage = () => {
 
         <div className="complete-view-section PPPP h-5 wono-text-spacing fontPoppinsRegular topPaddingForSections bottomPaddingForSections">
           {" "}
-          <div className="container pe-0">
+          <div className="container pe-0 paddingLeft0">
             <div className="row invertDivs">
               <div className="col-lg-6 text-start  d-flex flex-column  justify-content-center ">
                 {/* <div className="col-lg-6 text-end  d-flex flex-column justify-content-center"> */}
@@ -862,7 +862,7 @@ const LeadsPage = () => {
           </div>
         </div> */}
 
-        <div className="last-section w-100 fontPoppinsRegular">
+        <div className="last-section  w-100 fontPoppinsRegular">
           {/* <div className="pt-5 customMargin pb-5"> */}
           <div className="bannerTopPadding customMargin bannerBottomPadding bannerPaddingSmall">
             <div className="grow-your-business-color w-100 ">
