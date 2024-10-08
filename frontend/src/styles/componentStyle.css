@@ -162,6 +162,7 @@
 
 .custom-offcanvas .offcanvas-title {
   color: white;
+  display: none;
   /* Title color */
 }
 
