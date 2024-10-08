@@ -115,7 +115,9 @@ const LeadsPage = () => {
 
   const handleRegister = () => {
     navigate("/register");
+    window.scrollTo({top:0,behavior:"instant"})
   };
+
 
   const renderContent = () => {
     switch (selectedItem) {

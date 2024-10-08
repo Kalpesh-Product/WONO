@@ -70,10 +70,10 @@ const TermsAndCondtions = () => {
             you agree to pay the fees indicated at the time of subscription,
             which may vary based on the plan you choose.
           </span>
-          <br />
+          {/* <br /> */}
           <br />
           <div className="oneRemPaddingLeft">
-            <ul>
+            <ul className="mb-0">
               <li>
                 <b>Billing Cycle:</b> Subscriptions are billed on a monthly or
                 annual basis, depending on your plan.
@@ -102,10 +102,10 @@ const TermsAndCondtions = () => {
             revocable license to access and use the Service for your internal
             business purposes. You agree not to:
           </span>
-          <br />
+          {/* <br /> */}
           <br />
           <div className="oneRemPaddingLeft">
-            <ul>
+            <ul className="mb-0">
               <li>
                 Reverse engineer, decompile, or disassemble any part of the
                 Service.
@@ -117,7 +117,7 @@ const TermsAndCondtions = () => {
               </li>
             </ul>
           </div>
-          <br />
+          {/* <br /> */}
           <span>
             We reserve the right to terminate or restrict your access to the
             Service if we believe you have violated these Terms.
@@ -262,7 +262,7 @@ const TermsAndCondtions = () => {
           </span>
           <br />
           <br />
-          <div className="d-flex flex-column fw-semibold">
+          <div className="d-flex flex-column fw-normal">
             <span>WONOCO PRIVATE LIMITED</span>
             <span>10 ANSON ROAD #33-10 INTERNATIONAL PLAZA</span>
             <span>SINGAPORE - 079903</span>

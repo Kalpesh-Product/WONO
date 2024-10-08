@@ -86,7 +86,7 @@ const PrivacyAndPolicy = () => {
         <div className="privacy-section privSect2">
           <h4>2. How We Use Your Information</h4>
           <p>We use the information we collect for the following purposes:</p>
-          <div className="oneRemPaddingLeft">
+          <div className="oneRemPaddingLeft yMargin">
             <ul>
               <li>
                 <span className="fw-bold">To Provide the Service:</span> We use
@@ -212,9 +212,14 @@ const PrivacyAndPolicy = () => {
           </div>
 
           <p>
-            To exercise any of these rights, please contact us at [Email
-            Address]. We may request specific information to verify your
-            identity before fulfilling your request.
+            To exercise any of these rights, please contact us at{" "}
+            <Link
+              className="WONOBLUE text-decoration-none"
+              to={"mailto:response@wono.co"}>
+              response@wono.co
+            </Link>
+            . We may request specific information to verify your identity before
+            fulfilling your request.
           </p>
         </div>
         <div className="privacy-section privSect2">
@@ -233,8 +238,13 @@ const PrivacyAndPolicy = () => {
             Our Service is not intended for individuals under the age of 18. We
             do not knowingly collect personal information from children. If you
             believe we have collected personal data from a child, please contact
-            us at [Email Address], and we will take appropriate steps to delete
-            that information.
+            us at{" "}
+            <Link
+              className="WONOBLUE text-decoration-none"
+              to={"mailto:response@wono.co"}>
+              response@wono.co
+            </Link>
+            , and we will take appropriate steps to delete that information.
           </p>
         </div>
         <div className="privacy-section privSect2">

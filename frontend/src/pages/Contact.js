@@ -67,7 +67,7 @@ const Contact = () => {
 
   return (
     <>
-      <section id="contact" className="contact wono-text-spacing">
+      <section id="contact" className="contact contact-about-us">
         <div className="container">
           <div className="row gy-4">
             <div className="col-lg-6">
@@ -77,7 +77,7 @@ const Contact = () => {
                   fontSize: "30px",
                   textAlign: "left",
                   textTransform: "uppercase",
-                  margin: "3rem 0 2rem 0",
+                  margin: "2rem 0 2rem 0",
                   fontWeight: "bold",
                 }}>
                 About Us
@@ -200,7 +200,7 @@ const Contact = () => {
         </div>
       </section>
 
-      <div className="map-container wono-text-spacing">
+      <div className="map-container contact-about-us">
         <div className="map-grid">
           <div>
             <iframe

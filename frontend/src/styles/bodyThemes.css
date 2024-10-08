@@ -133,9 +133,10 @@
 
 .themePage-featured-button {
     display: flex;
-    justify-content: start;
+    justify-content: center;
     align-items: start;
     width: 100%;
+    padding: 2rem 0 0 0;
 }
 
 .themePage-featured-button button {
@@ -144,6 +145,7 @@
     align-items: center;
     /* width: 100%; */
     margin-left: 0;
+   
 }
 
 .themePage-featured-grid-2 {
@@ -212,7 +214,7 @@
     padding: 4rem 7rem;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
     background-color: rgb(233, 249, 255);
 }
 
@@ -467,7 +469,7 @@
         font-size: 4rem;
         text-align: left;
         padding-right: 0rem;
-        margin: 0rem 0;
+        margin: 0rem 0 1rem;
     }
 
     .themePage-featured-grid-2 img {
@@ -509,19 +511,19 @@
 
     .themePage-website-support-grid-1 h2 {
         margin: 2rem 0;
-        font-size: 2.5rem;
+        font-size: 1.3rem;
     }
 
     .themePage-website-support-grid-1 p {
         margin-bottom: 2rem;
-        font-size: 1.5rem;
+        font-size: 1.1rem;
     }
 
     .themePage-website-support-grid-1 span {
         font-weight: bold;
         border-bottom: 2px solid black;
         transition: border 0.3s ease;
-        font-size: 1.5rem;
+        font-size: 1.1rem;
     }
 
     .themePage-website-features-grid h4 {
@@ -572,7 +574,7 @@
         font-weight: bold;
         border-bottom: 2px solid black;
         transition: border 0.3s ease;
-        font-size: 1.4rem;
+        font-size: 1rem;
     }
     .themePage-website-features h1 {
         font-size: 3.7rem;
@@ -591,6 +593,15 @@
         grid-template-columns: repeat(2, 1fr);
         gap: 2rem;
         vertical-align: middle;
+    }
+    .themePage-website-support-grid-1 h2 {
+        margin: 2rem 0;
+        font-size: 1.5rem;
+    }
+
+    .themePage-website-support-grid-1 p {
+        margin-bottom: 2rem;
+        font-size: 1rem;
     }
     .themePage-website-success h2 {
         margin: 0;
@@ -735,7 +746,7 @@
 
     .themePage-featured-button {
         display: flex;
-        justify-content: start;
+        justify-content: center !important;
         padding-left: 2rem;
     }
 
@@ -990,7 +1001,16 @@
 
     .themePage-featured-button {
         display: flex;
+        justify-content: center !important;
+        padding : 2rem 0 0rem 0
+    }
+    .themePage-featured-button button{
+       
+        display: flex;
         justify-content: center;
+        align-items: center;
+        /* width: 100%; */
+        margin-left: 0;
     }
 
     .themePage-featured-grid-2 {
