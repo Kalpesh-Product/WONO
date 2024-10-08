@@ -132,7 +132,7 @@ exports.registerUser = async (req, res) => {
             html: `
               <head>
   <style>
-    table, td {
+ td {
       border: 1px solid;
     }
   </style>
@@ -511,7 +511,7 @@ exports.submitEnquiry = async (req, res) => {
                   </h1>
                 </div>
                 <p style="font-size: 16px; color: #333;">New enquiry received</p>
-                <table style="width: 100%; border-collapse: collapse;">
+                <table style="width: 100%">
                     <tr>
                         <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;"><strong>Name:</strong></td>
                         <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">${name}</td>
@@ -621,9 +621,7 @@ exports.createJobApplication = async (req, res) => {
             cc: 'productwonoco@gmail.com',
             subject: `Job Application: ${name} - ${jobTitle}`,
             html: `<head><style>
-  table, td {
-    border: 1px solid;
-  }
+ 
   </style></head>
    <body style="font-family: 'Poppins', sans-serif; margin: 0; padding: 0; background-color: #ffffff; -webkit-text-size-adjust: none; -ms-text-size-adjust: none;">
    
@@ -634,7 +632,7 @@ exports.createJobApplication = async (req, res) => {
                       <b>${jobTitle}</b>
                   </h1>
     </div>
-  <table style="width: 100%; border-collapse: collapse; border-radius:1rem">
+  <table style="width: 100%">
     <tr>
       <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">Jobtitle</td>
       <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">${jobTitle}</td>
