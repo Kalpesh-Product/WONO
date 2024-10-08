@@ -38,7 +38,7 @@ import "../styles/bodyPartners.css";
 // import BiznestTestimonial from "../assets/testimonials/kashif-image.jpg";
 import greenUnderLine from "../assets/underline-bg/blue-line.png";
 import greenRound from "../assets/underline-bg/blue-circle.png";
-import BiznestTestimonial from "../assets/testimonials/kashif-image.webp";
+import BiznestTestimonial from "../assets/testimonials/kashif-image-2.webp";
 // import "../styles/bodyLastBanner.css";
 
 const Homepage = () => {
