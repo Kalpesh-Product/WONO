@@ -11,7 +11,8 @@
     } */
 
     ::-webkit-scrollbar {
-        width: 0px; /* Remove the scrollbar by setting its width to 0 */
+        width: 0px;
+        /* Remove the scrollbar by setting its width to 0 */
     }
 
     @media (min-width: 3070px) {
@@ -917,8 +918,20 @@
             padding-left: 2rem !important;
             padding-right: 2rem !important;
         }
+
         .pFontAdjustment {
             font-size: 1.2rem;
             text-align: justify;
+        }
+
+        .leads-image-section {
+            width: 100%;
+            height: 300px;
+        }
+
+        .leads-image-section img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
     }
