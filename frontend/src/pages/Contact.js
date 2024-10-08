@@ -67,7 +67,7 @@ const Contact = () => {
 
   return (
     <>
-      <section id="contact" className="contact wono-text-spacing">
+      <section id="contact" className="contact contact-about-us">
         <div className="container">
           <div className="row gy-4">
             <div className="col-lg-6">
@@ -200,7 +200,7 @@ const Contact = () => {
         </div>
       </section>
 
-      <div className="map-container wono-text-spacing">
+      <div className="map-container contact-about-us">
         <div className="map-grid">
           <div>
             <iframe
