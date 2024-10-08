@@ -934,4 +934,7 @@
             height: 100%;
             object-fit: cover;
         }
+        .bannerPaddingSmall {
+            padding: 2rem !important;
+        }
     }
