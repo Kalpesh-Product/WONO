@@ -24,6 +24,14 @@ section {
   border: none;
 }
 
+.StepperContainer-0-2-1 {
+  display: flex;
+  padding: 24px;
+  align-items: flex-start;
+  font-family: Arial, Helvetica, sans-serif;
+  flex-direction: row;
+}
+
 .next-button-width {
   width: 200px !important;
 }
@@ -144,6 +152,19 @@ section {
     border: none;
     height: 100%;
   }
+
+  .StepperContainer-0-2-1 {
+    display: flex;
+    padding: 0 !important;
+    align-items: flex-start;
+    font-family: Arial, Helvetica, sans-serif;
+    flex-direction: row;
+  }
+
+  .stepper-container * {
+    font-family: Popins-Semibold !important;
+    font-size: 0.7rem;
+}
 }
 
 

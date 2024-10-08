@@ -87,7 +87,7 @@
   transition: color 0.3s ease, font-family 0.3s ease;
   position: relative;
   gap: 20px;
-  /* Smooth transition for color and text-decoration */
+  font-size: 15px;
 }
 
 .custom-navbar-buttons {
