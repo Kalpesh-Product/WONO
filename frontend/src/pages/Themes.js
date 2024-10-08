@@ -150,7 +150,7 @@ const Themes = () => {
                     <li>Full-stack web dev tools for custom functionality</li>
                   </ul>
                 </div>
-                <div className="themePage-featured-button ">
+                <div className="themePage-featured-button" style={{display:'flex',justifyContent:'start'}}>
                   <button
                     className="get-started-main-button"
                     onClick={() => {
