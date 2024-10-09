@@ -473,9 +473,10 @@
 
     /* Green-Round -Marker-heading */
     .hero__animation {
-        padding-left: 53px;
+        padding-left: 44px;
         padding-bottom: 9px;
         height: 60px;
+        top: -8px;
     }
 
     /* End */
@@ -785,6 +786,21 @@
 
     }
     
+}
+@media (max-width:361px){
+
+    .capital-heading{
+        font-size: 24px;
+    }
+    .hero__animation {
+        padding-left: 49px;
+        padding-bottom: 17px;
+        height: 66px;
+        top: -5px;
+    }
+    .capital-heading-sub{
+        font-size: 24px;
+    }
 }
 
 @media (max-width:768px) and (min-width:322px) {
