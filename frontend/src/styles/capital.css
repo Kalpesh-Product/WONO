@@ -316,13 +316,13 @@
     stroke-linecap: round;
     animation: animateScribble 2s ease-out .5s forwards;
     height: 100px;
-    left: -3.5rem;
+    left: -3.4rem;
     opacity: 0;
     position: absolute;
     top: -10px;
     transform-origin: left;
     z-index: -1;
-    padding-bottom: 18px;
+    padding-bottom: 17px;
     padding-left: 40px;
 }
 
