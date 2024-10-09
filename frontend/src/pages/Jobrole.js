@@ -55,8 +55,8 @@ const Jobrole = () => {
                   <span style={{ fontSize: "0.9rem" }}>(SEO/Google Analytics) </span>
                 </div>
                 <div className='col-lg-6 col-sm-6 text-button' style={{ textAlign: "right",display:"flex" , justifyContent:'space-between',}} >
-                   <p style={{ fontWeight: "600", margin : 0,paddingTop:"5px",display:"flex" , justifyContent:'flex-end',width:'100%'}}>
-                    <span className='link-btn'>Full-Time | On-Site| Goa </span>
+                   <p className='career-jobtitle'>
+                    <span className='link-btn' style={{fontSize:'0.9rem'}} >Full-Time | On-Site| Goa </span>
                     <Link onClick={() => {
                       window.scrollTo({
                         top: 0, behavior: 'instant'
