@@ -44,7 +44,7 @@ const Capital = () => {
                         </img>
                     </div>
                     <div className='plus-icon'>+</div>
-                    <p><span> Once you are ready to move to the next level, we have a team of talented and experiences Fund Managers who can be your extended team.</span></p>
+                    <p><span> Once you are ready to move to the next level, we have a team of talented and experiences Fund Managers who can be your  team.</span></p>
                 </div>
                 <div className='cards-with-text'>
                     <h3>VENTURE FUNDING & DEBT</h3>
