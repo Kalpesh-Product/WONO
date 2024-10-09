@@ -876,7 +876,7 @@ const LeadsPage = () => {
               </h2>
               {/* <br /> */}
 
-              <p className="last-spacing leadsCtaTextFont m-0 topPaddingInsideSections bottomPaddingInsideSections">
+              <p className="last-spacing text-center leadsCtaTextFont m-0 topPaddingInsideSections bottomPaddingInsideSections">
                 This takes a lot of effort, time and patience … need to start
                 soon!
               </p>
