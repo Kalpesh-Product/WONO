@@ -133,7 +133,7 @@ const ProductPage = () => {
   // Handle image click in the recommendations grid
   const handleImageClick = (newImage) => {
     setCurrentImage(newImage);
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    window.scrollTo({ top: 0, behavior: "instant" });
   };
 
   return (

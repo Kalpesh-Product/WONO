@@ -176,3 +176,33 @@
         padding-right: 2rem !important;
     }
 }
+@media (max-width: 321px) {
+    /* .mobile-screen {
+        display: block;
+     
+    } */
+
+    .wono-text-spacing {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .faq-title img {
+        position: absolute;
+        top: 68%;
+        left: 30.5%;
+        width: 36%;
+        height: 17%;
+
+        /* position: absolute;
+            top: 54%;
+            left: 36%;
+            width: 26%;
+            height: 23%; */
+    }
+
+    .paddingForTab {
+        padding-left: 2rem !important;
+        padding-right: 2rem !important;
+    }
+}

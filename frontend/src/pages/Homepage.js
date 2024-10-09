@@ -260,7 +260,7 @@ const Homepage = () => {
                 data-aos-delay="200"
                 onClick={() => {
                   navigate("/register");
-                  window.scrollTo({ top: 0, behavior: "smooth" });
+                  window.scrollTo({ top: 0, behavior: "instant" });
                 }}>
                 CONNECT
               </button>
@@ -447,7 +447,7 @@ const Homepage = () => {
                 </div>
                 <Link
                   onClick={() =>
-                    window.scrollTo({ top: 0, behavior: "smooth" })
+                    window.scrollTo({ top: 0, behavior: "instant" })
                   }
                   to="/themes">
                   View more
@@ -482,7 +482,7 @@ const Homepage = () => {
                   </div> */}
                   <div className="testimonial-contact">
                     <h4 className="my-2">Kashif Shaikh</h4>
-                    <p className="m-0">Co-founder & COO</p>
+                    <p className="m-0">Co-Founder & COO</p>
                     <p>BIZ Nest, Goa India </p>
                   </div>
                 </div>

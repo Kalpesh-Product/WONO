@@ -320,6 +320,7 @@ button.slick-next.slick-arrow::before {
   }
 }
 
+
 @media (max-width:450px) {
   .four-cards-parent {
     margin: 0;
@@ -341,6 +342,41 @@ button.slick-next.slick-arrow::before {
     border-radius: 10px;
     height: 362px;
     margin: .5rem 47px;
+    padding: 30px 20px;
+    width: 245px !important;
+  }
+
+  button.slick-prev.slick-arrow {
+    left: -50px;
+    margin-left: 46px;
+  }
+
+  button.slick-next.slick-arrow {
+    margin-right: 43px;
+  }
+}
+
+@media (max-width:401px) {
+  .four-cards-parent {
+    margin: 0;
+    padding: 2rem 1rem;
+    background-color: #fdfdfd;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+  }
+
+  .four-cards-header span {
+    text-align: center;
+    font-size: 2.5rem;
+  }
+
+  .card_1 {
+    background-color: #fff;
+    border-radius: 10px;
+    height: 362px;
+    margin: .5rem 28px;
     padding: 30px 20px;
     width: 245px !important;
   }
@@ -377,7 +413,59 @@ button.slick-next.slick-arrow::before {
     height: 362px;
     margin: .5rem 17px;
     padding: 30px 20px;
-    width: 245px !important;
+    width: clamp(189px, 65vw, 245px) !important
+  }
+
+  button.slick-prev.slick-arrow {
+    left: -50px;
+    margin-left: 46px;
+  }
+
+  button.slick-next.slick-arrow {
+    margin-right: 43px;
+  }
+}
+
+@media (max-width:321px) {
+  .four-cards-parent {
+    margin: 0;
+    padding: 2rem 1rem;
+    background-color: #fdfdfd;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+  }
+
+  .four-cards-header span {
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  .card_1 {
+    background-color: #fff;
+    border-radius: 10px;
+    height: 318px;
+    margin: .5rem 17px;
+    padding: 30px 20px;
+    width: 189px !important;
+  }
+
+  .card-title {
+    display: flex;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-family: Popins-Semibold;
+    font-size: 0.8rem;
+  }
+
+  .card-subtext {
+    display: flex;
+    align-items: center;
+    margin-bottom: 6px;
+    color: #363636;
+    font-size: 0.63rem;
+    font-family: Popins-Regular;
   }
 
   button.slick-prev.slick-arrow {
