@@ -482,7 +482,7 @@ const Homepage = () => {
                   </div> */}
                   <div className="testimonial-contact">
                     <h4 className="my-2">Kashif Shaikh</h4>
-                    <p className="m-0">Co-founder & COO</p>
+                    <p className="m-0">Co-Founder & COO</p>
                     <p>BIZ Nest, Goa India </p>
                   </div>
                 </div>

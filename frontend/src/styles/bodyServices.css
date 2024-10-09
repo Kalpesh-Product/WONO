@@ -1408,6 +1408,11 @@
         line-height: 184%;
     }
 
+    .business-grid > div {
+        flex: 1 1 calc(33.33% - 4rem); /* Each item takes up 33.33% of the width with spacing */
+        margin-bottom: 1rem; /* To add space between rows */
+    }
+
     .business-service-card-content span {
         font-size: 0.8rem;
         margin: 0;
