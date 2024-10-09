@@ -78,6 +78,9 @@
     height: 6rem;
     /* width: 100%; */
     /* Full height */
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 @supports (-webkit-appearance: none) {
@@ -93,6 +96,9 @@
         height: 6rem;
         /* width: 100%; */
         /* Full height */
+
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
     }
 }
 
