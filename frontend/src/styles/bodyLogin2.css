@@ -118,8 +118,6 @@
 }
 
 .LoginMiddleContainer {
-    /* height: 100%;
-    width: 20rem; */
     margin-left: 6rem;
     margin-right: 6rem;
 }
@@ -245,7 +243,8 @@
 /* TAB & MOBILE VIEW */
 /* Media query for phone view (max-width: 768px or smaller) */
 /* @media (max-width: 768px) { */
-@media (max-width: 1020px) {
+/* @media (max-width: 1020px) { */
+@media (max-width: 1060px) {
 
     /* img,
         div,
