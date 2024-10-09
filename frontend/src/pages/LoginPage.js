@@ -157,7 +157,7 @@ const LoginPage = () => {
             Sign Up
           </Link>
         </p>
-        <div className="loginDividingContainer">
+        <div className="loginDividingContainer shrink-container">
           <div className="loginLeftContainer">
             <Container maxWidth="md" style={{ padding: "3rem 0 0" }}>
               <Box

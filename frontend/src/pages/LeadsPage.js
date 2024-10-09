@@ -42,7 +42,8 @@ import GoogleSheetsImage from "../assets/leads_images/google-sheets-image.webp";
 import GoogleSheetsImagepng from "../assets/leads_images/google-sheets-image-webp.webp";
 // import "../styles/bodyLastBanner.css";
 
-import TickmarkImg from "../assets/check.png";
+// import TickmarkImg from "../assets/check.png";
+import TickmarkImg from "../assets/blue-tick-no-bg-15.png";
 
 import GoogleMyBusinessImage from "../assets/leads_images/google-my-business-image.webp";
 import GoogleMapsImage from "../assets/leads_images/google-maps-logo.png";
@@ -115,9 +116,8 @@ const LeadsPage = () => {
 
   const handleRegister = () => {
     navigate("/register");
-    window.scrollTo({top:0,behavior:"instant"})
+    window.scrollTo({ top: 0, behavior: "instant" });
   };
-
 
   const renderContent = () => {
     switch (selectedItem) {

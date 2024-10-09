@@ -15,6 +15,10 @@
         /* Remove the scrollbar by setting its width to 0 */
     }
 
+    .Tickmark-text img {
+        padding-right: 0.3rem;
+    }
+
     @media (min-width: 3070px) {
         .biggestText {
             text-transform: uppercase;
@@ -934,6 +938,7 @@
             height: 100%;
             object-fit: cover;
         }
+
         .bannerPaddingSmall {
             padding: 2rem !important;
         }
