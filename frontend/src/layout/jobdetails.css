@@ -105,6 +105,7 @@ ul{
 }
 
 
+
 @media (max-width:768px) {
   .container-jobDetails {
     padding-left: 2rem;
@@ -116,6 +117,11 @@ ul{
     font-size: 1rem;
   }
 
+}
+@media (max-width:320px){
+  .mobileFont {
+    font-size: 0.8rem;
+}
 }
 @media (max-width:820px){
   .container-jobDetails {
