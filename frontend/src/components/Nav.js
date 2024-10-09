@@ -54,6 +54,7 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
   
         console.log("Logged out, username cleared");
         navigate("/login"); // Redirect to login
+        setShow(false)
       } else {
         console.error("Error logging out:", response);
       }
@@ -224,7 +225,9 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
           {/* <Link className="custom-offcanvas-link" to="/" onClick={handleClose}>
             Home
           </Link> */}
-          <Link
+          {!loggedIn ? (
+            <>
+            <Link
             className="custom-offcanvas-link"
             to="/saas"
             onClick={handleClose}>
@@ -256,6 +259,9 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
             onClick={handleClose}>
             Career
           </Link>
+            </>
+          ):null}
+          
           {/* <Link
             className="custom-offcanvas-link"
             to="/contact"
@@ -264,7 +270,7 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
           </Link> */}
           {loggedIn ? (
             <Link className="custom-offcanvas-link" to={"/dashboard"}>
-              Dashboard
+              Activating Soon
             </Link>
           ) : null}
           {loggedIn ? (
