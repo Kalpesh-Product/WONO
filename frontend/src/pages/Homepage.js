@@ -260,7 +260,7 @@ const Homepage = () => {
                 data-aos-delay="200"
                 onClick={() => {
                   navigate("/register");
-                  window.scrollTo({ top: 0, behavior: "smooth" });
+                  window.scrollTo({ top: 0, behavior: "instant" });
                 }}>
                 CONNECT
               </button>
@@ -447,7 +447,7 @@ const Homepage = () => {
                 </div>
                 <Link
                   onClick={() =>
-                    window.scrollTo({ top: 0, behavior: "smooth" })
+                    window.scrollTo({ top: 0, behavior: "instant" })
                   }
                   to="/themes">
                   View more

@@ -234,7 +234,7 @@ const LeadsPage = () => {
                 data-aos-delay="200"
                 onClick={() => {
                   navigate("/register");
-                  window.scrollTo({ top: 0, behavior: "smooth" });
+                  window.scrollTo({ top: 0, behavior: "instant" });
                 }}>
                 PARTNER NOW
               </button>

@@ -714,7 +714,7 @@ const Services = () => {
             <button
               onClick={() => {
                 navigate("/login");
-                window.scrollTo({ top: 0, behavior: "smooth" });
+                window.scrollTo({ top: 0, behavior: "instant" });
               }}
               className="get-started-main-button">
               Get Started
@@ -1048,7 +1048,7 @@ const Services = () => {
               <button
                 onClick={() => {
                   navigate("/register");
-                  window.scrollTo({ top: 0, behavior: "smooth" });
+                  window.scrollTo({ top: 0, behavior: "instant" });
                 }}
                 className="get-started-main-button">
                 Get Started

@@ -1052,6 +1052,7 @@
     margin-top: 0;
     text-align: center;
     line-height: 90%;
+    white-space: nowrap;
     /* to add gap between the lines */
 }
 
@@ -1143,7 +1144,8 @@
 
 @media (max-width:1024px) and (min-width:821px) {
     .N-Commerce > h3 > strong {
-        font-size: calc(4.3rem + (6 - 4.3) * ((100vw - 820px) / (1024 - 820)));
+        font-size: calc(6rem + (6 - 4.3) * ((100vw - 820px) / (1024 - 820)));
+        white-space: nowrap;
     }
 }
 
@@ -1165,13 +1167,14 @@
         margin-top: 0;
         text-align: center;
         line-height: 90%;
+        white-space: nowrap;
         /* to add gap between the lines */
     }
 
     .N-Commerce p {
         color: #0AA9EF;
         align-self: center;
-        font-size: 39px;
+        font-size: 35px;
         width: fit-content;
         font-family: Bebas-Regular;
     }
