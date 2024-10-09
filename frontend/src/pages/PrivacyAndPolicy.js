@@ -86,7 +86,7 @@ const PrivacyAndPolicy = () => {
         <div className="privacy-section privSect2">
           <h4>2. How We Use Your Information</h4>
           <p>We use the information we collect for the following purposes:</p>
-          <div className="oneRemPaddingLeft">
+          <div className="oneRemPaddingLeft yMargin">
             <ul>
               <li>
                 <span className="fw-bold">To Provide the Service:</span> We use

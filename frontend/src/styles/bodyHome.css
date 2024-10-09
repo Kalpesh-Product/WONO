@@ -382,6 +382,12 @@
     }
 }
 
+@media (max-width:1400px) {
+    .home-main-title{
+        font-size: 5.5rem;
+    }
+}
+
 @media (max-width: 1024px) {
     .home-page-container {
         grid-template-columns: 1fr;
