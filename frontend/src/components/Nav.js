@@ -1,7 +1,7 @@
 // NavBar.js
 //Kindly make changes in the offCanvas as well while making changes in the main navbar
 import React, { useContext, useState, useEffect } from "react";
-import { UserContext } from '../contexts/UserContext';
+import { UserContext } from "../contexts/UserContext";
 import { useNavigate, useLocation } from "react-router-dom";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import { Link } from "react-router-dom";
@@ -16,7 +16,8 @@ import Spinners from "./Spinner";
 
 const NavBar = ({ activeTab, changeActiveTab }) => {
   const navigate = useNavigate();
-  const { username, loggedIn, setLoggedIn, setUsername } = useContext(UserContext);
+  const { username, loggedIn, setLoggedIn, setUsername } =
+    useContext(UserContext);
   const location = useLocation();
   const isAuthPage =
     location.pathname === "/login" && location.pathname === "/register";
@@ -27,7 +28,7 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
   const iscapitalpage = location.pathname === "/capital";
   const [show, setShow] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
-  const [loading, setLoading] = useState(false)
+  const [loading, setLoading] = useState(false);
   // const [activeTab, setActiveTab] = useState("Home");
 
   // const changeActiveTab = (activeTab) => {
@@ -35,23 +36,22 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
   // };
 
   // If username is not set, check localStorage
-  const storedUsername = localStorage.getItem('username');
-
+  const storedUsername = localStorage.getItem("username");
 
   const handleLogout = async () => {
     try {
-      setLoading(true)
+      setLoading(true);
       const response = await axios.get("/logout", { withCredentials: true });
-  
+
       if (response.status === 200) {
         // Clear the local storage for username
-        localStorage.removeItem('token');
-        localStorage.removeItem('username');
-  
+        localStorage.removeItem("token");
+        localStorage.removeItem("username");
+
         // Clear user context state
         setLoggedIn(false); // Set loggedIn to false
-        setUsername(''); // Clear the username from context state
-  
+        setUsername(""); // Clear the username from context state
+
         console.log("Logged out, username cleared");
         navigate("/login"); // Redirect to login
       } else {
@@ -59,16 +59,14 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
       }
     } catch (error) {
       console.error("Error logging out:", error);
-    } finally{
-      setLoading(false)
+    } finally {
+      setLoading(false);
     }
   };
-
 
   useEffect(() => {
     console.log("LoggedIn state changed: ", loggedIn);
   }, [loggedIn]);
-
 
   const handleRegister = () => {
     navigate("/register");
@@ -76,8 +74,8 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
   };
 
   const handleClose = () => {
-    setShow(false)
-    window.scrollTo({ top: 0, behavior: "instant" })
+    setShow(false);
+    window.scrollTo({ top: 0, behavior: "instant" });
   };
   const handleShow = () => setShow(true);
 
@@ -107,7 +105,9 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
               <Link
                 to="/saas"
                 className={
-                  (!isAuthPage && isservices) && activeTab === "Services" ? "active" : ""
+                  !isAuthPage && isservices && activeTab === "Services"
+                    ? "active"
+                    : ""
                 }
                 onClick={() => {
                   changeActiveTab("Services");
@@ -122,7 +122,9 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
                   window.scrollTo({ top: 0, behavior: "instant" });
                 }}
                 className={
-                  (!isAuthPage && isthempage) && activeTab === "themes" ? "active" : ""
+                  !isAuthPage && isthempage && activeTab === "themes"
+                    ? "active"
+                    : ""
                 }>
                 Themes
               </Link>
@@ -133,7 +135,10 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
                   window.scrollTo({ top: 0, behavior: "instant" });
                 }}
                 className={
-                  (!isAuthPage && !isservices && isleadspage) && activeTab === "leads"
+                  !isAuthPage &&
+                  !isservices &&
+                  isleadspage &&
+                  activeTab === "leads"
                     ? "active"
                     : ""
                 }>
@@ -142,7 +147,10 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
               <Link
                 to="/capital"
                 className={
-                  (!isAuthPage && iscapitalpage && !isservices) && activeTab === "capital"
+                  !isAuthPage &&
+                  iscapitalpage &&
+                  !isservices &&
+                  activeTab === "capital"
                     ? "active"
                     : ""
                 }
@@ -154,7 +162,9 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
               </Link>
               <Link
                 to="/career"
-                className={!isAuthPage && activeTab === "Career" ? "active" : ""}
+                className={
+                  !isAuthPage && activeTab === "Career" ? "active" : ""
+                }
                 onClick={() => {
                   changeActiveTab("Career");
                   window.scrollTo({ top: 0, behavior: "instant" });
@@ -174,10 +184,10 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
                 <img
                   // src={user.picture}
                   src={ProfileImage}
-                  alt={'ProfileImage'}
+                  alt={"ProfileImage"}
                   className="profile-image"
                 />
-                <span>{username && storedUsername && 'NewUser'}</span>
+                <span>{username && storedUsername && "NewUser"}</span>
                 <div className={`dropdown-menu ${dropdownOpen ? "show" : ""}`}>
                   <button onClick={handleLogout}>Logout</button>
                 </div>
@@ -228,33 +238,32 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
             className="custom-offcanvas-link"
             to="/saas"
             onClick={handleClose}>
-            SaaS
+            SAAS
           </Link>
           <Link
             className="custom-offcanvas-link"
             to="/themes"
             onClick={handleClose}>
-            Themes
+            THEMES
           </Link>
           <Link
             className="custom-offcanvas-link"
             to="/leads"
             onClick={handleClose}>
-            Leads
+            LEADS
           </Link>
           <Link
             className="custom-offcanvas-link"
             to="/capital"
             onClick={handleClose}>
-            Capital
+            CAPITAL
           </Link>
 
-          
           <Link
             className="custom-offcanvas-link"
             to="/career"
             onClick={handleClose}>
-            Career
+            CAREER
           </Link>
           {/* <Link
             className="custom-offcanvas-link"
@@ -264,7 +273,7 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
           </Link> */}
           {loggedIn ? (
             <Link className="custom-offcanvas-link" to={"/dashboard"}>
-              Dashboard
+              DASHBOARD
             </Link>
           ) : null}
           {loggedIn ? (
@@ -274,7 +283,7 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
                 onClick={() => setDropdownOpen(!dropdownOpen)}>
                 <img
                   src={ProfileImage}
-                  alt={'ProfileImage'}
+                  alt={"ProfileImage"}
                   className="profile-image"
                 />
                 <span>{username}</span>
@@ -296,7 +305,7 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
         </Offcanvas.Body>
       </Offcanvas>
 
-      {loading && <Spinners animation={'border'} variant={'dark'}/>} 
+      {loading && <Spinners animation={"border"} variant={"dark"} />}
     </>
   );
 };
