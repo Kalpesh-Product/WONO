@@ -129,3 +129,31 @@
 
 
 }
+
+
+/* Display mobile layout on smaller screens */
+@media (max-width: 325px) {
+    /* .mobile-screen {
+        display: block;
+     
+    } */
+
+    .wono-text-spacing {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .terms-title {
+        font-size: 1.1rem;
+    }
+
+    .terms-title img {
+        position: absolute;
+        top: 62%;
+        left: 14%;
+        width: 70%;
+        height: 20%;
+    }
+
+
+}

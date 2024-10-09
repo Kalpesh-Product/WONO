@@ -301,6 +301,26 @@
     } */
 }
 
+
+/* Display mobile layout on smaller screens */
+@media (max-width: 325px) {
+    /* .mobile-screen {
+        display: block;
+     
+    } */
+
+    .shrink-container {
+        transform: scale(0.8);
+        /* Shrinks to 80% */
+        /* transform-origin: top left; */
+        /* Adjust origin if needed */
+    }
+
+
+}
+
+
+
 /* @media (max-width:768px) {
     .loginBottomPadding {
         padding-bottom: 4rem;
