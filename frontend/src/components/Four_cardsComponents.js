@@ -1,18 +1,16 @@
-import React from 'react';
-import Slider from 'react-slick';
+import React from "react";
+import Slider from "react-slick";
 import "../styles/4-cardsContainer.css";
 import TickmarkImg from "../assets/check.png";
-import Frontend from '../assets/WONO_images/img/key-features/website.png';
-import Finance from '../assets/WONO_images/img/key-features/finance.png';
-import Customer from '../assets/WONO_images/img/key-features/CustomerLatest.png';
-import Analytics from '../assets/WONO_images/img/key-features/dashboard.png';
-import HR from '../assets/WONO_images/img/key-features/HR.png';
-import Marketing from '../assets/WONO_images/img/key-features/seo.png';
-import { useNavigate } from 'react-router-dom';
+import Frontend from "../assets/WONO_images/img/key-features/website.png";
+import Finance from "../assets/WONO_images/img/key-features/finance.png";
+import Customer from "../assets/WONO_images/img/key-features/CustomerLatest.png";
+import Analytics from "../assets/WONO_images/img/key-features/dashboard.png";
+import HR from "../assets/WONO_images/img/key-features/HR.png";
+import Marketing from "../assets/WONO_images/img/key-features/seo.png";
+import { useNavigate } from "react-router-dom";
 
 const FourCardsComponents = () => {
-
-
   // Custom arrow components
   const PrevArrow = (props) => {
     const { className, style, onClick } = props;
@@ -20,8 +18,7 @@ const FourCardsComponents = () => {
       <button
         className={`slick-prev ${className}`}
         style={{ ...style, display: "block" }}
-        onClick={onClick}
-      >
+        onClick={onClick}>
         &#10094; {/* Left arrow symbol */}
       </button>
     );
@@ -33,21 +30,74 @@ const FourCardsComponents = () => {
       <button
         className={`slick-next ${className}`}
         style={{ ...style, display: "block" }}
-        onClick={onClick}
-      >
+        onClick={onClick}>
         &#10095; {/* Right arrow symbol */}
       </button>
     );
   };
   const navigate = useNavigate();
-  
+
   const cardsData = [
-    { icon: Frontend, title: "FRONTEND", features: ["Website/Native-apps", "Payment Gateway", "Meeting Rooms", "Customer Profile "] },
-    { icon: Finance, title: "FINANCE & ACCOUNTING", features: ["Automated Invoicing", "Cashflow & Projections", "Budget Management", "Working Capital "] },
-    { icon: Customer, title: "CUSTOMER MANAGEMENT", features: ["Ticket Raising & Logs", "Internal Booking Engine", "Internal Communication", "Customer Management "] },
-    { icon: Analytics, title: "ANALYTICS", features: ["Key Business Trends", "Full Data Analysis", "Customer Reports", "Employee Reports "] },
-    { icon: HR, title: "HR SUPPORT", features: ["Attendance & Engagements", "Task Allotment & Management", "Performance Analysis", "Employee Appraisals "] },
-    { icon: Marketing, title: "MARKETING", features: ["Search Engine Optimization", "Search Engine Marketing", "Ad Network", "Lead Generation "] }
+    {
+      icon: Frontend,
+      title: "FRONTEND",
+      features: [
+        "Website/Native-apps",
+        "Payment Gateway",
+        "Meeting Rooms",
+        "Customer Profile ",
+      ],
+    },
+    {
+      icon: Finance,
+      title: "FINANCE & ACCOUNTING",
+      features: [
+        "Automated Invoicing",
+        "Cashflow & Projections",
+        "Budget Management",
+        "Working Capital ",
+      ],
+    },
+    {
+      icon: Customer,
+      title: "CUSTOMER MANAGEMENT",
+      features: [
+        "Ticket Raising & Logs",
+        "Internal Booking Engine",
+        "Internal Communication",
+        "Customer Management ",
+      ],
+    },
+    {
+      icon: Analytics,
+      title: "ANALYTICS",
+      features: [
+        "Key Business Trends",
+        "Full Data Analysis",
+        "Customer Reports",
+        "Employee Reports ",
+      ],
+    },
+    {
+      icon: HR,
+      title: "HR SUPPORT",
+      features: [
+        "Attendance & Engagements",
+        "Task Allotment & Management",
+        "Performance Analysis",
+        "Employee Appraisals ",
+      ],
+    },
+    {
+      icon: Marketing,
+      title: "MARKETING",
+      features: [
+        "Search Engine Optimization",
+        "Search Engine Marketing",
+        "Ad Network",
+        "Lead Generation ",
+      ],
+    },
   ];
 
   const settings = {
@@ -65,8 +115,8 @@ const FourCardsComponents = () => {
           slidesToShow: 5,
           slidesToScroll: 1,
           infinite: true,
-          dots: false
-        }
+          dots: false,
+        },
       },
       {
         breakpoint: 1920,
@@ -74,8 +124,8 @@ const FourCardsComponents = () => {
           slidesToShow: 4,
           slidesToScroll: 1,
           infinite: true,
-          dots: false
-        }
+          dots: false,
+        },
       },
       {
         breakpoint: 1440,
@@ -83,8 +133,8 @@ const FourCardsComponents = () => {
           slidesToShow: 4,
           slidesToScroll: 1,
           infinite: true,
-          dots: false
-        }
+          dots: false,
+        },
       },
       {
         breakpoint: 1024,
@@ -92,38 +142,38 @@ const FourCardsComponents = () => {
           slidesToShow: 3,
           slidesToScroll: 1,
           infinite: true,
-          dots: false
-        }
+          dots: false,
+        },
       },
       {
         breakpoint: 820,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 1
-        }
+          slidesToScroll: 1,
+        },
       },
       {
         breakpoint: 768,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 1
-        }
+          slidesToScroll: 1,
+        },
       },
       {
         breakpoint: 450,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 1
-        }
+          slidesToScroll: 1,
+        },
       },
       {
         breakpoint: 426,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 1
-        }
+          slidesToScroll: 1,
+        },
       },
-    ]
+    ],
   };
 
   return (
@@ -136,8 +186,12 @@ const FourCardsComponents = () => {
         {cardsData.map((card, index) => (
           <div key={index} className="card_1 shadow">
             <div className="card-body">
-              <div className="card-icon" >
-                <img src={card.icon} alt={card.title} style={{boxShadow:"10px solid grey"}} />
+              <div className="card-icon">
+                <img
+                  src={card.icon}
+                  alt={card.title}
+                  style={{ boxShadow: "10px solid grey" }}
+                />
               </div>
               <h5 className="card-title">{card.title}</h5>
               <div className="card-text">

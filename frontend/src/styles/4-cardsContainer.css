@@ -21,11 +21,27 @@
   text-align: center;
 }
 
+/* .four-cards-header span {
+  text-align: center;
+  font-size: 4.9rem;
+  font-weight: 700;
+
+} */
+
+/* Default styles for Chrome (and other browsers) */
 .four-cards-header span {
   text-align: center;
   font-size: 4.9rem;
   font-weight: 700;
-  /* white-space: nowrap; */
+}
+
+/* Safari-specific styles */
+@supports (-webkit-backdrop-filter: none) {
+  .four-cards-header span {
+    font-size: 4.4rem;
+    /* Example: different font size for Safari */
+    font-weight: 700;
+  }
 }
 
 .four-cards-wrapper {
@@ -268,6 +284,7 @@ button.slick-next.slick-arrow::before {
     margin-right: 43px;
   }
 }
+
 @media (max-width:768px) {
   .four-cards-parent {
     margin: 0;
@@ -337,6 +354,7 @@ button.slick-next.slick-arrow::before {
     margin-right: 43px;
   }
 }
+
 @media (max-width:376px) {
   .four-cards-parent {
     margin: 0;
