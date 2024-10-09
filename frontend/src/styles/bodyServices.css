@@ -272,10 +272,11 @@
 }
 
 .SaaS-grid-heading h2 {
-    font-weight: 600;
+    font-weight: 800;
     font-size: 4rem;
     font-family: ComicSansMS;
     position: relative;
+    -webkit-font-smoothing: antialiased;
 }
 
 .SaaS-grid-heading>h2 span {
