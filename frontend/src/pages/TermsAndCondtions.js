@@ -139,6 +139,7 @@ const TermsAndCondtions = () => {
             We value your privacy. Our collection, use, and storage of your data
             are governed by our{" "}
             <span
+              className="WONOBLUE"
               style={{ textDecoration: "underline", cursor: "pointer" }}
               onClick={() => {
                 navigate("/privacy");
