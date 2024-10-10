@@ -57,11 +57,13 @@ const Jobrole = () => {
                 <div className='col-lg-6 col-sm-6 text-button' style={{ textAlign: "right",display:"flex" , justifyContent:'space-between',}} >
                    <p className='career-jobtitle'>
                     <span className='link-btn' style={{fontSize:'0.9rem'}} >Full-Time | On-Site| Goa </span>
+                    <div style={{display:"flex" , justifyContent:'space-between', flexDirection:'row' }}>
                     <Link onClick={() => {
                       window.scrollTo({
                         top: 0, behavior: 'instant'
                       })
                     }} to={`/jobdetails/2/${encodeURIComponent('Marketing Analytics')}`}><i className='fa fa-cheveron-right jobrole-arrow' >&gt;</i></Link>
+                  </div>
                   </p>
                 </div>
               </div>
