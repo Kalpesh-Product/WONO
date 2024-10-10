@@ -319,11 +319,17 @@
     left: -3.3rem;
     opacity: 0;
     position: absolute;
-    top: -10px;
+    top: -7px;
     transform-origin: left;
     z-index: -1;
-    padding-bottom: 17px;
+    padding-bottom: 18px;
     padding-left: 40px;
+
+    -webkit-padding-bottom:15px;
+    -webkit-left : -3.4rem;
+
+    -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 
