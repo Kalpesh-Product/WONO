@@ -325,11 +325,35 @@
     padding-bottom: 18px;
     padding-left: 40px;
 
-    -webkit-padding-bottom:15px;
-    -webkit-left : -3.4rem;
+
 
     -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+@supports (-webkit-touch-callout: none) {
+    .hero__animation {
+        fill: none;
+        stroke: #0AA9EF;
+        stroke-width: 4;
+        stroke-miterlimit: 0;
+        stroke-dasharray: 1650;
+        stroke-linecap: round;
+        animation: animateScribble 2s ease-out .5s forwards;
+        height: 100px;
+        left: -3.3rem;
+        opacity: 0;
+        position: absolute;
+        top: -7px;
+        transform-origin: left;
+        z-index: -1;
+        padding-bottom: 15px;
+        padding-left: 40px;
+
+
+
+
+    }
 }
 
 
@@ -359,20 +383,23 @@
 /* Responsiveness of cards section */
 
 @media (max-width:1024px) {
-    .headingContainer{
+    .headingContainer {
         height: 300px;
         padding-right: 3rem;
         padding-left: 3rem;
         position: relative;
     }
-    .connect-with-us-btn{
+
+    .connect-with-us-btn {
         position: absolute;
         right: 2rem;
     }
-    .capital-cards-section{
+
+    .capital-cards-section {
         padding-left: 3rem;
         padding-right: 3rem;
     }
+
     .capital-big-text {
         font-family: Popins-Regular;
         /* padding: 5% 4rem 5% 4rem; */
@@ -422,7 +449,8 @@
 
 
     }
-    .cards-with-text h3{
+
+    .cards-with-text h3 {
         font-size: 24px;
     }
 
@@ -434,7 +462,8 @@
         overflow-x: auto;
 
     }
-    .cards-with-text h3{
+
+    .cards-with-text h3 {
         font-size: 16px;
     }
 
@@ -600,7 +629,7 @@
     }
 }
 
-@media (max-width:769px){
+@media (max-width:769px) {
     .headingContainer {
         /* height: 350px; */
         height: 300px;
@@ -637,7 +666,7 @@
         position: relative;
         font-size: 1.61rem;
     }
-    
+
 
     .cards-with-text h3 {
         font-size: 15px;
@@ -646,7 +675,7 @@
     .connect-with-us-btn {
         right: 20%;
         align-items: flex-start;
-        
+
     }
 
     .capital-big-text {
@@ -699,8 +728,8 @@
         width: 250px;
         font-size: 15px;
     }
-    .capital-start-for-free-btn
-    {
+
+    .capital-start-for-free-btn {
         width: 150px;
     }
 
@@ -791,20 +820,23 @@
         border-bottom: 1px solid rgba(13, 110, 253);
 
     }
-    
-}
-@media (max-width:361px){
 
-    .capital-heading{
+}
+
+@media (max-width:361px) {
+
+    .capital-heading {
         font-size: 24px;
     }
+
     .hero__animation {
         padding-left: 49px;
         padding-bottom: 17px;
         height: 66px;
         top: -5px;
     }
-    .capital-heading-sub{
+
+    .capital-heading-sub {
         font-size: 24px;
     }
 }
@@ -824,12 +856,13 @@
 
 
     }
+
     .connect-with-us-btn {
         right: 20%;
         align-items: flex-start;
-        
+
     }
-    
+
     .capital-last-button-section {
         position: relative;
         background-color: #0093E9;
@@ -843,6 +876,7 @@
         border-bottom: 1px solid rgba(13, 110, 253);
 
     }
+
     .capital-last-button-section h2 {
         font-size: 1.8rem;
         padding-bottom: 0;
@@ -857,55 +891,63 @@
         font-size: 15px;
         flex-direction: column;
     }
+
     .capital-heading {
         position: relative;
         font-size: 1.61rem;
     }
 }
 
- @media (max-width:376px){
+@media (max-width:376px) {
     .headingContainer {
         height: 263px;
         position: relative;
         padding: 4rem 0rem 2rem;
     }
+
     .connect-with-us-btn {
         right: 18%;
         align-items: flex-start;
-        
+
     }
 
 }
-@media (max-width:320px){
+
+@media (max-width:320px) {
     .headingContainer {
         /* height: 350px; */
         height: 263px;
         position: relative;
         padding: 4rem 1rem 2rem;
     }
-    .capital-heading{
+
+    .capital-heading {
         font-size: 20px;
     }
+
     .hero__animation {
         padding-left: 49px;
         padding-bottom: 17px;
         height: 58px;
         top: -5px;
     }
+
     .capital-heading-sub {
         font-size: 20px;
         padding-left: 0;
         padding-right: 0;
     }
+
     .connect-with-us-btn {
         right: 15%;
         align-items: flex-start;
     }
 
 }
+
 @media (min-width: 2560px) {
     .capital-img {
         max-width: calc((100vw - 14rem) / 3);
-        
+
     }
 }
