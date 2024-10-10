@@ -331,28 +331,27 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
-@supports (-webkit-touch-callout: none) {
-    .hero__animation {
-        fill: none;
-        stroke: #0AA9EF;
-        stroke-width: 4;
-        stroke-miterlimit: 0;
-        stroke-dasharray: 1650;
-        stroke-linecap: round;
-        animation: animateScribble 2s ease-out .5s forwards;
-        height: 100px;
-        left: -3.3rem;
-        opacity: 0;
-        position: absolute;
-        top: -7px;
-        transform-origin: left;
-        z-index: -1;
-        padding-bottom: 15px;
-        padding-left: 40px;
+@media not all and (min-resolution: .001dpcm) {
+    @supports (-webkit-appearance: none) {
+        .hero__animation {
+            fill: none;
+            stroke: #0AA9EF;
+            stroke-width: 4;
+            stroke-miterlimit: 0;
+            stroke-dasharray: 1650;
+            stroke-linecap: round;
+            animation: animateScribble 2s ease-out .5s forwards;
+            height: 100px;
+            left: -3.3rem;
+            opacity: 0;
+            position: absolute;
+            top: -7px;
+            transform-origin: left;
+            z-index: -1;
+            padding-bottom: 15px;
+            padding-left: 40px;
 
-
-
-
+        }
     }
 }
 
