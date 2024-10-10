@@ -54,7 +54,7 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
 
         console.log("Logged out, username cleared");
         navigate("/login"); // Redirect to login
-        setShow(false)
+        setShow(false);
       } else {
         console.error("Error logging out:", response);
       }
@@ -79,6 +79,23 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
     window.scrollTo({ top: 0, behavior: "instant" });
   };
   const handleShow = () => setShow(true);
+
+  useEffect(() => {
+    const path = location.pathname;
+    if (path === "/saas") {
+      changeActiveTab("Services");
+    } else if (path === "/themes") {
+      changeActiveTab("themes");
+    } else if (path === "/leads") {
+      changeActiveTab("leads");
+    } else if (path === "/capital") {
+      changeActiveTab("capital");
+    } else if (path === "/career") {
+      changeActiveTab("Career");
+    } else {
+      changeActiveTab("Home");
+    }
+  }, [location.pathname]);
 
   return (
     <>
@@ -237,40 +254,40 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
           </Link> */}
           {!loggedIn ? (
             <>
-            <Link
-            className="custom-offcanvas-link"
-            to="/saas"
-            onClick={handleClose}>
-            SAAS
-          </Link>
-          <Link
-            className="custom-offcanvas-link"
-            to="/themes"
-            onClick={handleClose}>
-            THEMES
-          </Link>
-          <Link
-            className="custom-offcanvas-link"
-            to="/leads"
-            onClick={handleClose}>
-            LEADS
-          </Link>
-          <Link
-            className="custom-offcanvas-link"
-            to="/capital"
-            onClick={handleClose}>
-            CAPITAL
-          </Link>
+              <Link
+                className="custom-offcanvas-link"
+                to="/saas"
+                onClick={handleClose}>
+                SAAS
+              </Link>
+              <Link
+                className="custom-offcanvas-link"
+                to="/themes"
+                onClick={handleClose}>
+                THEMES
+              </Link>
+              <Link
+                className="custom-offcanvas-link"
+                to="/leads"
+                onClick={handleClose}>
+                LEADS
+              </Link>
+              <Link
+                className="custom-offcanvas-link"
+                to="/capital"
+                onClick={handleClose}>
+                CAPITAL
+              </Link>
 
-          <Link
-            className="custom-offcanvas-link"
-            to="/career"
-            onClick={handleClose}>
-            CAREER
-          </Link>
+              <Link
+                className="custom-offcanvas-link"
+                to="/career"
+                onClick={handleClose}>
+                CAREER
+              </Link>
             </>
-          ):null}
-          
+          ) : null}
+
           {/* <Link
             className="custom-offcanvas-link"
             to="/contact"
