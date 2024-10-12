@@ -28,20 +28,18 @@
 .capital-heading {
     width: 100%;
     text-align: center;
-
-
-    font-family: Popins-regular;
+    font-family: Popins-Medium;
     font-size: 40px;
-    font-weight: bold;
+    font-weight: normal;
 
 }
 
 .capital-heading-sub {
     width: 100%;
     text-align: center;
-    font-family: Popins-regular;
+    font-family: Popins-Medium;
     font-size: 40px;
-    font-weight: bold;
+    font-weight: normal;
 
 }
 
@@ -305,6 +303,7 @@
 .hero_animation-container {
     position: relative;
     margin-left: 10px;
+    font-family: Popins-Medium !important;
 }
 
 .hero__animation {

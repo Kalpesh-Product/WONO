@@ -23,9 +23,9 @@
 
 .four-cards-header span {
   text-align: center;
-  font-size: 4.9rem;
-  font-weight: 700;
-  /* white-space: nowrap; */
+  font-size: 4.8rem;
+  font-weight: normal;
+  font-family: Popins-Semibold;
 }
 
 .four-cards-wrapper {
@@ -60,7 +60,7 @@
 .card-title {
   display: flex;
   margin-bottom: 20px;
-  font-weight: bold;
+  font-weight: 400;
   font-family: Popins-Semibold;
   font-size: 1rem;
 }
@@ -87,8 +87,8 @@
 
 .key-features-link {
   color: black;
-  font-weight: bold;
-  cursor: pointer;
+  font-family: Popins-Semibold ;
+  /* font-weight: normal; */
 }
 
 .key-features-link:hover {

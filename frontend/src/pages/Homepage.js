@@ -173,7 +173,7 @@ const Homepage = () => {
                 </div>
                 <div className="col-12 col-lg-6 col-md-12 col-sm-12 home-main-tagline">
                   <span>"Nomad Commerce"</span>
-                  <span><b style={{ fontWeight: '800' }}>WoNo.Co</b> = <b style={{ fontWeight: '800' }}>Wo</b>rld <b style={{ fontWeight: '800' }}>No</b>mad <b style={{ fontWeight: '800' }}>Co</b>mmerce</span>
+                  <span><b style={{ fontFamily:'Popins-Semibold',fontWeight: 'normal' }}>WoNo.Co</b> = <b style={{ fontFamily:'Popins-Semibold',fontWeight: 'normal' }}>Wo</b>rld <b style={{ fontFamily:'Popins-Semibold',fontWeight: 'normal' }}>No</b>mad <b style={{ fontFamily:'Popins-Semibold',fontWeight: 'normal' }}>Co</b>mmerce</span>
                 </div>
               </div>
             </h2>
