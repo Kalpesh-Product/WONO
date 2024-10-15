@@ -19,6 +19,10 @@
         padding-right: 0.3rem;
     }
 
+    .wonoColor {
+        color: #0AA9EF;
+    }
+
     @media (min-width: 3070px) {
         .biggestText {
             text-transform: uppercase;

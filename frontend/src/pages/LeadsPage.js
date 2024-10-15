@@ -333,51 +333,63 @@ const LeadsPage = () => {
               <div className="h-100">
                 <p className="card-text h-100 d-flex flex-column justify-content-between checklistFont">
                   <div className="Tickmark-text">
-                    <img src={TickmarkImg} alt="tick-mark"></img>
+                    {/* <img src={TickmarkImg} alt="tick-mark"></img> */}
+                    <span className="wonoColor fw-bold">✔&nbsp;</span>
                     Google My Business
                   </div>
                   <div className="Tickmark-text">
-                    <img src={TickmarkImg} alt="tick-mark"></img>
+                    {/* <img src={TickmarkImg} alt="tick-mark"></img> */}
+                    <span className="wonoColor fw-bold">✔&nbsp;</span>
                     Google Maps
                   </div>
                   <div className="Tickmark-text">
-                    <img src={TickmarkImg} alt="tick-mark"></img>
+                    {/* <img src={TickmarkImg} alt="tick-mark"></img> */}
+                    <span className="wonoColor fw-bold">✔&nbsp;</span>
                     Google Reviews
                   </div>
                   <div className="Tickmark-text">
-                    <img src={TickmarkImg} alt="tick-mark"></img>
+                    {/* <img src={TickmarkImg} alt="tick-mark"></img> */}
+                    <span className="wonoColor fw-bold">✔&nbsp;</span>
                     Google SEO
                   </div>
                   <div className="Tickmark-text">
-                    <img src={TickmarkImg} alt="tick-mark"></img>
+                    {/* <img src={TickmarkImg} alt="tick-mark"></img> */}
+                    <span className="wonoColor fw-bold">✔&nbsp;</span>
                     Website
                   </div>
                   <div className="Tickmark-text">
-                    <img src={TickmarkImg} alt="tick-mark"></img>
+                    {/* <img src={TickmarkImg} alt="tick-mark"></img> */}
+                    <span className="wonoColor fw-bold">✔&nbsp;</span>
                     LinkedIn
                   </div>
                   <div className="Tickmark-text">
-                    <img src={TickmarkImg} alt="tick-mark"></img>
+                    {/* <img src={TickmarkImg} alt="tick-mark"></img> */}
+                    <span className="wonoColor fw-bold">✔&nbsp;</span>
                     Facebook
                   </div>
                   <div className="Tickmark-text">
-                    <img src={TickmarkImg} alt="tick-mark"></img>
+                    {/* <img src={TickmarkImg} alt="tick-mark"></img> */}
+                    <span className="wonoColor fw-bold">✔&nbsp;</span>
                     Instagram
                   </div>
                   <div className="Tickmark-text">
-                    <img src={TickmarkImg} alt="tick-mark"></img>
+                    {/* <img src={TickmarkImg} alt="tick-mark"></img> */}
+                    <span className="wonoColor fw-bold">✔&nbsp;</span>
                     Free Integrations
                   </div>
                   <div className="Tickmark-text">
-                    <img src={TickmarkImg} alt="tick-mark"></img>
+                    {/* <img src={TickmarkImg} alt="tick-mark"></img> */}
+                    <span className="wonoColor fw-bold">✔&nbsp;</span>
                     Cross Promotions
                   </div>
                   <div className="Tickmark-text">
-                    <img src={TickmarkImg} alt="tick-mark"></img>
+                    {/* <img src={TickmarkImg} alt="tick-mark"></img> */}
+                    <span className="wonoColor fw-bold">✔&nbsp;</span>
                     Database
                   </div>
                   <div className="Tickmark-text">
-                    <img src={TickmarkImg} alt="tick-mark"></img>
+                    {/* <img src={TickmarkImg} alt="tick-mark"></img> */}
+                    <span className="wonoColor fw-bold">✔&nbsp;</span>
                     WhatsApp
                   </div>
                 </p>
