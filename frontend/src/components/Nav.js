@@ -80,6 +80,7 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
   };
   const handleShow = () => setShow(true);
 
+  // UseEffect for keeping the navbar item underlined even after page refresh
   useEffect(() => {
     const path = location.pathname;
     if (path === "/saas") {
