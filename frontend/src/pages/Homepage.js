@@ -168,9 +168,7 @@ const Homepage = () => {
               <span style={{ fontSize: '1rem', marginLeft:"5rem", display:'flex', justifyContent:'end', width:'100%', fontWeight:'200' }}>WoNo.Co = <b>Wo</b>rld <b>No</b>mad <b>Co</b>mmerce</span>
               </div> */}
               <div className="row">
-                <div className="col-md-6">
-                  {/* Empty div */}
-                </div>
+                <div className="col-md-6">{/* Empty div */}</div>
                 <div className="col-12 col-lg-6 col-md-12 col-sm-12 home-main-tagline">
                   <span>"Nomad Commerce"</span>
                   <span><b style={{ fontFamily: 'Popins-Semibold', fontWeight: 'normal' }}>WoNo.Co</b> = <b style={{ fontFamily: 'Popins-Semibold', fontWeight: 'normal' }}>Wo</b>rld <b style={{ fontFamily: 'Popins-Semibold', fontWeight: 'normal' }}>No</b>mad <b style={{ fontFamily: 'Popins-Semibold', fontWeight: 'normal' }}>Co</b>mmerce</span>
@@ -229,7 +227,8 @@ const Homepage = () => {
 
         <div className="Globe-N-Commerce">
           <div className="Globe" style={{ textAlign: "left" }}>
-            <Canvas className="canvas"
+            <Canvas
+              className="canvas"
               camera={{
                 position: [0, 0, ismobile ? 15 : 25],
                 fov: ismobile ? 40 : isTablet ? 50 : 30,
@@ -436,8 +435,9 @@ const Homepage = () => {
 
                         </div> */}
               <div
-                className={`website-panel-right ${selectedId ? "modal-open" : ""
-                  }`}>
+                className={`website-panel-right ${
+                  selectedId ? "modal-open" : ""
+                }`}>
                 <div className="website-panel-content">
                   {webimages.map((image) => (
                     <div className="template-preview-container" key={image.id}>

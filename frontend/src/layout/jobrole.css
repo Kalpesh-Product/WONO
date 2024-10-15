@@ -32,7 +32,7 @@
 }
 
 .career-jobtitle {
-   
+
     margin: 0;
     display: flex;
     justify-content: flex-end;
@@ -100,7 +100,8 @@
 }
 
 .accordion-button:not(.collapsed) {
-    color: var(--bs-accordion-active-color);
+    /* color: var(--bs-accordion-active-color); */
+    color: #0AA9EF;
     background-color: white;
     box-shadow: none;
 }

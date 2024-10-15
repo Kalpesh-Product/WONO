@@ -106,11 +106,21 @@ const ProductPage = () => {
       alt: "Boutique Image",
       tag: "boutique",
     },
-    { src: CoWorkingImage_2,mockup:CoWorkingNomad, alt: "CoLivingImage_2", tag: "co-working" },
-    { src: CoWorkingImage_3,mockup:CoWorkingImage_3_Mockup, alt: "CoLivingImage_3", tag: "co-working" },
-    { src: Cafe_2,mockup:Cafe2Mockup, alt: "Cafe_2", tag: "cafe" },
-    { src: Cafe_3,mockup: Cafe3Mockup, alt: "Cafe_3", tag: "cafe" },
-    { src: Hostels,mockup: Hostels_mockup, alt: "Hostels", tag: "hostels" },
+    {
+      src: CoWorkingImage_2,
+      mockup: CoWorkingNomad,
+      alt: "CoLivingImage_2",
+      tag: "co-working",
+    },
+    {
+      src: CoWorkingImage_3,
+      mockup: CoWorkingImage_3_Mockup,
+      alt: "CoLivingImage_3",
+      tag: "co-working",
+    },
+    { src: Cafe_2, mockup: Cafe2Mockup, alt: "Cafe_2", tag: "cafe" },
+    { src: Cafe_3, mockup: Cafe3Mockup, alt: "Cafe_3", tag: "cafe" },
+    { src: Hostels, mockup: Hostels_mockup, alt: "Hostels", tag: "hostels" },
   ];
 
   const navigate = useNavigate();
@@ -153,11 +163,14 @@ const ProductPage = () => {
                       {features.map((feature, index) => (
                         <div key={index} className="product-page-features">
                           {/* <img src={TickmarkImg} alt="tick-mark" /> */}
-                          <img
+                          {/* <img
                             className="blut-tick-img"
                             src={blueTickmarkImg}
                             alt="tick-mark"
-                          />
+                          /> */}
+                          <span className="wonoColor fw-bold">
+                            ✔&nbsp;&nbsp;
+                          </span>
                           <span>{feature}</span>
                         </div>
                       ))}
@@ -249,10 +262,14 @@ const ProductPage = () => {
               BUILD FAST, SELL MORE AND GROW MORE REVENUES IMMEDIATELY WITH WoNo
             </span>
             <div className="product-page-build-button-space">
-              <button onClick={() => {
-                navigate("/register");
-                window.scrollTo({ top: 0, behavior: "instant" });
-              }} className="product-page-button">It's FREE</button>
+              <button
+                onClick={() => {
+                  navigate("/register");
+                  window.scrollTo({ top: 0, behavior: "instant" });
+                }}
+                className="product-page-button">
+                It's FREE
+              </button>
             </div>
           </div>
         </div>

@@ -204,7 +204,8 @@ const FourCardsComponents = () => {
               <div className="card-text">
                 {card.features.map((feature, i) => (
                   <div className="card-subtext" key={i}>
-                    <img src={TickmarkImg} alt="tick-mark" />
+                    {/* <img src={TickmarkImg} alt="tick-mark" /> */}
+                    <span className="wonoColor fw-bold">✔&nbsp;&nbsp;</span>
                     {feature}
                   </div>
                 ))}

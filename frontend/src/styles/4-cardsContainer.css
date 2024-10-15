@@ -39,6 +39,10 @@
   width: 100% !important;
 }
 
+.wonoColor {
+  color: #0AA9EF;
+}
+
 /* .card_1 {
   background-color: #fff;
   border-radius: 10px;
@@ -87,7 +91,7 @@
 
 .key-features-link {
   color: black;
-  font-family: Popins-Semibold ;
+  font-family: Popins-Semibold;
   /* font-weight: normal; */
 }
 

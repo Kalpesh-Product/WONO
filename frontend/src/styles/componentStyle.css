@@ -15,6 +15,7 @@
   font-weight: bold;
   text-align: center;
 }
+
 @media (max-width:426px) {
   .Title-font {
     font-size: 1.9rem;
@@ -24,6 +25,7 @@
     padding: 2rem 0 !important;
   }
 }
+
 .spinner-container {
   position: fixed;
   top: 50%;
@@ -32,8 +34,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 9999; /* Ensure it's on top of everything */
-  background-color: rgba(255, 255, 255, 0.8); /* Optional: translucent background */
+  z-index: 9999;
+  /* Ensure it's on top of everything */
+  background-color: rgba(255, 255, 255, 0.8);
+  /* Optional: translucent background */
   width: 100vw;
   height: 100vh;
 }
@@ -174,7 +178,8 @@
   align-items: center;
   /* justify-content: center; */
   flex-direction: column;
-  font-size: 1.5rem;
+  /* font-size: 1.5rem; */
+  font-size: 1.1rem;
   font-family: Popins-Regular;
 }
 
@@ -395,7 +400,8 @@
 
 .login-button {
   background-color: white;
-  padding: 0.5rem 2rem 0.5rem 2rem;
+  /* padding: 0.5rem 2rem 0.5rem 2rem; */
+  padding: 0.2rem 0.7rem 0.2rem 0.7rem;
   color: black !important;
   border-radius: 5px;
   border: none;
@@ -410,7 +416,8 @@
 
 .register-button {
   background-color: #0AA9EF;
-  padding: 0.5rem 2rem 0.5rem 2rem;
+  /* padding: 0.5rem 2rem 0.5rem 2rem; */
+  padding: 0.2rem 0.7rem 0.2rem 0.7rem;
   color: black;
   border-radius: 5px;
   border: none;
