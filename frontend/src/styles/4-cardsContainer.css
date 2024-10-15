@@ -197,7 +197,7 @@ button.slick-next.slick-arrow::before {
 
   .four-cards-header span {
     text-align: center;
-    font-size: 4.6rem;
+    font-size: 4.3rem;
     font-weight: 700;
     /* white-space: nowrap; */
   }
@@ -343,6 +343,17 @@ button.slick-next.slick-arrow::before {
   }
 }
 
+@media (max-width:449px) and (min-width:375px) {
+  .card_1 {
+    background-color: #fff;
+    border-radius: 10px;
+    height: 362px;
+    margin: .5rem 30px;
+    padding: 30px 20px;
+    width: 245px !important;
+  }
+}
+
 @media (max-width:376px) {
   .four-cards-parent {
     margin: 0;
@@ -366,6 +377,50 @@ button.slick-next.slick-arrow::before {
     margin: .5rem 17px;
     padding: 30px 20px;
     width: 245px !important;
+  }
+
+  button.slick-prev.slick-arrow {
+    left: -50px;
+    margin-left: 46px;
+  }
+
+  button.slick-next.slick-arrow {
+    margin-right: 43px;
+  }
+}
+@media (max-width:375px) and (min-width:320px) {
+  .card_1 {
+    background-color: #fff;
+    border-radius: 10px;
+    height: 362px;
+    margin: .5rem 8px;
+    padding: 30px 20px;
+    width: 245px !important;
+  }
+}
+@media (max-width:321px) {
+  .four-cards-parent {
+    margin: 0;
+    padding: 2rem 1rem;
+    background-color: #fdfdfd;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+  }
+
+  .four-cards-header span {
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  .card_1 {
+    background-color: #fff;
+    border-radius: 10px;
+    height: 362px;
+    margin: .5rem 4px;
+    padding: 30px 20px;
+    width: 217px !important;
   }
 
   button.slick-prev.slick-arrow {
