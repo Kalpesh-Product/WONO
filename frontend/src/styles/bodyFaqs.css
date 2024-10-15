@@ -73,6 +73,7 @@
     font-family: ComicSansMS;
     position: relative;
     width: 100%;
+    text-transform: uppercase;
 }
 
 .faq-title img {
@@ -176,6 +177,39 @@
         padding-right: 2rem !important;
     }
 }
+@media (max-width: 450px) {
+    /* .mobile-screen {
+        display: block;
+     
+    } */
+
+    .wono-text-spacing {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .faq-title {
+        font-family: ComicSansMS;
+        position: relative;
+        width: 100%;
+        text-transform: uppercase;
+        font-size: 1.1rem;
+        white-space: nowrap;
+    }
+
+    .faq-title img {
+        position: absolute;
+        top: 68%;
+        left: 4.5%;
+        width: 92%;
+        height: 17%;
+    }
+
+    .paddingForTab {
+        padding-left: 2rem !important;
+        padding-right: 2rem !important;
+    }
+}
 @media (max-width: 321px) {
     /* .mobile-screen {
         display: block;
@@ -187,18 +221,21 @@
         padding-right: 1rem;
     }
 
+    .faq-title {
+        font-family: ComicSansMS;
+        position: relative;
+        width: 100%;
+        text-transform: uppercase;
+        font-size: 0.81rem;
+        white-space: nowrap;
+    }
+
     .faq-title img {
         position: absolute;
-        top: 68%;
-        left: 30.5%;
-        width: 36%;
-        height: 17%;
-
-        /* position: absolute;
-            top: 54%;
-            left: 36%;
-            width: 26%;
-            height: 23%; */
+        top: 61%;
+        left: 1.5%;
+        width: 100%;
+        height: 13%;
     }
 
     .paddingForTab {

@@ -78,6 +78,7 @@ import { useNavigate } from "react-router-dom";
 import ServiceGridImage from "../assets/WONO_images/img/services/servicegrid.webp";
 import blueTickmarkImg from "../assets/blue-tick-no-bg-15.png";
 import greenUnderLine from '../assets/underline-bg/blue-line.png'
+import Accordion from 'react-bootstrap/Accordion';
 
 import "../styles/bodyServices.css";
 const Services = () => {
@@ -730,15 +731,6 @@ const Services = () => {
           <h1>
             <span className="SaaS-features-heading">
               Real-time operations
-              {/* <svg
-                className="SaaS-blue-underline"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 100 100">
-                <path
-                  d="m1.78,98.974c-2.734-3.693-2.319-7.014,1.247-9.961,3.566-2.948,9.479-4.841,17.739-5.681,1.828-.062,3.597-.086,5.306-.074,1.828-.062,3.201-.289,4.118-.682.973-.068,3.509-.212,7.608-.432,4.305-.169,9.421-.394,15.347-.676,6.014-.156,12.25-.361,18.707-.614,6.544-.127,12.661-.258,18.351-.391,5.808-.208,10.643-.347,14.505-.419,3.861-.072,5.998-.056,6.41.047.23.576.875.893,1.936.951,1.265.109,2.358-.033,3.275-.426,1.124-.342,2.437-.532,3.941-.571,1.59.087,2.679.307,3.265.661.767-.119,1.638-.213,2.611-.281,1.061.058,1.871.001,2.433-.17.562-.171,1.152-.179,1.769-.025.736.08,1.386.035,1.947-.136,1.765.338,4.342.619,7.728.843,3.506.15,7.44.304,11.8.461,4.448.282,8.912.465,13.391.547,4.566.208,8.823.339,12.772.393,3.949.054,7.265.053,9.948-.003,2.682-.055,4.304-.169,4.865-.339,2.041-.735,3.625.076,4.752,2.433.91.331,1.725,1.262,2.448,2.792,0,0-.209.311-.628.933-.213.673-.608,1.82-1.184,3.44-.457,1.546-1.262,2.59-2.417,3.131-1.067.667-2.385,1.22-3.951,1.658-1.716.712-3.386,1.125-5.008,1.238-1.504.039-3.83-.128-6.98-.501-3.031-.447-7.8-1.069-14.305-1.866-1.592-.087-3.225-.236-4.903-.448-1.473-.161-2.885-.358-4.238-.593-1.149-.183-2.149-.278-3.004-.284-.737-.08-1.223-.046-1.461.102-.562.171-1.578.176-3.05.015-1.266-.109-2.814-.133-4.641-.071-1.354-.235-3.297-.461-5.829-.68-2.533-.218-5.168-.462-7.906-.732-2.651-.144-5.038-.274-7.158-.389-2.003-.19-3.124-.21-3.36-.062-.443.097-.989.168-1.638.213-.562.171-1.239.053-2.029-.352-.232-.576-.789-.768-1.675-.574-.679.245-1.02.367-1.02.367-.949.593-4.989.776-12.12.549-3.331.101-8.328.252-14.991.453-6.576.327-13.903.674-21.982,1.04-7.873.418-15.644.861-23.312,1.33-7.549.395-14.081.785-19.596,1.169-5.428.51-8.882,1.047-10.361,1.611-3.077,1.202-5.161,1.874-6.253,2.016-1.211.216-2.283-.104-3.218-.96Z"
-                  fill="#1bb6f9"
-                />
-              </svg> */}
               <img src={greenUnderLine} alt="greenUnderLine" />
             </span>
           </h1>
@@ -794,15 +786,6 @@ const Services = () => {
                 <h1>
                   <span className="SaaS-features-frontend">
                     Frontend
-                    {/* <svg
-                      className="SaaS-blue-underline-frontend"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 100 100">
-                      <path
-                        d="m1.78,98.974c-2.734-3.693-2.319-7.014,1.247-9.961,3.566-2.948,9.479-4.841,17.739-5.681,1.828-.062,3.597-.086,5.306-.074,1.828-.062,3.201-.289,4.118-.682.973-.068,3.509-.212,7.608-.432,4.305-.169,9.421-.394,15.347-.676,6.014-.156,12.25-.361,18.707-.614,6.544-.127,12.661-.258,18.351-.391,5.808-.208,10.643-.347,14.505-.419,3.861-.072,5.998-.056,6.41.047.23.576.875.893,1.936.951,1.265.109,2.358-.033,3.275-.426,1.124-.342,2.437-.532,3.941-.571,1.59.087,2.679.307,3.265.661.767-.119,1.638-.213,2.611-.281,1.061.058,1.871.001,2.433-.17.562-.171,1.152-.179,1.769-.025.736.08,1.386.035,1.947-.136,1.765.338,4.342.619,7.728.843,3.506.15,7.44.304,11.8.461,4.448.282,8.912.465,13.391.547,4.566.208,8.823.339,12.772.393,3.949.054,7.265.053,9.948-.003,2.682-.055,4.304-.169,4.865-.339,2.041-.735,3.625.076,4.752,2.433.91.331,1.725,1.262,2.448,2.792,0,0-.209.311-.628.933-.213.673-.608,1.82-1.184,3.44-.457,1.546-1.262,2.59-2.417,3.131-1.067.667-2.385,1.22-3.951,1.658-1.716.712-3.386,1.125-5.008,1.238-1.504.039-3.83-.128-6.98-.501-3.031-.447-7.8-1.069-14.305-1.866-1.592-.087-3.225-.236-4.903-.448-1.473-.161-2.885-.358-4.238-.593-1.149-.183-2.149-.278-3.004-.284-.737-.08-1.223-.046-1.461.102-.562.171-1.578.176-3.05.015-1.266-.109-2.814-.133-4.641-.071-1.354-.235-3.297-.461-5.829-.68-2.533-.218-5.168-.462-7.906-.732-2.651-.144-5.038-.274-7.158-.389-2.003-.19-3.124-.21-3.36-.062-.443.097-.989.168-1.638.213-.562.171-1.239.053-2.029-.352-.232-.576-.789-.768-1.675-.574-.679.245-1.02.367-1.02.367-.949.593-4.989.776-12.12.549-3.331.101-8.328.252-14.991.453-6.576.327-13.903.674-21.982,1.04-7.873.418-15.644.861-23.312,1.33-7.549.395-14.081.785-19.596,1.169-5.428.51-8.882,1.047-10.361,1.611-3.077,1.202-5.161,1.874-6.253,2.016-1.211.216-2.283-.104-3.218-.96Z"
-                        fill="#1bb6f9"
-                      />
-                    </svg> */}
                     <img src={greenUnderLine} alt="greenUnderLine" />
                   </span>
                 </h1>
@@ -811,7 +794,7 @@ const Services = () => {
               <div className="business-grid">
                 {services_frontend.map((service) => (
                   <div
-                    className="business-service-card shadow"
+                    className="business-service-card "
                     key={service.id}>
                     <div className="business-service-card-image ">
                       <img src={service.image} alt={service.alt} />
@@ -833,27 +816,18 @@ const Services = () => {
                   flexDirection: "column",
                   width: "100%",
                 }}>
-                   <h1>
-            <span className="SaaS-features-finance">
-            FINANCE & ACCOUNTING
-            {/* <svg
-                className="SaaS-blue-underline-finance-accounting"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 100 100">
-                <path
-                  d="m1.78,98.974c-2.734-3.693-2.319-7.014,1.247-9.961,3.566-2.948,9.479-4.841,17.739-5.681,1.828-.062,3.597-.086,5.306-.074,1.828-.062,3.201-.289,4.118-.682.973-.068,3.509-.212,7.608-.432,4.305-.169,9.421-.394,15.347-.676,6.014-.156,12.25-.361,18.707-.614,6.544-.127,12.661-.258,18.351-.391,5.808-.208,10.643-.347,14.505-.419,3.861-.072,5.998-.056,6.41.047.23.576.875.893,1.936.951,1.265.109,2.358-.033,3.275-.426,1.124-.342,2.437-.532,3.941-.571,1.59.087,2.679.307,3.265.661.767-.119,1.638-.213,2.611-.281,1.061.058,1.871.001,2.433-.17.562-.171,1.152-.179,1.769-.025.736.08,1.386.035,1.947-.136,1.765.338,4.342.619,7.728.843,3.506.15,7.44.304,11.8.461,4.448.282,8.912.465,13.391.547,4.566.208,8.823.339,12.772.393,3.949.054,7.265.053,9.948-.003,2.682-.055,4.304-.169,4.865-.339,2.041-.735,3.625.076,4.752,2.433.91.331,1.725,1.262,2.448,2.792,0,0-.209.311-.628.933-.213.673-.608,1.82-1.184,3.44-.457,1.546-1.262,2.59-2.417,3.131-1.067.667-2.385,1.22-3.951,1.658-1.716.712-3.386,1.125-5.008,1.238-1.504.039-3.83-.128-6.98-.501-3.031-.447-7.8-1.069-14.305-1.866-1.592-.087-3.225-.236-4.903-.448-1.473-.161-2.885-.358-4.238-.593-1.149-.183-2.149-.278-3.004-.284-.737-.08-1.223-.046-1.461.102-.562.171-1.578.176-3.05.015-1.266-.109-2.814-.133-4.641-.071-1.354-.235-3.297-.461-5.829-.68-2.533-.218-5.168-.462-7.906-.732-2.651-.144-5.038-.274-7.158-.389-2.003-.19-3.124-.21-3.36-.062-.443.097-.989.168-1.638.213-.562.171-1.239.053-2.029-.352-.232-.576-.789-.768-1.675-.574-.679.245-1.02.367-1.02.367-.949.593-4.989.776-12.12.549-3.331.101-8.328.252-14.991.453-6.576.327-13.903.674-21.982,1.04-7.873.418-15.644.861-23.312,1.33-7.549.395-14.081.785-19.596,1.169-5.428.51-8.882,1.047-10.361,1.611-3.077,1.202-5.161,1.874-6.253,2.016-1.211.216-2.283-.104-3.218-.96Z"
-                  fill="#1bb6f9"
-                />
-              </svg> */}
-              <img src={greenUnderLine} alt="greenUnderLine" />
-            </span>
-          </h1>
+                <h1>
+                  <span className="SaaS-features-finance">
+                    FINANCE & ACCOUNTING
+                    <img src={greenUnderLine} alt="greenUnderLine" />
+                  </span>
+                </h1>
                 {/* <h1>FINANCE & ACCOUNTING</h1> */}
               </div>
               <div className="business-grid">
                 {services_financeAccounting.map((service) => (
                   <div
-                    className="business-service-card shadow"
+                    className="business-service-card "
                     key={service.id}>
                     <div className="business-service-card-image ">
                       <img src={service.image} alt={service.alt} />
@@ -876,27 +850,18 @@ const Services = () => {
                   flexDirection: "column",
                   width: "100%",
                 }}>
-                  <h1>
-            <span className="SaaS-features-sales">
-            Sales & Marketing
-            {/* <svg
-                className="SaaS-blue-underline-sales-marketing"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 100 100">
-                <path
-                  d="m1.78,98.974c-2.734-3.693-2.319-7.014,1.247-9.961,3.566-2.948,9.479-4.841,17.739-5.681,1.828-.062,3.597-.086,5.306-.074,1.828-.062,3.201-.289,4.118-.682.973-.068,3.509-.212,7.608-.432,4.305-.169,9.421-.394,15.347-.676,6.014-.156,12.25-.361,18.707-.614,6.544-.127,12.661-.258,18.351-.391,5.808-.208,10.643-.347,14.505-.419,3.861-.072,5.998-.056,6.41.047.23.576.875.893,1.936.951,1.265.109,2.358-.033,3.275-.426,1.124-.342,2.437-.532,3.941-.571,1.59.087,2.679.307,3.265.661.767-.119,1.638-.213,2.611-.281,1.061.058,1.871.001,2.433-.17.562-.171,1.152-.179,1.769-.025.736.08,1.386.035,1.947-.136,1.765.338,4.342.619,7.728.843,3.506.15,7.44.304,11.8.461,4.448.282,8.912.465,13.391.547,4.566.208,8.823.339,12.772.393,3.949.054,7.265.053,9.948-.003,2.682-.055,4.304-.169,4.865-.339,2.041-.735,3.625.076,4.752,2.433.91.331,1.725,1.262,2.448,2.792,0,0-.209.311-.628.933-.213.673-.608,1.82-1.184,3.44-.457,1.546-1.262,2.59-2.417,3.131-1.067.667-2.385,1.22-3.951,1.658-1.716.712-3.386,1.125-5.008,1.238-1.504.039-3.83-.128-6.98-.501-3.031-.447-7.8-1.069-14.305-1.866-1.592-.087-3.225-.236-4.903-.448-1.473-.161-2.885-.358-4.238-.593-1.149-.183-2.149-.278-3.004-.284-.737-.08-1.223-.046-1.461.102-.562.171-1.578.176-3.05.015-1.266-.109-2.814-.133-4.641-.071-1.354-.235-3.297-.461-5.829-.68-2.533-.218-5.168-.462-7.906-.732-2.651-.144-5.038-.274-7.158-.389-2.003-.19-3.124-.21-3.36-.062-.443.097-.989.168-1.638.213-.562.171-1.239.053-2.029-.352-.232-.576-.789-.768-1.675-.574-.679.245-1.02.367-1.02.367-.949.593-4.989.776-12.12.549-3.331.101-8.328.252-14.991.453-6.576.327-13.903.674-21.982,1.04-7.873.418-15.644.861-23.312,1.33-7.549.395-14.081.785-19.596,1.169-5.428.51-8.882,1.047-10.361,1.611-3.077,1.202-5.161,1.874-6.253,2.016-1.211.216-2.283-.104-3.218-.96Z"
-                  fill="#1bb6f9"
-                />
-              </svg> */}
-              <img src={greenUnderLine} alt="greenUnderLine" />
-            </span>
-          </h1>
+                <h1>
+                  <span className="SaaS-features-sales">
+                    Sales & Marketing
+                    <img src={greenUnderLine} alt="greenUnderLine" />
+                  </span>
+                </h1>
                 {/* <h1>Sales & Marketing</h1> */}
               </div>
               <div className="business-grid">
                 {services_salesMarketing.map((service) => (
                   <div
-                    className="business-service-card shadow"
+                    className="business-service-card "
                     key={service.id}>
                     <div className="business-service-card-image ">
                       <img src={service.image} alt={service.alt} />
@@ -919,27 +884,18 @@ const Services = () => {
                   flexDirection: "column",
                   width: "100%",
                 }}>
-                   <h1>
-            <span className="SaaS-features-hr">
-            HR Support
-            {/* <svg
-                className="SaaS-blue-underline-hrsupport"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 100 100">
-                <path
-                  d="m1.78,98.974c-2.734-3.693-2.319-7.014,1.247-9.961,3.566-2.948,9.479-4.841,17.739-5.681,1.828-.062,3.597-.086,5.306-.074,1.828-.062,3.201-.289,4.118-.682.973-.068,3.509-.212,7.608-.432,4.305-.169,9.421-.394,15.347-.676,6.014-.156,12.25-.361,18.707-.614,6.544-.127,12.661-.258,18.351-.391,5.808-.208,10.643-.347,14.505-.419,3.861-.072,5.998-.056,6.41.047.23.576.875.893,1.936.951,1.265.109,2.358-.033,3.275-.426,1.124-.342,2.437-.532,3.941-.571,1.59.087,2.679.307,3.265.661.767-.119,1.638-.213,2.611-.281,1.061.058,1.871.001,2.433-.17.562-.171,1.152-.179,1.769-.025.736.08,1.386.035,1.947-.136,1.765.338,4.342.619,7.728.843,3.506.15,7.44.304,11.8.461,4.448.282,8.912.465,13.391.547,4.566.208,8.823.339,12.772.393,3.949.054,7.265.053,9.948-.003,2.682-.055,4.304-.169,4.865-.339,2.041-.735,3.625.076,4.752,2.433.91.331,1.725,1.262,2.448,2.792,0,0-.209.311-.628.933-.213.673-.608,1.82-1.184,3.44-.457,1.546-1.262,2.59-2.417,3.131-1.067.667-2.385,1.22-3.951,1.658-1.716.712-3.386,1.125-5.008,1.238-1.504.039-3.83-.128-6.98-.501-3.031-.447-7.8-1.069-14.305-1.866-1.592-.087-3.225-.236-4.903-.448-1.473-.161-2.885-.358-4.238-.593-1.149-.183-2.149-.278-3.004-.284-.737-.08-1.223-.046-1.461.102-.562.171-1.578.176-3.05.015-1.266-.109-2.814-.133-4.641-.071-1.354-.235-3.297-.461-5.829-.68-2.533-.218-5.168-.462-7.906-.732-2.651-.144-5.038-.274-7.158-.389-2.003-.19-3.124-.21-3.36-.062-.443.097-.989.168-1.638.213-.562.171-1.239.053-2.029-.352-.232-.576-.789-.768-1.675-.574-.679.245-1.02.367-1.02.367-.949.593-4.989.776-12.12.549-3.331.101-8.328.252-14.991.453-6.576.327-13.903.674-21.982,1.04-7.873.418-15.644.861-23.312,1.33-7.549.395-14.081.785-19.596,1.169-5.428.51-8.882,1.047-10.361,1.611-3.077,1.202-5.161,1.874-6.253,2.016-1.211.216-2.283-.104-3.218-.96Z"
-                  fill="#1bb6f9"
-                />
-              </svg> */}
-               <img src={greenUnderLine} alt="greenUnderLine" />
-            </span>
-          </h1>
+                <h1>
+                  <span className="SaaS-features-hr">
+                    HR Support
+                    <img src={greenUnderLine} alt="greenUnderLine" />
+                  </span>
+                </h1>
                 {/* <h1>HR Support</h1> */}
               </div>
               <div className="business-grid">
                 {services_hrSupport.map((service) => (
                   <div
-                    className="business-service-card shadow"
+                    className="business-service-card "
                     key={service.id}>
                     <div className="business-service-card-image ">
                       <img src={service.image} alt={service.alt} />
@@ -962,10 +918,10 @@ const Services = () => {
                   flexDirection: "column",
                   width: "100%",
                 }}>
-                  <h1>
-            <span className="SaaS-features-cms">
-            Customer Management Services
-            {/* <svg
+                <h1>
+                  <span className="SaaS-features-cms">
+                    Customer Management Services
+                    {/* <svg
                 className="SaaS-blue-underline-customer-management-services"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 100 100">
@@ -974,15 +930,15 @@ const Services = () => {
                   fill="#1bb6f9"
                 />
               </svg> */}
-              <img src={greenUnderLine} alt="greenUnderLine" />
-            </span>
-          </h1>
+                    <img src={greenUnderLine} alt="greenUnderLine" />
+                  </span>
+                </h1>
                 {/* <h1>Customer Management Services</h1> */}
               </div>
               <div className="business-grid">
                 {services_customerManagement.map((service) => (
                   <div
-                    className="business-service-card shadow"
+                    className="business-service-card "
                     key={service.id}>
                     <div className="business-service-card-image ">
                       <img src={service.image} alt={service.alt} />
@@ -1005,10 +961,10 @@ const Services = () => {
                   flexDirection: "column",
                   width: "100%",
                 }}>
-                   <h1>
-            <span className="SaaS-features-reports">
-            Reports & Analytics
-            {/* <svg
+                <h1>
+                  <span className="SaaS-features-reports">
+                    Reports & Analytics
+                    {/* <svg
                 className="SaaS-blue-underline-reports-analytics"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 100 100">
@@ -1017,15 +973,15 @@ const Services = () => {
                   fill="#1bb6f9"
                 />
               </svg> */}
-              <img src={greenUnderLine} alt="greenUnderLine" />
-            </span>
-          </h1>
+                    <img src={greenUnderLine} alt="greenUnderLine" />
+                  </span>
+                </h1>
                 {/* <h1>Reports & Analytics</h1> */}
               </div>
-              <div style={{marginBottom:'4rem'}} className="business-grid">
+              <div style={{ marginBottom: '4rem' }} className="business-grid">
                 {services_reportsAnalytics.map((service) => (
                   <div
-                    className="business-service-card shadow"
+                    className="business-service-card "
                     key={service.id}>
                     <div className="business-service-card-image">
                       <img src={service.image} alt={service.alt} />
@@ -1039,6 +995,165 @@ const Services = () => {
               </div>
             </div>
           </div>
+
+          <div className="SaaS-grid-accordion">
+            <Accordion defaultActiveKey={['0']} alwaysOpen>
+              <Accordion.Item className="SaaS-accordion-item" eventKey="0">
+                <Accordion.Header style={{padding:0}}>Frontend</Accordion.Header>
+                <Accordion.Body className="SaaS-accordion-body">
+                  <div className="SaaS-grid-mobile">
+                    <div className="business-grid">
+                      {services_frontend.map((service) => (
+                        <div
+                          className="business-service-card "
+                          key={service.id}>
+                          <div className="business-service-card-image ">
+                            <img src={service.image} alt={service.alt} />
+                          </div>
+                          <div className="business-service-card-content">
+                            <h4>{service.title}</h4>
+                            <span>{service.description}</span>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </Accordion.Body>
+              </Accordion.Item>
+              <Accordion.Item className="SaaS-accordion-item" eventKey="1">
+                <Accordion.Header>Finance & Accounting</Accordion.Header>
+                <Accordion.Body className="SaaS-accordion-body">
+                  <div className="business-grid">
+                    {services_financeAccounting.map((service) => (
+                      <div
+                        className="business-service-card "
+                        key={service.id}>
+                        <div className="business-service-card-image ">
+                          <img src={service.image} alt={service.alt} />
+                        </div>
+                        <div className="business-service-card-content">
+                          <h4>{service.title}</h4>
+                          <span>{service.description}</span>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </Accordion.Body>
+              </Accordion.Item>
+              <Accordion.Item className="SaaS-accordion-item" eventKey="2">
+                <Accordion.Header>Sales & Marketing</Accordion.Header>
+                <Accordion.Body className="SaaS-accordion-body">
+                  <div className="business-grid">
+                    {services_salesMarketing.map((service) => (
+                      <div
+                        className="business-service-card "
+                        key={service.id}>
+                        <div className="business-service-card-image ">
+                          <img src={service.image} alt={service.alt} />
+                        </div>
+                        <div className="business-service-card-content">
+                          <h4>{service.title}</h4>
+                          <span>{service.description}</span>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </Accordion.Body>
+              </Accordion.Item>
+              <Accordion.Item className="SaaS-accordion-item" eventKey="3">
+                <Accordion.Header>HR support</Accordion.Header>
+                <Accordion.Body className="SaaS-accordion-body">
+                  <div className="business-grid">
+                    {services_hrSupport.map((service) => (
+                      <div
+                        className="business-service-card "
+                        key={service.id}>
+                        <div className="business-service-card-image ">
+                          <img src={service.image} alt={service.alt} />
+                        </div>
+                        <div className="business-service-card-content">
+                          <h4>{service.title}</h4>
+                          <span>{service.description}</span>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </Accordion.Body>
+              </Accordion.Item>
+              <Accordion.Item className="SaaS-accordion-item" eventKey="4">
+                <Accordion.Header>Customer Management Services</Accordion.Header>
+                <Accordion.Body className="SaaS-accordion-body">
+                  <div className="business-grid">
+                    {services_customerManagement.map((service) => (
+                      <div
+                        className="business-service-card "
+                        key={service.id}>
+                        <div className="business-service-card-image ">
+                          <img src={service.image} alt={service.alt} />
+                        </div>
+                        <div className="business-service-card-content">
+                          <h4>{service.title}</h4>
+                          <span>{service.description}</span>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </Accordion.Body>
+              </Accordion.Item>
+              <Accordion.Item className="SaaS-accordion-item" eventKey="5">
+                <Accordion.Header>Reports & Analytics</Accordion.Header>
+                <Accordion.Body className="SaaS-accordion-body">
+                  <div className="business-grid">
+                    {services_reportsAnalytics.map((service) => (
+                      <div
+                        className="business-service-card "
+                        key={service.id}>
+                        <div className="business-service-card-image ">
+                          <img src={service.image} alt={service.alt} />
+                        </div>
+                        <div className="business-service-card-content">
+                          <h4>{service.title}</h4>
+                          <span>{service.description}</span>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </Accordion.Body>
+              </Accordion.Item>
+            </Accordion>
+          </div>
+          {/* <div className="SaaS-grid-mobile">
+            <div
+              style={{
+                display: "flex",
+                alignItems: "start",
+                justifyContent: "start",
+                flexDirection: "column",
+                width: "100%",
+              }}>
+              <h1>
+                <span className="SaaS-features-frontend">
+                  Frontend
+                  <img src={greenUnderLine} alt="greenUnderLine" />
+                </span>
+              </h1>
+            </div>
+            <div className="business-grid">
+              {services_frontend.map((service) => (
+                <div
+                  className="business-service-card "
+                  key={service.id}>
+                  <div className="business-service-card-image ">
+                    <img src={service.image} alt={service.alt} />
+                  </div>
+                  <div className="business-service-card-content">
+                    <h4>{service.title}</h4>
+                    <span>{service.description}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div> */}
         </div>
 
         <div className="SaaS-last-banner-section">

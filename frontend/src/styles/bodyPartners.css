@@ -96,7 +96,6 @@
 
 .testimonial-right-spacing {
     padding-right: 4rem;
-    padding-bottom: 10rem;
 }
 
 
@@ -273,8 +272,10 @@
 
 .custom-image-biznest-container {
     height: 100%;
-
+    overflow: hidden;
+    border-radius: 5px;
 }
+
 
 .custom-image-biznest-container img {
     width: 75%;
@@ -292,7 +293,7 @@
         min-height: 400px;
         border-radius: 10px;
         object-fit: cover;
-        object-position: left;
+        object-position: center;
     }
 
     .custom-image-biznest-container img {

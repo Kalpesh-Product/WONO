@@ -12,7 +12,7 @@ const Faqs = () => {
         {/* <h3 className="Title-font text-center faq-title ComicFont pb-5"> */}
         <h3 className="Title-font text-center pb-5 ComicFont faq-title">
           <img src={greenUnderLine} alt="" />
-          FAQs
+          Frequently Asked Questions (FAQ)
         </h3>
         {/* <div className="privacy-section privSect2"></div> */}
         <div className="privacy-section privSect2">

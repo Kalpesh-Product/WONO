@@ -38,7 +38,7 @@ import "../styles/bodyPartners.css";
 // import BiznestTestimonial from "../assets/testimonials/kashif-image.jpg";
 import greenUnderLine from "../assets/underline-bg/blue-line.png";
 import greenRound from "../assets/underline-bg/blue-circle.png";
-import BiznestTestimonial from "../assets/testimonials/kashif-image-2.webp";
+import BiznestTestimonial from "../assets/testimonials/Kashif_Edit.png";
 // import "../styles/bodyLastBanner.css";
 
 const Homepage = () => {
@@ -134,7 +134,7 @@ const Homepage = () => {
   // mobile screen for globe responsiveness
   const ismobile = window.innerWidth < 769;
   const isTablet = window.innerWidth < 1025;
-  
+
 
   return (
     <div className="master-container">
@@ -173,15 +173,15 @@ const Homepage = () => {
                 </div>
                 <div className="col-12 col-lg-6 col-md-12 col-sm-12 home-main-tagline">
                   <span>"Nomad Commerce"</span>
-                  <span><b style={{ fontFamily:'Popins-Semibold',fontWeight: 'normal' }}>WoNo.Co</b> = <b style={{ fontFamily:'Popins-Semibold',fontWeight: 'normal' }}>Wo</b>rld <b style={{ fontFamily:'Popins-Semibold',fontWeight: 'normal' }}>No</b>mad <b style={{ fontFamily:'Popins-Semibold',fontWeight: 'normal' }}>Co</b>mmerce</span>
+                  <span><b style={{ fontFamily: 'Popins-Semibold', fontWeight: 'normal' }}>WoNo.Co</b> = <b style={{ fontFamily: 'Popins-Semibold', fontWeight: 'normal' }}>Wo</b>rld <b style={{ fontFamily: 'Popins-Semibold', fontWeight: 'normal' }}>No</b>mad <b style={{ fontFamily: 'Popins-Semibold', fontWeight: 'normal' }}>Co</b>mmerce</span>
                 </div>
               </div>
             </h2>
             <span className="home-main-title-desc">
-              A simple no code instant SaaS software platform that supports
-              businesses in remote and aspiring destinations!
+              A simple NO CODE SaaS Platform. We support businesses in small and aspiring destinations!
+
               <br />
-              Providing SaaS Tech to nomads businesses across the world. (E.g.: Co-Working, Co-Living, Hostels, Workations, Resorts, Cafes, Events etc)
+              SaaS Tech for Nomad businesses across the world. (E.g.: Co-Working, Co-Living, Hostels, Workations, Resorts, Cafes, Events etc)
 
             </span>
           </div>
@@ -246,7 +246,7 @@ const Homepage = () => {
           </div>
           <div className="N-Commerce">
             <h3>
-              <strong>INTRODUCING<br/>N-COMMERCE</strong>
+              <strong>INTRODUCING<br />N-COMMERCE</strong>
             </h3>
             <p> ( “NOMAD COMMERCE” ) </p>
             <div

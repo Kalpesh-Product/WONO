@@ -1026,7 +1026,6 @@
         border-radius: 20px;
         height: 400px;
         position: relative;
-        display: none;
     }
 
     .themePage-featured-grid-2 img {
@@ -1248,7 +1247,7 @@
         display: grid;
         grid-template-columns: 1fr;
         background-color: white;
-        padding: 2rem 1rem;
+        padding: 2rem 1rem 0;
         gap: 1rem;
         border-radius: 10px;
     }
@@ -1296,9 +1295,8 @@
     .themePage-featured-grid-2 {
         width: 100%;
         border-radius: 20px;
-        height: 400px;
+        height: 250px;
         position: relative;
-        display: none;
     }
 
     .themePage-featured-grid-2 img {
@@ -1315,7 +1313,7 @@
         align-items: start;
         justify-content: center;
         flex-direction: column;
-        padding: 2rem 1.7rem;
+        padding: 1rem 1.7rem 2rem;
         height: 100%;
     }
 
