@@ -14,11 +14,13 @@
 }
 
 @font-face {
-    font-family: ComicSansMS;
+    font-family: ComicSansMS-bold;
     src: url('../assets/WONO_images/img/fonts/ComicSansMS.ttf');
 }
-
-
+@font-face {
+    font-family: ComicSansMS-bold;
+    src: url('../assets/WONO_images/img/fonts/comic-bold.ttf');
+}
 
 
 .services {
@@ -28,9 +30,9 @@
     justify-content: center;
 }
 
-.services * {
+/* .services * {
     font-family: Popins-Regular;
-}
+} */
 
 .services:not(:last-child) {
     padding: 0 7.5rem;
@@ -44,7 +46,7 @@
 
 .services-animation-container {
     position: relative;
-    font-family: ComicSansMS;
+    font-family: ComicSansMS-bold;
     width: 100%;
 }
 
@@ -69,12 +71,13 @@
 .SaaS-main-heading h1 {
     font-size: 3rem;
     padding: 0 0 2rem 0;
-    font-weight: 900;
-    font-family: ComicSansMS;
+    font-weight: normal;
+    font-family: ComicSansMS-bold;
 }
 
 .SaaS-main-heading h4 {
     padding-bottom: 2rem;
+    font-family: Popins-Regular;
 }
 
 .SaaS-main-tagline {
@@ -104,18 +107,18 @@
 
 .SaaS-featured-master h1 {
     padding-top: 4rem;
-    font-weight: 600;
+    font-weight: normal;
     margin: 0;
-    font-family: ComicSansMS;
+    font-family: ComicSansMS-bold;
 }
 
 .SaaS-featured-master>h1 span {
-    font-family: ComicSansMS;
+    font-family: ComicSansMS-bold;
 }
 
 .SaaS-featured-heading-container {
     position: relative;
-    font-family: ComicSansMS;
+    font-family: ComicSansMS-bold;
     width: 100%;
 
 }
@@ -234,6 +237,7 @@
 
 .SaaS-featured-grid-left {
     font-size: 1.5rem;
+    font-family: Popins-Regular;
 }
 
 .SaaS-featured-grid-right {
@@ -272,21 +276,21 @@
 }
 
 .SaaS-grid-heading h2 {
-    font-weight: 800;
+    font-weight: normal;
     font-size: 4rem;
-    font-family: ComicSansMS;
+    font-family: ComicSansMS-bold;
     position: relative;
     -webkit-font-smoothing: antialiased;
 }
 
 .SaaS-grid-heading>h2 span {
-    font-family: ComicSansMS;
+    font-family: ComicSansMS-bold;
 }
 
 .SaaS-grid-underline-container {
     position: relative;
     font-size: 4rem !important;
-    font-family: ComicSansMS;
+    font-family: ComicSansMS-bold;
     width: 100%;
 }
 
@@ -299,7 +303,7 @@
 }
 
 .SaaS-grid-underline-container * {
-    font-family: ComicSansMS;
+    font-family: ComicSansMS-bold;
 }
 
 /* .SaaS-grid-blue-underline {
@@ -338,9 +342,9 @@
 .businesses>div>h1 {
     text-align: start;
     font-size: 2rem;
-    font-weight: 700;
+    font-weight: normal;
     text-align: start;
-    font-family: ComicSansMS;
+    font-family: Popins-Semibold !important;
     color: black;
     text-transform: uppercase;
 
@@ -385,7 +389,8 @@
 .business-service-card-content h4 {
     font-size: 1rem;
     margin: 0;
-    font-weight: bold;
+    font-family: Popins-Semibold !important;
+    font-weight: normal;
     text-align: start;
     line-height: 182%;
 }
@@ -394,6 +399,7 @@
     font-size: 0.8rem;
     margin: 0;
     width: 100%;
+    font-family: Popins-Regular;
 }
 
 .business-service-card-image {
@@ -640,7 +646,7 @@
 
     .services-animation-container {
         position: relative;
-        font-family: ComicSansMS;
+        font-family: ComicSansMS-bold;
     }
 
     .services-blue-underline {
@@ -749,7 +755,7 @@
     .SaaS-grid-underline-container {
         position: relative;
         font-size: 2rem !important;
-        font-family: ComicSansMS;
+        font-family: ComicSansMS-bold;
     }
 
     .SaaS-grid-blue-underline {
@@ -774,7 +780,7 @@
     .business-service-card-content h4 {
         font-size: 1rem;
         margin: 0;
-        font-weight: bold;
+        font-weight: normal;
     }
 
     .business-service-card-content span {
@@ -884,7 +890,7 @@
 
     .services-animation-container {
         position: relative;
-        font-family: ComicSansMS;
+        font-family: ComicSansMS-bold;
     }
 
 
@@ -1063,7 +1069,7 @@
     .SaaS-grid-underline-container {
         position: relative;
         font-size: 2rem !important;
-        font-family: ComicSansMS;
+        font-family: ComicSansMS-bold;
     }
 
     .SaaS-grid-blue-underline {
@@ -1089,7 +1095,7 @@
     .business-service-card-content h4 {
         font-size: 1rem;
         margin: 0;
-        font-weight: bold;
+        font-weight: normal;
         line-height: 184%;
     }
 
@@ -1200,7 +1206,7 @@
 
     .services-animation-container {
         position: relative;
-        font-family: ComicSansMS;
+        font-family: ComicSansMS-bold;
     }
 
 
@@ -1379,7 +1385,7 @@
     .SaaS-grid-underline-container {
         position: relative;
         font-size: 2rem !important;
-        font-family: ComicSansMS;
+        font-family: ComicSansMS-bold;
     }
 
     .SaaS-grid-blue-underline {
@@ -1405,7 +1411,7 @@
     .business-service-card-content h4 {
         font-size: 1rem;
         margin: 0;
-        font-weight: bold;
+        font-weight: normal;
         line-height: 184%;
     }
 
@@ -1528,7 +1534,7 @@
 
     .services-animation-container {
         position: relative;
-        font-family: ComicSansMS;
+        font-family: ComicSansMS-bold;
     }
 
 
@@ -1707,7 +1713,7 @@
     .SaaS-grid-underline-container {
         position: relative;
         font-size: 2rem !important;
-        font-family: ComicSansMS;
+        font-family: ComicSansMS-bold;
     }
 
     .SaaS-grid-blue-underline {
@@ -1733,7 +1739,7 @@
     .business-service-card-content h4 {
         font-size: 0.8rem;
         margin: 0;
-        font-weight: bold;
+        font-weight: normal;
         line-height: 184%;
     }
 

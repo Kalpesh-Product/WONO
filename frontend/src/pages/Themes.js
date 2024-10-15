@@ -179,7 +179,7 @@ const Themes = () => {
                     key={index}
                     className={`themePage-website-features-grid-${index + 1}`}>
                     <h4>
-                      <b>{item.title}</b>
+                      <>{item.title}</>
                     </h4>
                     <p>{item.description}</p>
                   </div>
@@ -206,7 +206,7 @@ const Themes = () => {
               <div className="themePage-website-support-grid">
                 <div className="themePage-website-support-grid-1">
                   <h2>
-                    <b>Get answers</b>
+                    <>Get answers</>
                   </h2>
                   <p>
                     Watch tutorials and read detailed articles in Wono help
@@ -216,7 +216,7 @@ const Themes = () => {
                 </div>
                 <div className="themePage-website-support-grid-1">
                   <h2>
-                    <b>Contact Us</b>
+                    <>Contact Us</>
                   </h2>
                   <p>
                     Get support by chat or schedule a call with a Customer Care
@@ -232,7 +232,7 @@ const Themes = () => {
                 </div>
                 <div className="themePage-website-support-grid-1">
                   <h2>
-                    <b>Hire a pro</b>
+                    <>Hire a pro</>
                   </h2>
                   <p>
                     Get help at any stage -- from site creation to online growth

@@ -19,7 +19,7 @@
     align-items: center;
     justify-content: center;
     background-color: black;
-    padding: 4rem 0 4rem 0;
+    padding: 4rem 7rem 4rem 7rem;
 }
 
 .product-page-master * {
@@ -49,7 +49,8 @@
 .product-page-grid-item h1 {
     text-transform: uppercase;
     margin-bottom: 2rem;
-    font-weight: bold;
+    font-weight: normal;
+    font-family: Popins-Medium !important;;
 }
 
 .product-page-feature div {
@@ -136,7 +137,8 @@
 }
 
 .product-page-perks-grid-1 span {
-    font-weight: bold;
+    font-weight: normal;
+    font-family: Popins-Medium !important;;
     font-size: 2rem;
 }
 
@@ -159,8 +161,9 @@
 .product-page-perks-description h4 {
     margin-bottom: 1rem;
     font-size: 1.1rem;
-    font-weight: bold;
+    font-weight: normal;
     line-break: strict;
+    font-family: Popins-Semibold !important;;
 }
 
 .product-page-perks-description span {
@@ -210,7 +213,8 @@
 
 .product-page-reccomendations-header h2 {
     margin: 0;
-    font-weight: 600;
+    font-weight: normal;
+    font-family: Popins-Medium !important;;
 }
 
 .product-page-build-section {
@@ -234,7 +238,8 @@
     font-size: 4.15rem;
     padding: 0rem 0rem 2rem 0rem;
     text-align: center;
-    font-weight: bold;
+    font-weight: normal;
+    font-family: Popins-Medium !important;;
 }
 
 .product-page-build-button-space {
@@ -258,7 +263,7 @@
         font-size: 4.2rem;
         padding: 0rem 0rem 2rem 0rem;
         text-align: center;
-        font-weight: bold;
+        font-weight: normal;
     }
 
     .product-page-grid {
@@ -276,7 +281,7 @@
         color: #212529;
         font-family: Popins-Regular;
         font-size: 6.5rem;
-        font-weight: bold;
+        font-weight: normal;
         padding-bottom: 2rem;
     } */
 }
@@ -288,13 +293,23 @@
         font-size: 3.85rem;
         padding: 0rem 0rem 2rem 0rem;
         text-align: center;
-        font-weight: bold;
+        font-weight: normal;
     }
 
     .product-page {
         background-color: black;
         color: white;
         padding: 0 0rem;
+    }
+
+    .product-page-section {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: black;
+        padding: 4rem 0rem 4rem 0rem;
     }
 
     .product-page-grid {
@@ -338,7 +353,7 @@
     .product-page-grid-item h1 {
         text-transform: uppercase;
         margin-bottom: 2rem;
-        font-weight: bold;
+        font-weight: normal;
         font-size: 2.5rem;
     }
 
@@ -377,14 +392,14 @@
     }
 
     .product-page-perks-grid-1 span {
-        font-weight: bold;
+        font-weight: normal;
         font-size: 1.7rem;
     }
 
     .product-page-perks-description h4 {
         margin-bottom: 1rem;
         font-size: 1.3rem;
-        font-weight: bold;
+        font-weight: normal;
         line-break: strict;
     }
 
@@ -404,7 +419,7 @@
 
     .product-page-reccomendations-header h2 {
         margin: 0;
-        font-weight: 600;
+        font-weight: normal;
         font-size: 2.5rem;
     }
     .product-page-reccomendations-grid {
@@ -432,7 +447,7 @@
         font-size: 3.127rem;
         padding: 0rem 0 2rem 0;
         text-align: center;
-        font-weight: bold;
+        font-weight: normal;
     }
     .product-page-build-button-space button {
         background-color: black;
@@ -482,7 +497,7 @@
     .product-page-grid-item h1 {
         text-transform: uppercase;
         margin-bottom: 2rem;
-        font-weight: bold;
+        font-weight: normal;
         text-align: start;
         padding-left: 0;
 
@@ -577,7 +592,7 @@
     }
 
     .product-page-perks-grid-1 span {
-        font-weight: bold;
+        font-weight: normal;
         font-size: 1.7rem;
         padding-bottom: 2rem;
     }
@@ -601,7 +616,7 @@
     .product-page-perks-description h4 {
         margin-bottom: 1rem;
         font-size: 1.2rem;
-        font-weight: bold;
+        font-weight: normal;
     }
 
     .product-page-perks-description span {
@@ -669,7 +684,7 @@
         font-size: 2rem;
         padding: 0rem 0rem 2rem 0rem;
         text-align: center;
-        font-weight: bold;
+        font-weight: normal;
     }
 
     .product-page-build-button-space {
@@ -727,7 +742,7 @@
     .product-page-grid-item h1 {
         text-transform: uppercase;
         margin-bottom: 2rem;
-        font-weight: bold;
+        font-weight: normal;
         text-align: start;
         font-size: 1.5rem;
     }
@@ -822,7 +837,7 @@
     }
 
     .product-page-perks-grid-1 span {
-        font-weight: bold;
+        font-weight: normal;
         font-size: 1.7rem;
         padding-bottom: 2rem;
     }
@@ -846,7 +861,7 @@
     .product-page-perks-description h4 {
         margin-bottom: 1rem;
         font-size: 1.2rem;
-        font-weight: bold;
+        font-weight: normal;
     }
 
     .product-page-perks-description span {
@@ -867,7 +882,7 @@
 
     .product-page-reccomendations-header h2 {
         margin: 0;
-        font-weight: 600;
+        font-weight: normal;
         font-size: 1.8rem;
     }
 
@@ -925,7 +940,7 @@
         font-size: 2rem;
         padding: 0rem 0rem 2rem 0rem;
         text-align: center;
-        font-weight: bold;
+        font-weight: normal;
     }
 
     .product-page-build-button-space {
@@ -982,7 +997,7 @@
     .product-page-grid-item h1 {
         text-transform: uppercase;
         margin-bottom: 2rem;
-        font-weight: bold;
+        font-weight: normal;
         text-align: start;
         font-size: 1.5rem;
     }
@@ -1077,7 +1092,7 @@
     }
 
     .product-page-perks-grid-1 span {
-        font-weight: bold;
+        font-weight: normal;
         font-size: 1.7rem;
         padding-bottom: 2rem;
     }
@@ -1101,7 +1116,7 @@
     .product-page-perks-description h4 {
         margin-bottom: 1rem;
         font-size: 1.2rem;
-        font-weight: bold;
+        font-weight: normal;
     }
 
     .product-page-perks-description span {
@@ -1122,8 +1137,9 @@
 
     .product-page-reccomendations-header h2 {
         margin: 0;
-        font-weight: 600;
+        font-weight: normal;
         font-size: 1.8rem;
+        font-family: Popins-Medium !important;;
     }
 
     .product-page-reccomendations-grid {
@@ -1180,7 +1196,7 @@
         font-size: 2rem;
         padding: 0rem 0rem 2rem 0rem;
         text-align: center;
-        font-weight: bold;
+        font-weight: normal;
     }
 
     .product-page-build-button-space {
@@ -1237,7 +1253,7 @@
     .product-page-grid-item h1 {
         text-transform: uppercase;
         margin-bottom: 2rem;
-        font-weight: bold;
+        font-weight: normal;
         text-align: start;
         font-size: 1.5rem;
     }
@@ -1332,7 +1348,7 @@
     }
 
     .product-page-perks-grid-1 span {
-        font-weight: bold;
+        font-weight: normal;
         font-size: 1.7rem;
         padding-bottom: 2rem;
     }
@@ -1356,7 +1372,7 @@
     .product-page-perks-description h4 {
         margin-bottom: 1rem;
         font-size: 1.2rem;
-        font-weight: bold;
+        font-weight: normal;
     }
 
     .product-page-perks-description span {
@@ -1377,7 +1393,7 @@
 
     .product-page-reccomendations-header h2 {
         margin: 0;
-        font-weight: 600;
+        font-weight: normal;
         font-size: 1.8rem;
     }
 
@@ -1435,7 +1451,7 @@
         font-size: 2rem;
         padding: 0rem 0rem 2rem 0rem;
         text-align: center;
-        font-weight: bold;
+        font-weight: normal;
     }
 
     .product-page-build-button-space {
