@@ -37,7 +37,11 @@
     display: flex;
     justify-content: flex-end;
     width: 100%;
-    align-items: baseline;
+    align-items: center;
+}
+
+.accordion-button:not(.collapsed) {
+    color: black !important;
 }
 
 

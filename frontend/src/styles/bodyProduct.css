@@ -1521,3 +1521,15 @@
         width: 50%;
     }
 }
+@media (max-width:326px) and (min-width:200px){
+    .product-page-button {
+        padding: 0.7rem 1.5rem;
+        background-color: white;
+        color: black;
+        border-radius: 30px;
+        width: 60%;
+        justify-content: space-around;
+        margin-bottom: 2rem;
+        margin-left: 2rem;
+    }
+}

@@ -2,6 +2,9 @@ section {
   overflow: hidden;
 }
 
+.nav-link:not(.active) {
+  color: #0AA9EF; /* Change this to your desired color */
+}
 
 .job-details-main {
   padding: 40px 0;
