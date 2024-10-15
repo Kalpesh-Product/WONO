@@ -106,4 +106,9 @@
     padding: 0.5rem 2rem;
     border-radius: 30px;
     margin: 0;
+    font-weight: normal !important;
+    border: none;
+}
+.get-started-main-button button{
+    border: none;
 }

@@ -232,10 +232,8 @@
     background-color: black;
     color: white;
     margin: 0;
-    /* padding: 0.5rem; */
-    /* padding: 20px 40px; */
     padding: 10px 40px;
-    /* margin: auto */
+    border: none;
 }
 
 .custom-image-biznest {
