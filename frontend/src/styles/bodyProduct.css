@@ -19,7 +19,7 @@
     align-items: center;
     justify-content: center;
     background-color: black;
-    padding: 4rem 0 4rem 0;
+    padding: 4rem 7rem 4rem 7rem;
 }
 
 .product-page-master * {
@@ -300,6 +300,16 @@
         background-color: black;
         color: white;
         padding: 0 0rem;
+    }
+
+    .product-page-section {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: black;
+        padding: 4rem 0rem 4rem 0rem;
     }
 
     .product-page-grid {

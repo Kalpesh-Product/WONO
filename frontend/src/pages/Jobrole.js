@@ -227,7 +227,7 @@ const Jobrole = () => {
                   <h5 classname="career-job-title" > 1. Social Media Executive</h5>
                 </div>
                 <div className='col-lg-6 col-sm-6  text-button' style={{ textAlign: "right" ,display:"flex" , justifyContent:'space-between'}}>
-                   <p style={{ fontWeight: "500", margin : 0,display:"flex" , justifyContent:'flex-end',width:'100%'}} >
+                   <p className='career-jobtitle' >
                     <span className='link-btn '>Full-Time | On-Site| Goa </span>
                     <Link onClick={() => {
                       window.scrollTo({
