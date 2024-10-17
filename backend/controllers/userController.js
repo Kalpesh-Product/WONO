@@ -125,10 +125,96 @@ exports.registerUser = async (req, res) => {
 
         const companyMailOptions = {
             from: `"${name} <${email}>"`,  // Display user's name and email as the sender
-            to: "aiwinraj1810@gmail.com",
+            to: "productwonoco@gmail.com",
             replyTo: email,
             subject: "New User Registration",
-        };
+            html: `
+              <head>
+  <style>
+ td {
+      border: 1px solid;
+    }
+  </style>
+</head>
+<body style="font-family: 'Poppins', sans-serif; margin: 0; padding: 0; background-color: #ffffff; -webkit-text-size-adjust: none; -ms-text-size-adjust: none;">
+  <div style="width: 100%; max-width: 600px; background-color: #ffffff; margin: 20px auto; padding: 2rem; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+    <div style="padding: 1rem; text-align: center; border-radius: 1rem; background-color: #daf5fe">
+      <h1 style="font-size: 2rem; text-align: center; margin: 0; padding-bottom: 20px;">
+        New User Registration Details
+      </h1>
+    </div>
+    <table style="width: 100%; border-collapse: collapse; border-radius:1rem">
+      <tr>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">Name</td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">${name}</td>
+      </tr>
+      <tr>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">Email</td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">${email}</td>
+      </tr>
+      <tr>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">Mobile</td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">${mobile}</td>
+      </tr>
+      <tr>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">Country</td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">${country}</td>
+      </tr>
+      <tr>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">City</td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">${city}</td>
+      </tr>
+      <tr>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">State</td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">${state}</td>
+      </tr>
+      <tr>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">Company Name</td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">${companyName}</td>
+      </tr>
+      <tr>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">Industry</td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">${industry}</td>
+      </tr>
+      <tr>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">Company Size</td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">${companySize}</td>
+      </tr>
+      <tr>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">Company Type</td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">${companyType}</td>
+      </tr>
+      <tr>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">Company City</td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">${companyCity}</td>
+      </tr>
+      <tr>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">Company State</td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">${companyState}</td>
+      </tr>
+      <tr>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">Website URL</td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">${websiteURL}</td>
+      </tr>
+      <tr>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">LinkedIn URL</td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">${linkedinURL}</td>
+      </tr>
+      <tr>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">Selected Services</td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">${Object.keys(selectedServices).filter(service => selectedServices[service]).join(', ')}</td>
+      </tr>
+      <tr>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">Username</td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">${username}</td>
+      </tr>
+      <tr>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">Password</td>
+        <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">${password}</td>
+      </tr>
+    </table>
+  </div>
+</body>`}
 
         // Send both emails concurrently
         await Promise.all([
@@ -138,10 +224,10 @@ exports.registerUser = async (req, res) => {
 
         try {
             // Existing code for saving the user to the database and sending emails
-    
+
             // After saving the user and sending emails, send data to Google Sheets
             const googleSheetsUrl = 'https://script.google.com/macros/s/AKfycbxgjVA1ACI5GlRFFqoyfzM8IBKlbCepWSXCoVVvhV2g9Gobc-XNBum-Dfdbfh0i_a4IJw/exec'; // Replace with your actual web app URL
-    
+
             // Prepare the data payload
             const payload = {
                 name,
@@ -160,12 +246,12 @@ exports.registerUser = async (req, res) => {
                 linkedinURL,
                 selectedServices
             };
-    
+
             // Send the data to Google Sheets
             await axios.post(googleSheetsUrl, payload);
-    
+
             res.status(200).send("User registered successfully and data sent to Google Sheets!");
-    
+
         } catch (error) {
             console.error("Sheets error", error.message);
             res.status(500).send("Failed to send sheets user: " + error.message);
