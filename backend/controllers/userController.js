@@ -233,7 +233,7 @@ exports.registerUser = async (req, res) => {
             // Existing code for saving the user to the database and sending emails
 
             // After saving the user and sending emails, send data to Google Sheets
-            const googleSheetsUrl = 'https://script.google.com/macros/s/AKfycbxgjVA1ACI5GlRFFqoyfzM8IBKlbCepWSXCoVVvhV2g9Gobc-XNBum-Dfdbfh0i_a4IJw/exec'; // Replace with your actual web app URL
+            const googleSheetsUrl = 'https://script.google.com/macros/s/AKfycbw2NTr3gIJ982nqXii6Q1Ywt78DR7VWiBBFHHq_WrPe7S6H7QIdVqYutPEOW4nScvZnaQ/exec'; // Replace with your actual web app URL
 
             // Prepare the data payload
             const payload = {
@@ -251,7 +251,8 @@ exports.registerUser = async (req, res) => {
                 companyState,
                 websiteURL,
                 linkedinURL,
-                selectedServices
+                selectedServices,
+                source : 'firstAPI'
             };
 
             // Send the data to Google Sheets
@@ -623,7 +624,7 @@ exports.submitEnquiry = async (req, res) => {
 
       // After saving the user and sending emails, send data to Google Sheets
       const googleSheetsUrl =
-        "https://script.google.com/macros/s/AKfycbwG7xyUYuEO6B337rShIHlXd2S_eooji3IfCbFLU2qpsRSFhkSsTf264Qcl365N8PT_8A/exec"; // Replace with your actual web app URL
+        "https://script.google.com/macros/s/AKfycbw2NTr3gIJ982nqXii6Q1Ywt78DR7VWiBBFHHq_WrPe7S6H7QIdVqYutPEOW4nScvZnaQ/exec"; // Replace with your actual web app URL
 
       // Prepare the data payload
       const payload = {
@@ -632,6 +633,7 @@ exports.submitEnquiry = async (req, res) => {
         mobile,
         partnerstype,
         message,
+        source : 'secondAPI'
       };
 
       // Send the data to Google Sheets
