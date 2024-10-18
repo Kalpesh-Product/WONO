@@ -685,9 +685,9 @@ exports.createJobApplication = async (req, res) => {
     return res.status(400).json({ message: "Resume file is required" });
   }
 
-  // Create a storage reference
-  const resumeRef = ref(storage, `resumes/${req.file.originalname}`);
-  console.log(resumeRef);
+    // Create a storage reference
+    const resumeRef = ref(storage,`resumes/${req.file.originalname}`);
+    console.log(resumeRef)
 
   try {
     // Upload file to Firebase Storage using the buffer
@@ -843,9 +843,45 @@ exports.createJobApplication = async (req, res) => {
       console.log("Auto-reply sent to applicant");
     });
 
-    res.status(200).json({ message: "Application details have been sent" });
-  } catch (error) {
-    console.error("Error saving application:", error);
-    res.status(500).json({ message: "Failed to save application" });
-  }
+        try {
+            // Existing code for saving the user to the database and sending emails
+    
+            // After saving the user and sending emails, send data to Google Sheets
+            const googleSheetsUrl = 'https://script.google.com/macros/s/AKfycbzVMJ6FT1Y3E6z7LYrjpyQZK2PHL4g_7md8RHFGeGobPVHVpiRPhsnx82erRQ1SCULT/exec'; // Replace with your actual web app URL
+    
+            // Prepare the data payload
+            const payload = {
+                jobTitle,
+                name,
+                email,
+                number,
+                date,
+                experience,
+                monthlySalary,
+                expectedSalary,
+                daysToJoin,
+                relocateGoa,
+                resumeUrl : resumeUrl,
+                personality,
+                skills,
+                willing,
+                message
+            };
+    
+            // Send the data to Google Sheets
+            await axios.post(googleSheetsUrl, payload);
+            console.log("linked url : ",linkedInProfile)
+            res.status(200).send("User registered successfully and data sent to Google Sheets!");
+    
+        } catch (error) {
+            console.error("Sheets error", error.message);
+            res.status(500).send("Failed to send sheets user: " + error.message);
+        }
+        res.status(200).json({ message: 'Application details have been sent' });
+    } catch (error) {
+        console.error('Error saving application:', error);
+        res.status(500).json({ message: 'Failed to save application' });
+    }
+
+   
 };
