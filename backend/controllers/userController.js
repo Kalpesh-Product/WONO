@@ -258,11 +258,11 @@ exports.registerUser = async (req, res) => {
             // Send the data to Google Sheets
             await axios.post(googleSheetsUrl, payload);
 
-            res.status(200).send("User registered successfully and data sent to Google Sheets!");
+            return res.status(200).send("User registered successfully and data sent to Google Sheets!");
 
         } catch (error) {
             console.error("Sheets error", error.message);
-            res.status(500).send("Failed to send sheets user: " + error.message);
+            return res.status(500).send("Failed to send sheets user: " + error.message);
         }
 
 
@@ -639,14 +639,14 @@ exports.submitEnquiry = async (req, res) => {
       // Send the data to Google Sheets
       await axios.post(googleSheetsUrl, payload);
 
-      res
+      return res
         .status(200)
         .send(
           "User enquiry saved successfully and data sent to Google Sheets!"
         );
     } catch (error) {
       console.error("Sheets error", error.message);
-      res.status(500).send("Failed to send sheets user: " + error.message);
+      return res.status(500).send("Failed to send sheets user: " + error.message);
     }
 
     // ////////
@@ -847,7 +847,7 @@ exports.createJobApplication = async (req, res) => {
             // Existing code for saving the user to the database and sending emails
     
             // After saving the user and sending emails, send data to Google Sheets
-            const googleSheetsUrl = 'https://script.google.com/macros/s/AKfycbzVMJ6FT1Y3E6z7LYrjpyQZK2PHL4g_7md8RHFGeGobPVHVpiRPhsnx82erRQ1SCULT/exec'; // Replace with your actual web app URL
+            const googleSheetsUrl = 'https://script.google.com/macros/s/AKfycby1zFqf25odw7bFEMdIAYe6qZBxE8Xah9__KMtt7YGRxy83qtowLAJAQ85_F33CAzZmeA/exec'; // Replace with your actual web app URL
     
             // Prepare the data payload
             const payload = {
@@ -865,17 +865,18 @@ exports.createJobApplication = async (req, res) => {
                 personality,
                 skills,
                 willing,
-                message
+                message,
+                source: 'thirdAPI'
             };
     
             // Send the data to Google Sheets
             await axios.post(googleSheetsUrl, payload);
             console.log("linked url : ",linkedInProfile)
-            res.status(200).send("User registered successfully and data sent to Google Sheets!");
+            return res.status(200).send("User registered successfully and data sent to Google Sheets!");
     
         } catch (error) {
             console.error("Sheets error", error.message);
-            res.status(500).send("Failed to send sheets user: " + error.message);
+            return res.status(500).send("Failed to send sheets user: " + error.message);
         }
         res.status(200).json({ message: 'Application details have been sent' });
     } catch (error) {
