@@ -53,12 +53,13 @@ const login = async (req, res, next) => {
       `session:${userExists._id}`,
       sessionId,
       "EX",
-      30 * 24 * 60 * 60 
-    ); 
+      30 * 24 * 60 * 60
+    );
 
     const accessToken = jwt.sign(
       {
         sessionId,
+        userId: userExists._id,
         email: userExists.personalInfo.email,
       },
       process.env.ACCESS_TOKEN_SECRET,
