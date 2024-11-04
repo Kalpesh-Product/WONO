@@ -21,6 +21,15 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "public")));
 
+app.get("/", (req, res) => {
+  if (req.accepts("html")) {
+    res.status(200).sendFile(path.join(__dirname, "views", "index.html"));
+  } else if (req.accepts("json")) {
+    res.status(200).json({ message: "Welcome to the client API" });
+  } else {
+    res.type("text").status(200).send("Welcome to the client API");
+  }
+});
 app.use("/api/auth", authRoutes);
 
 //protected routes
