@@ -1,13 +1,15 @@
 const jwt = require("jsonwebtoken");
-const bcrypt = require("bcryptjs");
 const User = require("../../models/User");
 const registerLogs = require("../../utils/loginLogs");
+const { v4: uuid } = require("uuid");
+const redisClient = require("../../config/redisClient");
 
 const login = async (req, res, next) => {
   try {
     const ipAddress = req.ip;
     const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     const { email, password } = req.body;
+
     if (!emailRegex.test(email)) {
       await registerLogs({
         email,
@@ -19,7 +21,7 @@ const login = async (req, res, next) => {
     }
 
     if (!password)
-      return res.status(400).json({ message: "Invalid credentaials" });
+      return res.status(400).json({ message: "Invalid credentials" });
 
     const userExists = await User.findOne({ "personalInfo.email": email })
       .lean()
@@ -45,16 +47,28 @@ const login = async (req, res, next) => {
       return res.status(400).json({ message: "Invalid credentials" });
     }
 
+    const sessionId = uuid();
+
+    // Store session ID with a user-specific key in Redis
+    await redisClient.set(
+      `session:${userExists._id}`,
+      sessionId,
+      "EX",
+      30 * 24 * 60 * 60
+    ); // 30 days in seconds
+
     const accessToken = jwt.sign(
       {
+        sessionId,
         email: userExists.credentials.username,
       },
       process.env.ACCESS_TOKEN_SECRET,
-      { expiresIn: "15s" }
+      { expiresIn: "15m" }
     );
 
     const refreshToken = jwt.sign(
       {
+        sessionId,
         email: userExists.credentials.username,
       },
       process.env.REFRESH_TOKEN_SECRET,
@@ -68,12 +82,20 @@ const login = async (req, res, next) => {
       message: "Login successful",
     });
 
+    await User.findOneAndUpdate({ _id: userExists._id }, { refreshToken });
+
+    // Send refresh token as HttpOnly cookie
     res.cookie("clientCookie", refreshToken, {
       httpOnly: true,
       sameSite: "None",
       secure: true,
-      maxAge: 30 * 24 * 60 * 60 * 1000,
+      maxAge: 30 * 24 * 60 * 60 * 1000, // 30 days
     });
+
+    delete userExists.refreshToken;
+    delete userExists.companyInfo;
+    delete userExists.credentials.password;
+    delete userExists.updatedAt;
 
     res.status(200).json({ user: userExists, accessToken });
   } catch (error) {
@@ -81,4 +103,42 @@ const login = async (req, res, next) => {
   }
 };
 
-module.exports = { login };
+const logOut = async (req, res, next) => {
+  try {
+    const cookie = req.cookies;
+    if (!cookie.clientCookie) return res.sendStatus(204);
+
+    const refreshToken = cookie.clientCookie;
+    const foundUser = await User.findOne({ refreshToken }).lean().exec();
+
+    if (!foundUser) {
+      res.clearCookie("clientCookie", {
+        httpOnly: true,
+        sameSite: "None",
+        secure: true,
+      });
+      return res.sendStatus(204);
+    }
+
+    const sessionIdInRedis = await redisClient.get(`session:${foundUser._id}`);
+    if (sessionIdInRedis) {
+      await redisClient.del(`session:${foundUser._id}`);
+    }
+
+    await User.findOneAndUpdate({ _id: foundUser._id }, { refreshToken: null })
+      .lean()
+      .exec();
+
+    res.clearCookie("clientCookie", {
+      httpOnly: true,
+      sameSite: "None",
+      secure: true,
+    });
+
+    res.sendStatus(204);
+  } catch (error) {
+    next(error);
+  }
+};
+
+module.exports = { login, logOut };
