@@ -49,18 +49,17 @@ const login = async (req, res, next) => {
 
     const sessionId = uuid();
 
-    // Store session ID with a user-specific key in Redis
     await redisClient.set(
       `session:${userExists._id}`,
       sessionId,
       "EX",
-      30 * 24 * 60 * 60
-    ); // 30 days in seconds
+      30 * 24 * 60 * 60 
+    ); 
 
     const accessToken = jwt.sign(
       {
         sessionId,
-        email: userExists.credentials.username,
+        email: userExists.personalInfo.email,
       },
       process.env.ACCESS_TOKEN_SECRET,
       { expiresIn: "15m" }
@@ -69,7 +68,7 @@ const login = async (req, res, next) => {
     const refreshToken = jwt.sign(
       {
         sessionId,
-        email: userExists.credentials.username,
+        email: userExists.personalInfo.email,
       },
       process.env.REFRESH_TOKEN_SECRET,
       { expiresIn: "30d" }
@@ -93,7 +92,6 @@ const login = async (req, res, next) => {
     });
 
     delete userExists.refreshToken;
-    delete userExists.companyInfo;
     delete userExists.credentials.password;
     delete userExists.updatedAt;
 
