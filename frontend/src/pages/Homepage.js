@@ -135,7 +135,6 @@ const Homepage = () => {
   const ismobile = window.innerWidth < 769;
   const isTablet = window.innerWidth < 1025;
 
-
   return (
     <div className="master-container">
       <div className="home-section">
@@ -171,16 +170,50 @@ const Homepage = () => {
                 <div className="col-md-6">{/* Empty div */}</div>
                 <div className="col-12 col-lg-6 col-md-12 col-sm-12 home-main-tagline">
                   <span>"Nomad Commerce"</span>
-                  <span><b style={{ fontFamily: 'Popins-Semibold', fontWeight: 'normal' }}>WoNo.Co</b> = <b style={{ fontFamily: 'Popins-Semibold', fontWeight: 'normal' }}>Wo</b>rld <b style={{ fontFamily: 'Popins-Semibold', fontWeight: 'normal' }}>No</b>mad <b style={{ fontFamily: 'Popins-Semibold', fontWeight: 'normal' }}>Co</b>mmerce</span>
+                  <span>
+                    <b
+                      style={{
+                        fontFamily: "Popins-Semibold",
+                        fontWeight: "normal",
+                      }}>
+                      WoNo.Co
+                    </b>{" "}
+                    ={" "}
+                    <b
+                      style={{
+                        fontFamily: "Popins-Semibold",
+                        fontWeight: "normal",
+                      }}>
+                      Wo
+                    </b>
+                    rld{" "}
+                    <b
+                      style={{
+                        fontFamily: "Popins-Semibold",
+                        fontWeight: "normal",
+                      }}>
+                      No
+                    </b>
+                    mad{" "}
+                    <b
+                      style={{
+                        fontFamily: "Popins-Semibold",
+                        fontWeight: "normal",
+                      }}>
+                      Co
+                    </b>
+                    mmerce
+                  </span>
                 </div>
               </div>
             </h2>
             <span className="home-main-title-desc">
-              A simple NO CODE SaaS Platform. We support businesses in small and aspiring destinations!
-
+              A simple NO CODE SaaS Platform. We support businesses in small and
+              aspiring destinations!
               <br />
-              SaaS Tech for Nomad businesses across the world. (E.g.: Co-Working, Co-Living, Hostels, Workations, Resorts, Cafes, Events etc)
-
+              SaaS Tech for Nomad businesses across the world. (E.g.:
+              Co-Working, Co-Living, Hostels, Workations, Resorts,
+              Cafes, Events etc)
             </span>
           </div>
           <div
@@ -245,7 +278,11 @@ const Homepage = () => {
           </div>
           <div className="N-Commerce">
             <h3>
-              <strong>INTRODUCING<br />N-COMMERCE</strong>
+              <strong>
+                INTRODUCING
+                <br />
+                N-COMMERCE
+              </strong>
             </h3>
             <p> ( “NOMAD COMMERCE” ) </p>
             <div
