@@ -11,6 +11,16 @@ const userSchema = new mongoose.Schema(
       city: String,
       state: String,
     },
+    role: {
+      type: String,
+      default: "CMA-001",
+    },
+    department: [
+      {
+        type: String,
+        default: "",
+      },
+    ],
 
     // Company Information Section
     companyInfo: {
@@ -43,7 +53,7 @@ const userSchema = new mongoose.Schema(
   },
   {
     timestamps: true,
-    collection: "registrationDetails",  // Specify the existing collection name here
+    collection: "registrationDetails", // Specify the existing collection name here
   }
 );
 
