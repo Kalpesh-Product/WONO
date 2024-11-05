@@ -9,6 +9,7 @@ const connectDb = require("./config/db");
 const errorHandler = require("./middlewares/errorHandler");
 const authRoutes = require("./routes/auth/authRoutes");
 const verifyJwt = require("./middlewares/verifyJwt");
+const redisClient = require("./config/redisClient");
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -49,8 +50,10 @@ app.all("*", (req, res) => {
 
 app.use(errorHandler);
 
-mongoose.connection.once("open", () => {
-  app.listen(PORT, () => {
-    console.log(`server started on port ${PORT}`);
+redisClient.on("connect", () => {
+  mongoose.connection.once("open", () => {
+    app.listen(PORT, () => {
+      console.log(`server started on port ${PORT}`);
+    });
   });
 });
