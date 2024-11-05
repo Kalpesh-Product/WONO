@@ -6,8 +6,6 @@ export default function Access() {
     {
       expanded: true,
       type: "person",
-      className: "bg-indigo-600 text-white p-4 shadow-lg",
-      style: { borderRadius: "8px" },
       data: {
         image:
           "https://primefaces.org/cdn/primereact/images/avatar/amyelsner.png",
@@ -18,8 +16,6 @@ export default function Access() {
         {
           expanded: true,
           type: "person",
-          className: "bg-purple-600 text-white p-4 shadow-lg",
-          style: { borderRadius: "8px" },
           data: {
             image:
               "https://primefaces.org/cdn/primereact/images/avatar/annafali.png",
@@ -29,21 +25,15 @@ export default function Access() {
           children: [
             {
               label: "Sales",
-              className: "bg-purple-400 text-white p-3 shadow-md",
-              style: { borderRadius: "8px" },
             },
             {
               label: "Marketing",
-              className: "bg-purple-400 text-white p-3 shadow-md",
-              style: { borderRadius: "8px" },
             },
           ],
         },
         {
           expanded: true,
           type: "person",
-          className: "bg-teal-600 text-white p-4 shadow-lg",
-          style: { borderRadius: "8px" },
           data: {
             image:
               "https://primefaces.org/cdn/primereact/images/avatar/stephenshaw.png",
@@ -53,13 +43,9 @@ export default function Access() {
           children: [
             {
               label: "Development",
-              className: "bg-teal-400 text-white p-3 shadow-md",
-              style: { borderRadius: "8px" },
             },
             {
               label: "UI/UX Design",
-              className: "bg-teal-400 text-white p-3 shadow-md",
-              style: { borderRadius: "8px" },
             },
           ],
         },
@@ -70,35 +56,35 @@ export default function Access() {
   const nodeTemplate = (node) => {
     if (node.type === "person") {
       return (
-        <div className="flex flex-col items-center text-center">
+        <div className="flex flex-col items-center p-6 bg-white shadow-lg rounded-lg max-w-sm text-center">
           <img
             alt={node.data.name}
             src={node.data.image}
-            className="mb-3 rounded-full w-16 h-16 border-4 border-white"
+            className="mb-4 w-20 h-20 rounded-full border-4 border-indigo-500"
           />
-          <span className="font-semibold text-lg">{node.data.name}</span>
-          <span className="text-sm text-gray-300">{node.data.title}</span>
+          <span className="font-semibold text-lg text-indigo-800 mb-2">
+            {node.data.name}
+          </span>
+          <span className="text-base text-gray-600">{node.data.title}</span>
         </div>
       );
     }
 
     return (
-      <div className="p-3 text-center rounded-lg font-semibold w-full">
+      <div className="bg-gray-100 text-gray-800 px-4 py-3 rounded-lg shadow-sm text-center text-lg font-medium">
         {node.label}
       </div>
     );
   };
 
   return (
-    <main className="min-h-screen p-8">
-      <h1 className="text-3xl font-bold">Access</h1>
-      <div className="card overflow-x-auto p-4">
-        <OrganizationChart
-          value={data}
-          nodeTemplate={nodeTemplate}
-          className="organization-chart"
-        />
-      </div>
-    </main>
+    <div className="card overflow-x-auto p-8">
+      <OrganizationChart
+        value={data}
+        nodeTemplate={nodeTemplate}
+        selectionMode="multiple"
+        className="organization-chart"
+      />
+    </div>
   );
 }
