@@ -1,7 +1,12 @@
 import React, { useState } from "react";
 import { OrganizationChart } from "primereact/organizationchart";
+import Modal from "../components/Modal";
+import { useDispatch, useSelector } from "react-redux";
+import { openModal } from "../redux/features/modalSlice";
 
 export default function Access() {
+  const open = useSelector((state) => state.modal.open);
+  const dispatch = useDispatch();
   const [data] = useState([
     {
       expanded: true,
@@ -78,13 +83,29 @@ export default function Access() {
   };
 
   return (
-    <div className="card overflow-x-auto p-8">
-      <OrganizationChart
-        value={data}
-        nodeTemplate={nodeTemplate}
-        selectionMode="multiple"
-        className="organization-chart"
-      />
-    </div>
+    <main className="min-h-screen p-8">
+      <div className="flex justify-between items-center">
+        <h1 className="text-4xl font-bold">Access</h1>
+        <button
+          onClick={() => dispatch(openModal())}
+          className="p-4 rounded-md text-white bg-violet-500 font-bold hover:bg-purple-600 transition"
+        >
+          Add Members
+        </button>
+        {open && (
+          <Modal open={open}>
+            <h1 className="text-xl font-bold">This is a modal</h1>
+          </Modal>
+        )}
+      </div>
+      <div className="overflow-x-auto p-8">
+        <OrganizationChart
+          value={data}
+          nodeTemplate={nodeTemplate}
+          selectionMode="multiple"
+          className="organization-chart"
+        />
+      </div>
+    </main>
   );
 }
