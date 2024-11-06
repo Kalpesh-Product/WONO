@@ -268,13 +268,17 @@ export default function MemberForm() {
 
       {/* Role & Department fields */}
       <h2 className="mt-8 text-lg font-semibold">Role & Department</h2>
-      <h2 className="mt-8 text-lg font-semibold">Role & Department</h2>
       <div className="grid grid-cols-2 gap-4 mt-4">
         <div className="flex flex-col">
           <select
             id="role"
             value={formData.role}
-            onChange={(e) => handleInputChange("", "role")(e)}
+            onChange={(e) =>
+              setFormData((prevData) => ({
+                ...prevData,
+                role: e.target.value,
+              }))
+            }
             className="w-full border border-gray-300 rounded-md px-3 py-4 bg-white text-gray-900 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
           >
             <option value="">Select Role</option>
@@ -289,7 +293,12 @@ export default function MemberForm() {
           <select
             id="department"
             value={formData.department}
-            onChange={(e) => handleInputChange("", "department")(e)}
+            onChange={(e) =>
+              setFormData((prevData) => ({
+                ...prevData,
+                department: e.target.value,
+              }))
+            }
             className="w-full border border-gray-300 rounded-md px-3 py-4 bg-white text-gray-900 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
           >
             <option value="">Select Department</option>
