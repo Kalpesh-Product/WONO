@@ -1,5 +1,5 @@
 import React from "react";
-import BiznestLogo from "../LandingPageImages/BIZ Nest Logo png.png";
+import BiznestLogo from "../LandingPageImages/biz-nest.png";
 
 const ClientHeader = () => {
   return (
