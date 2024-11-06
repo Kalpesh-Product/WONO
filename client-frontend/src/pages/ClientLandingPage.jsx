@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 // import iconSrc from "../LandingPageImages/dummy-icon.png";
 import dashboardIcon from "../LandingPageImages/dummy-icon.png";
+import Swal from "sweetalert2";
+import { toast } from "sonner";
 
 import {
   androidAppSaas,
@@ -751,6 +753,18 @@ const ClientLandingPage = () => {
     }
   };
 
+  const handleAddServices = () => {
+    // Alert
+    // Swal.fire({
+    //   title: "New Services Added!",
+    //   text: "You clicked the button!",
+    //   icon: "success",
+    // });
+    // alert("New services added");
+    toast.success("New Services Added");
+    closeModal(); // Optionally close the modal after the alert
+  };
+
   return (
     <>
       {/* //{" "}
@@ -859,11 +873,23 @@ const ClientLandingPage = () => {
           <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
             <div className="absolute inset-0" onClick={closeModal}></div>
 
-            <div className="bg-white w-11/12 max-w-[90%] p-8 rounded-lg shadow-lg z-10 relative overflow-y-auto max-h-[80vh]">
+            <div className="bg-white w-11/12 max-w-[90%] pl-8 pr-8 pb-8 rounded-lg shadow-lg z-10 relative overflow-y-auto max-h-[80vh]">
               {/* Modal Content */}
-              <h2 className="text-3xl font-bold mb-4 uppercase">
-                Add Services
-              </h2>
+              <div className="sticky top-0 bg-white py-6 z-20 flex justify-between">
+                <div>
+                  <h2 className="text-3xl font-bold mb-4 uppercase">
+                    Add Services
+                  </h2>
+                </div>
+                <div>
+                  {/* Close button */}
+                  <button
+                    className="bg-red-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-red-600"
+                    onClick={closeModal}>
+                    X
+                  </button>
+                </div>
+              </div>
               {/* <div className="mb-6">
                 <div>
                   <h2 className="text-xl md:text-2xl font-bold mb-8 ps-[7rem] uppercase">
@@ -1044,6 +1070,14 @@ const ClientLandingPage = () => {
                     ))}
                   </div>
                 </div>
+              </div>
+              <div className="flex justify-center items-center">
+                {/* Add button */}
+                <button
+                  className="bg-red-500 text-white py-2 px-4 rounded-lg hover:bg-red-600"
+                  onClick={handleAddServices}>
+                  Add
+                </button>
               </div>
 
               {/* Close button */}
