@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import MainLayout from "../layouts/MainLayout";
-import Home from "../pages/Home";
+import ClientLandingPage from "../pages/ClientLandingPage";
+import AccessPage from "../pages/Access";
 import Profile from "../pages/Profile";
 
 const router = createBrowserRouter([
@@ -10,7 +11,11 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <Home />,
+        element: <ClientLandingPage />,
+      },
+      {
+        path: "/access",
+        element: <AccessPage />,
       },
       {
         path:"/profile",
