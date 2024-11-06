@@ -77,8 +77,8 @@ import {
 import { useNavigate } from "react-router-dom";
 import ServiceGridImage from "../assets/WONO_images/img/services/servicegrid.webp";
 import blueTickmarkImg from "../assets/blue-tick-no-bg-15.png";
-import greenUnderLine from '../assets/underline-bg/blue-line.png'
-import Accordion from 'react-bootstrap/Accordion';
+import greenUnderLine from "../assets/underline-bg/blue-line.png";
+import Accordion from "react-bootstrap/Accordion";
 
 import "../styles/bodyServices.css";
 const Services = () => {
@@ -793,9 +793,7 @@ const Services = () => {
               </div>
               <div className="business-grid">
                 {services_frontend.map((service) => (
-                  <div
-                    className="business-service-card "
-                    key={service.id}>
+                  <div className="business-service-card " key={service.id}>
                     <div className="business-service-card-image ">
                       <img src={service.image} alt={service.alt} />
                     </div>
@@ -826,9 +824,7 @@ const Services = () => {
               </div>
               <div className="business-grid">
                 {services_financeAccounting.map((service) => (
-                  <div
-                    className="business-service-card "
-                    key={service.id}>
+                  <div className="business-service-card " key={service.id}>
                     <div className="business-service-card-image ">
                       <img src={service.image} alt={service.alt} />
                     </div>
@@ -860,9 +856,7 @@ const Services = () => {
               </div>
               <div className="business-grid">
                 {services_salesMarketing.map((service) => (
-                  <div
-                    className="business-service-card "
-                    key={service.id}>
+                  <div className="business-service-card " key={service.id}>
                     <div className="business-service-card-image ">
                       <img src={service.image} alt={service.alt} />
                     </div>
@@ -894,9 +888,7 @@ const Services = () => {
               </div>
               <div className="business-grid">
                 {services_hrSupport.map((service) => (
-                  <div
-                    className="business-service-card "
-                    key={service.id}>
+                  <div className="business-service-card " key={service.id}>
                     <div className="business-service-card-image ">
                       <img src={service.image} alt={service.alt} />
                     </div>
@@ -937,9 +929,7 @@ const Services = () => {
               </div>
               <div className="business-grid">
                 {services_customerManagement.map((service) => (
-                  <div
-                    className="business-service-card "
-                    key={service.id}>
+                  <div className="business-service-card " key={service.id}>
                     <div className="business-service-card-image ">
                       <img src={service.image} alt={service.alt} />
                     </div>
@@ -978,11 +968,9 @@ const Services = () => {
                 </h1>
                 {/* <h1>Reports & Analytics</h1> */}
               </div>
-              <div style={{ marginBottom: '4rem' }} className="business-grid">
+              <div style={{ marginBottom: "4rem" }} className="business-grid">
                 {services_reportsAnalytics.map((service) => (
-                  <div
-                    className="business-service-card "
-                    key={service.id}>
+                  <div className="business-service-card " key={service.id}>
                     <div className="business-service-card-image">
                       <img src={service.image} alt={service.alt} />
                     </div>
@@ -997,9 +985,11 @@ const Services = () => {
           </div>
 
           <div className="SaaS-grid-accordion">
-            <Accordion defaultActiveKey={['0']} alwaysOpen>
+            <Accordion defaultActiveKey={["0"]} alwaysOpen>
               <Accordion.Item className="SaaS-accordion-item" eventKey="0">
-                <Accordion.Header style={{padding:0}}>Frontend</Accordion.Header>
+                <Accordion.Header style={{ padding: 0 }}>
+                  Frontend
+                </Accordion.Header>
                 <Accordion.Body className="SaaS-accordion-body">
                   <div className="SaaS-grid-mobile">
                     <div className="business-grid">
@@ -1025,9 +1015,7 @@ const Services = () => {
                 <Accordion.Body className="SaaS-accordion-body">
                   <div className="business-grid">
                     {services_financeAccounting.map((service) => (
-                      <div
-                        className="business-service-card "
-                        key={service.id}>
+                      <div className="business-service-card " key={service.id}>
                         <div className="business-service-card-image ">
                           <img src={service.image} alt={service.alt} />
                         </div>
@@ -1045,9 +1033,7 @@ const Services = () => {
                 <Accordion.Body className="SaaS-accordion-body">
                   <div className="business-grid">
                     {services_salesMarketing.map((service) => (
-                      <div
-                        className="business-service-card "
-                        key={service.id}>
+                      <div className="business-service-card " key={service.id}>
                         <div className="business-service-card-image ">
                           <img src={service.image} alt={service.alt} />
                         </div>
@@ -1065,9 +1051,7 @@ const Services = () => {
                 <Accordion.Body className="SaaS-accordion-body">
                   <div className="business-grid">
                     {services_hrSupport.map((service) => (
-                      <div
-                        className="business-service-card "
-                        key={service.id}>
+                      <div className="business-service-card " key={service.id}>
                         <div className="business-service-card-image ">
                           <img src={service.image} alt={service.alt} />
                         </div>
@@ -1081,13 +1065,13 @@ const Services = () => {
                 </Accordion.Body>
               </Accordion.Item>
               <Accordion.Item className="SaaS-accordion-item" eventKey="4">
-                <Accordion.Header>Customer Management Services</Accordion.Header>
+                <Accordion.Header>
+                  Customer Management Services
+                </Accordion.Header>
                 <Accordion.Body className="SaaS-accordion-body">
                   <div className="business-grid">
                     {services_customerManagement.map((service) => (
-                      <div
-                        className="business-service-card "
-                        key={service.id}>
+                      <div className="business-service-card " key={service.id}>
                         <div className="business-service-card-image ">
                           <img src={service.image} alt={service.alt} />
                         </div>
@@ -1105,9 +1089,7 @@ const Services = () => {
                 <Accordion.Body className="SaaS-accordion-body">
                   <div className="business-grid">
                     {services_reportsAnalytics.map((service) => (
-                      <div
-                        className="business-service-card "
-                        key={service.id}>
+                      <div className="business-service-card " key={service.id}>
                         <div className="business-service-card-image ">
                           <img src={service.image} alt={service.alt} />
                         </div>
