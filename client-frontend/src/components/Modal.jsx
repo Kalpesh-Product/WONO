@@ -1,11 +1,8 @@
 import { useEffect, useRef } from "react";
 import { createPortal } from "react-dom";
-import { useDispatch } from "react-redux";
-import { closeModal } from "../redux/features/modalSlice";
 import { motion, AnimatePresence } from "framer-motion";
 
-export default function Modal({ children, open }) {
-  const dispatch = useDispatch();
+export default function Modal({ children, open, onClose }) {
   const dialogRef = useRef();
 
   useEffect(() => {
@@ -18,13 +15,13 @@ export default function Modal({ children, open }) {
 
   const handleEscKeyPress = (e) => {
     if (e.key === "Escape") {
-      dispatch(closeModal());
+      onClose();
     }
   };
 
   const handleBackdropClick = (e) => {
     if (e.target === dialogRef.current) {
-      dispatch(closeModal());
+      onClose();
     }
   };
 
@@ -43,15 +40,10 @@ export default function Modal({ children, open }) {
           animate="visible"
           exit="exit"
           variants={modalVariants}
-          transition={{ duration: 0.3, ease: "easeInOut" }} // Adjusted duration
+          transition={{ duration: 0.3, ease: "easeInOut" }}
           onClick={handleBackdropClick}
           onKeyDown={handleEscKeyPress}
           ref={dialogRef}
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
         >
           <div
             onClick={(e) => e.stopPropagation()}
