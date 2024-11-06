@@ -18,6 +18,11 @@ const router = createBrowserRouter([
         path: "/access",
         element: <AccessPage />,
       },
+      {
+        path:"/profile",
+        element:<Profile/>,
+      },
+      
     ],
   },
 ]);
