@@ -3,6 +3,7 @@ import { OrganizationChart } from "primereact/organizationchart";
 import Modal from "../components/Modal";
 import { useDispatch, useSelector } from "react-redux";
 import { openModal } from "../redux/features/modalSlice";
+import MemberForm from "../components/MemberForm";
 
 export default function Access() {
   const open = useSelector((state) => state.modal.open);
@@ -13,8 +14,8 @@ export default function Access() {
       type: "person",
       data: {
         image:
-          "https://primefaces.org/cdn/primereact/images/avatar/amyelsner.png",
-        name: "Amy Elsner",
+          "https://in.bmscdn.com/iedb/artist/images/website/poster/large/bobby-deol-338-1708943147.jpg",
+        name: "Abrar Sheikh",
         title: "CEO",
       },
       children: [
@@ -90,11 +91,12 @@ export default function Access() {
           onClick={() => dispatch(openModal())}
           className="p-4 rounded-md text-white bg-violet-500 font-bold hover:bg-purple-600 transition"
         >
-          Add Members
+          Add Employees
         </button>
         {open && (
           <Modal open={open}>
-            <h1 className="text-xl font-bold">This is a modal</h1>
+            <h1 className="text-xl text-center my-2 font-bold">Enter employee details</h1>
+            <MemberForm />
           </Modal>
         )}
       </div>

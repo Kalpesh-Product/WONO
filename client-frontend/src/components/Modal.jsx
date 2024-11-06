@@ -22,7 +22,6 @@ export default function Modal({ children, open }) {
   };
 
   const handleBackdropClick = (e) => {
-    // Close the modal only if the click is on the backdrop
     if (e.target === dialogRef.current) {
       dispatch(closeModal());
     }
@@ -30,13 +29,19 @@ export default function Modal({ children, open }) {
 
   return createPortal(
     <dialog
+      className="p-4 rounded-md bg-opacity-0 flex items-center justify-center"
       onClick={handleBackdropClick}
       onKeyDown={handleEscKeyPress}
       ref={dialogRef}
+      style={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+      }}
     >
       <div
         onClick={(e) => e.stopPropagation()}
-        className="max-w-[90vw] max-h-[80vh] overflow-auto p-4 bg-white rounded-md flex flex-col items-center"
+        className="w-auto max-w-xl max-h-[80vh] overflow-auto p-4 bg-white rounded-md custom-scrollbar"
       >
         {children}
       </div>
