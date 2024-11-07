@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import TextField from "@mui/material/TextField";
-import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
 import Radio from "@mui/material/Radio";
 import RadioGroup from "@mui/material/RadioGroup";
@@ -9,6 +8,7 @@ import FormLabel from "@mui/material/FormLabel";
 import { useDispatch } from "react-redux";
 import { closeModal } from "../redux/features/modalSlice";
 import { Country, State, City } from "country-state-city";
+import { motion } from "framer-motion";
 
 export default function MemberForm() {
   const dispatch = useDispatch();
@@ -311,19 +311,24 @@ export default function MemberForm() {
           )}
         </div>
       </div>
-
-      <Box display="flex" justifyContent="center" mt={3} gap={2}>
-        <Button variant="contained" color="primary" onClick={handleSubmit}>
+      <div className="col-span-2 flex gap-4">
+        <motion.button
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.9 }}
+          className="w-full py-2 px-4 bg-blue-600 text-white rounded mt-4"
+          onClick={handleSubmit}
+        >
           Submit
-        </Button>
-        <Button
-          variant="outlined"
-          color="error"
+        </motion.button>
+        <motion.button
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.9 }}
+          className="w-full py-2 px-4 bg-red-600 text-white rounded mt-4"
           onClick={() => dispatch(closeModal())}
         >
           Cancel
-        </Button>
-      </Box>
+        </motion.button>
+      </div>
     </Box>
   );
 }
