@@ -2,10 +2,12 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Modal from "./Modal";
 import EmployeeProfile from "./AccessTabViewModel/EmployeeProfile";
+import AccessHierarchyTab from "./AccessTabViewModel/AccessHierarchyTab";
 
 const TreeNode = ({ node }) => {
   const [isExpanded, setIsExpanded] = useState(true);
   const [showModal, setShowModal] = useState(false);
+  const [activeTab,setActiveTab] = useState('tab-1')
 
   const toggleExpand = () => {
     setIsExpanded((prev) => !prev);
@@ -23,7 +25,65 @@ const TreeNode = ({ node }) => {
     <div className="flex flex-col items-start mb-6 space-y-4">
       {/* Modal to show the user's details */}
       <Modal open={showModal} onClose={closeModal}>
-        <EmployeeProfile data={node} />{" "}
+        {/* Profile pic with name */}
+      <div class="flex items-center p-4 bg-white rounded-lg shadow-md justify-between mb-4">
+        <div class="flex flex-row gap-3">
+    <div
+          className="w-16 h-16 rounded-full overflow-hidden bg-gray-200 cursor-pointer"
+          
+        >
+    <img src="" alt="Profile Logo" class="w-16 h-16 rounded-full mr-4"></img>
+    </div>
+    
+    <div>
+      <h2 class="text-xl font-semibold">Abrar Shaikh</h2>
+      <p class="text-gray-500">Active</p>
+    </div>
+    </div>
+    <div class="flex j">
+   
+    </div>
+    </div>
+    {/* tab view */}
+      <div className='mx-auto'>
+          
+          <ul className='flex justify-center border-b mb-4'>
+            <li className='w-1/2 text-center' role='presentation'>
+            <button
+             className={`text-md py-2 w-full ${
+              activeTab === "tab-1" ? "border-b-4 border-blue-500 text-blue-600" : ""
+            }` } onClick={()=>setActiveTab("tab-1")}>PROFILE
+            </button>
+            </li>
+            <li className='w-1/2 text-center' role='presentation'>
+            <button
+             className={`text-md py-2 w-full ${
+              activeTab === "tab-2" ? "border-b-4 border-blue-500 text-blue-600" : ""
+            }` } onClick={()=>setActiveTab("tab-2")}>ACCESS
+            </button>
+            </li>
+            </ul>
+            <div className="tab-content">
+      {activeTab === "tab-1" && (
+        <div className="tab-pane fade show active" id="tab-1" role="tabpanel">
+          <div className="flex flex-col items-center justify-center mt-3" data-aos="fade-up" data-aos-delay="100">
+            <EmployeeProfile data={node} />{" "}
+          </div>
+        </div>
+      )}
+      {activeTab === "tab-2" && (
+        <div className="tab-pane fade show" id="tab-2" role="tabpanel">
+          <div className="flex flex-col items-center justify-center mt-3" data-aos="fade-up" data-aos-delay="100">
+            {/* Tab 2 Content */}
+            <AccessHierarchyTab/>
+          </div>
+        </div>
+      )}
+    </div>
+  
+
+          </div>
+        {/* <EmployeeProfile data={node} />{" "} */}
         {/* Use EmployeeProfile with node data */}
       </Modal>
 
