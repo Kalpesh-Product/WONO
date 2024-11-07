@@ -102,14 +102,14 @@ const Profile = () => {
    <div className='mx-auto'>
           
           <ul className='flex  border-b mb-4 gap-4'>
-            <li className=' text-center' role='presentation'>
+            <li className=' text-center w-1/2' role='presentation'>
             <button
             className={`text-md py-2 w-full hover:bg-gray-100  ${
               activeTab === "tab-1" ? "border-b-4 border-blue-500 text-blue-600" : ""
             }` } onClick={()=>setActiveTab("tab-1")}>Bio
             </button>
             </li>
-            <li className=' text-center' role='presentation'>
+            <li className=' text-center w-1/2' role='presentation'>
             <button
            className={`text-md py-2 w-full hover:bg-gray-100 ${
             activeTab === "tab-2" ? "border-b-4 border-blue-500 text-blue-600" : ""
