@@ -19,9 +19,9 @@ export default function Access() {
   };
 
   return (
-    <main className="min-h-screen p-8">
-      <div className="flex justify-between items-center">
-        <h1 className="text-4xl font-bold">Access</h1>
+    <main className="min-h-screen p-4 md:p-8">
+      <div className="flex flex-col md:flex-row justify-between items-center mb-8">
+        <h1 className="text-3xl md:text-4xl font-bold mb-4 md:mb-0">Access</h1>
         <div className="flex justify-center items-center gap-4 flex-wrap">
           <motion.button
             whileHover={{ scale: 1.05 }}
@@ -40,27 +40,30 @@ export default function Access() {
             Add Employee
           </motion.button>
         </div>
-
-        <Modal open={open} onClose={() => dispatch(closeModal())}>
-          {activeModal === "employee" ? (
-            <>
-              <h1 className="text-xl text-center my-2 font-bold">
-                Enter Employee Details
-              </h1>
-              <MemberForm />
-            </>
-          ) : activeModal === "department" ? (
-            <>
-              <h1 className="text-xl text-center my-2 font-bold">
-                Enter Department Details
-              </h1>
-              <DepartmentForm />
-            </>
-          ) : null}
-        </Modal>
       </div>
-      <div className="overflow-x-auto p-8 flex items-center justify-center">
-        <HierarchyTree data={data} />
+
+      <Modal open={open} onClose={() => dispatch(closeModal())}>
+        {activeModal === "employee" ? (
+          <>
+            <h1 className="text-xl text-center my-2 font-bold">
+              Enter Employee Details
+            </h1>
+            <MemberForm />
+          </>
+        ) : activeModal === "department" ? (
+          <>
+            <h1 className="text-xl text-center my-2 font-bold">
+              Enter Department Details
+            </h1>
+            <DepartmentForm />
+          </>
+        ) : null}
+      </Modal>
+
+      <div className="overflow-x-auto p-4 md:p-8 flex justify-center">
+        <div className="max-w-4xl w-full">
+          <HierarchyTree data={data} />
+        </div>
       </div>
     </main>
   );
