@@ -7,7 +7,7 @@ const EmployeeProfile = ({ data }) => {
     role: "Master Admin",
   });
   return (
-    <div className="flex flex-col space-y-7">
+    <div className="flex flex-col space-y-7 w-full">
       <div className="flex items-center gap-20">
         <span className="w-24 font-semibold text-gray-600">Name:</span>
         <span className="text-gray-800">{data.name}</span>

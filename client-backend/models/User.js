@@ -16,7 +16,7 @@ const userSchema = new mongoose.Schema(
       default: "CMA-001",
     },
     department: [
-      {                        
+      {
         type: String,
         default: "",
       },
@@ -24,14 +24,9 @@ const userSchema = new mongoose.Schema(
 
     // Company Information Section
     companyInfo: {
-      companyName: String,
-      industry: String,
-      companySize: String,
-      companyType: String,
-      companyCity: String,
-      companyState: String,
-      websiteURL: String,
-      linkedinURL: String,
+      type: mongoose.Schema.Types.ObjectId,
+      required: true,
+      ref: "Company",
     },
 
     // Login Credentials

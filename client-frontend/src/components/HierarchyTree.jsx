@@ -4,7 +4,6 @@ import Modal from "./Modal";
 import EmployeeProfile from "./AccessTabViewModel/EmployeeProfile";
 
 const TreeNode = ({ node }) => {
-  console.log(node)
   const [isExpanded, setIsExpanded] = useState(true);
   const [showModal, setShowModal] = useState(false);
 
