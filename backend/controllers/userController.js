@@ -12,6 +12,27 @@ const { sub } = require("date-fns");
 const axios = require("axios");
 const { storage } = require("../config/firebaseConfig");
 const { ref, uploadBytes, getDownloadURL } = require("firebase/storage");
+const {fetchEnquiriesFromDB, sendDataToGoogleSheets} = require('../services/googleSheet')
+
+// Sync Google Sheets by fetching data from DB
+exports.syncEnquiriesToGoogleSheets = async (req, res) => {
+  try {
+    const enquiries = await Enquiry.find(); // Get all enquiries from DB
+    const dataToSync = enquiries.map(enquiry => ({
+      name: enquiry.name,
+      email: enquiry.email,
+      mobile: enquiry.mobile,
+      partnerstype: enquiry.partnerstype,
+      message: enquiry.message,
+    }));
+    
+    res.status(200).json({ status: 'success', data: dataToSync });
+  } catch (error) {
+    console.error('Error fetching data from database:', error.message);
+    res.status(500).json({ status: 'error', message: error.message });
+  }
+};
+
 
 exports.registerUser = async (req, res) => {
   const {
@@ -624,26 +645,26 @@ exports.submitEnquiry = async (req, res) => {
 
       // After saving the user and sending emails, send data to Google Sheets
       const googleSheetsUrl =
-        "https://script.google.com/macros/s/AKfycbw2NTr3gIJ982nqXii6Q1Ywt78DR7VWiBBFHHq_WrPe7S6H7QIdVqYutPEOW4nScvZnaQ/exec"; // Replace with your actual web app URL
+        "https://script.google.com/macros/s/AKfycbzaE8HR7n-GkQD26y6oDbUyq0N6RRCQOGzlCJdESwrBE1DlmV27WklQWRsamgaT4jYBOQ/exec"; // Replace with your actual web app URL
 
       // Prepare the data payload
-      const payload = {
-        name,
-        email,
-        mobile,
-        partnerstype,
-        message,
-        source : 'secondAPI'
-      };
+      // const payload = {
+      //   name,
+      //   email,
+      //   mobile,
+      //   partnerstype,
+      //   message,
+      //   source : 'secondAPI'
+      // };
 
       // Send the data to Google Sheets
-      await axios.post(googleSheetsUrl, payload);
+      // await axios.post(googleSheetsUrl, payload);
 
-      return res
-        .status(200)
-        .send(
-          "User enquiry saved successfully and data sent to Google Sheets!"
-        );
+      // return res
+      //   .status(200)
+      //   .send(
+      //     "User enquiry saved successfully and data sent to Google Sheets!"
+      //   );
     } catch (error) {
       console.error("Sheets error", error.message);
       return res.status(500).send("Failed to send sheets user: " + error.message);
