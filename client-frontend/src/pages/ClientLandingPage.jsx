@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 // import iconSrc from "../LandingPageImages/dummy-icon.png";
 import dashboardIcon from "../LandingPageImages/dummy-icon.png";
 import Swal from "sweetalert2";
@@ -80,7 +80,16 @@ import {
   // } from "../../../frontend/src/assets/WONO_images/img/icon_service_color";
 } from "../assets/WONO_images/img/icon_service_color";
 
+
 const ClientLandingPage = () => {
+  const [user, setUser] = useState('');
+  useEffect(() => {
+    const storedUser = JSON.parse(localStorage.getItem("user"));
+    setUser(storedUser);
+    console.log(user); // Log the user object on component mount
+    console.log(user.name)
+  }, []);
+  
   // Arrays Icon Start
 
   const services_frontend = [
@@ -817,7 +826,7 @@ const ClientLandingPage = () => {
         {/* Welcome Section */}
         <div className="flex justify-between items-center mb-12 flex-wrap">
           <h1 className="text-3xl md:text-4xl font-bold lg:ps-[7rem] uppercase">
-            Welcome, Abrar Shaikh
+            Welcome, {user.name}
           </h1>
           <button className="bg-red-500 text-white py-2 px-6 rounded-lg hover:bg-red-600 mt-4 md:mt-0">
             Edit

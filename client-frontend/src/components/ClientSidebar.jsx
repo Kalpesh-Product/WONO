@@ -1,0 +1,146 @@
+import React, { useState, useEffect } from "react";
+
+const Sidebar = () => {
+  const [isCollapsed, setIsCollapsed] = useState(false);
+  const [isDepartmentsOpen, setIsDepartmentsOpen] = useState(false); // State for opening/closing Departments dropdown
+  const [user, setUser] = useState(null);
+
+
+  // Menu items array (without DASHBOARD)
+  const menuItems = [
+    { name: "REPORTS", icon: "https://via.placeholder.com/24" },
+    { name: "TASKS", icon: "https://via.placeholder.com/24" },
+    { name: "CALENDAR", icon: "https://via.placeholder.com/24" },
+    { name: "CHAT", icon: "https://via.placeholder.com/24" },
+    { name: "ACCESS", icon: "https://via.placeholder.com/24" },
+    { name: "PROFILE", icon: "https://via.placeholder.com/24" },
+  ];
+
+  // Departments menu items
+
+  const departments = [
+    { name: "FRONTEND", icon: "https://via.placeholder.com/24" },
+    { name: "FINANCE & ACCOUNTING", icon: "https://via.placeholder.com/24" },
+    { name: "SALES", icon: "https://via.placeholder.com/24" },
+    { name: "HUMAN RESOURCE", icon: "https://via.placeholder.com/24" },
+    { name: "CUSTOMER SERVICE", icon: "https://via.placeholder.com/24" },
+    { name: "MARKETING", icon: "https://via.placeholder.com/24" },
+    { name: "CAFE (F&B)", icon: "https://via.placeholder.com/24" },
+    { name: "ADMINISTRATION", icon: "https://via.placeholder.com/24" },
+    { name: "MAINTENANCE", icon: "https://via.placeholder.com/24" },
+    { name: "LEGAL", icon: "https://via.placeholder.com/24" },
+  ];
+
+  useEffect(() => {
+    const storedUser = JSON.parse(localStorage.getItem("user"));
+    setUser(storedUser);
+  }, []);
+
+  // Filter departments based on the user's department
+  const filteredDepartments =
+    user?.department === "Tech"
+      ? departments.filter((dept) => dept.name === "FRONTEND")
+      : departments;
+
+  return (
+    <div
+      className={`flex flex-col bg-gray-800 text-white ${
+        isCollapsed ? "w-20" : "w-64"
+      } transition-width duration-300`}
+    >
+      {/* Collapse button */}
+      <button
+        onClick={() => setIsCollapsed(!isCollapsed)}
+        className={`p-4 focus:outline-none hover:bg-gray-700 ${
+          isCollapsed ? "text-center" : "text-right"
+        }`}
+      >
+        {isCollapsed ? "➤" : "⬅"}
+      </button>
+
+      {/* Menu items */}
+      <nav className="flex flex-col space-y-2 mt-8">
+        {/* Hardcoded DASHBOARD menu item */}
+        <a href="#dashboard" className="p-4 hover:bg-gray-700 text-sm">
+          {!isCollapsed && (
+            <img
+              src="https://via.placeholder.com/24"
+              alt="dashboard"
+              className="mr-2 inline-block"
+            />
+          )}
+          <span className={isCollapsed ? "hidden" : ""}>DASHBOARD</span>
+        </a>
+
+        {/* Departments Dropdown */}
+        {!isCollapsed && (
+          <div className="relative">
+            <button
+              onClick={() => setIsDepartmentsOpen(!isDepartmentsOpen)}
+              className="p-4 w-full text-left hover:bg-gray-700 flex justify-between items-center"
+            >
+              <span>{isCollapsed ? "hidden" : ""}Departments</span>
+              <span>{isDepartmentsOpen ? "⬇" : "➤"}</span>
+            </button>
+
+            {/* Dropdown content */}
+            <div
+              className={`${
+                isDepartmentsOpen ? "max-h-screen" : "max-h-0"
+              } overflow-hidden transition-all duration-300 ease-in-out bg-gray-700 pl-8 space-y-2`}
+            >
+              {/* {departments.map((item, index) => (
+                <a
+                  key={index}
+                  href={`#${item.name.toLowerCase().replace(/\s+/g, "-")}`}
+                  className="p-4 hover:bg-gray-600 text-sm block"
+                >
+                  <img
+                    src={item.icon}
+                    alt={item.name}
+                    className="mr-2 inline-block"
+                  />
+                  <span>{item.name}</span>
+                </a>
+              ))} */}
+              {filteredDepartments.map((dept, index) => (
+                <a
+                  key={index}
+                  href={`#${dept.name.toLowerCase().replace(/\s+/g, "-")}`}
+                  className="flex items-center p-4 hover:bg-gray-700"
+                >
+                  <img
+                    src={dept.icon}
+                    alt={`${dept.name} icon`}
+                    className="mr-3"
+                  />
+                  <span>{dept.name}</span>
+                </a>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Other Menu items */}
+        {menuItems.map((item, index) => (
+          <a
+            key={index}
+            href={`#${item.name.toLowerCase().replace(/\s+/g, "-")}`}
+            className="p-4 hover:bg-gray-700 text-sm"
+          >
+            {!isCollapsed && (
+              <img
+                src={item.icon}
+                alt={item.name}
+                className="mr-2 inline-block bg-red"
+              />
+            )}
+            <span className={isCollapsed ? "hidden" : ""}>{item.name}</span>
+          </a>
+        ))}
+      </nav>
+    </div>
+  );
+};
+
+export default Sidebar;
