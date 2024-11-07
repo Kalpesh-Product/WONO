@@ -1,48 +1,64 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Modal from "./Modal";
+import EmployeeProfile from "./AccessTabViewModel/EmployeeProfile";
 
-// Component for each node in the tree
 const TreeNode = ({ node }) => {
-  // State to track if the node is expanded or collapsed
+  console.log(node)
   const [isExpanded, setIsExpanded] = useState(true);
+  const [showModal, setShowModal] = useState(false);
 
-  // Toggle function for expanding/collapsing the node
   const toggleExpand = () => {
     setIsExpanded((prev) => !prev);
   };
 
+  const openModal = () => {
+    setShowModal(true);
+  };
+
+  const closeModal = () => {
+    setShowModal(false);
+  };
+
   return (
-    <div className="flex flex-col items-start mb-4">
+    <div className="flex flex-col items-start mb-6 space-y-4">
+      {/* Modal to show the user's details */}
+      <Modal open={showModal} onClose={closeModal}>
+        <EmployeeProfile data={node} />{" "}
+        {/* Use EmployeeProfile with node data */}
+      </Modal>
+
       <div
-        className="flex items-center border border-gray-300 rounded-lg p-4 shadow-md w-64 mb-2 cursor-pointer"
-        onClick={toggleExpand}
+        className="flex items-center border border-gray-300 rounded-lg p-4 shadow-md w-full sm:w-72 md:w-96 mb-4 cursor-pointer transition-transform duration-300 ease-in-out"
+        onClick={openModal}
       >
         <div
-          className={`flex items-center justify-center w-10 h-10 rounded-full text-white font-bold mr-3 ${getNodeColor(
-            node.id
+          className={`flex items-center justify-center w-12 h-12 rounded-full text-white font-bold mr-3 ${getNodeColor(
+            node.name
           )}`}
         >
           {getInitials(node.name)}
         </div>
         <div className="flex-1">
-          <div className="font-semibold">
-            {node.name} ({node.id})
+          <div className="font-semibold text-lg">
+            {node.name} - {node.department}
           </div>
-          <div className="text-gray-600">{node.role}</div>
-          <div className="text-sm text-gray-500">
-            Direct Reports: {node.directReports}
-          </div>
+          <div className="text-gray-600 text-sm">{node.designation}</div>
         </div>
-        {/* Arrow icon for expand/collapse */}
-        <motion.div
-          animate={{ rotate: isExpanded ? 180 : 0 }}
-          transition={{ duration: 0.3, ease: "easeInOut" }}
-          className="text-gray-500 ml-2"
-        >
-          ▲
-        </motion.div>
+        {node.reports.length > 0 && (
+          <motion.div
+            onClick={(e) => {
+              e.stopPropagation(); // Prevents modal from opening when expanding/collapsing
+              toggleExpand();
+            }}
+            animate={{ rotate: isExpanded ? 180 : 0 }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+            className="text-gray-500 ml-2"
+          >
+            ▲
+          </motion.div>
+        )}
       </div>
-      {/* Animate expanding/collapsing of child nodes */}
       <AnimatePresence>
         {isExpanded && node.reports.length > 0 && (
           <motion.div
@@ -50,10 +66,10 @@ const TreeNode = ({ node }) => {
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
-            className="pl-6 border-l-2 border-gray-300 overflow-hidden"
+            className="pl-8 md:pl-12 border-l-2 border-gray-300 overflow-hidden"
           >
             {node.reports.map((report) => (
-              <TreeNode key={report.id} node={report} />
+              <TreeNode key={report.name} node={report} />
             ))}
           </motion.div>
         )}
@@ -66,7 +82,7 @@ export default function OrgTree({ data }) {
   return (
     <div className="flex flex-col items-start p-4">
       {data.map((node) => (
-        <TreeNode key={node.id} node={node} />
+        <TreeNode key={node.name} node={node} />
       ))}
     </div>
   );
@@ -81,14 +97,21 @@ const getInitials = (name) => {
     .toUpperCase();
 };
 
-// Helper function to set color based on ID (for simplicity, using static colors)
-const getNodeColor = (id) => {
+// Helper function to set color based on name
+const getNodeColor = (name) => {
   const colors = [
-    "bg-orange-600", // #B86E4B equivalent
-    "bg-purple-600", // #6E4BB8 equivalent
-    "bg-yellow-600", // #B8A84B equivalent
-    "bg-green-600", // #4BB86E equivalent
+    "bg-orange-600",
+    "bg-purple-600",
+    "bg-yellow-600",
+    "bg-green-600",
+    "bg-blue-600",
+    "bg-red-600",
+    "bg-teal-600",
+    "bg-pink-600",
   ];
-  const index = parseInt(id.slice(-1), 10) % colors.length;
-  return colors[index];
+  const hash = Array.from(name).reduce(
+    (acc, char) => acc + char.charCodeAt(0),
+    0
+  );
+  return colors[hash % colors.length];
 };

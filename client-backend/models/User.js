@@ -16,7 +16,7 @@ const userSchema = new mongoose.Schema(
       default: "CMA-001",
     },
     department: [
-      {
+      {                        
         type: String,
         default: "",
       },
