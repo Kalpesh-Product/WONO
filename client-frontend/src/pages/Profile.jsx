@@ -119,64 +119,46 @@ const Profile = () => {
         </nav>
       </div>
 
-      {/* Main Content */}
-      <div class="flex-1 p-6 bg-gray-100">
-        <h1 class="text-3xl font-bold mb-4">Profile</h1>
-        <div class="flex items-center p-4 bg-white rounded-lg shadow-md justify-between">
-          <div class="flex flex-row gap-3">
-            <div
-              className="w-16 h-16 rounded-full overflow-hidden bg-gray-200 cursor-pointer"
-              onClick={() => setIsModalOpen(true)}
-            >
-              <img
-                src={image}
-                alt="Profile Logo"
-                class="w-16 h-16 rounded-full mr-4"
-              ></img>
-            </div>
-
-            <div>
-              <h2 class="text-xl font-semibold">Abrar Shaikh</h2>
-              <p class="text-gray-500">Active</p>
-            </div>
-          </div>
-          <div class="flex j">
+  {/* Main Content */}
+  <div class="flex-1 p-6 bg-gray-100">
+    <h1 class="text-3xl font-bold mb-4">Profile</h1>
+    <div class="flex items-center p-4 bg-white rounded-lg shadow-md justify-between">
+        <div class="flex flex-row gap-3">
+    <div
+          className="w-16 h-16 rounded-full overflow-hidden bg-gray-200 cursor-pointer"
+          onClick={() => setIsModalOpen(true)}
+        >
+    <img src={image} alt="Profile Logo" class="w-16 h-16 rounded-full mr-4"></img>
+    </div>
+    
+    <div>
+      <h2 class="text-xl font-semibold">Abrar Shaikh</h2>
+      <p class="text-gray-500">Active</p>
+    </div>
+    </div>
+    <div class="flex j">
+    <button class="bg-blue-500 w-20 h-10 rounded-md" onClick={()=>setIsAccessModalOpen(true)}>Access</button>
+    </div>
+    </div>
+    {/* <!-- Horizontal Divider --> */}
+  <hr class="border-t border-gray-300 my-4" />
+  
+   <div className='mx-auto'>
+          
+          <ul className='flex  border-b mb-4 gap-4'>
+            <li className=' text-center w-1/2' role='presentation'>
             <button
-              class="bg-blue-500 w-20 h-10 rounded-md"
-              onClick={() => setIsAccessModalOpen(true)}
-            >
-              Access
+            className={`text-md py-2 w-full hover:bg-gray-100  ${
+              activeTab === "tab-1" ? "border-b-4 border-blue-500 text-blue-600" : ""
+            }` } onClick={()=>setActiveTab("tab-1")}>Bio
             </button>
-          </div>
-        </div>
-        {/* <!-- Horizontal Divider --> */}
-        <hr class="border-t border-gray-300 my-4" />
-
-        <div className="mx-auto">
-          <ul className="flex  border-b mb-4 gap-4">
-            <li className=" text-center" role="presentation">
-              <button
-                className={`text-md py-2 w-full hover:bg-gray-100  ${
-                  activeTab === "tab-1"
-                    ? "border-b-4 border-blue-500 text-blue-600"
-                    : ""
-                }`}
-                onClick={() => setActiveTab("tab-1")}
-              >
-                Bio
-              </button>
             </li>
-            <li className=" text-center" role="presentation">
-              <button
-                className={`text-md py-2 w-full hover:bg-gray-100 ${
-                  activeTab === "tab-2"
-                    ? "border-b-4 border-blue-500 text-blue-600"
-                    : ""
-                }`}
-                onClick={() => setActiveTab("tab-2")}
-              >
-                Access
-              </button>
+            <li className=' text-center w-1/2' role='presentation'>
+            <button
+           className={`text-md py-2 w-full hover:bg-gray-100 ${
+            activeTab === "tab-2" ? "border-b-4 border-blue-500 text-blue-600" : ""
+          }`} onClick={()=>setActiveTab("tab-2")}>Access
+            </button>
             </li>
           </ul>
           <div className="tab-content">
