@@ -3,6 +3,8 @@ import React, { useEffect, useState } from "react";
 import dashboardIcon from "../LandingPageImages/dummy-icon.png";
 import Swal from "sweetalert2";
 import { toast } from "sonner";
+import { useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import {
   androidAppSaas,
@@ -82,14 +84,29 @@ import {
 
 
 const ClientLandingPage = () => {
-  const [user, setUser] = useState('');
-  useEffect(() => {
-    const storedUser = JSON.parse(localStorage.getItem("user"));
-    setUser(storedUser);
-    console.log(user); // Log the user object on component mount
-    console.log(user.name)
-  }, []);
-  
+  const navigate = useNavigate();
+
+  // Get the role parameter from the URL
+  const { role } = useParams();
+
+  // You can define names or roles here based on the role
+  const roleBasedNames = {
+    ma: "Abrar Shaikh",
+    sa: "Kashif Shaikh",
+    at: "Kalpesh Naik",
+    af: "Narshiva Naik",
+    et1: "Aiwinraj KS",
+    et2: "Allan Mark Silveira",
+    et3: "Anushri Mohandas Bhagat",
+    et4: "Sankalp Chandrashekar Kalangutkar",
+    ef1: "Hema Natalkar",
+    ef2: "Rhutvik Durgadas Sawant",
+    ef3: "Siddhi Mahesh Naik Vernekar",
+  };
+
+  // Set a default if the role is not found
+  const displayName = roleBasedNames[role] || "Abrar Shaikh";
+
   // Arrays Icon Start
 
   const services_frontend = [
@@ -720,6 +737,12 @@ const ClientLandingPage = () => {
 
   // LANDING PAGE ICONS END
 
+  // EXTRA DUMMY ICONS START
+  // Website Icon Image
+  const websiteImage = services_frontend[0].image;
+
+  // EXTRA DUMMY ICONS END
+
   // State to manage modal visibility
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -839,12 +862,24 @@ const ClientLandingPage = () => {
           {/* <Card title="Dashboard" iconSrc="dashboard-icon.png" /> */}
           {/* <Card title="Dashboard" iconSrc="../LandingPageImages/dummy-icon.png" /> */}
           {/* <Card title="Dashboard" iconSrc={dashboardIcon} /> */}
-          <CardNS title="Dashboard" iconSrc={dashboardImage} />
+          <CardNS
+            title="Dashboard"
+            iconSrc={dashboardImage}
+            onClick={() => navigate("/dashboard")}
+          />
           <CardNS title="Services" iconSrc={servicesImage} />
           <CardNS title="Chat" iconSrc={chatImage} />
-          <CardNS title="Profile" iconSrc={profileImage} />
+          <CardNS
+            title="Profile"
+            iconSrc={profileImage}
+            onClick={() => navigate("/profile")}
+          />
           <CardNS title="Calendar" iconSrc={calendarImage} />
-          <CardNS title="Access" iconSrc={accessImage} />
+          <CardNS
+            title="Access"
+            iconSrc={accessImage}
+            onClick={() => navigate("/access")}
+          />
         </div>
 
         {/* Quick Launch Section */}
@@ -856,6 +891,9 @@ const ClientLandingPage = () => {
           <CardNS title="Ticket" iconSrc={ticketsImage} />
           <CardNS title="Meeting" iconSrc={meetingImage} />
           <CardNS title="Customer Service" iconSrc={customerServiceImage} />
+
+          {/* Conditional rendering for tech admin role (at) */}
+          {role === "at" && <CardNS title="Website" iconSrc={websiteImage} />}
         </div>
 
         {/* Add More Button */}
@@ -1104,9 +1142,12 @@ const ClientLandingPage = () => {
 };
 
 // Card Component
-const CardNS = ({ title, iconSrc }) => {
+const CardNS = ({ title, iconSrc, onClick }) => {
   return (
-    <div className="flex flex-col items-center text-center">
+    <div
+      className="flex flex-col items-center text-center cursor-pointer"
+      onClick={onClick} // Attach onClick event here
+    >
       <img src={iconSrc} alt={title} className="w-16 h-16 mb-4" />
       <p className="text-lg font-medium">{title}</p>
     </div>
