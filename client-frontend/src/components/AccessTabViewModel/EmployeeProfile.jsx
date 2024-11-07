@@ -1,6 +1,12 @@
-import React from 'react'
+import React,{useState} from 'react'
+
 
 const EmployeeProfile = () => {
+  const [isEditing,setIsEditing] = useState(false);
+  const [formData,setFormData] = useState({
+    name:"Abrar Shaikh",
+    role:"Master Admin"
+  })
   return (
     <div class="flex flex-col space-y-7">
     <div class="flex items-center gap-20">

@@ -96,7 +96,7 @@ const Profile = () => {
     </div>
     {/* <!-- Horizontal Divider --> */}
   <hr class="border-t border-gray-300 my-4" />
-  <div class="bg-white p-4 rounded-lg shadow-md">
+  {/* <div class="bg-white p-4 rounded-lg shadow-md">
     <div class="flex flex-col space-y-3">
       <div class="flex items-center gap-10">
         <span class="w-24 font-semibold text-gray-600 gap-5">Name:</span>
@@ -142,7 +142,45 @@ const Profile = () => {
 
     </div>
     
-  </div>
+  </div> */}
+   <div className='mx-auto'>
+          
+          <ul className='flex  border-b mb-4 gap-4'>
+            <li className=' text-center' role='presentation'>
+            <button
+            className={`text-md py-2 w-full hover:bg-gray-100  ${
+              activeTab === "tab-1" ? "border-b-4 border-blue-500 text-blue-600" : ""
+            }` } onClick={()=>setActiveTab("tab-1")}>Bio
+            </button>
+            </li>
+            <li className=' text-center' role='presentation'>
+            <button
+           className={`text-md py-2 w-full hover:bg-gray-100 ${
+            activeTab === "tab-2" ? "border-b-4 border-blue-500 text-blue-600" : ""
+          }`} onClick={()=>setActiveTab("tab-2")}>Access
+            </button>
+            </li>
+            </ul>
+            <div className="tab-content">
+      {activeTab === "tab-1" && (
+        <div className="tab-pane fade show active" id="tab-1" role="tabpanel">
+          <div className="flex flex-col  mt-3" data-aos="fade-up" data-aos-delay="100">
+            <EmployeeProfile/>
+          </div>
+        </div>
+      )}
+      {activeTab === "tab-2" && (
+        <div className="tab-pane fade show" id="tab-2" role="tabpanel">
+          <div className="flex flex-col  mt-3" data-aos="fade-up" data-aos-delay="100">
+            {/* Tab 2 Content */}
+            <p>Your Apply Now content here...</p>
+          </div>
+        </div>
+      )}
+    </div>
+  
+
+          </div>
 
   </div>
  
