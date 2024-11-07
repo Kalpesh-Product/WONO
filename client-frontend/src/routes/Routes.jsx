@@ -4,12 +4,18 @@ import Home from "../pages/Home";
 import Profile from "../pages/Profile";
 import ClientLandingPage from "../pages/ClientLandingPage";
 import AccessPage from "../pages/Access";
+import DragDropGrid from "../pages/DragDropGrid";
+import ClientLoginPage from "../pages/ClientLoginPage";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <MainLayout />,
     children: [
+      // {
+      //   index: true,
+      //   element: <ClientLoginPage />,
+      // },
       {
         index: true,
         element: <ClientLandingPage />,
@@ -19,10 +25,17 @@ const router = createBrowserRouter([
         element: <AccessPage />,
       },
       {
-        path:"/profile",
-        element:<Profile/>,
+        path: "/landing",
+        element: <ClientLandingPage />,
       },
-      
+      {
+        path: "/profile",
+        element: <Profile />,
+      },
+      {
+        path: "/drag-test",
+        element: <DragDropGrid />,
+      },
     ],
   },
 ]);
