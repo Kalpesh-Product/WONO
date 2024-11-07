@@ -10,7 +10,7 @@ const EmployeeProfile = () => {
     company:"Biznest",
     department:"All Departments",
     email:"john@gmail.com",
-    phone:"",
+    phone:"1234567854",
     Address:"",
     DOB:""
   })
