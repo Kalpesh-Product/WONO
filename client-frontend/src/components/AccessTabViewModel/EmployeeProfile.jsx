@@ -5,51 +5,172 @@ const EmployeeProfile = () => {
   const [isEditing,setIsEditing] = useState(false);
   const [formData,setFormData] = useState({
     name:"Abrar Shaikh",
-    role:"Master Admin"
+    role:"Master Admin",
+    designation:"CEO",
+    company:"Biznest",
+    department:"All Departments",
+    email:"john@gmail.com",
+    phone:"",
+    Address:"",
+    DOB:""
   })
+
+  // Handle input changes
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+
+  const toggleEdit = () => {
+    setIsEditing(!isEditing);
+
+    // Optional: Save logic here, e.g., API call
+    if (isEditing) {
+      console.log("Saved Data:", formData);
+    }
+  };
   return (
     <div class="flex flex-col space-y-7">
     <div class="flex items-center gap-20">
       <span class="w-24 font-semibold text-gray-600 ">Name:</span>
-      <span class="text-gray-800">Abrar Shaikh</span>
+      <input
+          name="name"
+          value={formData.name}
+          onChange={handleChange}
+          className={`text-gray-800 border ${
+            isEditing
+              ? "border-gray-400 bg-white"
+              : "border-transparent bg-transparent"
+          } rounded`}
+          disabled={!isEditing}
+        />
     </div>
     <div class="flex items-center gap-20">
       <span class="w-24 font-semibold text-gray-600">Role:</span>
-      <span class="text-gray-800">Master Admin</span>
+      <input
+          name="role"
+          value={formData.role}
+          onChange={handleChange}
+          className={`text-gray-800 border ${
+            isEditing
+              ? "border-gray-400 bg-white"
+              : "border-transparent bg-transparent"
+          } rounded`}
+          disabled={!isEditing}
+        />
     </div>
     <div class="flex items-center gap-20">
       <span class="w-24 font-semibold text-gray-600">Designation:</span>
-      <span class="text-gray-800">Abrar Shaikh</span>
+      <input
+          name="role"
+          value={formData.designation}
+          onChange={handleChange}
+          className={`text-gray-800 border ${
+            isEditing
+              ? "border-gray-400 bg-white"
+              : "border-transparent bg-transparent"
+          } rounded`}
+          disabled={!isEditing}
+        />
     </div>
     <div class="flex items-center gap-20">
       <span class="w-24 font-semibold text-gray-600">Company:</span>
-      <span class="text-gray-800">Biznest</span>
+      <input
+          name="role"
+          value={formData.company}
+          onChange={handleChange}
+          className={`text-gray-800 border ${
+            isEditing
+              ? "border-gray-400 bg-white"
+              : "border-transparent bg-transparent"
+          } rounded`}
+          disabled={!isEditing}
+        />
     </div>
     <div class="flex items-center gap-20">
       <span class="w-24 font-semibold text-gray-600">Department:</span>
-      <span class="text-gray-800">All Departments</span>
+      <input
+          name="role"
+          value={formData.department}
+          onChange={handleChange}
+          className={`text-gray-800 border ${
+            isEditing
+              ? "border-gray-400 bg-white"
+              : "border-transparent bg-transparent"
+          } rounded`}
+          disabled={!isEditing}
+        />
     </div>
     <div class="flex items-center gap-20">
       <span class="w-24 font-semibold text-gray-600">Email:</span>
-      <span class="text-gray-800">john@gmail.com</span>
+      <input
+          name="role"
+          value={formData.email}
+          onChange={handleChange}
+          className={`text-gray-800 border ${
+            isEditing
+              ? "border-gray-400 bg-white"
+              : "border-transparent bg-transparent"
+          } rounded`}
+          disabled={!isEditing}
+        />
     </div>
     <div class="flex items-center gap-20">
       <span class="w-24 font-semibold text-gray-600">Phone:</span>
-      <span class="text-gray-800">+1 234 567 890</span>
+      <input
+          name="role"
+          value={formData.phone}
+          onChange={handleChange}
+          className={`text-gray-800 border ${
+            isEditing
+              ? "border-gray-400 bg-white"
+              : "border-transparent bg-transparent"
+          } rounded`}
+          disabled={!isEditing}
+        />
     </div>
     <div class="flex items-center gap-20">
       <span class="w-24 font-semibold text-gray-600">Address:</span>
-      <span class="text-gray-800">1234 Main St, City, Country</span>
+      <input
+          name="role"
+          value={formData.Address}
+          onChange={handleChange}
+          className={`text-gray-800 border ${
+            isEditing
+              ? "border-gray-400 bg-white"
+              : "border-transparent bg-transparent"
+          } rounded`}
+          disabled={!isEditing}
+        />
     </div>
     <div class="flex items-center gap-20">
       <span class="w-24 font-semibold text-gray-600">DOB:</span>
-      <span class="text-gray-800">26/03/2000</span>
+      <input
+          name="role"
+          value={formData.DOB}
+          onChange={handleChange}
+          className={`text-gray-800 border ${
+            isEditing
+              ? "border-gray-400 bg-white"
+              : "border-transparent bg-transparent"
+          } rounded`}
+          disabled={!isEditing}
+        />
     </div>
-    {/* <div class='flex flex-row gap-4 items-center justify-center'>
-      
-      <button class='bg-green-600 w-20 h-10 rounded-md' onClick={()=>setIsUpdateModalOpen(true)} >Update</button>
-     
-  </div> */}
+    
+  <div className="flex justify-end space-x-4">
+        <button
+          onClick={toggleEdit}
+          className={`px-4 py-2 text-white rounded ${
+            isEditing ? "bg-green-500 hover:bg-green-600" : "bg-blue-500 hover:bg-blue-600"
+          }`}
+        >
+          {isEditing ? "Save" : "Edit"}
+        </button>
+      </div>
 
   </div>
   )

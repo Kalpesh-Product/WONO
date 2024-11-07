@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import EmployeeProfile from '../components/AccessTabViewModel/EmployeeProfile';
+import AccessHierarchyTab from '../components/AccessTabViewModel/AccessHierarchyTab';
 
 const Profile = () => {
     const [image, setImage] = useState("");
@@ -8,6 +9,7 @@ const Profile = () => {
     const [isUpdateModalOpen,setIsUpdateModalOpen] = useState(false);
     const [checkedItems,setCheckedItems] = useState({});
     const [activeTab, setActiveTab] = useState('tab-1');
+
 
 
     const handleImageChange = (e)=>{
@@ -96,53 +98,7 @@ const Profile = () => {
     </div>
     {/* <!-- Horizontal Divider --> */}
   <hr class="border-t border-gray-300 my-4" />
-  {/* <div class="bg-white p-4 rounded-lg shadow-md">
-    <div class="flex flex-col space-y-3">
-      <div class="flex items-center gap-10">
-        <span class="w-24 font-semibold text-gray-600 gap-5">Name:</span>
-        <span class="text-gray-800">Abrar Shaikh</span>
-      </div>
-      <div class="flex items-center gap-10">
-        <span class="w-24 font-semibold text-gray-600">Role:</span>
-        <span class="text-gray-800">Master Admin</span>
-      </div>
-      <div class="flex items-center gap-10">
-        <span class="w-24 font-semibold text-gray-600">Designation:</span>
-        <span class="text-gray-800">Abrar Shaikh</span>
-      </div>
-      <div class="flex items-center gap-10">
-        <span class="w-24 font-semibold text-gray-600">Company:</span>
-        <span class="text-gray-800">Biznest</span>
-      </div>
-      <div class="flex items-center gap-10">
-        <span class="w-24 font-semibold text-gray-600">Department:</span>
-        <span class="text-gray-800">All Departments</span>
-      </div>
-      <div class="flex items-center gap-10">
-        <span class="w-24 font-semibold text-gray-600">Email:</span>
-        <span class="text-gray-800">john@gmail.com</span>
-      </div>
-      <div class="flex items-center gap-10">
-        <span class="w-24 font-semibold text-gray-600">Phone:</span>
-        <span class="text-gray-800">+1 234 567 890</span>
-      </div>
-      <div class="flex items-center gap-10">
-        <span class="w-24 font-semibold text-gray-600">Address:</span>
-        <span class="text-gray-800">1234 Main St, City, Country</span>
-      </div>
-      <div class="flex items-center gap-10">
-        <span class="w-24 font-semibold text-gray-600">DOB:</span>
-        <span class="text-gray-800">26/03/2000</span>
-      </div>
-      <div class='flex flex-row gap-4 items-center justify-center'>
-        
-        <button class='bg-green-600 w-20 h-10 rounded-md' onClick={()=>setIsUpdateModalOpen(true)} >Update</button>
-       
-    </div>
-
-    </div>
-    
-  </div> */}
+  
    <div className='mx-auto'>
           
           <ul className='flex  border-b mb-4 gap-4'>
@@ -173,7 +129,7 @@ const Profile = () => {
         <div className="tab-pane fade show" id="tab-2" role="tabpanel">
           <div className="flex flex-col  mt-3" data-aos="fade-up" data-aos-delay="100">
             {/* Tab 2 Content */}
-            <p>Your Apply Now content here...</p>
+           <AccessHierarchyTab/>
           </div>
         </div>
       )}
