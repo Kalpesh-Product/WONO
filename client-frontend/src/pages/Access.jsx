@@ -6,11 +6,12 @@ import { openModal, closeModal } from "../redux/features/modalSlice";
 import MemberForm from "../components/MemberForm";
 import { data } from "../utils/data";
 import { motion } from "framer-motion";
+import DepartmentForm from "../components/DepartmentForm";
 
 export default function Access() {
   const open = useSelector((state) => state.modal.open);
   const dispatch = useDispatch();
-  const [activeModal, setActiveModal] = useState(null); 
+  const [activeModal, setActiveModal] = useState(null);
 
   const handleOpenModal = (type) => {
     setActiveModal(type);
@@ -43,13 +44,17 @@ export default function Access() {
         <Modal open={open} onClose={() => dispatch(closeModal())}>
           {activeModal === "employee" ? (
             <>
-              <h1 className="text-xl text-center my-2 font-bold">Enter Employee Details</h1>
+              <h1 className="text-xl text-center my-2 font-bold">
+                Enter Employee Details
+              </h1>
               <MemberForm />
             </>
           ) : activeModal === "department" ? (
             <>
-              <h1 className="text-xl text-center my-2 font-bold">Enter Department Details</h1>
-              
+              <h1 className="text-xl text-center my-2 font-bold">
+                Enter Department Details
+              </h1>
+              <DepartmentForm />
             </>
           ) : null}
         </Modal>
