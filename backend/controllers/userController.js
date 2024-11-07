@@ -878,6 +878,7 @@ exports.createJobApplication = async (req, res) => {
                 number,
                 date,
                 experience,
+                
                 monthlySalary,
                 expectedSalary,
                 daysToJoin,

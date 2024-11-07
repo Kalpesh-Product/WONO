@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import AppStruct from "./structure/AppStruct";
 import CompTest from "./pages/CompTest";
 import Users from "./pages/Users";
@@ -30,19 +30,45 @@ import RequireAuth from "./components/RequireAuth";
 import PrivateRoute from "./contexts/PrivateRoute";
 import PublicRoute from "./contexts/PublicRoute";
 import Faqs from "./pages/Faqs";
+import WebsitePage from "./pages/WebsitePage";
+import WebsiteLoginPage from "./pages/WebsiteLoginPage";
+import ClientLandingPage from "./pages/Client-Pages/ClientLandingPage";
+
+// New component for routes without header/footer
+const NoLayout = ({ children }) => {
+  return <>{children}</>;
+};
 
 function App({ useHideUnimportantErrors }) {
   const [activeTab, setActiveTab] = useState("Home");
+  const location = useLocation(); // Get the current path
 
   const changeActiveTab = (activeTab) => {
     setActiveTab(activeTab);
   };
   useHideUnimportantErrors();
 
+  // Define routes where the layout should not be rendered
+  // const noHeaderFooterRoutes = ["/website"];
+  const noHeaderFooterRoutes = ["/website", "/website-login", "/landing"];
+
   return (
     <div>
       <UserProvider>
-        <AppHeader activeTab={activeTab} changeActiveTab={changeActiveTab} />
+        {/* <AppHeader activeTab={activeTab} changeActiveTab={changeActiveTab} /> */}
+
+        {/* Conditionally render AppHeader and AppFooter based on the route */}
+        {/* {!noHeaderFooterRoutes.includes(location.pathname) && (
+          <AppHeader activeTab={activeTab} changeActiveTab={changeActiveTab} />
+        )} */}
+
+        {/* Conditionally render AppHeader and AppFooter based on the route */}
+        {!noHeaderFooterRoutes.some((route) =>
+          location.pathname.startsWith(route)
+        ) && (
+          <AppHeader activeTab={activeTab} changeActiveTab={changeActiveTab} />
+        )}
+
         <Routes>
           {/* Public Routes */}
           <Route
@@ -217,6 +243,56 @@ function App({ useHideUnimportantErrors }) {
             }
           />
 
+          {/* <Route
+            path="/landing"
+            element={
+              <PublicRoute>
+                <ClientLandingPage />
+              </PublicRoute>
+            }
+          /> */}
+
+          {/* <Route
+            path="/website"
+            element={
+              <PublicRoute>
+                <WebsitePage />
+              </PublicRoute>
+            }
+          /> */}
+
+          {/* Route without header/footer */}
+          <Route
+            path="/website"
+            element={
+              <PublicRoute>
+                <NoLayout>
+                  <WebsitePage />
+                </NoLayout>
+              </PublicRoute>
+            }
+          />
+          <Route
+            path="/website-login"
+            element={
+              <PublicRoute>
+                <NoLayout>
+                  <WebsiteLoginPage />
+                </NoLayout>
+              </PublicRoute>
+            }
+          />
+          <Route
+            path="/landing"
+            element={
+              <PublicRoute>
+                <NoLayout>
+                  <ClientLandingPage />
+                </NoLayout>
+              </PublicRoute>
+            }
+          />
+
           {/* Private Route */}
           <Route
             path="/dashboard"
@@ -227,7 +303,17 @@ function App({ useHideUnimportantErrors }) {
             }
           />
         </Routes>
-        <AppFooter changeActiveTab={changeActiveTab} />
+        {/* <AppFooter changeActiveTab={changeActiveTab} /> */}
+
+        {/* Conditionally render AppFooter */}
+        {/* {!noHeaderFooterRoutes.includes(location.pathname) && (
+          <AppFooter changeActiveTab={changeActiveTab} />
+        )} */}
+
+        {/* Conditionally render AppFooter */}
+        {!noHeaderFooterRoutes.some((route) =>
+          location.pathname.startsWith(route)
+        ) && <AppFooter changeActiveTab={changeActiveTab} />}
       </UserProvider>
     </div>
   );
