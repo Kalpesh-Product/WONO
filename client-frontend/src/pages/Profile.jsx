@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import EmployeeProfile from '../components/AccessTabViewModel/EmployeeProfile';
 
 const Profile = () => {
     const [image, setImage] = useState("");
@@ -6,6 +7,7 @@ const Profile = () => {
     const [IsAccessModalOpen,setIsAccessModalOpen] = useState(false);
     const [isUpdateModalOpen,setIsUpdateModalOpen] = useState(false);
     const [checkedItems,setCheckedItems] = useState({});
+    const [activeTab, setActiveTab] = useState('tab-1');
 
 
     const handleImageChange = (e)=>{
@@ -176,25 +178,41 @@ const Profile = () => {
   {
     IsAccessModalOpen && (
       <div className='fixed inset-0 bg-gray-800 bg-opacity-50 flex items-center justify-center'>
-        <div className='bg-white p-6 rounded-lg shadow-lg w-80'>
-        <h3 className="text-xl font-bold text-center mb-4">Give Access</h3>
-        {/* List of items with checkboxes */}
-        <div className='mb-4'>
-          {["HR", "Sales","Finance","Marketing","Tickets","Meeting Room"].map((item,index)=>(
-            <label key={index} class="flex items-center space-x-2 mb-2">
-              <input
-              type='checkbox'
-              checked={!!checkedItems[item]}
-              onChange={()=>handleCheckboxChange(item)}
-              className='cursor-pointer'
-              
-              ></input>
-                <span>{item}</span>
-              
-            </label>
-          )
-          )}
+        <div className='bg-white p-6 rounded-lg shadow-lg w-100'>
+        <div className='mx-auto'>
+          
+          <ul className='flex justify-center border-b mb-4'>
+            <li className='w-1/2 text-center' role='presentation'>
+            <button
+            className='text-lg py-2 w-full font-semibold hover:bg-gray-100 focus:bg-gray-200 ' onClick={()=>setActiveTab("tab-1")}>PROFILE
+            </button>
+            </li>
+            <li className='w-1/2 text-center' role='presentation'>
+            <button
+            className='text-lg py-2 w-full font-semibold hover:bg-gray-100 focus:bg-gray-200 ' onClick={()=>setActiveTab("tab-2")}>ACCESS
+            </button>
+            </li>
+            </ul>
+            <div className="tab-content">
+      {activeTab === "tab-1" && (
+        <div className="tab-pane fade show active" id="tab-1" role="tabpanel">
+          <div className="flex flex-col items-center justify-center mt-3" data-aos="fade-up" data-aos-delay="100">
+            <EmployeeProfile/>
+          </div>
         </div>
+      )}
+      {activeTab === "tab-2" && (
+        <div className="tab-pane fade show" id="tab-2" role="tabpanel">
+          <div className="flex flex-col items-center justify-center mt-3" data-aos="fade-up" data-aos-delay="100">
+            {/* Tab 2 Content */}
+            <p>Your Apply Now content here...</p>
+          </div>
+        </div>
+      )}
+    </div>
+  
+
+          </div>
 
         <button
               onClick={() => setIsAccessModalOpen(false)}
