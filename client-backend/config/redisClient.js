@@ -6,4 +6,4 @@ const redisClient = new Redis({
     port:process.env.REDIS_PORT
 });
 
-module.exports = redisClient;
+module.exports = redisClient;

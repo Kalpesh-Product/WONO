@@ -7,7 +7,7 @@ export default function MainLayout() {
     <>
       <ClientHeader />
       <Outlet />
-      <ClientFooter />
+      {/* <ClientFooter /> */}
     </>
   );
 }

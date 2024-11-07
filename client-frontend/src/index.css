@@ -32,3 +32,8 @@
   }
 
 }
+
+@font-face {
+  font-family: Popins-Regular;
+  src: url('../src/assets/WONO_images/img/fonts/Poppins-Regular.ttf');
+}

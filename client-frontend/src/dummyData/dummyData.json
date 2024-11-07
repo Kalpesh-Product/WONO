@@ -1,0 +1,17 @@
+[
+    {
+      "name": "Abrar Shaikh",
+      "email": "abrar@wono.com",
+      "role": "Master Admin",
+      "department": "Top Management",
+      "password" : "123"
+    },
+    {
+      "name": "Kalpesh Naik",
+      "email": "kalpesh@wono.com",
+      "role": "Admin",
+      "department": "Tech",
+      "password" : "456"
+    }
+  ]
+  

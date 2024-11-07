@@ -15,8 +15,12 @@ const {
   submitJobApplication,
   checkAuth,
   createJobApplication,
+  syncEnquiriesToGoogleSheets
 } = require("../controllers/userController");
 const { upload } = require("../email/multerConfig");
+
+// Route to trigger the sync
+router.get('/sync-google-sheets', syncEnquiriesToGoogleSheets);
 
 // Register user
 router.post("/register", registerUser);

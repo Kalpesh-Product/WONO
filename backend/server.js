@@ -36,7 +36,11 @@ const allowedHeaders = [
 
 app.use(
   cors({
-    origin: true, // Reflects the request origin, allowing wono frontend origin
+    origin: [
+      "https://www.wono.co", // Your frontend origin
+      /\.google\.com$/, // Allow requests from Google domains
+      "https://3e13-115-244-195-142.ngrok-free.app" // Your specific ngrok URL
+    ], // Reflects the request origin, allowing wono frontend origin
     // origin: true, // Reflects the request origin, allowing all origins
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     credentials: true, // Allow cookies to be sent
