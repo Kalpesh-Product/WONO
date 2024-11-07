@@ -148,7 +148,6 @@ const Profile = () => {
  
 
 
-
   {/* Modal for Image Upload */}
 
 

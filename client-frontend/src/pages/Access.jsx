@@ -1,112 +1,61 @@
-import React, { useState } from "react";
-import { OrganizationChart } from "primereact/organizationchart";
+import { useState } from "react";
+import HierarchyTree from "../components/HierarchyTree";
 import Modal from "../components/Modal";
 import { useDispatch, useSelector } from "react-redux";
-import { openModal } from "../redux/features/modalSlice";
+import { openModal, closeModal } from "../redux/features/modalSlice";
 import MemberForm from "../components/MemberForm";
+import { data } from "../utils/data";
+import { motion } from "framer-motion";
 
 export default function Access() {
   const open = useSelector((state) => state.modal.open);
   const dispatch = useDispatch();
-  const [data] = useState([
-    {
-      expanded: true,
-      type: "person",
-      data: {
-        image:
-          "https://in.bmscdn.com/iedb/artist/images/website/poster/large/bobby-deol-338-1708943147.jpg",
-        name: "Abrar Sheikh",
-        title: "CEO",
-      },
-      children: [
-        {
-          expanded: true,
-          type: "person",
-          data: {
-            image:
-              "https://primefaces.org/cdn/primereact/images/avatar/annafali.png",
-            name: "Anna Fali",
-            title: "CMO",
-          },
-          children: [
-            {
-              label: "Sales",
-            },
-            {
-              label: "Marketing",
-            },
-          ],
-        },
-        {
-          expanded: true,
-          type: "person",
-          data: {
-            image:
-              "https://primefaces.org/cdn/primereact/images/avatar/stephenshaw.png",
-            name: "Stephen Shaw",
-            title: "CTO",
-          },
-          children: [
-            {
-              label: "Development",
-            },
-            {
-              label: "UI/UX Design",
-            },
-          ],
-        },
-      ],
-    },
-  ]);
+  const [activeModal, setActiveModal] = useState(null); 
 
-  const nodeTemplate = (node) => {
-    if (node.type === "person") {
-      return (
-        <div className="flex flex-col items-center p-6 bg-white shadow-lg rounded-lg max-w-sm text-center">
-          <img
-            alt={node.data.name}
-            src={node.data.image}
-            className="mb-4 w-20 h-20 rounded-full border-4 border-indigo-500"
-          />
-          <span className="font-semibold text-lg text-indigo-800 mb-2">
-            {node.data.name}
-          </span>
-          <span className="text-base text-gray-600">{node.data.title}</span>
-        </div>
-      );
-    }
-
-    return (
-      <div className="bg-gray-100 text-gray-800 px-4 py-3 rounded-lg shadow-sm text-center text-lg font-medium">
-        {node.label}
-      </div>
-    );
+  const handleOpenModal = (type) => {
+    setActiveModal(type);
+    dispatch(openModal());
   };
 
   return (
     <main className="min-h-screen p-8">
       <div className="flex justify-between items-center">
         <h1 className="text-4xl font-bold">Access</h1>
-        <button
-          onClick={() => dispatch(openModal())}
-          className="p-4 rounded-md text-white bg-violet-500 font-bold hover:bg-purple-600 transition"
-        >
-          Add Employees
-        </button>
-        {open && (
-          <Modal open={open}>
-            <h1 className="text-xl text-center my-2 font-bold">Enter employee details</h1>
-            <MemberForm />
-          </Modal>
-        )}
+        <div className="flex justify-center items-center gap-4 flex-wrap">
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            onClick={() => handleOpenModal("department")}
+            className="px-6 py-2 rounded-lg text-white bg-purple-500 hover:bg-purple-600 transition-shadow shadow-md hover:shadow-lg active:shadow-inner"
+          >
+            Add Department
+          </motion.button>
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            onClick={() => handleOpenModal("employee")}
+            className="px-6 py-2 rounded-lg text-white bg-purple-500 hover:bg-purple-600 transition-shadow shadow-md hover:shadow-lg active:shadow-inner"
+          >
+            Add Employee
+          </motion.button>
+        </div>
+
+        <Modal open={open} onClose={() => dispatch(closeModal())}>
+          {activeModal === "employee" ? (
+            <>
+              <h1 className="text-xl text-center my-2 font-bold">Enter Employee Details</h1>
+              <MemberForm />
+            </>
+          ) : activeModal === "department" ? (
+            <>
+              <h1 className="text-xl text-center my-2 font-bold">Enter Department Details</h1>
+              
+            </>
+          ) : null}
+        </Modal>
       </div>
-      <div className="overflow-x-auto p-8">
-        <OrganizationChart
-          value={data}
-          nodeTemplate={nodeTemplate}
-          selectionMode="multiple"
-          className="organization-chart"
-        />
+      <div className="overflow-x-auto p-8 flex items-center justify-center">
+        <HierarchyTree data={data} />
       </div>
     </main>
   );
