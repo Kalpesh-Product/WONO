@@ -9,6 +9,8 @@ import { useDispatch } from "react-redux";
 import { closeModal } from "../redux/features/modalSlice";
 import { Country, State, City } from "country-state-city";
 import { motion } from "framer-motion";
+import { useQuery } from "@tanstack/react-query";
+import axios from "axios";
 
 export default function MemberForm() {
   const dispatch = useDispatch();
@@ -25,6 +27,17 @@ export default function MemberForm() {
     },
     role: "",
     department: "",
+  });
+
+  const { isLoading, data, error } = useQuery({
+    queryKey: ["department"],
+    queryFn: async function () {
+      const response = await axios.get(
+        "http://localhost:5000/departments/all-departments"
+      );
+      console.log(response);
+      return response.data;
+    },
   });
 
   const [errors, setErrors] = useState({});
@@ -302,9 +315,13 @@ export default function MemberForm() {
             className="w-full border border-gray-300 rounded-md px-3 py-4 bg-white text-gray-900 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
           >
             <option value="">Select Department</option>
-            <option value="hr">HR</option>
-            <option value="sales">Sales</option>
-            <option value="marketing">Marketing</option>
+            {isLoading ? (
+              <p>Loading</p>
+            ) : (
+              data.map((department, index) => {
+                return <option key={index}>{department.name}</option>;
+              })
+            )}
           </select>
           {errors.department && (
             <p className="text-red-600">{errors.department}</p>

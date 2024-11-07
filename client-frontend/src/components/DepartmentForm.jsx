@@ -3,12 +3,33 @@ import TextField from "@mui/material/TextField";
 import { motion } from "framer-motion";
 import { useDispatch } from "react-redux";
 import { closeModal } from "../redux/features/modalSlice";
+import { useMutation } from "@tanstack/react-query";
+import axios from "axios";
+import { toast } from "sonner";
 
 export default function DepartmentForm() {
   const dispatch = useDispatch();
   const [department, setDepartment] = useState({
     name: "",
     description: "",
+  });
+
+  const { mutate } = useMutation({
+    mutationFn: async function (data) {
+      const response = await axios.post(
+        "http://localhost:5000/departments/create-department",
+        data
+      );
+
+      return response.data;
+    },
+    onSuccess: function () {
+      dispatch(closeModal());
+      toast.success("Successfully created Department");
+    },
+    onError: function (err) {
+      toast.error(err.message);
+    },
   });
 
   const handleChange = (e) => {
@@ -21,6 +42,7 @@ export default function DepartmentForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    mutate(department);
     console.log("Department Details:", department);
     // Submit form logic here
   };
