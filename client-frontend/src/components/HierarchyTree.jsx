@@ -36,7 +36,7 @@ const TreeNode = ({ node }) => {
     </div>
     
     <div>
-      <h2 class="text-xl font-semibold">Abrar Shaikh</h2>
+      <h2 class="text-xl font-semibold">{node.name}</h2>
       <p class="text-gray-500">Active</p>
     </div>
     </div>
