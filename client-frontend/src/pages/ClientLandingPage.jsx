@@ -107,6 +107,12 @@ const ClientLandingPage = () => {
   // Set a default if the role is not found
   const displayName = roleBasedNames[role] || "Abrar Shaikh";
 
+  const [user, setUser] = useState('');
+  useEffect(() => {
+    const storedUser = JSON.parse(localStorage.getItem("user"));
+    setUser(storedUser);
+  }, []);
+
   // Arrays Icon Start
 
   const services_frontend = [
