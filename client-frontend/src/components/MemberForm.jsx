@@ -151,6 +151,7 @@ export default function MemberForm() {
 
   const handleSubmit = () => {
     if (validate()) {
+      dispatch(closeModal());
       toast.success("Successfully created user");
       console.log("Form submitted successfully:", formData);
     }

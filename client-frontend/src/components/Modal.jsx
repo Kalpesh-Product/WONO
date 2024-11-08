@@ -47,7 +47,7 @@ export default function Modal({ children, open, onClose }) {
         >
           <div
             onClick={(e) => e.stopPropagation()}
-            className="w-auto max-w-xl max-h-[80vh] overflow-auto p-4 bg-white rounded-md custom-scrollbar"
+            className="w-auto h-auto max-h-[90vh] overflow-auto p-4 bg-white rounded-md custom-scrollbar"
           >
             {children}
           </div>
