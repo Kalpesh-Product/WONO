@@ -184,10 +184,10 @@ const Profile = () => {
                     data={{
                       name: "Abrar Shaikh",
                       role: "Manager",
-                      designation: "Top Management",
+                      designation: "TopManagement",
                       email: "abrar.shaikh@example.com",
                       company: "ABC Corp",
-                      department: "Top Management",
+                      department: "TopManagement",
                       phone: "+1234567890",
                       address: "123 Main St, Cityville",
                       dateOfBirth: "1975-02-15",

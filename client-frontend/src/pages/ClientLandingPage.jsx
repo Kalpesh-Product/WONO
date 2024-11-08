@@ -1126,7 +1126,7 @@ const ClientLandingPage = () => {
                   </div>
                 </div> */}
 
-                {user.department === "Top Management" ||
+                {user.department === "TopManagement" ||
                 user.department === "Tech" ? (
                   <div>
                     <h2 className="text-xl md:text-2xl font-bold mb-8 ps-[7rem] uppercase">
@@ -1156,7 +1156,7 @@ const ClientLandingPage = () => {
 
                 {/* Finance & Accounting Section */}
 
-                {user.department === "Top Management" ||
+                {user.department === "TopManagement" ||
                 user.department === "Finance" ? (
                   <div>
                     <h2 className="text-xl md:text-2xl font-bold mb-8 ps-[7rem] uppercase">
@@ -1179,7 +1179,7 @@ const ClientLandingPage = () => {
                 ) : null}
 
                 {/* Sales & Marketing Section */}
-                {user.department === "Top Management" ? (
+                {user.department === "TopManagement" ? (
                   <div>
                     <h2 className="text-xl md:text-2xl font-bold mb-8 ps-[7rem] uppercase">
                       Sales & Marketing
@@ -1201,7 +1201,7 @@ const ClientLandingPage = () => {
                 ) : null}
 
                 {/* HR Section */}
-                {user.department === "Top Management" ? (
+                {user.department === "TopManagement" ? (
                   <div>
                     <h2 className="text-xl md:text-2xl font-bold mb-8 ps-[7rem] uppercase">
                       HR Support
@@ -1223,7 +1223,7 @@ const ClientLandingPage = () => {
                 ) : null}
 
                 {/* Customer Management Section */}
-                {user.department === "Top Management" ? (
+                {user.department === "TopManagement" ? (
                   <div>
                     <h2 className="text-xl md:text-2xl font-bold mb-8 ps-[7rem] uppercase">
                       Customer Management
@@ -1245,7 +1245,7 @@ const ClientLandingPage = () => {
                 ) : null}
 
                 {/* Reports & Analytics Section */}
-                {user.department === "Top Management" ? (
+                {user.department === "TopManagement" ? (
                   <div>
                     <h2 className="text-xl md:text-2xl font-bold mb-8 ps-[7rem] uppercase">
                       Reports & Analytics

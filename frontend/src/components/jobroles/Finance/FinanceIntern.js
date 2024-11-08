@@ -122,7 +122,7 @@ const FinanceIntern = () => {
                         ● Should be an ace in reports and performance metrics management.<br></br>
                         ● Relevant HR certifications (e.g., SHRM-SCP, SPHR) are a plus.<br></br>
                         ● Should be the Lead Custodian of the HR vertical and ensure minimum
-                        involvement of top management and should run the organisation in the most
+                        involvement of TopManagement and should run the organisation in the most
                         compliant, high performance and happy environment.<br></br>
       
       
