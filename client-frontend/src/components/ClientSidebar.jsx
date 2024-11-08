@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 
 const Sidebar = () => {
   const [isCollapsed, setIsCollapsed] = useState(false);
-  const [isDepartmentsOpen, setIsDepartmentsOpen] = useState(false); // State for opening/closing Departments dropdown
+  const [isDepartmentsOpen, setIsDepartmentsOpen] = useState(false);
   const [user, setUser] = useState(null);
 
-
-  // Menu items array (without DASHBOARD)
   const menuItems = [
     { name: "REPORTS", icon: "https://via.placeholder.com/24" },
     { name: "TASKS", icon: "https://via.placeholder.com/24" },
@@ -15,8 +14,6 @@ const Sidebar = () => {
     { name: "ACCESS", icon: "https://via.placeholder.com/24" },
     { name: "PROFILE", icon: "https://via.placeholder.com/24" },
   ];
-
-  // Departments menu items
 
   const departments = [
     { name: "FRONTEND", icon: "https://via.placeholder.com/24" },
@@ -36,7 +33,6 @@ const Sidebar = () => {
     setUser(storedUser);
   }, []);
 
-  // Filter departments based on the user's department
   const filteredDepartments =
     user?.department === "Tech"
       ? departments.filter((dept) => dept.name === "FRONTEND")
@@ -51,16 +47,20 @@ const Sidebar = () => {
       {/* Collapse button */}
       <button
         onClick={() => setIsCollapsed(!isCollapsed)}
-        className={`p-4 focus:outline-none hover:bg-gray-700 ${
-          isCollapsed ? "text-center" : "text-right"
-        }`}
+        className="p-4 flex items-center justify-between focus:outline-none hover:bg-gray-700"
       >
-        {isCollapsed ? "➤" : "⬅"}
+        {!isCollapsed && <span>Menu</span>}
+        <motion.div
+          className="ml-auto" // Push arrow to the far right
+          animate={{ rotate: isCollapsed ? 0 : 180 }}
+          transition={{ duration: 0.3 }}
+        >
+          ➤
+        </motion.div>
       </button>
 
       {/* Menu items */}
       <nav className="flex flex-col space-y-2 mt-8">
-        {/* Hardcoded DASHBOARD menu item */}
         <a href="#dashboard" className="p-4 hover:bg-gray-700 text-sm">
           {!isCollapsed && (
             <img
@@ -79,8 +79,13 @@ const Sidebar = () => {
               onClick={() => setIsDepartmentsOpen(!isDepartmentsOpen)}
               className="p-4 w-full text-left hover:bg-gray-700 flex justify-between items-center"
             >
-              <span>{isCollapsed ? "hidden" : ""}Departments</span>
-              <span>{isDepartmentsOpen ? "⬇" : "➤"}</span>
+              <span>Departments</span>
+              <motion.div
+                animate={{ rotate: isDepartmentsOpen ? 90 : 0 }}
+                transition={{ duration: 0.3 }}
+              >
+                ➤
+              </motion.div>
             </button>
 
             {/* Dropdown content */}
@@ -89,20 +94,6 @@ const Sidebar = () => {
                 isDepartmentsOpen ? "max-h-screen" : "max-h-0"
               } overflow-hidden transition-all duration-300 ease-in-out bg-gray-700 pl-8 space-y-2`}
             >
-              {/* {departments.map((item, index) => (
-                <a
-                  key={index}
-                  href={`#${item.name.toLowerCase().replace(/\s+/g, "-")}`}
-                  className="p-4 hover:bg-gray-600 text-sm block"
-                >
-                  <img
-                    src={item.icon}
-                    alt={item.name}
-                    className="mr-2 inline-block"
-                  />
-                  <span>{item.name}</span>
-                </a>
-              ))} */}
               {filteredDepartments.map((dept, index) => (
                 <a
                   key={index}
@@ -132,7 +123,7 @@ const Sidebar = () => {
               <img
                 src={item.icon}
                 alt={item.name}
-                className="mr-2 inline-block bg-red"
+                className="mr-2 inline-block"
               />
             )}
             <span className={isCollapsed ? "hidden" : ""}>{item.name}</span>
