@@ -51,11 +51,11 @@ const EmployeeProfile = ({ data }) => {
         </button>)}
         
       </div>
-      <div className="flex items-center gap-20">
-     
+      {/* <div className="flex items-center gap-20">
+      */}
         
       
-        <TextField
+        {/* <TextField
           label="Name"
           name="name"
           value={isAccessPage? data?.name : isProfilePage ? formData.name:""}
@@ -168,8 +168,8 @@ const EmployeeProfile = ({ data }) => {
           fullWidth
         />
        
-      </div>
-      {/* <div className="flex items-center gap-20">
+      </div> */}
+      <div className="flex items-center gap-20">
         <span className="w-24 font-semibold text-gray-600">Role:</span>
         <input
           name="role"
@@ -263,7 +263,7 @@ const EmployeeProfile = ({ data }) => {
               : "border-transparent bg-transparent"
           } rounded`}
           disabled={!isEditing}></input>
-      </div> */}
+      </div>
     </div>
   );
 };
