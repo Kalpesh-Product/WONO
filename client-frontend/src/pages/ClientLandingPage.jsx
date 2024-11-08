@@ -1169,7 +1169,12 @@ const ClientLandingPage = () => {
                             key={service.id}
                             title={service.title}
                             iconSrc={service.image}
-                            isSelected={selectedCards.includes(service.title)}
+                            isSelected={
+                              selectedCards.includes(service.title) ||
+                              quickLaunchIcons.some(
+                                (icon) => icon.title === service.title
+                              )
+                            }
                             handleSelect={handleSelect}
                           />
                         </div>
@@ -1191,7 +1196,12 @@ const ClientLandingPage = () => {
                             key={service.id}
                             title={service.title}
                             iconSrc={service.image}
-                            isSelected={selectedCards.includes(service.title)}
+                            isSelected={
+                              selectedCards.includes(service.title) ||
+                              quickLaunchIcons.some(
+                                (icon) => icon.title === service.title
+                              )
+                            }
                             handleSelect={handleSelect}
                           />
                         </div>
@@ -1213,7 +1223,12 @@ const ClientLandingPage = () => {
                             key={service.id}
                             title={service.title}
                             iconSrc={service.image}
-                            isSelected={selectedCards.includes(service.title)}
+                            isSelected={
+                              selectedCards.includes(service.title) ||
+                              quickLaunchIcons.some(
+                                (icon) => icon.title === service.title
+                              )
+                            }
                             handleSelect={handleSelect}
                           />
                         </div>
@@ -1235,7 +1250,12 @@ const ClientLandingPage = () => {
                             key={service.id}
                             title={service.title}
                             iconSrc={service.image}
-                            isSelected={selectedCards.includes(service.title)}
+                            isSelected={
+                              selectedCards.includes(service.title) ||
+                              quickLaunchIcons.some(
+                                (icon) => icon.title === service.title
+                              )
+                            }
                             handleSelect={handleSelect}
                           />
                         </div>
@@ -1257,7 +1277,12 @@ const ClientLandingPage = () => {
                             key={service.id}
                             title={service.title}
                             iconSrc={service.image}
-                            isSelected={selectedCards.includes(service.title)}
+                            isSelected={
+                              selectedCards.includes(service.title) ||
+                              quickLaunchIcons.some(
+                                (icon) => icon.title === service.title
+                              )
+                            }
                             handleSelect={handleSelect}
                           />
                         </div>
