@@ -136,9 +136,9 @@ const Profile = () => {
       <p class="text-gray-500">Active</p>
     </div>
     </div>
-    <div class="flex j">
+    {/* <div class="flex j">
     <button class="bg-blue-500 w-20 h-10 rounded-md" onClick={()=>setIsAccessModalOpen(true)}>Access</button>
-    </div>
+    </div> */}
     </div>
     {/* <!-- Horizontal Divider --> */}
   <hr class="border-t border-gray-300 my-4" />
