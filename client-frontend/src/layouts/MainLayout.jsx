@@ -4,7 +4,7 @@ import ClientFooter from "../components/ClientFooter";
 
 export default function MainLayout() {
   const location = useLocation();
-  const hideHeader = location.pathname === "/login";
+  const hideHeader = location.pathname === "/";
   return (
     <>
       {!hideHeader && <ClientHeader />}
