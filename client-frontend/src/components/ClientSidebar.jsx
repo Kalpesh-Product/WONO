@@ -36,9 +36,27 @@ const Sidebar = () => {
   }, []);
 
   const departmentMapping = {
+    TopManagement: [
+      "FRONTEND",
+      "FINANCE & ACCOUNTING",
+      "SALES",
+      "HUMAN RESOURCE",
+      "CUSTOMER SERVICE",
+      "MARKETING",
+      "CAFE (F&B)",
+      "ADMINISTRATION",
+      "MAINTENANCE",
+      "LEGAL",
+    ],
     Tech: ["FRONTEND"],
+    Finance: ["FINANCE & ACCOUNTING"],
+    Sales: ["SALES"],
     HR: ["HUMAN RESOURCE", "CUSTOMER SERVICE"],
-    // Add additional mappings as needed
+    Marketing: ["MARKETING"],
+    Cafe: ["CAFE (F&B)"],
+    Admin: ["ADMINISTRATION"],
+    Maintenance: ["MAINTENANCE"],
+    Legal: ["LEGAL"],
   };
 
   // Filter departments based on user's department using departmentMapping

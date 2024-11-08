@@ -3,14 +3,14 @@
     "name": "Abrar Shaikh",
     "email": "abrar@wono.com",
     "role": "Master Admin",
-    "department": "Top Management",
+    "department": "TopManagement",
     "password": "123"
   },
   {
     "name": "Kashif Shaikh",
     "email": "kashif@wono.com",
     "role": "Super Admin",
-    "department": "Top Management",
+    "department": "TopManagement",
     "password": "123"
   },
   {
