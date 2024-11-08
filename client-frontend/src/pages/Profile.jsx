@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import EmployeeProfile from "../components/AccessTabViewModel/EmployeeProfile";
 import AccessHierarchyTab from "../components/AccessTabViewModel/AccessHierarchyTab";
+import ClientSidebar from "../components/ClientSidebar";
 
 const Profile = () => {
   const [image, setImage] = useState("");
@@ -77,7 +78,8 @@ const Profile = () => {
   return (
     <div class="flex min-h-screen">
       {/* Sidebar */}
-      <div class="w-64 bg-gray-800 text-white flex flex-col">
+      <ClientSidebar />
+      {/* <div class="w-64 bg-gray-800 text-white flex flex-col">
         <div class="p-4 text-center font-bold text-2xl border-b border-gray-700">
           Sidebar
         </div>
@@ -113,7 +115,7 @@ const Profile = () => {
             </li>
           </ul>
         </nav>
-      </div>
+      </div> */}
 
       {/* Main Content */}
       <div class="flex-1 p-6 bg-gray-100">
@@ -123,10 +125,7 @@ const Profile = () => {
             <div
               className="w-16 h-16 rounded-full overflow-hidden bg-gray-200 cursor-pointer"
               onClick={() => setIsModalOpen(true)}>
-              <img
-                src={image}
-                alt="Profile Logo"
-                class="w-16 h-16 rounded-full mr-4"></img>
+              <img src={image} alt="" class="w-16 h-16 rounded-full mr-4"></img>
             </div>
 
             <div>
@@ -134,13 +133,9 @@ const Profile = () => {
               <p class="text-gray-500">Active</p>
             </div>
           </div>
-          <div class="flex j">
-            <button
-              class="bg-blue-500 w-20 h-10 rounded-md"
-              onClick={() => setIsAccessModalOpen(true)}>
-              Access
-            </button>
-          </div>
+          {/* <div class="flex j">
+    <button class="bg-blue-500 w-20 h-10 rounded-md" onClick={()=>setIsAccessModalOpen(true)}>Access</button>
+    </div> */}
         </div>
         {/* <!-- Horizontal Divider --> */}
         <hr class="border-t border-gray-300 my-4" />

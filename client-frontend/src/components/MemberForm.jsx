@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import TextField from "@mui/material/TextField";
 import Box from "@mui/material/Box";
 import Radio from "@mui/material/Radio";
@@ -11,6 +11,7 @@ import { Country, State, City } from "country-state-city";
 import { motion } from "framer-motion";
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
+import { toast } from "sonner";
 
 export default function MemberForm() {
   const dispatch = useDispatch();
@@ -150,6 +151,8 @@ export default function MemberForm() {
 
   const handleSubmit = () => {
     if (validate()) {
+      dispatch(closeModal());
+      toast.success("Successfully created user");
       console.log("Form submitted successfully:", formData);
     }
   };
@@ -221,7 +224,6 @@ export default function MemberForm() {
               control={<Radio />}
               label="Female"
             />
-            <FormControlLabel value="other" control={<Radio />} label="Other" />
           </RadioGroup>
           {errors.gender && <p className="text-red-600">{errors.gender}</p>}
         </div>
@@ -316,11 +318,16 @@ export default function MemberForm() {
           >
             <option value="">Select Department</option>
             {isLoading ? (
-              <p>Loading</p>
+              <option>Loading...</option>
+            ) : error ? (
+              <option>Error loading departments</option>
             ) : (
-              data.map((department, index) => {
-                return <option key={index}>{department.name}</option>;
-              })
+              data &&
+              data.map((department, index) => (
+                <option key={index} value={department.name}>
+                  {department.name}
+                </option>
+              ))
             )}
           </select>
           {errors.department && (

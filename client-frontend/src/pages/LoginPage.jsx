@@ -21,7 +21,7 @@ const LoginPage = () => {
       // Store user data in localStorage
       localStorage.setItem("user", JSON.stringify(user));
       // Redirect to homepage
-      navigate("/");
+      navigate("/landing");
       console.log(user.name)
       console.log(user)
     } else {

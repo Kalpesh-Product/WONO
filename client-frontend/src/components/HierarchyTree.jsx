@@ -7,7 +7,7 @@ import AccessHierarchyTab from "./AccessTabViewModel/AccessHierarchyTab";
 const TreeNode = ({ node }) => {
   const [isExpanded, setIsExpanded] = useState(true);
   const [showModal, setShowModal] = useState(false);
-  const [activeTab,setActiveTab] = useState('tab-1')
+  const [activeTab, setActiveTab] = useState("tab-1");
 
   const toggleExpand = () => {
     setIsExpanded((prev) => !prev);
@@ -25,70 +25,69 @@ const TreeNode = ({ node }) => {
     <div className="flex flex-col items-start mb-6 space-y-4">
       {/* Modal to show the user's details */}
       <Modal open={showModal} onClose={closeModal}>
-        {/* Profile pic with name */}
-      <div class="flex items-center p-4 bg-white rounded-lg shadow-md justify-between mb-4">
-        <div class="flex flex-row gap-3">
-    <div
-          className="w-16 h-16 rounded-full overflow-hidden bg-gray-200 cursor-pointer"
-          
-        >
-    <img src="" alt="Profile Logo" class="w-16 h-16 rounded-full mr-4"></img>
-    </div>
-    
-    <div>
-      <h2 class="text-xl font-semibold">{node.name}</h2>
-      <p class="text-gray-500">Active</p>
-    </div>
-    </div>
-    <div class="flex j">
-   
-    </div>
-    </div>
-    {/* tab view */}
-      <div className='mx-auto'>
-          
-          <ul className='flex justify-center border-b mb-4'>
-            <li className='w-1/2 text-center' role='presentation'>
-            <button
-             className={`text-md py-2 w-full ${
-              activeTab === "tab-1" ? "border-b-4 border-blue-500 text-blue-600" : ""
-            }` } onClick={()=>setActiveTab("tab-1")}>PROFILE
-            </button>
-            </li>
-            <li className='w-1/2 text-center' role='presentation'>
-            <button
-             className={`text-md py-2 w-full ${
-              activeTab === "tab-2" ? "border-b-4 border-blue-500 text-blue-600" : ""
-            }` } onClick={()=>setActiveTab("tab-2")}>ACCESS
-            </button>
-            </li>
-            </ul>
-            <div className="tab-content">
-      {activeTab === "tab-1" && (
-        <div className="tab-pane fade show active" id="tab-1" role="tabpanel">
-          <div className="flex flex-col items-center justify-center mt-3" data-aos="fade-up" data-aos-delay="100">
-            <EmployeeProfile data={node} />{" "}
+        <div className="relative w-full max-w-4xl h-[90vh] overflow-hidden p-6 bg-white rounded-lg shadow-lg">
+          <div className="flex items-center p-4 bg-white rounded-lg shadow-md justify-between mb-4">
+            <div className="flex flex-row gap-3">
+              <div
+                className={`flex items-center justify-center w-12 h-12 rounded-full text-white font-bold mr-3 ${getNodeColor(
+                  node.name
+                )}`}
+              >
+                {getInitials(node.name)}
+              </div>
+              <div>
+                <h2 className="text-xl font-semibold">{node.name}</h2>
+                <p className="text-gray-500">Active</p>
+              </div>
+            </div>
           </div>
-        </div>
-      )}
-      {activeTab === "tab-2" && (
-        <div className="tab-pane fade show" id="tab-2" role="tabpanel">
-          <div className="flex flex-col items-center justify-center mt-3" data-aos="fade-up" data-aos-delay="100">
-            {/* Tab 2 Content */}
-            <AccessHierarchyTab/>
-          </div>
-        </div>
-      )}
-    </div>
-  
 
+          {/* Tab view */}
+          <div className="mx-auto">
+            <ul className="flex justify-center border-b mb-4">
+              <li className="w-1/2 text-center" role="presentation">
+                <button
+                  className={`text-md py-2 w-full ${
+                    activeTab === "tab-1"
+                      ? "border-b-4 border-blue-500 text-blue-600"
+                      : ""
+                  }`}
+                  onClick={() => setActiveTab("tab-1")}
+                >
+                  PROFILE
+                </button>
+              </li>
+              <li className="w-1/2 text-center" role="presentation">
+                <button
+                  className={`text-md py-2 w-full ${
+                    activeTab === "tab-2"
+                      ? "border-b-4 border-blue-500 text-blue-600"
+                      : ""
+                  }`}
+                  onClick={() => setActiveTab("tab-2")}
+                >
+                  ACCESS
+                </button>
+              </li>
+            </ul>
+            <div className="overflow-y-auto max-h-[70vh]">
+              {activeTab === "tab-1" && (
+                <div className="flex flex-col items-center justify-center mt-3">
+                  <EmployeeProfile data={node} />
+                </div>
+              )}
+              {activeTab === "tab-2" && (
+                <div className="flex flex-col items-center justify-center mb-10">
+                  <AccessHierarchyTab />
+                </div>
+              )}
+            </div>
           </div>
-        {/* <EmployeeProfile data={node} />{" "} */}
-        {/* Use EmployeeProfile with node data */}
+        </div>
       </Modal>
 
       <div
-        className="flex items-center border border-gray-300 rounded-lg p-4 shadow-md w-full sm:w-72 md:w-96 mb-4 cursor-pointer transition-transform duration-300 ease-in-out"
+        className="flex items-center border border-gray-300 rounded-lg p-4 shadow-md w-full cursor-pointer transition-transform duration-300 ease-in-out"
         onClick={openModal}
       >
         <div
@@ -107,7 +106,7 @@ const TreeNode = ({ node }) => {
         {node.reports.length > 0 && (
           <motion.div
             onClick={(e) => {
-              e.stopPropagation(); // Prevents modal from opening when expanding/collapsing
+              e.stopPropagation();
               toggleExpand();
             }}
             animate={{ rotate: isExpanded ? 180 : 0 }}
@@ -125,7 +124,7 @@ const TreeNode = ({ node }) => {
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
-            className="pl-8 md:pl-12 border-l-2 border-gray-300 overflow-hidden"
+            className="pl-4 sm:pl-8 md:pl-12 border-l-2 border-gray-300 overflow-hidden"
           >
             {node.reports.map((report) => (
               <TreeNode key={report.name} node={report} />
@@ -147,7 +146,6 @@ export default function OrgTree({ data }) {
   );
 }
 
-// Helper function to get initials
 const getInitials = (name) => {
   return name
     .split(" ")
@@ -156,7 +154,6 @@ const getInitials = (name) => {
     .toUpperCase();
 };
 
-// Helper function to set color based on name
 const getNodeColor = (name) => {
   const colors = [
     "bg-orange-600",
