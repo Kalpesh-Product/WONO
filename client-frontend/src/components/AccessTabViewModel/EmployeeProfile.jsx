@@ -55,7 +55,7 @@ const EmployeeProfile = ({ data }) => {
       </div>
       <div className="flex items-center gap-20">
         <TextField
-          label="name"
+          label="Name"
           name="name"
           value={isAccessPage ? data?.name : isProfilePage ? formData.name : ""}
           onChange={handleChange}
@@ -82,7 +82,7 @@ const EmployeeProfile = ({ data }) => {
           fullWidth
         />
         <TextField
-          label="designation"
+          label="Designation"
           name="designation"
           value={
             isAccessPage
@@ -122,7 +122,7 @@ const EmployeeProfile = ({ data }) => {
       </div>
       <div className="flex items-center gap-20">
         <TextField
-          label="email"
+          label="Email"
           name="email"
           value={
             isAccessPage ? data?.email : isProfilePage ? formData.email : ""
@@ -153,7 +153,7 @@ const EmployeeProfile = ({ data }) => {
           fullWidth
         />
         <TextField
-          label="address"
+          label="Address"
           name="address"
           value={
             isAccessPage ? data?.address : isProfilePage ? formData.address : ""
@@ -168,7 +168,7 @@ const EmployeeProfile = ({ data }) => {
           fullWidth
         />
         <TextField
-          label="dateOfBirth"
+          label="DateOfBirth"
           name="dateOfBirth"
           value={
             isAccessPage

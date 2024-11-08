@@ -5,7 +5,7 @@ import EmployeeProfile from "./AccessTabViewModel/EmployeeProfile";
 import AccessHierarchyTab from "./AccessTabViewModel/AccessHierarchyTab";
 
 const TreeNode = ({ node }) => {
-  const [isExpanded, setIsExpanded] = useState(true);
+  const [isExpanded, setIsExpanded] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const [activeTab, setActiveTab] = useState("tab-1");
 
@@ -22,7 +22,7 @@ const TreeNode = ({ node }) => {
   };
 
   return (
-    <div className="flex flex-col items-start mb-6 space-y-4">
+    <div className="flex flex-col items-start mb-6 space-y-4 w-full max-w-[600px]">
       {/* Modal to show the user's details */}
       <Modal open={showModal} onClose={closeModal}>
         <div className="relative w-full max-w-4xl h-[90vh] overflow-hidden p-6 bg-white rounded-lg shadow-lg">
@@ -138,7 +138,7 @@ const TreeNode = ({ node }) => {
 
 export default function OrgTree({ data }) {
   return (
-    <div className="flex flex-col items-start p-4">
+    <div className="flex flex-col items-start p-4 w-full">
       {data.map((node) => (
         <TreeNode key={node.name} node={node} />
       ))}
