@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import EmployeeProfile from "../components/AccessTabViewModel/EmployeeProfile";
 import AccessHierarchyTab from "../components/AccessTabViewModel/AccessHierarchyTab";
+import ClientSidebar from "../components/ClientSidebar";
 
 const Profile = () => {
   const [image, setImage] = useState("");
@@ -77,7 +78,8 @@ const Profile = () => {
   return (
     <div class="flex min-h-screen">
       {/* Sidebar */}
-      <div class="w-64 bg-gray-800 text-white flex flex-col">
+      <ClientSidebar/>
+      {/* <div class="w-64 bg-gray-800 text-white flex flex-col">
         <div class="p-4 text-center font-bold text-2xl border-b border-gray-700">
           Sidebar
         </div>
@@ -117,7 +119,7 @@ const Profile = () => {
             </li>
           </ul>
         </nav>
-      </div>
+      </div> */}
 
   {/* Main Content */}
   <div class="flex-1 p-6 bg-gray-100">

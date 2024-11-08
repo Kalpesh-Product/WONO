@@ -56,7 +56,7 @@ const EmployeeProfile = ({ data }) => {
         
       
         <TextField
-          label="name"
+          label="Name"
           name="name"
           value={isAccessPage? data?.name : isProfilePage ? formData.name:""}
           onChange={handleChange}
@@ -70,7 +70,7 @@ const EmployeeProfile = ({ data }) => {
         />
 
 <TextField
-          label="role"
+          label="Role"
           name="role"
           value={isAccessPage? data?.role : isProfilePage ? formData.role:""}
           onChange={handleChange}
@@ -83,7 +83,7 @@ const EmployeeProfile = ({ data }) => {
           fullWidth
         />
         <TextField
-          label="designation"
+          label="Designation"
           name="designation"
           value={isAccessPage? data?.designation : isProfilePage ? formData.designation:""}
           onChange={handleChange}
@@ -115,7 +115,7 @@ const EmployeeProfile = ({ data }) => {
         
       
         <TextField
-          label="email"
+          label="Email"
           name="email"
           value={isAccessPage? data?.email : isProfilePage ? formData.email:""}
           onChange={handleChange}
@@ -129,7 +129,7 @@ const EmployeeProfile = ({ data }) => {
         />
 
 <TextField
-          label="phone"
+          label="Phone"
           name="phone"
           value={isAccessPage? data?.phone : isProfilePage ? formData.phone:""}
           onChange={handleChange}
@@ -142,7 +142,7 @@ const EmployeeProfile = ({ data }) => {
           fullWidth
         />
         <TextField
-          label="address"
+          label="Address"
           name="address"
           value={isAccessPage? data?.address : isProfilePage ? formData.address:""}
           onChange={handleChange}
@@ -155,7 +155,7 @@ const EmployeeProfile = ({ data }) => {
           fullWidth
         />
         <TextField
-          label="dateOfBirth"
+          label="DateOfBirth"
           name="dateOfBirth"
           value={isAccessPage? data?.dateOfBirth : isProfilePage ? formData.dateOfBirth:""}
           onChange={handleChange}
