@@ -128,7 +128,7 @@ const Profile = () => {
           className="w-16 h-16 rounded-full overflow-hidden bg-gray-200 cursor-pointer"
           onClick={() => setIsModalOpen(true)}
         >
-    <img src={image} alt="Profile Logo" class="w-16 h-16 rounded-full mr-4"></img>
+    <img src={image} alt="" class="w-16 h-16 rounded-full mr-4"></img>
     </div>
     
     <div>
