@@ -82,7 +82,6 @@ import {
   // } from "../../../frontend/src/assets/WONO_images/img/icon_service_color";
 } from "../assets/WONO_images/img/icon_service_color";
 
-
 const ClientLandingPage = () => {
   const navigate = useNavigate();
 
@@ -107,7 +106,7 @@ const ClientLandingPage = () => {
   // Set a default if the role is not found
   const displayName = roleBasedNames[role] || "Abrar Shaikh";
 
-  const [user, setUser] = useState('');
+  const [user, setUser] = useState("");
   useEffect(() => {
     const storedUser = JSON.parse(localStorage.getItem("user"));
     setUser(storedUser);
@@ -779,26 +778,71 @@ const ClientLandingPage = () => {
 
   // CARD SELECTION END
 
+  const [quickLaunchIcons, setQuickLaunchIcons] = useState([
+    { title: "Tasks", iconSrc: tasksImage },
+    { title: "Ticket", iconSrc: ticketsImage },
+    { title: "Meeting", iconSrc: meetingImage },
+    { title: "Customer Service", iconSrc: customerServiceImage },
+  ]);
+
+  // State to track selected cards (already present in your code)
   const [selectedCards, setSelectedCards] = useState([]);
 
+  // const handleSelect = (title) => {
+  //   if (selectedCards.includes(title)) {
+  //     setSelectedCards(
+  //       selectedCards.filter((cardTitle) => cardTitle !== title)
+  //     );
+  //   } else {
+  //     setSelectedCards([...selectedCards, title]);
+  //   }
+  // };
+
   const handleSelect = (title) => {
-    if (selectedCards.includes(title)) {
-      setSelectedCards(
-        selectedCards.filter((cardTitle) => cardTitle !== title)
-      );
-    } else {
-      setSelectedCards([...selectedCards, title]);
-    }
+    setSelectedCards((prev) =>
+      prev.includes(title) ? prev.filter((t) => t !== title) : [...prev, title]
+    );
   };
 
+  // const handleAddServices = () => {
+  //   // Alert
+  //   // Swal.fire({
+  //   //   title: "New Services Added!",
+  //   //   text: "You clicked the button!",
+  //   //   icon: "success",
+  //   // });
+  //   // alert("New services added");
+  //   toast.success("New Services Added");
+  //   closeModal(); // Optionally close the modal after the alert
+  // };
+
   const handleAddServices = () => {
-    // Alert
-    // Swal.fire({
-    //   title: "New Services Added!",
-    //   text: "You clicked the button!",
-    //   icon: "success",
-    // });
-    // alert("New services added");
+    setQuickLaunchIcons((prev) => {
+      const newIcons = selectedCards.map((title) => {
+        const service = [
+          ...services_frontend,
+          ...services_financeAccounting,
+          ...services_salesMarketing,
+          ...services_hrSupport,
+          ...services_customerManagement,
+          ...services_reportsAnalytics,
+        ].find((service) => service.title === title);
+
+        return { title: service.title, iconSrc: service.image };
+      });
+
+      // Filter out duplicates before adding
+      const uniqueNewIcons = newIcons.filter(
+        (newIcon) =>
+          !prev.some((existingIcon) => existingIcon.title === newIcon.title)
+      );
+
+      return [...prev, ...uniqueNewIcons];
+    });
+
+    // Optionally, reset selectedCards after adding
+    setSelectedCards([]);
+
     toast.success("New Services Added");
     closeModal(); // Optionally close the modal after the alert
   };
@@ -893,10 +937,14 @@ const ClientLandingPage = () => {
           Quick launch
         </h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-8 mb-12">
-          <CardNS title="Tasks" iconSrc={tasksImage} />
+          {/* <CardNS title="Tasks" iconSrc={tasksImage} />
           <CardNS title="Ticket" iconSrc={ticketsImage} />
           <CardNS title="Meeting" iconSrc={meetingImage} />
-          <CardNS title="Customer Service" iconSrc={customerServiceImage} />
+          <CardNS title="Customer Service" iconSrc={customerServiceImage} /> */}
+
+          {quickLaunchIcons.map((icon, index) => (
+            <CardNS key={index} title={icon.title} iconSrc={icon.iconSrc} />
+          ))}
 
           {/* Conditional rendering for tech admin role (at) */}
           {role === "at" && <CardNS title="Website" iconSrc={websiteImage} />}
@@ -926,8 +974,10 @@ const ClientLandingPage = () => {
           <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
             <div className="absolute inset-0" onClick={closeModal}></div>
 
-            <div className="bg-white w-11/12 max-w-[90%] pl-8 pr-8 pb-8 rounded-lg shadow-lg z-10 relative overflow-y-auto max-h-[80vh]">
+            <div className="bg-white w-11/12 max-w-[90%] pl-8 pr-8  rounded-lg shadow-lg z-10 relative overflow-y-auto max-h-[80vh]">
               {/* Modal Content */}
+
+              {/* Modal Header-Footer */}
               <div className="sticky top-0 bg-white py-6 z-20 flex justify-between">
                 <div>
                   <h2 className="text-3xl font-bold mb-4 uppercase">
@@ -1124,15 +1174,18 @@ const ClientLandingPage = () => {
                   </div>
                 </div>
               </div>
-              <div className="flex justify-center items-center">
-                {/* Add button */}
-                <button
-                  className="bg-red-500 text-white py-2 px-4 rounded-lg hover:bg-red-600"
-                  onClick={handleAddServices}>
-                  Add
-                </button>
-              </div>
+              {/* Modal Header-Footer */}
 
+              <div className="sticky bottom-0 bg-white py-6 z-20 flex justify-center">
+                <div className="flex justify-center items-center">
+                  {/* Add button */}
+                  <button
+                    className="bg-red-500 text-white py-2 px-4 rounded-lg hover:bg-red-600"
+                    onClick={handleAddServices}>
+                    Add
+                  </button>
+                </div>
+              </div>
               {/* Close button */}
               <button
                 className="bg-red-500 text-white py-2 px-4 rounded-lg hover:bg-red-600"

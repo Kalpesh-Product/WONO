@@ -59,13 +59,12 @@ const ClientHeader = () => {
 
         {/* Navigation Links */}
         <nav className="flex space-x-6">
-          <a href="#" className="text-white hover:text-gray-400">
+          <span
+            className="text-white hover:text-gray-400 cursor-pointer"
+            onClick={() => navigate("/")}>
             Home
-          </a>
-          <a
-            onClick={handleLogout}
-            href="#"
-            className="text-white hover:text-gray-400">
+          </span>
+          <a onClick={handleLogout} className="text-white hover:text-gray-400">
             Logout
           </a>
         </nav>
