@@ -57,7 +57,6 @@ const EmployeeProfile = ({ data }) => {
         <TextField
           label="name"
           name="name"
-          style={custom}
           value={isAccessPage ? data?.name : isProfilePage ? formData.name : ""}
           onChange={handleChange}
           className={`text-gray-800 border ${
