@@ -1,77 +1,77 @@
 [
   {
     "name": "Abrar Shaikh",
-    "email": "abrar@wono.com",
+    "email": "abrar@biznest.co.in",
     "role": "Master Admin",
     "department": "TopManagement",
     "password": "123"
   },
   {
     "name": "Kashif Shaikh",
-    "email": "kashif@wono.com",
+    "email": "kashif@biznest.co.in",
     "role": "Super Admin",
     "department": "TopManagement",
     "password": "123"
   },
   {
     "name": "Kalpesh Naik",
-    "email": "kalpesh@wono.com",
+    "email": "kalpesh@biznest.co.in",
     "role": "Admin",
     "department": "Tech",
     "password": "456"
   },
   {
     "name": "Allan Silveira",
-    "email": "allan@wono.com",
+    "email": "allan@biznest.co.in",
     "role": "Employee",
     "department": "Tech",
     "password": "789"
   },
   {
     "name": "Aiwinraj KS",
-    "email": "aiwinraj@wono.com",
+    "email": "aiwinraj@biznest.co.in",
     "role": "Employee",
     "department": "Tech",
     "password": "789"
   },
   {
     "name": "Anushri Bhagat",
-    "email": "anushri@wono.com",
+    "email": "anushri@biznest.co.in",
     "role": "Employee",
     "department": "Tech",
     "password": "789"
   },
   {
     "name": "Sankalp Kalangutkar",
-    "email": "sankalp@wono.com",
+    "email": "sankalp@biznest.co.in",
     "role": "Employee",
     "department": "Tech",
     "password": "789"
   },
   {
     "name": "Narshiva Naik",
-    "email": "narshiva@wono.com",
+    "email": "narshiva@biznest.co.in",
     "role": "Admin",
     "department": "Finance",
     "password": "456"
   },
   {
     "name": "Hema Natalkar",
-    "email": "hema@wono.com",
+    "email": "hema@biznest.co.in",
     "role": "Employee",
     "department": "Finance",
     "password": "789"
   },
   {
     "name": "Rhutvik Sawant",
-    "email": "rhutvik@wono.com",
+    "email": "rhutvik@biznest.co.in",
     "role": "Employee",
     "department": "Finance",
     "password": "789"
   },
   {
     "name": "Siddhi Vernekar",
-    "email": "siddhi@wono.com",
+    "email": "siddhi@biznest.co.in",
     "role": "Employee",
     "department": "Finance",
     "password": "789"
