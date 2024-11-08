@@ -952,9 +952,14 @@ const ClientLandingPage = () => {
         </div>
 
         {/* Quick Launch Section */}
-        <h2 className="text-2xl md:text-3xl font-bold mb-8 lg:ps-[7rem] uppercase">
-          Quick launch
-        </h2>
+
+        {user.role === "Master Admin" ||
+        user.role === "Super Admin" ||
+        user.role === "Admin" ? (
+          <h2 className="text-2xl md:text-3xl font-bold mb-8 lg:ps-[7rem] uppercase">
+            Quick launch
+          </h2>
+        ) : null}
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-8 mb-12">
           {/* <CardNS title="Tasks" iconSrc={tasksImage} />
           <CardNS title="Ticket" iconSrc={ticketsImage} />
@@ -966,7 +971,52 @@ const ClientLandingPage = () => {
           ))}
 
           {/* Conditional rendering for tech admin role (at) */}
-          {role === "at" && <CardNS title="Website" iconSrc={websiteImage} />}
+          {/* {role === "at" && <CardNS title="Website" iconSrc={websiteImage} />} */}
+
+          {/* Conditional rendering for employee  */}
+          {user.role === "Employee" && (
+            <>
+              <CardNS
+                title="Attendance"
+                iconSrc={services_hrSupport[0].image}
+              />
+              <CardNS title="Payroll" iconSrc={services_hrSupport[1].image} />
+              <CardNS title="Leaves" iconSrc={services_hrSupport[3].image} />
+              <CardNS
+                title="Performance"
+                iconSrc={services_hrSupport[8].image}
+              />
+            </>
+          )}
+
+          {/* Conditional rendering for employee with tech department */}
+          {user.role === "Employee" && user.department === "Tech" && (
+            <>
+              <CardNS title="Website" iconSrc={websiteImage} />
+              <CardNS
+                title="Notifications"
+                iconSrc={services_frontend[7].image}
+              />
+            </>
+          )}
+
+          {/* Conditional rendering for employee with finance department */}
+          {user.role === "Employee" && user.department === "Finance" && (
+            <>
+              <CardNS
+                title="Invoicing"
+                iconSrc={services_financeAccounting[0].image}
+              />
+              <CardNS
+                title="Budget"
+                iconSrc={services_financeAccounting[3].image}
+              />
+              <CardNS
+                title="Financial Reports"
+                iconSrc={services_financeAccounting[5].image}
+              />
+            </>
+          )}
         </div>
 
         {/* Add More Button */}
