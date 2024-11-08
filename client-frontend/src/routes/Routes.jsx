@@ -19,11 +19,11 @@ const router = createBrowserRouter([
       //   element: <ClientLoginPage />,
       // },
       {
-        index: true,
+        path: "/landing",
         element: <ClientLandingPage />,
       },
       {
-        path: "/login",
+        index: true,
         element: <LoginPage />,
       },
       {
@@ -39,8 +39,8 @@ const router = createBrowserRouter([
         element: <Profile />,
       },
       {
-        path:"/dashboard",
-        element:<Dashboard/>,
+        path: "/dashboard",
+        element: <Dashboard />,
       },
       {
         path: "/drag-test",
