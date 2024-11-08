@@ -68,9 +68,11 @@ const Sidebar = () => {
     <div
       className={`flex flex-col bg-gray-800 text-white ${
         isCollapsed ? "w-20" : "w-64"
-      } transition-width duration-300`}
+      } transition-width duration-300 `}
     >
       {/* Collapse button */}
+      <div className="sticky top-20">
+
       <button
         onClick={() => setIsCollapsed(!isCollapsed)}
         className={`p-4 focus:outline-none hover:bg-gray-700 ${
@@ -81,10 +83,10 @@ const Sidebar = () => {
       </button>
 
       {/* Menu items */}
-      <nav className="flex flex-col space-y-2 mt-8">
+      <nav className="flex flex-col space-y-2 mt-8  ">
         {/* Hardcoded DASHBOARD menu item */}
         <a href="#dashboard" className="p-4 hover:bg-gray-700 text-sm">
-          {!isCollapsed && (
+          {isCollapsed && (
             <img
               src="https://via.placeholder.com/24"
               alt="dashboard"
@@ -136,7 +138,7 @@ const Sidebar = () => {
             href={`#${item.name.toLowerCase().replace(/\s+/g, "-")}`}
             className="p-4 hover:bg-gray-700 text-sm"
           >
-            {!isCollapsed && (
+            {isCollapsed && (
               <img
                 src={item.icon}
                 alt={item.name}
@@ -147,6 +149,7 @@ const Sidebar = () => {
           </a>
         ))}
       </nav>
+      </div>
     </div>
   );
 };

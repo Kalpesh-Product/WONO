@@ -52,9 +52,9 @@ const Dashboard = () => {
   };
 
   return (
-    <div className="flex">
+    <div className="flex ">
       {/* Sidebar */}
-      <ClientSidebar />
+      <ClientSidebar className="sticky top-0"/>
 
       {/* Main Dashboard Content */}
       {/* <div className="flex-1 p-6  bg-gray-100 space-y-8">
@@ -129,22 +129,22 @@ const Dashboard = () => {
 
         {/* For Admin or Employee, display only Sales section */}
         {user.department === "Sales" && (
-            <div className="bg-white p-4 rounded-lg h-[100%] ">
-              <WidgetSection heading="Sales" widgets={allWidgets.Sales} />
-            </div>
-          )}
+          <div className="bg-white p-4 rounded-lg h-[100%] ">
+            <WidgetSection heading="Sales" widgets={allWidgets.Sales} />
+          </div>
+        )}
 
-          {user.department === "Finance" && (
-            <div className="bg-white p-4 rounded-lg h-[100%] ">
-              <WidgetSection heading="Finance" widgets={allWidgets.Finance} />
-            </div>
-          )}
+        {user.department === "Finance" && (
+          <div className="bg-white p-4 rounded-lg h-[100%] ">
+            <WidgetSection heading="Finance" widgets={allWidgets.Finance} />
+          </div>
+        )}
 
-          {user.department === "HR" && (
-            <div className="bg-white p-4 rounded-lg h-[100%] ">
-              <WidgetSection heading="HR" widgets={allWidgets.HR} />
-            </div>
-          )}
+        {user.department === "HR" && (
+          <div className="bg-white p-4 rounded-lg h-[100%] ">
+            <WidgetSection heading="HR" widgets={allWidgets.HR} />
+          </div>
+        )}
       </div>
     </div>
   );

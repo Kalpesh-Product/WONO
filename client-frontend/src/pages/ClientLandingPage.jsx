@@ -921,7 +921,7 @@ const ClientLandingPage = () => {
             Welcome, {user.name}
           </h1>
           <button className="bg-red-500 text-white py-2 px-6 rounded-lg hover:bg-red-600 mt-4 md:mt-0">
-            Edit
+            Organize
           </button>
         </div>
 
