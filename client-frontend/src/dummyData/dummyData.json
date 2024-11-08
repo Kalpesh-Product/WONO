@@ -1,17 +1,79 @@
 [
-    {
-      "name": "Abrar Shaikh",
-      "email": "abrar@wono.com",
-      "role": "Master Admin",
-      "department": "Top Management",
-      "password" : "123"
-    },
-    {
-      "name": "Kalpesh Naik",
-      "email": "kalpesh@wono.com",
-      "role": "Admin",
-      "department": "Tech",
-      "password" : "456"
-    }
-  ]
-  
+  {
+    "name": "Abrar Shaikh",
+    "email": "abrar@wono.com",
+    "role": "Master Admin",
+    "department": "Top Management",
+    "password": "123"
+  },
+  {
+    "name": "Kashif Shaikh",
+    "email": "kashif@wono.com",
+    "role": "Super Admin",
+    "department": "Top Management",
+    "password": "123"
+  },
+  {
+    "name": "Kalpesh Naik",
+    "email": "kalpesh@wono.com",
+    "role": "Admin",
+    "department": "Tech",
+    "password": "456"
+  },
+  {
+    "name": "Allan Silveira",
+    "email": "allan@wono.com",
+    "role": "Employee",
+    "department": "Tech",
+    "password": "789"
+  },
+  {
+    "name": "Aiwinraj KS",
+    "email": "aiwinraj@wono.com",
+    "role": "Employee",
+    "department": "Tech",
+    "password": "789"
+  },
+  {
+    "name": "Anushri Bhagat",
+    "email": "anushri@wono.com",
+    "role": "Employee",
+    "department": "Tech",
+    "password": "789"
+  },
+  {
+    "name": "Sankalp Kalangutkar",
+    "email": "sankalp@wono.com",
+    "role": "Employee",
+    "department": "Tech",
+    "password": "789"
+  },
+  {
+    "name": "Narshiva Naik",
+    "email": "narshiva@wono.com",
+    "role": "Admin",
+    "department": "Finance",
+    "password": "456"
+  },
+  {
+    "name": "Hema Natalkar",
+    "email": "hema@wono.com",
+    "role": "Employee",
+    "department": "Finance",
+    "password": "789"
+  },
+  {
+    "name": "Rhutvik Sawant",
+    "email": "rhutvik@wono.com",
+    "role": "Employee",
+    "department": "Finance",
+    "password": "789"
+  },
+  {
+    "name": "Siddhi Vernekar",
+    "email": "siddhi@wono.com",
+    "role": "Employee",
+    "department": "Finance",
+    "password": "789"
+  }
+]

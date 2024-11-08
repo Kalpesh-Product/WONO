@@ -24,7 +24,7 @@ const ClientHeader = () => {
   };
   return (
     <>
-      <header className="bg-black text-white py-4 px-6 flex justify-between items-center">
+      <header className="bg-black text-white py-4 px-6 flex justify-between items-center sticky top-0">
         {/* Logo Section */}
         {/* <div className="flex items-center">
         <span className="text-white text-xl font-semibold">
@@ -64,7 +64,9 @@ const ClientHeader = () => {
             onClick={() => navigate("/")}>
             Home
           </span>
-          <a onClick={handleLogout} className="text-white hover:text-gray-400">
+          <a
+            onClick={handleLogout}
+            className="text-white hover:text-gray-400 cursor-pointer">
             Logout
           </a>
         </nav>

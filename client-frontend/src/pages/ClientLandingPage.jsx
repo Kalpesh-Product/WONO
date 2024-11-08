@@ -798,10 +798,29 @@ const ClientLandingPage = () => {
   //   }
   // };
 
+  // const handleSelect = (title) => {
+  //   setSelectedCards((prev) =>
+  //     prev.includes(title) ? prev.filter((t) => t !== title) : [...prev, title]
+  //   );
+  // };
+
   const handleSelect = (title) => {
-    setSelectedCards((prev) =>
-      prev.includes(title) ? prev.filter((t) => t !== title) : [...prev, title]
-    );
+    setSelectedCards((prev) => {
+      // Check if the item is already in quickLaunchIcons
+      const isInQuickLaunch = quickLaunchIcons.some(
+        (icon) => icon.title === title
+      );
+
+      if (isInQuickLaunch) {
+        // If it's in Quick Launch, remove it from selectedCards only (not from Quick Launch)
+        return prev.filter((t) => t !== title);
+      } else {
+        // Otherwise, toggle selection normally
+        return prev.includes(title)
+          ? prev.filter((t) => t !== title)
+          : [...prev, title];
+      }
+    });
   };
 
   // const handleAddServices = () => {
@@ -951,13 +970,17 @@ const ClientLandingPage = () => {
         </div>
 
         {/* Add More Button */}
-        <div className="flex justify-center">
-          <button
-            className="bg-red-500 text-white py-3 px-8 rounded-lg hover:bg-red-600"
-            onClick={openModal}>
-            Add More
-          </button>
-        </div>
+        {user.role === "Master Admin" ||
+        user.role === "Super Admin" ||
+        user.role === "Admin" ? (
+          <div className="flex justify-center">
+            <button
+              className="bg-red-500 text-white py-3 px-8 rounded-lg hover:bg-red-600"
+              onClick={openModal}>
+              Add More
+            </button>
+          </div>
+        ) : null}
       </div>
       {/* MODAL CODE */}
       {/* <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100"> */}
@@ -1053,126 +1076,145 @@ const ClientLandingPage = () => {
                   </div>
                 </div> */}
 
-                <div>
-                  <h2 className="text-xl md:text-2xl font-bold mb-8 ps-[7rem] uppercase">
-                    Frontend
-                  </h2>
-                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-8 mb-12">
-                    {services_frontend.map((service) => (
-                      <div className="flex justify-center items-center">
-                        {" "}
-                        {/* Center cards within grid cells */}
-                        <Card
-                          key={service.id}
-                          title={service.title}
-                          iconSrc={service.image}
-                          isSelected={selectedCards.includes(service.title)}
-                          handleSelect={handleSelect}
-                        />
-                      </div>
-                    ))}
+                {user.department === "Top Management" ||
+                user.department === "Tech" ? (
+                  <div>
+                    <h2 className="text-xl md:text-2xl font-bold mb-8 ps-[7rem] uppercase">
+                      Frontend
+                    </h2>
+                    <div className="grid grid-cols-2 sm:grid-cols-3 gap-8 mb-12">
+                      {services_frontend.map((service) => (
+                        <div className="flex justify-center items-center">
+                          <Card
+                            key={service.id}
+                            title={service.title}
+                            iconSrc={service.image}
+                            // isSelected={selectedCards.includes(service.title)}
+                            isSelected={
+                              selectedCards.includes(service.title) ||
+                              quickLaunchIcons.some(
+                                (icon) => icon.title === service.title
+                              )
+                            }
+                            handleSelect={handleSelect}
+                          />
+                        </div>
+                      ))}
+                    </div>
                   </div>
-                </div>
+                ) : null}
 
                 {/* Finance & Accounting Section */}
-                <div>
-                  <h2 className="text-xl md:text-2xl font-bold mb-8 ps-[7rem] uppercase">
-                    Finance & Accounting
-                  </h2>
-                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-8 mb-12">
-                    {services_financeAccounting.map((service) => (
-                      <div className="flex justify-center items-center">
-                        <Card
-                          key={service.id}
-                          title={service.title}
-                          iconSrc={service.image}
-                          isSelected={selectedCards.includes(service.title)}
-                          handleSelect={handleSelect}
-                        />
-                      </div>
-                    ))}
+
+                {user.department === "Top Management" ||
+                user.department === "Finance" ? (
+                  <div>
+                    <h2 className="text-xl md:text-2xl font-bold mb-8 ps-[7rem] uppercase">
+                      Finance & Accounting
+                    </h2>
+                    <div className="grid grid-cols-2 sm:grid-cols-3 gap-8 mb-12">
+                      {services_financeAccounting.map((service) => (
+                        <div className="flex justify-center items-center">
+                          <Card
+                            key={service.id}
+                            title={service.title}
+                            iconSrc={service.image}
+                            isSelected={selectedCards.includes(service.title)}
+                            handleSelect={handleSelect}
+                          />
+                        </div>
+                      ))}
+                    </div>
                   </div>
-                </div>
+                ) : null}
 
                 {/* Sales & Marketing Section */}
-                <div>
-                  <h2 className="text-xl md:text-2xl font-bold mb-8 ps-[7rem] uppercase">
-                    Sales & Marketing
-                  </h2>
-                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-8 mb-12">
-                    {services_salesMarketing.map((service) => (
-                      <div className="flex justify-center items-center">
-                        <Card
-                          key={service.id}
-                          title={service.title}
-                          iconSrc={service.image}
-                          isSelected={selectedCards.includes(service.title)}
-                          handleSelect={handleSelect}
-                        />
-                      </div>
-                    ))}
+                {user.department === "Top Management" ? (
+                  <div>
+                    <h2 className="text-xl md:text-2xl font-bold mb-8 ps-[7rem] uppercase">
+                      Sales & Marketing
+                    </h2>
+                    <div className="grid grid-cols-2 sm:grid-cols-3 gap-8 mb-12">
+                      {services_salesMarketing.map((service) => (
+                        <div className="flex justify-center items-center">
+                          <Card
+                            key={service.id}
+                            title={service.title}
+                            iconSrc={service.image}
+                            isSelected={selectedCards.includes(service.title)}
+                            handleSelect={handleSelect}
+                          />
+                        </div>
+                      ))}
+                    </div>
                   </div>
-                </div>
+                ) : null}
 
                 {/* HR Section */}
-                <div>
-                  <h2 className="text-xl md:text-2xl font-bold mb-8 ps-[7rem] uppercase">
-                    HR Support
-                  </h2>
-                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-8 mb-12">
-                    {services_hrSupport.map((service) => (
-                      <div className="flex justify-center items-center">
-                        <Card
-                          key={service.id}
-                          title={service.title}
-                          iconSrc={service.image}
-                          isSelected={selectedCards.includes(service.title)}
-                          handleSelect={handleSelect}
-                        />
-                      </div>
-                    ))}
+                {user.department === "Top Management" ? (
+                  <div>
+                    <h2 className="text-xl md:text-2xl font-bold mb-8 ps-[7rem] uppercase">
+                      HR Support
+                    </h2>
+                    <div className="grid grid-cols-2 sm:grid-cols-3 gap-8 mb-12">
+                      {services_hrSupport.map((service) => (
+                        <div className="flex justify-center items-center">
+                          <Card
+                            key={service.id}
+                            title={service.title}
+                            iconSrc={service.image}
+                            isSelected={selectedCards.includes(service.title)}
+                            handleSelect={handleSelect}
+                          />
+                        </div>
+                      ))}
+                    </div>
                   </div>
-                </div>
+                ) : null}
 
                 {/* Customer Management Section */}
-                <div>
-                  <h2 className="text-xl md:text-2xl font-bold mb-8 ps-[7rem] uppercase">
-                    Customer Management
-                  </h2>
-                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-8 mb-12">
-                    {services_customerManagement.map((service) => (
-                      <div className="flex justify-center items-center">
-                        <Card
-                          key={service.id}
-                          title={service.title}
-                          iconSrc={service.image}
-                          isSelected={selectedCards.includes(service.title)}
-                          handleSelect={handleSelect}
-                        />
-                      </div>
-                    ))}
+                {user.department === "Top Management" ? (
+                  <div>
+                    <h2 className="text-xl md:text-2xl font-bold mb-8 ps-[7rem] uppercase">
+                      Customer Management
+                    </h2>
+                    <div className="grid grid-cols-2 sm:grid-cols-3 gap-8 mb-12">
+                      {services_customerManagement.map((service) => (
+                        <div className="flex justify-center items-center">
+                          <Card
+                            key={service.id}
+                            title={service.title}
+                            iconSrc={service.image}
+                            isSelected={selectedCards.includes(service.title)}
+                            handleSelect={handleSelect}
+                          />
+                        </div>
+                      ))}
+                    </div>
                   </div>
-                </div>
+                ) : null}
 
                 {/* Reports & Analytics Section */}
-                <div>
-                  <h2 className="text-xl md:text-2xl font-bold mb-8 ps-[7rem] uppercase">
-                    Reports & Analytics
-                  </h2>
-                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-8 mb-12">
-                    {services_reportsAnalytics.map((service) => (
-                      <div className="flex justify-center items-center">
-                        <Card
-                          key={service.id}
-                          title={service.title}
-                          iconSrc={service.image}
-                          isSelected={selectedCards.includes(service.title)}
-                          handleSelect={handleSelect}
-                        />
-                      </div>
-                    ))}
+                {user.department === "Top Management" ? (
+                  <div>
+                    <h2 className="text-xl md:text-2xl font-bold mb-8 ps-[7rem] uppercase">
+                      Reports & Analytics
+                    </h2>
+                    <div className="grid grid-cols-2 sm:grid-cols-3 gap-8 mb-12">
+                      {services_reportsAnalytics.map((service) => (
+                        <div className="flex justify-center items-center">
+                          <Card
+                            key={service.id}
+                            title={service.title}
+                            iconSrc={service.image}
+                            isSelected={selectedCards.includes(service.title)}
+                            handleSelect={handleSelect}
+                          />
+                        </div>
+                      ))}
+                    </div>
                   </div>
-                </div>
+                ) : null}
               </div>
               {/* Modal Header-Footer */}
 
@@ -1188,7 +1230,7 @@ const ClientLandingPage = () => {
               </div>
               {/* Close button */}
               <button
-                className="bg-red-500 text-white py-2 px-4 rounded-lg hover:bg-red-600"
+                className="bg-red-500 text-white py-2 px-4 my-4 rounded-lg hover:bg-red-600"
                 onClick={closeModal}>
                 Close
               </button>
