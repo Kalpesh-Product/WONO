@@ -5,7 +5,6 @@ const Sidebar = () => {
   const [isDepartmentsOpen, setIsDepartmentsOpen] = useState(false); // State for opening/closing Departments dropdown
   const [user, setUser] = useState(null);
 
-
   // Menu items array (without DASHBOARD)
   const menuItems = [
     { name: "REPORTS", icon: "https://via.placeholder.com/24" },
@@ -36,11 +35,16 @@ const Sidebar = () => {
     setUser(storedUser);
   }, []);
 
-  // Filter departments based on the user's department
-  const filteredDepartments =
-    user?.department === "Tech"
-      ? departments.filter((dept) => dept.name === "FRONTEND")
-      : departments;
+  const departmentMapping = {
+    Tech: ["FRONTEND"],
+    HR: ["HUMAN RESOURCE", "CUSTOMER SERVICE"],
+    // Add additional mappings as needed
+  };
+
+  // Filter departments based on user's department using departmentMapping
+  const filteredDepartments = departments.filter((dept) =>
+    (departmentMapping[user?.department] || []).includes(dept.name)
+  );
 
   return (
     <div
@@ -89,20 +93,6 @@ const Sidebar = () => {
                 isDepartmentsOpen ? "max-h-screen" : "max-h-0"
               } overflow-hidden transition-all duration-300 ease-in-out bg-gray-700 pl-8 space-y-2`}
             >
-              {/* {departments.map((item, index) => (
-                <a
-                  key={index}
-                  href={`#${item.name.toLowerCase().replace(/\s+/g, "-")}`}
-                  className="p-4 hover:bg-gray-600 text-sm block"
-                >
-                  <img
-                    src={item.icon}
-                    alt={item.name}
-                    className="mr-2 inline-block"
-                  />
-                  <span>{item.name}</span>
-                </a>
-              ))} */}
               {filteredDepartments.map((dept, index) => (
                 <a
                   key={index}

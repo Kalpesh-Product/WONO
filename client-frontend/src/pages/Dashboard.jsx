@@ -6,6 +6,8 @@ import SalesTargetWidget from "../Widgets/SalesTargetWidget";
 import RevenueVsExpensesWidget from "../Widgets/RevenueVsExpensesWidget";
 import ProgressDoughnutWidget from "../Widgets/ProgressDoughnutWidget";
 import BarGraphWidget from "../Widgets/BarGraphWidget";
+import WelcomeWidget from "../Widgets/WelcomeWidget";
+
 
 
 const Dashboard = () => {
@@ -17,7 +19,10 @@ const Dashboard = () => {
     setUser(storedUser);
     console.log(user); // Log the user object on component mount
     console.log(user.name)
-  }, []); // Empty dependency array ensures this only runs once on mount
+  }); // Empty dependency array ensures this only runs once on mount
+
+
+  
   return (
     <div className="flex">
       {/* Sidebar */}
@@ -59,7 +64,7 @@ const Dashboard = () => {
         <h2 className="text-2xl font-semibold">Heading - 3</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="bg-white p-6 shadow-md rounded-lg text-center">
-            Widget 7
+            <WelcomeWidget />
           </div>
           <div className="bg-white p-6 shadow-md rounded-lg text-center">
             Widget 8

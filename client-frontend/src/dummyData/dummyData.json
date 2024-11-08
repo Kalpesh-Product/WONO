@@ -12,6 +12,13 @@
       "role": "Admin",
       "department": "Tech",
       "password" : "456"
+    },
+    {
+      "name": "Farzeen",
+      "email": "farzeen@wono.com",
+      "role": "Admin",
+      "department": "HR",
+      "password" : "456"
     }
   ]
   
