@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useLocation} from "react-router-dom";
+import TextField from "@mui/material/TextField";
+import Box from "@mui/material/Box";
 
 const EmployeeProfile = ({ data }) => {
   const location = useLocation();
@@ -34,6 +36,8 @@ const EmployeeProfile = ({ data }) => {
   };
  
   const isProfilePage = location.pathname === "/profile";
+  const isAccessPage = location.pathname === "/access";
+
   return (
     <div className="flex flex-col space-y-7">
        <div className="flex justify-end space-x-4">
@@ -49,23 +53,127 @@ const EmployeeProfile = ({ data }) => {
       </div>
       <div className="flex items-center gap-20">
      
-        <span className="w-24 font-semibold text-gray-600">Name:</span>
-        <input
+        
+      
+        <TextField
+          label="name"
           name="name"
-          value={data?.name || formData.name}
+          value={isAccessPage? data?.name : isProfilePage ? formData.name:""}
           onChange={handleChange}
           className={`text-gray-800 border ${
             isEditing
               ? "border-gray-400 bg-white"
               : "border-transparent bg-transparent"
           } rounded`}
-          disabled={!isEditing}></input>
+          disabled={!isEditing}
+          fullWidth
+        />
+
+<TextField
+          label="role"
+          name="role"
+          value={isAccessPage? data?.role : isProfilePage ? formData.role:""}
+          onChange={handleChange}
+          className={`text-gray-800 border ${
+            isEditing
+              ? "border-gray-400 bg-white"
+              : "border-transparent bg-transparent"
+          } rounded`}
+          disabled={!isEditing}
+          fullWidth
+        />
+        <TextField
+          label="designation"
+          name="designation"
+          value={isAccessPage? data?.designation : isProfilePage ? formData.designation:""}
+          onChange={handleChange}
+          className={`text-gray-800 border ${
+            isEditing
+              ? "border-gray-400 bg-white"
+              : "border-transparent bg-transparent"
+          } rounded`}
+          disabled={!isEditing}
+          fullWidth
+        />
+        <TextField
+          label="Department"
+          name="Department"
+          value={isAccessPage? data?.department : isProfilePage ? formData.Department:""}
+          onChange={handleChange}
+          className={`text-gray-800 border ${
+            isEditing
+              ? "border-gray-400 bg-white"
+              : "border-transparent bg-transparent"
+          } rounded`}
+          disabled={!isEditing}
+          fullWidth
+        />
+       
       </div>
       <div className="flex items-center gap-20">
+     
+        
+      
+        <TextField
+          label="email"
+          name="email"
+          value={isAccessPage? data?.email : isProfilePage ? formData.email:""}
+          onChange={handleChange}
+          className={`text-gray-800 border ${
+            isEditing
+              ? "border-gray-400 bg-white"
+              : "border-transparent bg-transparent"
+          } rounded`}
+          disabled={!isEditing}
+          fullWidth
+        />
+
+<TextField
+          label="phone"
+          name="phone"
+          value={isAccessPage? data?.phone : isProfilePage ? formData.phone:""}
+          onChange={handleChange}
+          className={`text-gray-800 border ${
+            isEditing
+              ? "border-gray-400 bg-white"
+              : "border-transparent bg-transparent"
+          } rounded`}
+          disabled={!isEditing}
+          fullWidth
+        />
+        <TextField
+          label="address"
+          name="address"
+          value={isAccessPage? data?.address : isProfilePage ? formData.address:""}
+          onChange={handleChange}
+          className={`text-gray-800 border ${
+            isEditing
+              ? "border-gray-400 bg-white"
+              : "border-transparent bg-transparent"
+          } rounded`}
+          disabled={!isEditing}
+          fullWidth
+        />
+        <TextField
+          label="dateOfBirth"
+          name="dateOfBirth"
+          value={isAccessPage? data?.dateOfBirth : isProfilePage ? formData.dateOfBirth:""}
+          onChange={handleChange}
+          className={`text-gray-800 border ${
+            isEditing
+              ? "border-gray-400 bg-white"
+              : "border-transparent bg-transparent"
+          } rounded`}
+          disabled={!isEditing}
+          fullWidth
+        />
+       
+      </div>
+      {/* <div className="flex items-center gap-20">
         <span className="w-24 font-semibold text-gray-600">Role:</span>
         <input
           name="role"
-          value={data?.role || formData.role}
+          value={isAccessPage? data?.role : isProfilePage ? formData.role:""}
           onChange={handleChange}
           className={`text-gray-800 border ${
             isEditing
@@ -78,7 +186,7 @@ const EmployeeProfile = ({ data }) => {
         <span className="w-24 font-semibold text-gray-600">Designation:</span>
         <input
           name="designation"
-          value={data?.designation || formData.designation}
+          value={isAccessPage? data?.designation : isProfilePage ? formData.designation:""}
           onChange={handleChange}
           className={`text-gray-800 border ${
             isEditing
@@ -91,7 +199,7 @@ const EmployeeProfile = ({ data }) => {
         <span className="w-24 font-semibold text-gray-600">Company:</span>
         <input
           name="company"
-          value={data?.company || formData.company}
+          value={isAccessPage? data?.company : isProfilePage ? formData.company:""}
           onChange={handleChange}
           className={`text-gray-800 border ${
             isEditing
@@ -104,7 +212,7 @@ const EmployeeProfile = ({ data }) => {
         <span className="w-24 font-semibold text-gray-600">Department:</span>
         <input
           name="department"
-          value={data?.department || formData.Department}
+          value={isAccessPage? data?.department : isProfilePage ? formData.Department:""}
           onChange={handleChange}
           className={`text-gray-800 border ${
             isEditing
@@ -121,7 +229,7 @@ const EmployeeProfile = ({ data }) => {
         <span className="w-24 font-semibold text-gray-600">Phone:</span>
         <input
           name="phone"
-          value={data?.phone || formData.phone}
+          value={isAccessPage? data?.email : isProfilePage ? formData.email:""}
           onChange={handleChange}
           className={`text-gray-800 border ${
             isEditing
@@ -134,7 +242,7 @@ const EmployeeProfile = ({ data }) => {
         <span className="w-24 font-semibold text-gray-600">Address:</span>
         <input
           name="address"
-          value={data?.address || formData.address}
+          value={isAccessPage? data?.address: isProfilePage ? formData.address:""}
           onChange={handleChange}
           className={`text-gray-800 border ${
             isEditing
@@ -147,7 +255,7 @@ const EmployeeProfile = ({ data }) => {
         <span className="w-24 font-semibold text-gray-600">DOB:</span>
         <input
           name="dateOfBirth"
-          value={data?.dateOfBirth || formData.dateOfBirth}
+          value={isAccessPage? data?.dateOfBirth : isProfilePage ? formData.dateOfBirth:""}
           onChange={handleChange}
           className={`text-gray-800 border ${
             isEditing
@@ -155,7 +263,7 @@ const EmployeeProfile = ({ data }) => {
               : "border-transparent bg-transparent"
           } rounded`}
           disabled={!isEditing}></input>
-      </div>
+      </div> */}
     </div>
   );
 };
