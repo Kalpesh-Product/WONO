@@ -1,15 +1,21 @@
 import React, { useState } from 'react';
+import { useLocation} from "react-router-dom";
+
 
 const AccessHierarchyTab = () => {
   const [checkedItems, setCheckedItems] = useState({});
+  const location = useLocation();
   const modules = {
     "HR": ["Attendance", "Leave Management", "Payroll", "Payslips", "Leaves", "Holidays", "SOPs", "Policies", "Task Management", "Performance", "Appraisals", "Templates", "e-Signs"],
     "Sales": ["Automated SEO", "Personalized SEMs", "Ad Networks", "Lead Generation", "Social Media", "Email Marketing", "Whatssapp Integration", "Live chats", "Refferals", "Blogs", "Vlogs"],
     "Finance": ["Invoices", "Cashflow", "Projections", "Budgets", "Working Capital", "Financial Reports", "Collections", "Notifications", "FollowUps", "Taxes", "Compliances", "Analytics"],
     "Marketing": ["Campaigns", "Analytics", "Social Media", "Email Marketing", "SMS Marketing", "Whatssapp Integration", "Live chat", "Refferals", "Blogs", "Vlogs"],
-    "Tickets": ["Open Tickets", "Resolved Tickets", "Escalations"],
-    "Meeting Room": ["Booking", "Schedule", "Calendar"]
-  };
+    "Frontend" :["Website","Booking","Mobile Site","IOS App","Android App","Payment Gateway","Customer Profile","Notifications","Chat","Tickets","Events","Customer Service"],
+    "Finance & Accounting" :["Invoicing","Cashflow","Projections","Budgets","Working Capital","Financial Reports","Collections","Notifications","Follow Ups","Taxes","Compliances","Analytics"],
+    "Customer Management Services" : ["Ticket Raising","Complaint Logs","Meeting Rooms","Cafe Orders","Visitors","Announcements","Feedback","Customer Ratings","Customer Service","Auto Responses","Reports","Analytics"],
+    "Reports and Analytics" :["Company Dashboard","Company Trends","Bussiness Trends","Vendor Payouts","Cashflow","Key Notifications","Full Data analysis","Customer Reports","Employee Reports","Milesstone Reports","Taxes Reports","Customised Reports"]
+    
+  }
 
   const handleCheckboxChange = (module, submodule = null) => {
     setCheckedItems((prevState) => {
@@ -40,6 +46,7 @@ const AccessHierarchyTab = () => {
     });
   };
 
+  const isAccessPage = location.pathname === "/access";
   return (
     <div className="mb-4">
       {Object.keys(modules).map((module) => (
@@ -71,6 +78,10 @@ const AccessHierarchyTab = () => {
           </div>
         </div>
       ))}
+      {isAccessPage && (<div className='flex items-center justify-center'>
+        <button className='bg-green-800 w-24 h-10 rounded-md mt-6'>Save</button>
+      </div>)}
+      
     </div>
   );
 };

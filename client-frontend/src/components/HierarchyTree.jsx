@@ -26,7 +26,8 @@ const TreeNode = ({ node }) => {
       {/* Modal to show the user's details */}
       <Modal open={showModal} onClose={closeModal}>
         {/* Profile pic with name */}
-      <div class="flex items-center p-4 bg-white rounded-lg shadow-md justify-between mb-4">
+        <div class="w-50">
+      <div class="flex items-center p-4 bg-white rounded-lg shadow-md justify-between mb-4 ">
         <div class="flex flex-row gap-3">
     <div
           className="w-16 h-16 rounded-full overflow-hidden bg-gray-200 cursor-pointer"
@@ -45,7 +46,7 @@ const TreeNode = ({ node }) => {
     </div>
     </div>
     {/* tab view */}
-      <div className='mx-auto'>
+      <div className='mx-auto '>
           
           <ul className='flex justify-center border-b mb-4'>
             <li className='w-1/2 text-center' role='presentation'>
@@ -85,6 +86,7 @@ const TreeNode = ({ node }) => {
           </div>
         {/* <EmployeeProfile data={node} />{" "} */}
         {/* Use EmployeeProfile with node data */}
+        </div>
       </Modal>
 
       <div
