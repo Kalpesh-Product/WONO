@@ -221,7 +221,6 @@ export default function MemberForm() {
               control={<Radio />}
               label="Female"
             />
-            <FormControlLabel value="other" control={<Radio />} label="Other" />
           </RadioGroup>
           {errors.gender && <p className="text-red-600">{errors.gender}</p>}
         </div>
@@ -316,11 +315,16 @@ export default function MemberForm() {
           >
             <option value="">Select Department</option>
             {isLoading ? (
-              <p>Loading</p>
+              <option>Loading...</option>
+            ) : error ? (
+              <option>Error loading departments</option>
             ) : (
-              data.map((department, index) => {
-                return <option key={index}>{department.name}</option>;
-              })
+              data &&
+              data.map((department, index) => (
+                <option key={index} value={department.name}>
+                  {department.name}
+                </option>
+              ))
             )}
           </select>
           {errors.department && (

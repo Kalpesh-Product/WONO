@@ -3,6 +3,9 @@ const User = require("../../models/User");
 const registerLogs = require("../../utils/loginLogs");
 const { v4: uuid } = require("uuid");
 const redisClient = require("../../config/redisClient");
+const bcrypt = require("bcryptjs");
+const generatePassword = require("../../utils/passwordGenerator");
+const mailer = require("../../config/nodemailerConfig");
 
 const login = async (req, res, next) => {
   try {
@@ -140,4 +143,97 @@ const logOut = async (req, res, next) => {
   }
 };
 
-module.exports = { login, logOut };
+const createUser = async (req, res, next) => {
+  try {
+    const {
+      name,
+      mobile,
+      email,
+      dob,
+      gender,
+      country,
+      state,
+      city,
+      role,
+      department,
+      userId,
+    } = req.body;
+
+    if (
+      !name ||
+      !email ||
+      !mobile ||
+      !dob ||
+      !gender ||
+      !country ||
+      !state ||
+      !city ||
+      !role ||
+      !department ||
+      !userId
+    ) {
+      return res.status(400), json({ message: "Invalid data" });
+    }
+
+    if (!mongoose.Types.ObjectId.isValid(userId)) {
+      return res.status(400), json({ message: "Invalid data" });
+    }
+
+    let emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    if (!emailRegex.test(email)) {
+      return res.status(400).json({ message: "Invalid data" });
+    }
+
+    const userExists = await User.findOne({ "personalInfo.email": email })
+      .lean()
+      .exec();
+
+    if (userExists) {
+      return res.status(409).json({ message: "User already exists" });
+    }
+
+    const username = email.split("@")[1];
+    const password = generatePassword(8, {
+      upper: true,
+      lower: true,
+      number: true,
+      symbol: true,
+    });
+
+    const hashPwd = await bcrypt.hash(password, 10);
+    const creator = await User.findById(userId).lean().exec();
+    if (!creator) {
+      return res.status(400).json({ message: "Invalid data" });
+    }
+    const newUser = new User({
+      personalInfo: {
+        name,
+        email,
+        mobile,
+        gender,
+        dob,
+        country,
+        state,
+        city,
+      },
+      role,
+      department,
+      companyInfo: {
+        ...creator.companyInfo,
+      },
+      credentials: {
+        username,
+        password: hashPwd,
+      },
+    });
+
+    await newUser.save();
+    const userMailOptions = emailTemplates(email, name, password);
+    await mailer.sendMail(userMailOptions);
+    res.status(201).json({ message: "user created successfully" });
+  } catch (error) {
+    next(error);
+  }
+};
+
+module.exports = { login, logOut, createUser };

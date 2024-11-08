@@ -4,13 +4,19 @@ const userSchema = new mongoose.Schema(
   {
     // Personal Information Section
     personalInfo: {
-      name: { type: String, required: false },
-      mobile: { type: String, required: false },
-      email: { type: String, required: false, unique: true },
+      name: { type: String, required: true },
+      mobile: { type: String, required: true },
+      email: { type: String, required: true, unique: true },
+      dob: {
+        type: Date,
+        required: true,
+      },
+      gender: String,
       country: String,
       city: String,
       state: String,
     },
+    profilePicture: String,
     role: {
       type: String,
       default: "CMA-001",
@@ -25,7 +31,6 @@ const userSchema = new mongoose.Schema(
     // Company Information Section
     companyInfo: {
       type: mongoose.Schema.Types.ObjectId,
-      required: true,
       ref: "Company",
     },
 
@@ -43,12 +48,44 @@ const userSchema = new mongoose.Schema(
       service3: { type: Boolean, default: false },
       service4: { type: Boolean, default: false },
     },
+    access: {
+      hr: [
+        {
+          type: String,
+        },
+      ],
+      salesAndMarketing: [
+        {
+          type: String,
+        },
+      ],
+      financeAndAccounting: [
+        {
+          type: String,
+        },
+      ],
+      customerManagementServices: [
+        {
+          type: String,
+        },
+      ],
+      reportsAndAnalytics: [
+        {
+          type: String,
+        },
+      ],
+      frontend: [
+        {
+          type: String,
+        },
+      ],
+    },
 
     otp: { type: String, required: false },
   },
   {
     timestamps: true,
-    collection: "registrationDetails", // Specify the existing collection name here
+    collection: "registrationDetails",
   }
 );
 
