@@ -82,7 +82,6 @@ import {
   // } from "../../../frontend/src/assets/WONO_images/img/icon_service_color";
 } from "../assets/WONO_images/img/icon_service_color";
 
-
 const ClientLandingPage = () => {
   const navigate = useNavigate();
 
@@ -107,7 +106,7 @@ const ClientLandingPage = () => {
   // Set a default if the role is not found
   const displayName = roleBasedNames[role] || "Abrar Shaikh";
 
-  const [user, setUser] = useState('');
+  const [user, setUser] = useState("");
   useEffect(() => {
     const storedUser = JSON.parse(localStorage.getItem("user"));
     setUser(storedUser);
@@ -779,26 +778,90 @@ const ClientLandingPage = () => {
 
   // CARD SELECTION END
 
+  const [quickLaunchIcons, setQuickLaunchIcons] = useState([
+    { title: "Tasks", iconSrc: tasksImage },
+    { title: "Ticket", iconSrc: ticketsImage },
+    { title: "Meeting", iconSrc: meetingImage },
+    { title: "Customer Service", iconSrc: customerServiceImage },
+  ]);
+
+  // State to track selected cards (already present in your code)
   const [selectedCards, setSelectedCards] = useState([]);
 
+  // const handleSelect = (title) => {
+  //   if (selectedCards.includes(title)) {
+  //     setSelectedCards(
+  //       selectedCards.filter((cardTitle) => cardTitle !== title)
+  //     );
+  //   } else {
+  //     setSelectedCards([...selectedCards, title]);
+  //   }
+  // };
+
+  // const handleSelect = (title) => {
+  //   setSelectedCards((prev) =>
+  //     prev.includes(title) ? prev.filter((t) => t !== title) : [...prev, title]
+  //   );
+  // };
+
   const handleSelect = (title) => {
-    if (selectedCards.includes(title)) {
-      setSelectedCards(
-        selectedCards.filter((cardTitle) => cardTitle !== title)
+    setSelectedCards((prev) => {
+      // Check if the item is already in quickLaunchIcons
+      const isInQuickLaunch = quickLaunchIcons.some(
+        (icon) => icon.title === title
       );
-    } else {
-      setSelectedCards([...selectedCards, title]);
-    }
+
+      if (isInQuickLaunch) {
+        // If it's in Quick Launch, remove it from selectedCards only (not from Quick Launch)
+        return prev.filter((t) => t !== title);
+      } else {
+        // Otherwise, toggle selection normally
+        return prev.includes(title)
+          ? prev.filter((t) => t !== title)
+          : [...prev, title];
+      }
+    });
   };
 
+  // const handleAddServices = () => {
+  //   // Alert
+  //   // Swal.fire({
+  //   //   title: "New Services Added!",
+  //   //   text: "You clicked the button!",
+  //   //   icon: "success",
+  //   // });
+  //   // alert("New services added");
+  //   toast.success("New Services Added");
+  //   closeModal(); // Optionally close the modal after the alert
+  // };
+
   const handleAddServices = () => {
-    // Alert
-    // Swal.fire({
-    //   title: "New Services Added!",
-    //   text: "You clicked the button!",
-    //   icon: "success",
-    // });
-    // alert("New services added");
+    setQuickLaunchIcons((prev) => {
+      const newIcons = selectedCards.map((title) => {
+        const service = [
+          ...services_frontend,
+          ...services_financeAccounting,
+          ...services_salesMarketing,
+          ...services_hrSupport,
+          ...services_customerManagement,
+          ...services_reportsAnalytics,
+        ].find((service) => service.title === title);
+
+        return { title: service.title, iconSrc: service.image };
+      });
+
+      // Filter out duplicates before adding
+      const uniqueNewIcons = newIcons.filter(
+        (newIcon) =>
+          !prev.some((existingIcon) => existingIcon.title === newIcon.title)
+      );
+
+      return [...prev, ...uniqueNewIcons];
+    });
+
+    // Optionally, reset selectedCards after adding
+    setSelectedCards([]);
+
     toast.success("New Services Added");
     closeModal(); // Optionally close the modal after the alert
   };
@@ -858,7 +921,7 @@ const ClientLandingPage = () => {
             Welcome, {user.name}
           </h1>
           <button className="bg-red-500 text-white py-2 px-6 rounded-lg hover:bg-red-600 mt-4 md:mt-0">
-            Edit
+            Organize
           </button>
         </div>
 
@@ -889,27 +952,85 @@ const ClientLandingPage = () => {
         </div>
 
         {/* Quick Launch Section */}
-        <h2 className="text-2xl md:text-3xl font-bold mb-8 lg:ps-[7rem] uppercase">
-          Quick launch
-        </h2>
+
+        {user.role === "Master Admin" ||
+        user.role === "Super Admin" ||
+        user.role === "Admin" ? (
+          <h2 className="text-2xl md:text-3xl font-bold mb-8 lg:ps-[7rem] uppercase">
+            Quick launch
+          </h2>
+        ) : null}
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-8 mb-12">
-          <CardNS title="Tasks" iconSrc={tasksImage} />
+          {/* <CardNS title="Tasks" iconSrc={tasksImage} />
           <CardNS title="Ticket" iconSrc={ticketsImage} />
           <CardNS title="Meeting" iconSrc={meetingImage} />
-          <CardNS title="Customer Service" iconSrc={customerServiceImage} />
+          <CardNS title="Customer Service" iconSrc={customerServiceImage} /> */}
+
+          {quickLaunchIcons.map((icon, index) => (
+            <CardNS key={index} title={icon.title} iconSrc={icon.iconSrc} />
+          ))}
 
           {/* Conditional rendering for tech admin role (at) */}
-          {role === "at" && <CardNS title="Website" iconSrc={websiteImage} />}
+          {/* {role === "at" && <CardNS title="Website" iconSrc={websiteImage} />} */}
+
+          {/* Conditional rendering for employee  */}
+          {user.role === "Employee" && (
+            <>
+              <CardNS
+                title="Attendance"
+                iconSrc={services_hrSupport[0].image}
+              />
+              <CardNS title="Payroll" iconSrc={services_hrSupport[1].image} />
+              <CardNS title="Leaves" iconSrc={services_hrSupport[3].image} />
+              <CardNS
+                title="Performance"
+                iconSrc={services_hrSupport[8].image}
+              />
+            </>
+          )}
+
+          {/* Conditional rendering for employee with tech department */}
+          {user.role === "Employee" && user.department === "Tech" && (
+            <>
+              <CardNS title="Website" iconSrc={websiteImage} />
+              <CardNS
+                title="Notifications"
+                iconSrc={services_frontend[7].image}
+              />
+            </>
+          )}
+
+          {/* Conditional rendering for employee with finance department */}
+          {user.role === "Employee" && user.department === "Finance" && (
+            <>
+              <CardNS
+                title="Invoicing"
+                iconSrc={services_financeAccounting[0].image}
+              />
+              <CardNS
+                title="Budget"
+                iconSrc={services_financeAccounting[3].image}
+              />
+              <CardNS
+                title="Financial Reports"
+                iconSrc={services_financeAccounting[5].image}
+              />
+            </>
+          )}
         </div>
 
         {/* Add More Button */}
-        <div className="flex justify-center">
-          <button
-            className="bg-red-500 text-white py-3 px-8 rounded-lg hover:bg-red-600"
-            onClick={openModal}>
-            Add More
-          </button>
-        </div>
+        {user.role === "Master Admin" ||
+        user.role === "Super Admin" ||
+        user.role === "Admin" ? (
+          <div className="flex justify-center">
+            <button
+              className="bg-red-500 text-white py-3 px-8 rounded-lg hover:bg-red-600"
+              onClick={openModal}>
+              Add More
+            </button>
+          </div>
+        ) : null}
       </div>
       {/* MODAL CODE */}
       {/* <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100"> */}
@@ -926,8 +1047,10 @@ const ClientLandingPage = () => {
           <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
             <div className="absolute inset-0" onClick={closeModal}></div>
 
-            <div className="bg-white w-11/12 max-w-[90%] pl-8 pr-8 pb-8 rounded-lg shadow-lg z-10 relative overflow-y-auto max-h-[80vh]">
+            <div className="bg-white w-11/12 max-w-[90%] pl-8 pr-8  rounded-lg shadow-lg z-10 relative overflow-y-auto max-h-[80vh]">
               {/* Modal Content */}
+
+              {/* Modal Header-Footer */}
               <div className="sticky top-0 bg-white py-6 z-20 flex justify-between">
                 <div>
                   <h2 className="text-3xl font-bold mb-4 uppercase">
@@ -1003,139 +1126,186 @@ const ClientLandingPage = () => {
                   </div>
                 </div> */}
 
-                <div>
-                  <h2 className="text-xl md:text-2xl font-bold mb-8 ps-[7rem] uppercase">
-                    Frontend
-                  </h2>
-                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-8 mb-12">
-                    {services_frontend.map((service) => (
-                      <div className="flex justify-center items-center">
-                        {" "}
-                        {/* Center cards within grid cells */}
-                        <Card
-                          key={service.id}
-                          title={service.title}
-                          iconSrc={service.image}
-                          isSelected={selectedCards.includes(service.title)}
-                          handleSelect={handleSelect}
-                        />
-                      </div>
-                    ))}
+                {user.department === "TopManagement" ||
+                user.department === "Tech" ? (
+                  <div>
+                    <h2 className="text-xl md:text-2xl font-bold mb-8 ps-[7rem] uppercase">
+                      Frontend
+                    </h2>
+                    <div className="grid grid-cols-2 sm:grid-cols-3 gap-8 mb-12">
+                      {services_frontend.map((service) => (
+                        <div className="flex justify-center items-center">
+                          <Card
+                            key={service.id}
+                            title={service.title}
+                            iconSrc={service.image}
+                            // isSelected={selectedCards.includes(service.title)}
+                            isSelected={
+                              selectedCards.includes(service.title) ||
+                              quickLaunchIcons.some(
+                                (icon) => icon.title === service.title
+                              )
+                            }
+                            handleSelect={handleSelect}
+                          />
+                        </div>
+                      ))}
+                    </div>
                   </div>
-                </div>
+                ) : null}
 
                 {/* Finance & Accounting Section */}
-                <div>
-                  <h2 className="text-xl md:text-2xl font-bold mb-8 ps-[7rem] uppercase">
-                    Finance & Accounting
-                  </h2>
-                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-8 mb-12">
-                    {services_financeAccounting.map((service) => (
-                      <div className="flex justify-center items-center">
-                        <Card
-                          key={service.id}
-                          title={service.title}
-                          iconSrc={service.image}
-                          isSelected={selectedCards.includes(service.title)}
-                          handleSelect={handleSelect}
-                        />
-                      </div>
-                    ))}
+
+                {user.department === "TopManagement" ||
+                user.department === "Finance" ? (
+                  <div>
+                    <h2 className="text-xl md:text-2xl font-bold mb-8 ps-[7rem] uppercase">
+                      Finance & Accounting
+                    </h2>
+                    <div className="grid grid-cols-2 sm:grid-cols-3 gap-8 mb-12">
+                      {services_financeAccounting.map((service) => (
+                        <div className="flex justify-center items-center">
+                          <Card
+                            key={service.id}
+                            title={service.title}
+                            iconSrc={service.image}
+                            isSelected={
+                              selectedCards.includes(service.title) ||
+                              quickLaunchIcons.some(
+                                (icon) => icon.title === service.title
+                              )
+                            }
+                            handleSelect={handleSelect}
+                          />
+                        </div>
+                      ))}
+                    </div>
                   </div>
-                </div>
+                ) : null}
 
                 {/* Sales & Marketing Section */}
-                <div>
-                  <h2 className="text-xl md:text-2xl font-bold mb-8 ps-[7rem] uppercase">
-                    Sales & Marketing
-                  </h2>
-                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-8 mb-12">
-                    {services_salesMarketing.map((service) => (
-                      <div className="flex justify-center items-center">
-                        <Card
-                          key={service.id}
-                          title={service.title}
-                          iconSrc={service.image}
-                          isSelected={selectedCards.includes(service.title)}
-                          handleSelect={handleSelect}
-                        />
-                      </div>
-                    ))}
+                {user.department === "TopManagement" ? (
+                  <div>
+                    <h2 className="text-xl md:text-2xl font-bold mb-8 ps-[7rem] uppercase">
+                      Sales & Marketing
+                    </h2>
+                    <div className="grid grid-cols-2 sm:grid-cols-3 gap-8 mb-12">
+                      {services_salesMarketing.map((service) => (
+                        <div className="flex justify-center items-center">
+                          <Card
+                            key={service.id}
+                            title={service.title}
+                            iconSrc={service.image}
+                            isSelected={
+                              selectedCards.includes(service.title) ||
+                              quickLaunchIcons.some(
+                                (icon) => icon.title === service.title
+                              )
+                            }
+                            handleSelect={handleSelect}
+                          />
+                        </div>
+                      ))}
+                    </div>
                   </div>
-                </div>
+                ) : null}
 
                 {/* HR Section */}
-                <div>
-                  <h2 className="text-xl md:text-2xl font-bold mb-8 ps-[7rem] uppercase">
-                    HR Support
-                  </h2>
-                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-8 mb-12">
-                    {services_hrSupport.map((service) => (
-                      <div className="flex justify-center items-center">
-                        <Card
-                          key={service.id}
-                          title={service.title}
-                          iconSrc={service.image}
-                          isSelected={selectedCards.includes(service.title)}
-                          handleSelect={handleSelect}
-                        />
-                      </div>
-                    ))}
+                {user.department === "TopManagement" ? (
+                  <div>
+                    <h2 className="text-xl md:text-2xl font-bold mb-8 ps-[7rem] uppercase">
+                      HR Support
+                    </h2>
+                    <div className="grid grid-cols-2 sm:grid-cols-3 gap-8 mb-12">
+                      {services_hrSupport.map((service) => (
+                        <div className="flex justify-center items-center">
+                          <Card
+                            key={service.id}
+                            title={service.title}
+                            iconSrc={service.image}
+                            isSelected={
+                              selectedCards.includes(service.title) ||
+                              quickLaunchIcons.some(
+                                (icon) => icon.title === service.title
+                              )
+                            }
+                            handleSelect={handleSelect}
+                          />
+                        </div>
+                      ))}
+                    </div>
                   </div>
-                </div>
+                ) : null}
 
                 {/* Customer Management Section */}
-                <div>
-                  <h2 className="text-xl md:text-2xl font-bold mb-8 ps-[7rem] uppercase">
-                    Customer Management
-                  </h2>
-                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-8 mb-12">
-                    {services_customerManagement.map((service) => (
-                      <div className="flex justify-center items-center">
-                        <Card
-                          key={service.id}
-                          title={service.title}
-                          iconSrc={service.image}
-                          isSelected={selectedCards.includes(service.title)}
-                          handleSelect={handleSelect}
-                        />
-                      </div>
-                    ))}
+                {user.department === "TopManagement" ? (
+                  <div>
+                    <h2 className="text-xl md:text-2xl font-bold mb-8 ps-[7rem] uppercase">
+                      Customer Management
+                    </h2>
+                    <div className="grid grid-cols-2 sm:grid-cols-3 gap-8 mb-12">
+                      {services_customerManagement.map((service) => (
+                        <div className="flex justify-center items-center">
+                          <Card
+                            key={service.id}
+                            title={service.title}
+                            iconSrc={service.image}
+                            isSelected={
+                              selectedCards.includes(service.title) ||
+                              quickLaunchIcons.some(
+                                (icon) => icon.title === service.title
+                              )
+                            }
+                            handleSelect={handleSelect}
+                          />
+                        </div>
+                      ))}
+                    </div>
                   </div>
-                </div>
+                ) : null}
 
                 {/* Reports & Analytics Section */}
-                <div>
-                  <h2 className="text-xl md:text-2xl font-bold mb-8 ps-[7rem] uppercase">
-                    Reports & Analytics
-                  </h2>
-                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-8 mb-12">
-                    {services_reportsAnalytics.map((service) => (
-                      <div className="flex justify-center items-center">
-                        <Card
-                          key={service.id}
-                          title={service.title}
-                          iconSrc={service.image}
-                          isSelected={selectedCards.includes(service.title)}
-                          handleSelect={handleSelect}
-                        />
-                      </div>
-                    ))}
+                {user.department === "TopManagement" ? (
+                  <div>
+                    <h2 className="text-xl md:text-2xl font-bold mb-8 ps-[7rem] uppercase">
+                      Reports & Analytics
+                    </h2>
+                    <div className="grid grid-cols-2 sm:grid-cols-3 gap-8 mb-12">
+                      {services_reportsAnalytics.map((service) => (
+                        <div className="flex justify-center items-center">
+                          <Card
+                            key={service.id}
+                            title={service.title}
+                            iconSrc={service.image}
+                            isSelected={
+                              selectedCards.includes(service.title) ||
+                              quickLaunchIcons.some(
+                                (icon) => icon.title === service.title
+                              )
+                            }
+                            handleSelect={handleSelect}
+                          />
+                        </div>
+                      ))}
+                    </div>
                   </div>
+                ) : null}
+              </div>
+              {/* Modal Header-Footer */}
+
+              <div className="sticky bottom-0 bg-white py-6 z-20 flex justify-center">
+                <div className="flex justify-center items-center">
+                  {/* Add button */}
+                  <button
+                    className="bg-red-500 text-white py-2 px-4 rounded-lg hover:bg-red-600"
+                    onClick={handleAddServices}>
+                    Add
+                  </button>
                 </div>
               </div>
-              <div className="flex justify-center items-center">
-                {/* Add button */}
-                <button
-                  className="bg-red-500 text-white py-2 px-4 rounded-lg hover:bg-red-600"
-                  onClick={handleAddServices}>
-                  Add
-                </button>
-              </div>
-
               {/* Close button */}
               <button
-                className="bg-red-500 text-white py-2 px-4 rounded-lg hover:bg-red-600"
+                className="bg-red-500 text-white py-2 px-4 my-4 rounded-lg hover:bg-red-600"
                 onClick={closeModal}>
                 Close
               </button>

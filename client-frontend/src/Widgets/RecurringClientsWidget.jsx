@@ -1,5 +1,5 @@
 // Recurring Clients Widget Component
-const RecurringClientsWidget = () => {
+const RecurringClientsWidget = ({widgetTitle}) => {
 
     const recurringClients = [
         {
@@ -44,8 +44,8 @@ const RecurringClientsWidget = () => {
         // },
       ];
   return (
-    <div className="bg-white p-6 shadow-md rounded-lg">
-      <h3 className="text-xl font-semibold mb-4 sticky bg-white top-0">Recurring Clients</h3>
+    <div className="bg-white p-6  rounded-lg">
+      <h3 className="text-xl font-semibold mb-4 sticky bg-white top-0">{widgetTitle}</h3>
       <ul>
         {recurringClients.map((client) => (
           <li key={client.id} className="flex items-center mb-4">

@@ -6,6 +6,7 @@ const Sidebar = () => {
   const [isDepartmentsOpen, setIsDepartmentsOpen] = useState(false);
   const [user, setUser] = useState(null);
 
+  // Menu items array (without DASHBOARD)
   const menuItems = [
     { name: "REPORTS", icon: "https://via.placeholder.com/24" },
     { name: "TASKS", icon: "https://via.placeholder.com/24" },
@@ -33,18 +34,44 @@ const Sidebar = () => {
     setUser(storedUser);
   }, []);
 
-  const filteredDepartments =
-    user?.department === "Tech"
-      ? departments.filter((dept) => dept.name === "FRONTEND")
-      : departments;
+  const departmentMapping = {
+    TopManagement: [
+      "FRONTEND",
+      "FINANCE & ACCOUNTING",
+      "SALES",
+      "HUMAN RESOURCE",
+      "CUSTOMER SERVICE",
+      "MARKETING",
+      "CAFE (F&B)",
+      "ADMINISTRATION",
+      "MAINTENANCE",
+      "LEGAL",
+    ],
+    Tech: ["FRONTEND"],
+    Finance: ["FINANCE & ACCOUNTING"],
+    Sales: ["SALES"],
+    HR: ["HUMAN RESOURCE", "CUSTOMER SERVICE"],
+    Marketing: ["MARKETING"],
+    Cafe: ["CAFE (F&B)"],
+    Admin: ["ADMINISTRATION"],
+    Maintenance: ["MAINTENANCE"],
+    Legal: ["LEGAL"],
+  };
+
+  // Filter departments based on user's department using departmentMapping
+  const filteredDepartments = departments.filter((dept) =>
+    (departmentMapping[user?.department] || []).includes(dept.name)
+  );
 
   return (
     <div
       className={`flex flex-col bg-gray-800 text-white ${
         isCollapsed ? "w-20" : "w-64"
-      } transition-width duration-300`}
+      } transition-width duration-300 `}
     >
       {/* Collapse button */}
+      <div className="sticky top-20">
+
       <button
         onClick={() => setIsCollapsed(!isCollapsed)}
         className="p-4 flex items-center justify-between focus:outline-none hover:bg-gray-700"
@@ -60,9 +87,10 @@ const Sidebar = () => {
       </button>
 
       {/* Menu items */}
-      <nav className="flex flex-col space-y-2 mt-8">
+      <nav className="flex flex-col space-y-2 mt-8  ">
+        {/* Hardcoded DASHBOARD menu item */}
         <a href="#dashboard" className="p-4 hover:bg-gray-700 text-sm">
-          {!isCollapsed && (
+          {isCollapsed && (
             <img
               src="https://via.placeholder.com/24"
               alt="dashboard"
@@ -119,7 +147,7 @@ const Sidebar = () => {
             href={`#${item.name.toLowerCase().replace(/\s+/g, "-")}`}
             className="p-4 hover:bg-gray-700 text-sm"
           >
-            {!isCollapsed && (
+            {isCollapsed && (
               <img
                 src={item.icon}
                 alt={item.name}
@@ -130,6 +158,7 @@ const Sidebar = () => {
           </a>
         ))}
       </nav>
+      </div>
     </div>
   );
 };
