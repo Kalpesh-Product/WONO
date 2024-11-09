@@ -42,6 +42,7 @@ const ClientLoginPage = () => {
         </form>
       </div>
     </div>
+    
   );
 };
 
