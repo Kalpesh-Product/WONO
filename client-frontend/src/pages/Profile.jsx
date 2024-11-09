@@ -79,88 +79,61 @@ const Profile = () => {
     <div class="flex min-h-screen">
       {/* Sidebar */}
       <ClientSidebar/>
-      {/* <div class="w-64 bg-gray-800 text-white flex flex-col">
-        <div class="p-4 text-center font-bold text-2xl border-b border-gray-700">
-          Sidebar
-        </div>
-        <nav class="flex-1 p-4">
-          <ul class="space-y-2">
-            <li>
-              <a
-                href="#"
-                class="flex items-center p-2 text-gray-300 hover:bg-gray-700 hover:text-white rounded-md"
-              >
-                <span class="ml-3">Dashboard</span>
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                class="flex items-center p-2 text-gray-300 hover:bg-gray-700 hover:text-white rounded-md"
-              >
-                <span class="ml-3">Profile</span>
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                class="flex items-center p-2 text-gray-300 hover:bg-gray-700 hover:text-white rounded-md"
-              >
-                <span class="ml-3">Settings</span>
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                class="flex items-center p-2 text-gray-300 hover:bg-gray-700 hover:text-white rounded-md"
-              >
-                <span class="ml-3">Logout</span>
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </div> */}
+      
 
-  {/* Main Content */}
-  <div class="flex-1 p-6 bg-gray-100">
-    <h1 class="text-3xl font-bold mb-4">Profile</h1>
-    <div class="flex items-center p-4 bg-white rounded-lg shadow-md justify-between">
-        <div class="flex flex-row gap-3">
-    <div
-          className="w-16 h-16 rounded-full overflow-hidden bg-gray-200 cursor-pointer"
-          onClick={() => setIsModalOpen(true)}
-        >
-    <img src={image} alt="" class="w-16 h-16 rounded-full mr-4"></img>
-    </div>
-    
-    <div>
-      <h2 class="text-xl font-semibold">Abrar Shaikh</h2>
-      <p class="text-gray-500">Active</p>
-    </div>
-    </div>
-    {/* <div class="flex j">
-    <button class="bg-blue-500 w-20 h-10 rounded-md" onClick={()=>setIsAccessModalOpen(true)}>Access</button>
-    </div> */}
-    </div>
-    {/* <!-- Horizontal Divider --> */}
-  <hr class="border-t border-gray-300 my-4" />
-  
-   <div className='mx-auto'>
-          
-          <ul className='flex  border-b mb-4 gap-4'>
-            <li className=' text-center w-1/2' role='presentation'>
+      {/* Main Content */}
+      <div class="flex-1 p-6 bg-gray-100">
+        <h1 class="text-3xl font-bold mb-4">Profile</h1>
+        <div class="flex items-center p-4 bg-white rounded-lg shadow-md justify-between">
+          <div class="flex flex-row gap-3">
+            <div
+              className="w-16 h-16 rounded-full overflow-hidden bg-gray-200 cursor-pointer"
+              onClick={() => setIsModalOpen(true)}>
+              <img
+                src={image}
+                alt=""
+                class="w-16 h-16 rounded-full mr-4"></img>
+            </div>
+
+            <div>
+              <h2 class="text-xl font-semibold">Abrar Shaikh</h2>
+              <p class="text-gray-500">Active</p>
+            </div>
+          </div>
+          <div class="flex j">
             <button
-            className={`text-md py-2 w-full hover:bg-gray-100  ${
-              activeTab === "tab-1" ? "border-b-4 border-blue-500 text-blue-600" : ""
-            }` } onClick={()=>setActiveTab("tab-1")}>Bio
+              class="bg-blue-500 w-20 h-10 rounded-md"
+              onClick={() => setIsAccessModalOpen(true)}>
+              Access
             </button>
+          </div>
+        </div>
+        {/* <!-- Horizontal Divider --> */}
+        <hr class="border-t border-gray-300 my-4" />
+
+        <div className="mx-auto">
+          <ul className="flex  border-b mb-4 gap-4">
+            <li className=" text-center w-1/2" role="presentation">
+              <button
+                className={`text-md py-2 w-full hover:bg-gray-100  ${
+                  activeTab === "tab-1"
+                    ? "border-b-4 border-blue-500 text-blue-600"
+                    : ""
+                }`}
+                onClick={() => setActiveTab("tab-1")}>
+                Profile
+              </button>
             </li>
-            <li className=' text-center w-1/2' role='presentation'>
-            <button
-           className={`text-md py-2 w-full hover:bg-gray-100 ${
-            activeTab === "tab-2" ? "border-b-4 border-blue-500 text-blue-600" : ""
-          }`} onClick={()=>setActiveTab("tab-2")}>Access
-            </button>
+            <li className=" text-center w-1/2" role="presentation">
+              <button
+                className={`text-md py-2 w-full hover:bg-gray-100 ${
+                  activeTab === "tab-2"
+                    ? "border-b-4 border-blue-500 text-blue-600"
+                    : ""
+                }`}
+                onClick={() => setActiveTab("tab-2")}>
+                Access
+              </button>
             </li>
           </ul>
           <div className="tab-content">
@@ -168,21 +141,19 @@ const Profile = () => {
               <div
                 className="tab-pane fade show active"
                 id="tab-1"
-                role="tabpanel"
-              >
+                role="tabpanel">
                 <div
                   className="flex flex-col  mt-3"
                   data-aos="fade-up"
-                  data-aos-delay="100"
-                >
+                  data-aos-delay="100">
                   <EmployeeProfile
                     data={{
                       name: "Abrar Shaikh",
                       role: "Manager",
-                      designation: "Top Management",
+                      designation: "TopManagement",
                       email: "abrar.shaikh@example.com",
                       company: "ABC Corp",
-                      department: "Top Management",
+                      department: "TopManagement",
                       phone: "+1234567890",
                       address: "123 Main St, Cityville",
                       dateOfBirth: "1975-02-15",
@@ -196,8 +167,7 @@ const Profile = () => {
                 <div
                   className="flex flex-col  mt-3"
                   data-aos="fade-up"
-                  data-aos-delay="100"
-                >
+                  data-aos-delay="100">
                   {/* Tab 2 Content */}
                   <AccessHierarchyTab />
                 </div>
@@ -221,8 +191,7 @@ const Profile = () => {
             />
             <button
               onClick={() => setIsModalOpen(false)}
-              className="mt-4 w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600"
-            >
+              className="mt-4 w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600">
               Close
             </button>
           </div>
@@ -238,16 +207,14 @@ const Profile = () => {
                 <li className="w-1/2 text-center" role="presentation">
                   <button
                     className="text-lg py-2 w-full font-semibold hover:bg-gray-100 focus:bg-gray-200 "
-                    onClick={() => setActiveTab("tab-1")}
-                  >
+                    onClick={() => setActiveTab("tab-1")}>
                     PROFILE
                   </button>
                 </li>
                 <li className="w-1/2 text-center" role="presentation">
                   <button
                     className="text-lg py-2 w-full font-semibold hover:bg-gray-100 focus:bg-gray-200 "
-                    onClick={() => setActiveTab("tab-2")}
-                  >
+                    onClick={() => setActiveTab("tab-2")}>
                     ACCESS
                   </button>
                 </li>
@@ -257,13 +224,11 @@ const Profile = () => {
                   <div
                     className="tab-pane fade show active"
                     id="tab-1"
-                    role="tabpanel"
-                  >
+                    role="tabpanel">
                     <div
                       className="flex flex-col items-center justify-center mt-3"
                       data-aos="fade-up"
-                      data-aos-delay="100"
-                    >
+                      data-aos-delay="100">
                       <EmployeeProfile />
                     </div>
                   </div>
@@ -272,13 +237,11 @@ const Profile = () => {
                   <div
                     className="tab-pane fade show"
                     id="tab-2"
-                    role="tabpanel"
-                  >
+                    role="tabpanel">
                     <div
                       className="flex flex-col items-center justify-center mt-3"
                       data-aos="fade-up"
-                      data-aos-delay="100"
-                    >
+                      data-aos-delay="100">
                       {/* Tab 2 Content */}
                       <p>Your Apply Now content here...</p>
                     </div>
@@ -289,8 +252,7 @@ const Profile = () => {
 
             <button
               onClick={() => setIsAccessModalOpen(false)}
-              className="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600"
-            >
+              className="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600">
               Save & Close
             </button>
           </div>
@@ -305,8 +267,7 @@ const Profile = () => {
             </h3>
             <button
               onClick={() => setIsUpdateModalOpen(false)}
-              className="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600"
-            >
+              className="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600">
               Save & Close
             </button>
           </div>
