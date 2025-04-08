@@ -1,0 +1,133 @@
+.dashboard-container-home{
+    border: 0.5px solid gray;
+    /* border-radius: 20px; */
+}
+
+.dashboard-home-container div{
+    padding: 2rem;
+}
+
+.dashboard-home-card{
+    background-color: 'white';
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1 ;
+    text-align: center;
+    color: #333,
+}
+.dashboard-home-image{
+    display: flex   ;
+    width: fit-content;
+    padding: 2rem;
+    background-image: url(../../assets/batman.png);
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+.dashboard-home-image img{
+    background-image: url(../../assets/spiderman.png);
+    width: fit-content;
+}
+
+
+.dashboard-booking-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.dashboard-booking{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: fit-content;
+    /* overflow-y: hidden; */
+}
+.dashboard-booking h1{
+    color: black;
+    text-align: left;
+}
+.dashboard-booking img{
+    width: 100%;
+    object-fit: cover;
+    object-position: bottom;
+}
+/* ticket */
+.dashboard-ticket-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.dashboard-ticket{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: fit-content;
+    /* overflow-y: hidden; */
+}
+.dashboard-ticket h1{
+    color: black;
+    text-align: left;
+}
+.dashboard-ticket img{
+    width: 100%;
+    object-fit: cover;
+    object-position: bottom;
+}
+
+/* hr */
+.dashboard-hr-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.dashboard-hr{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: fit-content;
+    /* overflow-y: hidden; */
+}
+.dashboard-hr h1{
+    color: black;
+    text-align: left;
+}
+.dashboard-hr img{
+    width: 100%;
+    object-fit: cover;
+    object-position: bottom;
+}
+/* asset */
+.dashboard-asset-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.dashboard-asset{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: fit-content;
+    /* overflow-y: hidden; */
+}
+.dashboard-asset h1{
+    color: black;
+    text-align: left;
+}
+.dashboard-asset img{
+    width: 100%;
+    object-fit: cover;
+    object-position: bottom;
+}

@@ -1,0 +1,14 @@
+.template1-container, .template2-container {
+    display: flex;
+  }
+  
+  
+  .content {
+    flex-grow: 1;
+    padding: 20px;
+  }
+  
+  button {
+    margin-top: 10px;
+  }
+  

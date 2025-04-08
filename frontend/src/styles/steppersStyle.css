@@ -1,0 +1,19 @@
+/* steppersStyle.css */
+
+.slider-container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.slider-item {
+  background: #ddd;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid black
+}
+.slider-item .slick-slide.slick-center {
+  background: red;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid black
+}
