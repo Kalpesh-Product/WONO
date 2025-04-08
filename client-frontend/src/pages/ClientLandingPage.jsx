@@ -953,13 +953,13 @@ const ClientLandingPage = () => {
 
         {/* Quick Launch Section */}
 
-        {user.role === "Master Admin" ||
+        {/* {user.role === "Master Admin" ||
         user.role === "Super Admin" ||
         user.role === "Admin" ? (
           <h2 className="text-2xl md:text-3xl font-bold mb-8 lg:ps-[7rem] uppercase">
             Quick launch
           </h2>
-        ) : null}
+        ) : null} */}
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-8 mb-12">
           {/* <CardNS title="Tasks" iconSrc={tasksImage} />
           <CardNS title="Ticket" iconSrc={ticketsImage} />
