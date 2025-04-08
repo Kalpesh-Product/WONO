@@ -214,7 +214,7 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
             </div>
           ) : (
             <div className="custom-navbar-buttons">
-              <Link
+              {/* <Link
                 onClick={() => {
                   changeActiveTab(null);
                   window.scrollTo({ top: 0, behavior: "instant" });
@@ -222,7 +222,16 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
                 to="/login"
                 className="login-button">
                 SIGN IN
-              </Link>
+              </Link> */}
+              <a
+                href="https://wonofe.vercel.app/"
+                className="login-button"
+                onClick={() => {
+                  changeActiveTab(null);
+                  window.scrollTo({ top: 0, behavior: "instant" });
+                }}>
+                SIGN IN
+              </a>
               <Link
                 onClick={() => {
                   changeActiveTab(null);
@@ -318,9 +327,15 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
             </div>
           ) : (
             <>
-              <Link to="/login" onClick={handleClose} className="login-button">
+              {/* <Link to="/login" onClick={handleClose} className="login-button">
                 SIGN IN
-              </Link>
+              </Link> */}
+              <a
+                href="https://wonofe.vercel.app/"
+                className="login-button"
+                onClick={handleClose}>
+                SIGN IN
+              </a>
               <button className="register-button" onClick={handleRegister}>
                 SIGN UP
               </button>
