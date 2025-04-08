@@ -1,0 +1,35 @@
+/* 
+.navbarStyling {
+    background-color: black;
+    color: white;
+}
+
+.navbarDivStyling {
+    background-color: black;
+    color: white;
+}
+
+.navbar-brand {
+    color: white;
+}
+
+.navbar-nav {
+    color: white;
+}
+.navbar-toggler {
+    color: white;
+}
+
+.navbar-toggler-icon {
+    color: white !important;
+}
+*/
+
+.bg-body-tertiary {
+    background-color: black !important;
+}
+
+.biznestLogoDimensions {
+    width: 70px;
+    border-radius: 2px;
+}

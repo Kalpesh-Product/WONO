@@ -1,0 +1,418 @@
+@font-face {
+    font-family: Popins-Semibold;
+    src: url('../assets/WONO_images/img/fonts/Poppins-SemiBold.ttf');
+}
+
+@font-face {
+    font-family: Popins-Regular;
+    src: url('../assets/WONO_images/img/fonts/Poppins-Regular.ttf');
+}
+
+/* .login-section {
+    height: 60vh;
+} */
+
+/* .outer-login {
+    height: 60vh;
+} */
+
+.no-border {
+    border: none;
+    outline: none;
+    /* Optional: Removes the outline when the input is focused */
+}
+
+.no-border:focus {
+    outline: none;
+    /* Optional: Keeps the input borderless when focused */
+}
+
+.poppinsRegular {
+    font-family: Popins-Regular;
+}
+
+.poppinsSemibold {
+    font-family: Popins-Semibold;
+}
+
+
+
+
+
+
+.divideFiftyPercent {
+    display: flex;
+    flex-direction: column;
+}
+
+.CenterElement {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hrStyling {
+    width: 80%;
+
+}
+
+.zeroHeight {
+    height: 0;
+}
+
+.loginDividingContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.vertical-line {
+    /* width: 0.1rem; */
+    width: 0.5px;
+
+    /* width: 1.1rem; */
+    /* Thickness of the line */
+    background-color: rgb(110, 110, 110);
+    /* Color of the line */
+    /* height: 100%; */
+    height: 6rem;
+    /* width: 100%; */
+    /* Full height */
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+@supports (-webkit-appearance: none) {
+    .vertical-line {
+        /* width: 0.1rem; */
+        width: 1.2px;
+
+        /* width: 1.1rem; */
+        /* Thickness of the line */
+        background-color: rgb(110, 110, 110);
+        /* Color of the line */
+        /* height: 100%; */
+        height: 6rem;
+        /* width: 100%; */
+        /* Full height */
+
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+}
+
+.fullHeight {
+    height: 100%;
+}
+
+.hrHeight {
+    height: 1rem;
+}
+
+.lineSideMargin {
+    /* margin-left: 6rem; */
+    margin-left: auto;
+    /* margin-right: 6rem; */
+    margin-right: auto;
+}
+
+.loginButtonStyling {
+    /* background-color: white; */
+    background-color: rgb(0, 0, 0);
+    /* color: rgb(0, 0, 0); */
+    color: white;
+    padding: 0.5rem 2rem;
+    border-radius: 30px;
+    margin: 0;
+    /* border: 0.1px solid rgb(10, 169, 239); */
+    border: 0.1px solid rgb(181, 181, 181);
+}
+
+.loginLeftContainer {
+    height: 100%;
+    width: 20rem;
+}
+
+.loginRightContainer {
+    height: 100%;
+    width: 20rem;
+}
+
+.LoginMiddleContainer {
+    margin-left: 6rem;
+    margin-right: 6rem;
+}
+
+.loginWithSection {
+    height: 100%;
+    width: 20rem;
+}
+
+.loginWithIconBox {
+    width: 4rem;
+    height: 3rem;
+    /* border: 1px solid black; */
+}
+
+/* .loginWithGoogleIconBox {
+    border: 1px solid #4285F4;
+}
+
+.loginWithFacebookIconBox {
+    border: 1px solid #3b5998;
+}
+
+.loginWithEmailIconBox {
+    border: 1px solid #ea4335;
+} */
+
+.loginWithBox {
+    width: 20rem;
+    height: 3.5rem;
+    /* border: 1px solid black; */
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.loginWithGoogleBox {
+    border: 1px solid #4285F4;
+}
+
+.loginWithFacebookBox {
+    border: 1px solid #3b5998;
+}
+
+.loginWithEmailBox {
+    border: 1px solid #ea4335;
+}
+
+.centerElement {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imageDimensions {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.googleBlue {
+    background-color: #4285F4;
+}
+
+.facebookColor {
+    background-color: #3b5998;
+}
+
+.emailColor {
+    background-color: #ea4335;
+}
+
+.LoginWithGoogleText {
+    background-color: #4285F4;
+    height: 100%;
+    color: white;
+}
+
+.LoginWithFacebookText {
+    background-color: #3b5998;
+    height: 100%;
+    color: white;
+}
+
+.LoginWithEmailText {
+    background-color: #ea4335;
+    height: 100%;
+    color: white;
+}
+
+.wono-blue-text {
+    color: rgb(10, 169, 239);
+}
+
+
+.phoneDivider {
+    display: none;
+}
+
+.phoneDividerContainer {
+    display: none;
+}
+
+.login-empty-padding {
+    padding-bottom: 13rem;
+}
+
+/* Only Large Screen */
+
+@media (min-width: 1061px) {
+    .LoginMiddleContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* .loginBottomPadding {
+        padding-bottom: 4rem;
+    } */
+
+}
+
+
+/* TAB & MOBILE VIEW */
+/* Media query for phone view (max-width: 768px or smaller) */
+/* @media (max-width: 768px) { */
+/* @media (max-width: 1020px) { */
+@media (max-width: 1060px) {
+
+    /* img,
+        div,
+        section {
+            max-width: 100%;
+            overflow-x: hidden;
+        } */
+
+    .loginDividingContainer {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .LoginMiddleContainer {
+        display: none;
+    }
+
+    .phoneDivider {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .phoneDividerContainer {
+        width: 90%;
+        display: block;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    .greyHorizontalLine {
+        background-color: gray;
+    }
+
+    .line-height {
+        height: 0.1px;
+        width: 80%;
+    }
+
+    .centerInPhone {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* .loginTopPadding {
+        padding-top: 4rem;
+    }
+
+    .loginBottomPadding {
+        padding-bottom: 4rem;
+     
+    } */
+}
+
+
+/* Display mobile layout on smaller screens */
+@media (max-width: 325px) {
+    /* .mobile-screen {
+        display: block;
+     
+    } */
+
+    .shrink-container {
+        transform: scale(0.8);
+        /* Shrinks to 80% */
+        /* transform-origin: top left; */
+        /* Adjust origin if needed */
+    }
+
+
+}
+
+
+
+/* @media (max-width:768px) {
+    .loginBottomPadding {
+        padding-bottom: 4rem;
+        height: 100%;
+    }
+} */
+
+
+
+/* MEDIA QUERIES FOR HEIGHT */
+/* Screen height greater than 800px */
+@media (min-height: 1900px) {
+    .loginTopPadding {
+        /* padding-top: 8rem; */
+        padding-top: 36rem;
+    }
+
+    .loginBottomPadding {
+        /* padding-bottom: 8rem; */
+        padding-bottom: 36rem;
+    }
+}
+
+/* Screen height between 600px and 800px */
+@media (min-height: 1576px) and (max-height: 1900px) {
+    .loginTopPadding {
+        /* padding-top: 8rem; */
+        padding-top: 26rem;
+    }
+
+    .loginBottomPadding {
+        /* padding-bottom: 8rem; */
+        padding-bottom: 26rem;
+    }
+}
+
+/* Screen height between 600px and 800px */
+@media (min-height: 1365px) and (max-height: 1575px) {
+    .loginTopPadding {
+        /* padding-top: 8rem; */
+        padding-top: 19rem;
+    }
+
+    .loginBottomPadding {
+        /* padding-bottom: 8rem; */
+        padding-bottom: 19rem;
+    }
+}
+
+/* Screen height between 600px and 800px */
+@media (min-height: 900px) and (max-height: 1365px) {
+    .loginTopPadding {
+        /* padding-top: 8rem; */
+        padding-top: 10rem;
+    }
+
+    .loginBottomPadding {
+        /* padding-bottom: 8rem; */
+        padding-bottom: 10rem;
+    }
+}
+
+/* Screen height less than 600px */
+@media (max-height: 900px) {
+    .loginTopPadding {
+        /* padding-top: 8rem; */
+        padding-top: 4rem;
+    }
+
+    .loginBottomPadding {
+        /* padding-bottom: 8rem; */
+        padding-bottom: 4rem;
+    }
+}

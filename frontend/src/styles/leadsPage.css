@@ -1,0 +1,949 @@
+    /* img,
+    div,
+    section {
+        max-width: 100%;
+        overflow-x: hidden;
+    } */
+
+    /* .PPPP {
+        padding-left: 7rem !important;
+        padding-right: 7rem !important;
+    } */
+
+    ::-webkit-scrollbar {
+        width: 0px;
+        /* Remove the scrollbar by setting its width to 0 */
+    }
+
+    .Tickmark-text img {
+        padding-right: 0.3rem;
+    }
+
+    .wonoColor {
+        color: #0AA9EF;
+    }
+
+    @media (min-width: 3070px) {
+        .biggestText {
+            text-transform: uppercase;
+            font-size: 5.8rem;
+        }
+    }
+
+
+
+    @media (min-width: 1439px) {
+        .theSpecialRow {
+            padding-left: 0.5rem;
+        }
+
+        .SpecialPaddingX {
+            padding-left: 1rem;
+        }
+
+        .PPPP {
+            padding-left: 7rem !important;
+            padding-right: 7rem !important;
+        }
+    }
+
+
+
+    .pFontAdjustment {
+        font-size: 1.2rem;
+    }
+
+    .Tickmark-text {
+        /* display: flex; */
+        /* align-items: center; */
+        /* margin-bottom: 6px; */
+        /* color: #363636; */
+        /* font-size: unset; */
+        font-size: 1.1rem;
+        /* font-family: Popins-Regular; */
+    }
+
+    .WidthHeight1 {
+        max-width: 7.5rem;
+        /* 120px / 16 */
+        max-height: 7.5rem;
+        /* 120px / 16 */
+    }
+
+    .WidthHeight2 {
+        width: 7.5rem;
+        /* 120px / 16 */
+        max-height: 7.5rem;
+        /* 120px / 16 */
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .smallerImageWidthHeight {
+        max-height: 6.25rem;
+
+        max-width: 6.25rem;
+
+    }
+
+    .WidthHeight3 {
+        max-width: 13rem;
+        max-height: 7.5rem;
+    }
+
+    .widthHeight4 {
+        max-width: 8.5rem;
+
+        max-height: 8.5rem;
+
+    }
+
+    .widthHeight5 {
+        max-width: 8.5rem;
+
+        max-height: 8.5rem;
+    }
+
+    .flexForCards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 1.25rem;
+        /* 20px / 16 */
+    }
+
+    .fontSizeCompleteView {
+        font-size: 5.625rem;
+        /* 90px / 16 */
+    }
+
+    .individual-card {
+        padding: 0.625rem 0rem;
+        /* 10px / 16 */
+        width: calc(33.33% - 1.25rem);
+        /* 20px / 16 */
+        margin-bottom: 0.625rem;
+        /* 10px / 16 */
+    }
+
+    .individual-card-front {
+        padding-left: 0;
+    }
+
+    .paddingRight0 {
+        padding-right: 0rem !important;
+    }
+
+    .leadsCtafontSize {
+        font-size: 2.75rem;
+        /* 44px / 16 */
+    }
+
+    /* .leadsCtaTextFont {
+    font-size: 2.25rem !important;
+  
+} */
+
+    .automatedPlatformFontSize {
+        /* font-size: 1.125rem; */
+        font-size: 1.28rem;
+        /* 18px / 16 */
+    }
+
+    .automatedPlatformPadding {
+        padding-top: 1.875rem;
+        /* 30px / 16 */
+    }
+
+    /* .FFFF {
+    font-size: 2.6rem !important;
+    line-height: 1.4;
+} */
+
+    .spaceBetweenSections {
+        padding-top: 1.875rem;
+        /* 30px / 16 */
+        padding-bottom: 1.875rem;
+        /* 30px / 16 */
+    }
+
+    .marginBetweenSections {
+        margin-top: 1.875rem;
+        /* 30px / 16 */
+        margin-bottom: 1.875rem;
+        /* 30px / 16 */
+    }
+
+    .topSpaceBetweenSections {
+        padding-top: 1.875rem;
+        /* 30px / 16 */
+    }
+
+    .bottomSpaceBetweenSections {
+        padding-bottom: 1.875rem;
+        /* 30px / 16 */
+    }
+
+    .googleSheetsHeading {
+        font-size: 2.75rem;
+        /* 44px / 16 */
+    }
+
+    .ROIFontSize {
+        font-size: 4rem;
+        /* 64px / 16 */
+    }
+
+    .CenterElement {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hrStyling {
+        width: 80%;
+
+    }
+
+    .zeroHeight {
+        height: 0;
+    }
+
+
+    .individual-card-last-row-no-bottom-spacing {
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    .checklistFont {
+        font-size: 1.125rem;
+        /* 18px / 16 */
+    }
+
+    .extraTopSpace30 {
+        padding-top: 1.875rem;
+        /* 30px / 16 */
+    }
+
+    .extraBottomSpaceOurCoreFocus {
+        /* padding-bottom: 4.6875rem; */
+        padding-bottom: 4rem;
+        /* 75px / 16 */
+    }
+
+    .greyishShade {
+        background-color: rgb(240, 240, 240);
+    }
+
+    .topPaddingAboveFirstSection {
+        padding-top: 4rem;
+    }
+
+    .bottomPaddingBelowFirstSection {
+        padding-bottom: 4rem;
+    }
+
+
+    .topPaddingForSections {
+        /* padding-top: 6rem; */
+        padding-top: 4rem;
+    }
+
+    .bottomPaddingForSections {
+        /* padding-bottom: 6rem; */
+        padding-bottom: 2rem;
+    }
+
+    .topPaddingInsideSections {
+        padding-top: 2rem;
+    }
+
+    .bottomPaddingInsideSections {
+        padding-bottom: 2rem;
+    }
+
+    .bannerTopPadding {
+        padding-top: 4rem;
+    }
+
+    .bannerBottomPadding {
+        padding-bottom: 4rem;
+    }
+
+    @media (min-width: 1137px) {
+
+
+        .PPPP {
+            padding-left: 7rem !important;
+            padding-right: 7rem !important;
+        }
+    }
+
+    @media (min-width: 1025px) {
+        .FFFF {
+            font-size: 2.6rem !important;
+            line-height: 1.4;
+        }
+
+        .leadsCtaTextFont {
+            font-size: 2.25rem !important;
+
+        }
+    }
+
+    .leads-heading-section {
+        padding: 4rem 7.5rem;
+    }
+
+    .organic-leads-section {
+        padding: 4rem 7.7rem 2rem;
+    }
+
+    .google-sheets-section {
+        padding: 4rem 8rem 2rem;
+    }
+
+    .marketing-section {
+        padding: 4rem 7.7rem 2rem;
+    }
+
+    .finer-points-section {
+        padding: 2rem 6rem 2rem 6rem;
+    }
+
+    @media (max-width: 1181px) {
+        .PPPP {
+            padding: 3rem 4rem;
+        }
+    }
+
+    /* Media query for tablet view (max-width: 1024px or smaller) */
+    @media (max-width: 1024px) {
+        .individual-card {
+            width: 48%;
+            margin-bottom: 1rem;
+        }
+
+        .flexForCards {
+            justify-content: space-between;
+        }
+
+        .fontSizeCompleteView {
+            font-size: 4rem;
+        }
+
+        .leadsCtafontSize {
+            font-size: 2rem;
+        }
+
+        .leadsCtaTextFont {
+            font-size: 1.25rem;
+        }
+
+        .automatedPlatformFontSize {
+            font-size: 1rem;
+        }
+
+        .googleSheetsHeading {
+            font-size: 2rem;
+        }
+
+        .ROIFontSize {
+            font-size: 3rem;
+        }
+
+        .FFFF {
+            font-size: 2rem;
+        }
+
+        .checklistFont {
+            font-size: 1rem;
+        }
+
+        .leads-databseImage {
+            display: none;
+        }
+
+        .leads-heading-section {
+            padding: 3rem 4rem;
+        }
+
+        .organic-leads-section {
+            padding: 3rem 4rem;
+        }
+
+        .google-sheets-section {
+            padding: 3rem 4rem;
+        }
+
+        .marketing-section {
+            padding: 3rem 4rem;
+        }
+
+        .finer-points-section {
+            padding: 3rem 4rem;
+        }
+
+        .better-roi-section {
+            padding: 3rem 4rem;
+        }
+
+        .complete-view-section {
+            padding: 3rem 4rem;
+        }
+
+        .bannerPaddingSmall {
+            padding: 2rem 3rem !important;
+        }
+
+        .last-section h2 {
+            /* font-size: 2rem; */
+            font-size: 3.71rem;
+        }
+    }
+
+    /* MOBILE VIEW */
+    /* Media query for phone view (max-width: 768px or smaller) */
+    /* @media (max-width: 768px) { */
+    @media (max-width: 820px) {
+
+        /* img,
+    div,
+    section {
+        max-width: 100%;
+        overflow-x: hidden;
+    } */
+
+        .invertDivs {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+
+        .individual-card {
+            width: 100%;
+            margin-bottom: 0;
+        }
+
+        .individual-card p {
+            margin-bottom: 0;
+        }
+
+        .flexForCards {
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .fontSizeCompleteView {
+            font-size: 3rem;
+        }
+
+        .leadsCtafontSize {
+            font-size: 1.75rem;
+        }
+
+        .leadsCtaTextFont {
+            font-size: 1.5rem;
+        }
+
+        .automatedPlatformFontSize {
+            font-size: 0.875rem;
+        }
+
+        .googleSheetsHeading {
+            font-size: 1.75rem;
+        }
+
+        .ROIFontSize {
+            font-size: 2.5rem;
+        }
+
+        .FFFF {
+            font-size: 1.75rem;
+        }
+
+        .checklistFont {
+            font-size: 0.875rem;
+        }
+
+        .WidthHeight1,
+        .WidthHeight2 {
+            max-width: 5rem;
+            max-height: 5rem;
+        }
+
+        .smallerImageWidthHeight {
+            max-height: 4rem;
+            max-width: 4rem;
+        }
+
+        .extraBottomSpaceOurCoreFocus {
+            padding-bottom: 2rem;
+        }
+
+        .spaceBetweenSections,
+        .marginBetweenSections,
+        .topSpaceBetweenSections,
+        .bottomSpaceBetweenSections {
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .paddingRight0 {
+            padding-right: 0 !important;
+        }
+
+        .paddingLeft0 {
+            padding-left: 0 !important;
+        }
+
+        .container {
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+
+        .row {
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        .col-lg-6,
+        .col-lg-4,
+        .col-lg-3,
+        .col-lg-9,
+        .col-lg-12 {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        .organic-leads-images-section {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        .organic-leads-images-section img {
+            width: 100%;
+
+        }
+
+        .OOOO {
+            margin-top: 0;
+            margin-bottom: 0;
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+
+        .image-grid {
+            flex-direction: column;
+        }
+
+        .img-row-1,
+        .img-row-2,
+        .img-row-3 {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .img-row-1 div,
+        .img-row-2 div,
+        .img-row-3 div {
+            margin-bottom: 1rem;
+        }
+
+        .marketing-header {
+            text-align: center;
+        }
+
+        .marketing-header h2 {
+            font-size: 2rem;
+        }
+
+        .marketing-header p {
+            font-size: 1rem;
+        }
+
+        .marketing-body {
+            /* text-align: center; */
+            text-align: left;
+        }
+
+        .better-roi-section,
+        .complete-view-section,
+        .finer-points-section {
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+
+        .better-roi-section img,
+        .complete-view-section img,
+        .finer-points-section img {
+            width: 100%;
+        }
+
+        .better-roi-section .col-lg-6,
+        .complete-view-section .col-lg-6,
+        .finer-points-section .col-lg-6 {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        .better-roi-section .col-lg-6.text-start,
+        .complete-view-section .col-lg-6.text-start,
+        .finer-points-section .col-lg-6.text-start {
+            text-align: center;
+        }
+
+        .better-roi-section .col-lg-6.text-start p,
+        .complete-view-section .col-lg-6.text-start p,
+        .finer-points-section .col-lg-6.text-start p {
+            /* padding-left: 1rem; */
+            padding-left: 0;
+            padding-right: 1rem;
+        }
+
+        .last-section {
+            text-align: center;
+        }
+
+        .last-section h2 {
+            font-size: 2.8rem;
+            /* font-size: 3.6rem; */
+        }
+
+        .last-section p {
+            font-size: 1.25rem;
+        }
+
+        .last-section .partner-button-space {
+            text-align: center;
+        }
+
+        .Tickmark-text {
+            font-size: 14px;
+        }
+
+        .leads-heading-section {
+            padding: 2rem;
+        }
+
+        .organic-leads-section {
+            padding: 2rem;
+        }
+
+        .google-sheets-section {
+            padding: 2rem;
+        }
+
+        .marketing-section {
+            padding: 2rem;
+        }
+
+        .finer-points-section {
+            padding: 1rem;
+        }
+
+        .pFontAdjustment {
+            padding-left: 0;
+        }
+
+        .PPPP {
+            padding-left: 2rem !important;
+            padding-right: 2rem !important;
+        }
+
+
+    }
+
+    @media (max-width: 768px) {
+
+        /* img,
+    div,
+    section {
+        max-width: 100%;
+        overflow-x: hidden;
+    } */
+
+        .invertDivs {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+
+        .individual-card {
+            width: 100%;
+            margin-bottom: 0;
+        }
+
+        .individual-card p {
+            margin-bottom: 0;
+        }
+
+        .flexForCards {
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .fontSizeCompleteView {
+            font-size: 3rem;
+        }
+
+        .leadsCtafontSize {
+            font-size: 1.75rem;
+        }
+
+        .leadsCtaTextFont {
+            font-size: 1.5rem;
+        }
+
+        .automatedPlatformFontSize {
+            font-size: 0.875rem;
+        }
+
+        .googleSheetsHeading {
+            font-size: 1.75rem;
+        }
+
+        .ROIFontSize {
+            font-size: 2.5rem;
+        }
+
+        .FFFF {
+            font-size: 1.75rem;
+        }
+
+        .checklistFont {
+            font-size: 0.875rem;
+        }
+
+        .WidthHeight1,
+        .WidthHeight2 {
+            max-width: 5rem;
+            max-height: 5rem;
+        }
+
+        .smallerImageWidthHeight {
+            max-height: 4rem;
+            max-width: 4rem;
+        }
+
+        .extraBottomSpaceOurCoreFocus {
+            padding-bottom: 2rem;
+        }
+
+        .spaceBetweenSections,
+        .marginBetweenSections,
+        .topSpaceBetweenSections,
+        .bottomSpaceBetweenSections {
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .paddingRight0 {
+            padding-right: 0 !important;
+        }
+
+        .paddingLeft0 {
+            padding-left: 0 !important;
+        }
+
+        .container {
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+
+        .row {
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        .col-lg-6,
+        .col-lg-4,
+        .col-lg-3,
+        .col-lg-9,
+        .col-lg-12 {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        .organic-leads-images-section {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        .organic-leads-images-section img {
+            width: 100%;
+
+        }
+
+        .OOOO {
+            margin-top: 0;
+            margin-bottom: 0;
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+
+        .image-grid {
+            flex-direction: column;
+        }
+
+        .img-row-1,
+        .img-row-2,
+        .img-row-3 {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .img-row-1 div,
+        .img-row-2 div,
+        .img-row-3 div {
+            margin-bottom: 1rem;
+        }
+
+        .marketing-header {
+            text-align: center;
+        }
+
+        .marketing-header h2 {
+            font-size: 2rem;
+        }
+
+        .marketing-header p {
+            font-size: 1rem;
+        }
+
+        .marketing-body {
+            /* text-align: center; */
+            text-align: left;
+        }
+
+        .better-roi-section,
+        .complete-view-section,
+        .finer-points-section {
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+
+        .better-roi-section img,
+        .complete-view-section img,
+        .finer-points-section img {
+            width: 100%;
+        }
+
+        .better-roi-section .col-lg-6,
+        .complete-view-section .col-lg-6,
+        .finer-points-section .col-lg-6 {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        .better-roi-section .col-lg-6.text-start,
+        .complete-view-section .col-lg-6.text-start,
+        .finer-points-section .col-lg-6.text-start {
+            text-align: center;
+        }
+
+        .better-roi-section .col-lg-6.text-start p,
+        .complete-view-section .col-lg-6.text-start p,
+        .finer-points-section .col-lg-6.text-start p {
+            /* padding-left: 1rem; */
+            padding-left: 0;
+            padding-right: 1rem;
+        }
+
+        .last-section {
+            text-align: center;
+        }
+
+        .last-section h2 {
+            font-size: 2.69rem;
+            /* font-size: 3.6rem; */
+        }
+
+        .last-section p {
+            font-size: 1.25rem;
+        }
+
+        .last-section .partner-button-space {
+            text-align: center;
+        }
+
+        .Tickmark-text {
+            font-size: 14px;
+        }
+
+        .leads-heading-section {
+            padding: 2rem;
+        }
+
+        .organic-leads-section {
+            padding: 2rem;
+        }
+
+        .google-sheets-section {
+            padding: 2rem;
+        }
+
+        .marketing-section {
+            padding: 2rem;
+        }
+
+        .finer-points-section {
+            padding: 1rem;
+        }
+
+        .pFontAdjustment {
+            padding-left: 0;
+        }
+
+        .PPPP {
+            padding-left: 2rem !important;
+            padding-right: 2rem !important;
+        }
+
+
+    }
+
+    @media (max-width:426px) {
+        .last-section h2 {
+            /* font-size: 2rem; */
+            font-size: 1.8rem;
+        }
+
+        .bannerTopPadding {
+            padding-top: 2rem;
+        }
+
+        .bannerBottomPadding {
+            padding-bottom: 2rem;
+        }
+
+        .PPPP {
+            padding-left: 2rem !important;
+            padding-right: 2rem !important;
+        }
+
+        .pFontAdjustment {
+            font-size: 1.2rem;
+            /* text-align: justify; */
+        }
+
+        .leads-image-section {
+            width: 100%;
+            height: 300px;
+        }
+
+        .leads-image-section img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .bannerPaddingSmall {
+            padding: 2rem !important;
+        }
+    }

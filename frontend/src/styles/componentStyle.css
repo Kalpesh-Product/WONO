@@ -1,0 +1,539 @@
+/* navbar styles */
+@font-face {
+  font-family: Popins-Regular;
+  src: url('../assets/WONO_images/img/fonts/Poppins-Regular.ttf');
+}
+
+@font-face {
+  font-family: Popins-Black;
+  src: url('../assets/WONO_images/img/fonts/Poppins-Black.ttf');
+}
+
+.Title-font {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+@media (max-width:426px) {
+  .Title-font {
+    font-size: 1.9rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 2rem 0 !important;
+  }
+}
+
+.spinner-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  /* Ensure it's on top of everything */
+  background-color: rgba(255, 255, 255, 0.8);
+  /* Optional: translucent background */
+  width: 100vw;
+  height: 100vh;
+}
+
+
+.custom-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: black;
+  color: #fff;
+  font-family: Popins-Regular;
+  font-weight: 500;
+  /* New changes */
+  opacity: 1;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 6;
+  width: 100%;
+}
+
+.fontPoppinsRegular {
+  font-family: Popins-Regular !important;
+}
+
+.custom-navbar-logo {
+  padding: 0.5rem 0.5rem 0.5rem 6rem;
+}
+
+.custom-navbar-logo a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.custom-navbar-menu {
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+
+.custom-navbar-menu a {
+  display: flex;
+  padding: 10px 20px;
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease, font-family 0.3s ease;
+  position: relative;
+  gap: 20px;
+  font-size: 15px;
+}
+
+.custom-navbar-buttons {
+  display: flex;
+  gap: 20px;
+  padding-right: 6rem;
+}
+
+.custom-logout {
+  gap: 20px;
+  padding-right: 6rem;
+}
+
+/* Changes */
+
+.nav-tabss a::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #0AA9EF;
+  /* Color of the underline */
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-tabss a:hover {
+  font-family: Popins-Black;
+}
+
+/* Changes */
+.nav-tabss a:hover::before {
+  visibility: visible;
+  width: 100%;
+}
+
+/* Changes */
+.nav-tabss a.active::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #0AA9EF;
+  /* Color of the underline */
+}
+
+.custom-navbar-menu-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* Offcanvas styles */
+.custom-offcanvas {
+  background-color: #333;
+  /* Background color of the Offcanvas */
+  color: #fff;
+  /* Text color */
+}
+
+.custom-offcanvas .offcanvas-header {
+  background-color: black;
+  /* Background color of the Offcanvas header */
+  border-bottom: 1px solid #444;
+  /* Border below the header */
+}
+
+.custom-offcanvas .offcanvas-title {
+  color: white;
+  display: none;
+  /* Title color */
+}
+
+.custom-offcanvas .offcanvas-body {
+  padding: 20px;
+  /* Padding inside the body */
+  background-color: black;
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  flex-direction: column;
+  /* font-size: 1.5rem; */
+  font-size: 1.1rem;
+  font-family: Popins-Regular;
+}
+
+.offcanvas-body>* {
+  margin-top: 1rem;
+}
+
+.custom-offcanvas-link {
+  display: block;
+  /* Make each link block-level for full width */
+  background-color: black;
+  color: #fff;
+  /* Link color */
+  text-decoration: none;
+  /* Remove underline from links */
+  /* margin: 10px 0; */
+  /* Margin between links */
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+  /* Smooth transition for color and text-decoration */
+}
+
+.custom-offcanvas-link:hover {
+  font-family: Popins-Black;
+  color: white;
+}
+
+.custom-offcanvas .offcanvas-header .btn-close {
+  filter: invert(100%);
+  /* Inverts the color to white */
+  background-color: transparent;
+  /* Ensure the background is transparent */
+  border: none;
+  /* Remove border if any */
+}
+
+.custom-offcanvas .offcanvas-header .btn-close:hover {
+  color: #ddd;
+  /* Optional: Change color on hover */
+}
+
+/* Media Queries */
+
+@media (max-width:1024px) {
+  .custom-navbar-buttons {
+    display: flex;
+    gap: 20px;
+    padding-right: 2rem;
+  }
+
+  .custom-navbar-logo {
+    padding: 0.5rem 0.5rem 0.5rem 2rem;
+  }
+}
+
+@media (max-width: 820px) {
+  .custom-navbar-menu {
+    display: none;
+    /* Hide menu on small screens */
+  }
+
+  .custom-navbar-menu-toggle {
+    display: block;
+    /* Show hamburger menu on small screens */
+  }
+
+  .custom-offcanvas {
+    width: 250px;
+    /* Adjust width as needed */
+  }
+
+  .custom-navbar-logo {
+    padding: 0.5rem;
+  }
+
+  .custom-navbar-logo img {
+    width: 50%;
+    /* Smaller width for screens less than 768px */
+  }
+
+}
+
+
+.profile-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.profile-image {
+  border-radius: 50%;
+  width: 40px;
+  /* Adjust size as needed */
+  height: 40px;
+  /* Adjust size as needed */
+  cursor: pointer;
+  margin-right: 8px;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.dropdown-menu.show {
+  display: block;
+  background-color: black;
+  cursor: pointer;
+}
+
+.dropdown-menu button {
+  background: none;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  color: white;
+}
+
+.dropdown-menu button:hover {
+  background-color: black;
+}
+
+
+.component-grid {
+  padding: 4rem;
+  gap: 4rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 4rem
+    /* grid-template-columns: repeat(50%); */
+}
+
+@media (min-width : 40em) {
+  .component-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.component-grid>div {
+  /* Apply styles to all direct children of .component-grid */
+  padding: 10px;
+  margin-bottom: 0px;
+  border: 1px solid #ddd;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.component-grid>div>h2 {
+  text-align: center;
+}
+
+
+.profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.avatars {
+  /* position: relative; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.avatar {
+  display: inline-block;
+  border-radius: 50%;
+  overflow: hidden;
+  width: 100px;
+  transition: transform 0.3s ease, z-index 0s;
+  /* Smooth transition for hover effect and immediate z-index change */
+  position: relative;
+  z-index: 1;
+}
+
+.avatar:not(:first-child) {
+  margin-left: -30px;
+}
+
+.avatar img {
+  width: 100%;
+  display: block;
+  transition: transform 0.3s ease;
+  /* Smooth transition for image hover effect */
+}
+
+.avatar:hover {
+  transform: scale(1.1);
+  /* Slightly increase the size of the avatar on hover */
+  z-index: 10;
+  /* Bring the hovered avatar to the front */
+}
+
+.avatar img:hover {
+  transform: scale(1.1);
+  /* Ensure image scales up as well */
+}
+
+.new-form>div {
+  padding: 0.5rem;
+}
+
+@media (max-width:768px) {
+  .avatar {
+    width: 70px;
+  }
+}
+
+.login-button {
+  background-color: white;
+  /* padding: 0.5rem 2rem 0.5rem 2rem; */
+  padding: 0.2rem 0.7rem 0.2rem 0.7rem;
+  color: black !important;
+  border-radius: 5px;
+  border: none;
+  font-family: Popins-Regular;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.login-button:hover {
+  font-family: Popins-Semibold;
+}
+
+.register-button {
+  background-color: #0AA9EF;
+  /* padding: 0.5rem 2rem 0.5rem 2rem; */
+  padding: 0.2rem 0.7rem 0.2rem 0.7rem;
+  color: black;
+  border-radius: 5px;
+  border: none;
+  font-family: Popins-Regular;
+  cursor: pointer;
+}
+
+.register-button:hover {
+  font-family: Popins-Semibold;
+}
+
+.input-groups {
+  width: 100%;
+}
+
+.p-inputgroup {
+  justify-content: center;
+  width: 100%;
+}
+
+div.w-full.p-dropdown.p-component.p-inputwrapper {
+  background-color: white;
+  padding: 10px;
+  border: none;
+}
+
+.firstDrop {
+  border-radius: 0;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-color: black;
+}
+
+.middleDrop {
+  border-color: black;
+  border-radius: 0;
+}
+
+.lastDrop {
+  border-radius: 0;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-color: black;
+}
+
+.responsive-placeholder {
+  width: 100%;
+  /* Reduce width on smaller screens */
+
+}
+
+div.p-dropdown-items-wrapper {
+  background-color: white;
+  border-radius: 10px;
+}
+
+ul.p-dropdown-items {
+  color: white;
+  padding: 10px;
+  text-align: center;
+  margin: 0;
+}
+
+li.p-dropdown-item {
+  justify-content: center;
+}
+
+/* To change the border color of the dropdown */
+.firstDrop .p-dropdown.p-focus {
+  box-shadow: 0 0 0 1px rgb(0, 145, 255);
+}
+
+.middleDrop .p-dropdown.p-focus {
+  box-shadow: 0 0 0 1px rgb(0, 145, 255);
+}
+
+.lastDrop .p-dropdown.p-focus {
+  box-shadow: 0 0 0 1px rgb(0, 145, 255);
+}
+
+.middleDrop .p-dropdown-panel .p-dropdown-item {
+  color: black;
+}
+
+/* Hide mobile layout by default */
+.mobile-screen {
+  display: none;
+}
+
+/* Hide PC layout on small screens */
+.pc-screen {
+  display: none;
+}
+
+/* Display PC layout on larger screens (e.g., desktop) */
+@media (min-width: 768px) {
+  .pc-screen {
+    display: flex;
+    /* or block, depending on your layout needs */
+  }
+
+  .wono-text-spacing {
+    padding-left: 7rem;
+    padding-right: 7rem;
+  }
+}
+
+/* Display mobile layout on smaller screens */
+@media (max-width: 767px) {
+  .mobile-screen {
+    display: block;
+    /* or flex, if you want them in a row */
+  }
+
+  .wono-text-spacing {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}

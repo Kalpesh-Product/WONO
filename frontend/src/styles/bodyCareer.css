@@ -1,0 +1,49 @@
+@font-face {
+    font-family: Popins-SemiBold;
+    src: url('../assets/WONO_images/img/fonts/Poppins-SemiBold.ttf');
+}
+
+.career-container{
+    padding: 1rem;
+    font-family: Popins-SemiBold;
+}
+.career-section{
+    padding: 2rem 6rem 8.5rem 6rem ;
+}
+.career-section > h3{
+    font-size: 60px;
+    font-family: Popins-SemiBold;
+}
+button.accordion-button {
+font-size: 32px;
+margin: 0;
+padding: 2rem 1rem 2rem 1rem;
+}
+@media (max-width:1024px) {
+    .career-section {
+        padding: 2rem 3rem 6rem 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .career-section{
+        padding: 1rem 1rem 1rem 1rem ;
+    }
+    .career-section > h3{
+        font-size: 40px;
+
+    }
+    .career-job-title{
+
+
+    }
+    button.accordion-button {
+        font-size: 20px;
+        margin: 0;
+        padding: 1rem 1rem 1rem 1rem;
+        }
+        .accrodion > h2{
+            font-size: 25px !important;
+
+        }
+}

@@ -1,12 +1,15 @@
 const mongoose = require('mongoose');
 
 // MongoDB connection URI
-const uri = 'mongodb://localhost:27017/WonoUserData'; // Replace with your MongoDB URI and database name
+const uri = process.env.DB_URL; // Replace with your MongoDB URI and database name
+
 
 // Create a connection to MongoDB
 mongoose.connect(uri, {
     useNewUrlParser: true,
-    useUnifiedTopology: true
+    useUnifiedTopology: true, // Recommended for the latest versions of MongoDB
+    serverSelectionTimeoutMS: 400000, // Time to wait for server selection before failing (in milliseconds)
+    socketTimeoutMS: 450000 // Time to wait for a socket operation before timing out (in milliseconds)
 });
 
 // Get a reference to the connection

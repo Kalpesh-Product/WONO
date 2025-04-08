@@ -1,0 +1,365 @@
+@font-face {
+  font-family: Popins-Regular;
+  src: url('../assets/WONO_images/img/fonts/Poppins-Regular.ttf');
+}
+
+@font-face {
+  font-family: Popins-Black;
+  src: url('../assets/WONO_images/img/fonts/Poppins-Black.ttf');
+}
+
+@font-face {
+  font-family: Popins-Semibold;
+  src: url('../assets/WONO_images/img/fonts/Poppins-SemiBold.ttf');
+}
+
+
+section {
+  padding: 0;
+  border: none;
+}
+
+.register-master {
+  padding: 4rem 0;
+  border: none;
+}
+
+.StepperContainer-0-2-1 {
+  display: flex;
+  padding: 24px;
+  align-items: flex-start;
+  font-family: Arial, Helvetica, sans-serif;
+  flex-direction: row;
+}
+
+.next-button-width {
+  width: 200px !important;
+}
+
+.register-container * {
+  /* padding: 2rem; */
+  font-family: Popins-Regular !important;
+}
+
+.stepper-container * {
+  font-family: Popins-Semibold !important;
+}
+
+.register-page-button-space {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  padding-bottom: 0;
+  margin: 0;
+}
+
+.register-page-button-space>* {
+  font-family: Popins-Regular;
+  padding: 1rem;
+}
+
+.register-page-button {
+  display: flex;
+  justify-content: space-around;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 0.50rem;
+  font-family: Popins-Semibold;
+  width: 50%;
+}
+
+.register-page-button span:nth-child(1) {
+  flex: 0 0 25%;
+  /* First span takes 25% */
+}
+
+.register-page-button span:nth-child(2) {
+  flex: 0 0 50%;
+  /* Second span takes 50% */
+  text-align: center;
+  /* Center align text */
+}
+
+.register-page-button span:nth-child(3) {
+  flex: 0 0 25%;
+  /* Third span takes 25% */
+  text-align: right;
+  /* Align text to the right */
+}
+
+.col-lg-6>input,
+.col-lg-6>select {
+  border-radius: 40px;
+  padding: 0.7em;
+  padding-left: 1rem;
+}
+
+@media (min-width:2550px) {
+  .register-master {
+    padding: 16rem 0 20rem;
+    border: none;
+  }
+}
+
+
+
+@media (max-width:1024px) {
+  .register-master {
+    padding: 9rem 0 13.2rem;
+    border: none;
+    height: 100%;
+  }
+}
+
+@media (min-width: 899px) and (max-width: 1025px) {
+  .css-1ufs9dr-MuiContainer-root {
+    width: 87% !important;
+    /* margin: 0; */
+    padding: 0 !important;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .register-master {
+    height: 100%;
+  }
+
+  .register-container {
+    padding: 2rem 0.5rem;
+  }
+
+  .stepper-container * {
+    font-family: Popins-Semibold !important;
+    font-size: 0.8rem;
+  }
+}
+
+@media (min-width: 599px) and (max-width: 821px) {
+  .css-1ufs9dr-MuiContainer-root {
+    width: 94% !important;
+    /* padding: 0 !important; */
+  }
+}
+
+@media (max-width:450px) {
+  .register-master {
+    padding: 2rem 0;
+    border: none;
+    height: 100%;
+  }
+
+  .StepperContainer-0-2-1 {
+    display: flex;
+    padding: 0 !important;
+    align-items: flex-start;
+    font-family: Arial, Helvetica, sans-serif;
+    flex-direction: row;
+  }
+
+  .stepper-container * {
+    font-family: Popins-Semibold !important;
+    font-size: 0.7rem;
+}
+}
+
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.modal-content {
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  color: black;
+}
+
+.modal-body {
+  text-align: center;
+  width: 100%;
+}
+
+/* Steppers */
+ul.p-stepper-nav {
+  padding: 2rem 8rem 2rem 8rem;
+}
+
+li.p-stepper-header {
+  padding: -7rem;
+  gap: 0;
+}
+
+.p-stepper-action.p-component {
+  display: flex;
+  flex-direction: column;
+}
+
+span.p-stepper-number {
+  background-color: black;
+  color: white;
+  font-size: 80%;
+}
+
+button.p-stepper-action.p-component {
+  margin-top: 20px;
+  position: relative;
+}
+
+span.p-stepper-separator {
+  position: absolute;
+  left: 22%;
+  width: 80%;
+  z-index: 1;
+}
+
+.registration-section-header {
+  text-align: center;
+  padding: 2rem;
+  color: black;
+}
+
+.registration-section-header h2 {
+  font-family: Popins-Regular;
+}
+
+/* stepper */
+
+/* button.StepButton-0-2-4.StepButton-d2-0-2-8.active {
+  background-color: black !important;
+} */
+
+/* checkbox */
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.checkbox-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 5px solid gray;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 8px;
+  position: relative;
+  cursor: pointer;
+  /* Make the card clickable */
+  width: 200px;
+  transition: border-color 0.3s ease;
+}
+
+.checkbox-card.checked {
+  border-color: #28b900;
+  /* Remove background color change */
+}
+
+.check-image-container {
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.checkbox-card img {
+  width: 100%;
+  /* Make image fit the card */
+  border-radius: 8px;
+}
+
+.checkbox-card input[type="checkbox"] {
+  display: none;
+  /* Hide the checkbox */
+}
+
+/* Add tick mark when checkbox is checked */
+.checkbox-card input[type="checkbox"]:checked+.check-image-container::after {
+  content: "✅";
+  font-size: 20px;
+  color: #28b900;
+  position: absolute;
+  bottom: 120px;
+  right: 8px;
+}
+
+/* account activation */
+
+.account-activation-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2.5rem;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.account-activation-container div {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.account-activation-section>span,
+button {
+  margin: 1rem;
+}
+
+.account-activation-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.mail-client-container {
+  display: flex;
+  width: 100%;
+  /* justify-content: flex-start; */
+  /* gap: 2rem;
+    padding: 2rem 0 1rem 0; */
+}
+
+.mail-client {
+  display: grid;
+  grid-template-columns: 20% 1fr;
+  column-gap: 2rem;
+  padding: 0.5rem 1rem !important;
+}
+
+.mail-client-image {
+  width: 50px;
+}
+
+.mail-client-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.mail-client-text :hover {
+  color: rgb(13, 110, 253);
+}
+
+.mail-client-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+
+}
