@@ -22,7 +22,7 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
   const isAuthPage =
     location.pathname === "/login" && location.pathname === "/register";
   const isthempage = location.pathname === "/themes";
-  const isservices = location.pathname === "/saas";
+  const isservices = location.pathname === "/modules";
   const isleadspage = location.pathname === "/leads";
   const iscareerpage = location.pathname === "/career";
   const iscapitalpage = location.pathname === "/capital";
@@ -122,7 +122,7 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
           ) : (
             <>
               <Link
-                to="/saas"
+                to="/modules"
                 className={
                   !isAuthPage && isservices && activeTab === "Services"
                     ? "active"
@@ -131,8 +131,9 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
                 onClick={() => {
                   changeActiveTab("Services");
                   window.scrollTo({ top: 0, behavior: "instant" });
-                }}>
-                SaaS
+                }}
+              >
+                Modules
               </Link>
               <Link
                 to="/themes"
@@ -144,7 +145,8 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
                   !isAuthPage && isthempage && activeTab === "themes"
                     ? "active"
                     : ""
-                }>
+                }
+              >
                 Themes
               </Link>
               <Link
@@ -160,7 +162,8 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
                   activeTab === "leads"
                     ? "active"
                     : ""
-                }>
+                }
+              >
                 Leads
               </Link>
               <Link
@@ -176,7 +179,8 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
                 onClick={() => {
                   changeActiveTab("capital");
                   window.scrollTo({ top: 0, behavior: "instant" });
-                }}>
+                }}
+              >
                 Capital
               </Link>
               <Link
@@ -187,7 +191,8 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
                 onClick={() => {
                   changeActiveTab("Career");
                   window.scrollTo({ top: 0, behavior: "instant" });
-                }}>
+                }}
+              >
                 Career
               </Link>
             </>
@@ -199,7 +204,8 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
             <div className="user-profile custom-navbar-buttons">
               <div
                 className="profile-container"
-                onClick={() => setDropdownOpen(!dropdownOpen)}>
+                onClick={() => setDropdownOpen(!dropdownOpen)}
+              >
                 <img
                   // src={user.picture}
                   src={ProfileImage}
@@ -214,22 +220,14 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
             </div>
           ) : (
             <div className="custom-navbar-buttons">
-              {/* <Link
-                onClick={() => {
-                  changeActiveTab(null);
-                  window.scrollTo({ top: 0, behavior: "instant" });
-                }}
-                to="/login"
-                className="login-button">
-                SIGN IN
-              </Link> */}
               <a
                 href="https://wonofe.vercel.app/"
                 className="login-button"
                 onClick={() => {
                   changeActiveTab(null);
                   window.scrollTo({ top: 0, behavior: "instant" });
-                }}>
+                }}
+              >
                 SIGN IN
               </a>
               <Link
@@ -238,7 +236,8 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
                   window.scrollTo({ top: 0, behavior: "instant" });
                 }}
                 className="register-button"
-                to="/register">
+                to="/register"
+              >
                 SIGN UP
               </Link>
             </div>
@@ -254,7 +253,8 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
         onHide={handleClose}
         placement="start"
         backdrop="true"
-        className="custom-offcanvas">
+        className="custom-offcanvas"
+      >
         <Offcanvas.Header closeButton>
           <Offcanvas.Title>Menu</Offcanvas.Title>
         </Offcanvas.Header>
@@ -267,32 +267,37 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
               <Link
                 className="custom-offcanvas-link"
                 to="/saas"
-                onClick={handleClose}>
+                onClick={handleClose}
+              >
                 SAAS
               </Link>
               <Link
                 className="custom-offcanvas-link"
                 to="/themes"
-                onClick={handleClose}>
+                onClick={handleClose}
+              >
                 THEMES
               </Link>
               <Link
                 className="custom-offcanvas-link"
                 to="/leads"
-                onClick={handleClose}>
+                onClick={handleClose}
+              >
                 LEADS
               </Link>
               <Link
                 className="custom-offcanvas-link"
                 to="/capital"
-                onClick={handleClose}>
+                onClick={handleClose}
+              >
                 CAPITAL
               </Link>
 
               <Link
                 className="custom-offcanvas-link"
                 to="/career"
-                onClick={handleClose}>
+                onClick={handleClose}
+              >
                 CAREER
               </Link>
             </>
@@ -313,7 +318,8 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
             <div className="user-profile">
               <div
                 className="profile-container"
-                onClick={() => setDropdownOpen(!dropdownOpen)}>
+                onClick={() => setDropdownOpen(!dropdownOpen)}
+              >
                 <img
                   src={ProfileImage}
                   alt={"ProfileImage"}
@@ -333,7 +339,8 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
               <a
                 href="https://wonofe.vercel.app/"
                 className="login-button"
-                onClick={handleClose}>
+                onClick={handleClose}
+              >
                 SIGN IN
               </a>
               <button className="register-button" onClick={handleRegister}>

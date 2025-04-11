@@ -109,16 +109,16 @@
     padding-top: 4rem;
     font-weight: normal;
     margin: 0;
-    font-family: ComicSansMS-bold;
+    font-family: Popins-Regular;
 }
 
 .SaaS-featured-master>h1 span {
-    font-family: ComicSansMS-bold;
+    font-family: Popins-Regular;
 }
 
 .SaaS-featured-heading-container {
     position: relative;
-    font-family: ComicSansMS-bold;
+    font-family: Popins-Regular;
     width: 100%;
 
 }

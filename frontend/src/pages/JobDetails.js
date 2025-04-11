@@ -7,7 +7,7 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import { Link } from "react-router-dom";
 
-const JobDetails = ({changeActiveTab}) => {
+const JobDetails = ({ changeActiveTab }) => {
   const { title } = useParams();
   const decodedTitle = decodeURIComponent(title);
 
@@ -26,7 +26,8 @@ const JobDetails = ({changeActiveTab}) => {
       <main id="main">
         <section
           id="get-started"
-          className="get-started section features section job-details-main">
+          className="get-started section features section job-details-main"
+        >
           <div className="container-jobDetails">
             <h1 style={{ fontWeight: "500", textAlign: "center" }}>
               {decodedTitle}
@@ -39,7 +40,8 @@ const JobDetails = ({changeActiveTab}) => {
                   data-bs-toggle="tab"
                   data-bs-target="#tab-1"
                   aria-selected="true"
-                  role="tab">
+                  role="tab"
+                >
                   <h4 className="mobileFont">JOB DESCRIPTION</h4>
                 </Link>
               </li>
@@ -50,7 +52,8 @@ const JobDetails = ({changeActiveTab}) => {
                   data-bs-target="#tab-2"
                   aria-selected="false"
                   tabIndex="-1"
-                  role="tab">
+                  role="tab"
+                >
                   <h4 className="mobileFont">APPLY NOW</h4>
                 </Link>
               </li>
@@ -59,18 +62,16 @@ const JobDetails = ({changeActiveTab}) => {
               <div
                 className="tab-pane fade show active"
                 id="tab-1"
-                role="tabpanel">
+                role="tabpanel"
+              >
                 <div className="row">
                   {/* NEED TO Enter below function */}
 
                   <div
                     className="col-lg-12 order-2 order-lg-1 mt-3 mt-lg-0 d-flex flex-column justify-content-center"
                     data-aos="fade-up"
-                    data-aos-delay="100">
-                    {/* {decodedTitle === 'Marketing Analytics' ? (<MarketingAnalytics/>) : decodedTitle === 'PHP Developer' ? (<PHPdeveloper/>):
-                  decodedTitle === 'Web Developer Intern' ? (<WebdeveloperIntern/>) : decodedTitle === 'Finance Intern' ? (<FinanceIntern/>):
-                  decodedTitle === 'HR Generalist' ? (<HrGeneralist/>): decodedTitle === 'Executive Assistant to CEO'? (<ExecutiveAssistanceToCEO/>):
-                  decodedTitle === 'UI Designer' ? (<UiDesignerComp/>): decodedTitle === 'Jr.UI/UX Developer' ? (<developer/>):(<PHPdeveloper/>)}  */}
+                    data-aos-delay="100"
+                  >
                     <Jobdescription decodedTitle={decodedTitle} />
                   </div>
                 </div>
@@ -79,7 +80,10 @@ const JobDetails = ({changeActiveTab}) => {
               <div className="tab-pane" id="tab-2" role="tabpanel">
                 <div className="row">
                   <div className="col-lg-12 d-flex flex-column justify-content-center">
-                    <Jobapply jobTitle={title} changeActiveTab={changeActiveTab}></Jobapply>
+                    <Jobapply
+                      jobTitle={title}
+                      changeActiveTab={changeActiveTab}
+                    ></Jobapply>
                   </div>
                 </div>
               </div>

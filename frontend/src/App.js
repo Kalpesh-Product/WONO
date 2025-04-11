@@ -104,7 +104,7 @@ function App({ useHideUnimportantErrors }) {
             }
           />
           <Route
-            path="/saas"
+            path="/modules"
             element={
               <PublicRoute>
                 <Services />

@@ -119,6 +119,10 @@
     font-family: Caveat;
     src: url('../assets/WONO_images/img/fonts/Caveat.ttf');
 }
+@font-face {
+    font-family: Amsterdam;
+    src: url('../assets/WONO_images/img/fonts/amsterdam.ttf');
+}
 
 @font-face {
     font-family: BAUHS93;
@@ -204,13 +208,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     position: relative;
     z-index: 1;
 }
 
 .first-section-grid-item-2 {
-    /* display: grid;
-    grid-template-columns: 1fr 30%; */
     position: relative;
     z-index: 1;
     width: 100%;
@@ -254,6 +257,7 @@
 }
 
 .first-section-grid-item-1 {
+    display: flex;
     flex-direction: column;
 }
 
@@ -293,10 +297,12 @@
 }
 
 .home-main-title-desc {
-    padding: 3rem 0;
-    font-size: 1.18rem;
-    text-align: center;
+    padding: 3rem 0 5rem 0;
+    text-align: start;
     font-family: Popins-Regular;
+}
+.home-main-title-tagline{
+    font-size: 1rem;
 }
 
 .home-main-tagline {
@@ -337,8 +343,10 @@
     font-family: Popins-Regular;
     position: relative;
     width: 100%;
-    font-size: 1.8rem;
+    font-size: 1.3rem;
     font-weight: 400;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
 }
 
 .home-desc:hover {
@@ -348,9 +356,9 @@
 
 .home-desc img {
     position: absolute;
-    top: -70%;
-    left: -50%;
-    width: 200%;
+    top: -142%;
+    left: -13%;
+    width: 129%;
 }
 
 .home-desc span {
@@ -358,6 +366,30 @@
     font-size: x-large;
     font-family: Popins-Medium;
 }
+.key-modules-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* Desktop: 6 columns */
+    gap: 2rem;
+  }
+  
+  @media (max-width: 1200px) {
+    .key-modules-grid {
+      grid-template-columns: repeat(4, 1fr); /* Medium screens: 4 columns */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .key-modules-grid {
+      grid-template-columns: repeat(2, 1fr); /* Tablets: 2 columns */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .key-modules-grid {
+      grid-template-columns: repeat(1, 1fr); /* Mobile: 1 column */
+    }
+  }
+  
 
 .form-card {
     background-color: rgba(255, 255, 255, 255);
@@ -400,7 +432,7 @@
     }
 
     .home-main-title-desc {
-        padding: 3rem 0;
+        padding: 5rem 0;
         font-size: 2.2rem;
         text-align: center;
     }
@@ -477,9 +509,9 @@
 
     .home-desc img {
         position: absolute;
-        top: -2%;
-        left: -25%;
-        width: 149%;
+        top: -24%;
+        left: -2%;
+        width: 104%;
     }
 
     .home-section-buttons {
@@ -1069,7 +1101,7 @@
 .N-Commerce>h3>strong {
     display: flex;
     font-family: Bebas-Regular;
-    font-size: 9.6rem;
+    font-size: 2.5rem;
     color: #fff;
     font-weight: 600;
     width: 100%;
@@ -1082,8 +1114,7 @@
 
 .N-Commerce p {
     color: #0AA9EF;
-    align-self: center;
-    font-size: 40px;
+    font-size: 78px;
     width: fit-content;
     font-family: Bebas-Regular;
 }
@@ -1115,7 +1146,7 @@
     .N-Commerce>h3>strong {
         display: flex;
         font-family: Bebas-Regular;
-        font-size: 8rem;
+        font-size: 2rem;
         color: #fff;
         font-weight: 600;
         width: 100%;
@@ -1127,7 +1158,7 @@
 
 @media (max-width: 1440px) and (min-width: 1025px) {
     .N-Commerce > h3 > strong {
-        font-size: calc(6rem + (8 - 6) * ((100vw - 1024px) / (1440 - 1024)));
+        font-size: calc(4rem + (6 - 4) * ((100vw - 1024px) / (1440 - 1024)));
     }
 }
 
@@ -1148,12 +1179,12 @@
     .N-Commerce>h3>strong {
         display: flex;
         font-family: Bebas-Regular;
-        font-size: 6rem;
+        font-size: 2rem;
         color: #fff;
         font-weight: 600;
         width: 100%;
         margin-top: 0;
-        text-align: center;
+        text-align: start;
         line-height: 90%;
         /* to add gap between the lines */
     }
@@ -1189,7 +1220,7 @@
         font-weight: 600;
         width: 100%;
         margin-top: 0;
-        text-align: center;
+        text-align: start;
         line-height: 90%;
         white-space: nowrap;
         /* to add gap between the lines */
@@ -1769,7 +1800,7 @@
 }
 
 .hero-button:hover {
-    border: 1px solid black;
+    border: 4px solid #0AA9EF;
 }
 
 

@@ -85,12 +85,6 @@ const Capital = () => {
                 </div>
 
             </div>
-            <div className='capital-last-button-section'>
-                <h2>LET THE FUNDRAISE BEGIN!</h2>
-                <Link onClick={()=> window.scrollTo({top:0, behavior:'instant'})} to="/register"><button className='get-started-main-button'>
-                    CONNECT WITH US TODAY
-                </button></Link>
-            </div>
 
         </div>
     )

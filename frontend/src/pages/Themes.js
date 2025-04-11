@@ -249,22 +249,6 @@ const Themes = () => {
             </div>
           </div>
 
-          <div className="themePage-website-success-section">
-            <div className="themePage-website-success ">
-              <h2>Tomorrow's success starts today</h2>
-              <div
-                className="themePage-featured-button">
-                <button
-                  className="get-started-main-button"
-                  onClick={() => {
-                    navigate("/register");
-                    window.scrollTo({ top: 0, behavior: "instant" });
-                  }}>
-                  Get started
-                </button>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>

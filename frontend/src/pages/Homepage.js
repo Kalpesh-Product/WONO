@@ -3,68 +3,126 @@ import "../styles/bodyHome.css";
 import { Link } from "react-router-dom";
 import RotatingGlobe from "../components/RotatingGlobe";
 import { useNavigate } from "react-router-dom";
-import Carousel1 from "../assets/WONO_images/img/hero-carousel/hero-carousel-1.webp";
-// import Carousel2 from '../assets/WONO_images/img/hero-carousel/hero-carousel-2.png'
-// import Carousel3 from '../assets/WONO_images/img/hero-carousel/hero-carousel-3.png'
-// import GlobalNomad from '../assets/WONO_images/img/icon_service/Birthday.webp'
-import { motion, AnimatePresence } from "framer-motion";
 import "../styles/componentStyle.css";
-import { Nav } from "react-bootstrap";
-// import WonoLogo from '../assets//WONO_images/img/WONO_LOGO_white _TP.png';
-// import WonoLogoBlack from '../assets//WONO_images/img/WONO_LOGO_Black_TP.png';
-import BiznestLogo from "../assets/BIZNest/biznest_logo.jpg";
 import CafeImage from "../assets/WONO_images/img/website-builder/new-layout/cafe.webp";
 import CoWorkingImage from "../assets/WONO_images/img/website-builder/new-layout/co-working.webp";
-import Hostels from "../assets/WONO_images/img/website-builder/new-layout/hostels.png";
-import CoLivingImage from "../assets/WONO_images/img/website-builder/new-layout/co-living.webp";
-import CafeImageLong from "../assets/WONO_images/img/website-builder/new-layout/long/cafe-long.jpeg";
-import CoWorkingImageLong from "../assets/WONO_images/img/website-builder/new-layout/long/co-working-long.jpeg";
-import BoutiqueLong from "../assets/WONO_images/img/website-builder/new-layout/long/boutique-long.jpeg";
-import CoLivingImageLong from "../assets/WONO_images/img/website-builder/new-layout/long/co-living-long.jpeg";
 import Boutique from "../assets/WONO_images/img/website-builder/new-layout/boutique.webp";
-import DashboardBooking from "./Dashboard-pages/DashboardBooking";
-import DashboardAsset from "./Dashboard-pages/DashboardAsset";
-import DashboardHR from "./Dashboard-pages/DashboardHR";
-import DashboardTickets from "./Dashboard-pages/DashboardTickets";
-import DashboardVisitor from "./Dashboard-pages/DashboardVisitor";
-import DashboardProducts from "./Dashboard-pages/DashboardProducts";
+import CoLivingImage from "../assets/WONO_images/img/website-builder/new-layout/co-living.webp";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
-// import { CustomNextArrow, CustomPrevArrow } from '../components/WebsiteBuilderArrows/CustomArrows'
-import FourCardsComponents from "../components/Four_cardsComponents";
-import WebsiteCafe from "./WebsiteBuilder/WebsiteCafe";
-import WebsiteWorkation from "./WebsiteBuilder/WebsiteWorkation";
 import "../styles/bodyPartners.css";
-// import BiznestTestimonial from "../assets/testimonials/kashif-image.jpg";
 import greenUnderLine from "../assets/underline-bg/blue-line.png";
 import greenRound from "../assets/underline-bg/blue-circle.png";
 import BiznestTestimonial from "../assets/testimonials/Kashif_Edit.png";
-// import "../styles/bodyLastBanner.css";
+import FeatureCard from "../components/Cards/FeatureCard";
+import {
+  FaGlobe,
+  FaCreditCard,
+  FaMoneyBillWave,
+  FaChartLine,
+  FaRobot,
+  FaBoxes,
+  FaDoorOpen,
+  FaBed,
+  FaCalendarCheck,
+  FaCoffee,
+  FaUsers,
+  FaUserTie,
+  FaRegClock,
+  FaFileInvoiceDollar,
+  FaBullhorn,
+  FaBrain,
+  FaUserShield,
+  FaNetworkWired,
+  FaLaptopHouse,
+  FaTasks,
+  FaUserFriends,
+  FaCalendarAlt,
+  FaBell,
+  FaUserCircle,
+  FaTicketAlt,
+  FaChartPie,
+} from "react-icons/fa";
+import {
+  androidAppSaas,
+  bookingsSaas,
+  chatSaas,
+  customerProfile,
+  customerService,
+  events,
+  iosApp,
+  mobileSite,
+  notifications,
+  paymentGateway,
+  tickets,
+  website,
+  analyticsFA,
+  compliancesFA,
+  taxesFA,
+  followUpsFA,
+  notificationsFA,
+  collectionsFA,
+  financialReportsFA,
+  workingCapitalFA,
+  budgetFA,
+  projectionsFA,
+  cashflowFA,
+  invoicingFA,
+  vlogsSM,
+  blogsSM,
+  referralsSM,
+  livechatSM,
+  whatsAppIntegrationSM,
+  smsMarketingSM,
+  emailMarketingSM,
+  socialMediaSM,
+  leadGenerationSM,
+  adNetworksSM,
+  personalisedSemSM,
+  automatedSeoSM,
+  eSignHR,
+  templatesHR,
+  appraisalsHR,
+  performanceHR,
+  taskManagementHR,
+  policiesHR,
+  sopsHR,
+  holidaysHR,
+  leavesHR,
+  payslipsHR,
+  payrollHR,
+  attendanceHR,
+  analyticsCM,
+  reportsCM,
+  autoresponseCM,
+  customerServiceCM,
+  customerRatingCM,
+  feedbackCM,
+  announcementsCM,
+  visitorCM,
+  cafeOrdersCM,
+  meetingRoomsCM,
+  complaintLogsCM,
+  ticketRaisingCM,
+  customisedReportsRA,
+  taxesReportsRA,
+  milestoneReportsRA,
+  employeeReportsRA,
+  customerReportsRA,
+  fullDataAnalysisRA,
+  keyNotificationsRA,
+  cashflowRA,
+  vendorPayoutsRA,
+  businessTrendsRA,
+  customerTrends,
+  companyDashboard,
+} from "../assets/WONO_images/img/icon_service_color";
 
 const Homepage = () => {
-  const menuTitles = {
-    "dashboard-booking": "Booking engine",
-    "dashboard-tickets": "Ticket Management",
-    "dashboard-hr": "HR Management",
-  };
-  const website_menus = {
-    "website-cafe": "Cafe",
-    "website-workation": "Workation",
-  };
-  const containerRef = useRef(null);
   const navigate = useNavigate();
-  // const [collapsed, setCollapsed] = useState(false);
-  const firstBackendKey = Object.keys(menuTitles)[0];
-  const [selectedItem, setSelectedItem] = useState("dashboard-booking");
-  const firstWebKey = Object.keys(website_menus)[0];
-  const [selectedWeb, setSelectedWeb] = useState("website-cafe");
-  const [selectedMenuItem, setSelectedMenuItem] = useState(firstBackendKey);
-  const [selectedMenu, setSelectedMenu] = useState(firstWebKey);
   const [selectedId, setSelectedId] = useState(null);
 
   //First section carousel
-
-  const images = [Carousel1];
   const webimages = [
     { id: "cafe", src: CafeImage, alt: "Cafe Image" },
     { id: "coworking", src: CoWorkingImage, alt: "CoWorking Image" },
@@ -72,65 +130,35 @@ const Homepage = () => {
     { id: "boutique", src: Boutique, alt: "Boutique Image" },
   ];
 
-  const webimagesClicked = [
-    { id: "cafe", src: CafeImageLong, alt: "Cafe Image" },
-    { id: "coworking", src: CoWorkingImageLong, alt: "CoWorking Image" },
-    { id: "coliving", src: CoLivingImageLong, alt: "CoLiving Image" },
-    { id: "boutique", src: BoutiqueLong, alt: "Boutique Image" },
+  const amenities = [
+    { id: 1, title: "No Code Website", icon: website },
+    { id: 2, title: "Payment Gateway", icon: paymentGateway },
+    { id: 3, title: "Finance", icon: financialReportsFA },
+    { id: 4, title: "Sales", icon: financialReportsFA },
+    { id: 5, title: "Auto Leads", icon: workingCapitalFA },
+    { id: 6, title: "Inventory", icon: invoicingFA },
+    { id: 7, title: "Meeting Rooms", icon: meetingRoomsCM },
+    { id: 8, title: "Stay Rooms", icon:cafeOrdersCM },
+    { id: 9, title: "Events", icon: events },
+    { id: 10, title: "Cafe", icon: cafeOrdersCM },
+    { id: 12, title: "Human Resource", icon: employeeReportsRA },
+    { id: 13, title: "Attendance", icon: attendanceHR },
+    { id: 14, title: "Payroll", icon: payrollHR },
+    { id: 15, title: "Marketing", icon: smsMarketingSM },
+    { id: 17, title: "Admin", icon: customerProfile },
+    { id: 18, title: "IT", icon: fullDataAnalysisRA },
+    { id: 19, title: "Assets", icon: eSignHR },
+    { id: 20, title: "Tasks", icon: taskManagementHR },
+    { id: 21, title: "Visitors", icon: visitorCM},
+    { id: 22, title: "Calendar", icon: events },
+    { id: 23, title: "Notifications", icon: notifications },
+    { id: 24, title: "Profile", icon: customerProfile },
+    { id: 25, title: "Tickets", icon: ticketRaisingCM },
+    { id: 26, title: "Analytics", icon: analyticsCM },
   ];
-
-  //for website section
-  const handleImageClick = (id) => {
-    setSelectedId(id);
-  };
-
   const handleRegister = () => {
     navigate("/register");
   };
-
-  const renderContent = () => {
-    switch (selectedItem) {
-      case "dashboard-booking":
-        return <DashboardBooking />;
-      case "dashboard-products":
-        return <DashboardProducts />;
-      case "dashboard-tickets":
-        return <DashboardTickets />;
-      case "dashboard-hr":
-        return <DashboardHR />;
-      case "dashboard-visitor":
-        return <DashboardVisitor />;
-      case "dashboard-asset":
-        return <DashboardAsset />;
-      default:
-        return <DashboardBooking />;
-    }
-  };
-  const renderWebContent = () => {
-    switch (selectedWeb) {
-      case "website-cafe":
-        return <WebsiteCafe />;
-      case "website-workation":
-        return <WebsiteWorkation />;
-      default:
-        return <WebsiteWorkation />;
-    }
-  };
-  const handleMenuSelect = (key) => {
-    setSelectedItem(key);
-    setSelectedMenuItem(key);
-    if (containerRef.current) {
-      containerRef.current.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
-    }
-  };
-  const handleWebMenuSelect = (key) => {
-    setSelectedWeb(key); // Set the key as the selected web content
-    setSelectedMenu(key); // Highlight the selected menu item
-  };
-
   // mobile screen for globe responsiveness
   const ismobile = window.innerWidth < 769;
   const isTablet = window.innerWidth < 1025;
@@ -142,18 +170,12 @@ const Homepage = () => {
           <div className="background-div">
             <div>
               <img src={""} alt={`Slide`} className="background-image" />
-
-              {/* <img src={''} className="background-image" /> */}
               <img src={""} className="background-image" />
             </div>
             <div className="black-overlay"></div>
           </div>
           <div className="first-section-grid-item-1">
             <h2 className="home-main-title ">
-              {/* <span className="w"> W</span>
-              <span className="O">o</span>rld
-              <span className="n">N</span>
-              <span className="O">o</span>mads */}
               <span className="home-main-intro">
                 Introducing{" "}
                 <div className="home-main-title-svg">
@@ -162,10 +184,6 @@ const Homepage = () => {
                   N-Commerce!{" "}
                 </div>
               </span>
-              {/* <div style={{display:'flex', flexDirection:'column', textAlign:'end', paddingRight:'5rem'}}>
-              <span style={{ fontSize: '1rem' }}>"Nomad Commerce"</span>
-              <span style={{ fontSize: '1rem', marginLeft:"5rem", display:'flex', justifyContent:'end', width:'100%', fontWeight:'200' }}>WoNo.Co = <b>Wo</b>rld <b>No</b>mad <b>Co</b>mmerce</span>
-              </div> */}
               <div className="row">
                 <div className="col-md-6">{/* Empty div */}</div>
                 <div className="col-12 col-lg-6 col-md-12 col-sm-12 home-main-tagline">
@@ -175,15 +193,8 @@ const Homepage = () => {
                       style={{
                         fontFamily: "Popins-Semibold",
                         fontWeight: "normal",
-                      }}>
-                      WoNo.Co
-                    </b>{" "}
-                    ={" "}
-                    <b
-                      style={{
-                        fontFamily: "Popins-Semibold",
-                        fontWeight: "normal",
-                      }}>
+                      }}
+                    >
                       Wo
                     </b>
                     rld{" "}
@@ -191,7 +202,8 @@ const Homepage = () => {
                       style={{
                         fontFamily: "Popins-Semibold",
                         fontWeight: "normal",
-                      }}>
+                      }}
+                    >
                       No
                     </b>
                     mad{" "}
@@ -199,7 +211,8 @@ const Homepage = () => {
                       style={{
                         fontFamily: "Popins-Semibold",
                         fontWeight: "normal",
-                      }}>
+                      }}
+                    >
                       Co
                     </b>
                     mmerce
@@ -207,54 +220,33 @@ const Homepage = () => {
                 </div>
               </div>
             </h2>
-            <span className="home-main-title-desc">
-              A simple NO CODE SaaS Platform. We support businesses in small and
-              aspiring destinations!
+            <div className="home-main-title-desc">
+              <span style={{ fontSize: "1.5rem", fontWeight:'bold' }}>
+                A simple NO CODE SaaS Platform.
+              </span>
               <br />
-              SaaS Tech for Nomad businesses across the world. (E.g.:
-              Co-Working, Co-Living, Hostels, Workations, Resorts,
-              Cafes, Events etc)
-            </span>
+              <span className="home-main-title-tagline">
+                We support businesses in small and aspiring destinations which
+                host Nomads!
+                <br />
+                SaaS Tech for Nomad supoorting businesses across the world.
+                <span style={{ fontWeight: "bold" }}>
+                  {" "}
+                  (E.g.: Co-Working, Co-Living, Hostels, Workations, Resorts,
+                  Cafes, Events etc)
+                </span>
+              </span>
+            </div>
           </div>
           <div
             style={{ cursor: "pointer" }}
             onClick={() => navigate("/register")}
-            className="first-section-grid-item-2">
+            className="first-section-grid-item-2"
+          >
             <span className="home-desc">
               <img src={greenRound} alt="" />
-              IT'S FREE
+              IT'S COMPLETELEY FREE
             </span>
-            {/* <div className="home-section-buttons">
-              <div className="home-section-register-button-space">
-                <div
-                  style={{ cursor: "pointer" }}
-                  onClick={() => {
-                    navigate("/register");
-                    window.scrollTo({ top: 0, behavior: "instant" });
-                  }}
-                  className="its-free-container">
-                  <svg
-                    fill="none"
-                    // viewBox="0 0 390 97"
-                    className="its-free-svg"
-                    viewBox="190 -5 400 120">
-                    <path
-                      stroke-width="10"
-                      width="800"
-                      height="40"
-                      stroke="#28a745"
-                      d="M2,76.26c16.11,4.95,31.91,3.84,48.58,3.84,20.39,0,40.67,0,61,1,18,.87,36-1,53.94-1,15.79,0,31.51,1.81,47.31,1.21,24.51-.93,49.17-2.18,73.68-2.49,19.45-.25,39.4,1.59,58.76-.64,15-1.73,29-2.29,39.75-14.79C387.89,60.1,390.5,48.5,386.5,40c-5.69-12.09-12.63-18.68-23.67-25.17C341.68,2.4,314.67,1.82,291.09,2c-21.31.2-55.45,3.62-68.52,24.46C212.14,43.1,212,59.57,227.79,72.77c24.81,20.81,63.45,26.8,93.41,18.85"></path>
-                  </svg>
-
-                  <span style={{ zIndex: 10 }}>it's free</span>
-                </div>
-                {/* <button
-                  className="home-section-register-button"
-                  onClick={handleRegister}>
-                  BUSINESS SIGN UP
-                </button>
-              </div>
-            </div> */}
           </div>
         </div>
 
@@ -265,7 +257,8 @@ const Homepage = () => {
               camera={{
                 position: [0, 0, ismobile ? 15 : 25],
                 fov: ismobile ? 40 : isTablet ? 50 : 30,
-              }}>
+              }}
+            >
               <ambientLight intensity={0.5} />
               <pointLight position={[10, 10, 10]} />
               <RotatingGlobe />
@@ -279,9 +272,8 @@ const Homepage = () => {
           <div className="N-Commerce">
             <h3>
               <strong>
-                INTRODUCING
-                <br />
-                N-COMMERCE
+                SUPPORTING THE FOUNDATION OF N-COMMERCE <br />
+           
               </strong>
             </h3>
             <p> ( “NOMAD COMMERCE” ) </p>
@@ -290,27 +282,42 @@ const Homepage = () => {
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-              }}>
+              }}
+            >
               <button
                 className="hero-button"
                 data-aos-delay="200"
                 onClick={() => {
                   navigate("/register");
                   window.scrollTo({ top: 0, behavior: "instant" });
-                }}>
+                }}
+              >
                 CONNECT
               </button>
             </div>
           </div>
         </div>
-        <div className="four-cards-section">
-          <FourCardsComponents />
+
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            gap: "1rem",
+            padding: "4rem 7.3rem",
+          }}
+        >
+          <div className="four-cards-header">
+            <span>KEY MODULES FOR YOUR BUSINESS</span>
+          </div>
+          <div className="key-modules-grid">
+            {amenities.map((item) => (
+              <FeatureCard key={item.id} icon={item.icon} title={item.title} />
+            ))}
+          </div>
         </div>
 
         <div className="partners-section ">
-          {/* <div className="mt-5 container"> */}
           <div className="m-0 container  w-100 ">
-            {/* First div (1/2) */}
             <div className="">
               <div className="customMargin_top">
                 <div className="one-platform-section">
@@ -361,16 +368,15 @@ const Homepage = () => {
 
                 <div className="">
                   <div className="container mt-3 mb-0  ">
-                    {/* <div className="row  border-bottom border-dark border-3 pb-5 bg-primary"> */}
                     <div className="row   ">
                       <div className="col-lg-4"></div>
                       <div className="col-lg-4"></div>
-                      {/* <div className="col-lg-4 bg-danger"> */}
                       <div className="col-lg-4  d-flex justify-content-center align-items-center">
                         <div className="">
                           <button
                             className="get-started-submit-button m-0"
-                            onClick={handleRegister}>
+                            onClick={handleRegister}
+                          >
                             Get Started
                           </button>
                         </div>
@@ -379,64 +385,13 @@ const Homepage = () => {
                   </div>
                 </div>
               </div>
-              {/* <div className='four-cards-section' style={{ padding: "0", marginBottom: "-60px", marginTop: "20px" }}>
-                <FourCardsComponents />
-            </div> */}
-            </div>
-            {/* </div> */}
-          </div>
-        </div>
-
-        {/* <div
-        className="backend-container-master"
-        style={{ backgroundColor: "white" }}>
-        <div ref={containerRef} className="backend-panel-container">
-          <h2>SaaS platforms</h2>
-          <div className="backend-panel">
-            <div className="backend-panel-sidebar">
-              <div className="backend-sidebar-header">
-                <div className="backend-sidebar-logo">
-                  <img src={BiznestLogo} alt="" />
-                </div>
-              </div>
-
-              <Nav
-                id="backend-sidebar"
-                className="flex-column p-0 backend-sidebar">
-                {Object.keys(menuTitles).map((key) => (
-                  <Nav.Link
-                    key={key}
-                    onClick={() => handleMenuSelect(key)}
-                    className={selectedMenuItem === key ? "active" : ""}>
-                    {menuTitles[key]}
-                  </Nav.Link>
-                ))}
-              </Nav>
-            </div>
-            <div className="backend-panel-right">
-              <div className="backend-panel-header">
-                <h3>{menuTitles[selectedItem]}</h3>
-              </div>
-              <div className="backend-panel-content">
-                <AnimatePresence>
-                  <motion.div
-                    key={selectedItem}
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    transition={{ duration: 0.2 }}>
-                    {renderContent(selectedMenuItem)}
-                  </motion.div>
-                </AnimatePresence>
-              </div>
             </div>
           </div>
         </div>
-      </div> */}
-
         <div
           className="website-container-master"
-          style={{ backgroundColor: "black" }}>
+          style={{ backgroundColor: "black" }}
+        >
           <div className="website-panel-container">
             <div className="website-panel-header">
               <h2>SELF-SERVE TRANSACTIONAL WEBSITE: FULL STACK!</h2>
@@ -474,7 +429,8 @@ const Homepage = () => {
               <div
                 className={`website-panel-right ${
                   selectedId ? "modal-open" : ""
-                }`}>
+                }`}
+              >
                 <div className="website-panel-content">
                   {webimages.map((image) => (
                     <div className="template-preview-container" key={image.id}>
@@ -486,7 +442,8 @@ const Homepage = () => {
                   onClick={() =>
                     window.scrollTo({ top: 0, behavior: "instant" })
                   }
-                  to="/themes">
+                  to="/themes"
+                >
                   View more
                 </Link>
               </div>
@@ -518,7 +475,7 @@ const Homepage = () => {
                     </div>
                   </div> */}
                   <div className="testimonial-contact">
-                    <h4 className="my-2">Kashif Shaikh</h4>
+                    <h4 className="my-4" style={{fontFamily:'Amsterdam',fontSize:'2rem'}}>Kashif Shaikh</h4>
                     <p className="m-0">Co-Founder & COO</p>
                     <p>BIZ Nest, Goa India </p>
                   </div>
@@ -536,7 +493,7 @@ const Homepage = () => {
           </div>
         </div>
 
-        <div className="last-section   w-100 ">
+        {/* <div className="last-section   w-100 ">
           <div className="home-last-banner">
             <div className="grow-your-business-color grow-your-business-section">
               <h2>
@@ -555,7 +512,8 @@ const Homepage = () => {
               <div className="partner-button-space">
                 <button
                   className="partner-submit-button "
-                  onClick={handleRegister}>
+                  onClick={handleRegister}
+                >
                   Get Started
                 </button>
               </div>
@@ -568,7 +526,7 @@ const Homepage = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

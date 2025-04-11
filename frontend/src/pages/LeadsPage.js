@@ -876,40 +876,6 @@ const LeadsPage = () => {
           </div>
         </div> */}
 
-        <div className="last-section  w-100 fontPoppinsRegular">
-          {/* <div className="pt-5 customMargin pb-5"> */}
-          <div className="bannerTopPadding customMargin bannerBottomPadding bannerPaddingSmall">
-            <div className="grow-your-business-color w-100 ">
-              <h2 className="m-0 fw-bold grow-your-business-text biggestText">
-                {/* <b className="leadsCtafontSize">
-                  Now that’s how we generate continues leads for you!
-                </b> */}
-                Now that’s how we generate continuous leads for you!
-              </h2>
-              {/* <br /> */}
-
-              <p className="last-spacing text-center leadsCtaTextFont m-0 topPaddingInsideSections bottomPaddingInsideSections">
-                This takes a lot of effort, time and patience … need to start
-                soon!
-              </p>
-              <div className="partner-button-space">
-                <button
-                  // className="partner-submit-button mb-2"
-                  className="get-started-main-button mb-2"
-                  onClick={handleRegister}>
-                  Get Started
-                </button>
-              </div>
-              <div className="">
-                <div className="container ">
-                  <div className="row">
-                    <div className="col-lg-12  d-flex custom-justify align-items-center"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   );
