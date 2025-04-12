@@ -1,4 +1,7 @@
 import React from "react";
+import greenUnderLine from "../../assets/underline-bg/blue-line.png";
+import "../../styles/component-styles/featurecard.css";
+import FeatureCard from "./FeatureCard";
 
 const SaaSFeatureBlock = ({
   title,
@@ -11,17 +14,14 @@ const SaaSFeatureBlock = ({
   return (
     <div
       style={{
-        padding: "0rem 1rem",
+        padding: "0rem 0rem",
         backgroundColor: "#fff",
       }}
     >
       <div
+        className="module-feature-card-grid"
         style={{
-          display: "flex",
           flexDirection: rowReverse ? "row-reverse" : "row",
-          gap: "2rem",
-          alignItems: "start",
-          justifyContent: "space-between",
         }}
       >
         {/* Description Column (1/3 width) */}
@@ -33,58 +33,26 @@ const SaaSFeatureBlock = ({
             maxWidth: "100%", // remove max 600px restriction
           }}
         >
-          <h1 style={{ padding: 0 }}>
-            <span
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: `${"center"}`,
-                fontSize: "2rem",
-                fontWeight: "bold",
-                marginBottom: "1.5rem",
-              }}
-            >
-              {title}
-            </span>
-            <hr />
-          </h1>
-          <div
-            style={{ display: "flex", flexDirection: "column", gap: "1rem" }}
-          >
+          <div className="module-feature-title">
+            <h1 style={{ padding: 0 }}>
+              <span className="module-feature-title-text">{title}</span>
+              <hr />
+            </h1>
+            <div className="module-feature-underline-frame">
+              <img
+                style={{ width: "100%", height: "100%" }}
+                src={greenUnderLine}
+                alt="underline"
+              />
+            </div>
+          </div>
+          <div className="module-feature-card-main">
             {description1.map((item, index) => (
-              <div
-                key={index}
-                style={{
-                  backgroundColor: "white",
-                  padding: "1rem",
-                  display: "flex",
-                  flexDirection: "row",
-                  gap: "2rem",
-                  alignItems: "start",
-                  boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)",
-                  borderRadius: "8px",
-                }}
-              >
-                <div
-                  style={{ height: "2.5rem", width: "2.5rem", overflow: "hidden" }}
-                >
-                  <img
-                    style={{ width: "100%", height: "100%" }}
-                    src={item.image}
-                    alt={`${item.title}`}
-                  />
-                </div>
-                <span
-                  style={{ fontSize: "1rem", fontFamily: "Popins-Regular" }}
-                >
-                  {item.title}
-                </span>
-              </div>
+              <FeatureCard key={index} icon={item.image} title={item.title} />
             ))}
           </div>
         </div>
 
-        {/* Image Column (2/3 width) */}
         <div style={{ flex: 2, display: "flex", justifyContent: "center" }}>
           <img
             src={image}

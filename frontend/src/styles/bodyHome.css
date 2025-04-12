@@ -167,7 +167,7 @@
     width: 100%;
     height: 100%;
     position: relative;
-    padding: 4rem 7.3rem;
+    padding: 3.5rem 7.3rem;
     background-color: #f7feec;
 }
 
@@ -268,7 +268,7 @@
 
 .home-main-title {
     color: black;
-    font-size: 5.5rem;
+    font-size: 5.9rem;
     /* font-family: Mistral; */
     font-family: Popins-Semibold;
     margin-top: 3rem;
@@ -297,24 +297,29 @@
 }
 
 .home-main-title-desc {
-    padding: 3rem 0 5rem 0;
+    padding: 3rem 10rem 5rem 0;
     text-align: start;
     font-family: Popins-Regular;
+    font-size: 1.5rem;
 }
 .home-main-title-tagline{
-    font-size: 1rem;
+    font-size: 1rem !important;
 }
 
 .home-main-tagline {
     display: flex;
     flex-direction: column;
+    align-items: center;
     text-align: center;
+    width: 100%;
+    padding-left: 15rem;
 }
 
 .home-main-tagline span {
-    font-size: 1.8rem;
+    font-size: 2.2rem;
     font-weight: normal;
     font-family: Popins-Regular;
+    text-align: center;
 }
 
 .home-main-tagline-text b {
@@ -340,7 +345,7 @@
 .home-desc {
     color: black;
     text-align: left;
-    font-family: Popins-Regular;
+    font-family: Popins-Semibold;
     position: relative;
     width: 100%;
     font-size: 1.3rem;
@@ -350,7 +355,7 @@
 }
 
 .home-desc:hover {
-    font-family: Popins-Medium;
+    font-family: Popins-Regular;
     /* font-weight: bold; */
 }
 
@@ -362,9 +367,9 @@
 }
 
 .home-desc span {
-    font-weight: 600;
+    font-weight: 800;
     font-size: x-large;
-    font-family: Popins-Medium;
+    font-family: Popins-Semibold;
 }
 .key-modules-grid {
     display: grid;
@@ -434,15 +439,21 @@
     .home-main-title-desc {
         padding: 5rem 0;
         font-size: 2.2rem;
-        text-align: center;
+        text-align: start;
     }
 }
 
-@media (max-width: 1400px){
+@media (max-width: 1441px){
     .home-main-title {
         color: #000;
-        font-size: 5rem;
+        font-size: 5.5rem;
         margin-top: 0;
+    }
+    .home-main-title-desc {
+        padding: 3rem 6rem 5rem 0;
+        text-align: start;
+        font-family: Popins-Regular;
+        font-size: 1.5rem;
     }
 }
 
@@ -489,13 +500,14 @@
     .home-main-title-desc {
         padding: 3rem 0;
         font-size: 1.15rem;
-        text-align: center;
+        text-align: start;
     }
 
     .home-main-tagline {
         display: flex;
         flex-direction: column;
-        text-align: center;
+        text-align: start;
+        padding-left: 10rem;
     }
 
     .home-main-tagline span {
@@ -684,13 +696,13 @@
     .home-main-title-desc {
         padding: 3rem 0;
         font-size: 0.9rem;
-        text-align: center;
+        text-align: start;
     }
 
     .home-main-tagline {
         display: flex;
         flex-direction: column;
-        text-align: center;
+        text-align: start;
     }
 
     .home-main-tagline span {
@@ -826,6 +838,7 @@
         display: flex;
         flex-direction: column;
         text-align: center;
+        padding-left: 0;
     }
 
     .home-main-tagline span {
@@ -1101,7 +1114,7 @@
 .N-Commerce>h3>strong {
     display: flex;
     font-family: Bebas-Regular;
-    font-size: 2.5rem;
+    font-size: 5rem;
     color: #fff;
     font-weight: 600;
     width: 100%;
@@ -1141,12 +1154,18 @@
     transition: 1s;
 
 }
+.module-feature-main-home{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 4rem 7rem;
+}
 
 @media (max-width:1440px) {
     .N-Commerce>h3>strong {
         display: flex;
         font-family: Bebas-Regular;
-        font-size: 2rem;
+        font-size: 5rem;
         color: #fff;
         font-weight: 600;
         width: 100%;
@@ -1195,6 +1214,12 @@
         height: 50vh;
         background-color: black;
     }
+    .module-feature-main-home{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 2rem 2rem;
+    }
 }
 
 @media (max-width:1024px) and (min-width:821px) {
@@ -1229,9 +1254,15 @@
     .N-Commerce p {
         color: #0AA9EF;
         align-self: center;
-        font-size: 35px;
+        font-size: 43px;
         width: fit-content;
         font-family: Bebas-Regular;
+    }
+    .module-feature-main-home{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 2rem 2rem;
     }
 }
 
@@ -1296,7 +1327,12 @@
         letter-spacing: -2px;
     }
 
-
+    .module-feature-main-home{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 2rem 2rem;
+    }
 }
 
 @media (max-width:768px) and (min-width:450px) {
@@ -1360,7 +1396,12 @@
         text-align: center;
         letter-spacing: -2px;
     }
-
+    .module-feature-main-home{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 2rem 2rem;
+    }
 
 }
 
@@ -1412,20 +1453,26 @@
 
     .N-Commerce h3 {
         font-family: BebasNeue-Regular;
-        font-size: 40px;
+        font-size: 80px;
         color: #fff;
         font-weight: 200;
         position: relative;
         text-align: center;
         letter-spacing: -2px;
     }
-
+    .module-feature-main-home{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 2rem 2rem;
+    }
 
 }
 
 @media (max-width:426px) and (min-width:321px) {
     .N-Commerce > h3 > strong {
-        font-size: calc(4rem + (5.3 - 4) * ((100vw - 320px) / (426 - 320)));
+        font-size: calc(2rem + (2.3 - 0) * ((100vw - 400px) / (426 - 320)));
+        letter-spacing: 1px;
     }
 }
 @media (max-width: 320px) {
@@ -1492,7 +1539,12 @@
         letter-spacing: -2px;
     }
 
-
+    .module-feature-main-home{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 2rem 2rem;
+    }
 }
 
 .one-platform-section * {
@@ -1888,7 +1940,7 @@
 .website-panel-container h2 {
     color: black;
     /* padding: 2rem; */
-    text-align: center;
+    text-align: start;
     margin-bottom: 20px;
     font-size: 3.1rem;
 }
@@ -1896,13 +1948,13 @@
 .website-panel-container h3 {
     color: black;
     /* padding: 2rem; */
-    text-align: center;
+    text-align: start;
     margin-bottom: 20px;
 }
 
 .website-panel-container p {
     font-size: 1rem;
-    text-align: center;
+    text-align: start;
     margin-bottom: 10px;
 }
 
@@ -1913,9 +1965,9 @@
     border-radius: 20px;
 }
 
-/* .website-panel-header {
-
-} */
+.website-panel-header {
+    text-align: start;
+}
 
 .website-panel-sidebar {
     background-color: white;
@@ -2026,7 +2078,7 @@
     .website-panel-container h2 {
         color: black;
         /* padding: 2rem; */
-        text-align: center;
+        text-align: start;
         margin-bottom: 20px;
         font-size: 2.9rem;
     }
@@ -2055,7 +2107,7 @@
     .website-panel-container h2 {
         color: black;
         /* padding: 2rem; */
-        text-align: center;
+        text-align: start;
         margin-bottom: 20px;
         font-size: 2.1rem;
     }

@@ -16,6 +16,7 @@ const FeatureCard = ({ title, icon }) => {
             height: "2.5rem",
             overflow: "hidden",
             objectFit: "cover",
+            whiteSpace:'none'
           }}
         >
           <img
@@ -33,6 +34,7 @@ const FeatureCard = ({ title, icon }) => {
             color: "#1a1a1a",
             margin: 0,
             fontFamily: "Popins-Regular",
+            //  whiteSpace:'nowrap'
           }}
         >
           {title.toUpperCase()}

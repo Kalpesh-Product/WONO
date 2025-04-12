@@ -682,27 +682,12 @@ const Services = () => {
       <div className="services">
         <div className="SaaS-main-heading">
           <h1>The ONLY Nomad Ecosystem SaaS Platform!</h1>
-          <span className="SaaS-main-tagline">
-            Everything that your business needs in one single platform which is
-            seamless and easy to use.
-          </span>
-          <div className="services-header-button-space">
-            <button
-              onClick={() => {
-                navigate("/login");
-                window.scrollTo({ top: 0, behavior: "instant" });
-              }}
-              className="get-started-main-button"
-            >
-              Get Started
-            </button>
-          </div>
         </div>
         <hr
           className="hrStyling zeroHeight"
           style={{ width: "100%", margin: 0 }}
         />
-        <div className="SaaS-grid-heading">
+        {/* <div className="SaaS-grid-heading">
           <h2>
             Available{" "}
             <span className="SaaS-grid-underline-container">
@@ -714,7 +699,7 @@ const Services = () => {
           <span>
             We'll keep adding as you discover gaps and issues in your business!
           </span>
-        </div>
+        </div> */}
 
         <div className="SaaS-featured-master">
           <h1>
@@ -741,7 +726,7 @@ const Services = () => {
             </div>
           </div>
         </div>
-        <hr/>
+        <hr />
 
         <div
           className="SaaS-featured-master"
@@ -752,7 +737,6 @@ const Services = () => {
             padding: "4rem 0 4rem 0",
           }}
         >
-          
           <SaaSFeatureBlock
             title="Frontend"
             description1={[
@@ -760,7 +744,10 @@ const Services = () => {
               { title: "Mobile Site", image: mobileSite },
               { title: "Payment Gateway", image: paymentGateway },
               { title: "Notifications", image: notifications },
-              // { title: "Chat", image: chatSaas },
+              { title: "Website", image: website },
+              { title: "Mobile Site", image: mobileSite },
+              { title: "Payment Gateway", image: paymentGateway },
+              { title: "Notifications", image: notifications },
             ]}
             image={FrontendImage}
             rowReverse={false}

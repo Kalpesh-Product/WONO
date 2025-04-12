@@ -138,7 +138,7 @@ const Homepage = () => {
     { id: 5, title: "Auto Leads", icon: workingCapitalFA },
     { id: 6, title: "Inventory", icon: invoicingFA },
     { id: 7, title: "Meeting Rooms", icon: meetingRoomsCM },
-    { id: 8, title: "Stay Rooms", icon:cafeOrdersCM },
+    { id: 8, title: "Stay Rooms", icon: cafeOrdersCM },
     { id: 9, title: "Events", icon: events },
     { id: 10, title: "Cafe", icon: cafeOrdersCM },
     { id: 12, title: "Human Resource", icon: employeeReportsRA },
@@ -149,7 +149,7 @@ const Homepage = () => {
     { id: 18, title: "IT", icon: fullDataAnalysisRA },
     { id: 19, title: "Assets", icon: eSignHR },
     { id: 20, title: "Tasks", icon: taskManagementHR },
-    { id: 21, title: "Visitors", icon: visitorCM},
+    { id: 21, title: "Visitors", icon: visitorCM },
     { id: 22, title: "Calendar", icon: events },
     { id: 23, title: "Notifications", icon: notifications },
     { id: 24, title: "Profile", icon: customerProfile },
@@ -162,6 +162,7 @@ const Homepage = () => {
   // mobile screen for globe responsiveness
   const ismobile = window.innerWidth < 769;
   const isTablet = window.innerWidth < 1025;
+  const isLaptop = window.innerWidth < 1441;
 
   return (
     <div className="master-container">
@@ -184,9 +185,10 @@ const Homepage = () => {
                   N-Commerce!{" "}
                 </div>
               </span>
-              <div className="row">
-                <div className="col-md-6">{/* Empty div */}</div>
-                <div className="col-12 col-lg-6 col-md-12 col-sm-12 home-main-tagline">
+              <div className="" style={{ display: "flex" }}>
+                <div style={{ width: "55%" }}></div>
+
+                <div className=" home-main-tagline">
                   <span>"Nomad Commerce"</span>
                   <span>
                     <b
@@ -221,7 +223,7 @@ const Homepage = () => {
               </div>
             </h2>
             <div className="home-main-title-desc">
-              <span style={{ fontSize: "1.5rem", fontWeight:'bold' }}>
+              <span style={{ fontWeight: "bold" }}>
                 A simple NO CODE SaaS Platform.
               </span>
               <br />
@@ -245,7 +247,7 @@ const Homepage = () => {
           >
             <span className="home-desc">
               <img src={greenRound} alt="" />
-              IT'S COMPLETELEY FREE
+              IT'S COMPLETLEY FREE
             </span>
           </div>
         </div>
@@ -256,7 +258,7 @@ const Homepage = () => {
               className="canvas"
               camera={{
                 position: [0, 0, ismobile ? 15 : 25],
-                fov: ismobile ? 40 : isTablet ? 50 : 30,
+                fov: ismobile ? 40 : isTablet ? 50 : isLaptop ? 35 : 30,
               }}
             >
               <ambientLight intensity={0.5} />
@@ -272,8 +274,8 @@ const Homepage = () => {
           <div className="N-Commerce">
             <h3>
               <strong>
-                SUPPORTING THE FOUNDATION OF N-COMMERCE <br />
-           
+                SUPPORTING THE FOUNDATION
+                <br /> OF N-COMMERCE <br />
               </strong>
             </h3>
             <p> ( “NOMAD COMMERCE” ) </p>
@@ -298,14 +300,7 @@ const Homepage = () => {
           </div>
         </div>
 
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            gap: "1rem",
-            padding: "4rem 7.3rem",
-          }}
-        >
+        <div className="module-feature-main-home">
           <div className="four-cards-header">
             <span>KEY MODULES FOR YOUR BUSINESS</span>
           </div>
@@ -314,6 +309,9 @@ const Homepage = () => {
               <FeatureCard key={item.id} icon={item.icon} title={item.title} />
             ))}
           </div>
+        </div>
+        <div style={{ padding: "0 7rem" }}>
+          <hr />
         </div>
 
         <div className="partners-section ">
@@ -394,11 +392,8 @@ const Homepage = () => {
         >
           <div className="website-panel-container">
             <div className="website-panel-header">
-              <h2>SELF-SERVE TRANSACTIONAL WEBSITE: FULL STACK!</h2>
-              <h3>
-                Tech that completes your business and has ZERO dependency with
-                NO COST!
-              </h3>
+              <h2>NO CODE SELF SERVE </h2>
+              <h3>TRANSACTIONAL WEBSITE & MOBILE SITE</h3>
               <p>
                 Free customizable website templates which are strategically
                 tailored for managing Lifestyle Businesses like Co-Working,
@@ -475,7 +470,12 @@ const Homepage = () => {
                     </div>
                   </div> */}
                   <div className="testimonial-contact">
-                    <h4 className="my-4" style={{fontFamily:'Amsterdam',fontSize:'2rem'}}>Kashif Shaikh</h4>
+                    <h4
+                      className="my-4"
+                      style={{ fontFamily: "Amsterdam", fontSize: "2rem" }}
+                    >
+                      Kashif Shaikh
+                    </h4>
                     <p className="m-0">Co-Founder & COO</p>
                     <p>BIZ Nest, Goa India </p>
                   </div>

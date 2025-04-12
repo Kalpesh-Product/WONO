@@ -113,91 +113,6 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
             alt="logo"
           />
         </div>
-        <div className="custom-navbar-menu nav-tabss">
-          {loggedIn ? (
-            <Link to={"/dashboard"} className="active">
-              {/* Dashboard */}
-              Activating Soon
-            </Link>
-          ) : (
-            <>
-              <Link
-                to="/modules"
-                className={
-                  !isAuthPage && isservices && activeTab === "Services"
-                    ? "active"
-                    : ""
-                }
-                onClick={() => {
-                  changeActiveTab("Services");
-                  window.scrollTo({ top: 0, behavior: "instant" });
-                }}
-              >
-                Modules
-              </Link>
-              <Link
-                to="/themes"
-                onClick={() => {
-                  changeActiveTab("themes");
-                  window.scrollTo({ top: 0, behavior: "instant" });
-                }}
-                className={
-                  !isAuthPage && isthempage && activeTab === "themes"
-                    ? "active"
-                    : ""
-                }
-              >
-                Themes
-              </Link>
-              <Link
-                to="/leads"
-                onClick={() => {
-                  changeActiveTab("leads");
-                  window.scrollTo({ top: 0, behavior: "instant" });
-                }}
-                className={
-                  !isAuthPage &&
-                  !isservices &&
-                  isleadspage &&
-                  activeTab === "leads"
-                    ? "active"
-                    : ""
-                }
-              >
-                Leads
-              </Link>
-              <Link
-                to="/capital"
-                className={
-                  !isAuthPage &&
-                  iscapitalpage &&
-                  !isservices &&
-                  activeTab === "capital"
-                    ? "active"
-                    : ""
-                }
-                onClick={() => {
-                  changeActiveTab("capital");
-                  window.scrollTo({ top: 0, behavior: "instant" });
-                }}
-              >
-                Capital
-              </Link>
-              <Link
-                to="/career"
-                className={
-                  !isAuthPage && activeTab === "Career" ? "active" : ""
-                }
-                onClick={() => {
-                  changeActiveTab("Career");
-                  window.scrollTo({ top: 0, behavior: "instant" });
-                }}
-              >
-                Career
-              </Link>
-            </>
-          )}
-        </div>
 
         <div className="custom-navbar-menu">
           {loggedIn ? (
@@ -219,28 +134,115 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
               </div>
             </div>
           ) : (
-            <div className="custom-navbar-buttons">
-              <a
-                href="https://wonofe.vercel.app/"
-                className="login-button"
-                onClick={() => {
-                  changeActiveTab(null);
-                  window.scrollTo({ top: 0, behavior: "instant" });
-                }}
-              >
-                SIGN IN
-              </a>
-              <Link
-                onClick={() => {
-                  changeActiveTab(null);
-                  window.scrollTo({ top: 0, behavior: "instant" });
-                }}
-                className="register-button"
-                to="/register"
-              >
-                SIGN UP
-              </Link>
-            </div>
+            <>
+              <div className="custom-navbar-menu nav-tabss">
+                {loggedIn ? (
+                  <Link to={"/dashboard"} className="active">
+                    {/* Dashboard */}
+                    Activating Soon
+                  </Link>
+                ) : (
+                  <>
+                    <Link
+                      to="/modules"
+                      className={
+                        !isAuthPage && isservices && activeTab === "Services"
+                          ? "active"
+                          : ""
+                      }
+                      onClick={() => {
+                        changeActiveTab("Services");
+                        window.scrollTo({ top: 0, behavior: "instant" });
+                      }}
+                    >
+                      Modules
+                    </Link>
+                    <Link
+                      to="/themes"
+                      onClick={() => {
+                        changeActiveTab("themes");
+                        window.scrollTo({ top: 0, behavior: "instant" });
+                      }}
+                      className={
+                        !isAuthPage && isthempage && activeTab === "themes"
+                          ? "active"
+                          : ""
+                      }
+                    >
+                      Themes
+                    </Link>
+                    <Link
+                      to="/leads"
+                      onClick={() => {
+                        changeActiveTab("leads");
+                        window.scrollTo({ top: 0, behavior: "instant" });
+                      }}
+                      className={
+                        !isAuthPage &&
+                        !isservices &&
+                        isleadspage &&
+                        activeTab === "leads"
+                          ? "active"
+                          : ""
+                      }
+                    >
+                      Leads
+                    </Link>
+                    <Link
+                      to="/capital"
+                      className={
+                        !isAuthPage &&
+                        iscapitalpage &&
+                        !isservices &&
+                        activeTab === "capital"
+                          ? "active"
+                          : ""
+                      }
+                      onClick={() => {
+                        changeActiveTab("capital");
+                        window.scrollTo({ top: 0, behavior: "instant" });
+                      }}
+                    >
+                      Capital
+                    </Link>
+                    <Link
+                      to="/career"
+                      className={
+                        !isAuthPage && activeTab === "Career" ? "active" : ""
+                      }
+                      onClick={() => {
+                        changeActiveTab("Career");
+                        window.scrollTo({ top: 0, behavior: "instant" });
+                      }}
+                    >
+                      Career
+                    </Link>
+                  </>
+                )}
+              </div>
+              <div className="custom-navbar-buttons">
+                <a
+                  href="https://wonofe.vercel.app/"
+                  className="login-button"
+                  onClick={() => {
+                    changeActiveTab(null);
+                    window.scrollTo({ top: 0, behavior: "instant" });
+                  }}
+                >
+                  SIGN IN
+                </a>
+                <Link
+                  onClick={() => {
+                    changeActiveTab(null);
+                    window.scrollTo({ top: 0, behavior: "instant" });
+                  }}
+                  className="register-button"
+                  to="/register"
+                >
+                  SIGN UP
+                </Link>
+              </div>
+            </>
           )}
         </div>
         <div className="custom-navbar-menu-toggle" onClick={handleShow}>
@@ -266,10 +268,10 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
             <>
               <Link
                 className="custom-offcanvas-link"
-                to="/saas"
+                to="/modules"
                 onClick={handleClose}
               >
-                SAAS
+                Modules
               </Link>
               <Link
                 className="custom-offcanvas-link"
