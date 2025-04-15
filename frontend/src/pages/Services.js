@@ -689,7 +689,7 @@ const Services = () => {
         </div>
 
         <div>
-          <h4 className="text-lg text-center">
+          <h4 className="text-lg text-center font-[Popins-Regular]">
             No Code Website <span className="plus-sign"></span>
             <span className="plus-sign">+</span> Booking Engine{" "}
             <span className="plus-sign">+</span> Payment Gateway{" "}
