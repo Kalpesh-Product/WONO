@@ -40,7 +40,7 @@
 
 .SaaS-main-heading {
     text-align: center;
-    padding: 4rem 0 4rem 0;
+    padding: 2rem 0 2rem 0;
 
 }
 
@@ -132,14 +132,15 @@
 
 .SaaS-features-heading {
     position: relative;
-    width: 100%;
+    font-family: 'Popins-Regular';
 }
 
 .SaaS-features-heading img {
     position: absolute;
     top: 88%;
-    left: 0%;
-    width: 46%;
+    width: 27%;
+    height: 63%;
+    left: -1%;
 }
 
 /* .SaaS-blue-underline {
@@ -231,7 +232,6 @@
 .SaaS-featured-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding: 4rem 0;
     column-gap: 2rem;
 }
 
@@ -248,7 +248,8 @@
 .SaaS-featured-grid-right img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
+    object-position: top;
 }
 
 .SaaS-grid {
@@ -728,7 +729,6 @@
         display: grid;
         grid-template-columns: 1fr;
         gap: 2rem;
-        padding: 4rem 0;
     }
 
     .SaaS-featured-grid-right {
@@ -1038,7 +1038,6 @@
         display: grid;
         grid-template-columns: 1fr;
         gap: 2rem;
-        padding: 4rem 0;
     }
 
     .SaaS-featured-grid-left {
@@ -1354,7 +1353,6 @@
         display: grid;
         grid-template-columns: 1fr;
         gap: 2rem;
-        padding: 4rem 0;
     }
 
     .SaaS-featured-grid-left {

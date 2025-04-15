@@ -73,13 +73,17 @@ import {
   businessTrendsRA,
   customerTrends,
   companyDashboard,
+  income,
+  expense,
+  reports,
+  calendar,
 } from "../assets/WONO_images/img/icon_service_color";
 import { useNavigate } from "react-router-dom";
-import TicketsImage from "../assets/WONO_images/img/images-service/apps-section-1.png";
-import HrImage from "../assets/WONO_images/img/images-service/Hr-img.png";
-import FinanceImage from "../assets/WONO_images/img/images-service/Finance-img.png";
-import SalesImage from "../assets/WONO_images/img/images-service/Sales-img.png";
-import FrontendImage from "../assets/WONO_images/img/images-service/Tech-img.png";
+import TicketsImage from "../assets/WONO_images/img/images-service/services-apps.jpeg";
+import HrImage from "../assets/WONO_images/img/images-service/hr-img-2.jpeg";
+import FinanceImage from "../assets/WONO_images/img/images-service/Finance-img.jpeg";
+import SalesImage from "../assets/WONO_images/img/images-service/Sales-img.jpeg";
+import FrontendImage from "../assets/WONO_images/img/images-service/services-frontend.jpeg";
 import Accordion from "react-bootstrap/Accordion";
 import greenUnderLine from "../assets/underline-bg/blue-line.png";
 
@@ -679,9 +683,23 @@ const Services = () => {
   const navigate = useNavigate();
   return (
     <>
-      <div className="services">
+      <div className="services flex flex-col gap-8 py-4">
         <div className="SaaS-main-heading">
-          <h1>The ONLY Nomad Ecosystem SaaS Platform!</h1>
+          <h1 className="p-0">The ONLY Nomad Ecosystem SaaS Platform!</h1>
+        </div>
+
+        <div>
+          <h4 className="text-lg text-center">
+            No Code Website <span className="plus-sign"></span>
+            <span className="plus-sign">+</span> Booking Engine{" "}
+            <span className="plus-sign">+</span> Payment Gateway{" "}
+            <span className="plus-sign">+</span> Accounting{" "}
+            <span className="plus-sign">+</span> Reports{" "}
+            <span className="plus-sign">+</span> Analytics{" "}
+            <span className="plus-sign">+</span> HR Support{" "}
+            <span className="plus-sign">+</span> Customer & Client Management{" "}
+            <span className="plus-sign">+</span> Marketing and more.
+          </h4>
         </div>
         <hr
           className="hrStyling zeroHeight"
@@ -701,32 +719,34 @@ const Services = () => {
           </span>
         </div> */}
 
-        <div className="SaaS-featured-master">
-          <h1>
-            <span className="SaaS-features-heading">
-              Real-time operations
-              <img src={greenUnderLine} alt="greenUnderLine" />
-            </span>
-          </h1>
-          <div className="SaaS-featured-grid">
-            <div className="SaaS-featured-grid-left">
-              <span>
+        <div className="SaaS-featured-master flex flex-col gap-4 py-4">
+          <div className="SaaS-features-heading flex text-2xl md:text-3xl font-bold">
+            Real-time operations
+            <img
+              src={greenUnderLine}
+              alt="greenUnderLine"
+            />
+          </div>
+          <div className="SaaS-featured-grid ">
+            <div className="SaaS-featured-grid-left flex flex-col gap-4">
+              <span className="text-2xl">
                 Manage your business in real-time across all business verticals.
               </span>
-              <br />
-              <br />
-              <span>
+              <span className="text-xl">
                 Operate your business in real-time with the micro most details
                 of inventory, bookings, accounts, analytics, leads, sales,
                 reports, tasks, logs, menu, complaints, requests etc.
               </span>
             </div>
-            <div className="SaaS-featured-grid-right">
-              <img src={TicketsImage} alt="ServiceGridImage" />
+            <div className="SaaS-featured-grid-right h-[50vh] md:h-[35vh] lg:h-[50vh] overflow-hidden">
+              <img  src={TicketsImage} alt="ServiceGridImage" />
             </div>
           </div>
         </div>
+
+        {/* ---------------------------------------------------------------------------------------------------------- */}
         <hr />
+        {/* ---------------------------------------------------------------------------------------------------------- */}
 
         <div
           className="SaaS-featured-master"
@@ -734,7 +754,6 @@ const Services = () => {
             display: "flex",
             flexDirection: "column",
             gap: "4rem",
-            padding: "4rem 0 4rem 0",
           }}
         >
           <SaaSFeatureBlock
@@ -746,8 +765,6 @@ const Services = () => {
               { title: "Notifications", image: notifications },
               { title: "Website", image: website },
               { title: "Mobile Site", image: mobileSite },
-              { title: "Payment Gateway", image: paymentGateway },
-              { title: "Notifications", image: notifications },
             ]}
             image={FrontendImage}
             rowReverse={false}
@@ -760,7 +777,8 @@ const Services = () => {
               { title: "Payroll", image: payrollHR },
               { title: "Payslips", image: payslipsHR },
               { title: "Templates", image: templatesHR },
-              // { title: "Performance", image: performanceHR },
+              { title: "Performance", image: performanceHR },
+              { title: "Budget", image: budgetFA },
             ]}
             image={HrImage}
             rowReverse={true}
@@ -769,11 +787,12 @@ const Services = () => {
           <SaaSFeatureBlock
             title="Finance"
             description1={[
-              { title: "Invoicing", image: financialReportsFA },
+              { title: "Invoicing", image: invoicingFA },
               { title: "Cashflow", image: cashflowFA },
               { title: "Projections", image: projectionsFA },
               { title: "Taxes", image: taxesFA },
-              // { title: "Reports", image: financialReportsFA },
+              { title: "Income", image: income },
+              { title: "Expense", image: expense },
             ]}
             image={FinanceImage}
             rowReverse={false}
@@ -786,7 +805,8 @@ const Services = () => {
               { title: "Email Marketing", image: emailMarketingSM },
               { title: "Social Media", image: socialMediaSM },
               { title: "Projections", image: projectionsFA },
-              // { title: "Invoicing", image: invoicingFA },
+              { title: "Invoicing", image: invoicingFA },
+              { title: "Reports", image: reports },
             ]}
             image={SalesImage}
             rowReverse={true}
@@ -799,7 +819,8 @@ const Services = () => {
               { title: "Meetings", image: meetingRoomsCM },
               { title: "Assets", image: eSignHR },
               { title: "Visitors", image: visitorCM },
-              // { title: "Tasks", image: taskManagementHR },
+              { title: "Calendar", image: calendar },
+              { title: "Profile", image: customerProfile },
             ]}
             image={TicketsImage}
             rowReverse={false}
@@ -807,10 +828,6 @@ const Services = () => {
           <hr />
         </div>
 
-        <hr
-          className="hrStyling zeroHeight"
-          style={{ width: "100%", margin: 0 }}
-        />
 
         <div className="SaaS-grid">
           <div className="SaaS-grid-accordion">

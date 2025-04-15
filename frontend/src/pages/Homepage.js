@@ -116,6 +116,7 @@ import {
   businessTrendsRA,
   customerTrends,
   companyDashboard,
+  sales,
 } from "../assets/WONO_images/img/icon_service_color";
 
 const Homepage = () => {
@@ -134,8 +135,8 @@ const Homepage = () => {
     { id: 1, title: "No Code Website", icon: website },
     { id: 2, title: "Payment Gateway", icon: paymentGateway },
     { id: 3, title: "Finance", icon: financialReportsFA },
-    { id: 4, title: "Sales", icon: financialReportsFA },
-    { id: 5, title: "Auto Leads", icon: workingCapitalFA },
+    { id: 4, title: "Sales", icon: sales },
+    { id: 5, title: "Auto Leads", icon: leadGenerationSM },
     { id: 6, title: "Inventory", icon: invoicingFA },
     { id: 7, title: "Meeting Rooms", icon: meetingRoomsCM },
     { id: 8, title: "Stay Rooms", icon: cafeOrdersCM },
@@ -166,8 +167,8 @@ const Homepage = () => {
 
   return (
     <div className="master-container">
-      <div className="home-section">
-        <div className="home-page-container">
+      <div className="flex flex-col">
+        <div className="home-page-container flex flex-col gap-4 relative bg-[#f7feec]">
           <div className="background-div">
             <div>
               <img src={""} alt={`Slide`} className="background-image" />
@@ -222,33 +223,39 @@ const Homepage = () => {
                 </div>
               </div>
             </h2>
-            <div className="home-main-title-desc">
-              <span style={{ fontWeight: "bold" }}>
-                A simple NO CODE SaaS Platform.
-              </span>
-              <br />
-              <span className="home-main-title-tagline">
-                We support businesses in small and aspiring destinations which
-                host Nomads!
-                <br />
-                SaaS Tech for Nomad supoorting businesses across the world.
-                <span style={{ fontWeight: "bold" }}>
-                  {" "}
-                  (E.g.: Co-Working, Co-Living, Hostels, Workations, Resorts,
-                  Cafes, Events etc)
+            <div className="home-main-title-desc flex flex-col gap-4 w-full">
+              <div className="w-full items-start justify-center">
+                <p
+                  className="text-[1.3rem] md:text-[2.1rem]"
+                  style={{ fontWeight: "bold" }}
+                >
+                  A simple NO CODE SaaS Platform.
+                </p>
+                <div className="flex flex-col gap-2">
+                <span className="home-main-title-tagline text-[1rem] md:text-[1.09rem]">
+                  We support businesses in small and aspiring destinations which
+                  host Nomads!
                 </span>
-              </span>
+                <span className="text-[0.9rem] md:text-[1.09rem]">
+                  SaaS Tech for Nomad supoorting businesses across the world.
+                  <span className="font-bold">
+                    (E.g.: Co-Working, Co-Living, Hostels, Workations, Resorts,
+                    Cafes, Events etc)
+                  </span>
+                </span>
+                </div>
+              </div>
             </div>
           </div>
           <div
             style={{ cursor: "pointer" }}
             onClick={() => navigate("/register")}
-            className="first-section-grid-item-2"
+            className="first-section-grid-item-2 h-40 flex justify-center"
           >
-            <span className="home-desc">
+            <div className="home-desc relative w-full flex items-center justify-center">
               <img src={greenRound} alt="" />
               IT'S COMPLETLEY FREE
-            </span>
+            </div>
           </div>
         </div>
 
@@ -258,7 +265,7 @@ const Homepage = () => {
               className="canvas"
               camera={{
                 position: [0, 0, ismobile ? 15 : 25],
-                fov: ismobile ? 40 : isTablet ? 50 : isLaptop ? 35 : 30,
+                fov: ismobile ? 40 : isTablet ? 50 : isLaptop ? 40 : 30,
               }}
             >
               <ambientLight intensity={0.5} />
@@ -274,11 +281,10 @@ const Homepage = () => {
           <div className="N-Commerce">
             <h3>
               <strong>
-                SUPPORTING THE FOUNDATION
-                <br /> OF N-COMMERCE <br />
+                SUPPORTING THE FOUNDATION OF N-COMMERCE <br />
               </strong>
             </h3>
-            <p> ( “NOMAD COMMERCE” ) </p>
+            <p> “NOMAD COMMERCE” </p>
             <div
               style={{
                 display: "flex",
@@ -325,11 +331,11 @@ const Homepage = () => {
               </div>
             </div>
             <div className="text-left customMargin_bottom  pt-0">
-              <div className="row  ">
+              <div className="row">
                 <div className="col-lg-4 col-sm-12 col-xs-12 col-md-6 text-left">
-                  <div className="m-1 border-top border-dark border-2">
+                  <div className="m-1 border-t-2 border-black">
                     <br />
-                    <h3>Global Bookings</h3>
+                    <h3 className="text-2xl">Global Bookings</h3>
                     <br />
                     <p>
                       Become a globally acceptable business where customers can
@@ -339,9 +345,9 @@ const Homepage = () => {
                 </div>
 
                 <div className="col-lg-4 col-sm-12 col-xs-12 col-md-6 text-left">
-                  <div className="m-1 border-top border-dark border-2">
+                  <div className="m-1 border-t-2 border-black">
                     <br />
-                    <h3>Systems & Processes</h3>
+                    <h3 className="text-2xl">Systems & Processes</h3>
                     <br />
                     <p>
                       Our SaaS platform has everything covered for your business
@@ -350,10 +356,10 @@ const Homepage = () => {
                   </div>
                 </div>
                 <div className="col-lg-4 col-sm-12 col-xs-12 col-md-6 text-left">
-                  <div className="m-1 border-top border-dark border-2">
+                  <div className="m-1 border-t-2 border-black">
                     <div>
                       <br />
-                      <h3>Growth & Revenues</h3>
+                      <h3 className="text-2xl">Growth & Revenues</h3>
                       <br />
                       <p>
                         Our approach is based on data and analytics to help you
@@ -454,7 +460,7 @@ const Homepage = () => {
                 <div className="col-lg-7 d-flex flex-column justify-content-between  p-0 ms-0">
                   <div className=" ">
                     {/* <h4 className="bg-danger testimonial-right-spacing"> */}
-                    <h3 className="testimonial-right-spacing">
+                    <h3 className="testimonial-right-spacing text-lg">
                       “We went from managing 3,000 sq ft to 50,000+ sq ft in the
                       most efficient and seamless manner with tech, processes,
                       data analytics, customer & employee management and due to

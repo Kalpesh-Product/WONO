@@ -29,7 +29,7 @@ const JobDetails = ({ changeActiveTab }) => {
           className="get-started section features section job-details-main"
         >
           <div className="container-jobDetails">
-            <h1 style={{ fontWeight: "500", textAlign: "center" }}>
+            <h1 className="text-3xl" style={{ fontWeight: "500", textAlign: "center" }}>
               {decodedTitle}
             </h1>
 
@@ -42,7 +42,7 @@ const JobDetails = ({ changeActiveTab }) => {
                   aria-selected="true"
                   role="tab"
                 >
-                  <h4 className="mobileFont">JOB DESCRIPTION</h4>
+                  <h4 className="mobileFont text-2xl">JOB DESCRIPTION</h4>
                 </Link>
               </li>
               <li className="nav-iem col-6" role="presentation">
@@ -54,7 +54,7 @@ const JobDetails = ({ changeActiveTab }) => {
                   tabIndex="-1"
                   role="tab"
                 >
-                  <h4 className="mobileFont">APPLY NOW</h4>
+                  <h4 className="mobileFont  text-2xl">APPLY NOW</h4>
                 </Link>
               </li>
             </ul>

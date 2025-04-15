@@ -134,8 +134,8 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
               </div>
             </div>
           ) : (
-            <>
-              <div className="custom-navbar-menu nav-tabss">
+            <div className="flex items-center gap-6" >
+              <div className="flex items-center gap-6 uppercase custom-navbar-menu nav-tabss ">
                 {loggedIn ? (
                   <Link to={"/dashboard"} className="active">
                     {/* Dashboard */}
@@ -220,29 +220,21 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
                   </>
                 )}
               </div>
-              <div className="custom-navbar-buttons">
-                <a
-                  href="https://wonofe.vercel.app/"
-                  className="login-button"
-                  onClick={() => {
-                    changeActiveTab(null);
-                    window.scrollTo({ top: 0, behavior: "instant" });
-                  }}
+              <div className="flex items-center gap-6">
+                <button
+                  onClick={() => (window.location.href = "https://wonofe.vercel.app")}
+                  className="uppercase px-4 py-2 bg-white hover:font-bold transition-all text-black rounded-full"
                 >
-                  SIGN IN
-                </a>
-                <Link
-                  onClick={() => {
-                    changeActiveTab(null);
-                    window.scrollTo({ top: 0, behavior: "instant" });
-                  }}
-                  className="register-button"
-                  to="/register"
+                  Sign in
+                </button>
+                <button
+                  onClick={() => navigate("/register")}
+                  className="uppercase px-4 py-2 bg-[#0AA9EF] hover:font-bold transition-all text-white rounded-full m-0"
                 >
-                  SIGN UP
-                </Link>
+                  Sign up
+                </button>
               </div>
-            </>
+            </div>
           )}
         </div>
         <div className="custom-navbar-menu-toggle" onClick={handleShow}>
@@ -271,7 +263,7 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
                 to="/modules"
                 onClick={handleClose}
               >
-                Modules
+                MODULES
               </Link>
               <Link
                 className="custom-offcanvas-link"

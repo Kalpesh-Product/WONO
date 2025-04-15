@@ -60,11 +60,21 @@ const Themes = () => {
       alt: "Co-Living Image",
       tag: "co-living",
     },
-    { src: CoWorkingImage_2,mockup : CoWorkingNomad, alt: "CoLivingImage_2", tag: "co-working" },
-    { src: CoWorkingImage_3,mockup : CoWorkingImage_3_Mockup, alt: "CoLivingImage_3", tag: "co-working" },
-    { src: Cafe_2,mockup : Cafe2Mockup , alt: "Cafe_2", tag: "cafe" },
-    { src: Cafe_3, mockup: Cafe3Mockup , alt: "Cafe_3", tag: "cafe" },
-    { src: Hostels,mockup: Hostels_mockup, alt: "Hostels", tag: "hostels" },
+    {
+      src: CoWorkingImage_2,
+      mockup: CoWorkingNomad,
+      alt: "CoLivingImage_2",
+      tag: "co-working",
+    },
+    {
+      src: CoWorkingImage_3,
+      mockup: CoWorkingImage_3_Mockup,
+      alt: "CoLivingImage_3",
+      tag: "co-working",
+    },
+    { src: Cafe_2, mockup: Cafe2Mockup, alt: "Cafe_2", tag: "cafe" },
+    { src: Cafe_3, mockup: Cafe3Mockup, alt: "Cafe_3", tag: "cafe" },
+    { src: Hostels, mockup: Hostels_mockup, alt: "Hostels", tag: "hostels" },
   ];
 
   const themeWebsiteGridData = [
@@ -150,13 +160,17 @@ const Themes = () => {
                     <li>Full-stack web dev tools for custom functionality</li>
                   </ul>
                 </div>
-                <div className="themePage-featured-button" style={{display:'flex',justifyContent:'start'}}>
+                <div
+                  className="themePage-featured-button"
+                  style={{ display: "flex", justifyContent: "start" }}
+                >
                   <button
                     className="get-started-main-button"
                     onClick={() => {
                       navigate("/register");
                       window.scrollTo({ top: 0, behavior: "instant" });
-                    }}>
+                    }}
+                  >
                     Get started
                   </button>
                 </div>
@@ -166,6 +180,9 @@ const Themes = () => {
                 <img src={BizNestMockup} alt="coWorking" />
               </div>
             </div>
+          </div>
+          <div className="px-[7rem]">
+            <hr />
           </div>
 
           <div className="themePage-website-features-section">
@@ -177,7 +194,8 @@ const Themes = () => {
                 {themeWebsiteGridData.map((item, index) => (
                   <div
                     key={index}
-                    className={`themePage-website-features-grid-${index + 1}`}>
+                    className={`themePage-website-features-grid-${index + 1}`}
+                  >
                     <h4>
                       <>{item.title}</>
                     </h4>
@@ -191,13 +209,17 @@ const Themes = () => {
                   onClick={() => {
                     navigate("/register");
                     window.scrollTo({ top: 0, behavior: "instant" });
-                  }}>
+                  }}
+                >
                   Get started
                 </button>
               </div>
             </div>
           </div>
 
+          <div className="px-[7rem]">
+            <hr />
+          </div>
           <div className="themePage-website-support-section">
             <div className="themePage-website-support">
               <div className="themePage-website-support-header">
@@ -226,7 +248,8 @@ const Themes = () => {
                     onClick={() => {
                       navigate("/contact");
                       window.scrollTo({ top: 0, behavior: "instant" });
-                    }}>
+                    }}
+                  >
                     Connect With us →
                   </span>
                 </div>
@@ -241,14 +264,14 @@ const Themes = () => {
                     onClick={() => {
                       navigate("/saas");
                       window.scrollTo({ top: 0, behavior: "instant" });
-                    }}>
+                    }}
+                  >
                     Browse all services →
                   </span>
                 </div>
               </div>
             </div>
           </div>
-
         </div>
       </div>
     </div>

@@ -168,122 +168,12 @@ const LeadsPage = () => {
   return (
     <div className="master-container">
       <div className="home-section">
-        {/* <div className="home-page-container">
-          <div className="background-div">
-            <div>
-              <img src={images[0]} alt={`Slide`} className="background-image" />
-            </div>
-            <div className="black-overlay"></div>
-          </div>
-          <div className="first-section-grid-item-1">
-            <h2 className="home-main-title">
-              <span className="w"> W</span>
-              <span className="O">o</span>rld
-              <span className="n">N</span>
-              <span className="O">o</span>mads
-              <br />
-            </h2>
-          </div>
-          <div className="first-section-grid-item-2">
-            <span className="home-desc">
-              We support Nomad Businesses for FREE! World’s Largest b2b SaaS
-              platform which supports Nomad Lifestyle across 25+ countries !
-            </span>
-            <div className="home-section-buttons">
-              <div>
-                <button
-                  className="home-section-register-button"
-                  onClick={handleRegister}>
-                  BUSINESS SIGN UP
-                </button>
-              </div>
-            </div>
-          </div>
-        </div> */}
-
-        {/* <div className="Globe-N-Commerce">
-          <div className="Globe" style={{ textAlign: "left" }}>
-            <Canvas
-              camera={{
-                position: [0, 0, ismobile ? 15 : 25],
-                fov: ismobile ? 90 : 40,
-              }}>
-              <ambientLight intensity={0.5} />
-              <pointLight position={[10, 10, 10]} />
-              <RotatingGlobe />
-              <OrbitControls
-                enableZoom={false}
-                minPolarAngle={Math.PI / 3}
-                maxPolarAngle={(2 * Math.PI) / 3}
-              />
-            </Canvas>
-          </div>
-          <div className="N-Commerce">
-            <h3>
-              <strong>INTRODUCING N-COMMERCE</strong>
-            </h3>
-            <p> ( “NOMAD COMMERCE” ) </p>
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-              }}>
-              <button
-                className="hero-button"
-                data-aos-delay="200"
-                onClick={() => {
-                  navigate("/register");
-                  window.scrollTo({ top: 0, behavior: "instant" });
-                }}>
-                PARTNER NOW
-              </button>
-            </div>
-          </div>
-        </div> */}
-
-        {/* <div className="four-cards-section">
-          <FourCardsComponents />
-        </div> */}
-
         <div className="leads-heading-section  fontPoppinsRegular  topPaddingAboveFirstSection bottomPaddingBelowFirstSection">
           <h2 className="FFFF mt-2">
             Generate continuos structured leads for your business with the
             support of our automated platform and trained and experienced
             resources.
           </h2>
-
-          {/* <p className="automatedPlatformFontSize">
-            Automated platform and our resources are FREE .. you pay only if you
-            start paid ads!
-          </p> */}
-          {/* <div>
-            <div className="">
-              <div className="container my-3 ">
-          
-                <div className="row   ">
-                  <div className="col-lg-9">
-                    <p className="automatedPlatformFontSize">
-                      Automated platform and our resources are FREE .. you pay
-                      only if you start paid ads!
-                    </p>
-                  </div>
-              
-                  <div className="col-lg-3  d-flex justify-content-center align-items-center">
-                    <div className="">
-                      <button
-                        className="get-started-submit-button "
-                        onClick={handleRegister}>
-                        Get Started
-                      </button>
-                    </div>
-                  </div>
-                </div>
-                <br />
-                <br />
-              </div>
-            </div>
-          </div> */}
 
           <div>
             <div className="container p-0">
@@ -302,7 +192,8 @@ const LeadsPage = () => {
                   <button
                     // className="get-started-submit-button mb-0"
                     className="get-started-main-button mt-4 mb-0"
-                    onClick={handleRegister}>
+                    onClick={handleRegister}
+                  >
                     Get Started
                   </button>
                   {/* </div> */}
@@ -407,7 +298,8 @@ const LeadsPage = () => {
                     <img
                       src={GoogleMyBusinessImage}
                       alt="tick-mark"
-                      className="WidthHeight1"></img>
+                      className="WidthHeight1"
+                    ></img>
                     {/* </div> */}
                   </div>
                   <div className="top-second">
@@ -415,7 +307,8 @@ const LeadsPage = () => {
                     <img
                       src={GoogleMapsImage}
                       alt="tick-mark"
-                      className="WidthHeight1"></img>
+                      className="WidthHeight1"
+                    ></img>
                   </div>
                   <div className="top-third">
                     {/* <div className="CenterElement WidthHeight2"> */}
@@ -423,7 +316,8 @@ const LeadsPage = () => {
                       src={GoogleSeoImage}
                       alt="tick-mark"
                       // className="smallerImageWidthHeight"></img>
-                      className="widthHeight5"></img>
+                      className="widthHeight5"
+                    ></img>
                     {/* </div> */}
                   </div>
                   <div className="top-fourth">
@@ -432,7 +326,8 @@ const LeadsPage = () => {
                       src={FacebookImage}
                       alt="tick-mark"
                       // className="smallerImageWidthHeight"></img>
-                      className="WidthHeight1"></img>
+                      className="WidthHeight1"
+                    ></img>
                     {/* </div> */}
                   </div>
                 </div>
@@ -444,28 +339,32 @@ const LeadsPage = () => {
                     <img
                       src={WebsiteImage}
                       alt="tick-mark"
-                      className="WidthHeight3"></img>
+                      className="WidthHeight3"
+                    ></img>
                   </div>
                   <div className="middle-second">
                     {" "}
                     <img
                       src={GoogleReviewsImage}
                       alt="tick-mark"
-                      className="WidthHeight3"></img>
+                      className="WidthHeight3"
+                    ></img>
                   </div>
                   <div className="middle-third">
                     {" "}
                     <img
                       src={LinkedinImage}
                       alt="tick-mark"
-                      className="WidthHeight3"></img>
+                      className="WidthHeight3"
+                    ></img>
                   </div>
                   <div className="middle-fourth">
                     {" "}
                     <img
                       src={DatabaseImage}
                       alt="tick-mark"
-                      className="WidthHeight1 leads-databseImage"></img>
+                      className="WidthHeight1 leads-databseImage"
+                    ></img>
                   </div>
                 </div>
                 {/* <div className="img-row-3  d-flex flex-row justify-content-around align-items-center w-100"> */}
@@ -477,7 +376,8 @@ const LeadsPage = () => {
                       src={InstagramImage}
                       alt="tick-mark"
                       // className="smallerImageWidthHeight"></img>
-                      className="widthHeight4"></img>
+                      className="widthHeight4"
+                    ></img>
                     {/* </div> */}
                   </div>
                   <div className="bottom-second">
@@ -486,7 +386,8 @@ const LeadsPage = () => {
                       src={FreeIntegrationsImage}
                       alt="tick-mark"
                       // className="smallerImageWidthHeight"></img>
-                      className="WidthHeight1"></img>
+                      className="WidthHeight1"
+                    ></img>
                     {/* </div> */}
                   </div>
                   <div className="bottom-third">
@@ -494,14 +395,16 @@ const LeadsPage = () => {
                     <img
                       src={CrossPromotionsImage}
                       alt="tick-mark"
-                      className="WidthHeight3"></img>
+                      className="WidthHeight3"
+                    ></img>
                   </div>
                   <div className="bottom-fourth">
                     {" "}
                     <img
                       src={WhatsappImage}
                       alt="tick-mark"
-                      className="WidthHeight1"></img>
+                      className="WidthHeight1"
+                    ></img>
                   </div>
                 </div>
               </div>
@@ -572,7 +475,8 @@ const LeadsPage = () => {
 
                       <button
                         className="get-started-main-button mt-4 "
-                        onClick={handleRegister}>
+                        onClick={handleRegister}
+                      >
                         Get Started
                       </button>
                     </div>
@@ -658,23 +562,19 @@ const LeadsPage = () => {
           <hr className="hrStyling zeroHeight" />
         </div>
 
-        <div className="better-roi-section PPPP  wono-text-spacing fontPoppinsRegular topPaddingInsideSections bottomPaddingForSections ">
-          {/* <div className="better-roi h-5  wono-text-spacing "> */}
-          <div className="container paddingRight0 paddingLeft0">
-            <div className="row ">
-              <div className="col-lg-6 ">
-                <img src={RoiImage} alt="" className="w-100" />
+        <div className="better-roi-section PPPP wono-text-spacing fontPoppinsRegular topPaddingInsideSections bottomPaddingForSections">
+          <div className="container px-0">
+            <div className="flex flex-col lg:flex-row">
+              <div className="w-full lg:w-1/2">
+                <img src={RoiImage} alt="" className="w-full" />
               </div>
-              <div className="col-lg-6 text-start  d-flex flex-column justify-content-center pe-0">
-                {/* <div className="col-lg-6 text-end  d-flex flex-column justify-content-center"> */}
-                <div className="">
-                  {/* <div className=""> */}
+              <div className="w-full lg:w-1/2 text-start flex flex-col justify-center pe-0">
+                <div>
                   <h2 className="ROIFontSize fontPoppinsRegular m-0">
                     Get better ROI from your marketing.
                   </h2>
                 </div>
-                <div className="">
-                  {/* <div className=""> */}
+                <div>
                   <p className="topPaddingInsideSections pFontAdjustment">
                     Discover all the ways that Analytics surfaces helpful
                     insights for a complete understanding of your customers —
@@ -691,30 +591,27 @@ const LeadsPage = () => {
           <hr className="hrStyling zeroHeight" />
         </div>
 
-        <div className="complete-view-section PPPP h-5 wono-text-spacing fontPoppinsRegular topPaddingForSections bottomPaddingForSections">
-          {" "}
-          <div className="container pe-0 paddingLeft0">
-            <div className="row invertDivs">
-              <div className="col-lg-6 text-start  d-flex flex-column  justify-content-center ">
-                {/* <div className="col-lg-6 text-end  d-flex flex-column justify-content-center"> */}
-                <div className="">
-                  {/* <div className=""> */}
-                  <h2 className="fontSizeCompleteView fontPoppinsRegular m-0">
-                    Get a complete view.
+        <div className="better-roi-section PPPP wono-text-spacing fontPoppinsRegular topPaddingInsideSections bottomPaddingForSections">
+          <div className="container px-0">
+            <div className="flex flex-col lg:flex-row">
+            <div className="w-full lg:w-1/2 text-start flex flex-col justify-center pe-0">
+                <div>
+                  <h2 className="ROIFontSize fontPoppinsRegular m-0">
+                  Get a complete view.
                   </h2>
                 </div>
-                <div className="">
-                  {/* <div className=""> */}
+                <div>
                   <p className="topPaddingInsideSections pFontAdjustment">
-                    Analytics helps you get a more complete understanding of how
+                  Analytics helps you get a more complete understanding of how
                     your customers engage with your business so you can deliver
                     better experiences and drive results.
                   </p>
                 </div>
               </div>
-              <div className="col-lg-6 pe-0">
-                <img src={CompleteViewImage} alt="" className="w-100" />
+              <div className="w-full lg:w-1/2">
+                <img src={CompleteViewImage} alt="" className="w-full" />
               </div>
+         
             </div>
           </div>
         </div>
@@ -723,25 +620,21 @@ const LeadsPage = () => {
           <hr className="hrStyling zeroHeight" />
         </div>
 
-        <div className="finer-points-section h-5 fontPoppinsRegular topPaddingForSections bottomPaddingForSections">
-          {" "}
-          <div className="container pe-0">
-            <div className="row ">
-              <div className="col-lg-6 pe-0">
-                <img src={FinerPointsImage} alt="" className="w-100" />
+        <div className="better-roi-section PPPP wono-text-spacing fontPoppinsRegular topPaddingInsideSections bottomPaddingForSections">
+          <div className="container px-0">
+            <div className="flex flex-col lg:flex-row">
+              <div className="w-full lg:w-1/2">
+                <img src={FinerPointsImage} alt="" className="w-full" />
               </div>
-              <div className="col-lg-6 text-start  d-flex flex-column justify-content-center">
-                {/* <div className="col-lg-6 text-end  d-flex flex-column justify-content-center"> */}
-                <div className="">
-                  {/* <div className=""> */}
-                  <h2 className="fontSizeCompleteView fontPoppinsRegular m-0">
-                    The finer points.
+              <div className="w-full lg:w-1/2 text-start flex flex-col justify-center pe-0">
+                <div>
+                  <h2 className="ROIFontSize fontPoppinsRegular m-0">
+                  The finer points.
                   </h2>
                 </div>
-                <div className="">
-                  {/* <div className=""> */}
+                <div>
                   <p className="topPaddingInsideSections pFontAdjustment">
-                    Analytics helps you understand how people use your sites and
+                  Analytics helps you understand how people use your sites and
                     apps, so you can take action to improve their experience.
                     Discover what Google Analytics can do by checking out the
                     features listed below.
@@ -751,131 +644,6 @@ const LeadsPage = () => {
             </div>
           </div>
         </div>
-
-        {/* <div className="leads-call-to-action h-5">Leads Call To Action</div> */}
-
-        {/* <div
-        className="backend-container-master"
-        style={{ backgroundColor: "white" }}>
-        <div ref={containerRef} className="backend-panel-container">
-          <h2>SaaS platforms</h2>
-          <div className="backend-panel">
-            <div className="backend-panel-sidebar">
-              <div className="backend-sidebar-header">
-                <div className="backend-sidebar-logo">
-                  <img src={BiznestLogo} alt="" />
-                </div>
-              </div>
-
-              <Nav
-                id="backend-sidebar"
-                className="flex-column p-0 backend-sidebar">
-                {Object.keys(menuTitles).map((key) => (
-                  <Nav.Link
-                    key={key}
-                    onClick={() => handleMenuSelect(key)}
-                    className={selectedMenuItem === key ? "active" : ""}>
-                    {menuTitles[key]}
-                  </Nav.Link>
-                ))}
-              </Nav>
-            </div>
-            <div className="backend-panel-right">
-              <div className="backend-panel-header">
-                <h3>{menuTitles[selectedItem]}</h3>
-              </div>
-              <div className="backend-panel-content">
-                <AnimatePresence>
-                  <motion.div
-                    key={selectedItem}
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    transition={{ duration: 0.2 }}>
-                    {renderContent(selectedMenuItem)}
-                  </motion.div>
-                </AnimatePresence>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> */}
-
-        {/* <div
-          className="website-container-master"
-          style={{ backgroundColor: "black" }}>
-          <div className="website-panel-container">
-            <div className="website-panel-header">
-              <h2>SELF-SERVE TRANSACTIONAL WEBSITE: FULL STACK!</h2>
-              <h3>
-                Tech that completes your business and has ZERO dependency with
-                NO COST!
-              </h3>
-              <p>
-                Free customizable website templates which are strategically
-                tailored for managing Lifestyle Businesses like Co-Working,
-                Co-Living, Hostels, Boutique Properties, Cafes etc
-              </p>
-            </div>
-            <div className="website-panel">
-       
-              <div
-                className={`website-panel-right ${
-                  selectedId ? "modal-open" : ""
-                }`}>
-                <div className="website-panel-content">
-                  {webimages.map((image) => (
-                    <div className="template-preview-container" key={image.id}>
-                      <img src={image.src} alt={image.alt} />
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div> */}
-
-        {/* <div className="testimonial-section  body-partners-master">
-          <div className=" pt-3">
-            <br />
-            <br />
-            <br />
-            <div className="container border-top border-dark border-3">
-              <div className="row">
-                <div className="col-lg-7 d-flex flex-column justify-content-between">
-                  <div className=" border-bottom border-dark border-3">
-                    <br />
-                    <h3>
-                      “We went from managing 3,000 sq ft to 50,000+ sq ft in the
-                      most efficient and seamless manner with tech, processes,
-                      data analytics, customer & employee management and due to
-                      an extraordinary extended team like WoNo which integrated
-                      with us and had no demands!”
-                    </h3>
-                    <br />
-                    <br />
-                  </div>
-                  <div>
-                    <h4 className="my-2">Kashif Shaikh</h4>
-                    <p className="m-0">Co-founder & COO</p>
-                    <p>BIZ Nest, Goa India </p>
-                  </div>
-                </div>
-                <div className="col-lg-5 mt-3">
-                  <img
-                    src={BiznestTestimonial}
-                    alt=""
-                    className="custom-image-biznest"
-                  />
-                </div>
-              </div>
-            </div>
-            <br />
-            <br />
-            <br />
-          </div>
-        </div> */}
-
       </div>
     </div>
   );

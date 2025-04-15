@@ -9,10 +9,12 @@ const SaaSFeatureBlock = ({
   description1,
   description2,
   image,
+  height,
   rowReverse = false,
 }) => {
   return (
     <div
+      className="cursor-pointer"
       style={{
         padding: "0rem 0rem",
         backgroundColor: "#fff",
@@ -51,16 +53,20 @@ const SaaSFeatureBlock = ({
               <FeatureCard key={index} icon={item.image} title={item.title} />
             ))}
           </div>
+            <hr />
         </div>
 
-        <div style={{ flex: 2, display: "flex", justifyContent: "center" }}>
+        <div style={{ flex: 2, display: "flex", justifyContent: "center",  }} className="border-[1px] border-gray-200 rounded-xl overflow-hidden">
           <img
             src={image}
             alt="feature"
             style={{
               width: "100%",
               maxWidth: "100%",
-              height: "auto",
+              height: height ? `${height}` : "68vh",
+              objectFit:'cover',
+              padding:'1rem',
+              objectPosition:'top'
             }}
           />
         </div>

@@ -287,7 +287,7 @@ const Jobapply = ({ jobTitle, changeActiveTab }) => {
   return (
     <div>
       <Box component="form" name="form-p" onSubmit={handleSubmit}>
-        <h2>APPLICATION FORM</h2>
+        <h2 className="text-3xl mb-4">APPLICATION FORM</h2>
         <Grid container spacing={2}>
           <Grid item md={6} xs={12} sm={6}>
             <TextField

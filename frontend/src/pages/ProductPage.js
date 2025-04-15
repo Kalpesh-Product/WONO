@@ -69,7 +69,7 @@ const ProductPage = () => {
   ];
 
   const features = [
-    "Website/ Native Apps",
+    "Website",
     "Payment Gateway",
     "Booking Engine",
     "Customer Profile",
@@ -158,7 +158,7 @@ const ProductPage = () => {
               <div className="product-page-grid">
                 <div className="product-page-left-container">
                   <div className="product-page-grid-item">
-                    <h1>Inclusions</h1>
+                    <h1 className="text-3xl">Inclusions</h1>
                     <div className="product-page-feature">
                       {features.map((feature, index) => (
                         <div key={index} className="product-page-features">
@@ -189,7 +189,7 @@ const ProductPage = () => {
                       </button>
                     </div>
                     <div className="product-page-update-text">
-                      <span>Last updated on Sep 11, 2024</span>
+                      <span>Last updated on Mar 11, 2025</span>
                       <span>Version 1.0</span>
                     </div>
                   </div>
@@ -232,7 +232,7 @@ const ProductPage = () => {
         <div className="product-page-reccomendations-section">
           <div className="product-page-reccomendations">
             <div className="product-page-reccomendations-header">
-              <h2>Few more suggestions for you</h2>
+              <h1 className="text-3xl">Few more suggestions for you</h1>
             </div>
             <div className="product-page-reccomendations-grid">
               {filteredRecommendations
@@ -240,7 +240,7 @@ const ProductPage = () => {
                 .map((rec, index) => (
                   <div
                     key={index}
-                    className="product-page-reccomendations-grid-image"
+                    className="product-page-reccomendations-grid-image rounded-xl"
                     onClick={() => handleImageClick(rec)}>
                     <img src={rec.src} alt={rec.alt} />
                   </div>
@@ -252,24 +252,6 @@ const ProductPage = () => {
                   Load More
                 </button>
               )}
-            </div>
-          </div>
-        </div>
-
-        <div className="product-page-build-section">
-          <div className="product-page-build">
-            <span>
-              BUILD FAST, SELL MORE AND GROW MORE REVENUES IMMEDIATELY WITH WoNo
-            </span>
-            <div className="product-page-build-button-space">
-              <button
-                onClick={() => {
-                  navigate("/register");
-                  window.scrollTo({ top: 0, behavior: "instant" });
-                }}
-                className="product-page-button">
-                It's FREE
-              </button>
             </div>
           </div>
         </div>

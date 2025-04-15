@@ -102,7 +102,7 @@
   .module-feature-underline-frame {
     width: 40%;
     height: 19px;
-    top: 30px;
+    top: 38px;
     left: 112px;
   }
 }
@@ -120,10 +120,10 @@
 /* <= 768px (Mobile) */
 @media (max-width: 768px) {
   .module-feature-underline-frame {
-    width: 21%;
-    top: 29px;
+    width: 46%;
+    top: 38px;
     height: 19px;
-    left: 268px;
+    left: 96px;
   }
   .module-feature-card-main {
     display: grid;

@@ -10,8 +10,8 @@ const Jobdescription = ({ decodedTitle }) => {
       {jobs ? (
         <div>
           {jobs.content.map((job, index) => (
-            <div key={index}>
-              <h1 className="m-b-2">{job.subtitle}</h1>
+            <div key={index} className="flex flex-col gap-4">
+              <h1 className="m-b-2 text-3xl">{job.subtitle}</h1>
 
               {typeof job.description === "string" ? (
                 <>

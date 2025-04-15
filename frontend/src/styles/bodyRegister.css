@@ -315,10 +315,6 @@ span.p-stepper-separator {
   padding-bottom: 1rem;
 }
 
-.account-activation-section>span,
-button {
-  margin: 1rem;
-}
 
 .account-activation-description {
   display: flex;

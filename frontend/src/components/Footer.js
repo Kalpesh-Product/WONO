@@ -130,6 +130,8 @@ const Footer = ({ changeActiveTab }) => {
           </div>
         </div>
 
+        <hr />
+
         {/* <div className="mt-3 py-5"> */}
         <div className="py-4">
           <div className="text-center px-1 footer-copyright">
