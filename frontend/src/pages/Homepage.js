@@ -190,8 +190,8 @@ const Homepage = () => {
                 <div style={{ width: "55%" }}></div>
 
                 <div className=" home-main-tagline">
-                  <span>"Nomad Commerce"</span>
-                  <span>
+                  <span className="text-[2rem] md:text-[2.7rem] lg:text-[3.1rem]">"Nomad Commerce"</span>
+                  <span className="text-[2rem] md:text-[2.7rem] lg:text-[3.1rem]">
                     <b
                       style={{
                         fontFamily: "Popins-Semibold",
