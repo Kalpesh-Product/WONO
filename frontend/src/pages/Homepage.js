@@ -399,8 +399,8 @@ const Homepage = () => {
           <div className="website-panel-container">
             <div className="website-panel-header">
               <h2>NO CODE SELF SERVE </h2>
-              <h3>TRANSACTIONAL WEBSITE & MOBILE SITE</h3>
-              <p>
+              <h3 className="text-4xl">TRANSACTIONAL WEBSITE & MOBILE SITE</h3>
+              <p className="text-2xl">
                 Free customizable website templates which are strategically
                 tailored for managing Lifestyle Businesses like Co-Working,
                 Co-Living, Hostels, Boutique Properties, Cafes etc
@@ -434,8 +434,8 @@ const Homepage = () => {
               >
                 <div className="website-panel-content">
                   {webimages.map((image) => (
-                    <div className="template-preview-container" key={image.id}>
-                      <img src={image.src} alt={image.alt} />
+                    <div className="template-preview-container overflow-hidden rounded-3xl" key={image.id}>
+                      <img className="rounded-3xl" src={image.src} alt={image.alt} />
                     </div>
                   ))}
                 </div>

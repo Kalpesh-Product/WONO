@@ -1,7 +1,7 @@
 import React from "react";
 import "../styles/capital.css";
 import "../styles/specialClasses.css";
-import DashboardImage from "../assets/WONO_images/img/capital/Finance-img.jpeg";
+import DashboardImage from "../assets/WONO_images/img/capital/Finance-2.png";
 import { Link } from "react-router-dom";
 
 const Capital = () => {
