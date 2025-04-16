@@ -190,15 +190,14 @@ const Homepage = () => {
                 <div style={{ width: "55%" }}></div>
 
                 <div className=" home-main-tagline">
-                  <span className="text-[2rem] md:text-[2.7rem] lg:text-[3.1rem]">"Nomad Commerce"</span>
-                  <span className="text-[2rem] md:text-[2.7rem] lg:text-[3.1rem]">
+                  <span className="text-[2rem] md:text-[2.5rem] lg:text-[3rem]">
                     <b
                       style={{
                         fontFamily: "Popins-Semibold",
                         fontWeight: "normal",
                       }}
                     >
-                      Wo
+                      "Wo
                     </b>
                     rld{" "}
                     <b
@@ -218,13 +217,13 @@ const Homepage = () => {
                     >
                       Co
                     </b>
-                    mmerce
+                    mmerce"
                   </span>
                 </div>
               </div>
             </h2>
             <div className="home-main-title-desc flex flex-col gap-4 w-full">
-              <div className="w-full items-start justify-center">
+              <div className="w-full gap-4 flex flex-col items-start justify-center">
                 <p
                   className="text-[1.3rem] md:text-[2.1rem]"
                   style={{ fontWeight: "bold" }}
@@ -232,17 +231,17 @@ const Homepage = () => {
                   A simple NO CODE SaaS Platform.
                 </p>
                 <div className="flex flex-col gap-2">
-                <span className="home-main-title-tagline text-[1rem] md:text-[1.09rem]">
-                  We support businesses in small and aspiring destinations which
-                  host Nomads!
-                </span>
-                <span className="text-[0.9rem] md:text-[1.09rem]">
-                  SaaS Tech for Nomad supoorting businesses across the world.
-                  <span className="font-bold">
-                    (E.g.: Co-Working, Co-Living, Hostels, Workations, Resorts,
-                    Cafes, Events etc)
+                  <span className="home-main-title-tagline text-[1rem] md:text-[1.09rem]">
+                    We support businesses in small and aspiring destinations
+                    which host Nomads!
                   </span>
-                </span>
+                  <span className="text-[0.9rem] md:text-[1.09rem]">
+                    SaaS Tech for Nomad supoorting businesses across the world.
+                    <span className="font-bold">
+                      (E.g.: Co-Working, Co-Living, Hostels, Workations,
+                      Resorts, Cafes, Events etc)
+                    </span>
+                  </span>
                 </div>
               </div>
             </div>
@@ -259,7 +258,7 @@ const Homepage = () => {
           </div>
         </div>
 
-        <div className="Globe-N-Commerce">
+        <div className="Globe-N-Commerce h-[90vh]">
           <div className="Globe" style={{ textAlign: "left" }}>
             <Canvas
               className="canvas"
@@ -399,8 +398,8 @@ const Homepage = () => {
           <div className="website-panel-container">
             <div className="website-panel-header">
               <h2>NO CODE SELF SERVE </h2>
-              <h3 className="text-4xl">TRANSACTIONAL WEBSITE & MOBILE SITE</h3>
-              <p className="text-2xl">
+              <h3 className=" text-lg md:text-4xl lg:text-[3.82rem]">TRANSACTIONAL WEBSITE & MOBILE SITE</h3>
+              <p className="text-sm md:text-md lg:text-md">
                 Free customizable website templates which are strategically
                 tailored for managing Lifestyle Businesses like Co-Working,
                 Co-Living, Hostels, Boutique Properties, Cafes etc
@@ -434,8 +433,15 @@ const Homepage = () => {
               >
                 <div className="website-panel-content">
                   {webimages.map((image) => (
-                    <div className="template-preview-container overflow-hidden rounded-3xl" key={image.id}>
-                      <img className="rounded-3xl" src={image.src} alt={image.alt} />
+                    <div
+                      className="template-preview-container overflow-hidden rounded-3xl"
+                      key={image.id}
+                    >
+                      <img
+                        className="rounded-3xl"
+                        src={image.src}
+                        alt={image.alt}
+                      />
                     </div>
                   ))}
                 </div>

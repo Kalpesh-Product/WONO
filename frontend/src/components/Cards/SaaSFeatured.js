@@ -53,7 +53,7 @@ const SaaSFeatureBlock = ({
               <FeatureCard key={index} icon={item.image} title={item.title} />
             ))}
           </div>
-            <hr />
+  
         </div>
 
         <div style={{ flex: 2, display: "flex", justifyContent: "center",  }} className="border-[1px] border-gray-200 rounded-xl overflow-hidden">
@@ -63,7 +63,7 @@ const SaaSFeatureBlock = ({
             style={{
               width: "100%",
               maxWidth: "100%",
-              height: height ? `${height}` : "68vh",
+              height: height ? `${height}` : "46vh",
               objectFit:'cover',
               padding:'1rem',
               objectPosition:'top'

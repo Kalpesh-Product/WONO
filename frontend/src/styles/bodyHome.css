@@ -359,7 +359,7 @@
 .key-modules-grid {
   display: grid;
   grid-template-columns: repeat(6, 1fr); /* Desktop: 6 columns */
-  gap: 2rem;
+  gap: 2rem 0.5rem;
 }
 
 @media (max-width: 1200px) {
@@ -1053,7 +1053,6 @@
 .Globe-N-Commerce {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  height: 100vh;
   background-color: black;
 }
 
@@ -1861,7 +1860,7 @@
   /* padding: 2rem; */
   text-align: start;
   margin-bottom: 20px;
-  font-size: 8.15rem;
+  font-size: 7.75rem;
 }
 
 .website-panel-container h3 {
@@ -1872,7 +1871,6 @@
 }
 
 .website-panel-container p {
-  font-size: 1rem;
   text-align: start;
   margin-bottom: 10px;
 }
@@ -2134,7 +2132,6 @@
   }
 
   .website-panel-header h3 {
-    font-size: 1.3rem;
     text-align: left;
   }
 
@@ -2219,12 +2216,11 @@
   }
 
   .website-panel-header h2 {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     text-align: left;
   }
 
   .website-panel-header h3 {
-    font-size: 1.2rem;
     text-align: left;
   }
 
@@ -2256,12 +2252,6 @@
     object-fit: contain;
     transition: all ease 0.3s;
     vertical-align: middle;
-  }
-}
-
-@media (max-width: 426px) and (min-width: 322px) {
-  .website-panel-header h2 {
-    font-size: calc(1.5rem + (2.5 - 1.5) * ((100vw - 321px) / (426 - 321)));
   }
 }
 @media (max-width: 321px) {

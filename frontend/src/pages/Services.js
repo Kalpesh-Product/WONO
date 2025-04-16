@@ -83,7 +83,7 @@ import TicketsImage from "../assets/WONO_images/img/images-service/services-apps
 import HrImage from "../assets/WONO_images/img/images-service/hr-img-2.jpeg";
 import FinanceImage from "../assets/WONO_images/img/images-service/Finance-img.jpeg";
 import SalesImage from "../assets/WONO_images/img/images-service/Sales-img.jpeg";
-import FrontendImage from "../assets/WONO_images/img/images-service/services-frontend.jpeg";
+import FrontendImage from "../assets/WONO_images/img/images-service/frontend-2.png";
 import Accordion from "react-bootstrap/Accordion";
 import greenUnderLine from "../assets/underline-bg/blue-line.png";
 
@@ -728,11 +728,11 @@ const Services = () => {
             />
           </div>
           <div className="SaaS-featured-grid ">
-            <div className="SaaS-featured-grid-left flex flex-col gap-4">
-              <span className="text-2xl">
+            <div className="SaaS-featured-grid-left flex flex-col gap-4 ">
+              <span className="text-3xl">
                 Manage your business in real-time across all business verticals.
               </span>
-              <span className="text-xl">
+              <span className="text-3xl">
                 Operate your business in real-time with the micro most details
                 of inventory, bookings, accounts, analytics, leads, sales,
                 reports, tasks, logs, menu, complaints, requests etc.
@@ -769,20 +769,7 @@ const Services = () => {
             image={FrontendImage}
             rowReverse={false}
           />
-          <hr />
-          <SaaSFeatureBlock
-            title="Human Resources"
-            description1={[
-              { title: "Attendance", image: attendanceHR },
-              { title: "Payroll", image: payrollHR },
-              { title: "Payslips", image: payslipsHR },
-              { title: "Templates", image: templatesHR },
-              { title: "Performance", image: performanceHR },
-              { title: "Budget", image: budgetFA },
-            ]}
-            image={HrImage}
-            rowReverse={true}
-          />
+         
           <hr />
           <SaaSFeatureBlock
             title="Finance"
@@ -795,7 +782,7 @@ const Services = () => {
               { title: "Expense", image: expense },
             ]}
             image={FinanceImage}
-            rowReverse={false}
+            rowReverse={true}
           />
           <hr />
           <SaaSFeatureBlock
@@ -809,6 +796,20 @@ const Services = () => {
               { title: "Reports", image: reports },
             ]}
             image={SalesImage}
+            rowReverse={false}
+          />
+          <hr />
+          <SaaSFeatureBlock
+            title="Human Resources"
+            description1={[
+              { title: "Attendance", image: attendanceHR },
+              { title: "Payroll", image: payrollHR },
+              { title: "Payslips", image: payslipsHR },
+              { title: "Templates", image: templatesHR },
+              { title: "Performance", image: performanceHR },
+              { title: "Budget", image: budgetFA },
+            ]}
+            image={HrImage}
             rowReverse={true}
           />
           <hr />

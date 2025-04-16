@@ -4,7 +4,7 @@ const FeatureCard = ({ title, icon }) => {
   return (
     <div
       style={{
-        padding: "1.5rem 0 1.5rem 0",
+        // padding: "1.5rem 0 1.5rem 0",
         width: "100%",
         borderRadius: "1rem",
       }}
@@ -28,7 +28,7 @@ const FeatureCard = ({ title, icon }) => {
 
         <p
           style={{
-            fontSize: "0.775rem",
+            fontSize: "0.875rem",
             fontWeight: 600,
             letterSpacing: "1px",
             color: "#1a1a1a",

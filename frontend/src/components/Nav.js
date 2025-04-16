@@ -113,29 +113,7 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
             alt="logo"
           />
         </div>
-
-        <div className="custom-navbar-menu">
-          {loggedIn ? (
-            <div className="user-profile custom-navbar-buttons">
-              <div
-                className="profile-container"
-                onClick={() => setDropdownOpen(!dropdownOpen)}
-              >
-                <img
-                  // src={user.picture}
-                  src={ProfileImage}
-                  alt={"ProfileImage"}
-                  className="profile-image"
-                />
-                <span>{username && storedUsername && "NewUser"}</span>
-                <div className={`dropdown-menu ${dropdownOpen ? "show" : ""}`}>
-                  <button onClick={handleLogout}>Logout</button>
-                </div>
-              </div>
-            </div>
-          ) : (
-            <div className="flex items-center gap-6" >
-              <div className="flex items-center gap-6 uppercase custom-navbar-menu nav-tabss ">
+        <div className="flex items-center gap-6 uppercase custom-navbar-menu nav-tabss ">
                 {loggedIn ? (
                   <Link to={"/dashboard"} className="active">
                     {/* Dashboard */}
@@ -220,6 +198,28 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
                   </>
                 )}
               </div>
+        <div className="custom-navbar-menu">
+          {loggedIn ? (
+            <div className="user-profile custom-navbar-buttons">
+              <div
+                className="profile-container"
+                onClick={() => setDropdownOpen(!dropdownOpen)}
+              >
+                <img
+                  // src={user.picture}
+                  src={ProfileImage}
+                  alt={"ProfileImage"}
+                  className="profile-image"
+                />
+                <span>{username && storedUsername && "NewUser"}</span>
+                <div className={`dropdown-menu ${dropdownOpen ? "show" : ""}`}>
+                  <button onClick={handleLogout}>Logout</button>
+                </div>
+              </div>
+            </div>
+          ) : (
+            <div className="flex items-center gap-6" >
+         
               <div className="flex items-center gap-6">
                 <button
                   onClick={() => (window.location.href = "https://wonofe.vercel.app")}
