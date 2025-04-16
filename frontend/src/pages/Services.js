@@ -739,7 +739,7 @@ const Services = () => {
               </span>
             </div>
             <div className="SaaS-featured-grid-right h-[50vh] md:h-[35vh] lg:h-[50vh] overflow-hidden">
-              <img  src={TicketsImage} alt="ServiceGridImage" />
+              <img  src={FinanceImage} alt="ServiceGridImage" />
             </div>
           </div>
         </div>
