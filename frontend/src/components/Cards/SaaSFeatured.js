@@ -38,7 +38,7 @@ const SaaSFeatureBlock = ({
         >
           <div className="module-feature-title">
             <h1 style={{ padding: 0 }}>
-              <span className="module-feature-title-text">{title}</span>
+              <span className="module-feature-title-text uppercase">{title}</span>
               <hr />
             </h1>
             <div className="module-feature-underline-frame">
@@ -63,7 +63,7 @@ const SaaSFeatureBlock = ({
             alt="feature"
             style={{
               width: "100%",
-              height: height ? `${height}` : "52vh",
+              height: height ? height : "60vh",
               objectFit: imageFit? imageFit : 'cover',
               padding:'1rem',
               objectPosition:'top'
