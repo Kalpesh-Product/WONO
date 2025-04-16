@@ -72,7 +72,7 @@
 .module-feature-card-main {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1rem;
+  gap:  2rem;
 }
 
 /* Wrap vertically below 1440px */

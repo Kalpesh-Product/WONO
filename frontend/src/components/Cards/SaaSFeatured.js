@@ -8,6 +8,7 @@ const SaaSFeatureBlock = ({
   underlineImg,
   description1,
   description2,
+  imageFit,
   image,
   height,
   rowReverse = false,
@@ -32,7 +33,7 @@ const SaaSFeatureBlock = ({
             flex: 1,
             fontSize: "1rem",
             lineHeight: "1.6",
-            maxWidth: "100%", // remove max 600px restriction
+            maxWidth: "100%", 
           }}
         >
           <div className="module-feature-title">
@@ -48,7 +49,7 @@ const SaaSFeatureBlock = ({
               />
             </div>
           </div>
-          <div className="module-feature-card-main">
+          <div className="module-feature-card-main py-4">
             {description1.map((item, index) => (
               <FeatureCard key={index} icon={item.image} title={item.title} />
             ))}
@@ -56,15 +57,14 @@ const SaaSFeatureBlock = ({
   
         </div>
 
-        <div style={{ flex: 2, display: "flex", justifyContent: "center",  }} className="border-[1px] border-gray-200 rounded-xl overflow-hidden">
+        <div style={{ flex: 2, display: "flex", justifyContent: "center",  }} className="border-[1px] border-gray-200 rounded-xl overflow-hidden w-[120%]">
           <img
             src={image}
             alt="feature"
             style={{
               width: "100%",
-              maxWidth: "100%",
-              height: height ? `${height}` : "46vh",
-              objectFit:'cover',
+              height: height ? `${height}` : "52vh",
+              objectFit: imageFit? imageFit : 'cover',
               padding:'1rem',
               objectPosition:'top'
             }}
