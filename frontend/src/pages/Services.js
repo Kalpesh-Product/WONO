@@ -767,7 +767,7 @@ const Services = () => {
               { title: "Mobile Site", image: mobileSite },
             ]}
             image={FrontendImage}
-            imageFit={"cover"}
+            imageFit={"fill"}
             rowReverse={false}
           />
          
