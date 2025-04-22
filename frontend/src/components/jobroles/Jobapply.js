@@ -227,6 +227,7 @@ const Jobapply = ({ jobTitle, changeActiveTab }) => {
         data.append("personality", formvalues.personality);
         data.append("relocateGoa", formvalues.relocateGoa);
         data.append("location", formvalues.location);
+        data.append("linkedInProfile", formvalues.linkedInProfile);
         data.append("resume", formvalues.resume);
         data.append("skills", formvalues.skills);
         data.append("specialexperience", formvalues.specialexperience);
