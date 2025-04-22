@@ -92,7 +92,7 @@ const Jobrole = () => {
       jobs: [
         {
           id: 9,
-          title: "Sr.Manager Sales & Business Development",
+          title: "Sr.Manager Sales & Bussiness Development",
           type: "Full-Time",
           mode: "On-Site",
           location: "Goa",
@@ -116,7 +116,7 @@ const Jobrole = () => {
       jobs: [
         {
           id: 11,
-          title: "- APPLY NOW",
+          title: "Internships Across Departments",
           subtitle: "*Mention your applying department in message box",
           type: "Internships",
           mode: "On-Site",

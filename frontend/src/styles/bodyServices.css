@@ -1184,12 +1184,20 @@
     align-items: center;
     justify-content: center;
   }
+
+  .SaaS-features-heading img {
+    position: absolute;
+    top: 88%;
+    width: 81%;
+    height: 63%;
+    left: -1%;
+  }
   .module-feature-underline-frame {
-    width: 23%;
+    width: 43%;
     height: 19px;
     top: 35px;
-    left: 297px;
-}
+    left: 97px;
+  }
 
   .services:not(:last-child) {
     padding: 0 1.9rem;
