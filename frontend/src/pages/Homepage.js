@@ -91,7 +91,7 @@ import {
   sales,
   calendarLine,
   eventsLine,
-  stayRoom
+  stayRoom,
 } from "../assets/WONO_images/img/icon_service_color";
 
 const Homepage = () => {
@@ -162,7 +162,10 @@ const Homepage = () => {
                 </div>
               </span>
               <div className="" style={{ display: "flex" }}>
-                <div className="home-main-tagline-sentinel" style={{ width: "55%" }}></div>
+                <div
+                  className="home-main-tagline-sentinel"
+                  style={{ width: "55%" }}
+                ></div>
 
                 <div className=" home-main-tagline">
                   <span className="text-[2rem] md:text-[2.5rem] lg:text-[3rem]">
@@ -239,7 +242,7 @@ const Homepage = () => {
               className="canvas"
               camera={{
                 position: [0, 0, ismobile ? 15 : 25],
-                fov: ismobile ? 40 : isTablet ? 50 : isLaptop ? 40 : 30,
+                fov: ismobile ? 40 : isTablet ? 50 : isLaptop ? 45 : 30,
               }}
             >
               <ambientLight intensity={0.5} />
@@ -298,9 +301,9 @@ const Homepage = () => {
           <div className="m-0 container  w-100 ">
             <div className="">
               <div className="customMargin_top">
-                <div className="one-platform-section">
-                  <h2>One Partner Platform,</h2>
-                  <h2>Infinite possibilities and opportunities!</h2>
+                <div className="one-platform-section uppercase flex flex-col gap-2">
+                  <h2 className="text-3xl md:text-6xl lg:text-[6rem]">One Partner Platform,</h2>
+                  <h2 className="text-xl md:text-[2.2rem] lg:text-[3.5rem]">Infinite possibilities and opportunities!</h2>
                 </div>
               </div>
             </div>
@@ -373,7 +376,9 @@ const Homepage = () => {
           <div className="website-panel-container">
             <div className="website-panel-header">
               <h2>NO CODE SELF SERVE </h2>
-              <h3 className=" text-lg text-start md:text-start lg:text-center md:text-[2.3rem] lg:text-[3.82rem]">TRANSACTIONAL WEBSITE & MOBILE SITE</h3>
+              <h3 className=" text-lg text-start md:text-start lg:text-center md:text-[2.3rem] lg:text-[3.82rem]">
+                TRANSACTIONAL WEBSITE & MOBILE SITE
+              </h3>
               <p className="text-sm md:text-[1.7rem] lg:text-[1.7rem] lg:leading-8 md:leading-8 text-start md:text-start lg:text-center">
                 Free customizable website templates which are strategically
                 tailored for managing Lifestyle Businesses like Co-Working,

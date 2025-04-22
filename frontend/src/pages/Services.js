@@ -82,26 +82,27 @@ const Services = () => {
         </div> */}
 
         <div className="SaaS-featured-master flex flex-col gap-4 py-4">
-          <div className="SaaS-features-heading flex text-3xl md:text-3xl font-bold">
-            Real-time operations
-            <img
-              src={greenUnderLine}
-              alt="greenUnderLine"
-            />
-          </div>
           <div className="SaaS-featured-grid ">
             <div className="SaaS-featured-grid-left flex flex-col gap-4 ">
-              <span className="text-2xl md:text-3xl lg:text:3xl">
+              <div className="SaaS-features-heading flex text-3xl md:text-3xl font-bold">
+                Real-time operations
+                <img src={greenUnderLine} alt="greenUnderLine" />
+              </div>
+              <span className="text-lg md:text-xl lg:text:2xl">
                 Manage your business in real-time across all business verticals.
               </span>
-              <span className="text-2xl md:text-3xl lg:text:3xl">
+              <span className="text-lg md:text-xl lg:text:2xl">
                 Operate your business in real-time with the micro most details
                 of inventory, bookings, accounts, analytics, leads, sales,
                 reports, tasks, logs, menu, complaints, requests etc.
               </span>
             </div>
             <div className="SaaS-featured-grid-right h-[50vh] md:h-[35vh] lg:h-[50vh] overflow-hidden border-gray-100 border-[1px] p-2 rounded-lg">
-              <img className="h-full w-full object-cover"  src={FinanceImage} alt="ServiceGridImage" />
+              <img
+                className="h-full w-full object-cover"
+                src={FinanceImage}
+                alt="ServiceGridImage"
+              />
             </div>
           </div>
         </div>
@@ -134,8 +135,7 @@ const Services = () => {
             imagePosition={"left top"}
             rowReverse={false}
           />
-         
-          
+
           <SaaSFeatureBlock
             title="Finance"
             description1={[
@@ -149,7 +149,7 @@ const Services = () => {
             image={FinanceImage}
             rowReverse={true}
           />
-          
+
           <SaaSFeatureBlock
             title="Sales"
             description1={[
@@ -163,7 +163,7 @@ const Services = () => {
             image={SalesImage}
             rowReverse={false}
           />
-          
+
           <SaaSFeatureBlock
             title="Human Resources"
             description1={[
@@ -177,7 +177,7 @@ const Services = () => {
             image={HrImage}
             rowReverse={true}
           />
-          
+
           <SaaSFeatureBlock
             title="Apps"
             description1={[
@@ -191,9 +191,7 @@ const Services = () => {
             image={TicketsImage}
             rowReverse={false}
           />
-          
         </div>
-
 
         {/* <div className="SaaS-grid">
           <div className="SaaS-grid-accordion">
