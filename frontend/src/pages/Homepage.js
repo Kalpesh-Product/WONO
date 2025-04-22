@@ -91,8 +91,7 @@ import {
   sales,
   calendarLine,
   eventsLine,
-  stayRoom,
-  stayRoom,
+  stayRoom
 } from "../assets/WONO_images/img/icon_service_color";
 
 const Homepage = () => {
