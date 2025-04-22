@@ -234,7 +234,14 @@ const Themes = () => {
                     Watch tutorials and read detailed articles in Wono help
                     center
                   </p>
-                  <span>Go to FAQ →</span>
+                  <span
+                    onClick={() => {
+                      navigate("/faqs");
+                      window.scrollTo({ top: 0, behavior: "instant" });
+                    }}
+                  >
+                    Go to FAQ →
+                  </span>
                 </div>
                 <div className="themePage-website-support-grid-1">
                   <h2>
@@ -262,7 +269,7 @@ const Themes = () => {
                   </p>
                   <span
                     onClick={() => {
-                      navigate("/saas");
+                      navigate("/modules");
                       window.scrollTo({ top: 0, behavior: "instant" });
                     }}
                   >

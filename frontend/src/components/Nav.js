@@ -71,6 +71,7 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
 
   const handleRegister = () => {
     navigate("/register");
+    window.scrollTo({ top: 0, behavior: "instant" });
     setShow(false);
   };
 
@@ -114,90 +115,90 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
           />
         </div>
         <div className="flex items-center gap-6 uppercase custom-navbar-menu nav-tabss ">
-                {loggedIn ? (
-                  <Link to={"/dashboard"} className="active">
-                    {/* Dashboard */}
-                    Activating Soon
-                  </Link>
-                ) : (
-                  <>
-                    <Link
-                      to="/modules"
-                      className={
-                        !isAuthPage && isservices && activeTab === "Services"
-                          ? "active"
-                          : ""
-                      }
-                      onClick={() => {
-                        changeActiveTab("Services");
-                        window.scrollTo({ top: 0, behavior: "instant" });
-                      }}
-                    >
-                      Modules
-                    </Link>
-                    <Link
-                      to="/themes"
-                      onClick={() => {
-                        changeActiveTab("themes");
-                        window.scrollTo({ top: 0, behavior: "instant" });
-                      }}
-                      className={
-                        !isAuthPage && isthempage && activeTab === "themes"
-                          ? "active"
-                          : ""
-                      }
-                    >
-                      Themes
-                    </Link>
-                    <Link
-                      to="/leads"
-                      onClick={() => {
-                        changeActiveTab("leads");
-                        window.scrollTo({ top: 0, behavior: "instant" });
-                      }}
-                      className={
-                        !isAuthPage &&
-                        !isservices &&
-                        isleadspage &&
-                        activeTab === "leads"
-                          ? "active"
-                          : ""
-                      }
-                    >
-                      Leads
-                    </Link>
-                    <Link
-                      to="/capital"
-                      className={
-                        !isAuthPage &&
-                        iscapitalpage &&
-                        !isservices &&
-                        activeTab === "capital"
-                          ? "active"
-                          : ""
-                      }
-                      onClick={() => {
-                        changeActiveTab("capital");
-                        window.scrollTo({ top: 0, behavior: "instant" });
-                      }}
-                    >
-                      Capital
-                    </Link>
-                    <Link
-                      to="/career"
-                      className={
-                        !isAuthPage && activeTab === "Career" ? "active" : ""
-                      }
-                      onClick={() => {
-                        changeActiveTab("Career");
-                        window.scrollTo({ top: 0, behavior: "instant" });
-                      }}
-                    >
-                      Career
-                    </Link>
-                  </>
-                )}
-              </div>
+          {loggedIn ? (
+            <Link to={"/dashboard"} className="active">
+              {/* Dashboard */}
+              Activating Soon
+            </Link>
+          ) : (
+            <>
+              <Link
+                to="/modules"
+                className={
+                  !isAuthPage && isservices && activeTab === "Services"
+                    ? "active"
+                    : ""
+                }
+                onClick={() => {
+                  changeActiveTab("Services");
+                  window.scrollTo({ top: 0, behavior: "instant" });
+                }}
+              >
+                Modules
+              </Link>
+              <Link
+                to="/themes"
+                onClick={() => {
+                  changeActiveTab("themes");
+                  window.scrollTo({ top: 0, behavior: "instant" });
+                }}
+                className={
+                  !isAuthPage && isthempage && activeTab === "themes"
+                    ? "active"
+                    : ""
+                }
+              >
+                Themes
+              </Link>
+              <Link
+                to="/leads"
+                onClick={() => {
+                  changeActiveTab("leads");
+                  window.scrollTo({ top: 0, behavior: "instant" });
+                }}
+                className={
+                  !isAuthPage &&
+                  !isservices &&
+                  isleadspage &&
+                  activeTab === "leads"
+                    ? "active"
+                    : ""
+                }
+              >
+                Leads
+              </Link>
+              <Link
+                to="/capital"
+                className={
+                  !isAuthPage &&
+                  iscapitalpage &&
+                  !isservices &&
+                  activeTab === "capital"
+                    ? "active"
+                    : ""
+                }
+                onClick={() => {
+                  changeActiveTab("capital");
+                  window.scrollTo({ top: 0, behavior: "instant" });
+                }}
+              >
+                Capital
+              </Link>
+              <Link
+                to="/career"
+                className={
+                  !isAuthPage && activeTab === "Career" ? "active" : ""
+                }
+                onClick={() => {
+                  changeActiveTab("Career");
+                  window.scrollTo({ top: 0, behavior: "instant" });
+                }}
+              >
+                Career
+              </Link>
+            </>
+          )}
+        </div>
         <div className="custom-navbar-menu">
           {loggedIn ? (
             <div className="user-profile custom-navbar-buttons">
@@ -218,17 +219,22 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
               </div>
             </div>
           ) : (
-            <div className="flex items-center gap-6" >
-         
+            <div className="flex items-center gap-6">
               <div className="flex items-center gap-6">
                 <button
-                  onClick={() => (window.location.href = "https://wonofe.vercel.app")}
+                  onClick={() => {
+                    window.location.href = "https://wonofe.vercel.app";
+                    window.scrollTo({ top: 0, behavior: "instant" });
+                  }}
                   className="uppercase px-4 py-2 bg-white hover:font-bold transition-all text-black rounded-full"
                 >
                   Sign in
                 </button>
                 <button
-                  onClick={() => navigate("/register")}
+                  onClick={() => {
+                    navigate("/register");
+                    window.scrollTo({ top: 0, behavior: "instant" });
+                  }}
                   className="uppercase px-4 py-2 bg-[#0AA9EF] hover:font-bold transition-all text-white rounded-full m-0"
                 >
                   Sign up

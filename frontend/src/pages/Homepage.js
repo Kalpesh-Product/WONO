@@ -295,7 +295,7 @@ const Homepage = () => {
           <div className="m-0 container  w-100 ">
             <div className="">
               <div className="customMargin_top">
-                <div className="one-platform-section uppercase flex flex-col gap-2">
+                <div className="one-platform-section uppercase flex flex-col gap-4">
                   <h2 className="text-3xl md:text-6xl lg:text-[6rem]">One Partner Platform,</h2>
                   <h2 className="text-xl md:text-[2.2rem] lg:text-[3.5rem]">Infinite possibilities and opportunities!</h2>
                 </div>
@@ -366,12 +366,12 @@ const Homepage = () => {
           className="website-container-master"
           style={{ backgroundColor: "black" }}>
           <div className="website-panel-container">
-            <div className="website-panel-header">
+            <div className="website-panel-header flex flex-col gap-3">
               <h2>NO CODE SELF SERVE </h2>
               <h3 className=" text-lg text-start md:text-start lg:text-center md:text-[2.3rem] lg:text-[3.82rem]">
                 TRANSACTIONAL WEBSITE & MOBILE SITE
               </h3>
-              <p className="text-sm md:text-[1.7rem] lg:text-[1.7rem] lg:leading-8 md:leading-8 text-start md:text-start lg:text-center">
+              <p className="text-sm md:text-[1.3rem] lg:text-[1.7rem] lg:leading-8 md:leading-8 text-start md:text-start lg:text-center">
                 Free customizable website templates which are strategically
                 tailored for managing Lifestyle Businesses like Co-Working,
                 Co-Living, Hostels, Boutique Properties, Cafes etc
