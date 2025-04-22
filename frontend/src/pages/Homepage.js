@@ -16,34 +16,6 @@ import greenRound from "../assets/underline-bg/blue-circle.png";
 import BiznestTestimonial from "../assets/testimonials/Kashif_Edit.png";
 import FeatureCard from "../components/Cards/FeatureCard";
 import {
-  FaGlobe,
-  FaCreditCard,
-  FaMoneyBillWave,
-  FaChartLine,
-  FaRobot,
-  FaBoxes,
-  FaDoorOpen,
-  FaBed,
-  FaCalendarCheck,
-  FaCoffee,
-  FaUsers,
-  FaUserTie,
-  FaRegClock,
-  FaFileInvoiceDollar,
-  FaBullhorn,
-  FaBrain,
-  FaUserShield,
-  FaNetworkWired,
-  FaLaptopHouse,
-  FaTasks,
-  FaUserFriends,
-  FaCalendarAlt,
-  FaBell,
-  FaUserCircle,
-  FaTicketAlt,
-  FaChartPie,
-} from "react-icons/fa";
-import {
   androidAppSaas,
   bookingsSaas,
   chatSaas,
@@ -190,7 +162,7 @@ const Homepage = () => {
                 </div>
               </span>
               <div className="" style={{ display: "flex" }}>
-                <div style={{ width: "55%" }}></div>
+                <div className="home-main-tagline-sentinel" style={{ width: "55%" }}></div>
 
                 <div className=" home-main-tagline">
                   <span className="text-[2rem] md:text-[2.5rem] lg:text-[3rem]">
@@ -226,9 +198,9 @@ const Homepage = () => {
               </div>
             </h2>
             <div className="home-main-title-desc flex flex-col gap-4 w-full">
-              <div className="w-full gap-4 flex flex-col items-start justify-center">
+              <div className="w-full gap-4 flex flex-col items-start justify-center text-start md:text-center lg:text-start">
                 <p
-                  className="text-[1.3rem] md:text-[2.1rem]"
+                  className="text-start w-full md:text-center lg:text-start text-[1.3rem] md:text-[2.1rem]"
                   style={{ fontWeight: "bold" }}
                 >
                   A simple NO CODE SaaS Platform.
@@ -401,8 +373,8 @@ const Homepage = () => {
           <div className="website-panel-container">
             <div className="website-panel-header">
               <h2>NO CODE SELF SERVE </h2>
-              <h3 className=" text-lg md:text-4xl lg:text-[3.82rem]">TRANSACTIONAL WEBSITE & MOBILE SITE</h3>
-              <p className="text-sm md:text-[1.7rem] lg:text-[1.7rem] lg:leading-8 md:leading-8 text-center">
+              <h3 className=" text-lg text-start md:text-start lg:text-center md:text-[2.3rem] lg:text-[3.82rem]">TRANSACTIONAL WEBSITE & MOBILE SITE</h3>
+              <p className="text-sm md:text-[1.7rem] lg:text-[1.7rem] lg:leading-8 md:leading-8 text-start md:text-start lg:text-center">
                 Free customizable website templates which are strategically
                 tailored for managing Lifestyle Businesses like Co-Working,
                 Co-Living, Hostels, Boutique Properties, Cafes etc
@@ -469,7 +441,7 @@ const Homepage = () => {
                 <div className="col-lg-7 d-flex flex-column justify-content-between  p-0 ms-0">
                   <div className=" ">
                     {/* <h4 className="bg-danger testimonial-right-spacing"> */}
-                    <h3 className="testimonial-right-spacing text-lg">
+                    <h3 className="testimonial-right-spacing text-lg md:text-xl lg:text-2xl">
                       “We went from managing 3,000 sq ft to 50,000+ sq ft in the
                       most efficient and seamless manner with tech, processes,
                       data analytics, customer & employee management and due to

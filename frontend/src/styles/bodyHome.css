@@ -289,7 +289,6 @@
 
 .home-main-title-desc {
   padding: 3rem 0rem 3rem 0;
-  text-align: start;
   font-family: Popins-Regular;
   font-size: 1.5rem;
 }
@@ -423,7 +422,6 @@
   .home-main-title-desc {
     padding: 5rem 0;
     font-size: 2.2rem;
-    text-align: start;
   }
 }
 
@@ -435,7 +433,6 @@
   }
   .home-main-title-desc {
     padding: 2rem 0rem 2rem 0;
-    text-align: start;
     font-family: Popins-Regular;
     font-size: 1.5rem;
   }
@@ -485,7 +482,6 @@
   .home-main-title-desc {
     padding: 3rem 0;
     font-size: 1.15rem;
-    text-align: start;
   }
 
   .home-main-tagline {
@@ -612,6 +608,32 @@
     flex-direction: column;
     text-align: center;
   }
+  .home-main-tagline-sentinel {
+    display: none;
+  }
+  .home-desc {
+    font-family: Popins-Medium;
+    padding: 1rem;
+    text-align: center;
+    font-size: 1.4rem;
+  }
+  .home-desc img {
+    position: absolute;
+    top: -35%;
+    left: 30%;
+    width: 39%;
+  }
+  .home-main-tagline {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    padding-left: 0rem;
+  }
+  .home-main-tagline span {
+    font-size: 2.2rem;
+    font-weight: 200;
+    padding-right: 2rem;
+  }
 
   .home-main-title-svg img {
     position: absolute;
@@ -673,7 +695,6 @@
   .home-main-title-desc {
     padding: 3rem 0;
     font-size: 0.9rem;
-    text-align: start;
   }
 
   .home-main-tagline {
@@ -736,7 +757,7 @@
   }
 
   .home-desc span {
-    font-size: 1rem;
+    font-size: 2rem;
   }
 
   .form-card {
@@ -806,7 +827,6 @@
   .home-main-title-desc {
     padding: 1rem 0;
     font-size: 0.8rem;
-    text-align: start;
   }
 
   .home-main-tagline {
@@ -951,7 +971,6 @@
   .home-main-title-desc {
     padding: 1rem 0;
     font-size: 0.8rem;
-    text-align: start;
   }
 
   .home-main-tagline {
@@ -1217,7 +1236,7 @@
   .module-feature-main-home {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 3rem;
     padding: 2rem 2rem;
   }
 }
@@ -2061,7 +2080,7 @@
     /* padding: 2rem; */
     text-align: start;
     margin-bottom: 20px;
-    font-size: 2.1rem;
+    font-size: 4.5rem;
   }
 
   .website-panel-container h3 {
