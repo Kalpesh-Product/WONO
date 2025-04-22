@@ -402,7 +402,7 @@ const Homepage = () => {
             <div className="website-panel-header">
               <h2>NO CODE SELF SERVE </h2>
               <h3 className=" text-lg md:text-4xl lg:text-[3.82rem]">TRANSACTIONAL WEBSITE & MOBILE SITE</h3>
-              <p className="text-sm md:text-md lg:text-md">
+              <p className="text-sm md:text-[1.7rem] lg:text-[1.7rem] lg:leading-8 md:leading-8 text-center">
                 Free customizable website templates which are strategically
                 tailored for managing Lifestyle Businesses like Co-Working,
                 Co-Living, Hostels, Boutique Properties, Cafes etc
@@ -437,11 +437,11 @@ const Homepage = () => {
                 <div className="website-panel-content">
                   {webimages.map((image) => (
                     <div
-                      className="template-preview-container overflow-hidden rounded-3xl"
+                      className="template-preview-container overflow-hidden rounded-xl"
                       key={image.id}
                     >
                       <img
-                        className="rounded-3xl"
+                        className="rounded-xl"
                         src={image.src}
                         alt={image.alt}
                       />
