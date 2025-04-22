@@ -113,6 +113,7 @@
   font-family: Caveat;
   src: url("../assets/WONO_images/img/fonts/Caveat.ttf");
 }
+
 @font-face {
   font-family: Amsterdam;
   src: url("../assets/WONO_images/img/fonts/amsterdam.ttf");
@@ -259,7 +260,8 @@
 
 .home-main-title {
   color: black;
-  font-size: 6.3rem;
+  /* font-size: 6.3rem; */
+  font-size: 6.05rem;
   /* font-family: Mistral; */
   font-family: Popins-Semibold;
   margin-top: 3rem;
@@ -355,27 +357,32 @@
   font-size: x-large;
   font-family: Popins-Semibold;
 }
+
 .key-modules-grid {
   display: grid;
-  grid-template-columns: repeat(6, 1fr); /* Desktop: 6 columns */
+  grid-template-columns: repeat(6, 1fr);
+  /* Desktop: 6 columns */
   gap: 2rem 0.5rem;
 }
 
 @media (max-width: 1200px) {
   .key-modules-grid {
-    grid-template-columns: repeat(4, 1fr); /* Medium screens: 4 columns */
+    grid-template-columns: repeat(4, 1fr);
+    /* Medium screens: 4 columns */
   }
 }
 
 @media (max-width: 768px) {
   .key-modules-grid {
-    grid-template-columns: repeat(2, 1fr); /* Tablets: 2 columns */
+    grid-template-columns: repeat(2, 1fr);
+    /* Tablets: 2 columns */
   }
 }
 
 @media (max-width: 480px) {
   .key-modules-grid {
-    grid-template-columns: repeat(1, 1fr); /* Mobile: 1 column */
+    grid-template-columns: repeat(1, 1fr);
+    /* Mobile: 1 column */
   }
 }
 
@@ -431,6 +438,7 @@
     font-size: 5.5rem;
     margin-top: 0;
   }
+
   .home-main-title-desc {
     padding: 2rem 0rem 2rem 0;
     font-family: Popins-Regular;
@@ -440,9 +448,7 @@
 
 @media (max-width: 1400px) and (min-width: 1025px) {
   .home-main-title {
-    font-size: calc(
-      4.2rem + (5 - 4.2) * ((100vw - 1025px) / (1400 - 1025) * 1)
-    );
+    font-size: calc(4.2rem + (5 - 4.2) * ((100vw - 1025px) / (1400 - 1025) * 1));
   }
 }
 
@@ -931,6 +937,7 @@
     font-size: calc(2.5rem + (2.6 - 2) * ((100vw - 320px) / (450 - 320)));
   }
 }
+
 @media (max-width: 320px) {
   .home-page-container {
     grid-template-columns: 1fr;
@@ -1094,7 +1101,7 @@
   padding: 0 8rem 0 1rem;
 }
 
-.N-Commerce > h3 > strong {
+.N-Commerce>h3>strong {
   display: flex;
   font-family: Bebas-Regular;
   font-size: 3rem;
@@ -1136,6 +1143,7 @@
   color: #0875e2;
   transition: 1s;
 }
+
 .module-feature-main-home {
   display: flex;
   flex-direction: column;
@@ -1144,7 +1152,7 @@
 }
 
 @media (max-width: 1440px) {
-  .N-Commerce > h3 > strong {
+  .N-Commerce>h3>strong {
     display: flex;
     font-family: Bebas-Regular;
     font-size: 3rem;
@@ -1170,7 +1178,7 @@
     font-size: 5rem;
   }
 
-  .N-Commerce > h3 > strong {
+  .N-Commerce>h3>strong {
     display: flex;
     font-family: Bebas-Regular;
     font-size: 2rem;
@@ -1189,6 +1197,7 @@
     height: 50vh;
     background-color: black;
   }
+
   .module-feature-main-home {
     display: flex;
     flex-direction: column;
@@ -1198,7 +1207,7 @@
 }
 
 @media (max-width: 1024px) and (min-width: 821px) {
-  .N-Commerce > h3 > strong {
+  .N-Commerce>h3>strong {
     font-size: calc(6rem + (6 - 4.3) * ((100vw - 820px) / (1024 - 820)));
     white-space: nowrap;
   }
@@ -1212,7 +1221,7 @@
     background-color: black;
   }
 
-  .N-Commerce > h3 > strong {
+  .N-Commerce>h3>strong {
     display: flex;
     font-family: Bebas-Regular;
     font-size: 2rem;
@@ -1233,6 +1242,7 @@
     width: fit-content;
     font-family: Bebas-Regular;
   }
+
   .module-feature-main-home {
     display: flex;
     flex-direction: column;
@@ -1312,7 +1322,7 @@
     padding: 0rem;
   }
 
-  .N-Commerce > h3 > strong {
+  .N-Commerce>h3>strong {
     font-size: 5.7rem;
     color: #fff;
     padding: 1rem;
@@ -1359,6 +1369,7 @@
     text-align: center;
     letter-spacing: -2px;
   }
+
   .module-feature-main-home {
     display: flex;
     flex-direction: column;
@@ -1372,7 +1383,7 @@
     padding: 0rem;
   }
 
-  .N-Commerce > h3 > strong {
+  .N-Commerce>h3>strong {
     font-size: 5.3rem;
     color: #fff;
     padding: 1rem;
@@ -1419,6 +1430,7 @@
     text-align: center;
     letter-spacing: -2px;
   }
+
   .module-feature-main-home {
     display: flex;
     flex-direction: column;
@@ -1428,17 +1440,18 @@
 }
 
 @media (max-width: 426px) and (min-width: 321px) {
-  .N-Commerce > h3 > strong {
+  .N-Commerce>h3>strong {
     font-size: calc(1rem + (1.3 - 0) * ((100vw - 400px) / (426 - 320)));
     letter-spacing: 1px;
   }
 }
+
 @media (max-width: 320px) {
   .N-Commerce {
     padding: 0rem;
   }
 
-  .N-Commerce > h3 > strong {
+  .N-Commerce>h3>strong {
     font-size: 4rem;
     color: #fff;
     padding: 1rem;
@@ -1787,7 +1800,7 @@
   padding: 1rem;
 }
 
-.world-title > h2 {
+.world-title>h2 {
   font-family: Popins-Regular;
   font-size: 60px;
   font-weight: 700;
@@ -1836,7 +1849,7 @@
   height: 100%;
 }
 
-.website-container-master > * {
+.website-container-master>* {
   font-family: Popins-Regular;
 }
 
@@ -2251,6 +2264,7 @@
     vertical-align: middle;
   }
 }
+
 @media (max-width: 321px) {
   .website-container-master {
     height: 100%;
@@ -2349,7 +2363,7 @@
   padding: 1rem 6.5rem 1rem 8.5rem;
 }
 
-.testimonial-section > * {
+.testimonial-section>* {
   font-family: Popins-Medium;
 }
 
@@ -2461,7 +2475,7 @@
   margin-top: 10px;
 }
 
-.template-container > div {
+.template-container>div {
   padding: 0 4rem 0 4rem;
 }
 
@@ -2515,7 +2529,7 @@
     padding: 0;
   }
 
-  .template-container > div {
+  .template-container>div {
     padding: 0;
   }
 

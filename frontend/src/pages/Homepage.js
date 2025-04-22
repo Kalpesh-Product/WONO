@@ -92,6 +92,7 @@ import {
   calendarLine,
   eventsLine,
   stayRoom,
+  stayRoom,
 } from "../assets/WONO_images/img/icon_service_color";
 
 const Homepage = () => {
@@ -168,13 +169,12 @@ const Homepage = () => {
                 ></div>
 
                 <div className=" home-main-tagline">
-                  <span className="text-[2rem] md:text-[2.5rem] lg:text-[3rem]">
+                  <span className="text-[2rem] md:text-[2.5rem] lg:text-[3rem] 2xl:text-[3.2rem]">
                     <b
                       style={{
                         fontFamily: "Popins-Semibold",
                         fontWeight: "normal",
-                      }}
-                    >
+                      }}>
                       "Wo
                     </b>
                     rld{" "}
@@ -182,8 +182,7 @@ const Homepage = () => {
                       style={{
                         fontFamily: "Popins-Semibold",
                         fontWeight: "normal",
-                      }}
-                    >
+                      }}>
                       No
                     </b>
                     mad{" "}
@@ -191,8 +190,7 @@ const Homepage = () => {
                       style={{
                         fontFamily: "Popins-Semibold",
                         fontWeight: "normal",
-                      }}
-                    >
+                      }}>
                       Co
                     </b>
                     mmerce"
@@ -209,11 +207,11 @@ const Homepage = () => {
                   A simple NO CODE SaaS Platform.
                 </p>
                 <div className="flex flex-col gap-2">
-                  <span className="home-main-title-tagline text-[1rem] md:text-[1.09rem]">
+                  <span className="home-main-title-tagline text-[1rem] md:text-[1.09rem] 2xl:text-[1.18rem]">
                     We support businesses in small and aspiring destinations
                     which host Nomads!
                   </span>
-                  <span className="text-[0.9rem] md:text-[1.09rem]">
+                  <span className="text-[0.9rem] md:text-[1.09rem] 2xl:text-[1.18rem] ">
                     SaaS Tech for Nomad supoorting businesses across the world.
                     <span className="font-bold">
                       (E.g.: Co-Working, Co-Living, Hostels, Workations,
@@ -227,8 +225,7 @@ const Homepage = () => {
           <div
             style={{ cursor: "pointer" }}
             onClick={() => navigate("/register")}
-            className="first-section-grid-item-2 h-40 flex justify-center"
-          >
+            className="first-section-grid-item-2 h-40 flex justify-center">
             <div className="home-desc relative w-full flex items-center justify-center">
               <img src={greenRound} alt="" />
               IT'S COMPLETLEY FREE
@@ -267,16 +264,14 @@ const Homepage = () => {
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-              }}
-            >
+              }}>
               <button
                 className="hero-button"
                 data-aos-delay="200"
                 onClick={() => {
                   navigate("/register");
                   window.scrollTo({ top: 0, behavior: "instant" });
-                }}
-              >
+                }}>
                 CONNECT
               </button>
             </div>
@@ -356,8 +351,7 @@ const Homepage = () => {
                         <div className="">
                           <button
                             className="get-started-submit-button m-0"
-                            onClick={handleRegister}
-                          >
+                            onClick={handleRegister}>
                             Get Started
                           </button>
                         </div>
@@ -371,8 +365,7 @@ const Homepage = () => {
         </div>
         <div
           className="website-container-master"
-          style={{ backgroundColor: "black" }}
-        >
+          style={{ backgroundColor: "black" }}>
           <div className="website-panel-container">
             <div className="website-panel-header">
               <h2>NO CODE SELF SERVE </h2>
@@ -409,14 +402,12 @@ const Homepage = () => {
               <div
                 className={`website-panel-right ${
                   selectedId ? "modal-open" : ""
-                }`}
-              >
+                }`}>
                 <div className="website-panel-content">
                   {webimages.map((image) => (
                     <div
                       className="template-preview-container overflow-hidden rounded-xl"
-                      key={image.id}
-                    >
+                      key={image.id}>
                       <img
                         className="rounded-xl"
                         src={image.src}
@@ -429,8 +420,7 @@ const Homepage = () => {
                   onClick={() =>
                     window.scrollTo({ top: 0, behavior: "instant" })
                   }
-                  to="/themes"
-                >
+                  to="/themes">
                   View more
                 </Link>
               </div>
@@ -464,8 +454,7 @@ const Homepage = () => {
                   <div className="testimonial-contact">
                     <h4
                       className="my-4"
-                      style={{ fontFamily: "Amsterdam", fontSize: "2rem" }}
-                    >
+                      style={{ fontFamily: "Amsterdam", fontSize: "2rem" }}>
                       Kashif Shaikh
                     </h4>
                     <p className="m-0">Co-Founder & COO</p>
