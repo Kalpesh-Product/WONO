@@ -187,9 +187,9 @@ const Homepage = () => {
                 </div>
               </span>
               <div className="" style={{ display: "flex" }}>
-                <div style={{ width: "55%" }}></div>
+                <div className="spacer"></div>
 
-                <div className=" home-main-tagline">
+                <div className="home-main-tagline">
                   <span className="text-[2rem] md:text-[2.5rem] lg:text-[3rem]">
                     <b
                       style={{
@@ -398,7 +398,9 @@ const Homepage = () => {
           <div className="website-panel-container">
             <div className="website-panel-header">
               <h2>NO CODE SELF SERVE </h2>
-              <h3 className=" text-lg md:text-4xl lg:text-[3.82rem]">TRANSACTIONAL WEBSITE & MOBILE SITE</h3>
+              <h3 className=" text-lg md:text-4xl lg:text-[3.82rem]">
+                TRANSACTIONAL WEBSITE & MOBILE SITE
+              </h3>
               <p className="text-sm md:text-md lg:text-md">
                 Free customizable website templates which are strategically
                 tailored for managing Lifestyle Businesses like Co-Working,
