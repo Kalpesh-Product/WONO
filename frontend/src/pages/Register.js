@@ -111,7 +111,7 @@ const Register = () => {
 
   const checkEmailDuplicate = async (email) => {
     try {
-      const response = await axios.get(`/check-email`, { params: { email } });
+      const response = await axios.get(`/api/check-email/${email}`,);
 
       if (response.status === 200) {
         const result = response.data;

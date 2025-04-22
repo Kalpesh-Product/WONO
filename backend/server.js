@@ -88,10 +88,6 @@ app.use(
   })
 );
 
-// Test route
-app.get("/", (req, res) => {
-  res.json({ message: "Backend here" });
-});
 
 app.post("/", (req, res) => {
   console.log("Session Data:", req.session);
@@ -109,7 +105,7 @@ app.get("/session", (req, res) => {
   }
 });
 
-app.use("", userRoutes);
+app.use("/api", userRoutes);
 
 // Route to download the CSV file
 // app.get('/download-csv', (req, res) => {
@@ -175,21 +171,6 @@ app.use("", userRoutes);
 //   }
 
 //
-
-// Route to fetch all users
-app.get("/users", async (req, res) => {
-  try {
-    // Fetch all users from the registrationDetails collection
-    const users = await User.find();
-
-    res.json(users); // Send the fetched data as JSON
-  } catch (error) {
-    console.error("Database error:", error.message);
-    res.status(500).send("Failed to fetch user details.");
-  }
-});
-
-// Route to check if an email is already registered
 
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);

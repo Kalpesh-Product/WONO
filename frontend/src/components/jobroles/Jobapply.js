@@ -236,7 +236,7 @@ const Jobapply = ({ jobTitle, changeActiveTab }) => {
 
         try {
           setLoading(true);
-          await axios.post("/jobapply", data, {
+          await axios.post("/api/jobapply", data, {
             headers: {
               "Content-Type": "multipart/form-data",
             },

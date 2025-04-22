@@ -11,7 +11,7 @@ const path = require("path");
 const { sub } = require("date-fns");
 const axios = require("axios");
 const { handleDocumentUpload } = require("../config/cloudinaryConfig");
-const { fetchEnquiriesFromDB, sendDataToGoogleSheets } = require('../services/googleSheet')
+require("dotenv").config()
 
 // Sync Google Sheets by fetching data from DB
 exports.syncEnquiriesToGoogleSheets = async (req, res) => {
@@ -253,7 +253,7 @@ exports.registerUser = async (req, res) => {
       // Existing code for saving the user to the database and sending emails
 
       // After saving the user and sending emails, send data to Google Sheets
-      const googleSheetsUrl = 'https://script.google.com/macros/s/AKfycbw2NTr3gIJ982nqXii6Q1Ywt78DR7VWiBBFHHq_WrPe7S6H7QIdVqYutPEOW4nScvZnaQ/exec'; // Replace with your actual web app URL
+      const googleSheetsUrl = process.env.GOOGLE_SHEET_API_LINK  // Replace with your actual web app URL
 
       // Prepare the data payload
       const payload = {
@@ -272,7 +272,7 @@ exports.registerUser = async (req, res) => {
         websiteURL,
         linkedinURL,
         selectedServices,
-        source: 'firstAPI'
+        formName: "enquiry",
       };
 
       // Send the data to Google Sheets
@@ -349,15 +349,17 @@ exports.updateSection = async (req, res) => {
 };
 
 exports.checkEmail = async (req, res) => {
-  const email = req.query.email;
-
+  const email = req.params.id;
   if (!email) {
     return res.status(400).json({ error: "Email is required" });
   }
 
   try {
     const isDuplicate = await User.findOne({ "personalInfo.email": email });
-    res.status(200).json({ isDuplicate: !!isDuplicate });
+    if (isDuplicate) {
+      return res.status(409).json({ error: "Email already exists" });
+    }
+    return res.status(200).json({ message: "Email is available" });
   } catch (error) {
     console.error("Error checking email:", error);
     res.status(500).json({ error: "Internal server error" });
@@ -643,8 +645,7 @@ exports.submitEnquiry = async (req, res) => {
       // Existing code for saving the user to the database and sending emails
 
       // After saving the user and sending emails, send data to Google Sheets
-      const googleSheetsUrl =
-        "https://script.google.com/macros/s/AKfycbzaE8HR7n-GkQD26y6oDbUyq0N6RRCQOGzlCJdESwrBE1DlmV27WklQWRsamgaT4jYBOQ/exec"; // Replace with your actual web app URL
+      const googleSheetsUrl = process.env.GOOGLE_SHEET_API_LINK// Replace with your actual web app URL
 
       // Prepare the data payload
       // const payload = {
@@ -824,7 +825,7 @@ exports.createJobApplication = async (req, res) => {
 
   </table>
   </div>
-  </body>`,
+</body>`,
       attachments: [
         {
           filename: req.file.originalname,
@@ -865,7 +866,7 @@ exports.createJobApplication = async (req, res) => {
       // Existing code for saving the user to the database and sending emails
 
       // After saving the user and sending emails, send data to Google Sheets
-      const googleSheetsUrl = 'https://script.google.com/macros/s/AKfycby1zFqf25odw7bFEMdIAYe6qZBxE8Xah9__KMtt7YGRxy83qtowLAJAQ85_F33CAzZmeA/exec'; // Replace with your actual web app URL
+      const googleSheetsUrl = process.env.GOOGLE_SHEET_API_LINK // Replace with your actual web app URL
 
       // Prepare the data payload
       const payload = {
@@ -879,30 +880,28 @@ exports.createJobApplication = async (req, res) => {
         expectedSalary,
         daysToJoin,
         relocateGoa,
-        resumeUrl: resumeUrl,
+        resumeUrl,
         personality,
         skills,
         willing,
         message,
-        source: 'thirdAPI'
+        formName: "jobApplication",
       };
 
       // Send the data to Google Sheets
       try {
-        const response = await axios.post(googleSheetsUrl, payload);
-        console.log("Google Sheets response:", response.data);
+        await axios.post(googleSheetsUrl, payload);
       } catch (error) {
         console.error("Sheets error", error.message);
         return res.status(500).send("Failed to send sheets user: " + error.message);
 
       }
-      return res.status(200).send("User registered successfully and data sent to Google Sheets!");
 
     } catch (error) {
       console.error("Sheets error", error.message);
       return res.status(500).send("Failed to send sheets user: " + error.message);
     }
-    res.status(200).json({ message: 'Application details have been sent' });
+    return res.status(200).json("User registered successfully and data sent to Google Sheets!");
   } catch (error) {
     console.error('Error saving application:', error);
     res.status(500).json({ message: 'Failed to save application' });

@@ -29,7 +29,7 @@ router.post("/register", registerUser);
 router.post("/register/section", updateSection);
 
 // Check email
-router.get("/check-email", checkEmail);
+router.get("/check-email/:id", checkEmail);
 
 // Forgot password
 router.post("/forgot-password", forgotPassword);
