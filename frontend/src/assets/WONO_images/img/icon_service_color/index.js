@@ -7,10 +7,11 @@ import customerService from "./CustomerService_SaaS.png";
 import events from "./events.png";
 // import iosApp from "./iOSApp_SaaS.png";
 import iosApp from "./IOS.png";
-import mobileSite from "./mobile-site.png";
+import mobileSite from "./mobile-site-line.png";
+import templates from "./templates-lined.png"
 
 import notifications from "./notifications.png";
-import paymentGateway from "./payment-gateway.png";
+import paymentGateway from "./payment-line.png";
 import tickets from "./tickets.png";
 import website from "./website.png";
 
@@ -80,7 +81,7 @@ import taxesReportsRA from "./taxes.png";
 import milestoneReportsRA from "./MilestoneReports_SaaS.png";
 import employeeReportsRA from "./hr.png";
 import customerReportsRA from "./CustomerReports_SaaS.png";
-import fullDataAnalysisRA from "./it.png";
+import fullDataAnalysisRA from "./it-line.png";
 import keyNotificationsRA from "./KeyNotifications_SaaS.png";
 import cashflowRA from "./cash-flow.png";
 import vendorPayoutsRA from "./VendorPayouts_SaaS.png";
@@ -91,11 +92,14 @@ import income from "./income.png";
 import expense from "./expense.png"
 import reports from './reports.png'
 import calendar from "./calendar.png"
+import seo from "./seo-lined.png"
 
 // Coloured icons end
 
 export {
   androidAppSaas,
+  templates,
+  seo,
   expense,
   calendar,
   reports,

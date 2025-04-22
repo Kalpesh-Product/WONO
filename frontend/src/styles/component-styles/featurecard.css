@@ -105,6 +105,11 @@
     top: 38px;
     left: 112px;
   }
+  .module-feature-card-main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap:  4rem;
+  }
 }
 
 /* <= 1024px (Tablet) */

@@ -7,7 +7,7 @@ const SaaSFeatureBlock = ({
   title,
   underlineImg,
   description1,
-  description2,
+  imagePosition,
   imageFit,
   image,
   height,
@@ -22,7 +22,7 @@ const SaaSFeatureBlock = ({
       }}
     >
       <div
-        className="module-feature-card-grid"
+        className="module-feature-card-grid ob"
         style={{
           flexDirection: rowReverse ? "row-reverse" : "row",
         }}
@@ -66,7 +66,7 @@ const SaaSFeatureBlock = ({
               height: height ? height : "60vh",
               objectFit: imageFit? imageFit : 'cover',
               padding:'1rem',
-              objectPosition:'top'
+              objectPosition: imagePosition ? imagePosition : 'top'
             }}
           />
         </div>

@@ -35,7 +35,7 @@ const Jobrole = () => {
       jobs: [
         {
           id: 3,
-          title: "Jr. UI/UX Developer",
+          title: "Jr.UI/UX Developer",
           type: "Full-Time",
           mode: "On-Site",
           location: "Goa",
