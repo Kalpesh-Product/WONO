@@ -117,6 +117,9 @@ import {
   customerTrends,
   companyDashboard,
   sales,
+  calendarLine,
+  eventsLine,
+  stayRoom
 } from "../assets/WONO_images/img/icon_service_color";
 
 const Homepage = () => {
@@ -139,8 +142,8 @@ const Homepage = () => {
     { id: 5, title: "Auto Leads", icon: leadGenerationSM },
     { id: 6, title: "Inventory", icon: invoicingFA },
     { id: 7, title: "Meeting Rooms", icon: meetingRoomsCM },
-    { id: 8, title: "Stay Rooms", icon: cafeOrdersCM },
-    { id: 9, title: "Events", icon: events },
+    { id: 8, title: "Stay Rooms", icon: stayRoom },
+    { id: 9, title: "Events", icon: eventsLine },
     { id: 10, title: "Cafe", icon: cafeOrdersCM },
     { id: 12, title: "Human Resource", icon: employeeReportsRA },
     { id: 13, title: "Attendance", icon: attendanceHR },
@@ -151,7 +154,7 @@ const Homepage = () => {
     { id: 19, title: "Assets", icon: eSignHR },
     { id: 20, title: "Tasks", icon: taskManagementHR },
     { id: 21, title: "Visitors", icon: visitorCM },
-    { id: 22, title: "Calendar", icon: events },
+    { id: 22, title: "Calendar", icon: calendarLine },
     { id: 23, title: "Notifications", icon: notifications },
     { id: 24, title: "Profile", icon: customerProfile },
     { id: 25, title: "Tickets", icon: ticketRaisingCM },

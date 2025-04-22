@@ -29,6 +29,7 @@ import {
   reports,
   calendar,
   seo,
+  calendarLine,
 } from "../assets/WONO_images/img/icon_service_color";
 import { useNavigate } from "react-router-dom";
 import TicketsImage from "../assets/WONO_images/img/images-service/services-apps.jpeg";
@@ -50,7 +51,7 @@ const Services = () => {
         </div>
 
         <div>
-          <h4 className="text-lg text-center font-[Popins-Regular]">
+          <h4 className="text-lg text-start md:text-center lg:text-center font-[Popins-Regular]">
             No Code Website <span className="plus-sign"></span>
             <span className="plus-sign">+</span> Booking Engine{" "}
             <span className="plus-sign">+</span> Payment Gateway{" "}
@@ -81,7 +82,7 @@ const Services = () => {
         </div> */}
 
         <div className="SaaS-featured-master flex flex-col gap-4 py-4">
-          <div className="SaaS-features-heading flex text-2xl md:text-3xl font-bold">
+          <div className="SaaS-features-heading flex text-3xl md:text-3xl font-bold">
             Real-time operations
             <img
               src={greenUnderLine}
@@ -90,10 +91,10 @@ const Services = () => {
           </div>
           <div className="SaaS-featured-grid ">
             <div className="SaaS-featured-grid-left flex flex-col gap-4 ">
-              <span className="text-3xl">
+              <span className="text-2xl md:text-3xl lg:text:3xl">
                 Manage your business in real-time across all business verticals.
               </span>
-              <span className="text-3xl">
+              <span className="text-2xl md:text-3xl lg:text:3xl">
                 Operate your business in real-time with the micro most details
                 of inventory, bookings, accounts, analytics, leads, sales,
                 reports, tasks, logs, menu, complaints, requests etc.
@@ -169,7 +170,7 @@ const Services = () => {
               { title: "Attendance", image: attendanceHR },
               { title: "Payroll", image: payrollHR },
               { title: "Payslips", image: payslipsHR },
-              { title: "Templates", image: templatesHR },
+              { title: "Templates", image: templates },
               { title: "Performance", image: performanceHR },
               { title: "Budget", image: budgetFA },
             ]}
@@ -184,7 +185,7 @@ const Services = () => {
               { title: "Meetings", image: meetingRoomsCM },
               { title: "Assets", image: eSignHR },
               { title: "Visitors", image: visitorCM },
-              { title: "Calendar", image: calendar },
+              { title: "Calendar", image: calendarLine },
               { title: "Profile", image: customerProfile },
             ]}
             image={TicketsImage}

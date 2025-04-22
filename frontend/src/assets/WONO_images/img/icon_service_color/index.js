@@ -5,6 +5,7 @@ import customerProfile from "./admin.png";
 
 import customerService from "./CustomerService_SaaS.png";
 import events from "./events.png";
+import calendarLine from "./calendar-line.png";
 // import iosApp from "./iOSApp_SaaS.png";
 import iosApp from "./IOS.png";
 import mobileSite from "./mobile-site-line.png";
@@ -26,7 +27,7 @@ import financialReportsFA from "./finance.png";
 import workingCapitalFA from "./WorkingCapital_SaaS.png";
 
 import budgetFA from "./budget.png";
-import projectionsFA from "./projection.png";
+import projectionsFA from "./projection-lined.png";
 import cashflowFA from "./cash-flow.png";
 import invoicingFA from "./invoice.png";
 
@@ -57,7 +58,7 @@ import holidaysHR from "./Holidays_SaaS.png";
 //
 import leavesHR from "./Leaves_SaaS.png";
 import payslipsHR from "./payslip.png";
-import payrollHR from "./payroll.png";
+import payrollHR from "./payroll-lined.png";
 import attendanceHR from "./attendance.png";
 
 import analyticsCM from "./analytics.png";
@@ -68,10 +69,11 @@ import customerServiceCM from "./CustomerService_SaaS.png";
 import customerRatingCM from "./CustomerRating_SaaS.png";
 import feedbackCM from "./Feedback_SaaS.png";
 import announcementsCM from "./Announcements_SaaS.png";
-import visitorCM from "./visitors.png";
+import visitorCM from "./visitors-line.png";
 
 import cafeOrdersCM from "./stay-rooms.png";
-import meetingRoomsCM from "./meetings.png";
+import stayRoom from "./stay-room-lined.png";
+import meetingRoomsCM from "./meetings-lined.png";
 import complaintLogsCM from "./ComplaintLogs_SaaS.png";
 import ticketRaisingCM from "./tickets.png";
 import sales from "./sales.png";
@@ -93,12 +95,16 @@ import expense from "./expense.png"
 import reports from './reports.png'
 import calendar from "./calendar.png"
 import seo from "./seo-lined.png"
+import eventsLine from "./events-line.png"
 
 // Coloured icons end
 
 export {
   androidAppSaas,
+  stayRoom,
   templates,
+  eventsLine,
+  calendarLine,
   seo,
   expense,
   calendar,
