@@ -136,7 +136,7 @@ const Footer = ({ changeActiveTab }) => {
         <div className="py-4">
           <div className="text-center px-1 footer-copyright">
             <p>
-              &copy; Copyright 2024-25 by WONOCO PRIVATE LIMITED - SINGAPORE.
+              &copy; Copyright 2025-26 by WONOCO PRIVATE LIMITED - SINGAPORE.
               All Rights Reserved.
             </p>
           </div>
