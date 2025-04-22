@@ -1196,7 +1196,7 @@
   .N-Commerce > h3 > strong {
     display: flex;
     font-family: Bebas-Regular;
-    font-size: 4.3rem;
+    font-size: 2rem;
     color: #fff;
     font-weight: 600;
     width: 100%;
@@ -1210,7 +1210,7 @@
   .N-Commerce p {
     color: #0aa9ef;
     align-self: center;
-    font-size: 43px;
+    font-size: 40px;
     width: fit-content;
     font-family: Bebas-Regular;
   }
