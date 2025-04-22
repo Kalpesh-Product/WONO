@@ -2,14 +2,21 @@ import React, { useContext, useState, useRef, useEffect } from "react";
 import "../styles/bodyRegister.css";
 import { GoogleLogin } from "@react-oauth/google";
 // import { Form, FloatingLabel } from 'react-bootstrap';
-import { TextField, MenuItem, Button, Box, Grid, Container } from '@mui/material';
+import {
+  TextField,
+  MenuItem,
+  Button,
+  Box,
+  Grid,
+  Container,
+} from "@mui/material";
 import axios from "axios";
 import { jwtDecode } from "jwt-decode";
 import { useNavigate } from "react-router-dom";
 import emailSend from "../assets/WONO_images/img/emailSend.gif";
 import { Link } from "react-router-dom";
 import { Stepper, Step } from "react-form-stepper";
-import { Country, State, City } from 'country-state-city';
+import { Country, State, City } from "country-state-city";
 import {
   TransactionalWebsite,
   BookingEngine,
@@ -59,7 +66,7 @@ const Register = () => {
     if (formData.country) {
       const countryStates = State.getStatesOfCountry(formData.country);
       setStates(countryStates);
-      setFormData(prev => ({ ...prev, state: '', city: '' }));
+      setFormData((prev) => ({ ...prev, state: "", city: "" }));
       setCities([]);
     }
   }, [formData.country]);
@@ -67,30 +74,31 @@ const Register = () => {
   // Fetch cities when a state is selected
   useEffect(() => {
     if (formData.state) {
-      const stateCities = City.getCitiesOfState(formData.country, formData.state);
+      const stateCities = City.getCitiesOfState(
+        formData.country,
+        formData.state
+      );
       setCities(stateCities);
-      setFormData(prev => ({ ...prev, city: '' }));
+      setFormData((prev) => ({ ...prev, city: "" }));
     }
   }, [formData.state]);
 
-
   useEffect(() => {
-    const countryStates = State.getStatesOfCountry('IN'); // Fetch states of India
+    const countryStates = State.getStatesOfCountry("IN"); // Fetch states of India
     setCompanyStates(countryStates);
     // Reset state and city on load
-    setFormData((prev) => ({ ...prev, companyState: '', companyCity: '' }));
+    setFormData((prev) => ({ ...prev, companyState: "", companyCity: "" }));
   }, []);
 
   useEffect(() => {
     if (formData.companyState) {
-      const stateCities = City.getCitiesOfState('IN', formData.companyState); // Fetch cities for the selected state
+      const stateCities = City.getCitiesOfState("IN", formData.companyState); // Fetch cities for the selected state
       setCompanyCities(stateCities);
-      setFormData((prev) => ({ ...prev, companyCity: '' })); // Reset city when state changes
+      setFormData((prev) => ({ ...prev, companyCity: "" })); // Reset city when state changes
     } else {
       setCompanyCities([]); // Clear cities if no state is selected
     }
   }, [formData.companyState]);
-
 
   //checkbox
   const handleCheckboxChange = (service) => {
@@ -106,8 +114,6 @@ const Register = () => {
   const handleCardClick = (service) => {
     handleCheckboxChange(service);
   };
-
-
 
   const checkEmailDuplicate = async (email) => {
     try {
@@ -125,8 +131,6 @@ const Register = () => {
     }
   };
 
-
-
   const handleNext = async (e) => {
     e.preventDefault();
     const validationErrors = validateCurrentStep();
@@ -136,7 +140,7 @@ const Register = () => {
         setLoading(true); // Show the spinner
 
         let sectionData = {};
-        let sectionName = '';
+        let sectionName = "";
 
         const { email } = formData;
 
@@ -145,7 +149,7 @@ const Register = () => {
           if (isDuplicate) {
             setErrors((prevErrors) => ({
               ...prevErrors,
-              email: 'This email is already in use.',
+              email: "This email is already in use.",
             }));
             setLoading(false); // Hide spinner on error
             return;
@@ -162,7 +166,7 @@ const Register = () => {
               city: formData.city,
               state: formData.state,
             };
-            sectionName = 'personal';
+            sectionName = "personal";
             break;
           case 1:
             sectionData = {
@@ -175,7 +179,7 @@ const Register = () => {
               websiteURL: formData.websiteURL,
               linkedinURL: formData.linkedinURL,
             };
-            sectionName = 'company';
+            sectionName = "company";
             break;
           default:
             setLoading(false); // Hide spinner if no valid step
@@ -183,55 +187,51 @@ const Register = () => {
         }
 
         const response = await axios.post(
-          '/register/section',
+          "/register/section",
           {
             section: sectionName,
             data: sectionData,
           },
           {
             headers: {
-              'Content-Type': 'application/json',
-            }
+              "Content-Type": "application/json",
+            },
           }
         );
 
         if (response.status !== 200) {
-          throw new Error('Network response was not ok');
+          throw new Error("Network response was not ok");
         }
 
         console.log(response.data);
 
         setCurrentStep((prev) => prev + 1); // Move to the next step
       } catch (error) {
-        console.error('There was a problem with the fetch operation:', error);
+        console.error("There was a problem with the fetch operation:", error);
       } finally {
         setLoading(false); // Always hide spinner when the request finishes
       }
     }
   };
 
-
-
-
-
-
-
   // Helper function to get section name
   const getSectionName = (step) => {
     switch (step) {
-      case 0: return 'personal';
-      case 1: return 'company';
-      case 2: return 'services';
+      case 0:
+        return "personal";
+      case 1:
+        return "company";
+      case 2:
+        return "services";
       // Add more cases as needed
-      default: return 'unknown';
+      default:
+        return "unknown";
     }
   };
-
 
   const handleBack = () => {
     setCurrentStep((prev) => prev - 1);
   };
-
 
   const handleLoginError = () => {
     console.log("Login Failed");
@@ -295,9 +295,8 @@ const Register = () => {
 
     console.log("Sending email...");
 
-
     try {
-      setLoading(true)
+      setLoading(true);
       const dataToSubmit = {
         ...formData,
         selectedServices: formData.selectedServices, // Ensure selected services are submitted here
@@ -306,15 +305,11 @@ const Register = () => {
       setCurrentStep((prev) => prev + 1);
 
       // Final submission to complete the registration
-      const response = await axios.post(
-        "/register",
-        dataToSubmit,
-        {
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }
-      );
+      const response = await axios.post("/register", dataToSubmit, {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
 
       // No need for response.text() with Axios, access response data directly
       console.log(response.data); // Axios parses the response JSON automatically
@@ -336,82 +331,90 @@ const Register = () => {
     }
   };
 
-
-
   const isChecked = (service) => formData.selectedServices[service];
   return (
     <div className="register-master">
       <section id="contact" className="register">
         <div
           className="card flex justify-content-center "
-          style={{ backgroundColor: "white", border: 'none', fontFamily: 'inherit' }}>
+          style={{
+            backgroundColor: "white",
+            border: "none",
+            fontFamily: "inherit",
+          }}
+        >
           <div className="stepper-container">
             <Stepper
               connectorStateColors={true}
               styleConfig={{
-                activeBgColor: '#2196F3',  // Blue for the active step
-                completedBgColor: '#4CAF50',  // Green for completed steps
-                inactiveBgColor: '#E0E0E0',  // Color for inactive steps
-                size: '2.5em',  // Step size (Optional)
-                activeTextColor: '#FFFFFF',  // Text color for active step
-                completedTextColor: '#FFFFFF',  // Text color for completed steps
-                inactiveTextColor: '#000000',  // Text color for inactive steps
-                circleFontSize: '1rem',  // Font size for step number (Optional)
-                fontFamily: 'inherit'
+                activeBgColor: "#2196F3", // Blue for the active step
+                completedBgColor: "#4CAF50", // Green for completed steps
+                inactiveBgColor: "#E0E0E0", // Color for inactive steps
+                size: "2.5em", // Step size (Optional)
+                activeTextColor: "#FFFFFF", // Text color for active step
+                completedTextColor: "#FFFFFF", // Text color for completed steps
+                inactiveTextColor: "#000000", // Text color for inactive steps
+                circleFontSize: "1rem", // Font size for step number (Optional)
+                fontFamily: "inherit",
               }}
               connectorStyleConfig={{
-                size: 3,  // Thickness of the connector line
-                activeColor: '#4CAF50',  // Color of the connector when active
-                completedColor: '#4CAF50',  // Color of the connector when completed
-                inactiveColor: '#E0E0E0'  // Color of the connector when inactive
+                size: 3, // Thickness of the connector line
+                activeColor: "#4CAF50", // Color of the connector when active
+                completedColor: "#4CAF50", // Color of the connector when completed
+                inactiveColor: "#E0E0E0", // Color of the connector when inactive
               }}
-              style={{ paddingTop: 0, textTransform: 'uppercase' }}
+              style={{ paddingTop: 0, textTransform: "uppercase" }}
               activeStep={currentStep}
             >
               <Step
                 label="Personal Details"
-                completed={currentStep > 0}  // Step is completed if currentStep is greater than 0
-                children={currentStep > 0 ? '✓' : 1}  // Show tick mark if completed, else show step number
+                completed={currentStep > 0} // Step is completed if currentStep is greater than 0
+                children={currentStep > 0 ? "✓" : 1} // Show tick mark if completed, else show step number
                 stepClassName="stepper-container"
               />
               <Step
                 label="Company Details"
-                completed={currentStep > 1}  // Step is completed if currentStep is greater than 1
-                children={currentStep > 1 ? '✓' : 2}
+                completed={currentStep > 1} // Step is completed if currentStep is greater than 1
+                children={currentStep > 1 ? "✓" : 2}
               />
               <Step
                 label="Services"
-                completed={currentStep > 2}  // Step is completed if currentStep is greater than 2
-                children={currentStep > 2 ? '✓' : 3}
+                completed={currentStep > 2} // Step is completed if currentStep is greater than 2
+                children={currentStep > 2 ? "✓" : 3}
               />
               <Step
                 label="Account Activation"
-                completed={currentStep > 3}  // Step is completed if currentStep is greater than 3
-                children={currentStep > 3 ? '✓' : 4}
+                completed={currentStep > 3} // Step is completed if currentStep is greater than 3
+                children={currentStep > 3 ? "✓" : 4}
               />
             </Stepper>
           </div>
 
           <form
             name="form-p"
-            className={`register-form needs-validation ${Object.keys(errors).length ? "was-validated" : ""
-              }`}
+            className={`register-form needs-validation ${
+              Object.keys(errors).length ? "was-validated" : ""
+            }`}
             id="partner-form"
             onSubmit={handleSubmit}
-            noValidate>
+            noValidate
+          >
             {currentStep === 0 && (
               <>
                 <div className="registration-section-header">
                   <h2>Let's set up your free account</h2>
                 </div>
                 <div className="register-container">
-                  <Container maxWidth="md" sx={{
-                    width: {
-                      xs: '100%', // Full width on extra small screens (mobile)
-                      sm: '100%', // Full width on small screens
-                      md: '50%'   // 50% width on medium and larger screens
-                    },
-                  }}>
+                  <Container
+                    maxWidth="md"
+                    sx={{
+                      width: {
+                        xs: "100%", // Full width on extra small screens (mobile)
+                        sm: "100%", // Full width on small screens
+                        md: "50%", // 50% width on medium and larger screens
+                      },
+                    }}
+                  >
                     <Box
                       component="form"
                       sx={{ flexGrow: 1 }}
@@ -478,14 +481,15 @@ const Register = () => {
                             fullWidth
                           >
                             {Country.getAllCountries().map((country) => (
-                              <MenuItem key={country.isoCode} value={country.isoCode}>
+                              <MenuItem
+                                key={country.isoCode}
+                                value={country.isoCode}
+                              >
                                 {country.name}
                               </MenuItem>
                             ))}
                           </TextField>
                         </Grid>
-
-
 
                         <Grid item xs={12} sm={6}>
                           <TextField
@@ -501,7 +505,10 @@ const Register = () => {
                             fullWidth
                           >
                             {states.map((state) => (
-                              <MenuItem key={state.isoCode} value={state.isoCode}>
+                              <MenuItem
+                                key={state.isoCode}
+                                value={state.isoCode}
+                              >
                                 {state.name}
                               </MenuItem>
                             ))}
@@ -529,12 +536,19 @@ const Register = () => {
                         </Grid>
 
                         <Grid item xs={12}>
-                          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                          <div
+                            style={{
+                              display: "flex",
+                              alignItems: "center",
+                              justifyContent: "center",
+                            }}
+                          >
                             <button
                               type="submit"
                               className="register-page-button next-button-width"
                               onClick={handleNext}
-                              style={{ width: "100%" }}>
+                              style={{ width: "100%" }}
+                            >
                               Next
                             </button>
                           </div>
@@ -543,19 +557,37 @@ const Register = () => {
                         <Grid item xs={12}>
                           <Box textAlign="center" mt={2}>
                             <span>
-                              By clicking below you accept the terms and conditions
+                              By clicking above you accept the terms and
+                              conditions
                             </span>
-                            <span style={{ display: 'block', marginTop: '10px', textDecoration:'none' }}>
-                              Already have an account ? <Link style={{textDecoration:'none'}} onClick={() => {
-                                window.scrollTo({ top: 0, behavior: 'instant' })
-                              }} to="/login">Log-in</Link>
+                            <span
+                              style={{
+                                display: "block",
+                                marginTop: "10px",
+                                textDecoration: "none",
+                              }}
+                            >
+                              Already have an account ?{" "}
+                              <Link
+                                style={{ textDecoration: "none" }}
+                                onClick={() => {
+                                  window.location.href =
+                                    "https://wonofe.vercel.app/";
+                                  window.scrollTo({
+                                    top: 0,
+                                    behavior: "instant",
+                                  });
+                                }}
+                                to="/login"
+                              >
+                                Log-in
+                              </Link>
                             </span>
                           </Box>
                         </Grid>
                       </Grid>
                     </Box>
                   </Container>
-
                 </div>
               </>
             )}
@@ -565,16 +597,23 @@ const Register = () => {
                   <h2>Create company profile</h2>
                 </div>
                 <div className="register-container">
-                  <Container maxWidth="md"  sx={{
-                    width: {
-                      xs: '100%', // Full width on extra small screens (mobile)
-                      sm: '100%', // Full width on small screens
-                      md: '50%',   // 50% width on medium and larger screens
-                    },
-                  }}>
-                    <Box component="form" sx={{ flexGrow: 1 }} noValidate autoComplete="off">
+                  <Container
+                    maxWidth="md"
+                    sx={{
+                      width: {
+                        xs: "100%", // Full width on extra small screens (mobile)
+                        sm: "100%", // Full width on small screens
+                        md: "50%", // 50% width on medium and larger screens
+                      },
+                    }}
+                  >
+                    <Box
+                      component="form"
+                      sx={{ flexGrow: 1 }}
+                      noValidate
+                      autoComplete="off"
+                    >
                       <Grid container spacing={2}>
-
                         <Grid item xs={12} sm={6}>
                           <TextField
                             label="Company Name"
@@ -641,16 +680,20 @@ const Register = () => {
                             required
                             fullWidth
                           >
-                            <MenuItem value="Private Limited">Private Limited</MenuItem>
-                            <MenuItem value="Public Limited">Public Limited</MenuItem>
+                            <MenuItem value="Private Limited">
+                              Private Limited
+                            </MenuItem>
+                            <MenuItem value="Public Limited">
+                              Public Limited
+                            </MenuItem>
                             <MenuItem value="Partnership">Partnership</MenuItem>
-                            <MenuItem value="Sole Proprietorship">Sole Proprietorship</MenuItem>
+                            <MenuItem value="Sole Proprietorship">
+                              Sole Proprietorship
+                            </MenuItem>
                             <MenuItem value="LLP">LLP</MenuItem>
                             <MenuItem value="NGO">NGO</MenuItem>
                           </TextField>
                         </Grid>
-
-
 
                         <Grid item xs={12} sm={6}>
                           <TextField
@@ -666,7 +709,10 @@ const Register = () => {
                             fullWidth
                           >
                             {companyStates.map((state) => (
-                              <MenuItem key={state.isoCode} value={state.isoCode}>
+                              <MenuItem
+                                key={state.isoCode}
+                                value={state.isoCode}
+                              >
                                 {state.name}
                               </MenuItem>
                             ))}
@@ -725,25 +771,43 @@ const Register = () => {
                         <Grid item xs={12}>
                           <Box textAlign="center" mt={2}>
                             <span>
-                              By clicking below you accept the terms and conditions
+                              By clicking below you accept the terms and
+                              conditions
                             </span>
-                            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                            <div
+                              style={{
+                                display: "flex",
+                                alignItems: "center",
+                                justifyContent: "center",
+                              }}
+                            >
                               <button
                                 type="submit"
                                 className="register-page-button next-button-width"
                                 onClick={handleNext}
-                                style={{ width: "100%" }}>
+                                style={{ width: "100%" }}
+                              >
                                 Next
                               </button>
                             </div>
-                            <span style={{ display: 'block', marginTop: '10px' }}>
-                              Already have an account ? <Link onClick={() => {
-                                window.scrollTo({ top: 0, behavior: 'instant' })
-                              }} to="/login">Log-in</Link>
+                            <span
+                              style={{ display: "block", marginTop: "10px" }}
+                            >
+                              Already have an account ?{" "}
+                              <Link
+                                onClick={() => {
+                                  window.scrollTo({
+                                    top: 0,
+                                    behavior: "instant",
+                                  });
+                                }}
+                                to="/login"
+                              >
+                                Log-in
+                              </Link>
                             </span>
                           </Box>
                         </Grid>
-
                       </Grid>
                     </Box>
                   </Container>
@@ -754,16 +818,20 @@ const Register = () => {
             {currentStep === 2 && (
               <>
                 <div className="registration-section-header">
-                  <h2 style={{ textTransform: 'uppercase' }}>Select your services</h2>
+                  <h2 style={{ textTransform: "uppercase" }}>
+                    Select your services
+                  </h2>
                 </div>
 
                 <div className="register-container">
                   <div className="services-section">
                     <div className="checkbox-group">
                       <div
-                        className={`checkbox-card ${isChecked("service1") ? "checked" : ""
-                          }`}
-                        onClick={() => handleCardClick("service1")}>
+                        className={`checkbox-card ${
+                          isChecked("service1") ? "checked" : ""
+                        }`}
+                        onClick={() => handleCardClick("service1")}
+                      >
                         <input
                           type="checkbox"
                           name="BookingEngine"
@@ -776,9 +844,11 @@ const Register = () => {
                         <label>Booking Engine</label>
                       </div>
                       <div
-                        className={`checkbox-card ${isChecked("service2") ? "checked" : ""
-                          }`}
-                        onClick={() => handleCardClick("service2")}>
+                        className={`checkbox-card ${
+                          isChecked("service2") ? "checked" : ""
+                        }`}
+                        onClick={() => handleCardClick("service2")}
+                      >
                         <input
                           type="checkbox"
                           name="website"
@@ -794,9 +864,11 @@ const Register = () => {
                         <label>Website</label>
                       </div>
                       <div
-                        className={`checkbox-card ${isChecked("service3") ? "checked" : ""
-                          }`}
-                        onClick={() => handleCardClick("service3")}>
+                        className={`checkbox-card ${
+                          isChecked("service3") ? "checked" : ""
+                        }`}
+                        onClick={() => handleCardClick("service3")}
+                      >
                         <input
                           type="checkbox"
                           name="MeetingRoomEngine"
@@ -812,9 +884,11 @@ const Register = () => {
                         <label>Meeting room</label>
                       </div>
                       <div
-                        className={`checkbox-card ${isChecked("service4") ? "checked" : ""
-                          }`}
-                        onClick={() => handleCardClick("service4")}>
+                        className={`checkbox-card ${
+                          isChecked("service4") ? "checked" : ""
+                        }`}
+                        onClick={() => handleCardClick("service4")}
+                      >
                         <input
                           type="checkbox"
                           name="PaymentGateway"
@@ -831,7 +905,8 @@ const Register = () => {
                       <button
                         type="submit"
                         className="register-page-button next-button-width"
-                        onClick={handleSubmit}>
+                        onClick={handleSubmit}
+                      >
                         Next
                       </button>
                     </div>
@@ -848,21 +923,28 @@ const Register = () => {
                   <div className="account-activation-section">
                     <div className="account-activation-description">
                       <span>
-                        An email has been send to your email address : <b>{formData.email ? formData.email : "EMAIL HERE"}</b>{" "}
+                        An email has been send to your email address :{" "}
+                        <b>{formData.email ? formData.email : "EMAIL HERE"}</b>{" "}
                         containing all the further process for activating the
                         account.
                       </span>
 
                       <span>
                         Please let us know if there is any more queries from
-                        your side or you can connect us as : <b>response@wono.co</b>
+                        your side or you can connect us as :{" "}
+                        <b>response@wono.co</b>
                       </span>
                       <div className="mail-client-container">
                         <div className="mail-client">
                           <div className="mail-client-image">
                             <img src={gmailLogo} alt="Website" />
                           </div>
-                          <div className="mail-client-text" onClick={() => window.open('https://mail.google.com', '_blank')}>
+                          <div
+                            className="mail-client-text"
+                            onClick={() =>
+                              window.open("https://mail.google.com", "_blank")
+                            }
+                          >
                             <span>Open G-mail</span>
                           </div>
                         </div>
@@ -870,10 +952,17 @@ const Register = () => {
                           <div className="mail-client-image">
                             <img src={outlookLogo} alt="Outlook" />
                           </div>
-                          <div className="mail-client-text" onClick={() => window.open('https://outlook.live.com/mail/inbox', '_blank')}>
+                          <div
+                            className="mail-client-text"
+                            onClick={() =>
+                              window.open(
+                                "https://outlook.live.com/mail/inbox",
+                                "_blank"
+                              )
+                            }
+                          >
                             <span>Open Outlook</span>
                           </div>
-
                         </div>
                       </div>
                     </div>
@@ -889,7 +978,8 @@ const Register = () => {
                     <div className="register-page-button-space">
                       <button
                         className="register-page-button next-button-width"
-                        onClick={() => navigate('/login')}>
+                        onClick={() => navigate("/login")}
+                      >
                         Login now
                       </button>
                       {/* <span style={{ display: 'block', marginTop: '10px' }}>
@@ -904,9 +994,8 @@ const Register = () => {
             )}
           </form>
         </div>
-        {loading && <Spinners animation={'border'} variant={'dark'} />}
+        {loading && <Spinners animation={"border"} variant={"dark"} />}
       </section>
-
     </div>
   );
 };
