@@ -210,10 +210,10 @@ const Homepage = () => {
                     We support businesses in small and aspiring destinations
                     which host Nomads!
                   </span>
-                  <span className="text-[0.9rem] md:text-[1.09rem] 2xl:text-[1.18rem] ">
+                  <span className="text-[0.9rem] md:text-[1rem] 2xl:text-[1.18rem] ">
                     SaaS Tech for Nomad supoorting businesses across the world.
                     <span className="font-bold">
-                      (E.g.: Co-Working, Co-Living, Hostels, Workations,
+                      (Example: Co-Working, Co-Living, Hostels, Workations,
                       Resorts, Cafes, Events etc)
                     </span>
                   </span>

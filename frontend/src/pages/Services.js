@@ -64,7 +64,7 @@ const Services = () => {
           </h4>
         </div>
         <hr
-          className="hrStyling zeroHeight"
+          className="hrStyling zeroHeight border-t-4"
           style={{ width: "100%", margin: 0 }}
         />
         {/* <div className="SaaS-grid-heading">
