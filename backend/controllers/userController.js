@@ -148,7 +148,7 @@ const registerUser = async (req, res) => {
 
     const companyMailOptions = {
       from: `"${name} <${email}>"`, // Display user's name and email as the sender
-      to: "productwonoco@gmail.com",
+      to: "response@wono.co",
       replyTo: email,
       subject: "New User Registration",
       html: `
