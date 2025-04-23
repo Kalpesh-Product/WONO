@@ -5,7 +5,7 @@ import customerProfile from "./admin.png";
 
 import customerService from "./CustomerService_SaaS.png";
 import events from "./events.png";
-import calendarLine from "./calendar-line.png";
+import calendarLine from "./calendar-line-new.png";
 // import iosApp from "./iOSApp_SaaS.png";
 import iosApp from "./IOS.png";
 import mobileSite from "./mobile-site-line.png";
@@ -23,7 +23,7 @@ import followUpsFA from "./Followups_SaaS.png";
 
 import notificationsFA from "./notifications.png";
 import collectionsFA from "./Collections_SaaS.png";
-import financialReportsFA from "./finance.png";
+import financialReportsFA from "./finance-line-new.png";
 import workingCapitalFA from "./WorkingCapital_SaaS.png";
 
 import budgetFA from "./budget.png";
@@ -46,12 +46,12 @@ import adNetworksSM from "./AdNetworks_SaaS.png";
 import personalisedSemSM from "./PersonalisedSEM_SaaS.png";
 import automatedSeoSM from "./AutomatedSEO_SaaS.png";
 
-import eSignHR from "./assets.png";
+import eSignHR from "./assets-line-new.png";
 import templatesHR from "./templates.png";
 import appraisalsHR from "./Appraisals_SaaS.png";
 import performanceHR from "./performance.png";
 //
-import taskManagementHR from "./tasks.png";
+import taskManagementHR from "./tasks-line-new.png";
 import policiesHR from "./Policies_SaaS.png";
 import sopsHR from "./SOPs_SaaS.png";
 import holidaysHR from "./Holidays_SaaS.png";
@@ -59,7 +59,7 @@ import holidaysHR from "./Holidays_SaaS.png";
 import leavesHR from "./Leaves_SaaS.png";
 import payslipsHR from "./payslip.png";
 import payrollHR from "./payroll-lined.png";
-import attendanceHR from "./attendance.png";
+import attendanceHR from "./attendance-line-new.png";
 
 import analyticsCM from "./analytics.png";
 import reportsCM from "./Reports_SaaS.png";
@@ -72,11 +72,11 @@ import announcementsCM from "./Announcements_SaaS.png";
 import visitorCM from "./visitors-line.png";
 
 import cafeOrdersCM from "./stay-rooms.png";
-import stayRoom from "./stay-room-lined.png";
+import stayRoom from "./stay-line-new.png";
 import meetingRoomsCM from "./meetings-lined.png";
 import complaintLogsCM from "./ComplaintLogs_SaaS.png";
-import ticketRaisingCM from "./tickets.png";
-import sales from "./sales.png";
+import ticketRaisingCM from "./tickets-line-new.png";
+import sales from "./sales-line-new.png";
 
 import customisedReportsRA from "./CustomisedReports_SaaS.png";
 import taxesReportsRA from "./taxes.png";
@@ -93,7 +93,7 @@ import companyDashboard from "./CompanyDashboard_SaaS.png";
 import income from "./income.png";
 import expense from "./expense.png"
 import reports from './reports.png'
-import calendar from "./calendar.png"
+import calendar from "./calendar-line-new.png"
 import seo from "./seo-lined.png"
 import eventsLine from "./events-line.png"
 
