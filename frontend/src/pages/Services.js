@@ -189,22 +189,9 @@ const Services = () => {
               { title: "Budget", image: budgetFA },
             ]}
             image={HrImage}
-            rowReverse={true}
-          />
-
-          <SaaSFeatureBlock
-            title="Apps"
-            description1={[
-              { title: "Tickets", image: ticketRaisingCM },
-              { title: "Meetings", image: meetingRoomsCM },
-              { title: "Assets", image: eSignHR },
-              { title: "Visitors", image: visitorCM },
-              { title: "Calendar", image: calendarLine },
-              { title: "Profile", image: customerProfile },
-            ]}
-            image={TicketsImage}
             rowReverse={false}
           />
+
         </div>
 
         {/* <div className="SaaS-grid">
