@@ -1,33 +1,32 @@
 @font-face {
-    font-family: Popins-Semibold;
-    src: url('../assets/WONO_images/img/fonts/Poppins-SemiBold.ttf');
+  font-family: Popins-Semibold;
+  src: url("../assets/WONO_images/img/fonts/Poppins-SemiBold.ttf");
 }
 
 @font-face {
-    font-family: Popins-Regular;
-    src: url('../assets/WONO_images/img/fonts/Poppins-Regular.ttf');
+  font-family: Popins-Regular;
+  src: url("../assets/WONO_images/img/fonts/Poppins-Regular.ttf");
 }
 
 @font-face {
-    font-family: Caveat;
-    src: url('../assets/WONO_images/img/fonts/Caveat.ttf');
+  font-family: Caveat;
+  src: url("../assets/WONO_images/img/fonts/Caveat.ttf");
 }
 
 @font-face {
-    font-family: ComicSansMS-bold;
-    src: url('../assets/WONO_images/img/fonts/ComicSansMS.ttf');
+  font-family: ComicSansMS-bold;
+  src: url("../assets/WONO_images/img/fonts/ComicSansMS.ttf");
 }
 @font-face {
-    font-family: ComicSansMS-bold;
-    src: url('../assets/WONO_images/img/fonts/comic-bold.ttf');
+  font-family: ComicSansMS-bold;
+  src: url("../assets/WONO_images/img/fonts/comic-bold.ttf");
 }
-
 
 .services {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
 }
 
 /* .services * {
@@ -35,28 +34,26 @@
 } */
 
 .services:not(:last-child) {
-    padding: 0 7.5rem;
+  padding: 0 7.5rem;
 }
 
 .SaaS-main-heading {
-    text-align: center;
-    padding: 2rem 0 2rem 0;
-
+  text-align: center;
+  padding: 2rem 0 2rem 0;
 }
 
 .services-animation-container {
-    position: relative;
-    font-family: ComicSansMS-bold;
-    width: 100%;
+  position: relative;
+  font-family: ComicSansMS-bold;
+  width: 100%;
 }
 
 .services-animation-container img {
-    position: absolute;
-    top: 99%;
-    left: -8%;
-    width: 116%;
+  position: absolute;
+  top: 99%;
+  left: -8%;
+  width: 116%;
 }
-
 
 /* .services-blue-underline {
     position: absolute;
@@ -65,82 +62,77 @@
     z-index: -2;
 } */
 
-
-
-
 .SaaS-main-heading h1 {
-    font-size: 3.4rem;
-    padding: 0 0 2rem 0;
-    font-weight: normal;
-    font-family: ComicSansMS-bold;
+  font-size: 3.6rem;
+  padding: 0 0 2rem 0;
+  font-weight: normal;
+  font-family: ComicSansMS-bold;
 }
 
 .SaaS-main-heading h4 {
-    padding-bottom: 2rem;
-    font-family: Popins-Regular;
+  padding-bottom: 2rem;
+  font-family: Popins-Regular;
 }
 
 .SaaS-main-tagline {
-    font-size: 1.3rem;
+  font-size: 1.3rem;
 }
 
 .plus-sign {
-    color: #0AA9EF;
-    font-weight: 900;
+  color: #0aa9ef;
+  font-weight: 900;
 }
 
-
 .services-header-button-space {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    padding-top: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding-top: 2.5rem;
 }
 
 .services-footer-button-space {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 
 .SaaS-featured-master h1 {
-    padding-top: 4rem;
-    font-weight: normal;
-    margin: 0;
-    font-family: Popins-Regular;
+  padding-top: 4rem;
+  font-weight: normal;
+  margin: 0;
+  font-family: Popins-Regular;
 }
 
-.SaaS-featured-master>h1 span {
-    font-family: Popins-Regular;
+.SaaS-featured-master > h1 span {
+  font-family: Popins-Regular;
 }
 
 .SaaS-featured-heading-container {
-    position: relative;
-    font-family: Popins-Regular;
-    width: 100%;
-
+  position: relative;
+  font-family: Popins-Regular;
+  width: 100%;
 }
 
 .SaaS-featured-heading-container img {
-    position: absolute;
-    top: 85%;
-    left: 2%;
-    width: 41%;
+  position: absolute;
+  top: 85%;
+  left: 2%;
+  width: 41%;
 }
 
 .SaaS-features-heading {
-    position: relative;
-    font-family: 'Popins-Regular';
+  position: relative;
+  font-family: "Popins-Regular";
 }
 
 .SaaS-features-heading img {
-    position: absolute;
-    top: 88%;
-    width: 27%;
-    height: 63%;
-    left: -1%;
+  position: absolute;
+  top: 88%;
+  width: 27%;
+  height: 63%;
+  left: -1%;
 }
 
 /* .SaaS-blue-underline {
@@ -151,167 +143,165 @@
     left: -142px;
 } */
 .SaaS-features-frontend {
-    position: relative;
-    width: 100%;
+  position: relative;
+  width: 100%;
 }
 
 .SaaS-features-frontend img {
-    position: absolute;
-    width: 100%;
-    height: 55%;
-    top: 78%;
-    left: -1%;
+  position: absolute;
+  width: 100%;
+  height: 55%;
+  top: 78%;
+  left: -1%;
 }
 
 .SaaS-features-finance {
-    position: relative;
-    width: 100%;
+  position: relative;
+  width: 100%;
 }
 
 .SaaS-features-finance img {
-    position: absolute;
-    top: 79%;
-    left: -1%;
-    width: 100%;
-    height: 69%;
+  position: absolute;
+  top: 79%;
+  left: -1%;
+  width: 100%;
+  height: 69%;
 }
 
 .SaaS-features-sales {
-    position: relative;
-    width: 100%;
+  position: relative;
+  width: 100%;
 }
 
 .SaaS-features-sales img {
-    position: absolute;
-    top: 79%;
-    left: -1%;
-    width: 100%;
-    height: 69%;
+  position: absolute;
+  top: 79%;
+  left: -1%;
+  width: 100%;
+  height: 69%;
 }
 
 .SaaS-features-hr {
-    position: relative;
-    width: 100%;
+  position: relative;
+  width: 100%;
 }
 
 .SaaS-features-hr img {
-    position: absolute;
-    top: 79%;
-    left: -2%;
-    width: 100%;
-    height: 56%;
+  position: absolute;
+  top: 79%;
+  left: -2%;
+  width: 100%;
+  height: 56%;
 }
 
 .SaaS-features-cms {
-    position: relative;
-    width: 100%;
+  position: relative;
+  width: 100%;
 }
 
 .SaaS-features-cms img {
-    position: absolute;
-    top: 79%;
-    left: -2%;
-    width: 100%;
-    height: 56%;
+  position: absolute;
+  top: 79%;
+  left: -2%;
+  width: 100%;
+  height: 56%;
 }
 
 .SaaS-features-reports {
-    position: relative;
-    width: 100%;
+  position: relative;
+  width: 100%;
 }
 
 .SaaS-features-reports img {
-    position: absolute;
-    top: 79%;
-    left: -2%;
-    width: 100%;
-    height: 56%;
+  position: absolute;
+  top: 79%;
+  left: -2%;
+  width: 100%;
+  height: 56%;
 }
 
-
 .SaaS-featured-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 2rem;
 }
 
 .SaaS-featured-grid-left {
-    font-size: 1.5rem;
-    font-family: Popins-Regular;
+  font-size: 1.5rem;
+  font-family: Popins-Regular;
 }
 
 .SaaS-featured-grid-right {
-    width: 100%;
-    overflow: hidden;
+  width: 100%;
+  overflow: hidden;
 }
 
 .SaaS-featured-grid-right img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: top;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
 }
 
 .SaaS-grid {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .SaaS-grid-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
-.SaaS-grid-mobile{
-    display: none;
-    flex-direction: column;
+.SaaS-grid-mobile {
+  display: none;
+  flex-direction: column;
 }
-.SaaS-grid-accordion{
-    display: none;
+.SaaS-grid-accordion {
+  display: none;
 }
 
 .SaaS-grid-heading {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 2rem 0 0 0;
-    width: 100%;
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 2rem 0 0 0;
+  width: 100%;
 }
 
 .SaaS-grid-heading h2 {
-    font-weight: normal;
-    font-size: 4rem;
-    font-family: ComicSansMS-bold;
-    position: relative;
-    -webkit-font-smoothing: antialiased;
+  font-weight: normal;
+  font-size: 4rem;
+  font-family: ComicSansMS-bold;
+  position: relative;
+  -webkit-font-smoothing: antialiased;
 }
 
-.SaaS-grid-heading>h2 span {
-    font-family: ComicSansMS-bold;
+.SaaS-grid-heading > h2 span {
+  font-family: ComicSansMS-bold;
 }
 
 .SaaS-grid-underline-container {
-    position: relative;
-    font-size: 4rem !important;
-    font-family: ComicSansMS-bold;
-    width: 100%;
+  position: relative;
+  font-size: 4rem !important;
+  font-family: ComicSansMS-bold;
+  width: 100%;
 }
 
 .SaaS-grid-underline-container img {
-    position: absolute;
-    top: 75%;
-    left: 0%;
-    width: 99%;
-    height: 22%;
+  position: absolute;
+  top: 75%;
+  left: 0%;
+  width: 99%;
+  height: 22%;
 }
 
 .SaaS-grid-underline-container * {
-    font-family: ComicSansMS-bold;
+  font-family: ComicSansMS-bold;
 }
 
 /* .SaaS-grid-blue-underline {
@@ -329,41 +319,36 @@
     height: 1px;
 } */
 
-
-
 .SaaS-grid-heading span {
-    font-size: 1.5rem;
-    padding: 1rem 0 1rem 0;
+  font-size: 1.5rem;
+  padding: 1rem 0 1rem 0;
 }
-
-
 
 .businesses {
-    width: 100%;
-    padding: 2rem 0 0 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  width: 100%;
+  padding: 2rem 0 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.businesses>div>h1 {
-    text-align: start;
-    font-size: 2rem;
-    font-weight: normal;
-    text-align: start;
-    font-family: Popins-Semibold !important;
-    color: black;
-    text-transform: uppercase;
-
+.businesses > div > h1 {
+  text-align: start;
+  font-size: 2rem;
+  font-weight: normal;
+  text-align: start;
+  font-family: Popins-Semibold !important;
+  color: black;
+  text-transform: uppercase;
 }
 
-.businesses>div>hr {
-    margin: 0;
-    border: 4px solid #0875e2;
-    opacity: 1;
-    padding: 0;
-    width: 90%;
+.businesses > div > hr {
+  margin: 0;
+  border: 4px solid #0875e2;
+  opacity: 1;
+  padding: 0;
+  width: 90%;
 }
 
 /* .business-grid {
@@ -377,77 +362,75 @@
 } */
 
 .business-service-card {
-    display: flex;
-    align-items: center; /* Vertically center the content */
-    padding: 1rem;
-    background-color: #FFF;
-    column-gap: 1.5rem; 
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a soft drop shadow */
+  display: flex;
+  align-items: center; /* Vertically center the content */
+  padding: 1rem;
+  background-color: #fff;
+  column-gap: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a soft drop shadow */
 }
 
-
 .business-service-card-image {
-    flex: 0 0 15%; /* Fixed width for the image section, 27% of the card width */
+  flex: 0 0 15%; /* Fixed width for the image section, 27% of the card width */
 }
 
 .business-service-card-content {
-    flex: 1; /* The content section takes up the remaining space */
+  flex: 1; /* The content section takes up the remaining space */
 }
 
 .business-service-card-content h4 {
-    font-size: 1rem;
-    margin: 0;
-    font-family: Popins-Semibold !important;
-    font-weight: normal;
-    text-align: start;
-    line-height: 182%;
+  font-size: 1rem;
+  margin: 0;
+  font-family: Popins-Semibold !important;
+  font-weight: normal;
+  text-align: start;
+  line-height: 182%;
 }
 
 .business-service-card-content span {
-    font-size: 0.8rem;
-    margin: 0;
-    width: 100%;
-    font-family: Popins-Regular;
+  font-size: 0.8rem;
+  margin: 0;
+  width: 100%;
+  font-family: Popins-Regular;
 }
 
 .business-service-card-image {
-    /* background-color: red; */
-    padding: 0.4rem 0.6rem;
-    width: 60px;
-    border-radius: 5px;
+  /* background-color: red; */
+  padding: 0.4rem 0.6rem;
+  width: 60px;
+  border-radius: 5px;
 }
 
 .business-service-card img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
-
-.business-service>span {
-    font-family: Popins-Regular;
-    font-weight: 700;
-    text-align: center;
+.business-service > span {
+  font-family: Popins-Regular;
+  font-weight: 700;
+  text-align: center;
 }
 
 .business-service {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .SaaS-last-banner-section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 4rem 0;
-    background-color: #0093E9;
-    background-image: linear-gradient(0deg, #106df6, #aae5ff);
-    width: calc(100% + 15rem);
-    margin: 0 -7.5rem;
-    text-align: center;
-    text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 0;
+  background-color: #0093e9;
+  background-image: linear-gradient(0deg, #106df6, #aae5ff);
+  width: calc(100% + 15rem);
+  margin: 0 -7.5rem;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 /* .SaaS-last-banner h2 {
@@ -455,1431 +438,1405 @@
     font-size: 5.2rem;
 } */
 
-
-.business-service>img {
-    width: 50px;
-    margin-bottom: 0.8rem;
+.business-service > img {
+  width: 50px;
+  margin-bottom: 0.8rem;
 }
 
 .services-header-button-space {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding-top: 2rem;
+}
+
+@media (min-width: 2550px) {
+  .business-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    margin: 2rem 0;
+    padding: 0;
+    column-gap: 5rem;
+  }
+  .business-grid > div {
+    flex: 1 1 calc(33.33% - 4rem); /* Each item takes up 33.33% of the width with spacing */
+    margin-bottom: 2rem; /* To add space between rows */
+  }
+  .business-service-card-image {
+    flex: 0 0 11%; /* Fixed width for the image section, 27% of the card width */
+  }
+
+  .SaaS-last-banner h2 {
+    font-family: Popins-Semibold;
+    font-size: 8rem;
+  }
+}
+
+@media (max-width: 2548px) {
+  .business-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    margin: 2rem 0;
+    padding: 0;
+    column-gap: 2rem;
+  }
+  .business-grid > div {
+    flex: 1 1 calc(33.33% - 4rem); /* Each item takes up 33.33% of the width with spacing */
+    margin-bottom: 2rem; /* To add space between rows */
+  }
+
+  .SaaS-last-banner h2 {
+    font-family: Popins-Semibold;
+    font-size: 4.55rem;
+  }
+
+  .services-footer-button-space {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 1.5rem 0 0 0;
+  }
+}
+
+@media (max-width: 1440px) {
+  .SaaS-last-banner h2 {
+    font-family: Popins-Semibold;
+    font-size: 4.155rem;
+  }
+  .SaaS-grid-heading h2 {
+    font-weight: normal;
+    font-size: 3.8rem;
+    font-family: ComicSansMS-bold;
+    position: relative;
+    -webkit-font-smoothing: antialiased;
+  }
+  .SaaS-main-heading h1 {
+    font-size: 3.4rem;
+    padding: 0 0 2rem 0;
+    font-weight: normal;
+    font-family: ComicSansMS-bold;
+  }
+}
+
+@media (max-width: 1024px) {
+  .services {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+  }
+
+  .services:not(:last-child) {
+    padding: 0 4rem;
+  }
+
+  .SaaS-grid-underline-container img {
+    position: absolute;
+    top: 75%;
+    left: 0%;
+    width: 99%;
+    height: 22%;
+    display: none;
+  }
+
+  .SaaS-features-cms img {
+    position: absolute;
+    top: 79%;
+    left: -2%;
+    width: 100%;
+    height: 56%;
+  }
+
+  .business-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    margin: 4rem 0 4rem 0;
+    padding: 0;
+    column-gap: 8rem;
+    row-gap: 3rem;
+  }
+
+  .business-service-card {
+    display: grid;
+    grid-template-columns: 18% 1fr;
+    /* background-color: rgb(247, 247, 247); */
+    background-color: #fff;
+    padding: 1rem;
+  }
+
+  .business-service-card-content span {
+    font-size: 0.8rem;
+    margin: 0;
+    width: 100%;
+    line-height: 100%;
+  }
+
+  .SaaS-last-banner-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0093e9;
+    background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
+    width: calc(100% + 8rem);
+    margin: 0px -4rem;
+    text-align: center;
+  }
+
+  .services-footer-button-space {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 1.5rem 0 0 0;
+  }
+  .SaaS-last-banner-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 0;
+    background-color: #0093e9;
+    background-image: linear-gradient(0deg, #106df6, #aae5ff);
+    width: calc(100% + 11.5rem);
+    margin: 0 -7.5rem;
+    text-align: center;
+    text-transform: uppercase;
+  }
+}
+
+@media (max-width: 820px) {
+  .services {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .services:not(:last-child) {
+    padding: 0 1.7rem;
+  }
+
+  .SaaS-main-heading {
+    text-align: start;
+    padding: 0rem 0 0rem 0;
+  }
+
+  .SaaS-grid-underline-container img {
+    position: absolute;
+    top: 75%;
+    left: 0%;
+    width: 99%;
+    height: 22%;
+    display: none;
+  }
+
+  .SaaS-features-cms img {
+    position: absolute;
+    top: 79%;
+    left: -2%;
+    width: 100%;
+    height: 56%;
+  }
+
+  .services-animation-container {
+    position: relative;
+    font-family: ComicSansMS-bold;
+  }
+
+  .services-blue-underline {
+    position: absolute;
+    top: 5px;
+    left: -6px;
+    z-index: -2;
+  }
+
+  .SaaS-main-heading h1 {
+    font-size: 2.1rem;
+    padding: 0 0 2rem 0;
+    line-height: 130%;
+  }
+
+  .SaaS-features-heading img {
+    position: absolute;
+    top: 88%;
+    width: 33%;
+    height: 63%;
+    left: 2%;
+  }
+
+  .SaaS-main-heading h4 {
+    padding-bottom: 2rem;
+  }
+
+  .services-header-button-space {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
     padding-top: 2rem;
-}
+  }
 
-@media (min-width: 2550px) {
-    .business-grid {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        width: 100%;
-        margin: 2rem 0;
-        padding: 0;
-        column-gap: 5rem;
-    }
-    .business-grid > div {
-        flex: 1 1 calc(33.33% - 4rem); /* Each item takes up 33.33% of the width with spacing */
-        margin-bottom: 2rem; /* To add space between rows */
-    }
-    .business-service-card-image {
-        flex: 0 0 11%; /* Fixed width for the image section, 27% of the card width */
-    }
+  .services-footer-button-space {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 1.5rem 0 0 0;
+  }
 
-    .SaaS-last-banner h2 {
-        font-family: Popins-Semibold;
-        font-size: 8rem;
-    }
-}
+  .SaaS-featured-master h1 {
+    padding-top: 2rem;
+  }
 
-@media (max-width: 2548px) {
-    .business-grid {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        width: 100%;
-        margin: 2rem 0;
-        padding: 0;
-        column-gap: 2rem;
-    }
-    .business-grid > div {
-        flex: 1 1 calc(33.33% - 4rem); /* Each item takes up 33.33% of the width with spacing */
-        margin-bottom: 2rem; /* To add space between rows */
-    }
+  .SaaS-featured-heading-container {
+    position: relative;
+  }
 
-    .SaaS-last-banner h2 {
-        font-family: Popins-Semibold;
-        font-size: 4.55rem;
-    }
+  .SaaS-blue-underline {
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    top: 2px;
+    left: -98px;
+  }
 
-    .services-footer-button-space {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        padding: 1.5rem 0 0 0;
-    }
-}
+  .SaaS-blue-underline-frontend {
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    top: 2px;
+    left: -98px;
+  }
 
-@media (max-width:1440px) {
-    .SaaS-last-banner h2 {
-        font-family: Popins-Semibold;
-        font-size: 4.155rem;
-    }
-    .SaaS-grid-heading h2 {
-        font-weight: normal;
-        font-size: 3.8rem;
-        font-family: ComicSansMS-bold;
-        position: relative;
-        -webkit-font-smoothing: antialiased;
-    }
+  .SaaS-featured-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
 
-}
+  .SaaS-featured-grid-right {
+    width: 100%;
+    overflow: hidden;
+  }
 
-@media (max-width: 1024px) {
-    .services {
-        display: flex;
-        flex-direction: column;
-        align-items: stretch;
-        justify-content: center;
-    }
+  .SaaS-featured-grid-right img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
 
+  .SaaS-grid {
+    padding: 0;
+  }
 
-    .services:not(:last-child) {
-        padding: 0 4rem;
-    }
+  .SaaS-grid-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
 
-    .SaaS-grid-underline-container img {
-        position: absolute;
-        top: 75%;
-        left: 0%;
-        width: 99%;
-        height: 22%;
-        display: none;
-    }
+  .SaaS-grid-heading {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2rem 0 0 0;
+    width: 100%;
+  }
 
-    .SaaS-features-cms img {
-        position: absolute;
-        top: 79%;
-        left: -2%;
-        width: 100%;
-        height: 56%;
-    }
+  .SaaS-grid-heading h2 {
+    font-size: 2rem;
+  }
 
-    .business-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        width: 100%;
-        margin: 4rem 0 4rem 0;
-        padding: 0;
-        column-gap: 8rem;
-        row-gap: 3rem;
-    }
+  .SaaS-grid-underline-container {
+    position: relative;
+    font-size: 2rem !important;
+    font-family: ComicSansMS-bold;
+  }
 
-    .business-service-card {
-        display: grid;
-        grid-template-columns: 18% 1fr;
-        /* background-color: rgb(247, 247, 247); */
-        background-color: #FFF;
-        padding: 1rem;
-    }
+  .SaaS-grid-blue-underline {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 73px;
+    top: -7px;
+    left: -112px;
+  }
 
-    .business-service-card-content span {
-        font-size: 0.8rem;
-        margin: 0;
-        width: 100%;
-        line-height: 100%;
-    }
+  .SaaS-grid-heading span {
+    font-size: 1.5rem;
+  }
 
-    .SaaS-last-banner-section {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: #0093E9;
-        background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
-        width: calc(100% + 8rem);
-        margin: 0px -4rem;
-        text-align: center;
-    }
+  .module-feature-underline-frame {
+    width: 23%;
+    height: 19px;
+    top: 35px;
+    left: 297px;
+  }
 
-    .services-footer-button-space {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        padding: 1.5rem 0 0 0;
-    }
-    .SaaS-last-banner-section {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 2rem 0;
-        background-color: #0093E9;
-        background-image: linear-gradient(0deg, #106df6, #aae5ff);
-        width: calc(100% + 11.5rem);
-        margin: 0 -7.5rem;
-        text-align: center;
-        text-transform: uppercase;
-    }
-}
+  .business-service-card {
+    display: grid;
+    grid-template-columns: 18% 1fr;
+    column-gap: 0.5rem;
+  }
 
-@media (max-width: 820px) {
-    .services {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
+  .business-service-card-content h4 {
+    font-size: 1rem;
+    margin: 0;
+    font-weight: normal;
+  }
 
-    .services:not(:last-child) {
-        padding: 0 1.7rem;
-    }
+  .business-service-card-content span {
+    font-size: 0.8rem;
+    margin: 0;
+    width: 100%;
+  }
 
-    .SaaS-main-heading {
-        text-align: start;
-        padding: 4rem 0 2rem 0;
+  .business-service-card-image {
+    width: 3.5rem;
+  }
 
-    }
+  .business-service-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
 
-    .SaaS-grid-underline-container img {
-        position: absolute;
-        top: 75%;
-        left: 0%;
-        width: 99%;
-        height: 22%;
-        display: none;
-    }
+  .businesses {
+    width: 100%;
+    padding: 2rem 0 0 0;
+  }
 
-    .SaaS-features-cms img {
-        position: absolute;
-        top: 79%;
-        left: -2%;
-        width: 100%;
-        height: 56%;
-    }
+  .businesses > div > h1 {
+    text-align: start;
+    font-size: 1.7rem;
+    font-weight: 700;
+    font-family: Popins-SemiBold;
+    color: black;
+    padding: 0;
+  }
 
-    .services-animation-container {
-        position: relative;
-        font-family: ComicSansMS-bold;
-    }
+  .businesses > div > hr {
+    margin: 0;
+    border: 4px solid #0875e2;
+    opacity: 1;
+    padding: 0;
+    width: 90%;
+  }
 
-    .services-blue-underline {
-        position: absolute;
-        top: 5px;
-        left: -6px;
-        z-index: -2;
-    }
+  .business-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    margin: 4rem 0 4rem 0;
+    padding: 0;
+    column-gap: 2rem;
+    row-gap: 1rem;
+  }
 
+  .business-service > span {
+    font-family: Popins-Regular;
+    font-weight: 700;
+    text-align: center;
+    font-size: 0.7rem;
+  }
 
-    .SaaS-main-heading h1 {
-        font-size: 2rem;
-        padding: 0 0 2rem 0;
-        line-height: 130%;
-    }
+  .business-service {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 
-    .SaaS-main-heading h4 {
-        padding-bottom: 2rem;
-    }
+  .SaaS-last-banner-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 3rem;
+    background-color: #0093e9;
+    background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
+    width: calc(100% + 3rem);
+    margin: 0 -2rem;
+    text-align: center;
+  }
 
-    .services-header-button-space {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        padding-top: 2rem;
-    }
+  .SaaS-last-banner h2 {
+    font-family: Popins-Semibold;
+    font-size: 2.4rem;
+  }
 
-    .services-footer-button-space {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        padding: 1.5rem 0 0 0;
-    }
-
-    .SaaS-featured-master h1 {
-        padding-top: 2rem;
-    }
-
-    .SaaS-featured-heading-container {
-        position: relative;
-
-    }
-
-    .SaaS-blue-underline {
-        position: absolute;
-        width: 100%;
-        height: 50px;
-        top: 2px;
-        left: -98px;
-
-    }
-
-    .SaaS-blue-underline-frontend {
-        position: absolute;
-        width: 100%;
-        height: 50px;
-        top: 2px;
-        left: -98px;
-
-    }
-
-    .SaaS-featured-grid {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-
-    .SaaS-featured-grid-right {
-        width: 100%;
-        overflow: hidden;
-    }
-
-    .SaaS-featured-grid-right img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-    }
-
-    .SaaS-grid {
-        padding: 0;
-    }
-
-    .SaaS-grid-content {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-    }
-
-    .SaaS-grid-heading {
-        display: flex;
-        align-items: start;
-        justify-content: center;
-        flex-direction: column;
-        padding: 2rem 0 0 0;
-        width: 100%;
-    }
-
-    .SaaS-grid-heading h2 {
-        font-size: 2rem;
-    }
-
-    .SaaS-grid-underline-container {
-        position: relative;
-        font-size: 2rem !important;
-        font-family: ComicSansMS-bold;
-    }
-
-    .SaaS-grid-blue-underline {
-        display: none;
-        position: absolute;
-        width: 100%;
-        height: 73px;
-        top: -7px;
-        left: -112px;
-    }
-
-    .SaaS-grid-heading span {
-        font-size: 1.5rem;
-    }
-
-    .business-service-card {
-        display: grid;
-        grid-template-columns: 18% 1fr;
-        column-gap: 0.5rem;
-    }
-
-    .business-service-card-content h4 {
-        font-size: 1rem;
-        margin: 0;
-        font-weight: normal;
-    }
-
-    .business-service-card-content span {
-        font-size: 0.8rem;
-        margin: 0;
-        width: 100%;
-    }
-
-    .business-service-card-image {
-        width: 3.5rem;
-    }
-
-    .business-service-card img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-    }
-
-
-    .businesses {
-        width: 100%;
-        padding: 2rem 0 0 0;
-    }
-
-    .businesses>div>h1 {
-        text-align: start;
-        font-size: 1.7rem;
-        font-weight: 700;
-        font-family: Popins-SemiBold;
-        color: black;
-        padding: 0;
-    }
-
-    .businesses>div>hr {
-        margin: 0;
-        border: 4px solid #0875e2;
-        opacity: 1;
-        padding: 0;
-        width: 90%;
-    }
-
-    .business-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        width: 100%;
-        margin: 4rem 0 4rem 0;
-        padding: 0;
-        column-gap: 2rem;
-        row-gap: 1rem;
-    }
-
-    .business-service>span {
-        font-family: Popins-Regular;
-        font-weight: 700;
-        text-align: center;
-        font-size: 0.7rem;
-    }
-
-    .business-service {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .SaaS-last-banner-section {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 2rem 3rem;
-        background-color: #0093E9;
-        background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
-        width: calc(100% + 3rem);
-        margin: 0 -2rem;
-        text-align: center;
-    }
-
-    .SaaS-last-banner h2 {
-        font-family: Popins-Semibold;
-        font-size: 2.4rem;
-    }
-
-
-    .business-service>img {
-        width: 50px;
-        margin-bottom: 0.8rem;
-    }
+  .business-service > img {
+    width: 50px;
+    margin-bottom: 0.8rem;
+  }
 }
 
 @media (max-width: 768px) {
-    .services {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
+  .services {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 
-    .services:not(:last-child) {
-        padding: 0 1.9rem;
-    }
+  .services:not(:last-child) {
+    padding: 0 1.9rem;
+  }
 
-    .SaaS-main-heading {
-        text-align: start;
-        padding: 0rem 0 2rem 0;
+  .SaaS-main-heading {
+    text-align: start;
+    padding: 0rem 0 2rem 0;
+  }
 
-    }
+  .services-animation-container {
+    position: relative;
+    font-family: ComicSansMS-bold;
+  }
 
-    .services-animation-container {
-        position: relative;
-        font-family: ComicSansMS-bold;
-    }
+  .SaaS-grid-underline-container img {
+    position: absolute;
+    top: 75%;
+    left: 0%;
+    width: 99%;
+    height: 22%;
+    display: none;
+  }
 
+  .SaaS-features-cms img {
+    position: absolute;
+    top: 79%;
+    left: -2%;
+    width: 100%;
+    height: 56%;
+  }
 
-    .SaaS-grid-underline-container img {
-        position: absolute;
-        top: 75%;
-        left: 0%;
-        width: 99%;
-        height: 22%;
-        display: none;
-    }
+  .services-blue-underline {
+    position: absolute;
+    top: 5px;
+    left: -6px;
+    z-index: -2;
+  }
 
-    .SaaS-features-cms img {
-        position: absolute;
-        top: 79%;
-        left: -2%;
-        width: 100%;
-        height: 56%;
-    }
+  .SaaS-main-heading h1 {
+    font-size: 2rem;
+    padding: 2rem 0 2rem 0;
+    line-height: 130%;
+  }
 
+  .SaaS-main-heading h4 {
+    padding-bottom: 2rem;
+  }
 
-    .services-blue-underline {
-        position: absolute;
-        top: 5px;
-        left: -6px;
-        z-index: -2;
-    }
+  .services-header-button-space {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding-top: 2rem;
+  }
 
+  .services-footer-button-space {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 1.5rem 0 0 0;
+  }
 
-    .SaaS-main-heading h1 {
-        font-size: 2rem;
-        padding: 2rem 0 2rem 0;
-        line-height: 130%;
-    }
+  .SaaS-featured-master h1 {
+    padding-top: 2rem;
+  }
 
-    .SaaS-main-heading h4 {
-        padding-bottom: 2rem;
-    }
+  .SaaS-featured-heading-container {
+    position: relative;
+  }
 
-    .services-header-button-space {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        padding-top: 2rem;
-    }
+  .SaaS-blue-underline {
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    top: 2px;
+    left: -98px;
+  }
 
-    .services-footer-button-space {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        padding: 1.5rem 0 0 0;
-    }
+  .SaaS-blue-underline-frontend {
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    top: 2px;
+    left: -40px;
+  }
 
-    .SaaS-featured-master h1 {
-        padding-top: 2rem;
-    }
+  .SaaS-blue-underline-finance-accounting {
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    top: 2px;
+    left: -120px;
+  }
 
-    .SaaS-featured-heading-container {
-        position: relative;
+  .SaaS-blue-underline-customer-management-services {
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    top: 30px;
+    left: -120px;
+  }
 
-    }
+  .SaaS-blue-underline-hrsupport {
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    top: 2px;
+    left: -40px;
+  }
 
-    .SaaS-blue-underline {
-        position: absolute;
-        width: 100%;
-        height: 50px;
-        top: 2px;
-        left: -98px;
+  .SaaS-blue-underline-reports-analytics {
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    top: 2px;
+    left: -110px;
+  }
 
-    }
+  .SaaS-blue-underline-sales-marketing {
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    top: 2px;
+    left: -100px;
+  }
 
-    .SaaS-blue-underline-frontend {
-        position: absolute;
-        width: 100%;
-        height: 50px;
-        top: 2px;
-        left: -40px;
+  .SaaS-featured-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
 
-    }
+  .SaaS-featured-grid-left {
+    font-size: 1.353rem;
+  }
 
-    .SaaS-blue-underline-finance-accounting {
-        position: absolute;
-        width: 100%;
-        height: 50px;
-        top: 2px;
-        left: -120px;
+  .SaaS-featured-grid-right {
+    width: 100%;
+    overflow: hidden;
+  }
 
-    }
+  .SaaS-featured-grid-right img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
 
-    .SaaS-blue-underline-customer-management-services {
-        position: absolute;
-        width: 100%;
-        height: 50px;
-        top: 30px;
-        left: -120px;
+  .SaaS-grid {
+    padding: 0;
+  }
 
+  .SaaS-grid-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
 
-    }
+  .SaaS-grid-heading {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2rem 0 0 0;
+    width: 100%;
+  }
 
-    .SaaS-blue-underline-hrsupport {
-        position: absolute;
-        width: 100%;
-        height: 50px;
-        top: 2px;
-        left: -40px;
+  .SaaS-grid-heading h2 {
+    font-size: 2rem;
+  }
 
-    }
+  .SaaS-grid-underline-container {
+    position: relative;
+    font-size: 2rem !important;
+    font-family: ComicSansMS-bold;
+  }
 
-    .SaaS-blue-underline-reports-analytics {
-        position: absolute;
-        width: 100%;
-        height: 50px;
-        top: 2px;
-        left: -110px;
+  .SaaS-grid-blue-underline {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 73px;
+    top: -7px;
+    left: -112px;
+  }
 
-    }
+  .SaaS-grid-heading span {
+    font-size: 1.353rem;
+    padding-bottom: 0;
+  }
 
-    .SaaS-blue-underline-sales-marketing {
-        position: absolute;
-        width: 100%;
-        height: 50px;
-        top: 2px;
-        left: -100px;
+  .business-service-card {
+    display: grid;
+    grid-template-columns: 10% 1fr;
+    column-gap: 1rem;
+  }
 
-    }
+  .business-service-card-content h4 {
+    font-size: 1rem;
+    margin: 0;
+    font-weight: normal;
+    line-height: 184%;
+  }
 
+  .business-service-card-content span {
+    font-size: 0.8rem;
+    margin: 0;
+    width: 100%;
+  }
 
-    .SaaS-featured-grid {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
+  .business-service-card-image {
+    width: 30px;
+    padding: 0;
+  }
 
-    .SaaS-featured-grid-left {
-        font-size: 1.353rem;
-    }
+  .business-service-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
 
-    .SaaS-featured-grid-right {
-        width: 100%;
-        overflow: hidden;
-    }
+  .businesses {
+    width: 100%;
+    padding: 2rem 0 0 0;
+  }
 
-    .SaaS-featured-grid-right img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-    }
+  .businesses > div > h1 {
+    text-align: start;
+    font-size: 1.4rem;
+    font-weight: 700;
+    font-family: Popins-SemiBold;
+    color: black;
+    padding: 0;
+  }
 
-    .SaaS-grid {
-        padding: 0;
-    }
+  .businesses > div > hr {
+    margin: 0;
+    border: 4px solid #0875e2;
+    opacity: 1;
+    padding: 0;
+    width: 90%;
+  }
 
-    .SaaS-grid-content {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-    }
+  .business-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    margin: 2rem 0 2rem 0;
+    padding: 0;
+    column-gap: 2rem;
+    row-gap: 1rem;
+  }
 
-    .SaaS-grid-heading {
-        display: flex;
-        align-items: start;
-        justify-content: center;
-        flex-direction: column;
-        padding: 2rem 0 0 0;
-        width: 100%;
-    }
+  .business-service > span {
+    font-family: Popins-Regular;
+    font-weight: 700;
+    text-align: center;
+    font-size: 0.7rem;
+  }
 
-    .SaaS-grid-heading h2 {
-        font-size: 2rem;
-    }
+  .business-service {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 
-    .SaaS-grid-underline-container {
-        position: relative;
-        font-size: 2rem !important;
-        font-family: ComicSansMS-bold;
-    }
+  .SaaS-last-banner-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background-color: #0093e9;
+    background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
+    width: calc(100% + 3.4rem);
+    margin: 0 -2rem;
+    text-align: center;
+  }
 
-    .SaaS-grid-blue-underline {
-        display: none;
-        position: absolute;
-        width: 100%;
-        height: 73px;
-        top: -7px;
-        left: -112px;
-    }
+  .SaaS-last-banner h2 {
+    font-family: Popins-Semibold;
+    font-size: 2.4rem;
+  }
 
-    .SaaS-grid-heading span {
-        font-size: 1.353rem;
-        padding-bottom: 0;
-    }
-
-    .business-service-card {
-        display: grid;
-        grid-template-columns: 10% 1fr;
-        column-gap: 1rem;
-    }
-
-    .business-service-card-content h4 {
-        font-size: 1rem;
-        margin: 0;
-        font-weight: normal;
-        line-height: 184%;
-    }
-
-    .business-service-card-content span {
-        font-size: 0.8rem;
-        margin: 0;
-        width: 100%;
-    }
-
-    .business-service-card-image {
-        width: 30px;
-        padding: 0;
-    }
-
-    .business-service-card img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-    }
-
-
-    .businesses {
-        width: 100%;
-        padding: 2rem 0 0 0;
-    }
-
-    .businesses>div>h1 {
-        text-align: start;
-        font-size: 1.4rem;
-        font-weight: 700;
-        font-family: Popins-SemiBold;
-        color: black;
-        padding: 0;
-    }
-
-    .businesses>div>hr {
-        margin: 0;
-        border: 4px solid #0875e2;
-        opacity: 1;
-        padding: 0;
-        width: 90%;
-    }
-
-    .business-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        width: 100%;
-        margin: 2rem 0 2rem 0;
-        padding: 0;
-        column-gap: 2rem;
-        row-gap: 1rem;
-    }
-
-    .business-service>span {
-        font-family: Popins-Regular;
-        font-weight: 700;
-        text-align: center;
-        font-size: 0.7rem;
-    }
-
-    .business-service {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .SaaS-last-banner-section {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 2rem;
-        background-color: #0093E9;
-        background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
-        width: calc(100% + 3.4rem);
-        margin: 0 -2rem;
-        text-align: center;
-    }
-
-    .SaaS-last-banner h2 {
-        font-family: Popins-Semibold;
-        font-size: 2.4rem;
-    }
-
-
-    .business-service>img {
-        width: 50px;
-        margin-bottom: 0.8rem;
-    }
+  .business-service > img {
+    width: 50px;
+    margin-bottom: 0.8rem;
+  }
 }
 @media (max-width: 450px) {
-    .services {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .services:not(:last-child) {
-        padding: 0 1.9rem;
-    }
-
-    .SaaS-main-heading {
-        text-align: start;
-        padding: 0rem 0 2rem 0;
-
-    }
-
-    .services-animation-container {
-        position: relative;
-        font-family: ComicSansMS-bold;
-    }
-
-
-    .SaaS-grid-underline-container img {
-        position: absolute;
-        top: 75%;
-        left: 0%;
-        width: 99%;
-        height: 22%;
-        display: none;
-    }
-
-    .SaaS-features-cms img {
-        position: absolute;
-        top: 79%;
-        left: -2%;
-        width: 100%;
-        height: 56%;
-    }
-
-
-    .services-blue-underline {
-        position: absolute;
-        top: 5px;
-        left: -6px;
-        z-index: -2;
-    }
-
-
-    .SaaS-main-heading h1 {
-        font-size: 2rem;
-        padding: 2rem 0 2rem 0;
-        line-height: 130%;
-    }
-
-    .SaaS-main-heading h4 {
-        padding-bottom: 2rem;
-    }
-
-    .services-header-button-space {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        padding-top: 2rem;
-    }
-
-    .services-footer-button-space {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        padding: 1.5rem 0 0 0;
-    }
-
-    .SaaS-featured-master h1 {
-        padding-top: 2rem;
-    }
-
-    .SaaS-featured-heading-container {
-        position: relative;
-
-    }
-
-    .SaaS-blue-underline {
-        position: absolute;
-        width: 100%;
-        height: 50px;
-        top: 2px;
-        left: -98px;
-
-    }
-
-    .SaaS-blue-underline-frontend {
-        position: absolute;
-        width: 100%;
-        height: 50px;
-        top: 2px;
-        left: -40px;
-
-    }
-
-    .SaaS-blue-underline-finance-accounting {
-        position: absolute;
-        width: 100%;
-        height: 50px;
-        top: 2px;
-        left: -120px;
-
-    }
-
-    .SaaS-blue-underline-customer-management-services {
-        position: absolute;
-        width: 100%;
-        height: 50px;
-        top: 30px;
-        left: -120px;
-
-
-    }
-
-    .SaaS-blue-underline-hrsupport {
-        position: absolute;
-        width: 100%;
-        height: 50px;
-        top: 2px;
-        left: -40px;
-
-    }
-
-    .SaaS-blue-underline-reports-analytics {
-        position: absolute;
-        width: 100%;
-        height: 50px;
-        top: 2px;
-        left: -110px;
-
-    }
-
-    .SaaS-blue-underline-sales-marketing {
-        position: absolute;
-        width: 100%;
-        height: 50px;
-        top: 2px;
-        left: -100px;
-
-    }
-
-
-    .SaaS-featured-grid {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-
-    .SaaS-featured-grid-left {
-        font-size: 1.353rem;
-    }
-
-    .SaaS-featured-grid-right {
-        width: 100%;
-        overflow: hidden;
-    }
-
-    .SaaS-featured-grid-right img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-    }
-
-    .SaaS-grid {
-        padding: 0;
-    }
-
-    .SaaS-grid-content {
-        display: none;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-    }
-    .SaaS-grid-mobile{
-        display: flex;
-        flex-direction: column;
-    }
-    .SaaS-grid-accordion{
-        display: block;
-        width: 100%;
-        padding: 2rem 0;
-    }
-    .SaaS-accordion-item{
-        border: none;
-    }
-    .SaaS-accordion-body{
-        padding: 0 !important;
-    }
-
-    .SaaS-grid-heading {
-        display: flex;
-        align-items: start;
-        justify-content: center;
-        flex-direction: column;
-        padding: 2rem 0 0 0;
-        width: 100%;
-    }
-
-    .SaaS-grid-heading h2 {
-        font-size: 2rem;
-    }
-
-    .SaaS-grid-underline-container {
-        position: relative;
-        font-size: 2rem !important;
-        font-family: ComicSansMS-bold;
-    }
-
-    .SaaS-grid-blue-underline {
-        display: none;
-        position: absolute;
-        width: 100%;
-        height: 73px;
-        top: -7px;
-        left: -112px;
-    }
-
-    .SaaS-grid-heading span {
-        font-size: 1.353rem;
-        padding-bottom: 0;
-    }
-
-    .business-service-card {
-        display: grid;
-        grid-template-columns: 10% 1fr;
-        column-gap: 1rem;
-        border-bottom: 1px solid rgb(136, 136, 136);
-        box-shadow: none;
-    }
-
-    .business-service-card-content h4 {
-        font-size: 1rem;
-        margin: 0;
-        font-weight: normal;
-        line-height: 184%;
-    }
-
-
-
-    .business-grid-mobile{
-
-    }
-
-    .business-grid > div {
-        flex: 1 1 calc(33.33% - 4rem); /* Each item takes up 33.33% of the width with spacing */
-        margin-bottom: 0rem; /* To add space between rows */
-    }
-
-    .business-service-card-content span {
-        font-size: 0.8rem;
-        margin: 0;
-        width: 100%;
-    }
-
-    .business-service-card-image {
-        width: 30px;
-        padding: 0;
-    }
-
-    .business-service-card img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-    }
-
-
-    .businesses {
-        width: 100%;
-        padding: 2rem 0 0 0;
-    }
-
-    .businesses>div>h1 {
-        text-align: start;
-        font-size: 1.08rem;
-        font-weight: 700;
-        font-family: Popins-SemiBold;
-        color: black;
-        padding: 0;
-    }
-
-    .businesses>div>hr {
-        margin: 0;
-        border: 4px solid #0875e2;
-        opacity: 1;
-        padding: 0;
-        width: 90%;
-    }
-
-    .business-grid {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        width: 100%;
-        margin: 2rem 0 2rem 0;
-        padding: 0;
-        /* column-gap: 2rem; */
-        row-gap: 0rem;
-    }
-
-    .business-service>span {
-        font-family: Popins-Regular;
-        font-weight: 700;
-        text-align: center;
-        font-size: 0.7rem;
-    }
-
-    .business-service {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .SaaS-last-banner-section {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 2rem;
-        background-color: #0093E9;
-        background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
-        width: calc(100% + 3.4rem);
-        margin: 0 -2rem;
-        text-align: center;
-    }
-
-    .SaaS-last-banner h2 {
-        font-family: Popins-Semibold;
-        font-size: 2rem;
-    }
-
-
-    .business-service>img {
-        width: 50px;
-        margin-bottom: 0.8rem;
-    }
+  .services {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .SaaS-features-heading img {
+    position: absolute;
+    top: 88%;
+    width: 81%;
+    height: 63%;
+    left: -1%;
+  }
+  .module-feature-underline-frame {
+    width: 43%;
+    height: 19px;
+    top: 35px;
+    left: 97px;
+  }
+
+  .services:not(:last-child) {
+    padding: 0 1.9rem;
+  }
+
+  .SaaS-main-heading {
+    text-align: start;
+    padding: 0rem 0 0rem 0;
+  }
+
+  .services-animation-container {
+    position: relative;
+    font-family: ComicSansMS-bold;
+  }
+
+  .SaaS-grid-underline-container img {
+    position: absolute;
+    top: 75%;
+    left: 0%;
+    width: 99%;
+    height: 22%;
+    display: none;
+  }
+
+  .SaaS-features-cms img {
+    position: absolute;
+    top: 79%;
+    left: -2%;
+    width: 100%;
+    height: 56%;
+  }
+
+  .services-blue-underline {
+    position: absolute;
+    top: 5px;
+    left: -6px;
+    z-index: -2;
+  }
+
+  .SaaS-main-heading h1 {
+    font-size: 2.5rem;
+    padding: 2rem 0 2rem 0;
+    line-height: 130%;
+  }
+
+  .SaaS-main-heading h4 {
+    padding-bottom: 2rem;
+  }
+
+  .services-header-button-space {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding-top: 2rem;
+  }
+
+  .services-footer-button-space {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 1.5rem 0 0 0;
+  }
+
+  .SaaS-featured-master h1 {
+    padding-top: 2rem;
+  }
+
+  .SaaS-featured-heading-container {
+    position: relative;
+  }
+
+  .SaaS-blue-underline {
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    top: 2px;
+    left: -98px;
+  }
+
+  .SaaS-blue-underline-frontend {
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    top: 2px;
+    left: -40px;
+  }
+
+  .SaaS-blue-underline-finance-accounting {
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    top: 2px;
+    left: -120px;
+  }
+
+  .SaaS-blue-underline-customer-management-services {
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    top: 30px;
+    left: -120px;
+  }
+
+  .SaaS-blue-underline-hrsupport {
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    top: 2px;
+    left: -40px;
+  }
+
+  .SaaS-blue-underline-reports-analytics {
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    top: 2px;
+    left: -110px;
+  }
+
+  .SaaS-blue-underline-sales-marketing {
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    top: 2px;
+    left: -100px;
+  }
+
+  .SaaS-featured-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .SaaS-featured-grid-left {
+    font-size: 1.353rem;
+  }
+
+  .SaaS-featured-grid-right {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .SaaS-featured-grid-right img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .SaaS-grid {
+    padding: 0;
+  }
+
+  .SaaS-grid-content {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .SaaS-grid-mobile {
+    display: flex;
+    flex-direction: column;
+  }
+  .SaaS-grid-accordion {
+    display: block;
+    width: 100%;
+    padding: 2rem 0;
+  }
+  .SaaS-accordion-item {
+    border: none;
+  }
+  .SaaS-accordion-body {
+    padding: 0 !important;
+  }
+
+  .SaaS-grid-heading {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2rem 0 0 0;
+    width: 100%;
+  }
+
+  .SaaS-grid-heading h2 {
+    font-size: 2rem;
+  }
+
+  .SaaS-grid-underline-container {
+    position: relative;
+    font-size: 2rem !important;
+    font-family: ComicSansMS-bold;
+  }
+
+  .SaaS-grid-blue-underline {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 73px;
+    top: -7px;
+    left: -112px;
+  }
+
+  .SaaS-grid-heading span {
+    font-size: 1.353rem;
+    padding-bottom: 0;
+  }
+
+  .business-service-card {
+    display: grid;
+    grid-template-columns: 10% 1fr;
+    column-gap: 1rem;
+    border-bottom: 1px solid rgb(136, 136, 136);
+    box-shadow: none;
+  }
+
+  .business-service-card-content h4 {
+    font-size: 1rem;
+    margin: 0;
+    font-weight: normal;
+    line-height: 184%;
+  }
+
+  .business-grid-mobile {
+  }
+
+  .business-grid > div {
+    flex: 1 1 calc(33.33% - 4rem); /* Each item takes up 33.33% of the width with spacing */
+    margin-bottom: 0rem; /* To add space between rows */
+  }
+
+  .business-service-card-content span {
+    font-size: 0.8rem;
+    margin: 0;
+    width: 100%;
+  }
+
+  .business-service-card-image {
+    width: 30px;
+    padding: 0;
+  }
+
+  .business-service-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .businesses {
+    width: 100%;
+    padding: 2rem 0 0 0;
+  }
+
+  .businesses > div > h1 {
+    text-align: start;
+    font-size: 1.08rem;
+    font-weight: 700;
+    font-family: Popins-SemiBold;
+    color: black;
+    padding: 0;
+  }
+
+  .businesses > div > hr {
+    margin: 0;
+    border: 4px solid #0875e2;
+    opacity: 1;
+    padding: 0;
+    width: 90%;
+  }
+
+  .business-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    width: 100%;
+    margin: 2rem 0 2rem 0;
+    padding: 0;
+    /* column-gap: 2rem; */
+    row-gap: 0rem;
+  }
+
+  .business-service > span {
+    font-family: Popins-Regular;
+    font-weight: 700;
+    text-align: center;
+    font-size: 0.7rem;
+  }
+
+  .business-service {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .SaaS-last-banner-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background-color: #0093e9;
+    background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
+    width: calc(100% + 3.4rem);
+    margin: 0 -2rem;
+    text-align: center;
+  }
+
+  .SaaS-last-banner h2 {
+    font-family: Popins-Semibold;
+    font-size: 2rem;
+  }
+
+  .business-service > img {
+    width: 50px;
+    margin-bottom: 0.8rem;
+  }
 }
 
 @media (max-width: 450px) and (min-width: 321px) {
-    .business-service-card-content span {
-        font-size: calc(0.8rem + (1 - 0.8) * ((100vw - 321px) / (450 - 321) * 1));
-    }
+  .business-service-card-content span {
+    font-size: calc(0.8rem + (1 - 0.8) * ((100vw - 321px) / (450 - 321) * 1));
+  }
 }
 
 @media (max-width: 321px) {
-    .services {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
+  .services {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 
-    .services:not(:last-child) {
-        padding: 0 1.9rem;
-    }
+  .services:not(:last-child) {
+    padding: 0 1.9rem;
+  }
 
-    .SaaS-main-heading {
-        text-align: start;
-        padding: 0rem 0 2rem 0;
+  .SaaS-main-heading {
+    text-align: start;
+    padding: 0rem 0 2rem 0;
+  }
 
-    }
+  .services-animation-container {
+    position: relative;
+    font-family: ComicSansMS-bold;
+  }
 
-    .services-animation-container {
-        position: relative;
-        font-family: ComicSansMS-bold;
-    }
+  .SaaS-grid-underline-container img {
+    position: absolute;
+    top: 75%;
+    left: 0%;
+    width: 99%;
+    height: 22%;
+    display: none;
+  }
 
+  .SaaS-features-cms img {
+    position: absolute;
+    top: 79%;
+    left: -2%;
+    width: 100%;
+    height: 56%;
+  }
 
-    .SaaS-grid-underline-container img {
-        position: absolute;
-        top: 75%;
-        left: 0%;
-        width: 99%;
-        height: 22%;
-        display: none;
-    }
+  .services-blue-underline {
+    position: absolute;
+    top: 5px;
+    left: -6px;
+    z-index: -2;
+  }
 
-    .SaaS-features-cms img {
-        position: absolute;
-        top: 79%;
-        left: -2%;
-        width: 100%;
-        height: 56%;
-    }
+  .SaaS-main-heading h1 {
+    font-size: 2rem;
+    padding: 2rem 0 2rem 0;
+    line-height: 130%;
+  }
 
+  .SaaS-main-heading h4 {
+    padding-bottom: 2rem;
+  }
 
-    .services-blue-underline {
-        position: absolute;
-        top: 5px;
-        left: -6px;
-        z-index: -2;
-    }
+  .services-header-button-space {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding-top: 2rem;
+  }
 
+  .services-footer-button-space {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 1.5rem 0 0 0;
+  }
 
-    .SaaS-main-heading h1 {
-        font-size: 2rem;
-        padding: 2rem 0 2rem 0;
-        line-height: 130%;
-    }
+  .SaaS-featured-master h1 {
+    padding-top: 2rem;
+  }
 
-    .SaaS-main-heading h4 {
-        padding-bottom: 2rem;
-    }
+  .SaaS-featured-heading-container {
+    position: relative;
+  }
 
-    .services-header-button-space {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        padding-top: 2rem;
-    }
+  .SaaS-blue-underline {
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    top: 2px;
+    left: -98px;
+  }
 
-    .services-footer-button-space {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        padding: 1.5rem 0 0 0;
-    }
+  .SaaS-blue-underline-frontend {
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    top: 2px;
+    left: -40px;
+  }
 
-    .SaaS-featured-master h1 {
-        padding-top: 2rem;
-    }
+  .SaaS-blue-underline-finance-accounting {
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    top: 2px;
+    left: -120px;
+  }
 
-    .SaaS-featured-heading-container {
-        position: relative;
+  .SaaS-blue-underline-customer-management-services {
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    top: 30px;
+    left: -120px;
+  }
 
-    }
+  .SaaS-blue-underline-hrsupport {
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    top: 2px;
+    left: -40px;
+  }
 
-    .SaaS-blue-underline {
-        position: absolute;
-        width: 100%;
-        height: 50px;
-        top: 2px;
-        left: -98px;
+  .SaaS-blue-underline-reports-analytics {
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    top: 2px;
+    left: -110px;
+  }
 
-    }
+  .SaaS-blue-underline-sales-marketing {
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    top: 2px;
+    left: -100px;
+  }
 
-    .SaaS-blue-underline-frontend {
-        position: absolute;
-        width: 100%;
-        height: 50px;
-        top: 2px;
-        left: -40px;
+  .SaaS-featured-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 4rem 0;
+  }
 
-    }
+  .SaaS-featured-grid-left {
+    font-size: 1.353rem;
+  }
 
-    .SaaS-blue-underline-finance-accounting {
-        position: absolute;
-        width: 100%;
-        height: 50px;
-        top: 2px;
-        left: -120px;
+  .SaaS-featured-grid-right {
+    width: 100%;
+    overflow: hidden;
+  }
 
-    }
+  .SaaS-featured-grid-right img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
 
-    .SaaS-blue-underline-customer-management-services {
-        position: absolute;
-        width: 100%;
-        height: 50px;
-        top: 30px;
-        left: -120px;
+  .SaaS-grid {
+    padding: 0;
+  }
 
+  .SaaS-grid-content {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .SaaS-grid-mobile {
+    display: flex;
+    flex-direction: column;
+  }
+  .SaaS-grid-accordion {
+    display: block;
+    width: 100%;
+    padding: 2rem 0;
+  }
+  .SaaS-accordion-item {
+    border: none;
+  }
+  .SaaS-accordion-body {
+    padding: 0 !important;
+  }
 
-    }
+  .SaaS-grid-heading {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2rem 0 0 0;
+    width: 100%;
+  }
 
-    .SaaS-blue-underline-hrsupport {
-        position: absolute;
-        width: 100%;
-        height: 50px;
-        top: 2px;
-        left: -40px;
+  .SaaS-grid-heading h2 {
+    font-size: 2rem;
+  }
 
-    }
+  .SaaS-grid-underline-container {
+    position: relative;
+    font-size: 2rem !important;
+    font-family: ComicSansMS-bold;
+  }
 
-    .SaaS-blue-underline-reports-analytics {
-        position: absolute;
-        width: 100%;
-        height: 50px;
-        top: 2px;
-        left: -110px;
+  .SaaS-grid-blue-underline {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 73px;
+    top: -7px;
+    left: -112px;
+  }
 
-    }
+  .SaaS-grid-heading span {
+    font-size: 1.353rem;
+    padding-bottom: 0;
+  }
 
-    .SaaS-blue-underline-sales-marketing {
-        position: absolute;
-        width: 100%;
-        height: 50px;
-        top: 2px;
-        left: -100px;
+  .business-service-card {
+    display: grid;
+    grid-template-columns: 10% 1fr;
+    column-gap: 1rem;
+    border-bottom: 1px solid rgb(136, 136, 136);
+    box-shadow: none;
+  }
 
-    }
+  .business-service-card-content h4 {
+    font-size: 0.8rem;
+    margin: 0;
+    font-weight: normal;
+    line-height: 184%;
+  }
 
+  .business-service-card-content span {
+    font-size: 0.6rem;
+    margin: 0;
+    width: 100%;
+  }
 
-    .SaaS-featured-grid {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 2rem;
-        padding: 4rem 0;
-    }
+  .business-service-card-image {
+    width: 27px;
+    padding: 0;
+  }
 
-    .SaaS-featured-grid-left {
-        font-size: 1.353rem;
-    }
+  .business-service-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
 
-    .SaaS-featured-grid-right {
-        width: 100%;
-        overflow: hidden;
-    }
+  .businesses {
+    width: 100%;
+    padding: 2rem 0 0 0;
+  }
 
-    .SaaS-featured-grid-right img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-    }
+  .businesses > div > h1 {
+    text-align: start;
+    font-size: 1rem;
+    font-weight: 700;
+    font-family: Popins-SemiBold;
+    color: black;
+    padding: 0;
+    white-space: nowrap;
+  }
 
-    .SaaS-grid {
-        padding: 0;
-    }
+  .businesses > div > hr {
+    margin: 0;
+    border: 4px solid #0875e2;
+    opacity: 1;
+    padding: 0;
+    width: 90%;
+  }
 
-    .SaaS-grid-content {
-        display: none;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-    }
-    .SaaS-grid-mobile{
-        display: flex;
-        flex-direction: column;
-    }
-    .SaaS-grid-accordion{
-        display: block;
-        width: 100%;
-        padding: 2rem 0;
-    }
-    .SaaS-accordion-item{
-        border: none;
-    }
-    .SaaS-accordion-body{
-        padding: 0 !important;
-    }
+  .business-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    width: 100%;
+    margin: 2rem 0 2rem 0;
+    padding: 0;
+    column-gap: 2rem;
+    row-gap: 0rem;
+  }
 
-    .SaaS-grid-heading {
-        display: flex;
-        align-items: start;
-        justify-content: center;
-        flex-direction: column;
-        padding: 2rem 0 0 0;
-        width: 100%;
-    }
+  .business-service > span {
+    font-family: Popins-Regular;
+    font-weight: 700;
+    text-align: center;
+    font-size: 0.7rem;
+  }
 
-    .SaaS-grid-heading h2 {
-        font-size: 2rem;
-    }
+  .business-service {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 
-    .SaaS-grid-underline-container {
-        position: relative;
-        font-size: 2rem !important;
-        font-family: ComicSansMS-bold;
-    }
+  .SaaS-last-banner-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background-color: #0093e9;
+    background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
+    width: calc(100% + 3.4rem);
+    margin: 0 -2rem;
+    text-align: center;
+  }
 
-    .SaaS-grid-blue-underline {
-        display: none;
-        position: absolute;
-        width: 100%;
-        height: 73px;
-        top: -7px;
-        left: -112px;
-    }
+  .SaaS-last-banner h2 {
+    font-family: Popins-Semibold;
+    font-size: 2rem;
+  }
 
-    .SaaS-grid-heading span {
-        font-size: 1.353rem;
-        padding-bottom: 0;
-    }
-
-    .business-service-card {
-        display: grid;
-        grid-template-columns: 10% 1fr;
-        column-gap: 1rem;
-        border-bottom: 1px solid rgb(136, 136, 136);
-        box-shadow: none;
-    }
-
-    .business-service-card-content h4 {
-        font-size: 0.8rem;
-        margin: 0;
-        font-weight: normal;
-        line-height: 184%;
-    }
-
-    .business-service-card-content span {
-        font-size: 0.6rem;
-        margin: 0;
-        width: 100%;
-    }
-
-    .business-service-card-image {
-        width: 27px;
-        padding: 0;
-    }
-
-    .business-service-card img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-    }
-
-
-    .businesses {
-        width: 100%;
-        padding: 2rem 0 0 0;
-    }
-
-    .businesses>div>h1 {
-        text-align: start;
-        font-size: 1rem;
-        font-weight: 700;
-        font-family: Popins-SemiBold;
-        color: black;
-        padding: 0;
-        white-space: nowrap;
-    }
-
-    .businesses>div>hr {
-        margin: 0;
-        border: 4px solid #0875e2;
-        opacity: 1;
-        padding: 0;
-        width: 90%;
-    }
-
-    .business-grid {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        width: 100%;
-        margin: 2rem 0 2rem 0;
-        padding: 0;
-        column-gap: 2rem;
-        row-gap: 0rem;
-    }
-
-    .business-service>span {
-        font-family: Popins-Regular;
-        font-weight: 700;
-        text-align: center;
-        font-size: 0.7rem;
-    }
-
-    .business-service {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .SaaS-last-banner-section {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 2rem;
-        background-color: #0093E9;
-        background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
-        width: calc(100% + 3.4rem);
-        margin: 0 -2rem;
-        text-align: center;
-    }
-
-    .SaaS-last-banner h2 {
-        font-family: Popins-Semibold;
-        font-size: 2rem;
-    }
-
-
-    .business-service>img {
-        width: 50px;
-        margin-bottom: 0.8rem;
-    }
+  .business-service > img {
+    width: 50px;
+    margin-bottom: 0.8rem;
+  }
 }

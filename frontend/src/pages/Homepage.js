@@ -16,34 +16,6 @@ import greenRound from "../assets/underline-bg/blue-circle.png";
 import BiznestTestimonial from "../assets/testimonials/Kashif_Edit.png";
 import FeatureCard from "../components/Cards/FeatureCard";
 import {
-  FaGlobe,
-  FaCreditCard,
-  FaMoneyBillWave,
-  FaChartLine,
-  FaRobot,
-  FaBoxes,
-  FaDoorOpen,
-  FaBed,
-  FaCalendarCheck,
-  FaCoffee,
-  FaUsers,
-  FaUserTie,
-  FaRegClock,
-  FaFileInvoiceDollar,
-  FaBullhorn,
-  FaBrain,
-  FaUserShield,
-  FaNetworkWired,
-  FaLaptopHouse,
-  FaTasks,
-  FaUserFriends,
-  FaCalendarAlt,
-  FaBell,
-  FaUserCircle,
-  FaTicketAlt,
-  FaChartPie,
-} from "react-icons/fa";
-import {
   androidAppSaas,
   bookingsSaas,
   chatSaas,
@@ -117,6 +89,9 @@ import {
   customerTrends,
   companyDashboard,
   sales,
+  calendarLine,
+  eventsLine,
+  stayRoom
 } from "../assets/WONO_images/img/icon_service_color";
 
 const Homepage = () => {
@@ -139,8 +114,8 @@ const Homepage = () => {
     { id: 5, title: "Auto Leads", icon: leadGenerationSM },
     { id: 6, title: "Inventory", icon: invoicingFA },
     { id: 7, title: "Meeting Rooms", icon: meetingRoomsCM },
-    { id: 8, title: "Stay Rooms", icon: cafeOrdersCM },
-    { id: 9, title: "Events", icon: events },
+    { id: 8, title: "Stay Rooms", icon: stayRoom },
+    { id: 9, title: "Events", icon: eventsLine },
     { id: 10, title: "Cafe", icon: cafeOrdersCM },
     { id: 12, title: "Human Resource", icon: employeeReportsRA },
     { id: 13, title: "Attendance", icon: attendanceHR },
@@ -151,7 +126,7 @@ const Homepage = () => {
     { id: 19, title: "Assets", icon: eSignHR },
     { id: 20, title: "Tasks", icon: taskManagementHR },
     { id: 21, title: "Visitors", icon: visitorCM },
-    { id: 22, title: "Calendar", icon: events },
+    { id: 22, title: "Calendar", icon: calendarLine },
     { id: 23, title: "Notifications", icon: notifications },
     { id: 24, title: "Profile", icon: customerProfile },
     { id: 25, title: "Tickets", icon: ticketRaisingCM },
@@ -187,16 +162,18 @@ const Homepage = () => {
                 </div>
               </span>
               <div className="" style={{ display: "flex" }}>
-                <div style={{ width: "55%" }}></div>
+                <div
+                  className="home-main-tagline-sentinel"
+                  style={{ width: "55%" }}
+                ></div>
 
                 <div className=" home-main-tagline">
-                  <span className="text-[2rem] md:text-[2.5rem] lg:text-[3rem]">
+                  <span className="text-[2rem] md:text-[2.5rem] lg:text-[3rem] 2xl:text-[3.2rem]">
                     <b
                       style={{
                         fontFamily: "Popins-Semibold",
                         fontWeight: "normal",
-                      }}
-                    >
+                      }}>
                       "Wo
                     </b>
                     rld{" "}
@@ -204,8 +181,7 @@ const Homepage = () => {
                       style={{
                         fontFamily: "Popins-Semibold",
                         fontWeight: "normal",
-                      }}
-                    >
+                      }}>
                       No
                     </b>
                     mad{" "}
@@ -213,8 +189,7 @@ const Homepage = () => {
                       style={{
                         fontFamily: "Popins-Semibold",
                         fontWeight: "normal",
-                      }}
-                    >
+                      }}>
                       Co
                     </b>
                     mmerce"
@@ -223,19 +198,19 @@ const Homepage = () => {
               </div>
             </h2>
             <div className="home-main-title-desc flex flex-col gap-4 w-full">
-              <div className="w-full gap-4 flex flex-col items-start justify-center">
+              <div className="w-full gap-4 flex flex-col items-start justify-center text-start md:text-center lg:text-start">
                 <p
-                  className="text-[1.3rem] md:text-[2.1rem]"
+                  className="text-start w-full md:text-center lg:text-start text-[1.3rem] md:text-[2.1rem]"
                   style={{ fontWeight: "bold" }}
                 >
                   A simple NO CODE SaaS Platform.
                 </p>
                 <div className="flex flex-col gap-2">
-                  <span className="home-main-title-tagline text-[1rem] md:text-[1.09rem]">
+                  <span className="home-main-title-tagline text-[1rem] md:text-[1.09rem] 2xl:text-[1.18rem]">
                     We support businesses in small and aspiring destinations
                     which host Nomads!
                   </span>
-                  <span className="text-[0.9rem] md:text-[1.09rem]">
+                  <span className="text-[0.9rem] md:text-[1.09rem] 2xl:text-[1.18rem] ">
                     SaaS Tech for Nomad supoorting businesses across the world.
                     <span className="font-bold">
                       (E.g.: Co-Working, Co-Living, Hostels, Workations,
@@ -249,8 +224,7 @@ const Homepage = () => {
           <div
             style={{ cursor: "pointer" }}
             onClick={() => navigate("/register")}
-            className="first-section-grid-item-2 h-40 flex justify-center"
-          >
+            className="first-section-grid-item-2 h-40 flex justify-center">
             <div className="home-desc relative w-full flex items-center justify-center">
               <img src={greenRound} alt="" />
               IT'S COMPLETLEY FREE
@@ -264,7 +238,7 @@ const Homepage = () => {
               className="canvas"
               camera={{
                 position: [0, 0, ismobile ? 15 : 25],
-                fov: ismobile ? 40 : isTablet ? 50 : isLaptop ? 40 : 30,
+                fov: ismobile ? 40 : isTablet ? 50 : isLaptop ? 45 : 30,
               }}
             >
               <ambientLight intensity={0.5} />
@@ -289,16 +263,14 @@ const Homepage = () => {
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-              }}
-            >
+              }}>
               <button
                 className="hero-button"
                 data-aos-delay="200"
                 onClick={() => {
                   navigate("/register");
                   window.scrollTo({ top: 0, behavior: "instant" });
-                }}
-              >
+                }}>
                 CONNECT
               </button>
             </div>
@@ -323,9 +295,9 @@ const Homepage = () => {
           <div className="m-0 container  w-100 ">
             <div className="">
               <div className="customMargin_top">
-                <div className="one-platform-section">
-                  <h2>One Partner Platform,</h2>
-                  <h2>Infinite possibilities and opportunities!</h2>
+                <div className="one-platform-section uppercase flex flex-col gap-4">
+                  <h2 className="text-2xl md:text-6xl lg:text-[6rem]">One Partner Platform,</h2>
+                  <h2 className="text-xl md:text-[2.2rem] lg:text-[3.5rem]">Infinite possibilities and opportunities!</h2>
                 </div>
               </div>
             </div>
@@ -378,8 +350,7 @@ const Homepage = () => {
                         <div className="">
                           <button
                             className="get-started-submit-button m-0"
-                            onClick={handleRegister}
-                          >
+                            onClick={handleRegister}>
                             Get Started
                           </button>
                         </div>
@@ -393,13 +364,14 @@ const Homepage = () => {
         </div>
         <div
           className="website-container-master"
-          style={{ backgroundColor: "black" }}
-        >
+          style={{ backgroundColor: "black" }}>
           <div className="website-panel-container">
-            <div className="website-panel-header">
+            <div className="website-panel-header flex flex-col gap-3">
               <h2>NO CODE SELF SERVE </h2>
-              <h3 className=" text-lg md:text-4xl lg:text-[3.82rem]">TRANSACTIONAL WEBSITE & MOBILE SITE</h3>
-              <p className="text-sm md:text-md lg:text-md">
+              <h3 className=" text-lg text-start md:text-start lg:text-center md:text-[2.3rem] lg:text-[3.82rem]">
+                TRANSACTIONAL WEBSITE & MOBILE SITE
+              </h3>
+              <p className="text-sm md:text-[1.3rem] lg:text-[1.7rem] lg:leading-8 md:leading-8 text-start md:text-start lg:text-center">
                 Free customizable website templates which are strategically
                 tailored for managing Lifestyle Businesses like Co-Working,
                 Co-Living, Hostels, Boutique Properties, Cafes etc
@@ -429,16 +401,14 @@ const Homepage = () => {
               <div
                 className={`website-panel-right ${
                   selectedId ? "modal-open" : ""
-                }`}
-              >
+                }`}>
                 <div className="website-panel-content">
                   {webimages.map((image) => (
                     <div
-                      className="template-preview-container overflow-hidden rounded-3xl"
-                      key={image.id}
-                    >
+                      className="template-preview-container overflow-hidden rounded-xl"
+                      key={image.id}>
                       <img
-                        className="rounded-3xl"
+                        className="rounded-xl"
                         src={image.src}
                         alt={image.alt}
                       />
@@ -449,8 +419,7 @@ const Homepage = () => {
                   onClick={() =>
                     window.scrollTo({ top: 0, behavior: "instant" })
                   }
-                  to="/themes"
-                >
+                  to="/themes">
                   View more
                 </Link>
               </div>
@@ -466,7 +435,7 @@ const Homepage = () => {
                 <div className="col-lg-7 d-flex flex-column justify-content-between  p-0 ms-0">
                   <div className=" ">
                     {/* <h4 className="bg-danger testimonial-right-spacing"> */}
-                    <h3 className="testimonial-right-spacing text-lg">
+                    <h3 className="testimonial-right-spacing text-lg md:text-xl lg:text-2xl">
                       “We went from managing 3,000 sq ft to 50,000+ sq ft in the
                       most efficient and seamless manner with tech, processes,
                       data analytics, customer & employee management and due to
@@ -484,8 +453,7 @@ const Homepage = () => {
                   <div className="testimonial-contact">
                     <h4
                       className="my-4"
-                      style={{ fontFamily: "Amsterdam", fontSize: "2rem" }}
-                    >
+                      style={{ fontFamily: "Amsterdam", fontSize: "2rem" }}>
                       Kashif Shaikh
                     </h4>
                     <p className="m-0">Co-Founder & COO</p>

@@ -478,47 +478,46 @@
       }
     ]
   },
-  "INTERN": {
-  "jobTitle": "Internship Program",
-  "content": [
-    {
-      "subtitle": "About the job",
-      "description": "We are looking for enthusiastic and motivated interns to join various departments across our organization. As an intern, you will work closely with experienced professionals, gain hands-on experience, and develop a foundational understanding of your area of interest. This internship is a great opportunity to learn, contribute to real projects, and kickstart your career in a supportive and innovative environment."
-    },
-    {
-      "subtitle": "Responsibilities",
-      "description": {
-        "list": [
-          "Assist in day-to-day departmental activities based on the assigned function (e.g., Marketing, HR, Design, Development, Operations).",
-          "Conduct research and present findings to support ongoing projects.",
-          "Participate in brainstorming sessions and team meetings.",
-          "Support documentation, report generation, and data entry tasks.",
-          "Collaborate with team members and cross-functional departments.",
-          "Complete tasks and projects within set deadlines under supervision.",
-          "Stay up to date with industry trends relevant to your role.",
-          "Bring fresh ideas and a creative approach to assigned tasks.",
-          "Maintain a positive and proactive attitude while learning new tools and technologies.",
-          "Adhere to organizational policies and standards during the internship."
-        ]
+  "Internships Across Departments": {
+    "jobTitle": "Internship Programme",
+    "content": [
+      {
+        "subtitle": "About the job",
+        "description": "We are looking for enthusiastic and motivated interns to join various departments across our organization. As an intern, you will work closely with experienced professionals, gain hands-on experience, and develop a foundational understanding of your area of interest. This internship is a great opportunity to learn, contribute to real projects, and kickstart your career in a supportive and innovative environment."
+      },
+      {
+        "subtitle": "Responsibilities",
+        "description": {
+          "list": [
+            "Assist in day-to-day departmental activities based on the assigned function (e.g., Marketing, HR, Design, Development, Operations).",
+            "Conduct research and present findings to support ongoing projects.",
+            "Participate in brainstorming sessions and team meetings.",
+            "Support documentation, report generation, and data entry tasks.",
+            "Collaborate with team members and cross-functional departments.",
+            "Complete tasks and projects within set deadlines under supervision.",
+            "Stay up to date with industry trends relevant to your role.",
+            "Bring fresh ideas and a creative approach to assigned tasks.",
+            "Maintain a positive and proactive attitude while learning new tools and technologies.",
+            "Adhere to organizational policies and standards during the internship."
+          ]
+        }
+      },
+      {
+        "subtitle": "What you will bring",
+        "description": {
+          "list": [
+            "Currently pursuing or recently completed a degree/diploma in a relevant field.",
+            "Strong willingness to learn and grow in a fast-paced environment.",
+            "Basic understanding of the function you're applying to (e.g., marketing tools, design software, programming languages, etc.).",
+            "Good communication and interpersonal skills.",
+            "Ability to work independently and as part of a team.",
+            "A curious and positive mindset with a problem-solving attitude.",
+            "Time management and organizational skills.",
+            "Proficiency in using basic productivity tools like Google Workspace or Microsoft Office.",
+            "A portfolio or previous work (for design, content, or dev roles) is a plus."
+          ]
+        }
       }
-    },
-    {
-      "subtitle": "What you will bring",
-      "description": {
-        "list": [
-          "Currently pursuing or recently completed a degree/diploma in a relevant field.",
-          "Strong willingness to learn and grow in a fast-paced environment.",
-          "Basic understanding of the function you're applying to (e.g., marketing tools, design software, programming languages, etc.).",
-          "Good communication and interpersonal skills.",
-          "Ability to work independently and as part of a team.",
-          "A curious and positive mindset with a problem-solving attitude.",
-          "Time management and organizational skills.",
-          "Proficiency in using basic productivity tools like Google Workspace or Microsoft Office.",
-          "A portfolio or previous work (for design, content, or dev roles) is a plus."
-        ]
-      }
-    }
-  ]
-}
-
+    ]
+  }
 }

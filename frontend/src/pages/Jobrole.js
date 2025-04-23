@@ -1,10 +1,6 @@
 import React, { useState } from "react";
 import "../layout/jobrole.css";
-import {
-  Accordion,
-  AccordionSummary,
-  AccordionDetails,
-} from "@mui/material";
+import { Accordion, AccordionSummary, AccordionDetails } from "@mui/material";
 import { Link } from "react-router-dom";
 import { FaChevronDown } from "react-icons/fa";
 
@@ -92,7 +88,7 @@ const Jobrole = () => {
       jobs: [
         {
           id: 9,
-          title: "Sr.Manager Sales & Business Development",
+          title: "Sr.Manager Sales & Bussiness Development",
           type: "Full-Time",
           mode: "On-Site",
           location: "Goa",
@@ -116,7 +112,7 @@ const Jobrole = () => {
       jobs: [
         {
           id: 11,
-          title: "- APPLY NOW",
+          title: "Internships Across Departments",
           subtitle: "*Mention your applying department in message box",
           type: "Internships",
           mode: "On-Site",
@@ -131,7 +127,7 @@ const Jobrole = () => {
       <div className="border"></div>
       <div className="JobRole">
         {jobRoles.map((section, idx) => (
-          <Accordion key={idx} elevation={0} >
+          <Accordion key={idx} elevation={0}>
             <AccordionSummary sx={{ py: 4 }} expandIcon={<FaChevronDown />}>
               <p className="text-3xl font-bold">{section.title}</p>
             </AccordionSummary>
@@ -150,28 +146,31 @@ const Jobrole = () => {
                             <span className="text-sm">{job.subtitle}</span>
                           )}
                         </div>
-                        <div className="text-right">
+                        <div className="text-right flex items-center">
                           <p className="career-jobtitle">
                             <span className="text-sm link-btn">
                               {job.type} | {job.mode} | {job.location}
                             </span>
-                            <div className="flex justify-end mt-1">
-                              <Link
-                                to={`/jobdetails/${job.id}/${encodeURIComponent(job.title)}`}
-                                onClick={() =>
-                                  window.scrollTo({ top: 0, behavior: "instant" })
-                                }
-                              >
-                                <i className="fa fa-chevron-right jobrole-arrow" />
-                              </Link>
-                            </div>
                           </p>
+                          <div className="flex justify-end mt-1">
+                            <Link
+                              to={`/jobdetails/${job.id}/${encodeURIComponent(
+                                job.title
+                              )}`}
+                              onClick={() =>
+                                window.scrollTo({ top: 0, behavior: "instant" })
+                              }
+                            >
+                              <i className="fa fa-chevron-right jobrole-arrow" />
+                            </Link>
+                          </div>
                         </div>
                       </div>
-                      {section.jobs.length > 1 && jobIdx < section.jobs.length - 1 && <hr className="mt-4" />}
+                      {section.jobs.length > 1 &&
+                        jobIdx < section.jobs.length - 1 && (
+                          <hr className="mt-4" />
+                        )}
                     </div>
-
-
                   </>
                 ))}
               </div>

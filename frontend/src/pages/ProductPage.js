@@ -183,8 +183,11 @@ const ProductPage = () => {
                           marginBottom: "2rem",
                           marginLeft: "0",
                         }}
-                        onClick={() => navigate("/login")}
-                        className="product-page-button">
+                        onClick={() =>
+                          (window.location.href = "https://wonofe.vercel.app/")
+                        }
+                        className="product-page-button"
+                      >
                         Try theme
                       </button>
                     </div>
@@ -241,7 +244,8 @@ const ProductPage = () => {
                   <div
                     key={index}
                     className="product-page-reccomendations-grid-image rounded-xl"
-                    onClick={() => handleImageClick(rec)}>
+                    onClick={() => handleImageClick(rec)}
+                  >
                     <img src={rec.src} alt={rec.alt} />
                   </div>
                 ))}

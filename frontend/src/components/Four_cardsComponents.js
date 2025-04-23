@@ -219,7 +219,7 @@ const FourCardsComponents = () => {
         <span
           style={{ cursor: "pointer" }}
           onClick={() => {
-            navigate("/saas");
+            navigate("/modules");
             window.scrollTo({ top: 0, behavior: "instant" });
           }}
           className="key-features-link">

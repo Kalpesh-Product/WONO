@@ -39,7 +39,6 @@ const SaaSFeatureBlock = ({
           <div className="module-feature-title">
             <h1 style={{ padding: 0 }}>
               <span className="module-feature-title-text uppercase">{title}</span>
-              <hr />
             </h1>
             <div className="module-feature-underline-frame">
               <img
