@@ -39,7 +39,7 @@ app.use(
     origin: [
       "https://www.wono.co", // Your frontend origin
       /\.google\.com$/, // Allow requests from Google domains
-      "https://3e13-115-244-195-142.ngrok-free.app" // Your specific ngrok URL
+      "http://localhost:3000" // Your specific ngrok URL
     ], // Reflects the request origin, allowing wono frontend origin
     // origin: true, // Reflects the request origin, allowing all origins
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],

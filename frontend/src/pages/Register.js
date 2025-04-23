@@ -183,7 +183,7 @@ const Register = () => {
         }
 
         const response = await axios.post(
-          '/register/section',
+          'api/register/section',
           {
             section: sectionName,
             data: sectionData,
@@ -307,7 +307,7 @@ const Register = () => {
 
       // Final submission to complete the registration
       const response = await axios.post(
-        "/register",
+        "/api/register",
         dataToSubmit,
         {
           headers: {

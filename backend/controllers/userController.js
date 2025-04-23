@@ -14,7 +14,7 @@ const { handleDocumentUpload } = require("../config/cloudinaryConfig");
 require("dotenv").config()
 
 // Sync Google Sheets by fetching data from DB
-exports.syncEnquiriesToGoogleSheets = async (req, res) => {
+const syncEnquiriesToGoogleSheets = async (req, res) => {
   try {
     const enquiries = await Enquiry.find(); // Get all enquiries from DB
     const dataToSync = enquiries.map(enquiry => ({
@@ -33,7 +33,7 @@ exports.syncEnquiriesToGoogleSheets = async (req, res) => {
 };
 
 
-exports.registerUser = async (req, res) => {
+const registerUser = async (req, res) => {
   const {
     email,
     name,
@@ -293,8 +293,9 @@ exports.registerUser = async (req, res) => {
 };
 
 
-exports.updateSection = async (req, res) => {
+const updateSection = async (req, res) => {
   const { section, data } = req.body;
+  console.log(req.body)
   console.log(`Received section: ${section}`);
   console.log("Received data:", data);
 
@@ -348,7 +349,7 @@ exports.updateSection = async (req, res) => {
   }
 };
 
-exports.checkEmail = async (req, res) => {
+const checkEmail = async (req, res, next) => {
   const email = req.params.id;
   if (!email) {
     return res.status(400).json({ error: "Email is required" });
@@ -364,9 +365,9 @@ exports.checkEmail = async (req, res) => {
     console.error("Error checking email:", error);
     res.status(500).json({ error: "Internal server error" });
   }
-};
+}
 
-exports.forgotPassword = async (req, res) => {
+const forgotPassword = async (req, res) => {
   const { email } = req.body;
 
   if (!email) {
@@ -407,7 +408,7 @@ exports.forgotPassword = async (req, res) => {
   }
 };
 
-exports.verifyOTP = async (req, res) => {
+const verifyOTP = async (req, res) => {
   const { email, otp } = req.body;
 
   if (!email || !otp) {
@@ -437,7 +438,7 @@ exports.verifyOTP = async (req, res) => {
   }
 };
 
-exports.resetPassword = async (req, res) => {
+const resetPassword = async (req, res) => {
   const { email, password } = req.body;
 
   if (!email || !password) {
@@ -465,7 +466,7 @@ exports.resetPassword = async (req, res) => {
   }
 };
 
-exports.login = async (req, res) => {
+const login = async (req, res) => {
   const { email, password } = req.body;
 
   try {
@@ -509,7 +510,7 @@ exports.login = async (req, res) => {
   }
 };
 
-exports.logout = (req, res) => {
+const logout = (req, res) => {
   try {
     // Delete the cookie
     res.clearCookie("Authorization", {
@@ -528,7 +529,7 @@ exports.logout = (req, res) => {
 
 // Contact page backend API for submitting enquiry
 
-exports.submitEnquiry = async (req, res) => {
+const submitEnquiry = async (req, res) => {
   // getting the user data from request body
 
   const { name, email, mobile, partnerstype, message } = req.body;
@@ -680,7 +681,7 @@ exports.submitEnquiry = async (req, res) => {
 };
 
 //job application - start[[[]]]
-exports.createJobApplication = async (req, res) => {
+const createJobApplication = async (req, res) => {
   const {
     jobTitle,
     name,
@@ -909,3 +910,5 @@ exports.createJobApplication = async (req, res) => {
 
 
 };
+
+module.exports = { checkEmail, createJobApplication, submitEnquiry, login, logout, updateSection, forgotPassword, verifyOTP, resetPassword, registerUser, syncEnquiriesToGoogleSheets };
