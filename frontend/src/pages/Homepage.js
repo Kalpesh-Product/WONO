@@ -91,7 +91,7 @@ import {
   sales,
   calendarLine,
   eventsLine,
-  stayRoom
+  stayRoom,
 } from "../assets/WONO_images/img/icon_service_color";
 
 const Homepage = () => {
@@ -173,7 +173,8 @@ const Homepage = () => {
                       style={{
                         fontFamily: "Popins-Semibold",
                         fontWeight: "normal",
-                      }}>
+                      }}
+                    >
                       "Wo
                     </b>
                     rld{" "}
@@ -181,7 +182,8 @@ const Homepage = () => {
                       style={{
                         fontFamily: "Popins-Semibold",
                         fontWeight: "normal",
-                      }}>
+                      }}
+                    >
                       No
                     </b>
                     mad{" "}
@@ -189,7 +191,8 @@ const Homepage = () => {
                       style={{
                         fontFamily: "Popins-Semibold",
                         fontWeight: "normal",
-                      }}>
+                      }}
+                    >
                       Co
                     </b>
                     mmerce"
@@ -224,7 +227,8 @@ const Homepage = () => {
           <div
             style={{ cursor: "pointer" }}
             onClick={() => navigate("/register")}
-            className="first-section-grid-item-2 h-40 flex justify-center">
+            className="first-section-grid-item-2 h-40 flex justify-center"
+          >
             <div className="home-desc relative w-full flex items-center justify-center">
               <img src={greenRound} alt="" />
               IT'S COMPLETLEY FREE
@@ -263,14 +267,16 @@ const Homepage = () => {
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-              }}>
+              }}
+            >
               <button
                 className="hero-button"
                 data-aos-delay="200"
                 onClick={() => {
                   navigate("/register");
                   window.scrollTo({ top: 0, behavior: "instant" });
-                }}>
+                }}
+              >
                 CONNECT
               </button>
             </div>
@@ -296,8 +302,12 @@ const Homepage = () => {
             <div className="">
               <div className="customMargin_top">
                 <div className="one-platform-section uppercase flex flex-col gap-4">
-                  <h2 className="text-2xl md:text-6xl lg:text-[6rem]">One Partner Platform,</h2>
-                  <h2 className="text-xl md:text-[2.2rem] lg:text-[3.5rem]">Infinite possibilities and opportunities!</h2>
+                  <h2 className="text-2xl md:text-6xl lg:text-[6rem]">
+                    One Partner Platform,
+                  </h2>
+                  <h2 className="text-xl md:text-[2.2rem] lg:text-[3.5rem]">
+                    Infinite possibilities and opportunities!
+                  </h2>
                 </div>
               </div>
             </div>
@@ -350,7 +360,8 @@ const Homepage = () => {
                         <div className="">
                           <button
                             className="get-started-submit-button m-0"
-                            onClick={handleRegister}>
+                            onClick={handleRegister}
+                          >
                             Get Started
                           </button>
                         </div>
@@ -364,7 +375,8 @@ const Homepage = () => {
         </div>
         <div
           className="website-container-master"
-          style={{ backgroundColor: "black" }}>
+          style={{ backgroundColor: "black" }}
+        >
           <div className="website-panel-container">
             <div className="website-panel-header flex flex-col gap-3">
               <h2>NO CODE SELF SERVE </h2>
@@ -374,7 +386,7 @@ const Homepage = () => {
               <p className="text-sm md:text-[1.3rem] lg:text-[1.7rem] lg:leading-8 md:leading-8 text-start md:text-start lg:text-center">
                 Free customizable website templates which are strategically
                 tailored for managing Lifestyle Businesses like Co-Working,
-                Co-Living, Hostels, Boutique Properties, Cafes etc
+                Co-Living, Hostels, Boutique Properties, Cafes etc.
               </p>
             </div>
             <div className="website-panel">
@@ -401,12 +413,14 @@ const Homepage = () => {
               <div
                 className={`website-panel-right ${
                   selectedId ? "modal-open" : ""
-                }`}>
+                }`}
+              >
                 <div className="website-panel-content">
                   {webimages.map((image) => (
                     <div
                       className="template-preview-container overflow-hidden rounded-xl"
-                      key={image.id}>
+                      key={image.id}
+                    >
                       <img
                         className="rounded-xl"
                         src={image.src}
@@ -419,7 +433,8 @@ const Homepage = () => {
                   onClick={() =>
                     window.scrollTo({ top: 0, behavior: "instant" })
                   }
-                  to="/themes">
+                  to="/themes"
+                >
                   View more
                 </Link>
               </div>
@@ -428,12 +443,15 @@ const Homepage = () => {
         </div>
 
         <div className="testimonial-section  body-partners-master">
-          <div className=" pt-5 pb-5">
+          <div className=" py-16">
             {/* <div className="container border-top border-dark border-2"> */}
-            <div className="container p-0 ">
+            <div className="container p-0 flex flex-col lg:gap-5 gap-1">
+              <h3 className=" text-lg text-center md:text-start lg:text-center md:text-[2.3rem] lg:text-[3.82rem] lg:-ml-4">
+                TESTIMONY
+              </h3>
               <div className="row ">
-                <div className="col-lg-7 d-flex flex-column justify-content-between  p-0 ms-0">
-                  <div className=" ">
+                <div className="col-lg-7 d-flex flex-column justify-content-between  p-0 ms-0 mt-3">
+                  <div className="flex flex-col gap-4">
                     {/* <h4 className="bg-danger testimonial-right-spacing"> */}
                     <h3 className="testimonial-right-spacing text-lg md:text-xl lg:text-2xl">
                       “We went from managing 3,000 sq ft to 50,000+ sq ft in the
@@ -453,7 +471,8 @@ const Homepage = () => {
                   <div className="testimonial-contact">
                     <h4
                       className="my-4"
-                      style={{ fontFamily: "Amsterdam", fontSize: "2rem" }}>
+                      style={{ fontFamily: "Amsterdam", fontSize: "2rem" }}
+                    >
                       Kashif Shaikh
                     </h4>
                     <p className="m-0">Co-Founder & COO</p>
