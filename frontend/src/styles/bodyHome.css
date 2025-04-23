@@ -301,13 +301,12 @@
   align-items: center;
   text-align: center;
   width: 100%;
-  /* padding-left: 8rem; */
-  padding-left: 26rem;
+  padding-left: 8rem;
 }
 
 .home-main-tagline span {
   font-weight: normal;
-  font-size: 2.25rem;
+  font-size: 3.2rem;
   font-family: Popins-Regular;
   text-align: center;
 }
@@ -369,10 +368,10 @@
 
 @media (max-width: 1440px) {
   .home-main-tagline {
-    padding-left: 33rem;
+    padding-left: 8rem;
   }
   .home-main-tagline span {
-    font-size: 3rem;
+    font-size: 2.9rem;
   }
 }
 @media (min-width: 2560px) {
@@ -673,7 +672,7 @@
   .home-main-tagline span {
     font-size: 2.2rem;
     font-weight: 200;
-    padding-right: 2rem;
+    padding-right: 0;
   }
 
   .home-main-title-svg img {

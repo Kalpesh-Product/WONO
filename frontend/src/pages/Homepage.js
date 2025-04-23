@@ -296,7 +296,7 @@ const Homepage = () => {
             <div className="">
               <div className="customMargin_top">
                 <div className="one-platform-section uppercase flex flex-col gap-4">
-                  <h2 className="text-3xl md:text-6xl lg:text-[6rem]">One Partner Platform,</h2>
+                  <h2 className="text-2xl md:text-6xl lg:text-[6rem]">One Partner Platform,</h2>
                   <h2 className="text-xl md:text-[2.2rem] lg:text-[3.5rem]">Infinite possibilities and opportunities!</h2>
                 </div>
               </div>
