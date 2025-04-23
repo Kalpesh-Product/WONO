@@ -113,7 +113,7 @@ const Jobrole = () => {
         {
           id: 11,
           title: "Internships Across Departments",
-          subtitle: "*Mention your applying department in message box",
+          subtitle: "-APPLY NOW *Mention your applying department in message box",
           type: "Internships",
           mode: "On-Site",
           location: "Goa",

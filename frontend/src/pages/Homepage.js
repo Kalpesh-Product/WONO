@@ -91,7 +91,7 @@ import {
   sales,
   calendarLine,
   eventsLine,
-  stayRoom
+  stayRoom,
 } from "../assets/WONO_images/img/icon_service_color";
 
 const Homepage = () => {
@@ -173,7 +173,8 @@ const Homepage = () => {
                       style={{
                         fontFamily: "Popins-Semibold",
                         fontWeight: "normal",
-                      }}>
+                      }}
+                    >
                       "Wo
                     </b>
                     rld{" "}
@@ -181,7 +182,8 @@ const Homepage = () => {
                       style={{
                         fontFamily: "Popins-Semibold",
                         fontWeight: "normal",
-                      }}>
+                      }}
+                    >
                       No
                     </b>
                     mad{" "}
@@ -189,7 +191,8 @@ const Homepage = () => {
                       style={{
                         fontFamily: "Popins-Semibold",
                         fontWeight: "normal",
-                      }}>
+                      }}
+                    >
                       Co
                     </b>
                     mmerce"
@@ -198,9 +201,9 @@ const Homepage = () => {
               </div>
             </h2>
             <div className="home-main-title-desc flex flex-col gap-4 w-full">
-              <div className="w-full gap-4 flex flex-col items-start justify-center text-start md:text-center lg:text-start">
+              <div className="w-full gap-3 flex flex-col items-start justify-center text-start md:text-center lg:text-start">
                 <p
-                  className="text-start w-full md:text-center lg:text-start text-[1.3rem] md:text-[2.1rem]"
+                  className="text-start w-full md:text-center lg:text-start text-[1.3rem] md:text-[2.1rem] "
                   style={{ fontWeight: "bold" }}
                 >
                   A simple NO CODE SaaS Platform.
@@ -224,7 +227,8 @@ const Homepage = () => {
           <div
             style={{ cursor: "pointer" }}
             onClick={() => navigate("/register")}
-            className="first-section-grid-item-2 h-40 flex justify-center">
+            className="first-section-grid-item-2 h-40 flex justify-center"
+          >
             <div className="home-desc relative w-full flex items-center justify-center">
               <img src={greenRound} alt="" />
               IT'S COMPLETLEY FREE
@@ -238,7 +242,7 @@ const Homepage = () => {
               className="canvas"
               camera={{
                 position: [0, 0, ismobile ? 15 : 25],
-                fov: ismobile ? 40 : isTablet ? 50 : isLaptop ? 45 : 30,
+                fov: ismobile ? 40 : isTablet ? 50 : isLaptop ? 35 : 30,
               }}
             >
               <ambientLight intensity={0.5} />
@@ -263,14 +267,16 @@ const Homepage = () => {
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-              }}>
+              }}
+            >
               <button
                 className="hero-button"
                 data-aos-delay="200"
                 onClick={() => {
                   navigate("/register");
                   window.scrollTo({ top: 0, behavior: "instant" });
-                }}>
+                }}
+              >
                 CONNECT
               </button>
             </div>
@@ -296,8 +302,12 @@ const Homepage = () => {
             <div className="">
               <div className="customMargin_top">
                 <div className="one-platform-section uppercase flex flex-col gap-4">
-                  <h2 className="text-2xl md:text-6xl lg:text-[6rem]">One Partner Platform,</h2>
-                  <h2 className="text-xl md:text-[2.2rem] lg:text-[3.5rem]">Infinite possibilities and opportunities!</h2>
+                  <h2 className="text-2xl md:text-6xl lg:text-[6rem]">
+                    One Partner Platform
+                  </h2>
+                  <h2 className="text-xl md:text-[2.2rem] lg:text-[3.5rem]">
+                    Infinite possibilities and opportunities!
+                  </h2>
                 </div>
               </div>
             </div>
@@ -341,19 +351,16 @@ const Homepage = () => {
                   </div>
                 </div>
 
-                <div className="">
-                  <div className="container mt-3 mb-0  ">
-                    <div className="row   ">
-                      <div className="col-lg-4"></div>
-                      <div className="col-lg-4"></div>
-                      <div className="col-lg-4  d-flex justify-content-center align-items-center">
-                        <div className="">
-                          <button
-                            className="get-started-submit-button m-0"
-                            onClick={handleRegister}>
-                            Get Started
-                          </button>
-                        </div>
+                <div className=" mt-10 mb-0 pr-24 md:pr-40">
+                  <div className="row">
+                    <div className="flex justify-end items-center">
+                      <div className="">
+                        <button
+                          className="get-started-submit-button m-0"
+                          onClick={handleRegister}
+                        >
+                          Get Started
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -364,7 +371,8 @@ const Homepage = () => {
         </div>
         <div
           className="website-container-master"
-          style={{ backgroundColor: "black" }}>
+          style={{ backgroundColor: "black" }}
+        >
           <div className="website-panel-container">
             <div className="website-panel-header flex flex-col gap-3">
               <h2>NO CODE SELF SERVE </h2>
@@ -401,12 +409,14 @@ const Homepage = () => {
               <div
                 className={`website-panel-right ${
                   selectedId ? "modal-open" : ""
-                }`}>
+                }`}
+              >
                 <div className="website-panel-content">
                   {webimages.map((image) => (
                     <div
                       className="template-preview-container overflow-hidden rounded-xl"
-                      key={image.id}>
+                      key={image.id}
+                    >
                       <img
                         className="rounded-xl"
                         src={image.src}
@@ -419,7 +429,8 @@ const Homepage = () => {
                   onClick={() =>
                     window.scrollTo({ top: 0, behavior: "instant" })
                   }
-                  to="/themes">
+                  to="/themes"
+                >
                   View more
                 </Link>
               </div>
@@ -453,7 +464,8 @@ const Homepage = () => {
                   <div className="testimonial-contact">
                     <h4
                       className="my-4"
-                      style={{ fontFamily: "Amsterdam", fontSize: "2rem" }}>
+                      style={{ fontFamily: "Amsterdam", fontSize: "2rem" }}
+                    >
                       Kashif Shaikh
                     </h4>
                     <p className="m-0">Co-Founder & COO</p>
