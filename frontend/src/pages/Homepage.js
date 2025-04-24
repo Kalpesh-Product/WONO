@@ -216,7 +216,7 @@ const Homepage = () => {
             <div className="home-main-title-desc flex flex-col gap-4 w-full">
               <div className="w-full gap-3 flex flex-col items-start justify-center text-start md:text-center lg:text-start">
                 <p
-                  className="text-start w-full md:text-center lg:text-start text-[1.3rem] md:text-[2.1rem] "
+                  className="text-start w-full md:text-center md:text-[2.1rem] lg:text-start   "
                   style={{ fontWeight: "bold" }}
                 >
                   A simple NO CODE SaaS Platform.

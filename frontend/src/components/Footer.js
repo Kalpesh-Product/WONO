@@ -30,14 +30,16 @@ const Footer = ({ changeActiveTab }) => {
               alt="logo"
             />
             <span>
-              WONOCO PRIVATE LIMITED 10 ANSON ROAD #33-10
+              WONOCO PRIVATE LIMITED
+              <br /> 10 ANSON ROAD #33-10
               <br />
-              INTERNATIONAL PLAZA SINGAPORE - 079903
+              INTERNATIONAL PLAZA<br/> SINGAPORE - 079903
               <br />
               <span className="text-lowercase color-of-o">
                 <Link
                   to="mailto:response@wono.co"
-                  style={{ textDecoration: "none" }}>
+                  style={{ textDecoration: "none" }}
+                >
                   response@wono.co
                 </Link>
               </span>
@@ -71,7 +73,8 @@ const Footer = ({ changeActiveTab }) => {
                 onClick={() => {
                   changeActiveTab("");
                   window.scrollTo({ top: 0, behavior: "instant" });
-                }}>
+                }}
+              >
                 {/* <Link to="/login">Sign In</Link> */}
                 <a href="https://wonofe.vercel.app/">Sign In</a>
               </h5>
@@ -79,14 +82,16 @@ const Footer = ({ changeActiveTab }) => {
                 onClick={() => {
                   changeActiveTab("");
                   window.scrollTo({ top: 0, behavior: "instant" });
-                }}>
+                }}
+              >
                 <Link to={"/register"}>Sign Up</Link>
               </h5>
               <h5
                 onClick={() => {
                   changeActiveTab("");
                   window.scrollTo({ top: 0, behavior: "instant" });
-                }}>
+                }}
+              >
                 <Link to={"/contact"}>Contact</Link>
               </h5>
             </div>
@@ -96,21 +101,24 @@ const Footer = ({ changeActiveTab }) => {
                 onClick={() => {
                   changeActiveTab("Services");
                   window.scrollTo({ top: 0, behavior: "instant" });
-                }}>
+                }}
+              >
                 <Link to="/modules">Modules</Link>
               </h5>
               <h5
                 onClick={() => {
                   changeActiveTab("themes");
                   window.scrollTo({ top: 0, behavior: "instant" });
-                }}>
+                }}
+              >
                 <Link to="/themes">Themes</Link>
               </h5>
               <h5
                 onClick={() => {
                   changeActiveTab("leads");
                   window.scrollTo({ top: 0, behavior: "instant" });
-                }}>
+                }}
+              >
                 <Link to={"/leads"}>Leads</Link>
               </h5>
             </div>
@@ -119,7 +127,8 @@ const Footer = ({ changeActiveTab }) => {
                 onClick={() => {
                   changeActiveTab("capital");
                   window.scrollTo({ top: 0, behavior: "instant" });
-                }}>
+                }}
+              >
                 <Link to="/capital">Capital</Link>
               </h5>
               <Link
@@ -127,7 +136,8 @@ const Footer = ({ changeActiveTab }) => {
                 onClick={() => {
                   changeActiveTab("Career");
                   window.scrollTo({ top: 0, behavior: "instant" });
-                }}>
+                }}
+              >
                 Career
               </Link>
               <Link
@@ -145,22 +155,21 @@ const Footer = ({ changeActiveTab }) => {
                   to={"/faqs"}
                   onClick={() =>
                     window.scrollTo({ top: 0, behavior: "instant" })
-                  }>
+                  }
+                >
                   FAQs
                 </Link>
               </h5>
               <Link
                 to={"/privacy"}
-                onClick={() =>
-                  window.scrollTo({ top: 0, behavior: "instant" })
-                }>
+                onClick={() => window.scrollTo({ top: 0, behavior: "instant" })}
+              >
                 Privacy
               </Link>
               <Link
                 to={"/termsandconditions"}
-                onClick={() =>
-                  window.scrollTo({ top: 0, behavior: "instant" })
-                }>
+                onClick={() => window.scrollTo({ top: 0, behavior: "instant" })}
+              >
                 T&C
               </Link>
             </div>

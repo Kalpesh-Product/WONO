@@ -30,9 +30,9 @@ const SaaSFeatureBlock = ({
 
   // Define dynamic height and objectFit
   const dynamicHeight = isMobile
-    ? "5rem"
+    ? "15rem"
     : isLaptop
-    ? "34rem"
+    ? "37rem"
     : height || "28rem";
 
   const dynamicFit = isMobile ? "contain" : imageFit || "cover";

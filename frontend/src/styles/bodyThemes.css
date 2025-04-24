@@ -21,7 +21,7 @@
 
 .themePage-header h1 {
   font-weight: normal;
-  font-size: 4rem;
+  font-size: 4.45rem;
   margin-bottom: 2rem;
   font-family: Popins-Medium !important;
 }
@@ -111,12 +111,9 @@
     flex-direction: column;
 } */
 
-/* .themePage-featured-header h1 {
-    font-size: 4rem;
-    text-align: left;
-    padding-right: 12rem;
-    margin: 2rem 0
-} */
+.themePage-featured-header h1 {
+  font-weight: bold;
+}
 
 .themePage-featured-content {
     width: 100%;
@@ -354,6 +351,7 @@
     font-size: 4rem;
     margin-bottom: 4rem;
     text-align: left;
+    font-weight: bold;
   }
 
   .themePage-website-features-grid {
@@ -581,6 +579,7 @@
   .themePage-website-features h1 {
     font-size: 3.7rem;
     margin-bottom: 4rem;
+    font-weight: bold;
   }
   .themePage-website-features-grid {
     display: grid;
@@ -785,6 +784,7 @@
     font-size: 3.9rem;
     margin-bottom: 4rem;
     text-align: start;
+    font-weight: bold;
   }
 
   .themePage-website-features p {
@@ -972,7 +972,7 @@
   }
 
   .themePage-featured-header h1 {
-    font-size: 1.7rem;
+    font-size: 2.1rem;
     text-align: left;
     padding: 0 0 0 0.7rem;
     margin-bottom: 40px;
@@ -1039,6 +1039,7 @@
     font-size: 1.8rem;
     margin-bottom: 4rem;
     text-align: start;
+    font-weight: bold;
   }
 
   .themePage-website-features p {
@@ -1296,6 +1297,7 @@
     font-size: 1.9rem;
     margin-bottom: 4rem;
     text-align: start;
+    font-weight: bold;
   }
 
   .themePage-website-features p {
