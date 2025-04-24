@@ -656,14 +656,14 @@ const Register = () => {
                             <MenuItem value="Cafe Business">
                               Cafe Business
                             </MenuItem>
-                            <MenuItem value="Workation Business">
-                              Workation Business
+                            <MenuItem value="Workation Company">
+                              Workation Company
                             </MenuItem>
-                            <MenuItem value="Hostel Business">
-                              Hostel Business
+                            <MenuItem value="Hostel Company">
+                              Hostel Company
                             </MenuItem>
-                            <MenuItem value="Events Business">
-                              Events Business
+                            <MenuItem value="Events Company">
+                              Events Company
                             </MenuItem>
                             <MenuItem value="Other Business">
                               Other Business
