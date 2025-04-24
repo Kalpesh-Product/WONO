@@ -30,6 +30,14 @@ import {
   calendar,
   seo,
   calendarLine,
+  bookingEngineCM,
+  aiSeoCM,
+  inventory,
+  occupancy,
+  clientManagement,
+  profitLoss,
+  jobs,
+  employeeManagement,
 } from "../assets/WONO_images/img/icon_service_color";
 import { useNavigate } from "react-router-dom";
 import TicketsImage from "../assets/WONO_images/img/images-service/services-apps.jpeg";
@@ -122,12 +130,12 @@ const Services = () => {
           <SaaSFeatureBlock
             title="Frontend"
             description1={[
-              { title: "Website", image: website },
-              { title: "Mobile Site", image: mobileSite },
+              { title: "No Code Website", image: website },
+              { title: "Booking Engine", image: bookingEngineCM },
               { title: "Payment Gateway", image: paymentGateway },
+              { title: "Lead Management", image: leadGenerationSM },
+              { title: "AI SEO", image: aiSeoCM },
               { title: "Notifications", image: notifications },
-              { title: "Templates", image: templates },
-              { title: "SEO", image: seo },
             ]}
             image={FrontendImage}
             width={"100%"}
@@ -140,11 +148,11 @@ const Services = () => {
             title="Apps"
             description1={[
               { title: "Tickets", image: ticketRaisingCM },
-              { title: "Meetings", image: meetingRoomsCM },
-              { title: "Assets", image: eSignHR },
-              { title: "Visitors", image: visitorCM },
-              { title: "Calendar", image: calendar },
               { title: "Tasks", image: customerProfile },
+              { title: "Meeting Rooms", image: meetingRoomsCM },
+              { title: "Visitors", image: visitorCM },
+              { title: "Assets", image: eSignHR },
+              { title: "Calendar", image: calendar },
             ]}
             image={TicketsImage}
             rowReverse={true}
@@ -153,12 +161,12 @@ const Services = () => {
             <SaaSFeatureBlock
             title="Sales"
             description1={[
+              { title: "Revenue Reports", image: reports },
               { title: "Lead Generation", image: leadGenerationSM },
-              { title: "Email Marketing", image: emailMarketingSM },
-              { title: "Social Media", image: socialMediaSM },
-              { title: "Projections", image: projectionsFA },
-              { title: "Invoicing", image: invoicingFA },
-              { title: "Reports", image: reports },
+              { title: "Sales Inventory", image: inventory },
+              { title: "Occupancy", image: occupancy },
+              { title: "Manage Clients", image: clientManagement },
+              { title: "Profiling", image: customerProfile },
             ]}
             image={SalesImage}
             rowReverse={false}
@@ -167,12 +175,12 @@ const Services = () => {
           <SaaSFeatureBlock
             title="Finance"
             description1={[
-              { title: "Invoicing", image: invoicingFA },
+              { title: "P&L Report", image: profitLoss },
               { title: "Cashflow", image: cashflowFA },
-              { title: "Projections", image: projectionsFA },
-              { title: "Taxes", image: taxesFA },
-              { title: "Income", image: income },
-              { title: "Expense", image: expense },
+              { title: "Invoicing", image: invoicingFA },
+              { title: "Collections", image: projectionsFA },
+              { title: "Historical Data", image: taxesFA },
+              { title: "Budgeting", image: expense },
             ]}
             image={FinanceImage}
             rowReverse={true}
@@ -181,12 +189,12 @@ const Services = () => {
           <SaaSFeatureBlock
             title="Human Resources"
             description1={[
-              { title: "Attendance", image: attendanceHR },
+              { title: "Manage Employees", image: employeeManagement },
               { title: "Payroll", image: payrollHR },
-              { title: "Payslips", image: payslipsHR },
-              { title: "Templates", image: templates },
+              { title: "Attendance", image: attendanceHR },
+              { title: "Budgeting", image: expense },
               { title: "Performance", image: performanceHR },
-              { title: "Budget", image: budgetFA },
+              { title: "Jobs", image: jobs },
             ]}
             image={HrImage}
             rowReverse={false}

@@ -20,6 +20,7 @@ import analyticsFA from "./Analytics_SaaS.png";
 import compliancesFA from "./Compliances_SaaS.png";
 import taxesFA from "./taxes.png";
 import followUpsFA from "./Followups_SaaS.png";
+import inventory from "./inventory-lined.png"
 
 import notificationsFA from "./notifications.png";
 import collectionsFA from "./Collections_SaaS.png";
@@ -100,11 +101,22 @@ import bookingEngineCM from "./icons8-booking-80.png"
 import aiSeoCM from "./icons8-seo-50.png"
 import maintenanceCM from "./icons8-maintenance-50.png"
 import CustomerService from "./icons8-customer-service-50.png"
+import occupancy from "./occupancy-lined.png"
+import clientManagement from "./client-management.png"
+import profitLoss from './profit-loss.png'
+import employeeManagement from "./employee-management.png"
+import jobs from "./jobs-lined.png"
 
 // Coloured icons end
 
 export {
   androidAppSaas,
+  clientManagement,
+  employeeManagement,
+  jobs,
+  profitLoss,
+  occupancy,
+  inventory,
   stayRoom,
   templates,
   eventsLine,
