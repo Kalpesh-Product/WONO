@@ -125,8 +125,8 @@ const Homepage = () => {
     { id: 7, title: "Meeting Rooms", icon: meetingRoomsCM },
     { id: 21, title: "Visitors", icon: visitorCM },
     { id: 19, title: "Assets", icon: eSignHR },
+    { id: 22, title: "Calendar", icon: calendarLine },
 
-    { id: 24, title: "Profile", icon: customerProfile },
 
     // Group 3
     { id: 4, title: "Sales", icon: sales },
@@ -141,7 +141,7 @@ const Homepage = () => {
     { id: 15, title: "Marketing", icon: smsMarketingSM },
     { id: 10, title: "Cafe", icon: cafeOrdersCM },
     { id: 9, title: "Events", icon: eventsLine },
-    { id: 22, title: "Calendar", icon: calendarLine },
+    { id: 24, title: "Profile", icon: customerProfile },
     { id: 26, title: "Analytics", icon: analyticsCM },
   ];
 
@@ -457,8 +457,8 @@ const Homepage = () => {
             {/* <div className="container border-top border-dark border-2"> */}
             <div className="container p-0 ">
               <div className="row">
-                <h1 className="text-[2.2rem] md:text-5xl lg:text-[4.3rem] text-center mb-10">
-                  TESTIMONIALS
+                <h1 className="text-[2.2rem] md:text-5xl lg:text-[4.3rem] text-center mb-10 font-bold">
+                  TESTIMONIAL
                 </h1>
                 <div className="col-lg-7 d-flex flex-column justify-content-between  p-0 ms-0">
                   <div className=" ">
