@@ -457,7 +457,7 @@ const Homepage = () => {
             {/* <div className="container border-top border-dark border-2"> */}
             <div className="container p-0 ">
               <div className="row">
-                <h1 className="text-[2.2rem] md:text-5xl lg:text-[4.3rem] text-center mb-10 font-bold">
+                <h1 className="text-[2.2rem] md:text-5xl lg:text-[4.3rem] text-center mb-10 font-medium">
                   TESTIMONIAL
                 </h1>
                 <div className="col-lg-7 d-flex flex-column justify-content-between  p-0 ms-0">

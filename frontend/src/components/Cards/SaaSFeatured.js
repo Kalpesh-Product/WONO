@@ -32,7 +32,7 @@ const SaaSFeatureBlock = ({
   const dynamicHeight = isMobile
     ? "15rem"
     : isLaptop
-    ? "37rem"
+    ? "34rem"
     : height || "28rem";
 
   const dynamicFit = isMobile ? "contain" : imageFit || "cover";

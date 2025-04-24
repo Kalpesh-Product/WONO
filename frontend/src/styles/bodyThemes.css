@@ -16,13 +16,12 @@
 }
 
 .themePage-header {
-  padding: 4rem 7.5rem 3rem 7.5rem;
+  padding: 4rem 7.5rem 4rem 7.5rem;
 }
 
 .themePage-header h1 {
   font-weight: normal;
   font-size: 4.45rem;
-  margin-bottom: 2rem;
   font-family: Popins-Medium !important;
 }
 
@@ -112,7 +111,7 @@
 } */
 
 .themePage-featured-header h1 {
-  font-weight: bold;
+  font-weight: 500;
 }
 
 .themePage-featured-content {
@@ -562,7 +561,6 @@
   }
   .themePage-header h1 {
     font-size: 3rem;
-    margin-bottom: 2rem;
   }
   .themePage-content-grid {
     display: grid;
@@ -644,7 +642,6 @@
 
   .themePage-header h1 {
     font-size: 2rem;
-    margin-bottom: 2rem;
   }
 
   .themePage-header p {
@@ -890,8 +887,7 @@
   }
 
   .themePage-header h1 {
-    font-size: 2rem;
-    margin-bottom: 2rem;
+    font-size: 1.6rem;
   }
 
   .themePage-header p {
@@ -1146,7 +1142,6 @@
 
   .themePage-header h1 {
     font-size: 1.7rem;
-    margin-bottom: 2rem;
   }
 
   .themePage-header p {
