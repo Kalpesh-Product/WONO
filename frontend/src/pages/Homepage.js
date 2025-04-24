@@ -95,7 +95,7 @@ import {
   calendarLine,
   eventsLine,
   bookingEngineCM,
-  stayRoom
+  stayRoom,
 } from "../assets/WONO_images/img/icon_service_color";
 
 const Homepage = () => {
@@ -118,7 +118,7 @@ const Homepage = () => {
     { id: 5, title: "Leads Management", icon: leadGenerationSM },
     { id: 27, title: "AI SEO", icon: aiSeoCM }, // Assuming you have this icon
     { id: 23, title: "Notifications", icon: notifications },
-  
+
     // Group 2
     { id: 7, title: "Meeting Rooms", icon: meetingRoomsCM },
     { id: 25, title: "Tickets", icon: ticketRaisingCM },
@@ -126,7 +126,7 @@ const Homepage = () => {
     { id: 22, title: "Calendar", icon: calendarLine },
     { id: 20, title: "Tasks", icon: taskManagementHR },
     { id: 24, title: "Profile", icon: customerProfile },
-  
+
     // Group 3
     { id: 4, title: "Sales", icon: sales },
     { id: 3, title: "Finance", icon: financialReportsFA },
@@ -134,16 +134,16 @@ const Homepage = () => {
     { id: 18, title: "IT", icon: fullDataAnalysisRA },
     { id: 28, title: "Maintenance", icon: maintenanceCM }, // Assuming this icon
     { id: 17, title: "Admin", icon: customerProfile },
-  
+
     // Group 4
     { id: 29, title: "Customer Service", icon: CustomerService }, // Assuming this icon
     { id: 15, title: "Marketing", icon: smsMarketingSM },
     { id: 10, title: "Cafe", icon: cafeOrdersCM },
     { id: 9, title: "Events", icon: eventsLine },
     { id: 19, title: "Assets", icon: eSignHR },
-    { id: 26, title: "Analytics", icon: analyticsCM }
+    { id: 26, title: "Analytics", icon: analyticsCM },
   ];
-  
+
   const handleRegister = () => {
     navigate("/register");
   };
@@ -314,10 +314,10 @@ const Homepage = () => {
             <div className="">
               <div className="customMargin_top">
                 <div className="one-platform-section uppercase flex flex-col gap-4">
-                  <h2 className="text-2xl md:text-6xl lg:text-[6rem]">
+                  <h2 className="platform-section text-2xl md:text-[3.6rem] lg:text-[6rem]">
                     One Partner Platform
                   </h2>
-                  <h2 className="text-xl md:text-[2.2rem] lg:text-[3.5rem]">
+                  <h2 className="platform-section-desc text-xl md:text-[2rem] lg:text-[3.5rem]">
                     Infinite possibilities and opportunities!
                   </h2>
                 </div>
@@ -388,10 +388,10 @@ const Homepage = () => {
           <div className="website-panel-container">
             <div className="website-panel-header flex flex-col gap-3">
               <h2>NO CODE SELF SERVE </h2>
-              <h3 className=" text-lg text-start md:text-start lg:text-center md:text-[2.3rem] lg:text-[3.82rem]">
+              <h3 className="transactional-section text-lg text-start md:text-start lg:text-center md:text-[2.3rem] lg:text-[3.82rem]">
                 TRANSACTIONAL WEBSITE & MOBILE SITE
               </h3>
-              <p className="text-sm md:text-[1.3rem] lg:text-[1.7rem] lg:leading-8 md:leading-8 text-start md:text-start lg:text-center">
+              <p className="transactional-section-desc text-sm md:text-[1.3rem] lg:text-[1.7rem] lg:leading-8 md:leading-8 text-start md:text-start lg:text-center">
                 Free customizable website templates which are strategically
                 tailored for managing Lifestyle Businesses like Co-Working,
                 Co-Living, Hostels, Boutique Properties, Cafes etc
@@ -454,7 +454,10 @@ const Homepage = () => {
           <div className=" pt-5 pb-5">
             {/* <div className="container border-top border-dark border-2"> */}
             <div className="container p-0 ">
-              <div className="row ">
+              <div className="row">
+                <h1 className="text-[2.2rem] md:text-5xl lg:text-6xl text-center mb-6">
+                  TESTIMONIALS
+                </h1>
                 <div className="col-lg-7 d-flex flex-column justify-content-between  p-0 ms-0">
                   <div className=" ">
                     {/* <h4 className="bg-danger testimonial-right-spacing"> */}
@@ -468,11 +471,6 @@ const Homepage = () => {
                     {/* <br /> */}
                     {/* <br /> */}
                   </div>
-                  {/* <div>
-                    <div className=" border-top border-dark border-2 customWidth bg-danger">
-                      a div
-                    </div>
-                  </div> */}
                   <div className="testimonial-contact">
                     <h4
                       className="my-4"
@@ -484,7 +482,6 @@ const Homepage = () => {
                     <p>BIZ Nest, Goa India </p>
                   </div>
                 </div>
-                {/* <div className="col-lg-5 mt-3 bg-warning d-flex flex-row justify-content-end"> */}
                 <div className="col-lg-5 mt-3 custom-image-biznest-container d-flex flex-row justify-content-end px-0">
                   <img
                     src={BiznestTestimonial}

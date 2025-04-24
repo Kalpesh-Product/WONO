@@ -181,7 +181,7 @@ const Themes = () => {
               </div>
             </div>
           </div>
-          <div className="px-[7rem]">
+          <div className="px-[2rem] md:px-[3rem] lg:px-[7rem]">
             <hr />
           </div>
 

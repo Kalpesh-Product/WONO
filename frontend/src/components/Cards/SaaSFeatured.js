@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import greenUnderLine from "../../assets/underline-bg/blue-line.png";
 import "../../styles/component-styles/featurecard.css";
 import FeatureCard from "./FeatureCard";
@@ -13,6 +13,18 @@ const SaaSFeatureBlock = ({
   height,
   rowReverse = false,
 }) => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <div
       className="cursor-pointer"
@@ -25,15 +37,16 @@ const SaaSFeatureBlock = ({
         className="module-feature-card-grid ob"
         style={{
           flexDirection: rowReverse ? "row-reverse" : "row",
+          flexWrap: "wrap",
         }}
       >
-        {/* Description Column (1/3 width) */}
+        {/* Description Column */}
         <div
           style={{
             flex: 1,
             fontSize: "1rem",
             lineHeight: "1.6",
-            maxWidth: "100%", 
+            maxWidth: "100%",
           }}
         >
           <div className="module-feature-title">
@@ -53,19 +66,26 @@ const SaaSFeatureBlock = ({
               <FeatureCard key={index} icon={item.image} title={item.title} />
             ))}
           </div>
-  
         </div>
 
-        <div style={{ flex: 2, display: "flex", justifyContent: "center",  }} className="border-[1px] border-gray-200 rounded-xl overflow-hidden w-[120%]">
+        {/* Image Column */}
+        <div
+          style={{
+            flex: 2,
+            display: "flex",
+            justifyContent: "center",
+          }}
+          className="border-[1px] border-gray-200 rounded-xl overflow-hidden w-[120%]"
+        >
           <img
             src={image}
             alt="feature"
             style={{
               width: "100%",
-              height: height ? height : "60vh",
-              objectFit: imageFit? imageFit : 'cover',
-              padding:'1rem',
-              objectPosition: imagePosition ? imagePosition : 'top'
+              height: isMobile ? "30vh" : height ? height : "60vh",
+              objectFit: isMobile ? "contain" : imageFit ? imageFit : "cover",
+              padding: "1rem",
+              objectPosition: imagePosition ? imagePosition : "top",
             }}
           />
         </div>

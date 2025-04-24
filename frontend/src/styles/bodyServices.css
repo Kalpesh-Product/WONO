@@ -532,6 +532,16 @@
     justify-content: center;
   }
 
+  .SaaS-main-heading h1 {
+    font-size: 2.5rem;
+    padding: 0 0 2rem 0;
+    font-weight: normal;
+    font-family: ComicSansMS-bold;
+  }
+  .plus-section{
+    font-size: 1.3rem !important;
+  }
+
   .services:not(:last-child) {
     padding: 0 4rem;
   }
@@ -885,6 +895,9 @@
     align-items: center;
     justify-content: center;
   }
+  .SaaS-features-heading img{
+    object-fit: contain !important;
+  }
 
   .services:not(:last-child) {
     padding: 0 1.9rem;
@@ -1184,6 +1197,9 @@
     align-items: center;
     justify-content: center;
   }
+  .plus-section {
+    font-size: 1rem !important;
+}
 
   .SaaS-features-heading img {
     position: absolute;
@@ -1238,7 +1254,7 @@
   }
 
   .SaaS-main-heading h1 {
-    font-size: 2.5rem;
+    font-size: 1.6rem;
     padding: 2rem 0 2rem 0;
     line-height: 130%;
   }
@@ -1346,6 +1362,7 @@
     width: 100%;
     height: 100%;
     object-fit: contain;
+    object-position: top left;
   }
 
   .SaaS-grid {
@@ -1677,7 +1694,8 @@
   .SaaS-featured-grid-right img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
+    object-position: top left;
   }
 
   .SaaS-grid {

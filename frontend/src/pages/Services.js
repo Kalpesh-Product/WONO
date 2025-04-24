@@ -34,7 +34,7 @@ import {
 import { useNavigate } from "react-router-dom";
 import TicketsImage from "../assets/WONO_images/img/images-service/services-apps.jpeg";
 import HrImage from "../assets/WONO_images/img/images-service/hr-img-2.jpeg";
-import FinanceImage from "../assets/WONO_images/img/images-service/Finance-img.jpeg";
+import FinanceImage from "../assets/WONO_images/img/images-service/finance-usd.png";
 import SalesImage from "../assets/WONO_images/img/images-service/Sales-img.jpeg";
 import FrontendImage from "../assets/WONO_images/img/images-service/frontend-2.png";
 import greenUnderLine from "../assets/underline-bg/blue-line.png";
@@ -51,7 +51,7 @@ const Services = () => {
         </div>
 
         <div>
-          <h4 className="text-lg lg:text-[1.8rem] lg:leading-[2.75rem] text-start md:text-center lg:text-center font-[Popins-Regular]">
+          <h4 className="plus-section text-lg lg:text-[1.8rem] lg:leading-[2.75rem] text-start md:text-center lg:text-center font-[Popins-Regular]">
             No Code Website <span className="plus-sign"></span>
             <span className="plus-sign">+</span> Booking Engine{" "}
             <span className="plus-sign">+</span> Payment Gateway{" "}
@@ -84,7 +84,7 @@ const Services = () => {
         <div className="SaaS-featured-master flex flex-col gap-4 py-4">
           <div className="SaaS-featured-grid ">
             <div className="SaaS-featured-grid-left flex flex-col gap-4 ">
-              <div className="SaaS-features-heading flex text-3xl md:text-3xl font-bold">
+              <div className="SaaS-features-heading flex text-3xl md:text-3xl font-bold mb-3">
                 Real-time operations
                 <img src={greenUnderLine} alt="greenUnderLine" />
               </div>
@@ -97,7 +97,7 @@ const Services = () => {
                 reports, tasks, logs, menu, complaints, requests etc.
               </span>
             </div>
-            <div className="SaaS-featured-grid-right h-[50vh] md:h-[35vh] lg:h-[50vh] overflow-hidden border-gray-100 border-[1px] p-2 rounded-lg">
+            <div className="SaaS-featured-grid-right h-[30vh] md:h-[35vh] lg:h-[50vh] overflow-hidden border-gray-100 border-[1px] p-2 rounded-lg">
               <img
                 className="h-full w-full object-cover"
                 src={FinanceImage}
