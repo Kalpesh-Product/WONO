@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import AppStruct from "./structure/AppStruct";
 import CompTest from "./pages/CompTest";
@@ -42,6 +42,10 @@ const NoLayout = ({ children }) => {
 function App({ useHideUnimportantErrors }) {
   const [activeTab, setActiveTab] = useState("Home");
   const location = useLocation(); // Get the current path
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
 
   const changeActiveTab = (activeTab) => {
     setActiveTab(activeTab);

@@ -113,7 +113,8 @@ const Jobrole = () => {
         {
           id: 11,
           title: "Internships Across Departments",
-          subtitle: "-APPLY NOW *Mention your applying department in message box",
+          subtitle:
+            "-APPLY NOW *Mention your applying department in message box",
           type: "Internships",
           mode: "On-Site",
           location: "Goa",
@@ -139,7 +140,7 @@ const Jobrole = () => {
                     <div key={job.id} className="mb-4">
                       <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center">
                         <div>
-                          <p className="career-job-title font-semibold text-lg">
+                          <p className="career-job-title text-lg">
                             {jobIdx + 1}. {job.title}
                           </p>
                           {job.subtitle && (

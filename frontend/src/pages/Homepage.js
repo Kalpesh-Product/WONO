@@ -357,7 +357,10 @@ const Homepage = () => {
                       <div className="">
                         <button
                           className="get-started-submit-button m-0"
-                          onClick={handleRegister}
+                          onClick={() => {
+                            handleRegister();
+                            window.scrollTo({ top: 0, behavior: "instant" });
+                          }}
                         >
                           Get Started
                         </button>
