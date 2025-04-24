@@ -183,9 +183,7 @@ const ProductPage = () => {
                           marginBottom: "2rem",
                           marginLeft: "0",
                         }}
-                        onClick={() =>
-                          (window.location.href = "https://wonofe.vercel.app/")
-                        }
+                        onClick={() => navigate("/register")}
                         className="product-page-button"
                       >
                         Try theme

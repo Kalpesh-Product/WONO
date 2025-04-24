@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
 import "../layout/jobrole.css";
 import { Accordion, AccordionSummary, AccordionDetails } from "@mui/material";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FaChevronDown } from "react-icons/fa";
 
 const Jobrole = () => {
   const [isMobile, setIsMobile] = useState(false);
+  const navigate = useNavigate()
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 768);
@@ -159,7 +160,9 @@ const Jobrole = () => {
                         </div>
                         <div className="text-right flex w-full justify-between md:justify-between lg:justify-end items-center">
                           <p className="career-jobtitle flex w-full md:w-1/2 justify-between lg:justify-end">
-                            <span className="text-sm link-btn">
+                            <span onClick={()=>navigate(`/jobdetails/${job.id}/${encodeURIComponent(
+                                job.title
+                              )}`)} className="text-sm link-btn hover:underline cursor-pointer">
                               {job.type} | {job.mode} | {job.location}
                             </span>
                           </p>

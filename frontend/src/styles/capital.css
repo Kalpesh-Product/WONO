@@ -53,6 +53,16 @@
     font-family: Popins-Regular;
 
 }
+.connect-with-us-btn:hover {
+    position: absolute;
+    right: 6rem;
+    background-color: rgb(50, 50, 50);
+    color: white;
+    border-radius: 30px;
+    padding: 0.5rem 2rem;
+    font-family: Popins-Regular;
+
+}
 
 .capital-cards-section {
     background-color: black;

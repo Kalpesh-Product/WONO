@@ -117,7 +117,7 @@ const Register = () => {
 
   const checkEmailDuplicate = async (email) => {
     try {
-      const response = await axios.get(`/api/check-email/${email}`,);
+      const response = await axios.get(`/api/check-email/${email}`);
 
       if (response.status === 200) {
         const result = response.data;
@@ -187,7 +187,7 @@ const Register = () => {
         }
 
         const response = await axios.post(
-          'api/register/section',
+          "api/register/section",
           {
             section: sectionName,
             data: sectionData,
@@ -305,15 +305,11 @@ const Register = () => {
       setCurrentStep((prev) => prev + 1);
 
       // Final submission to complete the registration
-      const response = await axios.post(
-        "/api/register",
-        dataToSubmit,
-        {
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }
-      );
+      const response = await axios.post("/api/register", dataToSubmit, {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
 
       // No need for response.text() with Axios, access response data directly
       console.log(response.data); // Axios parses the response JSON automatically
@@ -645,9 +641,33 @@ const Register = () => {
                             required
                             fullWidth
                           >
-                            <MenuItem value="Co-Working">Co-Working</MenuItem>
-                            <MenuItem value="Workation">Workation</MenuItem>
-                            <MenuItem value="Co-Living">Co-Living</MenuItem>
+                            <MenuItem value="Co-Working Business">
+                              Co-Working Business
+                            </MenuItem>
+                            <MenuItem value="Co-Living Business">
+                              Co-Living Business
+                            </MenuItem>
+                            <MenuItem value="Serviced Apartments Business">
+                              Serviced Apartments Business
+                            </MenuItem>
+                            <MenuItem value="Resort Business">
+                              Resort Business
+                            </MenuItem>
+                            <MenuItem value="Cafe Business">
+                              Cafe Business
+                            </MenuItem>
+                            <MenuItem value="Workation Business">
+                              Workation Business
+                            </MenuItem>
+                            <MenuItem value="Hostel Business">
+                              Hostel Business
+                            </MenuItem>
+                            <MenuItem value="Events Business">
+                              Events Business
+                            </MenuItem>
+                            <MenuItem value="Other Business">
+                              Other Business
+                            </MenuItem>
                           </TextField>
                         </Grid>
 
@@ -664,10 +684,10 @@ const Register = () => {
                             required
                             fullWidth
                           >
+                            <MenuItem value="1-50">1-50</MenuItem>
                             <MenuItem value="50-100">50-100</MenuItem>
-                            <MenuItem value="100-200">100-200</MenuItem>
-                            <MenuItem value="200-500">200-500</MenuItem>
-                            <MenuItem value="500+">500+</MenuItem>
+                            <MenuItem value="100-250">100-250</MenuItem>
+                            <MenuItem value="250+">250+</MenuItem>
                           </TextField>
                         </Grid>
 
@@ -684,18 +704,19 @@ const Register = () => {
                             required
                             fullWidth
                           >
-                            <MenuItem value="Private Limited">
-                              Private Limited
+                            <MenuItem value="Private Limited Entity">
+                              Private Limited Entity
                             </MenuItem>
-                            <MenuItem value="Public Limited">
-                              Public Limited
+                            <MenuItem value="Partnership Entity">
+                              Partnership Entity
                             </MenuItem>
-                            <MenuItem value="Partnership">Partnership</MenuItem>
-                            <MenuItem value="Sole Proprietorship">
-                              Sole Proprietorship
+                            <MenuItem value="Limited Liability Entity">
+                              Limited Liability Entity
                             </MenuItem>
-                            <MenuItem value="LLP">LLP</MenuItem>
-                            <MenuItem value="NGO">NGO</MenuItem>
+                            <MenuItem value="Proprietor & Not Registered">
+                              Proprietor & Not Registered
+                            </MenuItem>
+                            <MenuItem value="Other">Other</MenuItem>
                           </TextField>
                         </Grid>
 

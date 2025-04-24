@@ -191,7 +191,7 @@ const LeadsPage = () => {
                   {/* <div className=""> */}
                   <button
                     // className="get-started-submit-button mb-0"
-                    className="get-started-main-button mt-4 mb-0"
+                    className="get-started-main-button mt-4 mb-0 hover:"
                     onClick={handleRegister}
                   >
                     Get Started
