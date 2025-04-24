@@ -1252,11 +1252,13 @@
 }
 
 @media (max-width: 820px) {
+
   .Globe-N-Commerce {
     display: grid;
     grid-template-columns: 1fr 1fr;
     height: 50vh;
     background-color: black;
+    padding-left: 2px;
   }
 
   .N-Commerce>h3>strong {

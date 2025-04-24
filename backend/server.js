@@ -39,7 +39,7 @@ app.use(
     origin: [
       "https://www.wono.co", // Your frontend origin
       /\.google\.com$/, // Allow requests from Google domains
-      "https://3e13-115-244-195-142.ngrok-free.app" // Your specific ngrok URL
+      "http://localhost:3000" // Your specific ngrok URL
     ], // Reflects the request origin, allowing wono frontend origin
     // origin: true, // Reflects the request origin, allowing all origins
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
@@ -106,71 +106,6 @@ app.get("/session", (req, res) => {
 });
 
 app.use("/api", userRoutes);
-
-// Route to download the CSV file
-// app.get('/download-csv', (req, res) => {
-//   const filePath = path.join(__dirname, 'form_data.csv');
-
-//   // Check if the file exists
-//   if (fs.existsSync(filePath)) {
-//     res.download(filePath);
-//   } else {
-//     res.status(404).send('CSV file not found');
-//   }
-// });
-
-//   const { jobTitle, name, email, date, number, location, experience, linkedInProfile, resume, monthlySalary, expectedSalary,
-//     daysToJoin, relocateGoa, personality, skills, specialexperience, willing, message } = req.body;
-
-//   let formData = req.body;
-
-//   const query = `INSERT into apply_form (jobTitle,namee,email,application_date,PhoneNumber,location,
-//       experience,linkedInProfile,resumelink,monthlySalary,expectedSalary,daysToJoin,relocateGoa,personality,
-//       skills,specialexperience,willing,message
-//       ) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)`
-
-//   promisePool.query(query, [jobTitle, name, email, date, number, location, experience, linkedInProfile, resume,
-//     monthlySalary, expectedSalary, daysToJoin, relocateGoa, personality, skills, specialexperience, willing,
-//     message
-//   ], (err, result) => {
-//     if (err) {
-//       console.log('Error saving data', err);
-//       res.status(500).send('Error saving data');
-//       return;
-//     }
-//     res.status(200).send('Data saved successfully');
-//   });
-
-//   const filePath = path.join(__dirname, "form_data.csv");
-
-//   const fields = Object.keys(formData);
-
-//   const csvParser = new Parser({ fields });
-
-//   let csv = csvParser.parse([formData]);
-
-//   if (fs.existsSync(filePath)) {
-//     fs.appendFile(filePath, "\n" + csv, (error) => {
-//       if (error) {
-//         console.error('Error appending to csv file:', error);
-//         res.status(500).send('Failed to send formdata');
-//         return;
-//       }
-//       res.send('FormData saved successfully');
-//     });
-//   }
-//   else {
-//     fs.writeFile(filePath, csv, (err) => {
-//       if (err) {
-//         console.error('Error writing to csv file:', err);
-//         res.status(500).send('Failed to send form Data');
-//         return;
-//       }
-//       res.send("Formdata saved successfully");
-//     });
-//   }
-
-//
 
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);

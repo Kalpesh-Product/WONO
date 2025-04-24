@@ -41,7 +41,7 @@ import smsMarketingSM from "./marketing.png";
 import emailMarketingSM from "./email-marketing.png";
 import socialMediaSM from "./social-marketing.png";
 
-import leadGenerationSM from "./leads.png";
+import leadGenerationSM from "./icons8-management-50.png";
 import adNetworksSM from "./AdNetworks_SaaS.png";
 import personalisedSemSM from "./PersonalisedSEM_SaaS.png";
 import automatedSeoSM from "./AutomatedSEO_SaaS.png";
@@ -96,6 +96,10 @@ import reports from './reports.png'
 import calendar from "./calendar-line-new.png"
 import seo from "./seo-lined.png"
 import eventsLine from "./events-line.png"
+import bookingEngineCM from "./icons8-booking-80.png"
+import aiSeoCM from "./icons8-seo-50.png"
+import maintenanceCM from "./icons8-maintenance-50.png"
+import CustomerService from "./icons8-customer-service-50.png"
 
 // Coloured icons end
 
@@ -105,11 +109,14 @@ export {
   templates,
   eventsLine,
   calendarLine,
+  bookingEngineCM,
   seo,
   expense,
   calendar,
   reports,
+  CustomerService,
   income,
+  aiSeoCM,
   sales,
   bookingsSaas,
   chatSaas,
@@ -118,6 +125,7 @@ export {
   events,
   iosApp,
   mobileSite,
+  maintenanceCM,
   notifications,
   paymentGateway,
   tickets,

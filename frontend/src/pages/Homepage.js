@@ -42,6 +42,7 @@ import {
   invoicingFA,
   vlogsSM,
   blogsSM,
+  aiSeoCM,
   referralsSM,
   livechatSM,
   whatsAppIntegrationSM,
@@ -83,6 +84,8 @@ import {
   customerReportsRA,
   fullDataAnalysisRA,
   keyNotificationsRA,
+  maintenanceCM,
+  CustomerService,
   cashflowRA,
   vendorPayoutsRA,
   businessTrendsRA,
@@ -91,7 +94,8 @@ import {
   sales,
   calendarLine,
   eventsLine,
-  stayRoom,
+  bookingEngineCM,
+  stayRoom
 } from "../assets/WONO_images/img/icon_service_color";
 
 const Homepage = () => {
@@ -107,31 +111,39 @@ const Homepage = () => {
   ];
 
   const amenities = [
+    // Group 1
     { id: 1, title: "No Code Website", icon: website },
+    { id: 11, title: "Booking Engine", icon: bookingEngineCM }, // Assuming you have this icon
     { id: 2, title: "Payment Gateway", icon: paymentGateway },
-    { id: 3, title: "Finance", icon: financialReportsFA },
-    { id: 4, title: "Sales", icon: sales },
-    { id: 5, title: "Auto Leads", icon: leadGenerationSM },
-    { id: 6, title: "Inventory", icon: invoicingFA },
+    { id: 5, title: "Leads Management", icon: leadGenerationSM },
+    { id: 27, title: "AI SEO", icon: aiSeoCM }, // Assuming you have this icon
+    { id: 23, title: "Notifications", icon: notifications },
+  
+    // Group 2
     { id: 7, title: "Meeting Rooms", icon: meetingRoomsCM },
-    { id: 8, title: "Lead Management", icon: stayRoom },
-    { id: 9, title: "Events", icon: eventsLine },
-    { id: 10, title: "Cafe", icon: cafeOrdersCM },
-    { id: 12, title: "Human Resource", icon: employeeReportsRA },
-    { id: 13, title: "Attendance", icon: attendanceHR },
-    { id: 14, title: "Payroll", icon: payrollHR },
-    { id: 15, title: "Marketing", icon: smsMarketingSM },
-    { id: 17, title: "Admin", icon: customerProfile },
-    { id: 18, title: "IT", icon: fullDataAnalysisRA },
-    { id: 19, title: "Assets", icon: eSignHR },
-    { id: 20, title: "Tasks", icon: taskManagementHR },
+    { id: 25, title: "Tickets", icon: ticketRaisingCM },
     { id: 21, title: "Visitors", icon: visitorCM },
     { id: 22, title: "Calendar", icon: calendarLine },
-    { id: 23, title: "Notifications", icon: notifications },
+    { id: 20, title: "Tasks", icon: taskManagementHR },
     { id: 24, title: "Profile", icon: customerProfile },
-    { id: 25, title: "Tickets", icon: ticketRaisingCM },
-    { id: 26, title: "Analytics", icon: analyticsCM },
+  
+    // Group 3
+    { id: 4, title: "Sales", icon: sales },
+    { id: 3, title: "Finance", icon: financialReportsFA },
+    { id: 12, title: "Human Resource", icon: employeeReportsRA },
+    { id: 18, title: "IT", icon: fullDataAnalysisRA },
+    { id: 28, title: "Maintenance", icon: maintenanceCM }, // Assuming this icon
+    { id: 17, title: "Admin", icon: customerProfile },
+  
+    // Group 4
+    { id: 29, title: "Customer Service", icon: CustomerService }, // Assuming this icon
+    { id: 15, title: "Marketing", icon: smsMarketingSM },
+    { id: 10, title: "Cafe", icon: cafeOrdersCM },
+    { id: 9, title: "Events", icon: eventsLine },
+    { id: 19, title: "Assets", icon: eSignHR },
+    { id: 26, title: "Analytics", icon: analyticsCM }
   ];
+  
   const handleRegister = () => {
     navigate("/register");
   };
@@ -213,10 +225,10 @@ const Homepage = () => {
                     We support businesses in small and aspiring destinations
                     which host Nomads!
                   </span>
-                  <span className="text-[0.9rem] md:text-[1.09rem] 2xl:text-[1.18rem] ">
+                  <span className="text-[0.9rem] md:text-[1rem] 2xl:text-[1.18rem] ">
                     SaaS Tech for Nomad supoorting businesses across the world.
                     <span className="font-bold">
-                      (E.g.: Co-Working, Co-Living, Hostels, Workations,
+                      (Example: Co-Working, Co-Living, Hostels, Workations,
                       Resorts, Cafes, Events etc)
                     </span>
                   </span>

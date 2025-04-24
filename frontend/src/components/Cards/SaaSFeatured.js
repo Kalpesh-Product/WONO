@@ -48,7 +48,7 @@ const SaaSFeatureBlock = ({
               />
             </div>
           </div>
-          <div className="module-feature-card-main py-4">
+          <div className="module-feature-card-main py-4 md:py-5">
             {description1.map((item, index) => (
               <FeatureCard key={index} icon={item.image} title={item.title} />
             ))}

@@ -64,7 +64,7 @@ const Services = () => {
           </h4>
         </div>
         <hr
-          className="hrStyling zeroHeight"
+          className="hrStyling zeroHeight border-t-4"
           style={{ width: "100%", margin: 0 }}
         />
         {/* <div className="SaaS-grid-heading">
@@ -135,7 +135,35 @@ const Services = () => {
             imagePosition={"left top"}
             rowReverse={false}
           />
-
+          <hr/>
+          <SaaSFeatureBlock
+            title="Apps"
+            description1={[
+              { title: "Tickets", image: ticketRaisingCM },
+              { title: "Meetings", image: meetingRoomsCM },
+              { title: "Assets", image: eSignHR },
+              { title: "Visitors", image: visitorCM },
+              { title: "Calendar", image: calendar },
+              { title: "Tasks", image: customerProfile },
+            ]}
+            image={TicketsImage}
+            rowReverse={true}
+          />
+          <hr/>
+            <SaaSFeatureBlock
+            title="Sales"
+            description1={[
+              { title: "Lead Generation", image: leadGenerationSM },
+              { title: "Email Marketing", image: emailMarketingSM },
+              { title: "Social Media", image: socialMediaSM },
+              { title: "Projections", image: projectionsFA },
+              { title: "Invoicing", image: invoicingFA },
+              { title: "Reports", image: reports },
+            ]}
+            image={SalesImage}
+            rowReverse={false}
+          />
+          <hr/>
           <SaaSFeatureBlock
             title="Finance"
             description1={[
@@ -149,21 +177,7 @@ const Services = () => {
             image={FinanceImage}
             rowReverse={true}
           />
-
-          <SaaSFeatureBlock
-            title="Sales"
-            description1={[
-              { title: "Lead Generation", image: leadGenerationSM },
-              { title: "Email Marketing", image: emailMarketingSM },
-              { title: "Social Media", image: socialMediaSM },
-              { title: "Projections", image: projectionsFA },
-              { title: "Invoicing", image: invoicingFA },
-              { title: "Reports", image: reports },
-            ]}
-            image={SalesImage}
-            rowReverse={false}
-          />
-
+          <hr/>
           <SaaSFeatureBlock
             title="Human Resources"
             description1={[
@@ -175,22 +189,9 @@ const Services = () => {
               { title: "Budget", image: budgetFA },
             ]}
             image={HrImage}
-            rowReverse={true}
-          />
-
-          <SaaSFeatureBlock
-            title="Apps"
-            description1={[
-              { title: "Tickets", image: ticketRaisingCM },
-              { title: "Meetings", image: meetingRoomsCM },
-              { title: "Assets", image: eSignHR },
-              { title: "Visitors", image: visitorCM },
-              { title: "Calendar", image: calendarLine },
-              { title: "Profile", image: customerProfile },
-            ]}
-            image={TicketsImage}
             rowReverse={false}
           />
+
         </div>
 
         {/* <div className="SaaS-grid">
