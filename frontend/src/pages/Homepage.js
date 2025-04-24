@@ -114,7 +114,7 @@ const Homepage = () => {
     { id: 5, title: "Auto Leads", icon: leadGenerationSM },
     { id: 6, title: "Inventory", icon: invoicingFA },
     { id: 7, title: "Meeting Rooms", icon: meetingRoomsCM },
-    { id: 8, title: "Stay Rooms", icon: stayRoom },
+    { id: 8, title: "Lead Management", icon: stayRoom },
     { id: 9, title: "Events", icon: eventsLine },
     { id: 10, title: "Cafe", icon: cafeOrdersCM },
     { id: 12, title: "Human Resource", icon: employeeReportsRA },
