@@ -187,7 +187,7 @@ const Register = () => {
         }
 
         const response = await axios.post(
-          "/register/section",
+          'api/register/section',
           {
             section: sectionName,
             data: sectionData,
@@ -305,11 +305,15 @@ const Register = () => {
       setCurrentStep((prev) => prev + 1);
 
       // Final submission to complete the registration
-      const response = await axios.post("/register", dataToSubmit, {
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
+      const response = await axios.post(
+        "/api/register",
+        dataToSubmit,
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
 
       // No need for response.text() with Axios, access response data directly
       console.log(response.data); // Axios parses the response JSON automatically

@@ -108,7 +108,7 @@
   .module-feature-card-main {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap:  4rem;
+    gap:  5rem;
   }
 }
 
@@ -132,7 +132,7 @@
   }
   .module-feature-card-main {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 1rem;
   }
 }

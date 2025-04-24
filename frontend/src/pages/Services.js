@@ -30,11 +30,19 @@ import {
   calendar,
   seo,
   calendarLine,
+  bookingEngineCM,
+  aiSeoCM,
+  inventory,
+  occupancy,
+  clientManagement,
+  profitLoss,
+  jobs,
+  employeeManagement,
 } from "../assets/WONO_images/img/icon_service_color";
 import { useNavigate } from "react-router-dom";
 import TicketsImage from "../assets/WONO_images/img/images-service/services-apps.jpeg";
 import HrImage from "../assets/WONO_images/img/images-service/hr-img-2.jpeg";
-import FinanceImage from "../assets/WONO_images/img/images-service/Finance-img.jpeg";
+import FinanceImage from "../assets/WONO_images/img/images-service/finance-usd.png";
 import SalesImage from "../assets/WONO_images/img/images-service/Sales-img.jpeg";
 import FrontendImage from "../assets/WONO_images/img/images-service/frontend-2.png";
 import greenUnderLine from "../assets/underline-bg/blue-line.png";
@@ -51,7 +59,7 @@ const Services = () => {
         </div>
 
         <div>
-          <h4 className="text-lg lg:text-[1.8rem] lg:leading-[2.75rem] text-start md:text-center lg:text-center font-[Popins-Regular]">
+          <h4 className="plus-section text-lg lg:text-[1.8rem] lg:leading-[2.75rem] text-start md:text-center lg:text-center font-[Popins-Regular]">
             No Code Website <span className="plus-sign"></span>
             <span className="plus-sign">+</span> Booking Engine{" "}
             <span className="plus-sign">+</span> Payment Gateway{" "}
@@ -64,7 +72,7 @@ const Services = () => {
           </h4>
         </div>
         <hr
-          className="hrStyling zeroHeight"
+          className="hrStyling zeroHeight border-t-4"
           style={{ width: "100%", margin: 0 }}
         />
         {/* <div className="SaaS-grid-heading">
@@ -84,7 +92,7 @@ const Services = () => {
         <div className="SaaS-featured-master flex flex-col gap-4 py-4">
           <div className="SaaS-featured-grid ">
             <div className="SaaS-featured-grid-left flex flex-col gap-4 ">
-              <div className="SaaS-features-heading flex text-3xl md:text-3xl font-bold">
+              <div className="SaaS-features-heading flex text-3xl md:text-3xl font-bold mb-3">
                 Real-time operations
                 <img src={greenUnderLine} alt="greenUnderLine" />
               </div>
@@ -97,7 +105,7 @@ const Services = () => {
                 reports, tasks, logs, menu, complaints, requests etc.
               </span>
             </div>
-            <div className="SaaS-featured-grid-right h-[50vh] md:h-[35vh] lg:h-[50vh] overflow-hidden border-gray-100 border-[1px] p-2 rounded-lg">
+            <div className="SaaS-featured-grid-right h-[30vh] md:h-[35vh] lg:h-[50vh] overflow-hidden border-gray-100 border-[1px] p-2 rounded-lg">
               <img
                 className="h-full w-full object-cover"
                 src={FinanceImage}
@@ -122,12 +130,12 @@ const Services = () => {
           <SaaSFeatureBlock
             title="Frontend"
             description1={[
-              { title: "Website", image: website },
-              { title: "Mobile Site", image: mobileSite },
+              { title: "No Code Website", image: website },
+              { title: "Booking Engine", image: bookingEngineCM },
               { title: "Payment Gateway", image: paymentGateway },
+              { title: "Lead Management", image: leadGenerationSM },
+              { title: "AI SEO", image: aiSeoCM },
               { title: "Notifications", image: notifications },
-              { title: "Templates", image: templates },
-              { title: "SEO", image: seo },
             ]}
             image={FrontendImage}
             width={"100%"}
@@ -135,62 +143,63 @@ const Services = () => {
             imagePosition={"left top"}
             rowReverse={false}
           />
-
-          <SaaSFeatureBlock
-            title="Finance"
-            description1={[
-              { title: "Invoicing", image: invoicingFA },
-              { title: "Cashflow", image: cashflowFA },
-              { title: "Projections", image: projectionsFA },
-              { title: "Taxes", image: taxesFA },
-              { title: "Income", image: income },
-              { title: "Expense", image: expense },
-            ]}
-            image={FinanceImage}
-            rowReverse={true}
-          />
-
-          <SaaSFeatureBlock
-            title="Sales"
-            description1={[
-              { title: "Lead Generation", image: leadGenerationSM },
-              { title: "Email Marketing", image: emailMarketingSM },
-              { title: "Social Media", image: socialMediaSM },
-              { title: "Projections", image: projectionsFA },
-              { title: "Invoicing", image: invoicingFA },
-              { title: "Reports", image: reports },
-            ]}
-            image={SalesImage}
-            rowReverse={false}
-          />
-
-          <SaaSFeatureBlock
-            title="Human Resources"
-            description1={[
-              { title: "Attendance", image: attendanceHR },
-              { title: "Payroll", image: payrollHR },
-              { title: "Payslips", image: payslipsHR },
-              { title: "Templates", image: templates },
-              { title: "Performance", image: performanceHR },
-              { title: "Budget", image: budgetFA },
-            ]}
-            image={HrImage}
-            rowReverse={true}
-          />
-
+          <hr/>
           <SaaSFeatureBlock
             title="Apps"
             description1={[
               { title: "Tickets", image: ticketRaisingCM },
-              { title: "Meetings", image: meetingRoomsCM },
-              { title: "Assets", image: eSignHR },
+              { title: "Tasks", image: customerProfile },
+              { title: "Meeting Rooms", image: meetingRoomsCM },
               { title: "Visitors", image: visitorCM },
-              { title: "Calendar", image: calendarLine },
-              { title: "Profile", image: customerProfile },
+              { title: "Assets", image: eSignHR },
+              { title: "Calendar", image: calendar },
             ]}
             image={TicketsImage}
+            rowReverse={true}
+          />
+          <hr/>
+            <SaaSFeatureBlock
+            title="Sales"
+            description1={[
+              { title: "Revenue Reports", image: reports },
+              { title: "Lead Generation", image: leadGenerationSM },
+              { title: "Sales Inventory", image: inventory },
+              { title: "Occupancy", image: occupancy },
+              { title: "Manage Clients", image: clientManagement },
+              { title: "Profiling", image: customerProfile },
+            ]}
+            image={SalesImage}
             rowReverse={false}
           />
+          <hr/>
+          <SaaSFeatureBlock
+            title="Finance"
+            description1={[
+              { title: "P&L Report", image: profitLoss },
+              { title: "Cashflow", image: cashflowFA },
+              { title: "Invoicing", image: invoicingFA },
+              { title: "Collections", image: projectionsFA },
+              { title: "Historical Data", image: taxesFA },
+              { title: "Budgeting", image: expense },
+            ]}
+            image={FinanceImage}
+            rowReverse={true}
+          />
+          <hr/>
+          <SaaSFeatureBlock
+            title="Human Resources"
+            description1={[
+              { title: "Manage Employees", image: employeeManagement },
+              { title: "Payroll", image: payrollHR },
+              { title: "Attendance", image: attendanceHR },
+              { title: "Budgeting", image: expense },
+              { title: "Performance", image: performanceHR },
+              { title: "Jobs", image: jobs },
+            ]}
+            image={HrImage}
+            rowReverse={false}
+          />
+
         </div>
 
         {/* <div className="SaaS-grid">

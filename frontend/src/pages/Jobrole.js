@@ -1,10 +1,21 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../layout/jobrole.css";
 import { Accordion, AccordionSummary, AccordionDetails } from "@mui/material";
 import { Link } from "react-router-dom";
 import { FaChevronDown } from "react-icons/fa";
 
 const Jobrole = () => {
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   const jobRoles = [
     {
       title: "I. Product Management",
@@ -27,7 +38,7 @@ const Jobrole = () => {
       ],
     },
     {
-      title: "II. Tech Development",
+      title: "II. Tech",
       jobs: [
         {
           id: 3,
@@ -65,7 +76,7 @@ const Jobrole = () => {
       ],
     },
     {
-      title: "IV. Human Resource & EA",
+      title: "IV. HR & EA",
       jobs: [
         {
           id: 7,
@@ -84,11 +95,11 @@ const Jobrole = () => {
       ],
     },
     {
-      title: "V. Sales & Business Development",
+      title: "V. Sales",
       jobs: [
         {
           id: 9,
-          title: "Sr.Manager Sales & Bussiness Development",
+          title: "Sr. Manager Sales & Bussiness Development",
           type: "Full-Time",
           mode: "On-Site",
           location: "Goa",
@@ -108,7 +119,7 @@ const Jobrole = () => {
       ],
     },
     {
-      title: "VII. Internships Across Departments",
+      title: "VII. Internships",
       jobs: [
         {
           id: 11,
@@ -130,7 +141,13 @@ const Jobrole = () => {
         {jobRoles.map((section, idx) => (
           <Accordion key={idx} elevation={0}>
             <AccordionSummary sx={{ py: 4 }} expandIcon={<FaChevronDown />}>
-              <p className="text-3xl font-bold">{section.title}</p>
+              <p
+                className={`${isMobile ? "text-xl" : "text-3xl"} ${
+                  isMobile ? "font-light" : "font-bold"
+                }`}
+              >
+                {section.title}
+              </p>
             </AccordionSummary>
 
             <AccordionDetails className="py-2">
@@ -139,16 +156,24 @@ const Jobrole = () => {
                   <>
                     <div key={job.id} className="mb-4">
                       <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center">
-                        <div>
-                          <p className="career-job-title text-lg">
+                        <div className="flex w-full flex-col gap-2">
+                          <p
+                            className={`${
+                              isMobile
+                                ? "text-lg font-bold"
+                                : "career-job-title"
+                            }  font-semibold ${
+                              isMobile ? "font-light" : "text-lg"
+                            }`}
+                          >
                             {jobIdx + 1}. {job.title}
                           </p>
                           {job.subtitle && (
                             <span className="text-sm">{job.subtitle}</span>
                           )}
                         </div>
-                        <div className="text-right flex items-center">
-                          <p className="career-jobtitle">
+                        <div className="text-right flex w-full justify-between md:justify-between lg:justify-end items-center">
+                          <p className="career-jobtitle flex w-full md:w-1/2 justify-between lg:justify-end">
                             <span className="text-sm link-btn">
                               {job.type} | {job.mode} | {job.location}
                             </span>

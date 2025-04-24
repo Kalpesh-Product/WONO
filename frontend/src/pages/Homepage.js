@@ -42,6 +42,7 @@ import {
   invoicingFA,
   vlogsSM,
   blogsSM,
+  aiSeoCM,
   referralsSM,
   livechatSM,
   whatsAppIntegrationSM,
@@ -83,6 +84,8 @@ import {
   customerReportsRA,
   fullDataAnalysisRA,
   keyNotificationsRA,
+  maintenanceCM,
+  CustomerService,
   cashflowRA,
   vendorPayoutsRA,
   businessTrendsRA,
@@ -91,6 +94,7 @@ import {
   sales,
   calendarLine,
   eventsLine,
+  bookingEngineCM,
   stayRoom,
 } from "../assets/WONO_images/img/icon_service_color";
 
@@ -107,31 +111,39 @@ const Homepage = () => {
   ];
 
   const amenities = [
+    // Group 1
     { id: 1, title: "No Code Website", icon: website },
+    { id: 11, title: "Booking Engine", icon: bookingEngineCM }, // Assuming you have this icon
     { id: 2, title: "Payment Gateway", icon: paymentGateway },
-    { id: 3, title: "Finance", icon: financialReportsFA },
-    { id: 4, title: "Sales", icon: sales },
-    { id: 5, title: "Auto Leads", icon: leadGenerationSM },
-    { id: 6, title: "Inventory", icon: invoicingFA },
+    { id: 5, title: "Leads Management", icon: leadGenerationSM },
+    { id: 27, title: "AI SEO", icon: aiSeoCM }, // Assuming you have this icon
+    { id: 23, title: "Notifications", icon: notifications },
+
+    // Group 2
     { id: 7, title: "Meeting Rooms", icon: meetingRoomsCM },
-    { id: 8, title: "Stay Rooms", icon: stayRoom },
-    { id: 9, title: "Events", icon: eventsLine },
-    { id: 10, title: "Cafe", icon: cafeOrdersCM },
-    { id: 12, title: "Human Resource", icon: employeeReportsRA },
-    { id: 13, title: "Attendance", icon: attendanceHR },
-    { id: 14, title: "Payroll", icon: payrollHR },
-    { id: 15, title: "Marketing", icon: smsMarketingSM },
-    { id: 17, title: "Admin", icon: customerProfile },
-    { id: 18, title: "IT", icon: fullDataAnalysisRA },
-    { id: 19, title: "Assets", icon: eSignHR },
-    { id: 20, title: "Tasks", icon: taskManagementHR },
+    { id: 25, title: "Tickets", icon: ticketRaisingCM },
     { id: 21, title: "Visitors", icon: visitorCM },
     { id: 22, title: "Calendar", icon: calendarLine },
-    { id: 23, title: "Notifications", icon: notifications },
+    { id: 20, title: "Tasks", icon: taskManagementHR },
     { id: 24, title: "Profile", icon: customerProfile },
-    { id: 25, title: "Tickets", icon: ticketRaisingCM },
+
+    // Group 3
+    { id: 4, title: "Sales", icon: sales },
+    { id: 3, title: "Finance", icon: financialReportsFA },
+    { id: 12, title: "Human Resource", icon: employeeReportsRA },
+    { id: 18, title: "IT", icon: fullDataAnalysisRA },
+    { id: 28, title: "Maintenance", icon: maintenanceCM }, // Assuming this icon
+    { id: 17, title: "Admin", icon: customerProfile },
+
+    // Group 4
+    { id: 29, title: "Customer Service", icon: CustomerService }, // Assuming this icon
+    { id: 15, title: "Marketing", icon: smsMarketingSM },
+    { id: 10, title: "Cafe", icon: cafeOrdersCM },
+    { id: 9, title: "Events", icon: eventsLine },
+    { id: 19, title: "Assets", icon: eSignHR },
     { id: 26, title: "Analytics", icon: analyticsCM },
   ];
+
   const handleRegister = () => {
     navigate("/register");
   };
@@ -213,10 +225,10 @@ const Homepage = () => {
                     We support businesses in small and aspiring destinations
                     which host Nomads!
                   </span>
-                  <span className="text-[0.9rem] md:text-[1.09rem] 2xl:text-[1.18rem] ">
+                  <span className="text-[0.9rem] md:text-[1rem] 2xl:text-[1.18rem] ">
                     SaaS Tech for Nomad supoorting businesses across the world.
                     <span className="font-bold">
-                      (E.g.: Co-Working, Co-Living, Hostels, Workations,
+                      (Example: Co-Working, Co-Living, Hostels, Workations,
                       Resorts, Cafes, Events etc)
                     </span>
                   </span>
@@ -242,7 +254,7 @@ const Homepage = () => {
               className="canvas"
               camera={{
                 position: [0, 0, ismobile ? 15 : 25],
-                fov: ismobile ? 40 : isTablet ? 50 : isLaptop ? 35 : 30,
+                fov: ismobile ? 40 : isTablet ? 50 : isLaptop ? 38 : 30,
               }}
             >
               <ambientLight intensity={0.5} />
@@ -255,7 +267,7 @@ const Homepage = () => {
               />
             </Canvas>
           </div>
-          <div className="N-Commerce">
+          <div className="N-Commerce pr-10">
             <h3>
               <strong>
                 SUPPORTING THE FOUNDATION OF N-COMMERCE <br />
@@ -267,10 +279,11 @@ const Homepage = () => {
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
+                width: "100%",
               }}
             >
               <button
-                className="hero-button"
+                className="hero-button mr-10"
                 data-aos-delay="200"
                 onClick={() => {
                   navigate("/register");
@@ -301,11 +314,11 @@ const Homepage = () => {
           <div className="m-0 container  w-100 ">
             <div className="">
               <div className="customMargin_top">
-                <div className="one-platform-section uppercase flex flex-col gap-4">
-                  <h2 className="text-2xl md:text-6xl lg:text-[6rem]">
+                <div className="one-platform-section uppercase flex flex-col gap-10">
+                  <h2 className="platform-section text-2xl md:text-[3.6rem] lg:text-[6rem]">
                     One Partner Platform
                   </h2>
-                  <h2 className="text-xl md:text-[2.2rem] lg:text-[3.5rem]">
+                  <h2 className="platform-section-desc text-xl md:text-[2rem] lg:text-[3.5rem]">
                     Infinite possibilities and opportunities!
                   </h2>
                 </div>
@@ -379,10 +392,10 @@ const Homepage = () => {
           <div className="website-panel-container">
             <div className="website-panel-header flex flex-col gap-3">
               <h2>NO CODE SELF SERVE </h2>
-              <h3 className=" text-lg text-start md:text-start lg:text-center md:text-[2.3rem] lg:text-[3.82rem]">
+              <h3 className="transactional-section text-lg text-start md:text-start lg:text-center md:text-[2.3rem] lg:text-[3.82rem]">
                 TRANSACTIONAL WEBSITE & MOBILE SITE
               </h3>
-              <p className="text-sm md:text-[1.3rem] lg:text-[1.7rem] lg:leading-8 md:leading-8 text-start md:text-start lg:text-center">
+              <p className="transactional-section-desc text-sm md:text-[1.3rem] lg:text-[1.7rem] lg:leading-8 md:leading-8 text-start md:text-start lg:text-center">
                 Free customizable website templates which are strategically
                 tailored for managing Lifestyle Businesses like Co-Working,
                 Co-Living, Hostels, Boutique Properties, Cafes etc.
@@ -444,13 +457,13 @@ const Homepage = () => {
         <div className="testimonial-section  body-partners-master">
           <div className=" py-16">
             {/* <div className="container border-top border-dark border-2"> */}
-            <div className="container p-0 flex flex-col lg:gap-5 gap-1">
-              <h3 className=" text-lg text-center md:text-start lg:text-center md:text-[2.3rem] lg:text-[3.82rem] lg:-ml-4">
-                TESTIMONY
-              </h3>
-              <div className="row ">
-                <div className="col-lg-7 d-flex flex-column justify-content-between  p-0 ms-0 mt-3">
-                  <div className="flex flex-col gap-4">
+            <div className="container p-0 ">
+              <div className="row">
+                <h1 className="text-[2.2rem] md:text-5xl lg:text-6xl text-center mb-6">
+                  TESTIMONIALS
+                </h1>
+                <div className="col-lg-7 d-flex flex-column justify-content-between  p-0 ms-0">
+                  <div className=" ">
                     {/* <h4 className="bg-danger testimonial-right-spacing"> */}
                     <h3 className="testimonial-right-spacing text-lg md:text-xl lg:text-2xl">
                       “We went from managing 3,000 sq ft to 50,000+ sq ft in the
@@ -462,11 +475,6 @@ const Homepage = () => {
                     {/* <br /> */}
                     {/* <br /> */}
                   </div>
-                  {/* <div>
-                    <div className=" border-top border-dark border-2 customWidth bg-danger">
-                      a div
-                    </div>
-                  </div> */}
                   <div className="testimonial-contact">
                     <h4
                       className="my-4"
@@ -478,7 +486,6 @@ const Homepage = () => {
                     <p>BIZ Nest, Goa India </p>
                   </div>
                 </div>
-                {/* <div className="col-lg-5 mt-3 bg-warning d-flex flex-row justify-content-end"> */}
                 <div className="col-lg-5 mt-3 custom-image-biznest-container d-flex flex-row justify-content-end px-0">
                   <img
                     src={BiznestTestimonial}
