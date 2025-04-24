@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "../layout/jobrole.css";
 import { Accordion, AccordionSummary, AccordionDetails } from "@mui/material";
 import { Link, useNavigate } from "react-router-dom";
+import '../styles/bodyCareer.css'
 import { FaChevronDown } from "react-icons/fa";
 
 const Jobrole = () => {
