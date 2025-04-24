@@ -578,7 +578,7 @@ const Register = () => {
                                     behavior: "instant",
                                   });
                                 }}
-                                to="/login"
+                                to="https://wonofe.vercel.app"
                               >
                                 Log-in
                               </Link>
@@ -1003,7 +1003,11 @@ const Register = () => {
                     <div className="register-page-button-space">
                       <button
                         className="register-page-button next-button-width"
-                        onClick={() => navigate("/login")}
+                        onClick={() =>
+                          window.open(
+                            "https://wonofe.vercel.app"
+                          )
+                        }
                       >
                         Login now
                       </button>

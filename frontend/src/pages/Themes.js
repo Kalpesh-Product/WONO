@@ -112,22 +112,15 @@ const Themes = () => {
     <div>
       <div className="themePage-master">
         <div className="themePage-header">
-          <h1>
-            Choose the best business Website & Native Apps theme for your
-            business{" "}
-          </h1>
-          <p>
-            Cherry pick the features you want or ask us to customize anything
-            for you for your business growth.
-          </p>
+          <h1>Choose the best Responsive Website Theme for your business</h1>
         </div>
 
         <div className="themePage-content">
           <div className="themePage-content-header">
             <h3>Top Theme Recommendations</h3>
             <span>
-              Fully tech ready, integrated and responsive updated and latest
-              WoNo themes
+              Cherry pick features or ask us to customize anything for your
+              business growth. Fully tech ready, integrated and responsive.
             </span>
           </div>
 
