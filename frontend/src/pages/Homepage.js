@@ -254,7 +254,7 @@ const Homepage = () => {
               className="canvas"
               camera={{
                 position: [0, 0, ismobile ? 15 : 25],
-                fov: ismobile ? 40 : isTablet ? 50 : isLaptop ? 35 : 30,
+                fov: ismobile ? 40 : isTablet ? 50 : isLaptop ? 38 : 30,
               }}
             >
               <ambientLight intensity={0.5} />
@@ -267,7 +267,7 @@ const Homepage = () => {
               />
             </Canvas>
           </div>
-          <div className="N-Commerce">
+          <div className="N-Commerce pr-10">
             <h3>
               <strong>
                 SUPPORTING THE FOUNDATION OF N-COMMERCE <br />
@@ -279,10 +279,11 @@ const Homepage = () => {
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
+                width:'100%'
               }}
             >
               <button
-                className="hero-button"
+                className="hero-button mr-10"
                 data-aos-delay="200"
                 onClick={() => {
                   navigate("/register");
@@ -313,7 +314,7 @@ const Homepage = () => {
           <div className="m-0 container  w-100 ">
             <div className="">
               <div className="customMargin_top">
-                <div className="one-platform-section uppercase flex flex-col gap-4">
+                <div className="one-platform-section uppercase flex flex-col gap-10">
                   <h2 className="platform-section text-2xl md:text-[3.6rem] lg:text-[6rem]">
                     One Partner Platform
                   </h2>
