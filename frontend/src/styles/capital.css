@@ -642,6 +642,17 @@
         overflow-x: auto;
 
     }
+    .capital-cards-section {
+        background-color: black;
+        padding-left: 8rem;
+        padding-right: 8rem;
+        padding-top: 50px;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        gap: 10px;
+        justify-content: space-evenly;
+    }
 
     .headingContainer {
         /* height: 350px; */

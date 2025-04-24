@@ -31,15 +31,6 @@
     font-size: 0.9rem;
 }
 
-.career-jobtitle {
-
-    margin: 0;
-    display: flex;
-    justify-content: flex-end;
-    width: 100%;
-    align-items: center;
-}
-
 .accordion-button:not(.collapsed) {
     color: black !important;
 }

@@ -138,16 +138,16 @@ const Jobrole = () => {
                   <>
                     <div key={job.id} className="mb-4">
                       <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center">
-                        <div>
-                          <p className="career-job-title font-semibold text-lg">
+                        <div className="flex w-full flex-col gap-2">
+                          <p className="career-job-title  font-semibold text-lg">
                             {jobIdx + 1}. {job.title}
                           </p>
                           {job.subtitle && (
                             <span className="text-sm">{job.subtitle}</span>
                           )}
                         </div>
-                        <div className="text-right flex items-center">
-                          <p className="career-jobtitle">
+                        <div className="text-right flex w-full justify-between md:justify-between lg:justify-end items-center">
+                          <p className="career-jobtitle flex w-full md:w-1/2 justify-between lg:justify-end">
                             <span className="text-sm link-btn">
                               {job.type} | {job.mode} | {job.location}
                             </span>
