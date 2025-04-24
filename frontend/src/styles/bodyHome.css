@@ -362,8 +362,7 @@
 .key-modules-grid {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  /* Desktop: 6 columns */
-  gap: 2rem 0.5rem;
+  gap: 2rem 1.5rem;
 }
 
 @media (max-width: 1440px) {
@@ -461,7 +460,7 @@
   }
 
   .home-main-title-desc {
-    padding: 2rem 0rem 2rem 0;
+    padding: 3rem 0rem 3rem 0;
     font-family: Popins-Regular;
     font-size: 1.5rem;
   }
@@ -1132,7 +1131,7 @@
   justify-content: center;
   flex-direction: column;
   font-family: Bebas-Regular;
-  padding: 0 8rem 0 1rem;
+  padding: 0 0rem 0 1rem;
 }
 
 .N-Commerce>h3>strong {
@@ -1196,6 +1195,11 @@
     margin-top: 0;
     text-align: center;
     line-height: 90%;
+  }
+  .Globe-N-Commerce {
+    display: grid;
+    grid-template-columns: 50% 1fr;
+    background-color: black;
   }
 }
 

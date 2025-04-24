@@ -51,7 +51,7 @@ const Services = () => {
         </div>
 
         <div>
-          <h4 className="text-lg text-start md:text-center lg:text-center font-[Popins-Regular]">
+          <h4 className="text-lg lg:text-[1.8rem] lg:leading-[2.75rem] text-start md:text-center lg:text-center font-[Popins-Regular]">
             No Code Website <span className="plus-sign"></span>
             <span className="plus-sign">+</span> Booking Engine{" "}
             <span className="plus-sign">+</span> Payment Gateway{" "}
