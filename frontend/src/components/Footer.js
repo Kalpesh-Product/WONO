@@ -1,9 +1,8 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "../layout/footer.css";
 import "../styles/componentStyle.css";
 import WonoLogo from "../assets/WONO_images/img/WONO_LOGO_white _TP.png";
-// Import the FontAwesomeIcon component
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faTwitter,
@@ -14,6 +13,18 @@ import {
 
 const Footer = ({ changeActiveTab }) => {
   const navigate = useNavigate();
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <>
       <footer className="black-background text-light">
@@ -33,7 +44,7 @@ const Footer = ({ changeActiveTab }) => {
               WONOCO PRIVATE LIMITED
               <br /> 10 ANSON ROAD #33-10
               <br />
-              INTERNATIONAL PLAZA<br/> SINGAPORE - 079903
+              INTERNATIONAL PLAZA<br /> SINGAPORE - 079903
               <br />
               <span className="text-lowercase color-of-o">
                 <Link
@@ -75,7 +86,6 @@ const Footer = ({ changeActiveTab }) => {
                   window.scrollTo({ top: 0, behavior: "instant" });
                 }}
               >
-                {/* <Link to="/login">Sign In</Link> */}
                 <a href="https://wonofe.vercel.app/">Sign In</a>
               </h5>
               <h5
@@ -140,22 +150,13 @@ const Footer = ({ changeActiveTab }) => {
               >
                 Career
               </Link>
-              <Link
-                to={"#"}
-                // onClick={() => {
-                //   changeActiveTab("");
-                // }}
-              >
-                About
-              </Link>
+              <Link to={"#"}>About</Link>
             </div>
             <div className="footer-section-3">
               <h5>
                 <Link
                   to={"/faqs"}
-                  onClick={() =>
-                    window.scrollTo({ top: 0, behavior: "instant" })
-                  }
+                  onClick={() => window.scrollTo({ top: 0, behavior: "instant" })}
                 >
                   FAQs
                 </Link>
@@ -178,13 +179,22 @@ const Footer = ({ changeActiveTab }) => {
 
         <hr />
 
-        {/* <div className="mt-3 py-5"> */}
         <div className="py-4">
           <div className="text-center px-1 footer-copyright">
-            <p>
-              &copy; Copyright 2025-26 by WONOCO PRIVATE LIMITED - SINGAPORE.
-              All Rights Reserved.
-            </p>
+            {isMobile ? (
+              <p>
+                &copy; Copyright 2025-26
+                <br />
+                WONOCO PRIVATE LIMITED  SINGAPORE.
+                <br />
+                All Rights Reserved.
+              </p>
+            ) : (
+              <p>
+                &copy; Copyright 2025-26 WONOCO PRIVATE LIMITED - SINGAPORE.
+                All Rights Reserved.
+              </p>
+            )}
           </div>
         </div>
       </footer>
