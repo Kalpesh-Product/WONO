@@ -145,7 +145,32 @@
   }
   .module-feature-card-main {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 1rem;
+  }
+}
+@media (max-width: 321px) {
+  .feature-card-text{
+    font-size: 0.52rem !important;
+  }
+  .module-feature-card-main {
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    gap: 1rem;
+  }
+  .module-feature-title-text {
+    font-size: 1.8rem !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.7rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+  }
+  .module-feature-underline-frame {
+    width: 51%;
+    height: 17px;
+    top: 28px;
+    left: 66px;
   }
 }

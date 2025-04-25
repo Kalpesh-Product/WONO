@@ -92,7 +92,7 @@ const Services = () => {
         <div className="SaaS-featured-master flex flex-col gap-4 py-4">
           <div className="SaaS-featured-grid ">
             <div className="SaaS-featured-grid-left flex flex-col gap-4 ">
-              <div className="SaaS-features-heading flex text-3xl md:text-3xl font-bold mb-3">
+              <div className="SaaS-features-heading flex text-[1.5rem] md:text-3xl font-bold mb-3">
                 Real-time operations
                 <img src={greenUnderLine} alt="greenUnderLine" />
               </div>
@@ -116,7 +116,10 @@ const Services = () => {
         </div>
 
         {/* ---------------------------------------------------------------------------------------------------------- */}
-        <hr />
+        <hr
+          className="h-[1px] text-gray-500 bg-gray-500 mb-2
+         lg:mb-10"
+        />
         {/* ---------------------------------------------------------------------------------------------------------- */}
 
         <div
@@ -143,7 +146,7 @@ const Services = () => {
             imagePosition={"left top"}
             rowReverse={false}
           />
-          <hr/>
+          <hr />
           <SaaSFeatureBlock
             title="Apps"
             description1={[
@@ -157,8 +160,8 @@ const Services = () => {
             image={TicketsImage}
             rowReverse={true}
           />
-          <hr/>
-            <SaaSFeatureBlock
+          <hr />
+          <SaaSFeatureBlock
             title="Sales"
             description1={[
               { title: "Revenue Reports", image: reports },
@@ -171,7 +174,7 @@ const Services = () => {
             image={SalesImage}
             rowReverse={false}
           />
-          <hr/>
+          <hr />
           <SaaSFeatureBlock
             title="Finance"
             description1={[
@@ -185,7 +188,7 @@ const Services = () => {
             image={FinanceImage}
             rowReverse={true}
           />
-          <hr/>
+          <hr />
           <SaaSFeatureBlock
             title="Human Resources"
             description1={[
@@ -199,7 +202,6 @@ const Services = () => {
             image={HrImage}
             rowReverse={false}
           />
-
         </div>
 
         {/* <div className="SaaS-grid">

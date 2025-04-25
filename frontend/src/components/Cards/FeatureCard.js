@@ -27,6 +27,7 @@ const FeatureCard = ({ title, icon }) => {
         </div>
 
         <p
+          className="feature-card-text"
           style={{
             fontSize: "0.7rem",
             fontWeight: 600,

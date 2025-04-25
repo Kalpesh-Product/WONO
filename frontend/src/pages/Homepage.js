@@ -167,7 +167,7 @@ const Homepage = () => {
           <div className="first-section-grid-item-1">
             <h2 className="home-main-title ">
               <span className="home-main-intro">
-                Introducing{" "}
+                <span className="home-introduce-text">Introducing</span>
                 <div className="home-main-title-svg">
                   {" "}
                   <img src={greenUnderLine} />
@@ -240,7 +240,7 @@ const Homepage = () => {
           <div
             style={{ cursor: "pointer" }}
             onClick={() => navigate("/register")}
-            className="first-section-grid-item-2 h-40 flex justify-center"
+            className="first-section-grid-item-2  flex justify-center"
           >
             <div className="home-desc relative w-full flex items-center justify-center">
               <img src={greenRound} alt="" />
@@ -365,9 +365,9 @@ const Homepage = () => {
                   </div>
                 </div>
 
-                <div className=" mt-10 mb-0 pr-24 md:pr-40">
-                  <div className="row">
-                    <div className="flex justify-end items-center">
+                <div className=" mt-10 mb-0 pr-0 lg:pr-24 md:pr-40">
+                  <div className="">
+                    <div className="flex justify-center md:justify-center lg:justify-end items-center">
                       <div className="">
                         <button
                           className="get-started-submit-button m-0"

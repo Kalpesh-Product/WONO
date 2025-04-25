@@ -968,7 +968,7 @@
   }
 
   .themePage-featured-header h1 {
-    font-size: 2.1rem;
+    font-size: 1.8rem;
     text-align: left;
     padding: 0 0 0 0.7rem;
     margin-bottom: 40px;
@@ -1225,10 +1225,10 @@
   }
 
   .themePage-featured-header h1 {
-    font-size: 2rem;
+    font-size: 1.5rem;
     text-align: left;
-    padding: 0 0 0 0.7rem;
-    margin-bottom: 40px;
+    padding: 0 0 0 0rem;
+    margin-bottom: 20px;
   }
 
   .themePage-featured-content ul li {
@@ -1239,7 +1239,7 @@
 
   .themePage-featured-content {
     width: 100%;
-    padding-left: 2rem;
+    padding-left: 0rem;
   }
 
   .themePage-featured-button {

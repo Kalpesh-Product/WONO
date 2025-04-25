@@ -25,6 +25,7 @@ import BizNestMockup from "../assets/WONO_images/img/website-builder/new-layout/
 import Hostels from "../assets/WONO_images/img/website-builder/new-layout/hostels.png";
 import Hostels_mockup from "../assets/WONO_images/img/website-builder/new-layout/mobile/mockups/hostels.png";
 import { useNavigate } from "react-router-dom";
+import { ReactFitty } from "react-fitty";
 
 const Themes = () => {
   const navigate = useNavigate();
