@@ -364,7 +364,7 @@
   grid-template-columns: repeat(6, 1fr);
   gap: 2rem 1.5rem;
 }
-.home-introduce-text{
+.home-introduce-text {
   font-size: 6.1rem;
 }
 
@@ -375,7 +375,7 @@
   .home-main-tagline span {
     font-size: 2.9rem;
   }
-  .home-introduce-text{
+  .home-introduce-text {
     font-size: 5.5rem;
   }
 }
@@ -393,7 +393,7 @@
 }
 
 @media (max-width: 1025px) {
-  .home-introduce-text{
+  .home-introduce-text {
     font-size: 3.35rem;
   }
 }
@@ -402,7 +402,7 @@
     grid-template-columns: repeat(2, 1fr);
     /* Tablets: 2 columns */
   }
-  .home-introduce-text{
+  .home-introduce-text {
     font-size: 3.35rem;
   }
 }
@@ -412,13 +412,13 @@
     grid-template-columns: repeat(2, 1fr);
     /* Mobile: 1 column */
   }
-  .home-introduce-text{
-    font-size: 3.2rem;
+  .home-introduce-text {
+    font-size: 4rem;
   }
 }
 @media (max-width: 321px) {
-  .home-introduce-text{
-    font-size: 2.5rem;
+  .home-introduce-text {
+    font-size: 2.8rem;
   }
 }
 
@@ -861,7 +861,7 @@
 
   .home-main-title {
     color: #000;
-    font-size: 2.6rem;
+    font-size: 3.22rem;
     margin-top: 0;
   }
 
@@ -900,7 +900,7 @@
   }
 
   .home-main-tagline span {
-    font-size: 1.4rem;
+    font-size: 1.7rem;
     font-weight: 200;
   }
 
@@ -991,12 +991,6 @@
   }
 }
 
-@media (max-width: 450px) and (min-width: 321px) {
-  .home-main-title {
-    font-size: calc(2.5rem + (2.6 - 2) * ((100vw - 320px) / (450 - 320)));
-  }
-}
-
 @media (max-width: 320px) {
   .home-page-container {
     grid-template-columns: 1fr;
@@ -1008,7 +1002,7 @@
 
   .home-main-title {
     color: #000;
-    font-size: 2rem;
+    font-size: 2.24rem;
     margin-top: 0;
   }
 
@@ -2265,7 +2259,7 @@
 
   .website-panel-header h3 {
     text-align: left;
-    font-size:   2rem !important;
+    font-size: 2rem !important;
   }
 
   .website-panel-header p {
@@ -2502,8 +2496,6 @@
 .testimonial-section > * {
   font-family: Popins-Medium;
 }
-
-
 
 @media (max-width: 1024px) {
   .testimonial-section {
