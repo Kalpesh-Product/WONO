@@ -97,6 +97,7 @@ import {
   bookingEngineCM,
   stayRoom,
 } from "../assets/WONO_images/img/icon_service_color";
+import { ReactFitty } from "react-fitty";
 
 const Homepage = () => {
   const navigate = useNavigate();
@@ -127,7 +128,6 @@ const Homepage = () => {
     { id: 19, title: "Assets", icon: eSignHR },
     { id: 22, title: "Calendar", icon: calendarLine },
 
-
     // Group 3
     { id: 4, title: "Sales", icon: sales },
     { id: 3, title: "Finance", icon: financialReportsFA },
@@ -157,17 +157,10 @@ const Homepage = () => {
     <div className="master-container">
       <div className="flex flex-col">
         <div className="home-page-container flex flex-col gap-4 relative bg-[#f7feec]">
-          <div className="background-div">
-            <div>
-              <img src={""} alt={`Slide`} className="background-image" />
-              <img src={""} className="background-image" />
-            </div>
-            <div className="black-overlay"></div>
-          </div>
           <div className="first-section-grid-item-1">
             <h2 className="home-main-title ">
               <span className="home-main-intro">
-                <span className="home-introduce-text">Introducing</span>
+                <div className="home-introduce-text">Introducing</div>
                 <div className="home-main-title-svg">
                   {" "}
                   <img src={greenUnderLine} />
@@ -280,7 +273,7 @@ const Homepage = () => {
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                width:'100%'
+                width: "100%",
               }}
             >
               <button
@@ -311,17 +304,25 @@ const Homepage = () => {
           <hr />
         </div>
 
-        <div className="partners-section ">
-          <div className="m-0 container  w-100 ">
+        <div className="partners-section">
+          {/* <div className=" flex flex-col px-4 py-4 lg:px-28 lg:py-20">
+            <div className="flex flex-col gap-1 uppercase font-semibold">
+              <div className="font-semibold">
+                <ReactFitty>One Partner Platform</ReactFitty>
+              </div>
+              <div className="font-semibold">
+                <ReactFitty>Infinite possibilities and opportunities!</ReactFitty>
+              </div>
+            </div>
+          </div> */}
+          <div className="m-0">
             <div className="">
               <div className="customMargin_top">
-                <div className="one-platform-section uppercase flex flex-col gap-4 md:gao lg:gap-10">
-                  <h2 className="platform-section text-2xl md:text-[3.6rem] lg:text-[6rem]">
-                    One Partner Platform
-                  </h2>
-                  <h2 className="platform-section-desc text-xl md:text-[2rem] lg:text-[3.5rem]">
+                <div className="platform-section w-full font-semibold uppercase flex flex-col">
+                  <ReactFitty className="">One Partner Platform</ReactFitty>
+                  <ReactFitty className="">
                     Infinite possibilities and opportunities!
-                  </h2>
+                  </ReactFitty>
                 </div>
               </div>
             </div>
@@ -389,10 +390,12 @@ const Homepage = () => {
         >
           <div className="website-panel-container">
             <div className="website-panel-header flex flex-col gap-3">
-              <h2>NO CODE SELF SERVE </h2>
-              <h3 className="transactional-section text-lg text-start md:text-start lg:text-center md:text-[2.3rem] lg:text-[3.82rem]">
+              <div className="font-semibold">
+                <ReactFitty>NO CODE SELF SERVE </ReactFitty>
+              <ReactFitty className="transactional-section text-lg text-start md:text-start lg:text-center">
                 TRANSACTIONAL WEBSITE & MOBILE SITE
-              </h3>
+              </ReactFitty>
+              </div>
               <p className="transactional-section-desc text-sm md:text-[1.3rem] lg:text-[1.7rem] lg:leading-8 md:leading-8 text-start md:text-start lg:text-center">
                 Free customizable website templates which are strategically
                 tailored for managing Lifestyle Businesses like Co-Working,
@@ -400,26 +403,6 @@ const Homepage = () => {
               </p>
             </div>
             <div className="website-panel">
-              {/* <div className="website-panel-sidebar">
-                            <div className="website-sidebar-header">
-                                <div className="website-sidebar-logo">
-                                    <img src={BiznestLogo} alt='' />
-                                </div>
-                            </div>
-
-                            <Nav id="website-sidebar" className="flex-column p-0 website-sidebar">
-                                {Object.keys(website_menus).map((key) => (
-                                    <Nav.Link
-                                        key={key}
-                                        onClick={() => handleWebMenuSelect(key)}
-                                        className={selectedMenu === key ? 'active' : ''}
-                                    >
-                                        {website_menus[key]}
-                                    </Nav.Link>
-                                ))}
-                            </Nav>
-
-                        </div> */}
               <div
                 className={`website-panel-right ${
                   selectedId ? "modal-open" : ""

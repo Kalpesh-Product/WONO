@@ -188,10 +188,9 @@ const Themes = () => {
                 {themeWebsiteGridData.map((item, index) => (
                   <div
                     key={index}
-                    className={`themePage-website-features-grid-${index + 1}`}
                   >
                     <h4>
-                      <>{item.title}</>
+                      {item.title}
                     </h4>
                     <p>{item.description}</p>
                   </div>

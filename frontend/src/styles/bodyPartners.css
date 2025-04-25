@@ -81,7 +81,7 @@
     align-items: start;
     justify-content: flex-start;
     flex-direction: column;
-    padding: 4rem 4.7rem 4rem 6.8rem;
+    padding: 4rem 7.5rem 4rem 7.5rem;
     width: 100%;
 }
 
@@ -90,7 +90,7 @@
     align-items: start;
     justify-content: flex-start;
     flex-direction: column;
-    padding: 4rem 4.7rem 4rem 6.8rem;
+    padding: 4rem 7.5rem 4rem 7.5rem;
     width: 100%;
 }
 
@@ -141,7 +141,7 @@
         align-items: start;
         justify-content: flex-start;
         flex-direction: column;
-        padding: 2rem 2rem;
+        padding: 2rem 3rem;
         width: 100%;
     }
 
@@ -343,7 +343,7 @@
         align-items: start;
         justify-content: flex-start;
         flex-direction: column;
-        padding: 2rem 1rem 2rem 1rem;
+        padding: 2rem 1.7rem;
         width: 100%;
     }
 
@@ -423,11 +423,7 @@
     }
 
     .customMargin_top {
-        display: flex;
-        align-items: start;
-        justify-content: flex-start;
-        flex-direction: column;
-        padding: 2rem 1rem 2rem 1rem;
+        padding: 2rem 1.5rem 2rem 1.5rem;
         width: 100%;
     }
 

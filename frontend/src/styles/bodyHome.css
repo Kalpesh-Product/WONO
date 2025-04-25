@@ -1237,13 +1237,13 @@
     grid-template-columns: 50% 1fr;
     background-color: black;
   }
-  .platform-section {
-    font-size: 6.3rem !important;
-  }
-  .platform-section-desc {
+  /* .platform-section {
+    font-size: 6.3rem ;
+  } */
+  /* .platform-section-desc {
     margin-top: 20px;
     font-size: 3.5rem !important;
-  }
+  } */
 }
 
 @media (max-width: 1024px) {
@@ -1264,12 +1264,12 @@
     width: fit-content;
     font-family: Bebas-Regular;
   }
-  .platform-section {
+  /* .platform-section {
     font-size: 4.5rem !important;
   }
   .platform-section-desc {
     font-size: 2.6rem !important;
-  }
+  } */
 
   .N-Commerce > h3 > strong {
     display: flex;
@@ -1411,12 +1411,12 @@
     padding: 0 1.9rem;
     padding-right: 1.3rem;
   }
-  .platform-section {
+  /* .platform-section {
     font-size: 3.5rem !important;
   }
   .platform-section-desc {
     font-size: 2rem !important;
-  }
+  } */
 }
 
 @media (max-width: 450px) {
@@ -1523,12 +1523,12 @@
     width: 100%;
   }
 
-  .platform-section {
+  /* .platform-section {
     font-size: 1.8rem !important;
   }
   .platform-section-desc {
     font-size: 1.5rem !important;
-  }
+  } */
 
   .N-Commerce h3 {
     font-family: BebasNeue-Regular;
@@ -1559,12 +1559,12 @@
   .N-Commerce {
     padding: 0rem;
   }
-  .platform-section {
+  /* .platform-section {
     font-size: 2rem !important;
   }
   .platform-section-desc {
     font-size: 1.5rem !important;
-  }
+  } */
 
   .N-Commerce > h3 > strong {
     font-size: 1.65rem;
@@ -1969,14 +1969,13 @@
 }
 
 .website-panel-container {
-  padding: 4rem 8rem 4rem 8rem;
+  padding: 4rem 7.5rem 4rem 7.5rem;
   background-color: #f7f7f7;
   color: black;
 }
 
-.website-panel-container h2 {
+/* .website-panel-container h2 {
   color: black;
-  /* padding: 2rem; */
   text-align: start;
   margin-bottom: 20px;
   font-size: 7.75rem;
@@ -1984,10 +1983,9 @@
 
 .website-panel-container h3 {
   color: black;
-  /* padding: 2rem; */
   text-align: start;
   margin-bottom: 20px;
-}
+} */
 
 .website-panel-container p {
   text-align: start;
@@ -2110,18 +2108,17 @@
 }
 
 @media (max-width: 1440px) {
-  .website-panel-container h2 {
+  /* .website-panel-container h2 {
     color: black;
-    /* padding: 2rem; */
     text-align: start;
     margin-bottom: 20px;
     font-size: 7.2rem;
-  }
+  } */
 }
 
 @media (max-width: 1024px) {
   .website-panel-container {
-    padding: 4rem;
+    padding: 3rem;
     background-color: #f7f7f7;
     color: black;
   }
@@ -2135,19 +2132,12 @@
     margin-bottom: 20px;
   }
 
-  .website-panel-container h2 {
+  /* .website-panel-container h2 {
     color: black;
-    /* padding: 2rem; */
     text-align: start;
     margin-bottom: 20px;
     font-size: 5.4rem;
-  }
-  .transactional-section {
-    font-size: 2.9rem !important;
-  }
-  .transactional-section-desc {
-    font-size: 1.3rem !important;
-  }
+  } */
 
   .website-panel-right .template-preview-container {
     display: flex;
@@ -2181,9 +2171,8 @@
     margin-bottom: 20px;
   }
 
-  .website-panel-container h2 {
+  /* .website-panel-container h2 {
     color: black;
-    /* padding: 2rem; */
     text-align: start;
     margin-bottom: 20px;
     font-size: 4.5rem;
@@ -2191,10 +2180,9 @@
 
   .website-panel-container h3 {
     color: black;
-    /* padding: 2rem; */
     text-align: center;
     margin-bottom: 20px;
-  }
+  } */
 
   .custom-image-biznest-container {
     margin: 0 0 2rem 0 !important;
@@ -2268,7 +2256,7 @@
     text-align: left;
   }
 
-  .website-panel-header h2 {
+  /* .website-panel-header h2 {
     font-size: 4.3rem;
     text-align: left;
   }
@@ -2276,7 +2264,7 @@
   .website-panel-header h3 {
     text-align: left;
     font-size: 2rem !important;
-  }
+  } */
 
   .website-panel-header p {
     font-size: 1rem !important;
@@ -2364,7 +2352,7 @@
     text-align: left;
   }
 
-  .website-panel-header h2 {
+  /* .website-panel-header h2 {
     font-size: 1.9rem;
     text-align: left;
   }
@@ -2372,7 +2360,7 @@
   .website-panel-header h3 {
     text-align: left;
     font-size: 1.8rem !important;
-  }
+  } */
 
   .website-panel-header p {
     font-size: 1rem !important;
@@ -2460,7 +2448,7 @@
     text-align: left;
   }
 
-  .website-panel-header h2 {
+  /* .website-panel-header h2 {
     font-size: 1.5rem;
     text-align: left;
   }
@@ -2468,7 +2456,7 @@
   .website-panel-header h3 {
     font-size: 1.2rem !important;
     text-align: left;
-  }
+  } */
 
   .website-panel-header p {
     font-size: 1rem !important;
@@ -2501,7 +2489,15 @@
   }
 }
 
+/* PLATFORM */
+.platform-section{
+  gap : 0rem;
+  font-family: 'Popins-Medium';
+}
+/* PLATFORM */
+
 /* testimonials */
+
 
 .testimonial-section {
   /* background-color: #cae4ff !important; */
