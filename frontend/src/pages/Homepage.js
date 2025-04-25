@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import "../styles/bodyHome.css";
 import { Link } from "react-router-dom";
 import RotatingGlobe from "../components/RotatingGlobe";
@@ -98,10 +98,18 @@ import {
   stayRoom,
 } from "../assets/WONO_images/img/icon_service_color";
 import { ReactFitty } from "react-fitty";
+import AOS from "aos";
+
 
 const Homepage = () => {
   const navigate = useNavigate();
   const [selectedId, setSelectedId] = useState(null);
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // animation duration in ms
+      once: true, // animate only once
+    });
+  }, []);
 
   //First section carousel
   const webimages = [
@@ -156,7 +164,10 @@ const Homepage = () => {
   return (
     <div className="master-container">
       <div className="flex flex-col">
-        <div className="home-page-container flex flex-col gap-4 relative bg-[#f7feec]">
+        <div
+          data-aos="fade-up"
+          className=" home-page-container flex flex-col gap-4 relative bg-[#f7feec]"
+        >
           <div className="first-section-grid-item-1">
             <h2 className="home-main-title ">
               <span className="home-main-intro">
@@ -242,7 +253,7 @@ const Homepage = () => {
           </div>
         </div>
 
-        <div className="Globe-N-Commerce h-[90vh]">
+        <div data-aos="fade-up" className="Globe-N-Commerce h-[90vh]">
           <div className="Globe" style={{ textAlign: "left" }}>
             <Canvas
               className="canvas"
@@ -290,7 +301,7 @@ const Homepage = () => {
           </div>
         </div>
 
-        <div className="module-feature-main-home">
+        <div data-aos="fade-up" className="module-feature-main-home">
           <div className="four-cards-header">
             <span>KEY MODULES FOR YOUR BUSINESS</span>
           </div>
@@ -304,17 +315,7 @@ const Homepage = () => {
           <hr />
         </div>
 
-        <div className="partners-section">
-          {/* <div className=" flex flex-col px-4 py-4 lg:px-28 lg:py-20">
-            <div className="flex flex-col gap-1 uppercase font-semibold">
-              <div className="font-semibold">
-                <ReactFitty>One Partner Platform</ReactFitty>
-              </div>
-              <div className="font-semibold">
-                <ReactFitty>Infinite possibilities and opportunities!</ReactFitty>
-              </div>
-            </div>
-          </div> */}
+        <div data-aos="fade-up" className="partners-section">
           <div className="m-0">
             <div className="">
               <div className="customMargin_top">
@@ -385,6 +386,7 @@ const Homepage = () => {
           </div>
         </div>
         <div
+          data-aos="fade-up"
           className="website-container-master"
           style={{ backgroundColor: "black" }}
         >
@@ -392,9 +394,9 @@ const Homepage = () => {
             <div className="website-panel-header flex flex-col gap-3">
               <div className="font-semibold">
                 <ReactFitty>NO CODE SELF SERVE </ReactFitty>
-              <ReactFitty className="transactional-section text-lg text-start md:text-start lg:text-center">
-                TRANSACTIONAL WEBSITE & MOBILE SITE
-              </ReactFitty>
+                <ReactFitty className="transactional-section text-lg text-start md:text-start lg:text-center">
+                  TRANSACTIONAL WEBSITE & MOBILE SITE
+                </ReactFitty>
               </div>
               <p className="transactional-section-desc text-sm md:text-[1.3rem] lg:text-[1.7rem] lg:leading-8 md:leading-8 text-start md:text-start lg:text-center">
                 Free customizable website templates which are strategically
@@ -435,7 +437,10 @@ const Homepage = () => {
           </div>
         </div>
 
-        <div className="testimonial-section  body-partners-master">
+        <div
+          data-aos="fade-up"
+          className="testimonial-section  body-partners-master"
+        >
           <div className=" pt-5 pb-5">
             {/* <div className="container border-top border-dark border-2"> */}
             <div className="container p-0 ">
@@ -478,41 +483,6 @@ const Homepage = () => {
             </div>
           </div>
         </div>
-
-        {/* <div className="last-section   w-100 ">
-          <div className="home-last-banner">
-            <div className="grow-your-business-color grow-your-business-section">
-              <h2>
-                <b>GROW YOUR BUSINESS WITH US</b>
-              </h2>
-              <br />
-
-              <p className="last-spacing">
-                We have you covered across … build website, manage bookings,
-                sets processes, HR support, task management, ticket management,
-                marketing, generating leads, accounting, finance, customer
-                support, fundraising, and any customized requirements for
-                managing your business to grow and become successful shall all
-                be delivered by WoNo.
-              </p>
-              <div className="partner-button-space">
-                <button
-                  className="partner-submit-button "
-                  onClick={handleRegister}
-                >
-                  Get Started
-                </button>
-              </div>
-              <div className="">
-                <div className="container ">
-                  <div className="row">
-                    <div className="col-lg-12  d-flex custom-justify align-items-center"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div> */}
       </div>
     </div>
   );

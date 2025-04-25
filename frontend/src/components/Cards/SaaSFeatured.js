@@ -39,6 +39,7 @@ const SaaSFeatureBlock = ({
 
   return (
     <div
+    data-aos="fade-up"
       className="cursor-pointer"
       style={{
         padding: "0rem 0rem",

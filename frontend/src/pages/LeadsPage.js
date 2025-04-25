@@ -180,9 +180,7 @@ const LeadsPage = () => {
               {/* <div className="row  border-bottom border-dark border-3 pb-5 bg-primary"> */}
               <div className="row w-100 theSpecialRow">
                 <div className="col-lg-9 col-md-9 ps-0">
-                  <p className="automatedPlatformFontSize automatedPlatformPadding mb-0">
-                   
-                  </p>
+                  <p className="automatedPlatformFontSize automatedPlatformPadding mb-0"></p>
                 </div>
                 {/* <div className="col-lg-4"></div> */}
                 {/* <div className="col-lg-4 bg-danger"> */}
@@ -204,11 +202,17 @@ const LeadsPage = () => {
           </div>
         </div>
 
-        <div className="leads-image-section  fontPoppinsRegular ">
+        <div
+          data-aos="fade-up"
+          className="leads-image-section  fontPoppinsRegular "
+        >
           <img src={LeadsImagepng} alt="" className="full-width-image" />
         </div>
 
-        <div className="organic-leads-section container  topPaddingForSections bottomPaddingForSections  fontPoppinsRegular">
+        <div
+          data-aos="fade-up"
+          className="organic-leads-section container  topPaddingForSections bottomPaddingForSections  fontPoppinsRegular"
+        >
           {/* <br /> */}
           {/* <br /> */}
           <div className="extraBottomSpaceOurCoreFocus">
@@ -413,7 +417,10 @@ const LeadsPage = () => {
         </div>
 
         {/* <div className="google-sheets-section fontPoppinsRegular spaceBetweenSections"> */}
-        <div className="google-sheets-section fontPoppinsRegular   topPaddingForSections bottomPaddingForSections">
+        <div
+          data-aos="fade-up"
+          className="google-sheets-section fontPoppinsRegular   topPaddingForSections bottomPaddingForSections"
+        >
           <div>
             <div className="pb-4">
               <h2 className="googleSheetsHeading">
@@ -434,23 +441,7 @@ const LeadsPage = () => {
         </div>
 
         <div className="marketing-section PPPP  fontPoppinsRegular  topPaddingForSections bottomPaddingForSections">
-          <div className="marketing-header">
-            {/* <div>
-              <p className="mb-0">RUN & SCALE YOUR BUSINESS</p>
-            </div> */}
-            {/* <div className="d-flex justify-content-between">
-              <div className="bg-secondary">
-                <h2>Marketing</h2>
-              </div>
-              <div>
-                <button
-                  className="get-started-submit-button "
-                  onClick={handleRegister}>
-                  Get Started
-                </button>
-              </div>
-            </div> */}
-
+          <div data-aos="fade-up" className="marketing-header">
             <div>
               <div className="">
                 {/* <div className="container mb-3 pe-0 border-bottom border-secondary"> */}
@@ -487,7 +478,7 @@ const LeadsPage = () => {
             </div>
           </div>
           <br />
-          <div className="marketing-body">
+          <div data-aos="fade-up" className="marketing-body">
             <div className="cards flexForCards">
               <div className=" individual-card individual-card-front">
                 <h2 className="fs-4">SEO tools</h2>
@@ -561,7 +552,7 @@ const LeadsPage = () => {
           <hr className="hrStyling zeroHeight" />
         </div>
 
-        <div className="better-roi-section PPPP wono-text-spacing fontPoppinsRegular topPaddingInsideSections bottomPaddingForSections">
+        <div data-aos="fade-up" className="better-roi-section PPPP wono-text-spacing fontPoppinsRegular topPaddingInsideSections bottomPaddingForSections">
           <div className="container px-0">
             <div className="flex flex-col lg:flex-row">
               <div className="w-full lg:w-1/2">
@@ -590,18 +581,18 @@ const LeadsPage = () => {
           <hr className="hrStyling zeroHeight" />
         </div>
 
-        <div className="better-roi-section PPPP wono-text-spacing fontPoppinsRegular topPaddingInsideSections bottomPaddingForSections">
+        <div data-aos="fade-up" className="better-roi-section PPPP wono-text-spacing fontPoppinsRegular topPaddingInsideSections bottomPaddingForSections">
           <div className="container px-0">
             <div className="flex flex-col lg:flex-row">
-            <div className="w-full lg:w-1/2 text-start flex flex-col justify-center pe-0">
+              <div className="w-full lg:w-1/2 text-start flex flex-col justify-center pe-0">
                 <div>
                   <h2 className="ROIFontSize fontPoppinsRegular m-0">
-                  Get a complete view.
+                    Get a complete view.
                   </h2>
                 </div>
                 <div>
                   <p className="topPaddingInsideSections pFontAdjustment">
-                  Analytics helps you get a more complete understanding of how
+                    Analytics helps you get a more complete understanding of how
                     your customers engage with your business so you can deliver
                     better experiences and drive results.
                   </p>
@@ -610,7 +601,6 @@ const LeadsPage = () => {
               <div className="w-full lg:w-1/2">
                 <img src={CompleteViewImage} alt="" className="w-full" />
               </div>
-         
             </div>
           </div>
         </div>
@@ -619,7 +609,7 @@ const LeadsPage = () => {
           <hr className="hrStyling zeroHeight" />
         </div>
 
-        <div className="better-roi-section PPPP wono-text-spacing fontPoppinsRegular topPaddingInsideSections bottomPaddingForSections">
+        <div data-aos="fade-up" className="better-roi-section PPPP wono-text-spacing fontPoppinsRegular topPaddingInsideSections bottomPaddingForSections">
           <div className="container px-0">
             <div className="flex flex-col lg:flex-row">
               <div className="w-full lg:w-1/2">
@@ -628,12 +618,12 @@ const LeadsPage = () => {
               <div className="w-full lg:w-1/2 text-start flex flex-col justify-center pe-0">
                 <div>
                   <h2 className="ROIFontSize fontPoppinsRegular m-0">
-                  The finer points.
+                    The finer points.
                   </h2>
                 </div>
                 <div>
                   <p className="topPaddingInsideSections pFontAdjustment">
-                  Analytics helps you understand how people use your sites and
+                    Analytics helps you understand how people use your sites and
                     apps, so you can take action to improve their experience.
                     Discover what Google Analytics can do by checking out the
                     features listed below.

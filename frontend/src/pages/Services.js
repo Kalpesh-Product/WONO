@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 
 import {
   customerProfile,
@@ -46,11 +46,17 @@ import FinanceImage from "../assets/WONO_images/img/images-service/finance-final
 import SalesImage from "../assets/WONO_images/img/images-service/sales-final.png";
 import FrontendImage from "../assets/WONO_images/img/images-service/frontend-2.png";
 import greenUnderLine from "../assets/underline-bg/blue-line.png";
-
+import AOS from "aos";
 import "../styles/bodyServices.css";
 import SaaSFeatureBlock from "../components/Cards/SaaSFeatured";
 const Services = () => {
   const navigate = useNavigate();
+    useEffect(() => {
+      AOS.init({
+        duration: 1000, // animation duration in ms
+        once: true, // animate only once
+      });
+    }, []);
   return (
     <>
       <div className="services flex flex-col gap-4 lg:gap-8 py-4">
@@ -89,7 +95,7 @@ const Services = () => {
           </span>
         </div> */}
 
-        <div className="SaaS-featured-master flex flex-col gap-4 py-0 lg:py-4">
+        <div data-aos="fade-up" className="SaaS-featured-master flex flex-col gap-4 py-0 lg:py-4">
           <div className="SaaS-featured-grid ">
             <div className="SaaS-featured-grid-left flex flex-col gap-4 ">
               <div className="SaaS-features-heading flex text-[1.5rem] md:text-3xl font-bold mb-3">
@@ -124,6 +130,7 @@ const Services = () => {
         {/* ---------------------------------------------------------------------------------------------------------- */}
 
         <div
+          data-aos="fade-up"
           className="SaaS-featured-master"
           style={{
             display: "flex",
