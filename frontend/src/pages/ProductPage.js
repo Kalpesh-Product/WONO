@@ -69,11 +69,12 @@ const ProductPage = () => {
   ];
 
   const features = [
-    "Website",
-    "Payment Gateway",
+    "No Code Website",
     "Booking Engine",
-    "Customer Profile",
-    "No code & Self-serve",
+    "Payment Gateway",
+    "Leads Management",
+    "AI SEO",
+    "Notifications"
   ];
   const recommendations = [
     {
@@ -188,10 +189,6 @@ const ProductPage = () => {
                       >
                         Try theme
                       </button>
-                    </div>
-                    <div className="product-page-update-text">
-                      <span>Last updated on Mar 11, 2025</span>
-                      <span>Version 1.0</span>
                     </div>
                   </div>
                 </div>

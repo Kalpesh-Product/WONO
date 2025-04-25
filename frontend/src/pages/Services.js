@@ -143,7 +143,7 @@ const Services = () => {
             ]}
             image={FrontendImage}
             width={"100%"}
-            imageFit={"cover"}
+            imageFit={"fill"}
             imagePosition={"left top"}
             rowReverse={false}
           />

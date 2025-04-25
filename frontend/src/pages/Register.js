@@ -115,21 +115,21 @@ const Register = () => {
     handleCheckboxChange(service);
   };
 
-  const checkEmailDuplicate = async (email) => {
-    try {
-      const response = await axios.get(`/api/check-email/${email}`);
+  // const checkEmailDuplicate = async (email) => {
+  //   try {
+  //     const response = await axios.get(`/api/check-email/${email}`);
 
-      if (response.status === 200) {
-        const result = response.data;
-        return result.isDuplicate;
-      }
+  //     if (response.status === 200) {
+  //       const result = response.data;
+  //       return result.isDuplicate;
+  //     }
 
-      throw new Error("Failed to check email");
-    } catch (error) {
-      console.error("Error checking email:", error);
-      return false;
-    }
-  };
+  //     throw new Error("Failed to check email");
+  //   } catch (error) {
+  //     console.error("Error checking email:", error);
+  //     return false;
+  //   }
+  // };
 
   const handleNext = async (e) => {
     e.preventDefault();
@@ -142,19 +142,19 @@ const Register = () => {
         let sectionData = {};
         let sectionName = "";
 
-        const { email } = formData;
+        // const { email } = formData;
 
-        if (currentStep === 0 && email) {
-          const isDuplicate = await checkEmailDuplicate(email);
-          if (isDuplicate) {
-            setErrors((prevErrors) => ({
-              ...prevErrors,
-              email: "This email is already in use.",
-            }));
-            setLoading(false); // Hide spinner on error
-            return;
-          }
-        }
+        // if (currentStep === 0 && email) {
+        //   const isDuplicate = await checkEmailDuplicate(email);
+        //   if (isDuplicate) {
+        //     setErrors((prevErrors) => ({
+        //       ...prevErrors,
+        //       email: "This email is already in use.",
+        //     }));
+        //     setLoading(false); 
+        //     return;
+        //   }
+        // }
 
         switch (currentStep) {
           case 0:
@@ -795,26 +795,43 @@ const Register = () => {
 
                         <Grid item xs={12}>
                           <Box textAlign="center" mt={2}>
+                            {currentStep === 0 ? (
+
                             <span>
                               By clicking below you accept the terms and
                               conditions
                             </span>
+                            ) : ''}
                             <div
                               style={{
                                 display: "flex",
                                 alignItems: "center",
-                                justifyContent: "center",
+                                justifyContent: "space-between",
+                                gap: "10px",
                               }}
                             >
+                              {currentStep > 0 && (
+                                <button
+                                  type="button"
+                                  className="register-page-button back-button-width"
+                                  onClick={handleBack}
+                                  style={{ width: "48%" }}
+                                >
+                                  Back
+                                </button>
+                              )}
                               <button
                                 type="submit"
                                 className="register-page-button next-button-width"
                                 onClick={handleNext}
-                                style={{ width: "100%" }}
+                                style={{
+                                  width: currentStep > 0 ? "48%" : "100%",
+                                }}
                               >
                                 Next
                               </button>
                             </div>
+
                             <span
                               style={{ display: "block", marginTop: "10px" }}
                             >
@@ -1003,11 +1020,7 @@ const Register = () => {
                     <div className="register-page-button-space">
                       <button
                         className="register-page-button next-button-width"
-                        onClick={() =>
-                          window.open(
-                            "https://wonofe.vercel.app"
-                          )
-                        }
+                        onClick={() => window.open("https://wonofe.vercel.app")}
                       >
                         Login now
                       </button>

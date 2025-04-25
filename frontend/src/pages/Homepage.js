@@ -291,7 +291,7 @@ const Homepage = () => {
                   window.scrollTo({ top: 0, behavior: "instant" });
                 }}
               >
-                CONNECT
+                CONNECT WITH US
               </button>
             </div>
           </div>

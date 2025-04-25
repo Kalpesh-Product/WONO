@@ -303,13 +303,6 @@ const updateSection = async (req, res) => {
     // Find the user by email
     let user = await User.findOne({ "personalInfo.email": data.email });
 
-    // If user exists, but you're updating the 'personal' section, prevent duplicate email
-    if (user && section === "personal") {
-      // If user is found, throw an error for duplicate email
-      console.log("Duplicate email found");
-      return res.status(409).json({ error: "This email is already in use." });
-    }
-
     // If no user is found, create a new user object
     if (!user) {
       console.log("No user found, creating a new one");

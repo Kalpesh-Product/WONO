@@ -181,8 +181,7 @@ const LeadsPage = () => {
               <div className="row w-100 theSpecialRow">
                 <div className="col-lg-9 col-md-9 ps-0">
                   <p className="automatedPlatformFontSize automatedPlatformPadding mb-0">
-                    Automated platform and our resources are FREE .. you pay
-                    only if you start paid ads!
+                   
                   </p>
                 </div>
                 {/* <div className="col-lg-4"></div> */}
@@ -424,11 +423,11 @@ const LeadsPage = () => {
                 Never miss any leads generated from our platform.
               </h2>
             </div>
-            <div className="organic-leads-images-section OOOO  topSpaceBetweenSections">
+            <div className="organic-leads-images-section OOOO  topSpaceBetweenSections h-[16rem] overflow-hidden rounded-lg">
               <img
                 src={GoogleSheetsImagepng}
                 alt=""
-                className="full-width-image"
+                className="full-width-image h-full object-cover"
               />
             </div>
           </div>

@@ -24,6 +24,8 @@ const Faqs = () => {
           </p>
         </div>
 
+        <hr />
+
         <div className="privacy-section privSect2">
           <h4>2. What is N-Commerce?</h4>
           <p>
@@ -36,6 +38,7 @@ const Faqs = () => {
             growth and who especially do not have the budget to build such tech.
           </p>
         </div>
+        <hr />
 
         <div className="privacy-section privSect2">
           <h4>3. What is N-Commerce SaaS?</h4>
@@ -46,6 +49,7 @@ const Faqs = () => {
             business operations, all hosted in the cloud.
           </p>
         </div>
+        <hr />
 
         <div className="privacy-section privSect2">
           <h4>4. How is SaaS different from traditional software?</h4>
@@ -56,6 +60,7 @@ const Faqs = () => {
             follows a subscription model.
           </p>
         </div>
+        <hr />
 
         <div className="privacy-section privSect2">
           <h4>5. Is WoNo SaaS really for FREE?</h4>
@@ -65,6 +70,7 @@ const Faqs = () => {
             business initially. It’s totally FREE for now.
           </p>
         </div>
+        <hr />
 
         <div className="privacy-section privSect2">
           <h4>6. How secure is my data?</h4>
@@ -73,6 +79,7 @@ const Faqs = () => {
             regular security audits to protect user data.
           </p>
         </div>
+        <hr />
 
         <div className="privacy-section privSect2">
           <h4>7. Can I customize the software?</h4>
@@ -83,6 +90,7 @@ const Faqs = () => {
             feedback for further customization.
           </p>
         </div>
+        <hr />
 
         <div className="privacy-section privSect2">
           <h4>8. What happens if I cancel my subscription?</h4>
@@ -92,6 +100,7 @@ const Faqs = () => {
             cancellation, allowing you to export it before permanent deletion.
           </p>
         </div>
+        <hr />
 
         <div className="privacy-section privSect2">
           <h4>9. How often is the software updated?</h4>
@@ -102,6 +111,7 @@ const Faqs = () => {
             updates.
           </p>
         </div>
+        <hr />
 
         <div className="privacy-section privSect2">
           <h4>10. Do you offer customer support?</h4>
@@ -111,6 +121,7 @@ const Faqs = () => {
             support with faster response time soon.
           </p>
         </div>
+        <hr />
 
         <div className="privacy-section privSect2">
           <h4>11. Is the software mobile-friendly?</h4>
@@ -120,6 +131,7 @@ const Faqs = () => {
             tablets.
           </p>
         </div>
+        <hr />
 
         <div className="privacy-section privSect2">
           <h4>12. What is uptime and how reliable is your service?</h4>
@@ -128,6 +140,7 @@ const Faqs = () => {
             (SLA). Typical guarantees are 99.9% uptime.
           </p>
         </div>
+        <hr />
 
         <div className="privacy-section privSect2">
           <h4>13. Can I integrate with other tools?</h4>
@@ -138,6 +151,7 @@ const Faqs = () => {
             and offering API access for custom integrations.
           </p>
         </div>
+        <hr />
 
         <div className="privacy-section privSect2">
           <h4>14. How do you handle backups and data recovery?</h4>
@@ -147,11 +161,13 @@ const Faqs = () => {
             services.
           </p>
         </div>
+        <hr />
 
         <div className="privacy-section privSect2">
           <h4>15. Is there a limit on the number of users?</h4>
           <p>As of now there are no user limitation on our platform.</p>
         </div>
+        <hr />
 
         <div className="privacy-section privSect2">
           <h4>16. Do you support CRM functionality?</h4>
@@ -161,6 +177,7 @@ const Faqs = () => {
             with clients, and manage follow-ups efficiently.
           </p>
         </div>
+        <hr />
 
         <div className="privacy-section privSect2">
           <h4>
@@ -172,6 +189,7 @@ const Faqs = () => {
             permissions to team members and track their performance.
           </p>
         </div>
+        <hr />
 
         <div className="privacy-section privSect2">
           <h4>18. What types of reports can I generate?</h4>
@@ -182,6 +200,7 @@ const Faqs = () => {
             multiple formats (PDF, Excel, etc.).
           </p>
         </div>
+        <hr />
 
         <div className="privacy-section privSect2">
           <h4>19. Do you offer training and support?</h4>
@@ -191,6 +210,7 @@ const Faqs = () => {
             email, and phone. We also provide a comprehensive knowledge base.
           </p>
         </div>
+        <hr />
 
         <div className="privacy-section privSect2">
           <h4>
@@ -203,6 +223,7 @@ const Faqs = () => {
             post our discussion.
           </p>
         </div>
+        <hr />
 
         <div className="privacy-section privSect2">
           <h4>21. Where can I contact you? </h4>
@@ -216,11 +237,13 @@ const Faqs = () => {
             and we shall try and get back to you asap.
           </p>
         </div>
+        <hr />
 
         <div className="privacy-section privSect2">
           <h4>22. Are there any hidden charges?</h4>
           <p>No, our SaaS is absolutely free for now.</p>
         </div>
+        <hr />
 
         <div className="privacy-section privSect2">
           <h4>23. In which countries does WoNo provide its SaaS & Support? </h4>
@@ -229,6 +252,7 @@ const Faqs = () => {
             world.
           </p>
         </div>
+        <hr />
 
         <div className="privacy-section privSect2">
           <h4>
@@ -246,6 +270,7 @@ const Faqs = () => {
             or apply from our careers age.
           </p>
         </div>
+        <hr />
 
         <div className="privacy-section privSect2">
           <h4>25. Can I connect with the Founders of the company?</h4>
@@ -256,7 +281,8 @@ const Faqs = () => {
             meeting with you.
           </p>
         </div>
-        <p>
+        <hr />
+        <p className="mt-5">
           Can find the answer to any of your questions here? Please connect with
           us via our{" "}
           <Link className="WONOBLUE text-decoration-none" to="/contact">

@@ -107,10 +107,10 @@ const Contact = () => {
             </div>
             <div className="col-lg-6">
               <Box component="form" onSubmit={handleSubmit} sx={{ mt: 4 }}>
-                <h3 style={{ marginBottom: '30px', color: '#000', fontWeight: 'bold' }}>
+                <h2 className="text-3xl" style={{ marginBottom: '30px', color: '#000', fontWeight: 'bold' }}>
                   CONNECT WITH US
-                </h3>
-                <Grid container spacing={2}>
+                </h2>
+                <Grid container spacing={4}>
                   <Grid item xs={12} sm={6}>
                     <TextField
                       required
