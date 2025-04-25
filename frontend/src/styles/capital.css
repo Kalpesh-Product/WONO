@@ -686,7 +686,7 @@
     .connect-with-us-btn {
         right: 20%;
         align-items: flex-start;
-
+        margin-right: 1rem;
     }
 
     .capital-big-text {
@@ -919,7 +919,7 @@
     .connect-with-us-btn {
         right: 18%;
         align-items: flex-start;
-
+        margin-right: 0.9rem;
     }
 
 }

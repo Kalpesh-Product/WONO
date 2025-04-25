@@ -185,7 +185,7 @@ const Footer = ({ changeActiveTab }) => {
               <p>
                 &copy; Copyright 2025-26
                 <br />
-                WONOCO PRIVATE LIMITED  SINGAPORE.
+                WONOCO PRIVATE LIMITED - SINGAPORE.
                 <br />
                 All Rights Reserved.
               </p>

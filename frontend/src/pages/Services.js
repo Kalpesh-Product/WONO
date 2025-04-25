@@ -53,7 +53,7 @@ const Services = () => {
   const navigate = useNavigate();
   return (
     <>
-      <div className="services flex flex-col gap-8 py-4">
+      <div className="services flex flex-col gap-4 lg:gap-8 py-4">
         <div className="SaaS-main-heading">
           <h1 className="p-0">The ONLY Nomad Ecosystem SaaS Platform!</h1>
         </div>
@@ -89,7 +89,7 @@ const Services = () => {
           </span>
         </div> */}
 
-        <div className="SaaS-featured-master flex flex-col gap-4 py-4">
+        <div className="SaaS-featured-master flex flex-col gap-4 py-0 lg:py-4">
           <div className="SaaS-featured-grid ">
             <div className="SaaS-featured-grid-left flex flex-col gap-4 ">
               <div className="SaaS-features-heading flex text-[1.5rem] md:text-3xl font-bold mb-3">
@@ -113,13 +113,14 @@ const Services = () => {
               />
             </div>
           </div>
+          <hr
+          className="h-[1px] text-gray-500 bg-gray-500 mb-2
+         lg:mt-10"
+        />
         </div>
 
         {/* ---------------------------------------------------------------------------------------------------------- */}
-        <hr
-          className="h-[1px] text-gray-500 bg-gray-500 mb-2
-         lg:mb-10"
-        />
+      
         {/* ---------------------------------------------------------------------------------------------------------- */}
 
         <div
