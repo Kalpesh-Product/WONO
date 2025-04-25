@@ -40,7 +40,7 @@ import {
   employeeManagement,
 } from "../assets/WONO_images/img/icon_service_color";
 import { useNavigate } from "react-router-dom";
-import TicketsImage from "../assets/WONO_images/img/images-service/services-apps.jpeg";
+import TicketsImage from "../assets/WONO_images/img/images-service/meetings-final.jpeg";
 import HrImage from "../assets/WONO_images/img/images-service/hr-img-2.jpeg";
 import FinanceImage from "../assets/WONO_images/img/images-service/finance-final.png";
 import SalesImage from "../assets/WONO_images/img/images-service/sales-final.png";

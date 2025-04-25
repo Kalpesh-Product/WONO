@@ -315,7 +315,7 @@ const Homepage = () => {
           <div className="m-0 container  w-100 ">
             <div className="">
               <div className="customMargin_top">
-                <div className="one-platform-section uppercase flex flex-col gap-0 lg:gap-10">
+                <div className="one-platform-section uppercase flex flex-col gap-4 md:gao lg:gap-10">
                   <h2 className="platform-section text-2xl md:text-[3.6rem] lg:text-[6rem]">
                     One Partner Platform
                   </h2>
