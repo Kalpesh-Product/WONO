@@ -154,7 +154,7 @@ const Capital = () => {
         <div className="big-end-dashboard-img w-full h-[80vh] overflow-hidden rounded-xl">
           <img
             src={DashboardImage}
-            className="w-full h-full object-cover object-top rounded-xl"
+            className="w-full h-full object-contain lg:object-cover object-top rounded-xl"
             alt="end-image"
           />
           <div className="back-wrapper-dashboard-img"></div>
