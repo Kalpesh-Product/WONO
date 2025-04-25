@@ -42,7 +42,7 @@ import {
 import { useNavigate } from "react-router-dom";
 import TicketsImage from "../assets/WONO_images/img/images-service/services-apps.jpeg";
 import HrImage from "../assets/WONO_images/img/images-service/hr-img-2.jpeg";
-import FinanceImage from "../assets/WONO_images/img/images-service/finance-usd.png";
+import FinanceImage from "../assets/WONO_images/img/images-service/finance-final.png";
 import SalesImage from "../assets/WONO_images/img/images-service/Sales-img.jpeg";
 import FrontendImage from "../assets/WONO_images/img/images-service/frontend-2.png";
 import greenUnderLine from "../assets/underline-bg/blue-line.png";

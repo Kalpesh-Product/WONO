@@ -259,11 +259,8 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
           <Offcanvas.Title>Menu</Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
-          {/* <Link className="custom-offcanvas-link" to="/" onClick={handleClose}>
-            Home
-          </Link> */}
           {!loggedIn ? (
-            <>
+            <div className="flex flex-col gap-8 text-center w-full justify-center items-center">
               <Link
                 className="custom-offcanvas-link"
                 to="/modules"
@@ -271,6 +268,7 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
               >
                 MODULES
               </Link>
+              <hr className="w-[75%]" />
               <Link
                 className="custom-offcanvas-link"
                 to="/themes"
@@ -278,6 +276,7 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
               >
                 THEMES
               </Link>
+              <hr className="w-[75%]" />
               <Link
                 className="custom-offcanvas-link"
                 to="/leads"
@@ -285,6 +284,7 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
               >
                 LEADS
               </Link>
+              <hr className="w-[75%]" />
               <Link
                 className="custom-offcanvas-link"
                 to="/capital"
@@ -292,7 +292,7 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
               >
                 CAPITAL
               </Link>
-
+              <hr className="w-[75%]" />
               <Link
                 className="custom-offcanvas-link"
                 to="/career"
@@ -300,7 +300,7 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
               >
                 CAREER
               </Link>
-            </>
+            </div>
           ) : null}
 
           {/* <Link
@@ -332,21 +332,29 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
               </div>
             </div>
           ) : (
-            <>
+            <div className="flex flex-col gap-8 w-full items-center justify-center">
               {/* <Link to="/login" onClick={handleClose} className="login-button">
                 SIGN IN
               </Link> */}
-              <a
-                href="https://wonofe.vercel.app/"
-                className="login-button"
-                onClick={handleClose}
+              <hr className="w-[75%]" />
+              <button className="l">
+                <a
+                  href="https://wonofe.vercel.app/"
+                  className="login-button mx-auto"
+                  onClick={handleClose}
+                >
+                  SIGN IN
+                </a>
+              </button>
+              <hr className="w-[75%]" />
+              <button
+                className="register-button mx-auto"
+                onClick={handleRegister}
               >
-                SIGN IN
-              </a>
-              <button className="register-button" onClick={handleRegister}>
                 SIGN UP
               </button>
-            </>
+              <hr className="w-[75%]" />
+            </div>
           )}
         </Offcanvas.Body>
       </Offcanvas>
