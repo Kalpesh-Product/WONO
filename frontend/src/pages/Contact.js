@@ -44,7 +44,7 @@ const Contact = () => {
 
     try {
       setLoading(true)
-      const response = await axios.post('/enquiries', formData);
+      const response = await axios.post('/api/enquiries', formData);
       console.log('Enquiry submitted successfully:', response.data);
       // Show success modal
       setShowModal(true);
