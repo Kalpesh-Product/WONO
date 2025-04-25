@@ -151,7 +151,7 @@
 }
 @media (max-width: 321px) {
   .feature-card-text{
-    font-size: 0.52rem !important;
+    font-size: 0.48rem !important;
   }
   .module-feature-card-main {
     display: grid;
