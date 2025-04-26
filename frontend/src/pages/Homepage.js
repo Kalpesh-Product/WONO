@@ -100,7 +100,6 @@ import {
 import { ReactFitty } from "react-fitty";
 import AOS from "aos";
 
-
 const Homepage = () => {
   const navigate = useNavigate();
   const [selectedId, setSelectedId] = useState(null);
@@ -218,7 +217,7 @@ const Homepage = () => {
               </div>
             </h2>
             <div className="home-main-title-desc flex flex-col gap-4 w-full">
-              <div className="w-full gap-3 flex flex-col items-start justify-center text-start md:text-center lg:text-start">
+              <div className="w-full gap-2 flex flex-col items-start justify-center text-start md:text-center lg:text-start">
                 <p
                   className="text-start  w-full md:text-center md:text-[2.1rem] lg:text-start   "
                   style={{ fontWeight: "bold" }}

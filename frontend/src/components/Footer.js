@@ -42,9 +42,7 @@ const Footer = ({ changeActiveTab }) => {
             />
             <span>
               WONOCO PRIVATE LIMITED
-              <br /> 10 ANSON ROAD #33-10
-              <br />
-              INTERNATIONAL PLAZA<br /> SINGAPORE - 079903
+              <br /> 10 ANSON ROAD #33-10 <br/> INTERNATIONAL  PLAZA SINGAPORE - 079903
               <br />
               <span className="text-lowercase color-of-o">
                 <Link
@@ -156,7 +154,9 @@ const Footer = ({ changeActiveTab }) => {
               <h5>
                 <Link
                   to={"/faqs"}
-                  onClick={() => window.scrollTo({ top: 0, behavior: "instant" })}
+                  onClick={() =>
+                    window.scrollTo({ top: 0, behavior: "instant" })
+                  }
                 >
                   FAQs
                 </Link>
@@ -191,8 +191,8 @@ const Footer = ({ changeActiveTab }) => {
               </p>
             ) : (
               <p>
-                &copy; Copyright 2025-26 WONOCO PRIVATE LIMITED - SINGAPORE.
-                All Rights Reserved.
+                &copy; Copyright 2025-26 WONOCO PRIVATE LIMITED - SINGAPORE. All
+                Rights Reserved.
               </p>
             )}
           </div>

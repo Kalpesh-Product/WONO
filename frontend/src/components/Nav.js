@@ -263,6 +263,14 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
             <div className="flex flex-col gap-8 text-center w-full justify-center items-center">
               <Link
                 className="custom-offcanvas-link"
+                to="/"
+                onClick={handleClose}
+              >
+                HOME
+              </Link>
+              <hr className="w-[75%]" />
+              <Link
+                className="custom-offcanvas-link"
                 to="/modules"
                 onClick={handleClose}
               >
