@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import "../layout/contact.css";
 import "../styles/bodyContact.css";
-import { Modal } from 'react-bootstrap';
+import { Modal } from "react-bootstrap";
 import Spinners from "../components/Spinner";
 import {
   TextField,
@@ -14,23 +14,22 @@ import {
   FormControl,
   InputLabel,
   TextareaAutosize,
-} from '@mui/material';
+} from "@mui/material";
 import { useNavigate } from "react-router-dom";
 
 const Contact = () => {
-
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    mobile: '',
-    partnerstype: '',
-    message: ''
+    name: "",
+    email: "",
+    mobile: "",
+    partnerstype: "",
+    message: "",
   });
   const [showModal, setShowModal] = useState(false);
   const handleCloseModal = () => {
-    setShowModal(false)
+    setShowModal(false);
   };
 
   const handleChange = (e) => {
@@ -38,32 +37,30 @@ const Contact = () => {
     setFormData({ ...formData, [name]: value });
   };
 
-
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
-      setLoading(true)
-      const response = await axios.post('/api/enquiries', formData);
-      console.log('Enquiry submitted successfully:', response.data);
+      setLoading(true);
+      const response = await axios.post("/api/enquiries", formData);
+      console.log("Enquiry submitted successfully:", response.data);
       // Show success modal
       setShowModal(true);
       setFormData({
-        name: '',
-        email: '',
-        mobile: '',
-        partnerstype: '',
-        message:''
-      })
+        name: "",
+        email: "",
+        mobile: "",
+        partnerstype: "",
+        message: "",
+      });
       // Reset form or show success message
     } catch (error) {
-      console.error('Error submitting enquiry:', error);
+      console.error("Error submitting enquiry:", error);
       // Handle error (show error message)
-    } finally { 
-      setLoading(false)
+    } finally {
+      setLoading(false);
     }
   };
-
 
   return (
     <>
@@ -79,7 +76,8 @@ const Contact = () => {
                   textTransform: "uppercase",
                   margin: "2rem 0 2rem 0",
                   fontWeight: "bold",
-                }}>
+                }}
+              >
                 About Us
               </h3>
               {/* <p style={{ fontSize: "17px", color: "#000", textAlign: "left" }}> */}
@@ -107,7 +105,14 @@ const Contact = () => {
             </div>
             <div className="col-lg-6">
               <Box component="form" onSubmit={handleSubmit} sx={{ mt: 4 }}>
-                <h2 className="text-3xl" style={{ marginBottom: '30px', color: '#000', fontWeight: 'bold' }}>
+                <h2
+                  className="text-3xl"
+                  style={{
+                    marginBottom: "30px",
+                    color: "#000",
+                    fontWeight: "bold",
+                  }}
+                >
                   CONNECT WITH US
                 </h2>
                 <Grid container spacing={4}>
@@ -143,7 +148,7 @@ const Contact = () => {
                       label="Mobile Number"
                       name="mobile"
                       type="tel"
-                      inputProps={{ pattern: '[1-9]{1}[0-9]{9}' }}
+                      inputProps={{ pattern: "[1-9]{1}[0-9]{9}" }}
                       value={formData.mobile}
                       onChange={handleChange}
                       variant="outlined"
@@ -152,7 +157,9 @@ const Contact = () => {
 
                   <Grid item xs={12} sm={6}>
                     <FormControl fullWidth required variant="outlined">
-                      <InputLabel id="partnerstype-label">Type of Partnership</InputLabel>
+                      <InputLabel id="partnerstype-label">
+                        Type of Partnership
+                      </InputLabel>
                       <Select
                         labelId="partnerstype-label"
                         name="partnerstype"
@@ -164,10 +171,18 @@ const Contact = () => {
                         <MenuItem value="" disabled>
                           Type of Partnership
                         </MenuItem>
-                        <MenuItem value="B2B SaaS Technology Licensing">B2B SaaS Technology Licensing</MenuItem>
-                        <MenuItem value="Landlord Partnerships">Landlord Partnerships</MenuItem>
-                        <MenuItem value="Investment Related">Investment Related</MenuItem>
-                        <MenuItem value="Coffee Meeting to know us better">Coffee Meeting to know us better</MenuItem>
+                        <MenuItem value="B2B SaaS Technology Licensing">
+                          B2B SaaS Technology Licensing
+                        </MenuItem>
+                        <MenuItem value="Landlord Partnerships">
+                          Landlord Partnerships
+                        </MenuItem>
+                        <MenuItem value="Investment Related">
+                          Investment Related
+                        </MenuItem>
+                        <MenuItem value="Coffee Meeting to know us better">
+                          Coffee Meeting to know us better
+                        </MenuItem>
                       </Select>
                     </FormControl>
                   </Grid>
@@ -176,20 +191,23 @@ const Contact = () => {
                       required
                       label="Message" // Floating label
                       name="message"
-                      multiline 
+                      multiline
                       minRows={4} // Sets the minimum number of rows
                       variant="outlined" // Optional: "outlined", "filled", or "standard"
                       fullWidth // Expands the input to take the full width
                       value={formData.message}
                       onChange={handleChange}
                       InputProps={{
-                        style: { padding: '10px' }, // Padding for the input area
+                        style: { padding: "10px" }, // Padding for the input area
                       }}
                     />
                   </Grid>
 
                   <Grid item xs={12} textAlign="center">
-                    <button type="submit" className="submit-button">
+                    <button
+                      type="submit"
+                      className="get-started-main-button mt-4 mb-0 hover:"
+                    >
                       CONNECT
                     </button>
                   </Grid>
@@ -209,7 +227,8 @@ const Contact = () => {
               height="400"
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
-              title="map"></iframe>
+              title="map"
+            ></iframe>
           </div>
           <div className="address">
             <span className="contact-address">
@@ -226,7 +245,8 @@ const Contact = () => {
               height="400"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="map"></iframe>
+              title="map"
+            ></iframe>
           </div>
           <div className="address">
             <span className="contact-address">
@@ -238,15 +258,14 @@ const Contact = () => {
         </div>
       </div>
 
-
-      {loading && <Spinners animation={'border'} variant={'dark'}/>} 
+      {loading && <Spinners animation={"border"} variant={"dark"} />}
       <Modal show={showModal} onHide={handleCloseModal}>
         <Modal.Header closeButton>
           <Modal.Title>Success</Modal.Title>
         </Modal.Header>
         <Modal.Body>Your enquiry has been submitted successfully!</Modal.Body>
         <Modal.Footer>
-          <button className="submit-button"  onClick={handleCloseModal}>
+          <button className="submit-button" onClick={handleCloseModal}>
             Close
           </button>
         </Modal.Footer>
