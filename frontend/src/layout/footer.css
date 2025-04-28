@@ -1,10 +1,10 @@
 @font-face {
   font-family: Popins-Regular;
-  src: url('../assets/WONO_images/img/fonts/Poppins-Regular.ttf');
+  src: url("../assets/WONO_images/img/fonts/Poppins-Regular.ttf");
 }
 
 footer {
-  width: 100%
+  width: 100%;
 }
 
 .footer-master {
@@ -52,25 +52,25 @@ footer {
   align-items: start;
 }
 
-.footer-section-1>* {
+.footer-section-1 > * {
   margin-bottom: 1rem;
 }
 
-.footer-section-2>* {
+.footer-section-2 > * {
   padding: 1rem;
   font-size: 14px;
 }
 
-.footer-section-3>* {
+.footer-section-3 > * {
   padding: 1rem;
   font-size: 14px;
 }
-@media (max-width:1024px) {
+@media (max-width: 1024px) {
   .footer-master {
     display: flex;
     justify-content: space-between;
     padding: 0 3rem;
-}
+  }
 }
 
 @media (max-width: 769px) {
@@ -87,8 +87,6 @@ footer {
     justify-content: space-between;
   }
 
-
-
   .footer-section-1 {
     align-items: center;
     padding: 1rem;
@@ -102,13 +100,13 @@ footer {
     padding-top: 0;
   }
 
-  .footer-section-1>* {
+  .footer-section-1 > * {
     padding: 2rem 0 0 0;
     font-size: 14px;
     margin: 0;
   }
 
-  .footer-section-2>* {
+  .footer-section-2 > * {
     padding: 0.5rem;
     font-size: 14px;
   }
@@ -139,11 +137,9 @@ footer {
   .footer-master {
     display: flex;
     flex-wrap: wrap;
-    padding: 2rem 2rem;
+    padding: 1.5rem 1.5rem 1rem 1.5rem;
     justify-content: center;
   }
-
-
 
   .footer-section-1 {
     align-items: center;
@@ -158,14 +154,14 @@ footer {
     padding-top: 0;
   }
 
-  .footer-section-1>* {
+  .footer-section-1 > * {
     padding: 2rem 0 0 0;
     font-size: 0.8rem;
-    text-align: start;
+    text-align: center;
     margin: 0;
   }
 
-  .footer-section-2>* {
+  .footer-section-2 > * {
     padding: 0.5rem;
     font-size: 14px;
   }

@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import "../styles/bodyHome.css";
 import { Link } from "react-router-dom";
 import RotatingGlobe from "../components/RotatingGlobe";
@@ -97,10 +97,18 @@ import {
   bookingEngineCM,
   stayRoom,
 } from "../assets/WONO_images/img/icon_service_color";
+import { ReactFitty } from "react-fitty";
+import AOS from "aos";
 
 const Homepage = () => {
   const navigate = useNavigate();
   const [selectedId, setSelectedId] = useState(null);
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // animation duration in ms
+      once: true, // animate only once
+    });
+  }, []);
 
   //First section carousel
   const webimages = [
@@ -120,12 +128,12 @@ const Homepage = () => {
     { id: 23, title: "Notifications", icon: notifications },
 
     // Group 2
-    { id: 7, title: "Meeting Rooms", icon: meetingRoomsCM },
     { id: 25, title: "Tickets", icon: ticketRaisingCM },
-    { id: 21, title: "Visitors", icon: visitorCM },
-    { id: 22, title: "Calendar", icon: calendarLine },
     { id: 20, title: "Tasks", icon: taskManagementHR },
-    { id: 24, title: "Profile", icon: customerProfile },
+    { id: 7, title: "Meeting Rooms", icon: meetingRoomsCM },
+    { id: 21, title: "Visitors", icon: visitorCM },
+    { id: 19, title: "Assets", icon: eSignHR },
+    { id: 22, title: "Calendar", icon: calendarLine },
 
     // Group 3
     { id: 4, title: "Sales", icon: sales },
@@ -140,7 +148,7 @@ const Homepage = () => {
     { id: 15, title: "Marketing", icon: smsMarketingSM },
     { id: 10, title: "Cafe", icon: cafeOrdersCM },
     { id: 9, title: "Events", icon: eventsLine },
-    { id: 19, title: "Assets", icon: eSignHR },
+    { id: 24, title: "Profile", icon: customerProfile },
     { id: 26, title: "Analytics", icon: analyticsCM },
   ];
 
@@ -155,18 +163,14 @@ const Homepage = () => {
   return (
     <div className="master-container">
       <div className="flex flex-col">
-        <div className="home-page-container flex flex-col gap-4 relative bg-[#f7feec]">
-          <div className="background-div">
-            <div>
-              <img src={""} alt={`Slide`} className="background-image" />
-              <img src={""} className="background-image" />
-            </div>
-            <div className="black-overlay"></div>
-          </div>
+        <div
+          data-aos="fade-up"
+          className=" home-page-container flex flex-col gap-4 relative bg-[#f7feec]"
+        >
           <div className="first-section-grid-item-1">
             <h2 className="home-main-title ">
               <span className="home-main-intro">
-                Introducing{" "}
+                <div className="home-introduce-text">Introducing</div>
                 <div className="home-main-title-svg">
                   {" "}
                   <img src={greenUnderLine} />
@@ -179,8 +183,8 @@ const Homepage = () => {
                   style={{ width: "55%" }}
                 ></div>
 
-                <div className=" home-main-tagline">
-                  <span className="text-[2rem] md:text-[2.5rem] lg:text-[3rem] 2xl:text-[3.2rem]">
+                <div className="home-main-tagline">
+                  <span className="text-[3rem] md:text-[2.5rem] lg:text-[3rem] 2xl:text-[3.2rem]">
                     <b
                       style={{
                         fontFamily: "Popins-Semibold",
@@ -213,9 +217,9 @@ const Homepage = () => {
               </div>
             </h2>
             <div className="home-main-title-desc flex flex-col gap-4 w-full">
-              <div className="w-full gap-3 flex flex-col items-start justify-center text-start md:text-center lg:text-start">
+              <div className="w-full gap-2 flex flex-col items-start justify-center text-start md:text-center lg:text-start">
                 <p
-                  className="text-start w-full md:text-center lg:text-start text-[1.3rem] md:text-[2.1rem] "
+                  className="text-start  w-full md:text-center md:text-[2.1rem] lg:text-start   "
                   style={{ fontWeight: "bold" }}
                 >
                   A simple NO CODE SaaS Platform.
@@ -239,7 +243,7 @@ const Homepage = () => {
           <div
             style={{ cursor: "pointer" }}
             onClick={() => navigate("/register")}
-            className="first-section-grid-item-2 h-40 flex justify-center"
+            className="first-section-grid-item-2  flex justify-center"
           >
             <div className="home-desc relative w-full flex items-center justify-center">
               <img src={greenRound} alt="" />
@@ -248,7 +252,7 @@ const Homepage = () => {
           </div>
         </div>
 
-        <div className="Globe-N-Commerce h-[90vh]">
+        <div data-aos="fade-up" className="Globe-N-Commerce h-[90vh]">
           <div className="Globe" style={{ textAlign: "left" }}>
             <Canvas
               className="canvas"
@@ -290,13 +294,13 @@ const Homepage = () => {
                   window.scrollTo({ top: 0, behavior: "instant" });
                 }}
               >
-                CONNECT
+                CONNECT WITH US
               </button>
             </div>
           </div>
         </div>
 
-        <div className="module-feature-main-home">
+        <div data-aos="fade-up" className="module-feature-main-home">
           <div className="four-cards-header">
             <span>KEY MODULES FOR YOUR BUSINESS</span>
           </div>
@@ -310,17 +314,15 @@ const Homepage = () => {
           <hr />
         </div>
 
-        <div className="partners-section ">
-          <div className="m-0 container  w-100 ">
+        <div data-aos="fade-up" className="partners-section">
+          <div className="m-0">
             <div className="">
               <div className="customMargin_top">
-                <div className="one-platform-section uppercase flex flex-col gap-10">
-                  <h2 className="platform-section text-2xl md:text-[3.6rem] lg:text-[6rem]">
-                    One Partner Platform
-                  </h2>
-                  <h2 className="platform-section-desc text-xl md:text-[2rem] lg:text-[3.5rem]">
+                <div className="platform-section w-full font-semibold uppercase flex flex-col">
+                  <ReactFitty className="">One Partner Platform</ReactFitty>
+                  <ReactFitty className="">
                     Infinite possibilities and opportunities!
-                  </h2>
+                  </ReactFitty>
                 </div>
               </div>
             </div>
@@ -364,9 +366,9 @@ const Homepage = () => {
                   </div>
                 </div>
 
-                <div className=" mt-10 mb-0 pr-24 md:pr-40">
-                  <div className="row">
-                    <div className="flex justify-end items-center">
+                <div className=" mt-10 mb-0 pr-0 lg:pr-24 md:pr-40">
+                  <div className="">
+                    <div className="flex justify-center md:justify-center lg:justify-end items-center">
                       <div className="">
                         <button
                           className="get-started-submit-button m-0"
@@ -386,15 +388,18 @@ const Homepage = () => {
           </div>
         </div>
         <div
+          data-aos="fade-up"
           className="website-container-master"
           style={{ backgroundColor: "black" }}
         >
           <div className="website-panel-container">
             <div className="website-panel-header flex flex-col gap-3">
-              <h2>NO CODE SELF SERVE </h2>
-              <h3 className="transactional-section text-lg text-start md:text-start lg:text-center md:text-[2.3rem] lg:text-[3.82rem]">
-                TRANSACTIONAL WEBSITE & MOBILE SITE
-              </h3>
+              <div className="font-semibold">
+                <ReactFitty>NO CODE SELF SERVE </ReactFitty>
+                <ReactFitty className="transactional-section text-lg text-start md:text-start lg:text-center">
+                  TRANSACTIONAL WEBSITE & MOBILE SITE
+                </ReactFitty>
+              </div>
               <p className="transactional-section-desc text-sm md:text-[1.3rem] lg:text-[1.7rem] lg:leading-8 md:leading-8 text-start md:text-start lg:text-center">
                 Free customizable website templates which are strategically
                 tailored for managing Lifestyle Businesses like Co-Working,
@@ -402,26 +407,6 @@ const Homepage = () => {
               </p>
             </div>
             <div className="website-panel">
-              {/* <div className="website-panel-sidebar">
-                            <div className="website-sidebar-header">
-                                <div className="website-sidebar-logo">
-                                    <img src={BiznestLogo} alt='' />
-                                </div>
-                            </div>
-
-                            <Nav id="website-sidebar" className="flex-column p-0 website-sidebar">
-                                {Object.keys(website_menus).map((key) => (
-                                    <Nav.Link
-                                        key={key}
-                                        onClick={() => handleWebMenuSelect(key)}
-                                        className={selectedMenu === key ? 'active' : ''}
-                                    >
-                                        {website_menus[key]}
-                                    </Nav.Link>
-                                ))}
-                            </Nav>
-
-                        </div> */}
               <div
                 className={`website-panel-right ${
                   selectedId ? "modal-open" : ""
@@ -454,13 +439,16 @@ const Homepage = () => {
           </div>
         </div>
 
-        <div className="testimonial-section  body-partners-master">
-          <div className=" py-16">
+        <div
+          data-aos="fade-up"
+          className="testimonial-section  body-partners-master"
+        >
+          <div className=" pt-5 pb-5">
             {/* <div className="container border-top border-dark border-2"> */}
             <div className="container p-0 ">
               <div className="row">
-                <h1 className="text-[2.2rem] md:text-5xl lg:text-6xl text-center mb-6">
-                  TESTIMONIALS
+                <h1 className="text-[2.2rem] md:text-5xl lg:text-[4.3rem] text-center mb-10 font-medium">
+                  TESTIMONIAL
                 </h1>
                 <div className="col-lg-7 d-flex flex-column justify-content-between  p-0 ms-0">
                   <div className=" ">
@@ -497,41 +485,6 @@ const Homepage = () => {
             </div>
           </div>
         </div>
-
-        {/* <div className="last-section   w-100 ">
-          <div className="home-last-banner">
-            <div className="grow-your-business-color grow-your-business-section">
-              <h2>
-                <b>GROW YOUR BUSINESS WITH US</b>
-              </h2>
-              <br />
-
-              <p className="last-spacing">
-                We have you covered across … build website, manage bookings,
-                sets processes, HR support, task management, ticket management,
-                marketing, generating leads, accounting, finance, customer
-                support, fundraising, and any customized requirements for
-                managing your business to grow and become successful shall all
-                be delivered by WoNo.
-              </p>
-              <div className="partner-button-space">
-                <button
-                  className="partner-submit-button "
-                  onClick={handleRegister}
-                >
-                  Get Started
-                </button>
-              </div>
-              <div className="">
-                <div className="container ">
-                  <div className="row">
-                    <div className="col-lg-12  d-flex custom-justify align-items-center"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div> */}
       </div>
     </div>
   );

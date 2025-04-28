@@ -1,7 +1,7 @@
 import React from "react";
 import "../styles/capital.css";
 import "../styles/specialClasses.css";
-import DashboardImage from "../assets/WONO_images/img/capital/Finance-2.png";
+import DashboardImage from "../assets/WONO_images/img/capital/finance-usd-3.png";
 import { Link } from "react-router-dom";
 
 const Capital = () => {
@@ -27,7 +27,7 @@ const Capital = () => {
           <button className="connect-with-us-btn mt-4 md:mt-0 lg:mt-0">CONNECT WITH US</button>
         </Link>
       </div>
-      <div className="capital-cards-section">
+      <div data-aos="fade-up" className="capital-cards-section">
         <div className="cards-with-text">
           <h3 className="mb-4 md:mb-0 lg:mb-0">Investor Management</h3>
           <div className="capital-img">
@@ -46,7 +46,7 @@ const Capital = () => {
           </p>
           <hr className="line-seperation-cards-capitalpage"></hr>
         </div>
-
+        <hr className="text-white bg-white" />
         <div className="cards-with-text">
           <h3 className="mb-4 md:mb-0 lg:mb-0">Financial Service </h3>
           <div className="capital-img">
@@ -64,6 +64,7 @@ const Capital = () => {
             </span>
           </p>
         </div>
+        <hr className="text-white bg-white" />
         <div className="cards-with-text">
           <h3 className="mb-4 md:mb-0 lg:mb-0">PERSONAL FUND MANAGER</h3>
           <div className="capital-img">
@@ -81,6 +82,7 @@ const Capital = () => {
             </span>
           </p>
         </div>
+        <hr className="text-white bg-white" />
         <div className="cards-with-text">
           <h3 className="mb-4 md:mb-0 lg:mb-0">VENTURE FUNDING & DEBT</h3>
           <div className="capital-img">
@@ -100,7 +102,7 @@ const Capital = () => {
           </p>
         </div>
       </div>
-      <div className="capital-big-text">
+      <div data-aos="fade-up" className="capital-big-text">
         <h1>
           Our software suite amplifies the opportunity for the correct investor
           such as angel investors, venture capital firms and debt firms to
@@ -109,20 +111,20 @@ const Capital = () => {
           strategy.{" "}
         </h1>
       </div>
-      <div className="three-card-images">
-        <div className="card-img-1">
+      <div  className="three-card-images">
+        <div data-aos="fade-up" className="card-img-1">
           <img
             src="https://media.istockphoto.com/id/660743390/photo/angel-investor.jpg?s=612x612&w=0&k=20&c=bMCsPyNz0LLMVYmFh0Kn2f0prRikRbjyNzc9dfvjGcY="
             alt="card-img-1"
           ></img>
         </div>
-        <div className="card-img-1">
+        <div data-aos="fade-up" className="card-img-1">
           <img
             src="https://assets.smfgindiacredit.com/sites/default/files/Venture-Capital.jpg?VersionId=YDGq4VyQQAdW2x57A5ucusQkZbmffKwh"
             alt="card-img-2"
           ></img>
         </div>
-        <div className="card-img-1">
+        <div data-aos="fade-up" className="card-img-1">
           <img
             src="https://www.techfunnel.com/wp-content/uploads/2021/07/debt-financing.png"
             alt="card-img-3"
@@ -130,7 +132,7 @@ const Capital = () => {
         </div>
       </div>
       {/* Raise Frictionless fundressing for startup*/}
-      <div className="big-end-image">
+      <div data-aos="fade-up" className="big-end-image">
         <div className="frictionless-heading-with-btns gap-4">
           <h1>
             <span>Systematic & seamless</span> fundraising with accurate
@@ -152,7 +154,7 @@ const Capital = () => {
         <div className="big-end-dashboard-img w-full h-[80vh] overflow-hidden rounded-xl">
           <img
             src={DashboardImage}
-            className="w-full h-full object-cover object-top rounded-xl"
+            className="w-full h-full object-contain lg:object-cover object-top rounded-xl"
             alt="end-image"
           />
           <div className="back-wrapper-dashboard-img"></div>

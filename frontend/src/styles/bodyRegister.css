@@ -35,6 +35,9 @@ section {
 .next-button-width {
   width: 200px !important;
 }
+.back-button-width {
+  width: 200px !important;
+}
 
 .register-container * {
   /* padding: 2rem; */

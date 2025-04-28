@@ -34,6 +34,7 @@ const PrivacyAndPolicy = () => {
             not use the Service.
           </p>
         </div>
+        <hr />
         <div className="privacy-section privSect2">
           <h4>1. Information We Collect</h4>
           <p>
@@ -83,6 +84,7 @@ const PrivacyAndPolicy = () => {
             properly.
           </p>
         </div>
+        <hr />
         <div className="privacy-section privSect2">
           <h4>2. How We Use Your Information</h4>
           <p>We use the information we collect for the following purposes:</p>
@@ -115,6 +117,7 @@ const PrivacyAndPolicy = () => {
             </ul>
           </div>
         </div>
+        <hr />
         <div className="privacy-section privSect2">
           <h4>3. How We Share Your Information</h4>
           <p>
@@ -147,6 +150,7 @@ const PrivacyAndPolicy = () => {
             of any changes in this Privacy Policy.
           </p>
         </div>
+        <hr />
         <div className="privacy-section privSect2">
           <h4>4. Data Security</h4>
 
@@ -160,6 +164,7 @@ const PrivacyAndPolicy = () => {
             absolute security.
           </p>
         </div>
+        <hr />
 
         <div className="privacy-section privSect2">
           <h4>5. Data Retention</h4>
@@ -170,6 +175,7 @@ const PrivacyAndPolicy = () => {
             data is no longer needed, we will delete or anonymize it.
           </p>
         </div>
+        <hr />
         <div className="privacy-section privSect2">
           <h4>6. Your Data Protection Rights</h4>
           <p>
@@ -215,13 +221,15 @@ const PrivacyAndPolicy = () => {
             To exercise any of these rights, please contact us at{" "}
             <Link
               className="WONOBLUE text-decoration-none"
-              to={"mailto:response@wono.co"}>
+              to={"mailto:response@wono.co"}
+            >
               response@wono.co
             </Link>
             . We may request specific information to verify your identity before
             fulfilling your request.
           </p>
         </div>
+        <hr />
         <div className="privacy-section privSect2">
           <h4>7. International Data Transfers</h4>
           <p>
@@ -232,6 +240,7 @@ const PrivacyAndPolicy = () => {
             this Privacy Policy and applicable data protection laws.
           </p>
         </div>
+        <hr />
         <div className="privacy-section privSect2">
           <h4>8. Children's Privacy</h4>
           <p>
@@ -241,12 +250,14 @@ const PrivacyAndPolicy = () => {
             us at{" "}
             <Link
               className="WONOBLUE text-decoration-none"
-              to={"mailto:response@wono.co"}>
+              to={"mailto:response@wono.co"}
+            >
               response@wono.co
             </Link>
             , and we will take appropriate steps to delete that information.
           </p>
         </div>
+        <hr />
         <div className="privacy-section privSect2">
           <h4>9. Changes to This Privacy Policy</h4>
           <p>
@@ -258,6 +269,7 @@ const PrivacyAndPolicy = () => {
             are made will constitute acceptance of the revised policy.
           </p>
         </div>
+        <hr />
         <div className="privacy-section privSect2">
           <h4>10. Contact Information</h4>
           <p>
@@ -277,7 +289,8 @@ const PrivacyAndPolicy = () => {
             <u className="text-primary">Contact us</u> */}
             <Link
               className="WONOBLUE text-decoration-none"
-              to={"mailto:response@wono.co"}>
+              to={"mailto:response@wono.co"}
+            >
               response@wono.co
             </Link>
             <br />
@@ -288,6 +301,7 @@ const PrivacyAndPolicy = () => {
           {/* <Link to="/contact">Contact us</Link> */}
           {/* <Link to="/contact">Contact us</Link> */}
         </div>
+        <hr />
       </div>
     </>
   );

@@ -27,8 +27,9 @@ const FeatureCard = ({ title, icon }) => {
         </div>
 
         <p
+          className="feature-card-text"
           style={{
-            fontSize: "0.875rem",
+            fontSize: "0.6rem",
             fontWeight: 600,
             letterSpacing: "1px",
             color: "#1a1a1a",

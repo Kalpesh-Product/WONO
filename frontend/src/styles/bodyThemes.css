@@ -16,13 +16,12 @@
 }
 
 .themePage-header {
-  padding: 4rem 7.5rem 3rem 7.5rem;
+  padding: 4rem 7.5rem 4rem 7.5rem;
 }
 
 .themePage-header h1 {
   font-weight: normal;
-  font-size: 4rem;
-  margin-bottom: 2rem;
+  font-size: 4.45rem;
   font-family: Popins-Medium !important;
 }
 
@@ -111,12 +110,9 @@
     flex-direction: column;
 } */
 
-/* .themePage-featured-header h1 {
-    font-size: 4rem;
-    text-align: left;
-    padding-right: 12rem;
-    margin: 2rem 0
-} */
+.themePage-featured-header h1 {
+  font-weight: 500;
+}
 
 .themePage-featured-content {
     width: 100%;
@@ -183,10 +179,15 @@
   /* margin-bottom: 4rem; */
   margin-bottom: 2rem !important;
 }
-
-[class^="themePage-website-features-grid-"] h4 {
+.themePage-website-features-grid h4{
   font-family: Popins-Medium !important;
   font-weight: normal;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+[class^="themePage-website-features-grid-"] h4 {
+
 }
 
 .themePage-website-features h1 {
@@ -354,6 +355,7 @@
     font-size: 4rem;
     margin-bottom: 4rem;
     text-align: left;
+    font-weight: bold;
   }
 
   .themePage-website-features-grid {
@@ -564,7 +566,6 @@
   }
   .themePage-header h1 {
     font-size: 3rem;
-    margin-bottom: 2rem;
   }
   .themePage-content-grid {
     display: grid;
@@ -581,6 +582,7 @@
   .themePage-website-features h1 {
     font-size: 3.7rem;
     margin-bottom: 4rem;
+    font-weight: bold;
   }
   .themePage-website-features-grid {
     display: grid;
@@ -645,7 +647,6 @@
 
   .themePage-header h1 {
     font-size: 2rem;
-    margin-bottom: 2rem;
   }
 
   .themePage-header p {
@@ -785,6 +786,7 @@
     font-size: 3.9rem;
     margin-bottom: 4rem;
     text-align: start;
+    font-weight: bold;
   }
 
   .themePage-website-features p {
@@ -890,8 +892,7 @@
   }
 
   .themePage-header h1 {
-    font-size: 2rem;
-    margin-bottom: 2rem;
+    font-size: 1.6rem;
   }
 
   .themePage-header p {
@@ -972,7 +973,7 @@
   }
 
   .themePage-featured-header h1 {
-    font-size: 1.7rem;
+    font-size: 1.8rem;
     text-align: left;
     padding: 0 0 0 0.7rem;
     margin-bottom: 40px;
@@ -1039,6 +1040,7 @@
     font-size: 1.8rem;
     margin-bottom: 4rem;
     text-align: start;
+    font-weight: bold;
   }
 
   .themePage-website-features p {
@@ -1145,7 +1147,6 @@
 
   .themePage-header h1 {
     font-size: 1.7rem;
-    margin-bottom: 2rem;
   }
 
   .themePage-header p {
@@ -1229,10 +1230,10 @@
   }
 
   .themePage-featured-header h1 {
-    font-size: 2rem;
+    font-size: 1.5rem;
     text-align: left;
-    padding: 0 0 0 0.7rem;
-    margin-bottom: 40px;
+    padding: 0 0 0 0rem;
+    margin-bottom: 20px;
   }
 
   .themePage-featured-content ul li {
@@ -1243,7 +1244,7 @@
 
   .themePage-featured-content {
     width: 100%;
-    padding-left: 2rem;
+    padding-left: 0rem;
   }
 
   .themePage-featured-button {
@@ -1296,6 +1297,7 @@
     font-size: 1.9rem;
     margin-bottom: 4rem;
     text-align: start;
+    font-weight: bold;
   }
 
   .themePage-website-features p {

@@ -13,3 +13,8 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.tailwind-wrapper * {
+  all: unset;
+  all: revert-layer; /* if supported by your browser/tools */
+}

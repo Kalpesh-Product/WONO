@@ -37,6 +37,7 @@ const TermsAndCondtions = () => {
             Terms, you must discontinue using the Service immediately.
           </span>
         </div>
+        <hr />
         <div className="privacy-section privSect2">
           <h4>2. Eligibility</h4>
           <span>
@@ -46,6 +47,7 @@ const TermsAndCondtions = () => {
             to enter into a binding agreement.
           </span>
         </div>
+        <hr />
         <div className="privacy-section privSect2">
           <h4>3. Account Registration</h4>
           <span>
@@ -63,6 +65,7 @@ const TermsAndCondtions = () => {
             suspect unauthorized activity or if you breach these Terms.
           </span>
         </div>
+        <hr />
         <div className="privacy-section privSect2">
           <h4>4. Subscription and Payment</h4>
           <span>
@@ -95,6 +98,7 @@ const TermsAndCondtions = () => {
             </ul>
           </div>
         </div>
+        <hr />
         <div className="privacy-section privSect2">
           <h4>5. License and Usage</h4>
           <span>
@@ -123,6 +127,7 @@ const TermsAndCondtions = () => {
             Service if we believe you have violated these Terms.
           </span>
         </div>
+        <hr />
         <div className="privacy-section privSect2">
           <h4>6. Intellectual Property</h4>
           <span>
@@ -133,6 +138,7 @@ const TermsAndCondtions = () => {
             prior written consent from the Company.
           </span>
         </div>
+        <hr />
         <div className="privacy-section privSect2">
           <h4>7. Data Protection and Privacy</h4>
           <span>
@@ -150,6 +156,7 @@ const TermsAndCondtions = () => {
             your information as described in the Privacy Policy.
           </span>
         </div>
+        <hr />
         <div className="privacy-section privSect2">
           <h4>8. Third-Party Integrations</h4>
           <span>
@@ -160,6 +167,7 @@ const TermsAndCondtions = () => {
             respective third parties.
           </span>
         </div>
+        <hr />
         <div className="privacy-section privSect2">
           <h4>9. Service Availability</h4>
           <span>
@@ -170,6 +178,7 @@ const TermsAndCondtions = () => {
             interruptions in service.
           </span>
         </div>
+        <hr />
         <div className="privacy-section privSect2">
           <h4>10. Modifications to the Service and Terms</h4>
           <span>
@@ -180,6 +189,7 @@ const TermsAndCondtions = () => {
             acceptance of the new Terms.
           </span>
         </div>
+        <hr />
         <div className="privacy-section privSect2">
           <h4>11. Termination</h4>
           <span>
@@ -193,6 +203,7 @@ const TermsAndCondtions = () => {
             associated with your account may be deleted.
           </span>
         </div>
+        <hr />
         <div className="privacy-section privSect2">
           <h4>12. Limitation of Liability</h4>
           <span>
@@ -208,6 +219,7 @@ const TermsAndCondtions = () => {
             preceding the claim.
           </span>
         </div>
+        <hr />
         <div className="privacy-section privSect2">
           <h4>13. Indemnification</h4>
           <span>
@@ -218,6 +230,7 @@ const TermsAndCondtions = () => {
             intellectual property or other rights of a third party.
           </span>
         </div>
+        <hr />
         <div className="privacy-section privSect2">
           <h4>14. Governing Law and Dispute Resolution</h4>
           <span>
@@ -229,6 +242,7 @@ const TermsAndCondtions = () => {
             may be entered in any court having jurisdiction.
           </span>
         </div>
+        <hr />
         <div className="privacy-section privSect2">
           <h4>15. Force Majeure</h4>
           <span>
@@ -238,6 +252,7 @@ const TermsAndCondtions = () => {
             cyber-attacks, strikes, or governmental actions.
           </span>
         </div>
+        <hr />
         <div className="privacy-section privSect2">
           <h4>16. Severability</h4>
           <span>
@@ -246,6 +261,7 @@ const TermsAndCondtions = () => {
             and effect.
           </span>
         </div>
+        <hr />
         <div className="privacy-section privSect2">
           <h4>17. Entire Agreement</h4>
           <span>
@@ -255,6 +271,7 @@ const TermsAndCondtions = () => {
             Service and supersede any prior agreements.
           </span>
         </div>
+        <hr />
         <div className="privacy-section privSect2">
           <h4>18. Contact Information</h4>
           <span>
@@ -279,6 +296,7 @@ const TermsAndCondtions = () => {
             </div>
           </div>
         </div>
+        <hr />
       </div>
     </>
   );

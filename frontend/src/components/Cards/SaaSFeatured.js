@@ -13,20 +13,33 @@ const SaaSFeatureBlock = ({
   height,
   rowReverse = false,
 }) => {
-  const [isMobile, setIsMobile] = useState(false);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768);
+      setWindowWidth(window.innerWidth);
     };
-    handleResize();
-    window.addEventListener("resize", handleResize);
 
+    window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  // Determine layout based on screen width
+  const isMobile = windowWidth <= 768;
+  const isLaptop = windowWidth > 768 && windowWidth <= 1440;
+
+  // Define dynamic height and objectFit
+  const dynamicHeight = isMobile
+    ? "15rem"
+    : isLaptop
+    ? "33rem"
+    : height || "28rem";
+
+  const dynamicFit = isMobile ? "contain" : imageFit || "cover";
+
   return (
     <div
+    data-aos="fade-up"
       className="cursor-pointer"
       style={{
         padding: "0rem 0rem",
@@ -82,8 +95,8 @@ const SaaSFeatureBlock = ({
             alt="feature"
             style={{
               width: "100%",
-              height: isMobile ? "30vh" : height ? height : "60vh",
-              objectFit: isMobile ? "contain" : imageFit ? imageFit : "cover",
+              height: dynamicHeight,
+              objectFit: dynamicFit,
               padding: "1rem",
               objectPosition: imagePosition ? imagePosition : "top",
             }}

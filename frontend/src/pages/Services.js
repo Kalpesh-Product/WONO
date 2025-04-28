@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 
 import {
   customerProfile,
@@ -40,20 +40,26 @@ import {
   employeeManagement,
 } from "../assets/WONO_images/img/icon_service_color";
 import { useNavigate } from "react-router-dom";
-import TicketsImage from "../assets/WONO_images/img/images-service/services-apps.jpeg";
+import TicketsImage from "../assets/WONO_images/img/images-service/meetings-final.jpeg";
 import HrImage from "../assets/WONO_images/img/images-service/hr-img-2.jpeg";
-import FinanceImage from "../assets/WONO_images/img/images-service/finance-usd.png";
-import SalesImage from "../assets/WONO_images/img/images-service/Sales-img.jpeg";
+import FinanceImage from "../assets/WONO_images/img/images-service/finance-final.png";
+import SalesImage from "../assets/WONO_images/img/images-service/sales-final.png";
 import FrontendImage from "../assets/WONO_images/img/images-service/frontend-2.png";
 import greenUnderLine from "../assets/underline-bg/blue-line.png";
-
+import AOS from "aos";
 import "../styles/bodyServices.css";
 import SaaSFeatureBlock from "../components/Cards/SaaSFeatured";
 const Services = () => {
   const navigate = useNavigate();
+    useEffect(() => {
+      AOS.init({
+        duration: 1000, // animation duration in ms
+        once: true, // animate only once
+      });
+    }, []);
   return (
     <>
-      <div className="services flex flex-col gap-8 py-4">
+      <div className="services flex flex-col gap-4 lg:gap-8 py-4">
         <div className="SaaS-main-heading">
           <h1 className="p-0">The ONLY Nomad Ecosystem SaaS Platform!</h1>
         </div>
@@ -89,10 +95,10 @@ const Services = () => {
           </span>
         </div> */}
 
-        <div className="SaaS-featured-master flex flex-col gap-4 py-4">
+        <div data-aos="fade-up" className="SaaS-featured-master flex flex-col gap-4 py-0 lg:py-4">
           <div className="SaaS-featured-grid ">
             <div className="SaaS-featured-grid-left flex flex-col gap-4 ">
-              <div className="SaaS-features-heading flex text-3xl md:text-3xl font-bold mb-3">
+              <div className="SaaS-features-heading flex text-[1.5rem] md:text-3xl font-bold mb-3">
                 Real-time operations
                 <img src={greenUnderLine} alt="greenUnderLine" />
               </div>
@@ -113,13 +119,18 @@ const Services = () => {
               />
             </div>
           </div>
+          <hr
+          className="h-[1px] text-gray-500 bg-gray-500 mb-2
+         lg:mt-10"
+        />
         </div>
 
         {/* ---------------------------------------------------------------------------------------------------------- */}
-        <hr />
+      
         {/* ---------------------------------------------------------------------------------------------------------- */}
 
         <div
+          data-aos="fade-up"
           className="SaaS-featured-master"
           style={{
             display: "flex",
@@ -139,11 +150,11 @@ const Services = () => {
             ]}
             image={FrontendImage}
             width={"100%"}
-            imageFit={"cover"}
+            imageFit={"fill"}
             imagePosition={"left top"}
             rowReverse={false}
           />
-          <hr/>
+          <hr />
           <SaaSFeatureBlock
             title="Apps"
             description1={[
@@ -157,8 +168,8 @@ const Services = () => {
             image={TicketsImage}
             rowReverse={true}
           />
-          <hr/>
-            <SaaSFeatureBlock
+          <hr />
+          <SaaSFeatureBlock
             title="Sales"
             description1={[
               { title: "Revenue Reports", image: reports },
@@ -171,7 +182,7 @@ const Services = () => {
             image={SalesImage}
             rowReverse={false}
           />
-          <hr/>
+          <hr />
           <SaaSFeatureBlock
             title="Finance"
             description1={[
@@ -185,7 +196,7 @@ const Services = () => {
             image={FinanceImage}
             rowReverse={true}
           />
-          <hr/>
+          <hr />
           <SaaSFeatureBlock
             title="Human Resources"
             description1={[
@@ -199,7 +210,6 @@ const Services = () => {
             image={HrImage}
             rowReverse={false}
           />
-
         </div>
 
         {/* <div className="SaaS-grid">

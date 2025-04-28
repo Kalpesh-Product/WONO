@@ -33,6 +33,8 @@ import Faqs from "./pages/Faqs";
 import WebsitePage from "./pages/WebsitePage";
 import WebsiteLoginPage from "./pages/WebsiteLoginPage";
 import ClientLandingPage from "./pages/Client-Pages/ClientLandingPage";
+import "aos/dist/aos.css";
+import Aos from "aos";
 
 // New component for routes without header/footer
 const NoLayout = ({ children }) => {
@@ -40,6 +42,12 @@ const NoLayout = ({ children }) => {
 };
 
 function App({ useHideUnimportantErrors }) {
+  useEffect(() => {
+    Aos.init({
+      duration: 1000, // animation duration in ms
+      once: true, // animate only once
+    });
+  }, []);
   const [activeTab, setActiveTab] = useState("Home");
   const location = useLocation(); // Get the current path
 

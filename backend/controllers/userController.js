@@ -11,13 +11,13 @@ const path = require("path");
 const { sub } = require("date-fns");
 const axios = require("axios");
 const { handleDocumentUpload } = require("../config/cloudinaryConfig");
-require("dotenv").config()
+require("dotenv").config();
 
 // Sync Google Sheets by fetching data from DB
 const syncEnquiriesToGoogleSheets = async (req, res) => {
   try {
     const enquiries = await Enquiry.find(); // Get all enquiries from DB
-    const dataToSync = enquiries.map(enquiry => ({
+    const dataToSync = enquiries.map((enquiry) => ({
       name: enquiry.name,
       email: enquiry.email,
       mobile: enquiry.mobile,
@@ -25,13 +25,12 @@ const syncEnquiriesToGoogleSheets = async (req, res) => {
       message: enquiry.message,
     }));
 
-    res.status(200).json({ status: 'success', data: dataToSync });
+    res.status(200).json({ status: "success", data: dataToSync });
   } catch (error) {
-    console.error('Error fetching data from database:', error.message);
-    res.status(500).json({ status: 'error', message: error.message });
+    console.error("Error fetching data from database:", error.message);
+    res.status(500).json({ status: "error", message: error.message });
   }
 };
-
 
 const registerUser = async (req, res) => {
   const {
@@ -226,8 +225,8 @@ const registerUser = async (req, res) => {
       <tr>
         <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">Selected Services</td>
         <td style="padding: 12px; border-bottom: 1px solid #ddd; font-size: 14px;">${Object.keys(
-        selectedServices
-      )
+          selectedServices
+        )
           .filter((service) => selectedServices[service])
           .join(", ")}</td>
       </tr>
@@ -241,7 +240,8 @@ const registerUser = async (req, res) => {
       </tr>
     </table>
   </div>
-</body>`}
+</body>`,
+    };
 
     // Send both emails concurrently
     await Promise.all([
@@ -253,7 +253,7 @@ const registerUser = async (req, res) => {
       // Existing code for saving the user to the database and sending emails
 
       // After saving the user and sending emails, send data to Google Sheets
-      const googleSheetsUrl = process.env.GOOGLE_SHEET_API_LINK  // Replace with your actual web app URL
+      const googleSheetsUrl = process.env.GOOGLE_SHEET_API_LINK; // Replace with your actual web app URL
 
       // Prepare the data payload
       const payload = {
@@ -272,43 +272,36 @@ const registerUser = async (req, res) => {
         websiteURL,
         linkedinURL,
         selectedServices,
-        formName: "enquiry",
+        formName: "register",
       };
 
       // Send the data to Google Sheets
       await axios.post(googleSheetsUrl, payload);
 
-      return res.status(200).send("User registered successfully and data sent to Google Sheets!");
-
+      return res
+        .status(200)
+        .send("User registered successfully and data sent to Google Sheets!");
     } catch (error) {
       console.error("Sheets error", error.message);
-      return res.status(500).send("Failed to send sheets user: " + error.message);
+      return res
+        .status(500)
+        .send("Failed to send sheets user: " + error.message);
     }
-
-
   } catch (error) {
     console.error("Database error:", error.message);
     res.status(500).send("Failed to register user: " + error.message);
   }
 };
 
-
 const updateSection = async (req, res) => {
   const { section, data } = req.body;
-  console.log(req.body)
+  console.log(req.body);
   console.log(`Received section: ${section}`);
   console.log("Received data:", data);
 
   try {
     // Find the user by email
     let user = await User.findOne({ "personalInfo.email": data.email });
-
-    // If user exists, but you're updating the 'personal' section, prevent duplicate email
-    if (user && section === "personal") {
-      // If user is found, throw an error for duplicate email
-      console.log("Duplicate email found");
-      return res.status(409).json({ error: "This email is already in use." });
-    }
 
     // If no user is found, create a new user object
     if (!user) {
@@ -365,7 +358,7 @@ const checkEmail = async (req, res, next) => {
     console.error("Error checking email:", error);
     res.status(500).json({ error: "Internal server error" });
   }
-}
+};
 
 const forgotPassword = async (req, res) => {
   const { email } = req.body;
@@ -533,6 +526,7 @@ const submitEnquiry = async (req, res) => {
   // getting the user data from request body
 
   const { name, email, mobile, partnerstype, message } = req.body;
+  console.log(req.body);
 
   try {
     const newEnquiry = new Enquiry({
@@ -624,12 +618,13 @@ const submitEnquiry = async (req, res) => {
         </html>
       `;
 
-    await companyMail.sendMail({
-      from: "response@wono.co",
-      to: email,
-      subject: `Wono - Thank you for your enquiry`,
-      html: userEmailTemplate(name),
-    });
+    await companyMail
+      .sendMail({
+        from: "response@wono.co",
+        to: email,
+        subject: `Wono - Thank you for your enquiry`,
+        html: userEmailTemplate(name),
+      })
 
     await companyMail.sendMail({
       from: `"${name} <${email}>"`,
@@ -646,29 +641,31 @@ const submitEnquiry = async (req, res) => {
       // Existing code for saving the user to the database and sending emails
 
       // After saving the user and sending emails, send data to Google Sheets
-      const googleSheetsUrl = process.env.GOOGLE_SHEET_API_LINK// Replace with your actual web app URL
+      const googleSheetsUrl = process.env.GOOGLE_SHEET_API_LINK; // Replace with your actual web app URL
 
       // Prepare the data payload
-      // const payload = {
-      //   name,
-      //   email,
-      //   mobile,
-      //   partnerstype,
-      //   message,
-      //   source : 'secondAPI'
-      // };
+      const payload = {
+        name,
+        email,
+        mobile,
+        partnerstype,
+        message,
+        formName: "enquiry",
+      };
 
       // Send the data to Google Sheets
-      // await axios.post(googleSheetsUrl, payload);
-
-      // return res
-      //   .status(200)
-      //   .send(
-      //     "User enquiry saved successfully and data sent to Google Sheets!"
-      //   );
+      try {
+        await axios.post(googleSheetsUrl, payload);
+      } catch (error) {
+        return res
+          .status(400)
+          .json({ message: "email sent but failed to store in google sheet" });
+      }
     } catch (error) {
       console.error("Sheets error", error.message);
-      return res.status(500).send("Failed to send sheets user: " + error.message);
+      return res
+        .status(500)
+        .send("Failed to send sheets user: " + error.message);
     }
 
     // ////////
@@ -867,7 +864,7 @@ const createJobApplication = async (req, res) => {
       // Existing code for saving the user to the database and sending emails
 
       // After saving the user and sending emails, send data to Google Sheets
-      const googleSheetsUrl = process.env.GOOGLE_SHEET_API_LINK // Replace with your actual web app URL
+      const googleSheetsUrl = process.env.GOOGLE_SHEET_API_LINK; // Replace with your actual web app URL
 
       // Prepare the data payload
       const payload = {
@@ -894,21 +891,35 @@ const createJobApplication = async (req, res) => {
         await axios.post(googleSheetsUrl, payload);
       } catch (error) {
         console.error("Sheets error", error.message);
-        return res.status(500).send("Failed to send sheets user: " + error.message);
-
+        return res
+          .status(500)
+          .send("Failed to send sheets user: " + error.message);
       }
-
     } catch (error) {
       console.error("Sheets error", error.message);
-      return res.status(500).send("Failed to send sheets user: " + error.message);
+      return res
+        .status(500)
+        .send("Failed to send sheets user: " + error.message);
     }
-    return res.status(200).json("User registered successfully and data sent to Google Sheets!");
+    return res
+      .status(200)
+      .json("User registered successfully and data sent to Google Sheets!");
   } catch (error) {
-    console.error('Error saving application:', error);
-    res.status(500).json({ message: 'Failed to save application' });
+    console.error("Error saving application:", error);
+    res.status(500).json({ message: "Failed to save application" });
   }
-
-
 };
 
-module.exports = { checkEmail, createJobApplication, submitEnquiry, login, logout, updateSection, forgotPassword, verifyOTP, resetPassword, registerUser, syncEnquiriesToGoogleSheets };
+module.exports = {
+  checkEmail,
+  createJobApplication,
+  submitEnquiry,
+  login,
+  logout,
+  updateSection,
+  forgotPassword,
+  verifyOTP,
+  resetPassword,
+  registerUser,
+  syncEnquiriesToGoogleSheets,
+};

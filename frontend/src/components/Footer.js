@@ -1,9 +1,8 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "../layout/footer.css";
 import "../styles/componentStyle.css";
 import WonoLogo from "../assets/WONO_images/img/WONO_LOGO_white _TP.png";
-// Import the FontAwesomeIcon component
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faTwitter,
@@ -14,6 +13,18 @@ import {
 
 const Footer = ({ changeActiveTab }) => {
   const navigate = useNavigate();
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <>
       <footer className="black-background text-light">
@@ -30,14 +41,14 @@ const Footer = ({ changeActiveTab }) => {
               alt="logo"
             />
             <span>
-              WONOCO PRIVATE LIMITED 10 ANSON ROAD #33-10
-              <br />
-              INTERNATIONAL PLAZA SINGAPORE - 079903
+              WONOCO PRIVATE LIMITED
+              <br /> 10 ANSON ROAD #33-10 <br/> INTERNATIONAL  PLAZA SINGAPORE - 079903
               <br />
               <span className="text-lowercase color-of-o">
                 <Link
                   to="mailto:response@wono.co"
-                  style={{ textDecoration: "none" }}>
+                  style={{ textDecoration: "none" }}
+                >
                   response@wono.co
                 </Link>
               </span>
@@ -71,22 +82,24 @@ const Footer = ({ changeActiveTab }) => {
                 onClick={() => {
                   changeActiveTab("");
                   window.scrollTo({ top: 0, behavior: "instant" });
-                }}>
-                {/* <Link to="/login">Sign In</Link> */}
+                }}
+              >
                 <a href="https://wonofe.vercel.app/">Sign In</a>
               </h5>
               <h5
                 onClick={() => {
                   changeActiveTab("");
                   window.scrollTo({ top: 0, behavior: "instant" });
-                }}>
+                }}
+              >
                 <Link to={"/register"}>Sign Up</Link>
               </h5>
               <h5
                 onClick={() => {
                   changeActiveTab("");
                   window.scrollTo({ top: 0, behavior: "instant" });
-                }}>
+                }}
+              >
                 <Link to={"/contact"}>Contact</Link>
               </h5>
             </div>
@@ -96,21 +109,24 @@ const Footer = ({ changeActiveTab }) => {
                 onClick={() => {
                   changeActiveTab("Services");
                   window.scrollTo({ top: 0, behavior: "instant" });
-                }}>
+                }}
+              >
                 <Link to="/modules">Modules</Link>
               </h5>
               <h5
                 onClick={() => {
                   changeActiveTab("themes");
                   window.scrollTo({ top: 0, behavior: "instant" });
-                }}>
+                }}
+              >
                 <Link to="/themes">Themes</Link>
               </h5>
               <h5
                 onClick={() => {
                   changeActiveTab("leads");
                   window.scrollTo({ top: 0, behavior: "instant" });
-                }}>
+                }}
+              >
                 <Link to={"/leads"}>Leads</Link>
               </h5>
             </div>
@@ -119,7 +135,8 @@ const Footer = ({ changeActiveTab }) => {
                 onClick={() => {
                   changeActiveTab("capital");
                   window.scrollTo({ top: 0, behavior: "instant" });
-                }}>
+                }}
+              >
                 <Link to="/capital">Capital</Link>
               </h5>
               <Link
@@ -127,17 +144,11 @@ const Footer = ({ changeActiveTab }) => {
                 onClick={() => {
                   changeActiveTab("Career");
                   window.scrollTo({ top: 0, behavior: "instant" });
-                }}>
+                }}
+              >
                 Career
               </Link>
-              <Link
-                to={"#"}
-                // onClick={() => {
-                //   changeActiveTab("");
-                // }}
-              >
-                About
-              </Link>
+              <Link to={"#"}>About</Link>
             </div>
             <div className="footer-section-3">
               <h5>
@@ -145,22 +156,21 @@ const Footer = ({ changeActiveTab }) => {
                   to={"/faqs"}
                   onClick={() =>
                     window.scrollTo({ top: 0, behavior: "instant" })
-                  }>
+                  }
+                >
                   FAQs
                 </Link>
               </h5>
               <Link
                 to={"/privacy"}
-                onClick={() =>
-                  window.scrollTo({ top: 0, behavior: "instant" })
-                }>
+                onClick={() => window.scrollTo({ top: 0, behavior: "instant" })}
+              >
                 Privacy
               </Link>
               <Link
                 to={"/termsandconditions"}
-                onClick={() =>
-                  window.scrollTo({ top: 0, behavior: "instant" })
-                }>
+                onClick={() => window.scrollTo({ top: 0, behavior: "instant" })}
+              >
                 T&C
               </Link>
             </div>
@@ -169,13 +179,22 @@ const Footer = ({ changeActiveTab }) => {
 
         <hr />
 
-        {/* <div className="mt-3 py-5"> */}
         <div className="py-4">
           <div className="text-center px-1 footer-copyright">
-            <p>
-              &copy; Copyright 2025-26 by WONOCO PRIVATE LIMITED - SINGAPORE.
-              All Rights Reserved.
-            </p>
+            {isMobile ? (
+              <p>
+                &copy; Copyright 2025-26
+                <br />
+                WONOCO PRIVATE LIMITED - SINGAPORE.
+                <br />
+                All Rights Reserved.
+              </p>
+            ) : (
+              <p>
+                &copy; Copyright 2025-26 WONOCO PRIVATE LIMITED - SINGAPORE. All
+                Rights Reserved.
+              </p>
+            )}
           </div>
         </div>
       </footer>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import "../styles/bodyThemes.css";
 import "../styles/specialClasses.css";
 import CafeImage from "../assets/WONO_images/img/website-builder/new-layout/cafe.png";
@@ -25,9 +25,17 @@ import BizNestMockup from "../assets/WONO_images/img/website-builder/new-layout/
 import Hostels from "../assets/WONO_images/img/website-builder/new-layout/hostels.png";
 import Hostels_mockup from "../assets/WONO_images/img/website-builder/new-layout/mobile/mockups/hostels.png";
 import { useNavigate } from "react-router-dom";
+import { ReactFitty } from "react-fitty";
+import Aos from "aos";
 
 const Themes = () => {
   const navigate = useNavigate();
+      useEffect(() => {
+        Aos.init({
+          duration: 1000, // animation duration in ms
+          once: true, // animate only once
+        });
+      }, []);
 
   const themeImages = [
     {
@@ -112,28 +120,21 @@ const Themes = () => {
     <div>
       <div className="themePage-master">
         <div className="themePage-header">
-          <h1>
-            Choose the best business Website & Native Apps theme for your
-            business{" "}
-          </h1>
-          <p>
-            Cherry pick the features you want or ask us to customize anything
-            for you for your business growth.
-          </p>
+          <h1>Choose the best Responsive Website Theme for your business</h1>
         </div>
 
         <div className="themePage-content">
           <div className="themePage-content-header">
             <h3>Top Theme Recommendations</h3>
             <span>
-              Fully tech ready, integrated and responsive updated and latest
-              WoNo themes
+              Cherry pick features or ask us to customize anything for your
+              business growth. Fully tech ready, integrated and responsive.
             </span>
           </div>
 
           <div className="themePage-content-grid">
             {themeImages.map((image, index) => (
-              <div className="theme-grid" key={index}>
+              <div data-aos="fade-up" className="theme-grid" key={index}>
                 <img
                   onClick={() => {
                     navigate("/themes/products", { state: { image } });
@@ -146,7 +147,7 @@ const Themes = () => {
             ))}
           </div>
 
-          <div className="themePage-featured">
+          <div data-aos="fade-up" className="themePage-featured">
             <div className="themePage-featured-grid">
               <div className="themePage-featured-grid-1">
                 <div className="themePage-featured-header">
@@ -185,7 +186,7 @@ const Themes = () => {
             <hr />
           </div>
 
-          <div className="themePage-website-features-section">
+          <div data-aos="fade-up" className="themePage-website-features-section">
             <div className="themePage-website-features">
               <div className="themePage-website-header">
                 <h1>A website builder engineered for growth</h1>
@@ -194,10 +195,9 @@ const Themes = () => {
                 {themeWebsiteGridData.map((item, index) => (
                   <div
                     key={index}
-                    className={`themePage-website-features-grid-${index + 1}`}
                   >
                     <h4>
-                      <>{item.title}</>
+                      {item.title}
                     </h4>
                     <p>{item.description}</p>
                   </div>
@@ -220,7 +220,7 @@ const Themes = () => {
           <div className="px-[7rem]">
             <hr />
           </div>
-          <div className="themePage-website-support-section">
+          <div data-aos="fade-up" className="themePage-website-support-section">
             <div className="themePage-website-support">
               <div className="themePage-website-support-header">
                 <h1>We're here for you</h1>

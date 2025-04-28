@@ -395,12 +395,12 @@
 @media (min-height: 900px) and (max-height: 1365px) {
     .loginTopPadding {
         /* padding-top: 8rem; */
-        padding-top: 10rem;
+        padding-top: 4rem;
     }
 
     .loginBottomPadding {
         /* padding-bottom: 8rem; */
-        padding-bottom: 10rem;
+        padding-bottom: 4rem;
     }
 }
 
