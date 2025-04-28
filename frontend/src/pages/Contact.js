@@ -206,7 +206,7 @@ const Contact = () => {
                   <Grid item xs={12} textAlign="center">
                     <button
                       type="submit"
-                      className="get-started-main-button mt-4 mb-0 hover:"
+                      className="submit-button mt-4 mb-0 hover:"
                     >
                       CONNECT
                     </button>
