@@ -348,7 +348,7 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
               <button className="l">
                 <a
                   href="https://wonofe.vercel.app/"
-                  className="login-button mx-auto"
+                  className="bg-white rounded-3xl text-black px-10 py-2 mx-auto"
                   onClick={handleClose}
                 >
                   SIGN IN
@@ -356,7 +356,7 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
               </button>
               <hr className="w-[75%]" />
               <button
-                className="register-button mx-auto"
+              className="bg-[#0AA9EF] rounded-3xl text-white px-10 py-2 mx-auto"
                 onClick={handleRegister}
               >
                 SIGN UP

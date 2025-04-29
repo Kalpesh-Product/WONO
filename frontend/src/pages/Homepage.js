@@ -218,12 +218,19 @@ const Homepage = () => {
             </h2>
             <div className="home-main-title-desc flex flex-col gap-4 w-full">
               <div className="w-full gap-2 flex flex-col items-start justify-center text-start md:text-center lg:text-start">
-                <p
-                  className="text-start  w-full md:text-center md:text-[2.1rem] lg:text-start   "
-                  style={{ fontWeight: "bold" }}
-                >
-                  A simple NO CODE SaaS Platform.
-                </p>
+                {!ismobile ? (
+                  <p
+                    className="text-start  w-full md:text-center md:text-[2.1rem] lg:text-start   "
+                    style={{ fontWeight: "bold" }}
+                  >
+                    A simple NO CODE SaaS Platform.
+                  </p>
+                ) : (
+                  <ReactFitty style={{ fontWeight: "bold" }}>
+                    A simple NO CODE SaaS Platform.
+                  </ReactFitty>
+                )}
+
                 <div className="flex flex-col gap-2">
                   <span className="home-main-title-tagline text-[1rem] md:text-[1.09rem] 2xl:text-[1.18rem]">
                     We support businesses in small and aspiring destinations
@@ -302,7 +309,15 @@ const Homepage = () => {
 
         <div data-aos="fade-up" className="module-feature-main-home">
           <div className="four-cards-header">
-            <span>KEY MODULES FOR YOUR BUSINESS</span>
+            {!ismobile ? (
+              <ReactFitty className="font-semibold">
+                KEY MODULES FOR YOUR BUSINESS
+              </ReactFitty>
+            ) : (
+              <ReactFitty className="font-semibold">
+                KEY MODULES FOR <br /> YOUR BUSINESS
+              </ReactFitty>
+            )}
           </div>
           <div className="key-modules-grid">
             {amenities.map((item) => (
