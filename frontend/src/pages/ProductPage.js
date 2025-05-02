@@ -26,6 +26,7 @@ import TickmarkImg from "../assets/check.png";
 import blueTickmarkImg from "../assets/blue-tick-no-bg-15.png";
 import "../styles/bodyProduct.css";
 import { useNavigate, useLocation } from "react-router-dom";
+import { ReactFitty } from "react-fitty";
 
 const ProductPage = () => {
   const [showAll, setShowAll] = useState(false);
@@ -232,7 +233,7 @@ const ProductPage = () => {
         <div className="product-page-reccomendations-section">
           <div className="product-page-reccomendations">
             <div className="product-page-reccomendations-header">
-              <h1 className="text-3xl">Few more suggestions for you</h1>
+              <ReactFitty>Few more suggestions for you</ReactFitty>
             </div>
             <div className="product-page-reccomendations-grid">
               {filteredRecommendations

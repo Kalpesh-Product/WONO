@@ -325,7 +325,7 @@ const Homepage = () => {
               <FeatureCard key={item.id} icon={item.icon} title={item.title} />
             ))}
           </div>
-          <div className="flex justify-center items-center mt-4">
+          <div className="flex justify-center items-center mt-10">
             <button
               className="get-started-submit-button font-poppins-regular"
               onClick={handleRegister}
@@ -505,7 +505,11 @@ const Homepage = () => {
               </div>
             </div>
           </div>
-          <CallButton falseMargin title={"Get Started"} />
+            <hr />
+          <div className="py-4">
+            <CallButton falseMargin title={"Get Started"} />
+          </div>
+            <hr />
         </div>
       </div>
     </div>

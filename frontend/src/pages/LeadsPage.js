@@ -70,6 +70,7 @@ import FinerPointsImage from "../assets/leads_images/finer-points-image.webp";
 
 import "../styles/specialClasses.css";
 import "../styles/leadsPage.css";
+import { ReactFitty } from "react-fitty";
 
 const LeadsPage = () => {
   const menuTitles = {
@@ -445,11 +446,12 @@ const LeadsPage = () => {
             <div>
               <div className="">
                 {/* <div className="container mb-3 pe-0 border-bottom border-secondary"> */}
+                  <ReactFitty className="mb-0">RUN & SCALE YOUR BUSINESS</ReactFitty>
                 <div className="container pb-3 pe-0 border-bottom border-secondary">
                   {/* <div className="row  border-bottom border-dark border-3 pb-5 bg-primary"> */}
                   <div className="row ">
                     <div className="col-lg-4 ps-0">
-                      <p className="mb-0">RUN & SCALE YOUR BUSINESS</p>
+                    
                       <h2 className="fs-1 pt-2">Marketing</h2>
                     </div>
                     <div className="col-lg-4"></div>

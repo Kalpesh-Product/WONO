@@ -144,7 +144,7 @@ const Capital = () => {
                 Start for free
               </button>
             </Link>
-            <Link to="/register">
+            <Link to="/contact">
               <button className="px-4 py-2 bg-black rounded-full text-white border-[1px] border-gray-200 ">
                 Contact sales
               </button>
