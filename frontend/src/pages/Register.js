@@ -555,7 +555,7 @@ const Register = () => {
                         </Grid>
 
                         <Grid item xs={12}>
-                          <Box textAlign="center" mt={2}>
+                          <Box textAlign="center" mt={1}>
                             <span>
                               By clicking above you accept the terms and
                               conditions

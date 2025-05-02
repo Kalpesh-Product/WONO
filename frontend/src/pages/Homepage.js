@@ -99,6 +99,7 @@ import {
 } from "../assets/WONO_images/img/icon_service_color";
 import { ReactFitty } from "react-fitty";
 import AOS from "aos";
+import CallButton from "../components/CallButton";
 
 const Homepage = () => {
   const navigate = useNavigate();
@@ -324,6 +325,14 @@ const Homepage = () => {
               <FeatureCard key={item.id} icon={item.icon} title={item.title} />
             ))}
           </div>
+          <div className="flex justify-center items-center mt-4">
+            <button
+              className="get-started-submit-button font-poppins-regular"
+              onClick={handleRegister}
+            >
+              Get Started
+            </button>
+          </div>
         </div>
         <div style={{ padding: "0 7rem" }}>
           <hr />
@@ -496,6 +505,7 @@ const Homepage = () => {
               </div>
             </div>
           </div>
+          <CallButton falseMargin title={"Get Started"} />
         </div>
       </div>
     </div>

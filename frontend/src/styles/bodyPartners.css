@@ -208,15 +208,19 @@
 
 
 .get-started-submit-button {
-    width: 100%;
     border-radius: 4rem;
     background-color: black;
     color: white;
-    /* padding: 0.5rem; */
-    /* padding: 20px; */
     padding: 10px 20px;
     border: none;
+    transition: background-color 0.3s ease;
 }
+
+.get-started-submit-button:hover {
+    font-family: Popins-Medium;
+    background-color: rgb(98, 98, 98);
+}
+
 
 .partner-button-space {
     display: flex;

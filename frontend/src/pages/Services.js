@@ -49,6 +49,7 @@ import greenUnderLine from "../assets/underline-bg/blue-line.png";
 import AOS from "aos";
 import "../styles/bodyServices.css";
 import SaaSFeatureBlock from "../components/Cards/SaaSFeatured";
+import CallButton from "../components/CallButton";
 const Services = () => {
   const navigate = useNavigate();
     useEffect(() => {
@@ -76,6 +77,9 @@ const Services = () => {
             <span className="plus-sign">+</span> Customer & Client Management{" "}
             <span className="plus-sign">+</span> Marketing and more.
           </h4>
+        </div>
+        <div className="flex justify-end items-end">
+          <CallButton falseMargin={true} />
         </div>
         <hr
           className="hrStyling zeroHeight border-t-4"
@@ -151,6 +155,7 @@ const Services = () => {
             image={FrontendImage}
             width={"100%"}
             imageFit={"fill"}
+            mobileHeight={"11rem"}
             imagePosition={"left top"}
             rowReverse={false}
           />
@@ -210,7 +215,13 @@ const Services = () => {
             image={HrImage}
             rowReverse={false}
           />
+
         </div>
+        <hr />
+        <div >
+            <CallButton title={"Get Started"} falseMargin={true} />
+          </div>
+        <hr />
 
         {/* <div className="SaaS-grid">
           <div className="SaaS-grid-accordion">

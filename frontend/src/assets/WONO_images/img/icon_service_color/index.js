@@ -13,7 +13,7 @@ import templates from "./templates-lined.png"
 
 import notifications from "./notifications.png";
 import paymentGateway from "./payment-line.png";
-import tickets from "./tickets.png";
+import tickets from "./ticket-raise-new.png";
 import website from "./website.png";
 
 import analyticsFA from "./Analytics_SaaS.png";
@@ -42,7 +42,7 @@ import smsMarketingSM from "./marketing.png";
 import emailMarketingSM from "./email-marketing.png";
 import socialMediaSM from "./social-marketing.png";
 
-import leadGenerationSM from "./icons8-management-50.png";
+import leadGenerationSM from "./lead-management-new.png";
 import adNetworksSM from "./AdNetworks_SaaS.png";
 import personalisedSemSM from "./PersonalisedSEM_SaaS.png";
 import automatedSeoSM from "./AutomatedSEO_SaaS.png";
@@ -72,11 +72,11 @@ import feedbackCM from "./Feedback_SaaS.png";
 import announcementsCM from "./Announcements_SaaS.png";
 import visitorCM from "./visitors-line.png";
 
-import cafeOrdersCM from "./stay-rooms.png";
+import cafeOrdersCM from "./cafe-new.png";
 import stayRoom from "./stay-line-new.png";
 import meetingRoomsCM from "./meetings-lined.png";
 import complaintLogsCM from "./ComplaintLogs_SaaS.png";
-import ticketRaisingCM from "./tickets-line-new.png";
+import ticketRaisingCM from "./ticket-raise-new.png";
 import sales from "./sales-line-new.png";
 
 import customisedReportsRA from "./CustomisedReports_SaaS.png";
@@ -97,7 +97,7 @@ import reports from './reports.png'
 import calendar from "./calendar-line-new.png"
 import seo from "./seo-lined.png"
 import eventsLine from "./events-line.png"
-import bookingEngineCM from "./icons8-booking-80.png"
+import bookingEngineCM from "./booking-engine-new.png"
 import aiSeoCM from "./icons8-seo-50.png"
 import maintenanceCM from "./icons8-maintenance-50.png"
 import CustomerService from "./icons8-customer-service-50.png"

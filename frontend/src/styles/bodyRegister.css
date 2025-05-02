@@ -73,6 +73,7 @@ section {
   padding: 0.50rem;
   font-family: Popins-Semibold;
   width: 50%;
+  margin-top: 1rem;
 }
 
 .register-page-button span:nth-child(1) {

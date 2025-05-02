@@ -11,6 +11,7 @@ const SaaSFeatureBlock = ({
   imageFit,
   image,
   height,
+  mobileHeight,
   rowReverse = false,
 }) => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -30,7 +31,7 @@ const SaaSFeatureBlock = ({
 
   // Define dynamic height and objectFit
   const dynamicHeight = isMobile
-    ? "15rem"
+    ? mobileHeight || '15rem'
     : isLaptop
     ? "33rem"
     : height || "28rem";
@@ -40,6 +41,7 @@ const SaaSFeatureBlock = ({
   return (
     <div
     data-aos="fade-up"
+    
       className="cursor-pointer"
       style={{
         padding: "0rem 0rem",

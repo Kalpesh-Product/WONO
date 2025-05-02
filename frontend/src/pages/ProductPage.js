@@ -139,7 +139,9 @@ const ProductPage = () => {
   );
 
   const handleViewMore = () => {
-    setShowAll(true); // Show all recommendations
+    // setShowAll(true);
+    navigate('/register');
+    window.scrollTo({behavior:'instant', top:'0'})
   };
   // Handle image click in the recommendations grid
   const handleImageClick = (newImage) => {
@@ -187,7 +189,7 @@ const ProductPage = () => {
                         onClick={() => navigate("/register")}
                         className="product-page-button"
                       >
-                        Try theme
+                        Get Started
                       </button>
                     </div>
                   </div>
@@ -248,7 +250,7 @@ const ProductPage = () => {
             <div className="themes-view-button">
               {filteredRecommendations.length > 4 && !showAll && (
                 <button onClick={handleViewMore} className="submit-button">
-                  Load More
+                  Get Started
                 </button>
               )}
             </div>

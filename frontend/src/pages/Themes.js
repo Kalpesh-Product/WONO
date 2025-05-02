@@ -27,6 +27,7 @@ import Hostels_mockup from "../assets/WONO_images/img/website-builder/new-layout
 import { useNavigate } from "react-router-dom";
 import { ReactFitty } from "react-fitty";
 import Aos from "aos";
+import CallButton from "../components/CallButton";
 
 const Themes = () => {
   const navigate = useNavigate();
@@ -121,6 +122,9 @@ const Themes = () => {
       <div className="themePage-master">
         <div className="themePage-header">
           <h1>Choose the best Responsive Website Theme for your business</h1>
+          <div className="flex justify-end items-end">
+            <CallButton falseMargin={false} />
+          </div>
         </div>
 
         <div className="themePage-content">
@@ -145,7 +149,12 @@ const Themes = () => {
                 />
               </div>
             ))}
+            
           </div>
+          <div className="bg-[#F0F0F0] pb-4 md:pb-12">
+            <CallButton falseMargin={true} />
+          </div>
+         
 
           <div data-aos="fade-up" className="themePage-featured">
             <div className="themePage-featured-grid">
