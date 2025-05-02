@@ -45,6 +45,11 @@
   padding: 2rem 7.5rem 4rem 7.5rem;
   background-color: rgb(240, 240, 240);
 }
+.themes-title-header{
+  display:flex;
+  justify-content: end;
+  align-items: end;
+}
 
 .themePage-content-header {
   text-align: left;
@@ -643,6 +648,11 @@
     margin-bottom: 2rem;
     padding: 2rem 1.7rem;
     margin-bottom: 0;
+  }
+  .themes-title-header{
+    display:flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .themePage-header h1 {

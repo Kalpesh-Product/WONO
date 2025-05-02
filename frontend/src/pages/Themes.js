@@ -122,7 +122,7 @@ const Themes = () => {
       <div className="themePage-master">
         <div className="themePage-header">
           <h1>Choose the best Responsive Website Theme for your business</h1>
-          <div className="flex justify-end items-end">
+          <div className="themes-title-header">
             <CallButton falseMargin={false} />
           </div>
         </div>

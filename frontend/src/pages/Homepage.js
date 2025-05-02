@@ -325,7 +325,7 @@ const Homepage = () => {
               <FeatureCard key={item.id} icon={item.icon} title={item.title} />
             ))}
           </div>
-          <div className="flex justify-center items-center mt-10">
+          <div className="key-modules-button flex justify-center items-center">
             <button
               className="get-started-submit-button font-poppins-regular"
               onClick={handleRegister}
@@ -334,9 +334,16 @@ const Homepage = () => {
             </button>
           </div>
         </div>
-        <div style={{ padding: "0 7rem" }}>
+        {ismobile ? (
+
+        <div style={{ padding: "0 2rem" }}>
           <hr />
         </div>
+        ) : (
+          <div style={{ padding: "0 7rem" }}>
+          <hr />
+        </div>
+        )}
 
         <div data-aos="fade-up" className="partners-section">
           <div className="m-0">

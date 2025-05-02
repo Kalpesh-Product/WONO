@@ -364,6 +364,9 @@
   grid-template-columns: repeat(6, 1fr);
   gap: 2rem 1.5rem;
 }
+.key-modules-button{
+margin-top: 4rem;
+}
 .home-introduce-text {
   font-size: 6.1rem;
 }
@@ -402,6 +405,9 @@
     grid-template-columns: repeat(2, 1fr);
     /* Tablets: 2 columns */
   }
+  .key-modules-button{
+    margin-top: 0rem;
+    }
   .home-introduce-text {
     font-size: 3.35rem;
   }
