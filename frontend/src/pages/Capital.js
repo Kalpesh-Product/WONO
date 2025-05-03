@@ -141,7 +141,7 @@ const Capital = () => {
           <div className="flex items-center justify-center gap-4 flex-wrap md:flex-nowrap w-full">
             <Link to="/register">
               <button className="px-4 py-2 bg-white rounded-full text-black">
-                Start for free
+                Get Started
               </button>
             </Link>
             {/* <Link to="/contact">
