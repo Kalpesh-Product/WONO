@@ -569,7 +569,7 @@ const Register = () => {
                             >
                               Already have an account ?{" "}
                               <Link
-                                style={{ textDecoration: "none" }}
+                                style={{ textDecoration: "underline", cursor:'pointer' }}
                                 onClick={() => {
                                   window.location.href =
                                     "https://wonofe.vercel.app/";
