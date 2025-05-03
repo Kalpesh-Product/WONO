@@ -133,7 +133,7 @@ const Capital = () => {
       </div>
       {/* Raise Frictionless fundressing for startup*/}
       <div data-aos="fade-up" className="big-end-image">
-        <div className="frictionless-heading-with-btns gap-4">
+        <div className="frictionless-heading-with-btns gap-10">
           <h1>
             <span>Systematic & seamless</span> fundraising with accurate
             projections and cashflow trends.
