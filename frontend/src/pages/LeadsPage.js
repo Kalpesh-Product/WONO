@@ -482,12 +482,7 @@ const LeadsPage = () => {
                     <div className="col-lg-4"></div>
                     {/* <div className="col-lg-4 bg-danger"> */}
                     <div className="col-lg-4 d-flex justify-content-lg-end justify-content-md-center justify-content-center justify-content-sm-center align-items-center pe-0">
-                      <button
-                        className="get-started-main-button mt-4 "
-                        onClick={handleRegister}
-                      >
-                        Get Started
-                      </button>
+                     
                     </div>
                   </div>
                   {/* <br /> */}
@@ -564,7 +559,7 @@ const LeadsPage = () => {
                 </p>
               </div>
             </div>
-            <div className="flex justify-center items-center lg:justify-end lg:items-end">
+            <div className="flex justify-center items-center lg:justify-end lg:items-end lg:pr-10">
               <button
                 className="get-started-main-button mt-4 "
                 onClick={handleRegister}
