@@ -201,6 +201,7 @@ const Services = () => {
               { title: "Budgeting", image: expense },
             ]}
             image={FinanceImage}
+            imageFit={"cover"}
             rowReverse={true}
           />
           <hr />

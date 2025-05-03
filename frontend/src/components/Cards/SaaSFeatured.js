@@ -36,7 +36,9 @@ const SaaSFeatureBlock = ({
     ? "33rem"
     : height || "28rem";
 
-  const dynamicFit = isMobile ? "contain" : imageFit || "cover";
+    const dynamicFit = imageFit || (isMobile ? "contain" : "cover");
+
+
 
   return (
     <div
