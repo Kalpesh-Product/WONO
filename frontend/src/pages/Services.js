@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 
 import {
   customerProfile,
@@ -50,14 +50,16 @@ import AOS from "aos";
 import "../styles/bodyServices.css";
 import SaaSFeatureBlock from "../components/Cards/SaaSFeatured";
 import CallButton from "../components/CallButton";
+import useIsMobile from "../hooks/useIsMobile";
 const Services = () => {
   const navigate = useNavigate();
-    useEffect(() => {
-      AOS.init({
-        duration: 1000, // animation duration in ms
-        once: true, // animate only once
-      });
-    }, []);
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // animation duration in ms
+      once: true, // animate only once
+    });
+  }, []);
+  const isMobile = useIsMobile();
   return (
     <>
       <div className="services flex flex-col gap-4 lg:gap-8 py-4">
@@ -85,27 +87,25 @@ const Services = () => {
           className="hrStyling zeroHeight border-t-4"
           style={{ width: "100%", margin: 0 }}
         />
-        {/* <div className="SaaS-grid-heading">
-          <h2>
-            Available{" "}
-            <span className="SaaS-grid-underline-container">
-              SaaS & Automation
-              <img src={greenUnderLine} alt="greenUnderLine" />
-            </span>{" "}
-            Solutions
-          </h2>
-          <span>
-            We'll keep adding as you discover gaps and issues in your business!
-          </span>
-        </div> */}
-
-        <div data-aos="fade-up" className="SaaS-featured-master flex flex-col gap-4 py-0 lg:py-4">
+        <div
+          data-aos="fade-up"
+          className="SaaS-featured-master flex flex-col gap-4 py-0 lg:py-4"
+        >
           <div className="SaaS-featured-grid ">
-            <div className="SaaS-featured-grid-left flex flex-col gap-4 ">
+            <div className="SaaS-featured-grid-left flex flex-col gap-2 ">
               <div className="SaaS-features-heading flex text-[1.5rem] md:text-3xl font-bold mb-3">
                 Real-time operations
                 <img src={greenUnderLine} alt="greenUnderLine" />
               </div>
+              {isMobile && (
+                <div className="SaaS-featured-grid-right h-[30vh] md:h-[35vh] lg:h-[50vh] overflow-hidden border-gray-100 border-[1px] p-2 rounded-lg">
+                  <img
+                    className="h-full w-full object-cover"
+                    src={FinanceImage}
+                    alt="ServiceGridImage"
+                  />
+                </div>
+              )}
               <span className="text-lg md:text-xl lg:text:2xl">
                 Manage your business in real-time across all business verticals.
               </span>
@@ -115,22 +115,24 @@ const Services = () => {
                 reports, tasks, logs, menu, complaints, requests etc.
               </span>
             </div>
-            <div className="SaaS-featured-grid-right h-[30vh] md:h-[35vh] lg:h-[50vh] overflow-hidden border-gray-100 border-[1px] p-2 rounded-lg">
-              <img
-                className="h-full w-full object-cover"
-                src={FinanceImage}
-                alt="ServiceGridImage"
-              />
-            </div>
+            {!isMobile && (
+              <div className="SaaS-featured-grid-right h-[30vh] md:h-[35vh] lg:h-[50vh] overflow-hidden border-gray-100 border-[1px] p-2 rounded-lg">
+                <img
+                  className="h-full w-full object-cover"
+                  src={FinanceImage}
+                  alt="ServiceGridImage"
+                />
+              </div>
+            )}
           </div>
           <hr
-          className="h-[1px] text-gray-500 bg-gray-500 mb-2
+            className="h-[1px] text-gray-500 bg-gray-500 mb-2
          lg:mt-10"
-        />
+          />
         </div>
 
         {/* ---------------------------------------------------------------------------------------------------------- */}
-      
+
         {/* ---------------------------------------------------------------------------------------------------------- */}
 
         <div
@@ -215,12 +217,11 @@ const Services = () => {
             image={HrImage}
             rowReverse={false}
           />
-
         </div>
         <hr />
-        <div >
-            <CallButton title={"Get Started"} falseMargin={true} />
-          </div>
+        <div>
+          <CallButton title={"Get Started"} falseMargin={true} />
+        </div>
         <hr />
 
         {/* <div className="SaaS-grid">

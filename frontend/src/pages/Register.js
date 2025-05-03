@@ -392,7 +392,7 @@ const Register = () => {
 
           <form
             name="form-p"
-            className={`register-form needs-validation ${
+            className={` register-form needs-validation ${
               Object.keys(errors).length ? "was-validated" : ""
             }`}
             id="partner-form"
@@ -402,7 +402,7 @@ const Register = () => {
             {currentStep === 0 && (
               <>
                 <div className="registration-section-header">
-                  <h2>Let's set up your free account</h2>
+                  <h2 className="text-3xl">Let's set up your free account</h2>
                 </div>
                 <div className="register-container">
                   <Container
@@ -425,7 +425,7 @@ const Register = () => {
                         <Grid item xs={12} sm={6}>
                           <TextField
                             label="Full Name"
-                            variant="outlined"
+                            variant="standard"
                             name="name"
                             value={formData.name}
                             onChange={handleChange}
@@ -439,7 +439,7 @@ const Register = () => {
                         <Grid item xs={12} sm={6}>
                           <TextField
                             label="Email"
-                            variant="outlined"
+                            variant="standard"
                             name="email"
                             type="email"
                             value={formData.email}
@@ -454,7 +454,7 @@ const Register = () => {
                         <Grid item xs={12} sm={6}>
                           <TextField
                             label="Phone Number"
-                            variant="outlined"
+                            variant="standard"
                             name="mobile"
                             type="text"
                             inputProps={{ pattern: "[1-9]{1}[0-9]{9}" }}
@@ -470,7 +470,7 @@ const Register = () => {
                         <Grid item xs={12} sm={6}>
                           <TextField
                             label="Country"
-                            variant="outlined"
+                            variant="standard"
                             name="country"
                             value={formData.country}
                             onChange={handleChange}
@@ -494,7 +494,7 @@ const Register = () => {
                         <Grid item xs={12} sm={6}>
                           <TextField
                             label="State"
-                            variant="outlined"
+                            variant="standard"
                             name="state"
                             value={formData.state}
                             onChange={handleChange}
@@ -517,7 +517,7 @@ const Register = () => {
                         <Grid item xs={12} sm={6}>
                           <TextField
                             label="City"
-                            variant="outlined"
+                            variant="standard"
                             name="city"
                             value={formData.city}
                             onChange={handleChange}
@@ -617,7 +617,7 @@ const Register = () => {
                         <Grid item xs={12} sm={6}>
                           <TextField
                             label="Company Name"
-                            variant="outlined"
+                            variant="standard"
                             name="companyName"
                             value={formData.companyName}
                             onChange={handleChange}
@@ -631,7 +631,7 @@ const Register = () => {
                         <Grid item xs={12} sm={6}>
                           <TextField
                             label="Industry"
-                            variant="outlined"
+                            variant="standard"
                             name="industry"
                             select
                             value={formData.industry}
@@ -674,7 +674,7 @@ const Register = () => {
                         <Grid item xs={12} sm={6}>
                           <TextField
                             label="Company Size"
-                            variant="outlined"
+                            variant="standard"
                             name="companySize"
                             select
                             value={formData.companySize}
@@ -694,7 +694,7 @@ const Register = () => {
                         <Grid item xs={12} sm={6}>
                           <TextField
                             label="Company Type"
-                            variant="outlined"
+                            variant="standard"
                             name="companyType"
                             select
                             value={formData.companyType}
@@ -723,7 +723,7 @@ const Register = () => {
                         <Grid item xs={12} sm={6}>
                           <TextField
                             label="State"
-                            variant="outlined"
+                            variant="standard"
                             name="companyState"
                             select
                             value={formData.companyState}
@@ -747,7 +747,7 @@ const Register = () => {
                         <Grid item xs={12} sm={6}>
                           <TextField
                             label="City"
-                            variant="outlined"
+                            variant="standard"
                             name="companyCity"
                             select
                             value={formData.companyCity}
@@ -768,7 +768,7 @@ const Register = () => {
                         <Grid item xs={12} sm={6}>
                           <TextField
                             label="Website URL"
-                            variant="outlined"
+                            variant="standard"
                             name="websiteURL"
                             value={formData.websiteURL}
                             onChange={handleChange}
@@ -782,7 +782,7 @@ const Register = () => {
                         <Grid item xs={12} sm={6}>
                           <TextField
                             label="LinkedIn URL"
-                            variant="outlined"
+                            variant="standard"
                             name="linkedinURL"
                             value={formData.linkedinURL}
                             onChange={handleChange}

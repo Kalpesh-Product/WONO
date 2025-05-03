@@ -163,6 +163,30 @@ const LeadsPage = () => {
     setSelectedMenu(key); // Highlight the selected menu item
   };
 
+  const marketingSections = [
+    {
+      heading: "Get better ROI from your marketing.",
+      content:
+        "Discover all the ways that Analytics surfaces helpful insights for a complete understanding of your customers — from built-in automation and customized reporting, to cross-platform attribution and more.",
+      image: RoiImage,
+      reverse: false,
+    },
+    {
+      heading: "Get a complete view.",
+      content:
+        "Analytics helps you get a more complete understanding of how your customers engage with your business so you can deliver better experiences and drive results.",
+      image: CompleteViewImage,
+      reverse: true,
+    },
+    {
+      heading: "The finer points.",
+      content:
+        "Analytics helps you understand how people use your sites and apps, so you can take action to improve their experience. Discover what Google Analytics can do by checking out the features listed below.",
+      image: FinerPointsImage,
+      reverse: false,
+    },
+  ];
+
   // mobile screen for globe responsiveness
   const ismobile = window.innerWidth < 769;
 
@@ -446,25 +470,18 @@ const LeadsPage = () => {
             <div>
               <div className="">
                 {/* <div className="container mb-3 pe-0 border-bottom border-secondary"> */}
-                  <ReactFitty className="mb-0">RUN & SCALE YOUR BUSINESS</ReactFitty>
+                <ReactFitty className="mb-0">
+                  RUN & SCALE YOUR BUSINESS
+                </ReactFitty>
                 <div className="container pb-3 pe-0 border-bottom border-secondary">
                   {/* <div className="row  border-bottom border-dark border-3 pb-5 bg-primary"> */}
                   <div className="row ">
                     <div className="col-lg-4 ps-0">
-                    
                       <h2 className="fs-1 pt-2">Marketing</h2>
                     </div>
                     <div className="col-lg-4"></div>
                     {/* <div className="col-lg-4 bg-danger"> */}
                     <div className="col-lg-4 d-flex justify-content-lg-end justify-content-md-center justify-content-center justify-content-sm-center align-items-center pe-0">
-                      {/* <div className="">
-                        <button
-                          className="get-started-submit-button "
-                          onClick={handleRegister}>
-                          Get Started
-                        </button>
-                      </div> */}
-
                       <button
                         className="get-started-main-button mt-4 "
                         onClick={handleRegister}
@@ -547,34 +564,13 @@ const LeadsPage = () => {
                 </p>
               </div>
             </div>
-          </div>
-        </div>
-
-        <div className="CenterElement zeroHeight">
-          <hr className="hrStyling zeroHeight" />
-        </div>
-
-        <div data-aos="fade-up" className="better-roi-section PPPP wono-text-spacing fontPoppinsRegular topPaddingInsideSections bottomPaddingForSections">
-          <div className="container px-0">
-            <div className="flex flex-col lg:flex-row">
-              <div className="w-full lg:w-1/2">
-                <img src={RoiImage} alt="" className="w-full" />
-              </div>
-              <div className="w-full lg:w-1/2 text-start flex flex-col justify-center pe-0">
-                <div>
-                  <h2 className="ROIFontSize fontPoppinsRegular m-0">
-                    Get better ROI from your marketing.
-                  </h2>
-                </div>
-                <div>
-                  <p className="topPaddingInsideSections pFontAdjustment">
-                    Discover all the ways that Analytics surfaces helpful
-                    insights for a complete understanding of your customers —
-                    from built-in automation and customized reporting, to
-                    cross-platform attribution and more.
-                  </p>
-                </div>
-              </div>
+            <div className="flex justify-center items-center lg:justify-end lg:items-end">
+              <button
+                className="get-started-main-button mt-4 "
+                onClick={handleRegister}
+              >
+                Get Started
+              </button>
             </div>
           </div>
         </div>
@@ -583,57 +579,76 @@ const LeadsPage = () => {
           <hr className="hrStyling zeroHeight" />
         </div>
 
-        <div data-aos="fade-up" className="better-roi-section PPPP wono-text-spacing fontPoppinsRegular topPaddingInsideSections bottomPaddingForSections">
-          <div className="container px-0">
-            <div className="flex flex-col lg:flex-row">
-              <div className="w-full lg:w-1/2 text-start flex flex-col justify-center pe-0">
-                <div>
-                  <h2 className="ROIFontSize fontPoppinsRegular m-0">
-                    Get a complete view.
-                  </h2>
-                </div>
-                <div>
-                  <p className="topPaddingInsideSections pFontAdjustment">
-                    Analytics helps you get a more complete understanding of how
-                    your customers engage with your business so you can deliver
-                    better experiences and drive results.
-                  </p>
-                </div>
-              </div>
-              <div className="w-full lg:w-1/2">
-                <img src={CompleteViewImage} alt="" className="w-full" />
-              </div>
+        {marketingSections.map((section, index) => (
+          <React.Fragment key={index}>
+            <div className="CenterElement zeroHeight">
+              <hr className="hrStyling zeroHeight" />
             </div>
-          </div>
-        </div>
+
+            {ismobile ? (
+              <div
+                data-aos="fade-up"
+                className="better-roi-section PPPP wono-text-spacing fontPoppinsRegular topPaddingInsideSections bottomPaddingForSections"
+              >
+                <div className="container px-0">
+                  <div
+                    className={`flex flex-col lg:flex-row ${
+                      section.reverse ? "lg:flex-row-reverse" : ""
+                    }`}
+                  >
+                    <div>
+                      <h2 className="ROIFontSize fontPoppinsRegular m-0">
+                        {section.heading}
+                      </h2>
+                    </div>
+                    <div className="w-full lg:w-1/2">
+                      <img src={section.image} alt="" className="w-full" />
+                    </div>
+                    <div className="w-full lg:w-1/2 text-start flex flex-col justify-center pe-0">
+                      <div>
+                        <p className="topPaddingInsideSections pFontAdjustment">
+                          {section.content}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ) : (
+              <div
+                data-aos="fade-up"
+                className="better-roi-section PPPP wono-text-spacing fontPoppinsRegular topPaddingInsideSections bottomPaddingForSections"
+              >
+                <div className="container px-0">
+                  <div
+                    className={`flex flex-col lg:flex-row ${
+                      section.reverse ? "lg:flex-row-reverse" : ""
+                    }`}
+                  >
+                    <div className="w-full lg:w-1/2">
+                      <img src={section.image} alt="" className="w-full" />
+                    </div>
+                    <div className="w-full lg:w-1/2 text-start flex flex-col justify-center pe-0">
+                      <div>
+                        <h2 className="ROIFontSize fontPoppinsRegular m-0">
+                          {section.heading}
+                        </h2>
+                      </div>
+                      <div>
+                        <p className="topPaddingInsideSections pFontAdjustment">
+                          {section.content}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
+          </React.Fragment>
+        ))}
 
         <div className="CenterElement zeroHeight">
           <hr className="hrStyling zeroHeight" />
-        </div>
-
-        <div data-aos="fade-up" className="better-roi-section PPPP wono-text-spacing fontPoppinsRegular topPaddingInsideSections bottomPaddingForSections">
-          <div className="container px-0">
-            <div className="flex flex-col lg:flex-row">
-              <div className="w-full lg:w-1/2">
-                <img src={FinerPointsImage} alt="" className="w-full" />
-              </div>
-              <div className="w-full lg:w-1/2 text-start flex flex-col justify-center pe-0">
-                <div>
-                  <h2 className="ROIFontSize fontPoppinsRegular m-0">
-                    The finer points.
-                  </h2>
-                </div>
-                <div>
-                  <p className="topPaddingInsideSections pFontAdjustment">
-                    Analytics helps you understand how people use your sites and
-                    apps, so you can take action to improve their experience.
-                    Discover what Google Analytics can do by checking out the
-                    features listed below.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>

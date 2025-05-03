@@ -119,7 +119,7 @@ const Contact = () => {
                       name="name"
                       value={formData.name}
                       onChange={handleChange}
-                      variant="outlined"
+                      variant="standard"
                     />
                   </Grid>
 
@@ -132,7 +132,7 @@ const Contact = () => {
                       type="email"
                       value={formData.email}
                       onChange={handleChange}
-                      variant="outlined"
+                      variant="standard"
                     />
                   </Grid>
 
@@ -146,12 +146,12 @@ const Contact = () => {
                       inputProps={{ pattern: '[1-9]{1}[0-9]{9}' }}
                       value={formData.mobile}
                       onChange={handleChange}
-                      variant="outlined"
+                      variant="standard"
                     />
                   </Grid>
 
                   <Grid item xs={12} sm={6}>
-                    <FormControl fullWidth required variant="outlined">
+                    <FormControl fullWidth required variant="standard">
                       <InputLabel id="partnerstype-label">Type of Partnership</InputLabel>
                       <Select
                         labelId="partnerstype-label"
@@ -159,7 +159,7 @@ const Contact = () => {
                         value={formData.partnerstype}
                         onChange={handleChange}
                         label="Type of Partnership" // Make sure to include the label prop
-                        variant="outlined" // Ensure variant is set
+                        variant="standard" // Ensure variant is set
                       >
                         <MenuItem value="" disabled>
                           Type of Partnership
@@ -178,7 +178,7 @@ const Contact = () => {
                       name="message"
                       multiline 
                       minRows={4} // Sets the minimum number of rows
-                      variant="outlined" // Optional: "outlined", "filled", or "standard"
+                      variant="standard" // Optional: "outlined", "filled", or "standard"
                       fullWidth // Expands the input to take the full width
                       value={formData.message}
                       onChange={handleChange}

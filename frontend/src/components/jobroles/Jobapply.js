@@ -295,7 +295,7 @@ const Jobapply = ({ jobTitle, changeActiveTab }) => {
               type="text"
               name="name"
               label="Name"
-              variant="outlined"
+              variant="standard"
               fullWidth
               value={formvalues.name}
               onChange={handleGlobalChange}
@@ -307,7 +307,7 @@ const Jobapply = ({ jobTitle, changeActiveTab }) => {
               type="email"
               name="email"
               label="Email"
-              variant="outlined"
+              variant="standard"
               fullWidth
               value={formvalues.email}
               onChange={handleGlobalChange}
@@ -328,7 +328,9 @@ const Jobapply = ({ jobTitle, changeActiveTab }) => {
                     handleChange("date")(newValue);
                   }
                 }}
-                slotProps={{ textField: { fullWidth: true } }}
+                slotProps={{
+                  textField: { fullWidth: true, variant: "standard" },
+                }}
               />
             </LocalizationProvider>
           </Grid>
@@ -338,7 +340,7 @@ const Jobapply = ({ jobTitle, changeActiveTab }) => {
               type="tel"
               name="number"
               label="Mobile Number"
-              variant="outlined"
+              variant="standard"
               fullWidth
               value={formvalues.number}
               onChange={handleGlobalChange}
@@ -348,17 +350,20 @@ const Jobapply = ({ jobTitle, changeActiveTab }) => {
 
           <Grid item md={6} xs={12} sm={6}>
             <FormControl fullWidth>
-              <InputLabel>State</InputLabel>
-              <Select
+              <TextField
+                label="State"
+                select
                 name="location"
                 value={formvalues.location}
-                onChange={handleGlobalChange}>
+                variant="standard"
+                onChange={handleGlobalChange}
+              >
                 {states.map((state) => (
                   <MenuItem key={state.isoCode} value={state.isoCode}>
                     {state.name}
                   </MenuItem>
                 ))}
-              </Select>
+              </TextField>
             </FormControl>
           </Grid>
 
@@ -367,7 +372,7 @@ const Jobapply = ({ jobTitle, changeActiveTab }) => {
               type="number"
               name="experience"
               label="Experience (in years)"
-              variant="outlined"
+              variant="standard"
               fullWidth
               value={formvalues.experience}
               onChange={handleGlobalChange}
@@ -379,7 +384,7 @@ const Jobapply = ({ jobTitle, changeActiveTab }) => {
               type="text"
               name="linkedInProfile"
               label="LinkedIn Profile URL"
-              variant="outlined"
+              variant="standard"
               fullWidth
               value={formvalues.linkedInProfile}
               onChange={handleGlobalChange}
@@ -396,13 +401,15 @@ const Jobapply = ({ jobTitle, changeActiveTab }) => {
             />
             <label htmlFor="resume-upload" style={{ width: "100%" }}>
               <Button
-                variant="outlined"
+                variant="standard"
                 component="span"
                 fullWidth
                 style={{
                   textAlign: "left",
                   color: "#545454",
                   padding: "15px",
+                  paddingBottom : '8px',
+                  borderBottom : '1px solid',
                   borderColor: "#bebebe",
                   justifyContent: "flex-start",
                 }} // Align text to the left
@@ -419,7 +426,7 @@ const Jobapply = ({ jobTitle, changeActiveTab }) => {
               type="number"
               name="monthlySalary"
               label="Current Monthly Salary"
-              variant="outlined"
+              variant="standard"
               fullWidth
               multiline
               minirows={4}
@@ -433,7 +440,7 @@ const Jobapply = ({ jobTitle, changeActiveTab }) => {
               type="number"
               name="expectedSalary"
               label="Expected Monthly Salary"
-              variant="outlined"
+              variant="standard"
               fullWidth
               value={formvalues.expectedSalary}
               onChange={handleGlobalChange}
@@ -442,14 +449,15 @@ const Jobapply = ({ jobTitle, changeActiveTab }) => {
 
           <Grid item md={6} xs={12} sm={6}>
             <FormControl fullWidth>
-              <InputLabel slotProps={{ textField: { fullWidth: true } }}>
-                How Soon You Can Join?
-              </InputLabel>
-              <Select
+              <TextField
                 name="daysToJoin"
+                select
+                label="How Soon Can You Join ?"
                 value={formvalues.daysToJoin}
+                variant="standard"
                 onChange={handleGlobalChange}
-                fullWidth>
+                fullWidth
+              >
                 <MenuItem value="" disabled>
                   Select
                 </MenuItem>
@@ -458,19 +466,20 @@ const Jobapply = ({ jobTitle, changeActiveTab }) => {
                 <MenuItem value="45 Days">45 Days</MenuItem>
                 <MenuItem value="60 Days">60 Days</MenuItem>
                 <MenuItem value="60 Days and above">60 Days and above</MenuItem>
-              </Select>
+              </TextField>
             </FormControl>
           </Grid>
 
           <Grid item xs={12} sm={6} md={6}>
             <TextField
               label="Relocate to Goa"
-              variant="outlined"
+              variant="standard"
               name="relocateGoa"
               value={formvalues.relocateGoa}
               onChange={handleGlobalChange}
               select
-              fullWidth>
+              fullWidth
+            >
               <MenuItem value="yes">Yes</MenuItem>
               <MenuItem value="no">No</MenuItem>
             </TextField>
@@ -481,7 +490,7 @@ const Jobapply = ({ jobTitle, changeActiveTab }) => {
               multiline
               name="personality"
               minRows={4}
-              variant="outlined"
+              variant="standard"
               label="Personality"
               fullWidth
               InputProps={{ style: { width: "100%" } }}
@@ -502,6 +511,7 @@ const Jobapply = ({ jobTitle, changeActiveTab }) => {
             <TextField
               multiline
               name="skills"
+              variant="standard"
               minRows={4}
               label="What skill set you have for the job you have applied?"
               style={{ width: "100%" }}
@@ -519,6 +529,7 @@ const Jobapply = ({ jobTitle, changeActiveTab }) => {
             <TextField
               multiline
               name="specialexperience"
+              variant="standard"
               minRows={4}
               label="Why should we consider you for joining our company?"
               style={{ width: "100%" }}
@@ -535,6 +546,7 @@ const Jobapply = ({ jobTitle, changeActiveTab }) => {
             <TextField
               multiline
               name="willing"
+              variant="standard"
               minRows={4}
               label="Are you willing to bootstrap to join a growing startup?"
               style={{ width: "100%" }}
@@ -551,6 +563,7 @@ const Jobapply = ({ jobTitle, changeActiveTab }) => {
             <TextField
               multiline
               name="message"
+              variant="standard"
               minRows={4}
               label="Personal Message"
               style={{ width: "100%" }}
@@ -570,7 +583,8 @@ const Jobapply = ({ jobTitle, changeActiveTab }) => {
               color="primary"
               type="submit"
               style={{ backgroundColor: "black" }}
-              className="apply-form-btn">
+              className="apply-form-btn"
+            >
               SUBMIT
             </Button>
           </Grid>
@@ -583,7 +597,8 @@ const Jobapply = ({ jobTitle, changeActiveTab }) => {
           show={showModal}
           onHide={handleCloseModal}
           aria-labelledby="contained-modal-title-vcenter"
-          centered>
+          centered
+        >
           <Modal.Header closeButton>
             <Modal.Title>
               {modalType === "error"
@@ -599,7 +614,8 @@ const Jobapply = ({ jobTitle, changeActiveTab }) => {
               justifyContent: "center",
               marginTop: "10%",
               marginBottom: "20px",
-            }}>
+            }}
+          >
             <img
               src={modalType === "error" ? erroricon : successIcon} // Error icon for error, check mark for success
               alt={modalType === "error" ? "erroricon" : "successicon"}
@@ -613,7 +629,8 @@ const Jobapply = ({ jobTitle, changeActiveTab }) => {
               alignContent: "center",
               justifyContent: "center",
               color: modalType === "error" ? "red" : "green",
-            }}>
+            }}
+          >
             {modalType === "error" ? "ERROR" : "SUCCESS"}
           </h1>
 
@@ -634,7 +651,8 @@ const Jobapply = ({ jobTitle, changeActiveTab }) => {
                   marginLeft: "40%",
                   marginBottom: "20%",
                   backgroundColor: "black",
-                }}>
+                }}
+              >
                 Close
               </button>
             </>
@@ -651,7 +669,8 @@ const Jobapply = ({ jobTitle, changeActiveTab }) => {
                   marginLeft: "40%",
                   marginBottom: "20%",
                   backgroundColor: "black",
-                }}>
+                }}
+              >
                 Close
               </button>
             </>

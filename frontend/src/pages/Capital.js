@@ -144,11 +144,11 @@ const Capital = () => {
                 Start for free
               </button>
             </Link>
-            <Link to="/contact">
+            {/* <Link to="/contact">
               <button className="px-4 py-2 bg-black rounded-full text-white border-[1px] border-gray-200 ">
                 Contact sales
               </button>
-            </Link>
+            </Link> */}
           </div>
         </div>
         <div className="big-end-dashboard-img w-full h-[80vh] overflow-hidden rounded-xl">

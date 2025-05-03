@@ -335,14 +335,13 @@ const Homepage = () => {
           </div>
         </div>
         {ismobile ? (
-
-        <div style={{ padding: "0 2rem" }}>
-          <hr />
-        </div>
+          <div style={{ padding: "0 2rem" }}>
+            <hr />
+          </div>
         ) : (
           <div style={{ padding: "0 7rem" }}>
-          <hr />
-        </div>
+            <hr />
+          </div>
         )}
 
         <div data-aos="fade-up" className="partners-section">
@@ -512,11 +511,11 @@ const Homepage = () => {
               </div>
             </div>
           </div>
-            <hr />
+          <hr />
           <div className="py-4">
             <CallButton falseMargin title={"Get Started"} />
           </div>
-            <hr />
+          <hr />
         </div>
       </div>
     </div>
