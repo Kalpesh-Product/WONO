@@ -223,13 +223,13 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
               <div className="flex items-center gap-6">
                 <button
                   onClick={() => {
-                    window.location.href = "https://wonofe.vercel.app";
-                    window.scrollTo({ top: 0, behavior: "instant" });
+                    window.open("https://wonofe.vercel.app", "_blank"); // Opens in a new tab
                   }}
                   className="uppercase px-4 py-2 bg-white hover:font-bold transition-all text-black rounded-full"
                 >
                   Sign in
                 </button>
+
                 <button
                   onClick={() => {
                     navigate("/register");
@@ -348,15 +348,18 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
               <button className="l">
                 <a
                   href="https://wonofe.vercel.app/"
+                  target="_blank" // Opens in a new tab
+                  rel="noopener noreferrer" // For security reasons
                   className="bg-white rounded-3xl text-black px-10 py-2 mx-auto"
                   onClick={handleClose}
                 >
                   SIGN IN
                 </a>
               </button>
+
               <hr className="w-[75%]" />
               <button
-              className="bg-[#0AA9EF] rounded-3xl text-white px-10 py-2 mx-auto"
+                className="bg-[#0AA9EF] rounded-3xl text-white px-10 py-2 mx-auto"
                 onClick={handleRegister}
               >
                 SIGN UP
