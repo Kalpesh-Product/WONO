@@ -120,9 +120,17 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
             src={WonoLogo}
             alt="logo"
           /> */}
-          <a href="https://wononomadsfe.vercel.app">
+          {/* <a href="https://wononomadsfe.vercel.app">
             <img style={{ cursor: "pointer" }} src={WonoLogo} alt="logo" />
-          </a>
+          </a> */}
+          <img
+            onClick={() => {
+              window.location.replace("https://wononomadsfe.vercel.app");
+            }}
+            src={WonoLogo}
+            alt="logo"
+            style={{ cursor: "pointer" }}
+          />
         </div>
         <div className="flex items-center gap-6 uppercase custom-navbar-menu nav-tabss ">
           {loggedIn ? (
