@@ -115,7 +115,7 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
           <img
             style={{ cursor: "pointer" }}
             onClick={() => {
-              window.location.href = "https://wononomadsfe.vercel.app";
+              window.location.href = "https://wononomadsfe.vercel.app/";
             }}
             src={WonoLogo}
             alt="logo"
