@@ -101,7 +101,11 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
   return (
     <>
       <nav className="custom-navbar">
-        <div className="custom-navbar-logo">
+        <div
+          className="custom-navbar-logo"
+          onClick={() => {
+            window.location.href = "https://wononomadsfe.vercel.app";
+          }}>
           {/* <img
             style={{ cursor: "pointer" }}
             onClick={() => {
@@ -123,13 +127,21 @@ const NavBar = ({ activeTab, changeActiveTab }) => {
           {/* <a href="https://wononomadsfe.vercel.app">
             <img style={{ cursor: "pointer" }} src={WonoLogo} alt="logo" />
           </a> */}
-          <img
+          {/* <img
             onClick={() => {
               window.location.replace("https://wononomadsfe.vercel.app");
             }}
             src={WonoLogo}
             alt="logo"
             style={{ cursor: "pointer" }}
+          /> */}
+          <img
+            src={WonoLogo}
+            alt="logo"
+            style={{ cursor: "pointer" }}
+            onClick={() => {
+              window.location.href = "https://wononomadsfe.vercel.app";
+            }}
           />
         </div>
         <div className="flex items-center gap-6 uppercase custom-navbar-menu nav-tabss ">
